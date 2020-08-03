@@ -496,7 +496,7 @@ pupils:
         - answer: Neutral
         - answer: Agree
         - answer: Strongly agree
-        communication:
+  communication:
     - statement: I always think carefully before posting or sending messages.
       responses:
         - answer: Definitely yes
