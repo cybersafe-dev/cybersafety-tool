@@ -250,27 +250,124 @@ leaders:
         - answer: Strongly disagree
 teachers:
   digitalknowledge:
-    - statement: Question one teachers
+    - statement: We have teacher training on online safety and responsibility at least
+        once a year.
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
         - answer: Strongly agree
-    - statement: Question 2 teachers
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I feel confident talking about online safety and responsibility to my
+        pupils.
       responses:
-        - answer: naa
-        - answer: yaa
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: We talk regularly as a staff throughout the year about online safety
+        and responsibility.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: My pupils feel they can come and talk to me about anything that
+        happens to them online.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I regularly use digital technologies (tablets, phones, computers,
+        robots) in my teaching.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I am comfortable using digital technologies (tablets, phones,
+        computers, robots) in my teaching.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: My pupils regularly use digital technologies (tablets, phones,
+        computers, robots) in their learning.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: My school has a clear policy on smartphone use, created in
+        consultation with the parent body.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
   privacy:
-    - statement: Question one
+    - statement: Any online profiles I have online are set to private, or use a name
+        my pupils cannot find.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I understand how to create a very secure password for my accounts.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I change my passwords regularly.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I keep school-related digital data secure.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: My school has a clear privacy policy about sharing images of pupils
+        (in school activities and events etc.) online.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+  sharing:
+    - statement: My social media accounts are private or use another name.
+      responses:
+        - answer: I'm not on social media at all.
+        - answer: Yes
+        - answer: Mostly
+        - answer: Not really
+        - answer: No
+    - statement: I post photos and videos on social media.
       responses:
         - answer: Strongly disagree
         - answer: Disagree
         - answer: Neutral
         - answer: Agree
-        - answer: Strongly agree
-  sharing:
-    - statement: Question one
+        - answer: Strongly Agree
+    - statement: I post selfies on social media.
       responses:
         - answer: Strongly disagree
         - answer: Disagree
@@ -278,15 +375,46 @@ teachers:
         - answer: Agree
         - answer: Strongly agree
   communication:
-    - statement: Question one
+    - statement: I use technology to communicate respectfully and safely with my pupils.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I use technology to communicate respectfully and safely with my
+        colleagues.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+  criticalthinking:
+    - statement: I generally believe what I read/see online.
       responses:
         - answer: Strongly disagree
         - answer: Disagree
         - answer: Neutral
         - answer: Agree
         - answer: Strongly agree
-  criticalthinking:
-    - statement: Question one
+    - statement: I always check information I find online by searching for similar
+        sources.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I teach my pupils how to check information they find online by
+        searching for similar sources.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I usually click on the first two or three results in a Google search.
       responses:
         - answer: Strongly disagree
         - answer: Disagree
@@ -294,13 +422,51 @@ teachers:
         - answer: Agree
         - answer: Strongly agree
   responsibleuse:
-    - statement: Question one
+    - statement: I teach my pupils to reference sources and images they use in
+        research and presentation.
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
         - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: My school has an Acceptable Use Policy (AUP) for digital technologies.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: There is no policy
+    - statement: My school has a clear cyberbullying policy.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: There is no policy
+    - statement: I clearly understand the appropriate steps to take when a
+        cyberbullying/online incident involving my pupils is brought to my
+        attention.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I know how approximately how much time I am online each day.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: I set limits for my online time.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
 pupils:
   digitalknowledge:
     - statement: Question one pupils
@@ -330,28 +496,98 @@ pupils:
         - answer: Neutral
         - answer: Agree
         - answer: Strongly agree
-  communication:
-    - statement: Question one
+        communication:
+    - statement: I always think carefully before posting or sending messages.
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
+        - answer: Definitely yes
+        - answer: Usually
+        - answer: Sometimes
+        - answer: Not really
+        - answer: No
+    - statement: I talk to people I don't know online.
+      responses:
+        - answer: Never
+        - answer: Not very often
+        - answer: Sometimes
+        - answer: Often
+        - answer: Yes
+    - statement: I use technology to communicate respectfully and safely with my friends.
+      responses:
+        - answer: Yes
+        - answer: Mostly
+        - answer: Sometimes
+        - answer: Not as much as I should
+        - answer: No
+    - statement: I can use appropriate technology to communicate respectfully and
+        safely with my teacher.
+      responses:
+        - answer: Yes
+        - answer: Not sure
+        - answer: No
+    - statement: In school we learn how to write a formal e-mail.
+      responses:
+        - answer: Yes
+        - answer: Not sure
+        - answer: No
   criticalthinking:
-    - statement: Question one
+    - statement: I believe what I see or read online.
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
+        - answer: No
+        - answer: Not usually
+        - answer: Sometimes
+        - answer: Usually
+        - answer: Yes
+    - statement: I always check information I find online by searching for the same
+        information in other places.
+      responses:
+        - answer: Yes
+        - answer: Usually
+        - answer: Sometimes
+        - answer: Not usually
+        - answer: No
+    - statement: In school we learn how to check information we find online.
+      responses:
+        - answer: Yes
+        - answer: Not sure
+        - answer: No
+    - statement: I usually click on the top two or three results in a Google search.
+      responses:
+        - answer: No
+        - answer: Not usually
+        - answer: Sometimes
+        - answer: Usually
+        - answer: Yes
   responsibleuse:
-    - statement: Question one
+    - statement: In school we have to list all the websites and images we use in our
+        research and presentations.
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
+        - answer: Yes
+        - answer: Not sure
+        - answer: No
+    - statement: I know how approximately how much time I am online each day.
+      responses:
+        - answer: Yes
+        - answer: Not sure
+        - answer: I don't know
+    - statement: I set my own limits for my online time each day.
+      responses:
+        - answer: Yes
+        - answer: Usually
+        - answer: Sometimes
+        - answer: Not usually
+        - answer: Never
+    - statement: My parents set limits for how long I am online.
+      responses:
+        - answer: Yes
+        - answer: Usually
+        - answer: Sometimes
+        - answer: Not usually
+        - answer: Never
+    - statement: I talk regularly to my parents about what I am doing online.
+      responses:
+        - answer: Definitely
+        - answer: Mostly true
+        - answer: Kind of
+        - answer: Not really
+        - answer: I don't talk to them about it
 ---
