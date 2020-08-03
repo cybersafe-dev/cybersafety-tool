@@ -469,33 +469,102 @@ teachers:
         - answer: Strongly disagree
 pupils:
   digitalknowledge:
-    - statement: Question one pupils
+    - statement: We learn in school about online safety and responsibility.
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
-    - statement: question 2 pupils
+        - answer: All the time
+        - answer: Often
+        - answer: Sometimes
+        - answer: Not very often
+        - answer: Never
+    - statement: We talk regularly in my class throughout the year about being safe
+        and responsible online.
       responses:
-        - answer: nope
-        - answer: yep
+        - answer: All the time
+        - answer: Often
+        - answer: Sometimes
+        - answer: Not very often
+        - answer: Never
+    - statement: I feel I can talk to my teacher about anything that happens to me online.
+      responses:
+        - answer: Definitely
+        - answer: Probably
+        - answer: Not sure
+        - answer: Probably not
+        - answer: Definitely not
+    - statement: I regularly use digital technologies (tablets, phones, computers,
+        robots) in my learning in school.
+      responses:
+        - answer: All the time
+        - answer: Often
+        - answer: Sometimes
+        - answer: Not very often
+        - answer: Never
   privacy:
-    - statement: Question one
+    - statement: All accounts or profiles I have online are set to private (no one can
+        see them with requesting permission).
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
+        - answer: All are private
+        - answer: Most are
+        - answer: Some are
+        - answer: A few are
+        - answer: None are
+    - statement: I understand how to create a very secure password for my accounts.
+      responses:
+        - answer: Definitely
+        - answer: Pretty much
+        - answer: Kind of
+        - answer: Not really
+        - answer: I don't know how
+    - statement: I change my passwords regularly.
+      responses:
+        - answer: Yes
+        - answer: Pretty often
+        - answer: Sometimes
+        - answer: Not really
+        - answer: I never change them
+    - statement: I share my password/s with my parent/carer.
+      responses:
+        - answer: Always
+        - answer: Usually
+        - answer: Sometimes
+        - answer: Not usually
+        - answer: I never share them
+    - statement: I share my passwords with friends.
+      responses:
+        - answer: I never share them
+        - answer: Not usually
+        - answer: Sometimes
+        - answer: Usually
+        - answer: Always
   sharing:
-    - statement: Question one
+    - statement: I post regularly on social media.
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
+        - answer: I'm not on social media at all.
+        - answer: Not that often
+        - answer: Sometimes
+        - answer: Quite often
+        - answer: Yes
+    - statement: I post photos and videos on social media.
+      responses:
+        - answer: I never really post
+        - answer: Not very often
+        - answer: Sometimes
+        - answer: Usually
+        - answer: Daily
+    - statement: I post selfies on social media.
+      responses:
+        - answer: I never really post
+        - answer: Not very often
+        - answer: Usually
+        - answer: Sometimes
+        - answer: Daily
+    - statement: I have friends/followers on social media who I have never met.
+      responses:
+        - answer: Yes, lots
+        - answer: Quite a lot
+        - answer: Some
+        - answer: A few
+        - answer: No way
   communication:
     - statement: I always think carefully before posting or sending messages.
       responses:
