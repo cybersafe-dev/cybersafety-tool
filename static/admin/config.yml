@@ -9,13 +9,22 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Home Page"
-        name: "home"
-        file: "content/home.md"
+      - label: "Info Page"
+        name: "infopage"
+        file: "content/infopage.md"
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Intro text, name: intro, widget: text }
-          - { label: Image, name: image, widget: image }
+          - {
+              label: Body,
+              name: body,
+              widget: object,
+              fields:
+                [
+                  { label: paragraph1, name: paragraph1, widget: text },
+                  { label: paragraph2, name: paragraph2, widget: text },
+                  { label: paragraph3, name: paragraph3, widget: text },
+                ],
+            }
       - label: "Survey"
         name: "survey"
         file: "content/survey.md"
