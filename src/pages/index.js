@@ -1,7 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
+import Header from "../components/header/header"
 import SEO from "../components/seo"
 
 const IndexPage = props => {
@@ -9,14 +10,13 @@ const IndexPage = props => {
 
   return (
     <Layout>
+      <Header />
       <SEO title="Home" />
-      <h1>{data.title}</h1>
-      <p>{data.intro}</p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <img src={data.image} alt="champ" />
-      </div>
+      <h1> {data.title} </h1>
+      <p> {data.body.paragraph1} </p>
+      <p> {data.body.paragraph2} </p>
+      <p> {data.body.paragraph3} </p>
       <Link to="/survey/">Survey</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
     </Layout>
   )
 }
@@ -25,15 +25,21 @@ export default IndexPage
 export const query = graphql`
   query {
     allFile(
-      filter: { sourceInstanceName: { eq: "content" }, name: { eq: "home" } }
+      filter: {
+        sourceInstanceName: { eq: "content" }
+        name: { eq: "infopage" }
+      }
     ) {
       edges {
         node {
           childMarkdownRemark {
             frontmatter {
               title
-              intro
-              image
+              body {
+                paragraph1
+                paragraph2
+                paragraph3
+              }
             }
           }
         }

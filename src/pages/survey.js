@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Question from "../components/question"
 
@@ -14,7 +14,6 @@ const IndexPage = props => {
       <button onClick={() => setUserType("leaders")}>Leader</button>
       <button onClick={() => setUserType("teachers")}>Teacher</button>
       <button onClick={() => setUserType("pupils")}>Pupil</button>
-
       <Question data={data[userType]} />
       <Link to="/">Go home</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
