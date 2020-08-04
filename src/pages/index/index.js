@@ -1,13 +1,13 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout/layout"
-import Header from "../components/header/header"
-import SEO from "../components/seo"
+import Layout from "../../components/layout/layout"
+import Header from "../../components/header/header"
+import SEO from "../../components/seo"
 
-import Icon1 from "../images/intro-icon1.svg"
-import Icon2 from "../images/intro-icon2.svg"
-import Icon3 from "../images/intro-icon3.svg"
+import Icon1 from "../../images/intro-icon1.svg"
+import Icon2 from "../../images/intro-icon2.svg"
+import Icon3 from "../../images/intro-icon3.svg"
 
 import "./index.css"
 const IndexPage = props => {
@@ -37,7 +37,7 @@ const IndexPage = props => {
             <p> {data.body.paragraph3} </p>
           </article>
         </div>
-        <Link className="enter-btn" to="/enterid/">
+        <Link to="/enterid/" className="btn">
           Let's get started!
         </Link>
         <div className="pills">

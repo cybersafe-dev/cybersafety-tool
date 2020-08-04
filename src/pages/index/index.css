@@ -12,7 +12,7 @@
 .para-1 {
   display: flex;
   align-items: center;
-  background-image: url("../images/intro1.svg");
+  background-image: url("../../images/intro1.svg");
   background-repeat: no-repeat;
   background-position: center;
   padding: 1rem;
@@ -21,7 +21,7 @@
 .para-2 {
   display: flex;
   align-items: center;
-  background-image: url("../images/intro2.svg");
+  background-image: url("../../images/intro2.svg");
   background-repeat: no-repeat;
   background-position: top;
   padding: 1rem;
@@ -30,7 +30,7 @@
 .para-3 {
   display: flex;
   align-items: center;
-  background-image: url("../images/intro3.svg");
+  background-image: url("../../images/intro3.svg");
   background-repeat: no-repeat;
   background-position: center;
   padding: 1rem;
