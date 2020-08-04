@@ -6,16 +6,20 @@ import Header from "../components/header/header"
 import SEO from "../components/seo"
 
 const SchoolId = props => {
-    //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-  
-    return (
-      <Layout>
-        <Header />
-        <SEO title="Enter School Id" />
+  //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+
+  return (
+    <Layout>
+      <Header />
+      <SEO title="Enter School Id" />
+      <section>
         <h1>First step...</h1>
         <input type="text" placeholder="e.g. SP0001abx" />
-        <Link to="/roleselection/">Next</Link> <br />
-      </Layout>
-    )
-  }
-  export default SchoolId
+        <Link to="/roleselection/" className="btn">
+          Next
+        </Link>
+      </section>
+    </Layout>
+  )
+}
+export default SchoolId
