@@ -16,7 +16,7 @@ const IndexPage = props => {
       <p> {data.body.paragraph1} </p>
       <p> {data.body.paragraph2} </p>
       <p> {data.body.paragraph3} </p>
-      <Link to="/survey/">Survey</Link> <br />
+      <Link to="/enterid/">Let's get started!</Link> <br />
     </Layout>
   )
 }
