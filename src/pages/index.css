@@ -1,0 +1,60 @@
+.intropage-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.introtext-box {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-top: -1.2rem;
+}
+.para-1 {
+  display: flex;
+  align-items: center;
+  background-image: url("../images/intro1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+  max-width: 50vw;
+}
+.para-2 {
+  display: flex;
+  align-items: center;
+  background-image: url("../images/intro2.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 1rem;
+  max-width: 50vw;
+}
+.para-3 {
+  display: flex;
+  align-items: center;
+  background-image: url("../images/intro3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+  max-width: 50vw;
+}
+
+.pills {
+  display: flex;
+  flex-direction: row;
+
+  margin: 1.5rem;
+}
+
+.filled-pill {
+  background-color: #181818;
+  width: 2.6rem;
+  height: 0.9rem;
+  border-radius: 20px;
+  margin: 0.4rem;
+}
+.unfilled-pill {
+  background-color: #d0d0d0;
+  width: 2.6rem;
+  height: 0.9rem;
+  border-radius: 20px;
+  margin: 0.4rem;
+}
