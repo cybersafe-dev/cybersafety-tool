@@ -8,7 +8,6 @@ const Dashboard = ({location}) => {
     const { state = {} } = location
     const { user } = state
     console.log(user);
-    //console.log(location.search.split("="[1]))
     //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
     return (
       <Layout>
