@@ -9,7 +9,7 @@ import Icon1 from "../images/intro-icon1.svg"
 import Icon2 from "../images/intro-icon2.svg"
 import Icon3 from "../images/intro-icon3.svg"
 
-import "./index.css"
+import "../styling/index.css"
 const IndexPage = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
