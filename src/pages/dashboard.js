@@ -14,6 +14,9 @@ const Dashboard = ({ location, data }) => {
     return <DataErrorPage />
   }
   const { user } = state
+  if (!user) {
+    return <DataErrorPage />
+  }
   const surveyAllData =
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
  
