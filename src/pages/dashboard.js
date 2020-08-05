@@ -12,6 +12,9 @@ const Dashboard = ({ location, data }) => {
   const { user } = state
   const surveyAllData =
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  if (!user) {
+    return <h1>Error 400</h1>
+  }
   const userSpecificData = surveyAllData[user]
   console.log(user, userSpecificData)
   return (

@@ -4,7 +4,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Question from "../components/question"
 
-const IndexPage = ({ location }) => {
+const Category = ({ location }) => {
   const { state = {} } = location
   const { survey, category } = state
 
@@ -15,4 +15,4 @@ const IndexPage = ({ location }) => {
     </Layout>
   )
 }
-export default IndexPage
+export default Category

@@ -1,6 +1,12 @@
 import React from "react"
 
 const Question = ({ survey, category }) => {
+  const [currentQ, setCurrentQ] = React.useState(0)
+
+  if (!survey) {
+    return <h1>Error</h1>
+  }
+
   const sectionLength = survey.length
 
   const nextQuestion = () => {
@@ -9,7 +15,6 @@ const Question = ({ survey, category }) => {
     } else return
   }
 
-  const [currentQ, setCurrentQ] = React.useState(0)
   return (
     <section>
       <h1>{category}</h1>
