@@ -14,8 +14,15 @@
 }
 
 .id-input {
-  width: 300px;
-  margin: 1rem;
+  width: 380px;
+  height: 50px;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  color: #ffbe55;
+  text-align: left;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #53c5cd;
 }
 
 .next-btn {
