@@ -612,18 +612,32 @@ pre tt:after {
   content: "";
 }
 
-.next-btn {
-  position: fixed;
-  bottom: 8rem;
-  background: #53c5cd;
-  border-radius: 30px;
-  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
-  color: white;
-  padding: 0.5rem;
-  width: 20vw;
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
+.tagline {
+  width: 25rem;
+  padding: 1rem;
+}
+
+.pills {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem;
+  position: absolute;
+  bottom: 0.5rem;
+}
+
+.filled-pill {
+  background-color: #181818;
+  width: 2.6rem;
+  height: 0.9rem;
+  border-radius: 20px;
+  margin: 0.4rem;
+}
+.unfilled-pill {
+  background-color: #d0d0d0;
+  width: 2.6rem;
+  height: 0.9rem;
+  border-radius: 20px;
+  margin: 0.4rem;
 }
 
 @media only screen and (max-width: 480px) {

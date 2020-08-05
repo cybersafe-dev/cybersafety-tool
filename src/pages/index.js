@@ -17,7 +17,7 @@ const IndexPage = props => {
     <Layout>
       <Header />
       <SEO title="Home" />
-      <section className="intropage-box">
+      <section className="intropage-container">
         <h1> {data.title} </h1>
         <div className="introtext-box">
           <img src={Icon1} alt="" />
