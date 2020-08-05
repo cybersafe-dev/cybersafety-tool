@@ -13,9 +13,9 @@ const RoleSelection = props => {
         <Header />
         <SEO title="Enter Your Role at School" />
         <h1>I am a...</h1>
-        <Link to="/dashboard/" state={{user: "leader"}}>School Leader</Link> <br />
-        <Link to="/dashboard/" state={{user: "teacher"}}>Teacher</Link> <br />
-        <Link to="/dashboard/" state={{user: "pupil"}}>Pupil</Link> <br />
+        <Link to="/dashboard/" state={{user: "leaders"}}>School Leader</Link> <br />
+        <Link to="/dashboard/" state={{user: "teachers"}}>Teacher</Link> <br />
+        <Link to="/dashboard/" state={{user: "pupils"}}>Pupil</Link> <br />
       </Layout>
     )
   }
