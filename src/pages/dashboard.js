@@ -3,6 +3,9 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import BgImg from "../images/bg-shape.svg"
+import FileImg from "../images/file-graphic.svg"
+import "../styling/dashboard.css"
 
 const Dashboard = ({ location, data }) => {
   const { state = {} } = location
@@ -14,37 +17,71 @@ const Dashboard = ({ location, data }) => {
   return (
     <Layout>
       <SEO title="Your Survey Dashboard" />
-      <h1>Your dashboard</h1>
-      <Link
-        to="/category/"
-        state={{ survey: userSpecificData.digitalknowledge, category: "Digital Knowledge" }}
-      >
-        Digital Knowledge
-      </Link>{" "}
-      <br />
-      <Link to="/category/" state={{ survey: userSpecificData.privacy, category: "Privacy" }}>
-        Privacy
-      </Link>{" "}
-      <br />
-      <Link to="/category/" state={{ survey: userSpecificData.sharing, category: "Sharing" }}>
-        Sharing
-      </Link>{" "}
-      <br />
-      <Link to="/category/" state={{ survey: userSpecificData.communication, category: "Communication" }}>
-        Communication
-      </Link>{" "}
-      <br />
-      <Link
-        to="/category/"
-        state={{ survey: userSpecificData.criticalthinking, category: "Critical Thinking" }}
-      >
-        Critical Thinking
-      </Link>{" "}
-      <br />
-      <Link to="/category/" state={{ survey: userSpecificData.responsibleuse, category: "Responsible Use" }}>
-        Responsible Use
-      </Link>{" "}
-      <br />
+      <section className="dashboard-container">
+        <h1 className="title">Your time starts now!</h1>
+        <p className="explain">
+          Click on a key to answer the questions for that category. See if you
+          can complete all the categories before the timer runs out.
+        </p>
+        <img src={BgImg} alt="background design" className="bg-img3" />
+        <img src={BgImg} alt="background design" className="bg-img4" />
+        <div className="categories">
+          <Link
+            to="/category/"
+            state={{
+              survey: userSpecificData.digitalknowledge,
+              category: "Digital Knowledge",
+            }}
+          >
+            Digital Knowledge
+          </Link>{" "}
+          <br />
+          <Link
+            to="/category/"
+            state={{ survey: userSpecificData.privacy, category: "Privacy" }}
+          >
+            Privacy
+          </Link>{" "}
+          <br />
+          <Link
+            to="/category/"
+            state={{ survey: userSpecificData.sharing, category: "Sharing" }}
+          >
+            Sharing
+          </Link>{" "}
+          <br />
+          <Link
+            to="/category/"
+            state={{
+              survey: userSpecificData.communication,
+              category: "Communication",
+            }}
+          >
+            Communication
+          </Link>{" "}
+          <br />
+          <Link
+            to="/category/"
+            state={{
+              survey: userSpecificData.criticalthinking,
+              category: "Critical Thinking",
+            }}
+          >
+            Critical Thinking
+          </Link>{" "}
+          <br />
+          <Link
+            to="/category/"
+            state={{
+              survey: userSpecificData.responsibleuse,
+              category: "Responsible Use",
+            }}
+          >
+            Responsible Use
+          </Link>{" "}
+        </div>
+        <img src={FileImg} alt="background design" className="file-image" />
+      </section>
     </Layout>
   )
 }

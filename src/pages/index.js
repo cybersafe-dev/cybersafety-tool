@@ -17,10 +17,10 @@ const IndexPage = props => {
     <Layout>
       <Header />
       <SEO title="Home" />
-      <section className="intropage-box">
+      <section className="intropage-container">
         <h1> {data.title} </h1>
         <div className="introtext-box">
-          <img src={Icon1} alt="" />
+          <img src={Icon1} alt="background design" />
           <article className="para-1">
             <p> {data.body.paragraph1} </p>
           </article>
@@ -37,7 +37,7 @@ const IndexPage = props => {
             <p> {data.body.paragraph3} </p>
           </article>
         </div>
-        <Link to="/enterid/" className="btn">
+        <Link to="/enterid/" className="start-btn">
           Let's get started!
         </Link>
         <div className="pills">
