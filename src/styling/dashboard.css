@@ -1,0 +1,34 @@
+.title {
+  margin: 1rem;
+}
+
+.explain {
+  margin: 1rem;
+  width: 800px;
+}
+
+.bg-img3 {
+  position: absolute;
+  right: 6rem;
+  top: -10rem;
+  z-index: -1;
+  height: 25vw;
+  transform: rotate(180deg);
+}
+.bg-img4 {
+  position: absolute;
+  left: -4rem;
+  bottom: -10rem;
+  z-index: -1;
+  height: 40vw;
+  transform: rotate(90deg);
+}
+
+.file-image {
+  height: 12rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.categories {
+}
