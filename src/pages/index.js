@@ -20,7 +20,7 @@ const IndexPage = props => {
       <section className="intropage-container">
         <h1> {data.title} </h1>
         <div className="introtext-box">
-          <img src={Icon1} alt="" />
+          <img src={Icon1} alt="background design" />
           <article className="para-1">
             <p> {data.body.paragraph1} </p>
           </article>
