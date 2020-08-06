@@ -8,9 +8,7 @@ import BgImg from "../images/bg-shape.svg"
 
 import "../styling/roleselection.css"
 
-const RoleSelection = props => {
-  //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-
+const RoleSelection = () => {
   return (
     <Layout>
       <Header />
@@ -19,17 +17,17 @@ const RoleSelection = props => {
         <h1>I am a...</h1>
         <img src={BgImg} alt="background design" className="bg-img2" />
         <div className="roles">
-          <Link to="/dashboard/" state={{ user: "leader" }} className="leader">
+          <Link to="/dashboard/" state={{ user: "leaders" }} className="leader">
             School Leader
           </Link>
           <Link
             to="/dashboard/"
-            state={{ user: "teacher" }}
+            state={{ user: "teachers" }}
             className="teacher"
           >
             Teacher
           </Link>
-          <Link to="/dashboard/" state={{ user: "pupil" }} className="pupil">
+          <Link to="/dashboard/" state={{ user: "pupils" }} className="pupil">
             Pupil
           </Link>
         </div>

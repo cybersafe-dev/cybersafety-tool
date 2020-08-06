@@ -1,25 +1,27 @@
 import React from "react"
+import DataErrorPage from "../components/dataerror/dataerror"
 
-const Question = ({ data }) => {
-  // console.log({ data })
-  const {
-    digitalknowledge
-  } = data
-  const sectionLength = digitalknowledge.length
+const Question = ({ survey, category }) => {
+  const [currentQ, setCurrentQ] = React.useState(0)
 
-  const nextQuestion = () => {
-      if (currentQ < sectionLength -1) {
-        setCurrentQ(currentQ + 1)
-      } else return
+  if (!survey) {
+    return <DataErrorPage />
   }
 
-  const [currentQ, setCurrentQ] = React.useState(0)
+  const sectionLength = survey.length
+
+  const nextQuestion = () => {
+    if (currentQ < sectionLength - 1) {
+      setCurrentQ(currentQ + 1)
+    } else return
+  }
+
   return (
     <section>
-      <h1>Digital Knowledge</h1>
-      <p>{digitalknowledge[currentQ].statement}</p>
+      <h1>{category}</h1>
+      <p>{survey[currentQ].statement}</p>
       <ul>
-        {digitalknowledge[currentQ].responses.map(response => (
+        {survey[currentQ].responses.map(response => (
           <li key={response.answer}>{response.answer}</li>
         ))}
       </ul>
