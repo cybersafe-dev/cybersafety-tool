@@ -18,7 +18,7 @@
 .bg-img4 {
   position: absolute;
   left: -4rem;
-  bottom: -10rem;
+  bottom: -12rem;
   z-index: -1;
   height: 40vw;
   transform: rotate(90deg);
@@ -31,4 +31,11 @@
 }
 
 .categories {
+  display: inline-flex;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 8rem;
+}
+.col {
+  flex: 1;
 }
