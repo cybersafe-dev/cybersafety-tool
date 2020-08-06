@@ -1,10 +1,11 @@
 import React from "react"
+import DataErrorPage from "../components/dataerror/dataerror"
 
 const Question = ({ survey, category }) => {
   const [currentQ, setCurrentQ] = React.useState(0)
 
   if (!survey) {
-    return <h1>Error</h1>
+    return <DataErrorPage />
   }
 
   const sectionLength = survey.length

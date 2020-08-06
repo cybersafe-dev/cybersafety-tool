@@ -3,18 +3,23 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import DataErrorPage from "../components/dataerror/dataerror"
 import BgImg from "../images/bg-shape.svg"
 import FileImg from "../images/file-graphic.svg"
 import "../styling/dashboard.css"
 
 const Dashboard = ({ location, data }) => {
   const { state = {} } = location
+  if (!state) {
+    return <DataErrorPage />
+  }
   const { user } = state
+  if (!user) {
+    return <DataErrorPage />
+  }
   const surveyAllData =
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-  if (!user) {
-    return <h1>Error 400</h1>
-  }
+ 
   const userSpecificData = surveyAllData[user]
   console.log(user, userSpecificData)
   return (
