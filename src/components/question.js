@@ -22,6 +22,7 @@ const Question = ({ survey, category }) => {
   return (
     <>
       <h1 className="category-title">{category}</h1>
+
       <section className="category-container">
         <img src={BgImg} alt="background design" className="bg-img5" />
         <p className="statement">{survey[currentQ].statement}</p>
@@ -37,6 +38,7 @@ const Question = ({ survey, category }) => {
           Next
         </button>
       </section>
+      <p className="tip">Click one of the buttons to choose an answer.</p>
     </>
   )
 }

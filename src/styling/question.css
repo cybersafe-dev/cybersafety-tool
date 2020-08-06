@@ -39,6 +39,12 @@
   transform: rotate(90deg);
 }
 
+.tip {
+  color: #8e8e8e;
+  text-align: left;
+  margin: 0.5rem;
+}
+
 .nxt-btn {
   justify-content: center;
   position: absolute;
