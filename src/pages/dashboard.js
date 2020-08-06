@@ -40,6 +40,7 @@ const Dashboard = ({ location, data }) => {
           Click on a key to answer the questions for that category. See if you
           can complete all the categories before the timer runs out.
         </p>
+
         <img src={BgImg} alt="background design" className="bg-img3" />
         <img src={BgImg} alt="background design" className="bg-img4" />
         <div className="categories">
