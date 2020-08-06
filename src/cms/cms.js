@@ -1,7 +1,7 @@
 import CMS from 'netlify-cms-app'
 
-import surveyPreview from './preview-templates/surveyPreview'
+import SurveyPreview from './preview-templates/surveyPreview/surveyPreview'
 import infopagePreview from './preview-templates/infopagePreview'
 
-CMS.registerPreviewTemplate('survey', surveyPreview)
+CMS.registerPreviewTemplate('survey', SurveyPreview)
 CMS.registerPreviewTemplate('infopage', infopagePreview)
