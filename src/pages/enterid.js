@@ -29,8 +29,8 @@ const SchoolId = props => {
           Next
         </Link>
         <div className="pills">
-          <div className="filled-pill"></div>
           <div className="unfilled-pill"></div>
+          <div className="filled-pill"></div>
           <div className="unfilled-pill"></div>
         </div>
       </section>
