@@ -1,0 +1,45 @@
+.category-title {
+  text-align: right;
+  margin: 1rem;
+}
+
+.category-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.statement {
+  font-size: 20px;
+}
+
+.responses {
+  list-style: none;
+  margin-left: 0;
+}
+
+.response-option {
+  background-color: #28936a;
+  border-radius: 30px;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem;
+  width: 300px;
+  font-weight: 600;
+}
+
+.nxt-btn {
+  justify-content: center;
+  position: absolute;
+  bottom: 10%;
+  background: #53c5cd;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem;
+  width: 250px;
+  text-decoration: none;
+  font-weight: 600;
+}

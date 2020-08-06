@@ -27,7 +27,7 @@
 
 .next-btn {
   position: fixed;
-  bottom: 10rem;
+  bottom: 30%;
   background: #53c5cd;
   border-radius: 30px;
   box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
