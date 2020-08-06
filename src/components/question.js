@@ -1,5 +1,6 @@
 import React from "react"
 import DataErrorPage from "../components/dataerror/dataerror"
+import BgImg from "../images/bg-shape.svg"
 
 import "../styling/question.css"
 
@@ -22,6 +23,7 @@ const Question = ({ survey, category }) => {
     <>
       <h1 className="category-title">{category}</h1>
       <section className="category-container">
+        <img src={BgImg} alt="background design" className="bg-img5" />
         <p className="statement">{survey[currentQ].statement}</p>
         <ul className="responses">
           {survey[currentQ].responses.map(response => (

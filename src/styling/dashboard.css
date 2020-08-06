@@ -9,18 +9,19 @@
 
 .bg-img3 {
   position: absolute;
-  right: 6rem;
-  top: -10rem;
+  right: 5%;
+  top: -30%;
   z-index: -1;
   height: 25vw;
   transform: rotate(180deg);
 }
 .bg-img4 {
   position: absolute;
-  left: -4rem;
-  bottom: -12rem;
+  left: -5%;
+  bottom: -30%;
   z-index: -1;
   height: 40vw;
+
   transform: rotate(90deg);
 }
 

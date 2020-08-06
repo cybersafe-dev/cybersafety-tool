@@ -27,6 +27,16 @@
   padding: 0.5rem;
   width: 300px;
   font-weight: 600;
+  text-align: center;
+}
+
+.bg-img5 {
+  position: absolute;
+  left: 25%;
+  top: 15%;
+  z-index: -1;
+  width: 30vw;
+  transform: rotate(90deg);
 }
 
 .nxt-btn {
