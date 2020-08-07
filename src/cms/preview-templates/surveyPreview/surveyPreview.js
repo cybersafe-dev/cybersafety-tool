@@ -17,7 +17,6 @@ const SurveyPreview = ({ entry }) => {
   const [ru, setRu] = React.useState(false)
 
   if (data) {
-    console.log(data)
     return (
       <article>
         <h1>{data.title}</h1>
