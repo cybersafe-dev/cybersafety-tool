@@ -18,14 +18,14 @@ const ThankYou = props => {
       <SEO title="Thank you page" />
       <section className="thanks-container">
         <h1 className="thanks-title">Thank you!</h1>
-        <img src={BgImg} alt="background design" className="bg-img5" />
+        <img src={BgImg} alt="background design" className="bg-img6" />
         <img src={Rocket} alt="rocket icon" className="rocket" />
         <p>
           {" "}
           Your answers have been sent off to the cloud. You can close this
           window now.{" "}
         </p>
-        <Link to="/index/" className="close-btn">
+        <Link to="/" className="close-btn">
           Close
         </Link>
       </section>
