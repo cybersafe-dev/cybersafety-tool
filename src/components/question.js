@@ -1,6 +1,6 @@
 import React from "react"
 import DataErrorPage from "../components/dataerror/dataerror"
-import BgImg from "../images/bg-shape.svg"
+import BgImg from "../images/bg-gradient.svg"
 
 import "../styling/question.css"
 

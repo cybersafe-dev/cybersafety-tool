@@ -13,11 +13,11 @@
   top: -30%;
   z-index: -1;
   height: 25vw;
-  transform: rotate(180deg);
+  transform: rotate(230deg);
 }
 .bg-img4 {
   position: absolute;
-  left: -5%;
+  left: -4%;
   bottom: -30%;
   z-index: -1;
   height: 40vw;
