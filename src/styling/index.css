@@ -9,10 +9,38 @@
   padding: 0;
   margin-top: -1.2rem;
 }
+
+.bg1 {
+  position: absolute;
+  left: 2em;
+  top: -11em;
+  z-index: -1;
+  height: 25vw;
+  transform: rotate(230deg);
+}
+.bg2 {
+  position: absolute;
+  right: -5em;
+  bottom: -10em;
+  z-index: -1;
+  height: 30vw;
+  transform: rotate(10deg);
+  clip-path: view-box;
+}
+.bg3 {
+  position: absolute;
+  left: -7em;
+  bottom: -10em;
+  z-index: -1;
+  height: 30vw;
+  transform: rotate(70deg);
+  clip-path: view-box;
+}
+
 .para-1 {
   display: flex;
   align-items: center;
-  background-image: url("../images/intro1.svg");
+  /* background-image: url("../images/intro1.svg"); */
   background-repeat: no-repeat;
   background-position: center;
   padding: 1rem;
@@ -21,7 +49,7 @@
 .para-2 {
   display: flex;
   align-items: center;
-  background-image: url("../images/intro2.svg");
+  /* background-image: url("../images/intro2.svg"); */
   background-repeat: no-repeat;
   background-position: top;
   padding: 1rem;
@@ -30,7 +58,7 @@
 .para-3 {
   display: flex;
   align-items: center;
-  background-image: url("../images/intro3.svg");
+  /* background-image: url("../images/intro3.svg"); */
   background-repeat: no-repeat;
   background-position: center;
   padding: 1rem;

@@ -4,6 +4,7 @@ html {
   font-family: "Poppins", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow: hidden;
 }
 body {
   margin: 0;
@@ -189,7 +190,6 @@ textarea {
 html {
   font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
-  overflow-y: scroll;
 }
 * {
   box-sizing: inherit;
@@ -624,7 +624,7 @@ pre tt:after {
   flex-direction: row;
   margin: 1.5rem;
   position: absolute;
-  bottom: 0.5rem;
+  bottom: 0.5em;
 }
 
 .filled-pill {

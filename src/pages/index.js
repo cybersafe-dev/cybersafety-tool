@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 import Icon1 from "../images/intro-icon1.svg"
 import Icon2 from "../images/intro-icon2.svg"
 import Icon3 from "../images/intro-icon3.svg"
+import BgImg from "../images/bg-gradient.svg"
 
 import "../styling/index.css"
 const IndexPage = props => {
@@ -19,7 +20,9 @@ const IndexPage = props => {
       <SEO title="Home" />
       <section className="intropage-container">
         <h1> {data.title} </h1>
-
+        <img src={BgImg} alt="background design" className="bg1" />
+        <img src={BgImg} alt="background design" className="bg2" />
+        <img src={BgImg} alt="background design" className="bg3" />
         <div className="introtext-box">
           <img src={Icon1} alt="background design" />
           <article className="para-1">
