@@ -1,11 +1,28 @@
 import React from "react"
 import DataErrorPage from "../components/dataerror/dataerror"
+import { ResponseStore } from "../providers/responseProvider"
 import BgImg from "../images/bg-shape.svg"
 
 import "../styling/question.css"
 
 const Question = ({ survey, category }) => {
+  const [data, dispatch] = React.useContext(ResponseStore)
   const [currentQ, setCurrentQ] = React.useState(0)
+  const [sectionResponses, setSectionResponses] = React.useState([])
+
+  React.useEffect(() => {
+    console.log(sectionResponses)
+    if (sectionResponses.length === sectionLength) {
+      dispatch({
+        type: "RECORD_RESPONSES",
+        payload: { [category]: sectionResponses },
+      })
+    }
+  }, [sectionResponses])
+
+  React.useEffect(() => {
+    console.log(data)
+  }, [data])
 
   if (!survey) {
     return <DataErrorPage />
@@ -13,10 +30,14 @@ const Question = ({ survey, category }) => {
 
   const sectionLength = survey.length
 
-  const nextQuestion = () => {
+  const nextQuestion = async e => {
+    const { id } = e.target
     if (currentQ < sectionLength - 1) {
+      await setSectionResponses([...sectionResponses, id])
       setCurrentQ(currentQ + 1)
-    } else return
+    } else if (currentQ === sectionLength - 1) {
+      await setSectionResponses([...sectionResponses, id])
+    }
   }
 
   return (
@@ -27,11 +48,12 @@ const Question = ({ survey, category }) => {
         <img src={BgImg} alt="background design" className="bg-img5" />
         <p className="statement">{survey[currentQ].statement}</p>
         <section className="responses">
-          {survey[currentQ].responses.map(response => (
+          {survey[currentQ].responses.map((response, i) => (
             <button
-            onClick={nextQuestion}
+              onClick={nextQuestion}
               className="response-option"
               key={response.answer}
+              id={i + 1}
             >
               {response.answer}
             </button>
