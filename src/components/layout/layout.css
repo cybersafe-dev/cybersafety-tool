@@ -201,7 +201,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  color: #181818;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   word-wrap: break-word;
