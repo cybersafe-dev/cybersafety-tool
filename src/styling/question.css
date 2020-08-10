@@ -15,8 +15,11 @@
 }
 
 .responses {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  border: none;
   margin-left: 0;
+  cursor: pointer;
 }
 
 .response-option {
@@ -28,6 +31,8 @@
   width: 300px;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 0.5rem;
+  border: none;
 }
 
 .bg-img5 {
@@ -43,19 +48,4 @@
   color: #8e8e8e;
   text-align: left;
   margin: 0.5rem;
-}
-
-.nxt-btn {
-  justify-content: center;
-  position: absolute;
-  bottom: 10%;
-  background: #53c5cd;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
-  color: white;
-  padding: 0.5rem;
-  width: 250px;
-  text-decoration: none;
-  font-weight: 600;
 }

@@ -26,17 +26,17 @@ const Question = ({ survey, category }) => {
       <section className="category-container">
         <img src={BgImg} alt="background design" className="bg-img5" />
         <p className="statement">{survey[currentQ].statement}</p>
-        <ul className="responses">
+        <section className="responses">
           {survey[currentQ].responses.map(response => (
-            <li className="response-option" key={response.answer}>
+            <button
+            onClick={nextQuestion}
+              className="response-option"
+              key={response.answer}
+            >
               {response.answer}
-            </li>
+            </button>
           ))}
-        </ul>
-
-        <button onClick={nextQuestion} className="nxt-btn">
-          Next
-        </button>
+        </section>
       </section>
       <p className="tip">Click one of the buttons to choose an answer.</p>
     </>
