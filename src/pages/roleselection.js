@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 import Header from "../components/header/header"
 import SEO from "../components/seo"
-import BgImg from "../images/bg-shape.svg"
+import BgImg from "../images/bg-gradient.svg"
 
 import "../styling/roleselection.css"
 

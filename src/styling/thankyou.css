@@ -1,0 +1,33 @@
+.thanks-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.thanks-title {
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.bg-img6 {
+  position: absolute;
+  right: 23em;
+  top: 8em;
+  z-index: -1;
+  width: 30vw;
+}
+
+.close-btn {
+  position: fixed;
+  bottom: 2em;
+  background: #53c5cd;
+  border-radius: 30px;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem;
+  width: 250px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
