@@ -8,8 +8,8 @@ import { ResponseStore } from "../providers/responseProvider"
 const Category = (props) => {
   const { state = {} } = props.location
   const { survey, category } = state
-  const [responseData] = React.useContext(ResponseStore);
-  console.log({responseData})
+  const [data] = React.useContext(ResponseStore);
+  console.log({data})
 
   return (
     <Layout>
