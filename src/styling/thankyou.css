@@ -2,7 +2,12 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+.thanks-title {
+  margin: 0.5rem;
+  text-align: center;
 }
 
 .bg-img6 {

@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import Icon1 from "../images/intro-icon1.svg"
 import Icon2 from "../images/intro-icon2.svg"
 import Icon3 from "../images/intro-icon3.svg"
-
+import BgImg from "../images/bg-gradient.svg"
 import "../styling/index.css"
 const IndexPage = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -19,6 +19,7 @@ const IndexPage = props => {
       <SEO title="Home" />
       <section className="intropage-container">
         <h1> {data.title} </h1>
+
         <div className="introtext-box">
           <img src={Icon1} alt="background design" />
           <article className="para-1">

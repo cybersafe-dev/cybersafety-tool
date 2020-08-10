@@ -16,8 +16,9 @@ const ThankYou = props => {
     <Layout>
       <Header />
       <SEO title="Thank you page" />
+
+      <h1 className="thanks-title">Thank you!</h1>
       <section className="thanks-container">
-        <h1 className="thanks-title">Thank you!</h1>
         <img src={BgImg} alt="background design" className="bg-img6" />
         <img src={Rocket} alt="rocket icon" className="rocket" />
         <p>
