@@ -1,14 +1,14 @@
-import React, { createContext, useState } from "react"
+import React from "react"
 
-export const responseStore = createContext(null)
+export const ResponseStore = React.createContext(null)
 
 const ResponseProvider = props => {
-  const [responseData, setResponseData] = useState(null)
+  const [responseData, setResponseData] = React.useState("test")
 
   return (
-    <responseStore.Provider value={[responseData, setResponseData]}>
+    <ResponseStore.Provider value={[responseData, setResponseData]}>
       {props.children}
-    </responseStore.Provider>
+    </ResponseStore.Provider>
   )
 }
 
