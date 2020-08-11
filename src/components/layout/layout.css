@@ -622,7 +622,7 @@ pre tt:after {
 .pills {
   display: flex;
   flex-direction: row;
-  margin: 1.5rem;
+  margin: 1rem;
   position: absolute;
   bottom: 0.5em;
 }

@@ -10,8 +10,6 @@ import Rocket from "../images/rocket.svg"
 import "../styling/thankyou.css"
 
 const ThankYou = props => {
-  //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-
   return (
     <Layout>
       <Header />
