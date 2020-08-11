@@ -5,9 +5,9 @@
 }
 
 .progress {
-  height: 30px;
+  height: 10px;
   width: 200px;
-  background-color: gray;
+  background-color: #f4f3f3;
   border-radius: 20px;
 }
 
@@ -16,5 +16,5 @@
   width: 0;
   opacity: 0;
   border-radius: 20px;
-  background-color: orange;
+  background: linear-gradient(to left, #8dff57, #14c384);
 }
