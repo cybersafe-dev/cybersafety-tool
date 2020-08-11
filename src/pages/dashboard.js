@@ -21,7 +21,7 @@ import "../styling/dashboard.css"
 const Dashboard = ({ data }) => {
   const [store] = React.useContext(ResponseStore)
   console.log({ store })
-  if (!store) {
+  if (!store || !store.userType) {
     return <DataErrorPage />
   }
   const user = store.userType

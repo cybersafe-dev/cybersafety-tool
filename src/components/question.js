@@ -7,10 +7,9 @@ import Progress from "./progress"
 
 import "../styling/question.css"
 
-const Question = ({ survey, category }) => {
+const Question = ({ survey, category, currentQ, setCurrentQ, sectionLength }) => {
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
-  const [currentQ, setCurrentQ] = React.useState(0)
   const [sectionResponses, setSectionResponses] = React.useState([])
 
   React.useEffect(() => {
@@ -27,8 +26,6 @@ const Question = ({ survey, category }) => {
   if (!survey) {
     return <DataErrorPage />
   }
-
-  const sectionLength = survey.length
 
   const nextQuestion = async e => {
     const { id } = e.target
