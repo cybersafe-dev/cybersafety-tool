@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
+import { ResponseStore } from "../providers/responseProvider"
 
 import Layout from "../components/layout/layout"
 import Header from "../components/header/header"
@@ -8,8 +9,23 @@ import BgImg from "../images/bg-gradient.svg"
 
 import "../styling/enterid.css"
 
-const SchoolId = props => {
-  //const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+const SchoolId = () => {
+  // eslint-disable-next-line
+  const [store, dispatch] = React.useContext(ResponseStore)
+  const [input, setInput] = React.useState("")
+
+  const handleChange = e => {
+    const { value } = e.target
+    setInput(value)
+  }
+
+  const handleIdSubmit = async () => {
+    await dispatch({
+      type: "RECORD_USERID",
+      payload: input,
+    })
+    navigate("/roleselection/")
+  }
 
   return (
     <Layout>
@@ -23,11 +39,16 @@ const SchoolId = props => {
           To help us help you, please click and type the School ID you were
           given in the line below.
         </p>
-        <input type="text" placeholder="e.g. SP0001abx" className="id-input" />
-
-        <Link to="/roleselection/" className="next-btn">
+        <input
+          type="text"
+          placeholder="e.g. SP0001abx"
+          value={input}
+          className="id-input"
+          onChange={handleChange}
+        />
+        <button className="next-btn" onClick={handleIdSubmit}>
           Next
-        </Link>
+        </button>
         <div className="pills">
           <div className="unfilled-pill"></div>
           <div className="filled-pill"></div>

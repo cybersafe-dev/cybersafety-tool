@@ -7,7 +7,7 @@ import BgImg from "../images/bg-shape.svg"
 import "../styling/question.css"
 
 const Question = ({ survey, category }) => {
-  const [data, dispatch] = React.useContext(ResponseStore)
+  const [store, dispatch] = React.useContext(ResponseStore)
   const [currentQ, setCurrentQ] = React.useState(0)
   const [sectionResponses, setSectionResponses] = React.useState([])
 
@@ -23,8 +23,8 @@ const Question = ({ survey, category }) => {
   }, [sectionResponses])
 
   React.useEffect(() => {
-    console.log(data)
-  }, [data])
+    console.log(store)
+  }, [store])
 
   if (!survey) {
     return <DataErrorPage />
