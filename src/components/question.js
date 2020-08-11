@@ -3,7 +3,6 @@ import { navigate } from "gatsby"
 import DataErrorPage from "../components/dataerror/dataerror"
 import { ResponseStore } from "../providers/responseProvider"
 import BgImg from "../images/bg-gradient.svg"
-import Progress from "./progress"
 
 import "../styling/question.css"
 
@@ -11,13 +10,13 @@ const Question = ({ survey, category, currentQ, setCurrentQ, sectionLength }) =>
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
   const [sectionResponses, setSectionResponses] = React.useState([])
-
+  const lowerCategory = category.replace(" ", "").toLowerCase()
   React.useEffect(() => {
     //console.log(sectionResponses)
     if (sectionResponses.length === sectionLength) {
       dispatch({
         type: "RECORD_RESPONSES",
-        payload: { [category]: sectionResponses },
+        payload: { [lowerCategory]: sectionResponses },
       })
     }
     // eslint-disable-next-line
@@ -43,7 +42,6 @@ const Question = ({ survey, category, currentQ, setCurrentQ, sectionLength }) =>
       <h1 className="category-title">{category}</h1>
 
       <section className="category-container">
-        <Progress done={currentQ} sectionLength={sectionLength} />
 
         <img src={BgImg} alt="background design" className="bg-img5" />
         <p className="statement">{survey[currentQ].statement}</p>
