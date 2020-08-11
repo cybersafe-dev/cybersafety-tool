@@ -5,7 +5,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import DataErrorPage from "../components/dataerror/dataerror"
 
-import BgImg from "../images/bg-shape.svg"
+import BgImg from "../images/bg-gradient.svg"
 import FileImg from "../images/file-graphic.svg"
 
 import Digital from "../images/Digital-open.svg"
