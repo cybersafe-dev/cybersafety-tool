@@ -1,0 +1,20 @@
+.progress-container {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.progress {
+  height: 30px;
+  width: 200px;
+  background-color: gray;
+  border-radius: 20px;
+}
+
+.progress-done {
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  border-radius: 20px;
+  background-color: orange;
+}
