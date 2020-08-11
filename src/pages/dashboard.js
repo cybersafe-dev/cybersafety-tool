@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { ResponseStore } from "../providers/responseProvider"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
@@ -18,14 +19,17 @@ import Respons from "../images/Respons-open.svg"
 import "../styling/dashboard.css"
 
 const Dashboard = ({ location, data }) => {
-  const { state = {} } = location
-  if (!state) {
+  const [store] = React.useContext(ResponseStore)
+  console.log({ store })
+  //const { state = {} } = location
+  //if (!state) {
+  //  return <DataErrorPage />
+  //}
+  if (!store) {
     return <DataErrorPage />
   }
-  const { user } = state
-  if (!user) {
-    return <DataErrorPage />
-  }
+  const user = store.userType
+
   const surveyAllData =
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 

@@ -1,37 +1,34 @@
 import React from "react"
 
+export const ResponseStore = React.createContext("")
+
 const initialState = {
   schoolId: null,
   userType: null,
   responses: [{ test: [5, 4, 3, 2, 1] }],
 }
 
-export const ResponseStore = React.createContext("")
-
-const reducer = (state, action) => {
+const reducer = (store, action) => {
   switch (action.type) {
     case "RECORD_USERID":
-      return {
-        schoolId: action.payload,
-      }
+      store.schoolId = action.payload
+      return store
     case "RECORD_USERTYPE":
-      return {
-        userType: action.payload,
-      }
+        store.userType = action.payload
+        return store
     case "RECORD_RESPONSES":
-      return {
-        responses: [...state.responses, action.payload],
-      }
+        store.responses = [...store.responses, action.payload]
+        return store
     default:
       throw new Error()
   }
 }
 
 const ResponseProvider = props => {
-  const [data, dispatch] = React.useReducer(reducer, initialState)
+  const [store, dispatch] = React.useReducer(reducer, initialState)
 
   return (
-    <ResponseStore.Provider value={[data, dispatch]}>
+    <ResponseStore.Provider value={[store, dispatch]}>
       {props.children}
     </ResponseStore.Provider>
   )

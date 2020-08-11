@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
+import { ResponseStore } from "../providers/responseProvider"
 
 import Layout from "../components/layout/layout"
 import Header from "../components/header/header"
@@ -9,6 +10,17 @@ import BgImg from "../images/bg-gradient.svg"
 import "../styling/roleselection.css"
 
 const RoleSelection = () => {
+  // eslint-disable-next-line
+  const [store, dispatch] = React.useContext(ResponseStore)
+
+  const handleUserSubmit = async user => {
+    await dispatch({
+      type: "RECORD_USERTYPE",
+      payload: user,
+    })
+    navigate("/dashboard/")
+  }
+
   return (
     <Layout>
       <Header />
@@ -17,19 +29,27 @@ const RoleSelection = () => {
         <h1>I am a...</h1>
         <img src={BgImg} alt="background design" className="bg-img2" />
         <div className="roles">
-          <Link to="/dashboard/" state={{ user: "leaders" }} className="leader">
+          <button
+            state={{ user: "leaders" }}
+            className="leader"
+            onClick={() => handleUserSubmit("leaders")}
+          >
             School Leader
-          </Link>
-          <Link
-            to="/dashboard/"
+          </button>
+          <button
             state={{ user: "teachers" }}
             className="teacher"
+            onClick={() => handleUserSubmit("teachers")}
           >
             Teacher
-          </Link>
-          <Link to="/dashboard/" state={{ user: "pupils" }} className="pupil">
+          </button>
+          <button
+            state={{ user: "pupils" }}
+            className="pupil"
+            onClick={() => handleUserSubmit("pupils")}
+          >
             Pupil
-          </Link>
+          </button>
         </div>
         <p className="tagline">
           {" "}
