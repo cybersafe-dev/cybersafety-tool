@@ -4,6 +4,10 @@
   left: 1em;
 }
 
+.progress-message {
+  margin: 0;
+}
+
 .progress {
   height: 10px;
   width: 200px;

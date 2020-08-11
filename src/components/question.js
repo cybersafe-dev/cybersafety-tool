@@ -50,10 +50,8 @@ const Question = ({ survey, category }) => {
       <h1 className="category-title">{category}</h1>
 
       <section className="category-container">
-        <div>
-          {" "}
-          <Progress done={currentQ * 10} />{" "}
-        </div>
+        <Progress done={currentQ * 10} />
+
         <img src={BgImg} alt="background design" className="bg-img5" />
         <p className="statement">{survey[currentQ].statement}</p>
         <section className="responses">

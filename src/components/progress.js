@@ -10,10 +10,11 @@ const Progress = ({ done }) => {
       width: `${done}%`,
     }
     setStyle(newStyle)
-  }, 200)
+  }, 100)
 
   return (
     <section className="progress-container">
+      <p className="progress-message"> Progress Bar </p>
       <div className="progress">
         <div className="progress-done" style={style}></div>
       </div>
