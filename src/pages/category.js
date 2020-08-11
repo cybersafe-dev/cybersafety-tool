@@ -4,8 +4,8 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import Question from "../components/question"
 
-const Category = ({ location }) => {
-  const { state = {} } = location
+const Category = (props) => {
+  const { state = {} } = props.location
   const { survey, category } = state
 
   return (
