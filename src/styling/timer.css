@@ -1,0 +1,11 @@
+.timer-container {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  text-align: right;
+}
+
+.timer {
+  font-size: 50px;
+  margin: 1rem;
+}
