@@ -18,13 +18,9 @@ import Respons from "../images/Respons-open.svg"
 
 import "../styling/dashboard.css"
 
-const Dashboard = ({ location, data }) => {
+const Dashboard = ({ data }) => {
   const [store] = React.useContext(ResponseStore)
   console.log({ store })
-  //const { state = {} } = location
-  //if (!state) {
-  //  return <DataErrorPage />
-  //}
   if (!store) {
     return <DataErrorPage />
   }
