@@ -2,7 +2,8 @@ import React from "react"
 // import { navigate } from "gatsby"
 import DataErrorPage from "../components/dataerror/dataerror"
 import { ResponseStore } from "../providers/responseProvider"
-import BgImg from "../images/bg-shape.svg"
+import BgImg from "../images/bg-gradient.svg"
+import Progress from "./progress"
 
 import "../styling/question.css"
 
@@ -49,6 +50,8 @@ const Question = ({ survey, category }) => {
       <h1 className="category-title">{category}</h1>
 
       <section className="category-container">
+        <Progress done={currentQ * 10} />
+
         <img src={BgImg} alt="background design" className="bg-img5" />
         <p className="statement">{survey[currentQ].statement}</p>
         <section className="responses">

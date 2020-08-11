@@ -13,9 +13,9 @@
 .bg-img6 {
   position: absolute;
   right: 23em;
-  top: 8em;
+  top: 8.5em;
   z-index: -1;
-  width: 30vw;
+  width: 29vw;
 }
 
 .close-btn {
