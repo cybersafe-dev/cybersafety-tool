@@ -1,10 +1,10 @@
 import React from "react"
 import { useStopwatch } from "react-timer-hook"
-
+import Time from "../images/timer.svg"
 import "../styling/timer.css"
 
 const Timer = () => {
-  const { seconds, minutes, start } = useStopwatch({
+  const { seconds, minutes } = useStopwatch({
     autoStart: true,
   })
 
@@ -13,11 +13,8 @@ const Timer = () => {
       <div className="timer-container">
         <div className="timer">
           <span>{minutes}</span>:<span>{seconds}</span>
+          <img src={Time} alt="" className="time-icon" />
         </div>
-
-        <button className="timer-btn" onClick={start}>
-          trigger by opening dashboard?
-        </button>
       </div>
     </>
   )
