@@ -1,4 +1,5 @@
 import React from "react"
+// import { navigate } from "gatsby"
 import DataErrorPage from "../components/dataerror/dataerror"
 import { ResponseStore } from "../providers/responseProvider"
 import BgImg from "../images/bg-shape.svg"
@@ -18,6 +19,7 @@ const Question = ({ survey, category }) => {
         payload: { [category]: sectionResponses },
       })
     }
+    // eslint-disable-next-line
   }, [sectionResponses])
 
   React.useEffect(() => {
@@ -37,6 +39,8 @@ const Question = ({ survey, category }) => {
       setCurrentQ(currentQ + 1)
     } else if (currentQ === sectionLength - 1) {
       await setSectionResponses([...sectionResponses, id])
+      // add after data is switched to reducer
+      //navigate("/dashboard/")
     }
   }
 
