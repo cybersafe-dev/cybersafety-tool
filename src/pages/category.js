@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
@@ -8,9 +9,43 @@ import CategoryProgress from "../components/categoryProgress"
 import DataErrorPage from "../components/dataerror/dataerror"
 
 const Category = props => {
+  const questionMessageData = useStaticQuery(
+    graphql`
+      query {
+        allFile(
+          filter: {
+            sourceInstanceName: { eq: "content" }
+            name: { eq: "hints" }
+          }
+        ) {
+          edges {
+            node {
+              childMarkdownRemark {
+                frontmatter {
+                  surveyHints {
+                    general
+                    last
+                  }
+                  surveyProgress {
+                    first
+                    last
+                    lessThanThree
+                    middle
+                    penultimate
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
   const { state = {} } = props.location
   const { survey, category } = state
   const [currentQ, setCurrentQ] = React.useState(0)
+
   if (!survey) {
     return <DataErrorPage />
   }
@@ -19,7 +54,11 @@ const Category = props => {
   return (
     <Layout>
       <SEO title="Survey" />
-      <Progress done={currentQ} sectionLength={sectionLength} />
+      <Progress
+        done={currentQ}
+        sectionLength={sectionLength}
+        questionMessageData={questionMessageData}
+      />
       <Question
         survey={survey}
         category={category}
@@ -27,7 +66,10 @@ const Category = props => {
         setCurrentQ={setCurrentQ}
         sectionLength={sectionLength}
       />
-      <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
+      <CategoryProgress
+        currentQ={currentQ}
+        sectionLength={sectionLength}
+      />
     </Layout>
   )
 }
