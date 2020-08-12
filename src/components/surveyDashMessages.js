@@ -7,12 +7,13 @@ const SurveyDashMessages = ({
   completedSections,
   allDashMessages,
 }) => {
-  const [dashTitle, setDashTitle] = React.useState(
-    allDashMessages.dashboardMain.zeroDone
-  )
+  const [dashTitle, setDashTitle] = React.useState("Your time starts now!")
 
   React.useEffect(() => {
     switch (completedSections.length - 1) {
+      case 0:
+        setDashTitle(() => allDashMessages.dashboardMain.zeroDone)
+        break
       case 1:
         setDashTitle(() => allDashMessages.dashboardMain.oneDone)
         break
