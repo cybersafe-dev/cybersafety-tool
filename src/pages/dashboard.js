@@ -35,13 +35,13 @@ const Dashboard = ({ data }) => {
   const allDashMessages =
     data.allFile.edges[1].node.childMarkdownRemark.frontmatter
 
-  const [message, setMessage] = React.useState(
-    allDashMessages.dashboardMessages.initial
-  )
-
   if (!store || !store.userType || !allDashMessages) {
     return <DataErrorPage />
   }
+  
+  const [message, setMessage] = React.useState(
+    allDashMessages.dashboardMessages.initial
+  )
 
   const user = store.userType
   const userSpecificData = surveyAllData[user]
