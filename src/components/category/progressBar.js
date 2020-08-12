@@ -1,10 +1,10 @@
 import React from "react"
-import "../styling/progress.css"
+import "../styling/progressBar.css"
 
-const Progress = ({ done, sectionLength }) => {
+const ProgressBar = ({ done, sectionLength }) => {
   const [style, setStyle] = React.useState({})
 
-  const progressWidth = done * 200 / sectionLength
+  const progressWidth = (done * 200) / sectionLength
 
   setTimeout(() => {
     const newStyle = {
@@ -24,4 +24,4 @@ const Progress = ({ done, sectionLength }) => {
   )
 }
 
-export default Progress
+export default ProgressBar
