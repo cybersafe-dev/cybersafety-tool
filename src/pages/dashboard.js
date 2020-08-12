@@ -28,22 +28,31 @@ import "../styling/dashboard.css"
 
 const Dashboard = ({ data }) => {
   const [store] = React.useContext(ResponseStore)
-  const [message, setMessage] = React.useState("")
+
+  const surveyAllData =
+    data.allFile.edges[2].node.childMarkdownRemark.frontmatter
+
+  const allDashMessages =
+    data.allFile.edges[1].node.childMarkdownRemark.frontmatter
+
+  const [message, setMessage] = React.useState(
+    allDashMessages.dashboardMessages.initial
+  )
 
   if (!store || !store.userType) {
     return <DataErrorPage />
   }
 
   const user = store.userType
-
-  const surveyAllData =
-    data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-
   const userSpecificData = surveyAllData[user]
 
   let completedSections = []
   let sectionKeys = store.responses.map(response => Object.keys(response))
   sectionKeys.map(key => completedSections.push(key[0]))
+
+  const repeatCategoryAlert = () => {
+    setMessage(allDashMessages.dashboardMessages.categoryRepeat)
+  }
 
   console.log(user, userSpecificData)
   console.log({ store })
@@ -52,7 +61,12 @@ const Dashboard = ({ data }) => {
     <Layout>
       <SEO title="Your Survey Dashboard" />
       <section className="dashboard-container">
-        <SurveyDashMessages completedSections={completedSections} message={message} setMessage={setMessage} />
+        <SurveyDashMessages
+          allDashMessages={allDashMessages}
+          completedSections={completedSections}
+          message={message}
+          setMessage={setMessage}
+        />
         <SurveyProgress completedSections={completedSections} />
 
         <img src={BgImg} alt="background design" className="bg-img3" />
@@ -63,7 +77,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={DigitalDone}
                 alt="Digital Knowledge complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -81,7 +95,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={PrivacyDone}
                 alt="Privacy complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -99,7 +113,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={SharingDone}
                 alt="Sharing complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -119,7 +133,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={CommDone}
                 alt="Communication complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -137,7 +151,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={CriticalDone}
                 alt="Critical Thinking complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -155,7 +169,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={ResponsDone}
                 alt="Responsible Use complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -178,10 +192,8 @@ const Dashboard = ({ data }) => {
 export default Dashboard
 
 export const query = graphql`
-  query {
-    allFile(
-      filter: { sourceInstanceName: { eq: "content" }, name: { eq: "survey" } }
-    ) {
+  {
+    allFile(filter: { sourceInstanceName: { eq: "content" } }) {
       edges {
         node {
           childMarkdownRemark {
@@ -299,6 +311,31 @@ export const query = graphql`
                     answer
                   }
                 }
+              }
+              dashboardMain {
+                fiveDone
+                fourDone
+                oneDone
+                sixDone
+                threeDone
+                twoDone
+                zeroDone
+              }
+              dashboardMessages {
+                allCategoriesDone
+                categoryRepeat
+                initial
+              }
+              surveyHints {
+                general
+                last
+              }
+              surveyProgress {
+                first
+                last
+                lessThanThree
+                middle
+                penultimate
               }
             }
           }
