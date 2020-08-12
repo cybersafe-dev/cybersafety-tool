@@ -1,12 +1,18 @@
 import React from "react"
 import { navigate } from "gatsby"
-import DataErrorPage from "../components/dataerror/dataerror"
-import { ResponseStore } from "../providers/responseProvider"
-import BgImg from "../images/bg-gradient.svg"
+import DataErrorPage from "../../components/dataerror/dataerror"
+import { ResponseStore } from "../../providers/responseProvider"
+import BgImg from "../../images/bg-gradient.svg"
 
-import "../styling/question.css"
+import "../../styling/question.css"
 
-const Question = ({ survey, category, currentQ, setCurrentQ, sectionLength }) => {
+const Question = ({
+  survey,
+  category,
+  currentQ,
+  setCurrentQ,
+  sectionLength,
+}) => {
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
   const [sectionResponses, setSectionResponses] = React.useState([])
@@ -42,7 +48,6 @@ const Question = ({ survey, category, currentQ, setCurrentQ, sectionLength }) =>
       <h1 className="category-title">{category}</h1>
 
       <section className="category-container">
-
         <img src={BgImg} alt="background design" className="bg-img5" />
         <p className="statement">{survey[currentQ].statement}</p>
         <section className="responses">

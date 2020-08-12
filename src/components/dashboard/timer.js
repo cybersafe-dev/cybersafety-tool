@@ -1,18 +1,22 @@
 import React from "react"
-import { useStopwatch } from "react-timer-hook"
-import Time from "../images/timer.svg"
-import "../styling/timer.css"
+
+import { TimerStore } from "../../providers/timerProvider"
+import Time from "../../images/timer.svg"
+import "../../styling/timer.css"
 
 const Timer = () => {
-  const { seconds, minutes } = useStopwatch({
-    autoStart: true,
-  })
+  const [time, setTime] = React.useContext(TimerStore)
+
+  // React.useEffect(() => {
+  //   console.log(time)
+  // }, [time])
 
   return (
     <>
       <div className="timer-container">
         <div className="timer">
-          <span>{minutes}</span>:<span>{seconds}</span>
+          <span>{time}</span>
+
           <img src={Time} alt="" className="time-icon" />
         </div>
       </div>

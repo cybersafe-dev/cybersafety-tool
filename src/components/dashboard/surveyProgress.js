@@ -1,5 +1,5 @@
 import React from "react"
-import "../styling/dashboard.css"
+import "../../styling/dashboard.css"
 const SurveyProgress = ({ completedSections }) => {
   return (
     <section className="survey-progress">
