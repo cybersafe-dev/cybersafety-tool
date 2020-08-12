@@ -35,7 +35,9 @@ const Dashboard = ({ data }) => {
   const allDashMessages =
     data.allFile.edges[1].node.childMarkdownRemark.frontmatter
 
-  const [message, setMessage] = React.useState("")
+  const [message, setMessage] = React.useState(
+    "Click on a key to answer the questions for that category. See if you can complete all the categories before the timer gets to twenty minutes."
+  )
 
   if (!store || !store.userType) {
     return <DataErrorPage />
