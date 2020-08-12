@@ -1,13 +1,15 @@
 import React from "react"
 import "../styling/progress.css"
 
-const Progress = ({ done }) => {
+const Progress = ({ done, sectionLength }) => {
   const [style, setStyle] = React.useState({})
+
+  const progressWidth = done * 200 / sectionLength
 
   setTimeout(() => {
     const newStyle = {
       opacity: 1,
-      width: `${done}%`,
+      width: progressWidth,
     }
     setStyle(newStyle)
   }, 100)
