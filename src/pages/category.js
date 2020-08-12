@@ -65,6 +65,7 @@ const Category = props => {
         currentQ={currentQ}
         setCurrentQ={setCurrentQ}
         sectionLength={sectionLength}
+        questionMessageData={questionMessageData}
       />
       <CategoryProgress
         currentQ={currentQ}
