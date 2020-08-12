@@ -26,6 +26,7 @@ const Progress = ({ done, sectionLength, questionMessageData }) => {
           setProgressMessage(() => surveyProgress.middle)
       }
     }
+    // eslint-disable-next-line
   }, [done])
 
   const progressWidth = (done * 200) / sectionLength

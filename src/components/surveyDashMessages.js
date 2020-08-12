@@ -35,6 +35,7 @@ const SurveyDashMessages = ({
       default:
         setMessage(() => allDashMessages.dashboardMessages.initial)
     }
+    // eslint-disable-next-line
   }, [completedSections])
 
   return (
