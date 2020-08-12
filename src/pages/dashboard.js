@@ -39,7 +39,7 @@ const Dashboard = ({ data }) => {
     allDashMessages.dashboardMessages.initial
   )
 
-  if (!store || !store.userType) {
+  if (!store || !store.userType || !allDashMessages) {
     return <DataErrorPage />
   }
 
