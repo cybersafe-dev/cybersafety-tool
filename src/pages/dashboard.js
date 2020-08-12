@@ -6,6 +6,7 @@ import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import DataErrorPage from "../components/dataerror/dataerror"
 import SurveyProgress from "../components/surveyProgress"
+import SurveyDashMessages from "../components/surveyDashMessages"
 
 import BgImg from "../images/bg-gradient.svg"
 import FileImg from "../images/file-graphic.svg"
@@ -27,9 +28,7 @@ import "../styling/dashboard.css"
 
 const Dashboard = ({ data }) => {
   const [store] = React.useContext(ResponseStore)
-  const [message, setMessage] = React.useState(
-    "Click on a key to answer the questions for that category. See if you can complete all the categories before the timer runs out."
-  )
+  const [message, setMessage] = React.useState("")
 
   if (!store || !store.userType) {
     return <DataErrorPage />
@@ -53,8 +52,7 @@ const Dashboard = ({ data }) => {
     <Layout>
       <SEO title="Your Survey Dashboard" />
       <section className="dashboard-container">
-        <h1 className="title">Your time starts now!</h1>
-        <p className="explain">{message}</p>
+        <SurveyDashMessages completedSections={completedSections} message={message} setMessage={setMessage} />
         <SurveyProgress completedSections={completedSections} />
 
         <img src={BgImg} alt="background design" className="bg-img3" />
