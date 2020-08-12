@@ -5,6 +5,7 @@ import { ResponseStore } from "../providers/responseProvider"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import DataErrorPage from "../components/dataerror/dataerror"
+import SurveyProgress from "../components/surveyProgress"
 
 import BgImg from "../images/bg-gradient.svg"
 import FileImg from "../images/file-graphic.svg"
@@ -54,6 +55,7 @@ const Dashboard = ({ data }) => {
       <section className="dashboard-container">
         <h1 className="title">Your time starts now!</h1>
         <p className="explain">{message}</p>
+        <SurveyProgress completedSections={completedSections} />
 
         <img src={BgImg} alt="background design" className="bg-img3" />
         <img src={BgImg} alt="background design" className="bg-img4" />
