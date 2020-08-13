@@ -11,9 +11,6 @@ const SurveyDashMessages = ({
 
   React.useEffect(() => {
     switch (completedSections.length - 1) {
-      case 0:
-        setDashTitle(() => allDashMessages.dashboardMain.zeroDone)
-        break
       case 1:
         setDashTitle(() => allDashMessages.dashboardMain.oneDone)
         break
