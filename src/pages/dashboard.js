@@ -56,9 +56,9 @@ const Dashboard = ({ data }) => {
     setMessage(allDashMessages.dashboardMessages.categoryRepeat)
   }
 
-  console.log(user, userSpecificData)
-  console.log("messages", allDashMessages)
-  console.log({ store })
+  // console.log(user, userSpecificData)
+  // console.log("messages", allDashMessages)
+  // console.log({ store })
 
   return (
     <Layout>
