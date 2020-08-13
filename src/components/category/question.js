@@ -1,10 +1,10 @@
 import React from "react"
 import { navigate } from "gatsby"
-import DataErrorPage from "../components/dataerror/dataerror"
-import { ResponseStore } from "../providers/responseProvider"
-import BgImg from "../images/bg-gradient.svg"
+import DataErrorPage from "../../components/dataerror/dataerror"
+import { ResponseStore } from "../../providers/responseProvider"
+import BgImg from "../../images/bg-gradient.svg"
 
-import "../styling/question.css"
+import "../../styling/question.css"
 
 const Question = ({
   survey,

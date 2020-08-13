@@ -5,8 +5,10 @@ import { ResponseStore } from "../providers/responseProvider"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import DataErrorPage from "../components/dataerror/dataerror"
-import SurveyProgress from "../components/surveyProgress"
-import SurveyDashMessages from "../components/surveyDashMessages"
+import SurveyDashMessages from "../components/dashboard/surveyDashMessages"
+
+import SurveyProgress from "../components/dashboard/surveyProgress"
+import Timer from "../components/dashboard/timer"
 
 import BgImg from "../images/bg-gradient.svg"
 import FileImg from "../images/file-graphic.svg"
@@ -67,11 +69,12 @@ const Dashboard = ({ data }) => {
           message={message}
           setMessage={setMessage}
         />
-        <SurveyProgress completedSections={completedSections} />
 
+        <Timer />
         <img src={BgImg} alt="background design" className="bg-img3" />
         <img src={BgImg} alt="background design" className="bg-img4" />
         <div className="categories">
+          <SurveyProgress completedSections={completedSections} />
           <div className="col">
             {completedSections.includes("digitalknowledge") ? (
               <img

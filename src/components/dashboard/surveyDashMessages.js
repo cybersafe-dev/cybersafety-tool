@@ -1,5 +1,5 @@
 import React from "react"
-import "../styling/dashboard.css"
+import "../../styling/dashboard.css"
 
 const SurveyDashMessages = ({
   message,
@@ -31,7 +31,7 @@ const SurveyDashMessages = ({
         setMessage(() => allDashMessages.dashboardMessages.allCategoriesDone)
         break
       default:
-        setMessage(() => allDashMessages.dashboardMessages.initial)
+        //setMessage(() => allDashMessages.dashboardMessages.initial)
     }
     // eslint-disable-next-line
   }, [completedSections])

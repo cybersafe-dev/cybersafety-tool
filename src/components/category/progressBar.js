@@ -1,7 +1,6 @@
 import React from "react"
-import "../styling/progress.css"
-
-const Progress = ({ done, sectionLength, questionMessageData }) => {
+import "../../styling/progressBar.css"
+const ProgressBar = ({ done, sectionLength, questionMessageData }) => {
   const [style, setStyle] = React.useState({})
   const [progressMessage, setProgressMessage] = React.useState("")
   const {
@@ -49,4 +48,4 @@ const Progress = ({ done, sectionLength, questionMessageData }) => {
   )
 }
 
-export default Progress
+export default ProgressBar
