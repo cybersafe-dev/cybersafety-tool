@@ -12,13 +12,18 @@ const Question = ({
   currentQ,
   setCurrentQ,
   sectionLength,
+  questionMessageData,
 }) => {
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
   const [sectionResponses, setSectionResponses] = React.useState([])
   const lowerCategory = category.replace(" ", "").toLowerCase()
+
+  const {
+    surveyHints,
+  } = questionMessageData.allFile.edges[0].node.childMarkdownRemark.frontmatter
+
   React.useEffect(() => {
-    //console.log(sectionResponses)
     if (sectionResponses.length === sectionLength) {
       dispatch({
         type: "RECORD_RESPONSES",
@@ -63,7 +68,11 @@ const Question = ({
           ))}
         </section>
       </section>
-      <p className="tip">Click one of the buttons to choose an answer.</p>
+      {currentQ === sectionLength - 1 ? (
+        <p className="tip">{surveyHints.last}</p>
+      ) : (
+        <p className="tip">{surveyHints.general}</p>
+      )}
     </>
   )
 }

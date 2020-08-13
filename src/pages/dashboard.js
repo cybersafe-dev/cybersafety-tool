@@ -5,6 +5,8 @@ import { ResponseStore } from "../providers/responseProvider"
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
 import DataErrorPage from "../components/dataerror/dataerror"
+import SurveyDashMessages from "../components/dashboard/surveyDashMessages"
+
 import SurveyProgress from "../components/dashboard/surveyProgress"
 import Timer from "../components/dashboard/timer"
 
@@ -28,8 +30,15 @@ import "../styling/dashboard.css"
 
 const Dashboard = ({ data }) => {
   const [store] = React.useContext(ResponseStore)
+
+  const surveyAllData =
+    data.allFile.edges[2].node.childMarkdownRemark.frontmatter
+
+  const allDashMessages =
+    data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+
   const [message, setMessage] = React.useState(
-    "Click on a key to answer the questions for that category. See if you can complete all the categories before the timer runs out."
+    "Click on a key to answer the questions for that category. See if you can complete all the categories before the timer gets to twenty minutes."
   )
 
   if (!store || !store.userType) {
@@ -37,25 +46,31 @@ const Dashboard = ({ data }) => {
   }
 
   const user = store.userType
-
-  const surveyAllData =
-    data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-
   const userSpecificData = surveyAllData[user]
 
   let completedSections = []
   let sectionKeys = store.responses.map(response => Object.keys(response))
   sectionKeys.map(key => completedSections.push(key[0]))
 
+  const repeatCategoryAlert = () => {
+    setMessage(allDashMessages.dashboardMessages.categoryRepeat)
+  }
+
   console.log(user, userSpecificData)
+  console.log("messages", allDashMessages)
   console.log({ store })
 
   return (
     <Layout>
       <SEO title="Your Survey Dashboard" />
       <section className="dashboard-container">
-        <h1 className="title">Your time starts now!</h1>
-        <p className="explain">{message}</p>
+        <SurveyDashMessages
+          allDashMessages={allDashMessages}
+          completedSections={completedSections}
+          message={message}
+          setMessage={setMessage}
+        />
+
         <Timer />
         <img src={BgImg} alt="background design" className="bg-img3" />
         <img src={BgImg} alt="background design" className="bg-img4" />
@@ -66,7 +81,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={DigitalDone}
                 alt="Digital Knowledge complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -84,7 +99,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={PrivacyDone}
                 alt="Privacy complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -102,7 +117,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={SharingDone}
                 alt="Sharing complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -122,7 +137,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={CommDone}
                 alt="Communication complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -140,7 +155,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={CriticalDone}
                 alt="Critical Thinking complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -158,7 +173,7 @@ const Dashboard = ({ data }) => {
               <img
                 src={ResponsDone}
                 alt="Responsible Use complete"
-                onClick={() => setMessage("You can't double-do a section!")}
+                onClick={repeatCategoryAlert}
               />
             ) : (
               <Link
@@ -181,10 +196,8 @@ const Dashboard = ({ data }) => {
 export default Dashboard
 
 export const query = graphql`
-  query {
-    allFile(
-      filter: { sourceInstanceName: { eq: "content" }, name: { eq: "survey" } }
-    ) {
+  {
+    allFile(filter: { sourceInstanceName: { eq: "content" } }) {
       edges {
         node {
           childMarkdownRemark {
@@ -302,6 +315,31 @@ export const query = graphql`
                     answer
                   }
                 }
+              }
+              dashboardMain {
+                fiveDone
+                fourDone
+                oneDone
+                sixDone
+                threeDone
+                twoDone
+                zeroDone
+              }
+              dashboardMessages {
+                allCategoriesDone
+                categoryRepeat
+                initial
+              }
+              surveyHints {
+                general
+                last
+              }
+              surveyProgress {
+                first
+                last
+                lessThanThree
+                middle
+                penultimate
               }
             }
           }
