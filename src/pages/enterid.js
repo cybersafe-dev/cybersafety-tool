@@ -32,7 +32,7 @@ const SchoolId = () => {
       <Header />
       <SEO title="Enter School Id" />
       <section className="id-container">
-        <h1>First step...</h1>
+        <h1 className="id-title">First step...</h1>
         <img src={BgImg} alt="background design" className="bg-img1" />
         <p className="tagline">
           {" "}

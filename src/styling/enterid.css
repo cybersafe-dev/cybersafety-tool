@@ -11,7 +11,7 @@
   left: 20em;
   top: 6em;
   z-index: -1;
-  width: 25vw;
+  width: 25rem;
 }
 
 .id-input {
@@ -38,4 +38,35 @@
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .id-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .id-title {
+    white-space: nowrap;
+  }
+
+  .tagline {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bg-img1 {
+    left: 0.5rem;
+    z-index: -1;
+    width: 22rem;
+  }
+  .id-input {
+    width: 300px;
+  }
+  .next-btn {
+    margin: 5rem;
+    font-size: 1.3rem;
+    padding: 0.8rem;
+  }
 }

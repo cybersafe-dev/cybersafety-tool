@@ -111,6 +111,8 @@
     margin: 1rem;
   }
   .start-btn {
-    margin: 3rem;
+    margin: 2rem;
+    font-size: 1.3rem;
+    padding: 0.8rem;
   }
 }

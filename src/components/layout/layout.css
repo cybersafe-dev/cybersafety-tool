@@ -638,6 +638,7 @@ pre tt:after {
   html {
     font-size: 100%;
   }
-  p {
+  h1 {
+    text-align: center;
   }
 }
