@@ -2,20 +2,21 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
 }
 .introtext-box {
   display: flex;
   flex-direction: row;
   padding: 0;
-  margin-top: -1.2rem;
+  margin: -1em;
 }
 
 .bg1 {
   position: absolute;
   left: 2em;
-  top: -11em;
+  top: -12em;
   z-index: -1;
-  height: 25vw;
+  height: 18rem;
   transform: rotate(230deg);
 }
 .bg2 {
@@ -23,51 +24,42 @@
   right: -5em;
   bottom: -10em;
   z-index: -1;
-  height: 30vw;
+  height: 22rem;
   transform: rotate(10deg);
-  clip-path: view-box;
 }
 .bg3 {
   position: absolute;
   left: -7em;
   bottom: -10em;
   z-index: -1;
-  height: 30vw;
+  height: 22rem;
   transform: rotate(70deg);
-  clip-path: view-box;
 }
 
 .para-1 {
   display: flex;
   align-items: center;
-  /* background-image: url("../images/intro1.svg");
-  background-repeat: no-repeat;
-  background-position: center; */
   padding: 1rem;
   max-width: 50vw;
 }
 .para-2 {
   display: flex;
   align-items: center;
-  /* background-image: url("../images/intro2.svg");
-  background-repeat: no-repeat;
-  background-position: top;*/
   padding: 1rem;
   max-width: 50vw;
 }
 .para-3 {
   display: flex;
   align-items: center;
-  /* background-image: url("../images/intro3.svg");
-  background-repeat: no-repeat;
-  background-position: center; */
   padding: 1rem;
   max-width: 50vw;
 }
 
 .start-btn {
+  margin: 0.3rem;
   background: #53c5cd;
   border-radius: 30px;
+  border: none;
   box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
   color: white;
   padding: 0.5rem;
@@ -75,4 +67,50 @@
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .intropage-container {
+    display: flex;
+    justify-content: center;
+    margin-left: 0.5rem;
+  }
+
+  .introtext-box {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+  }
+
+  .bg1 {
+    position: absolute;
+    left: -5em;
+    top: 8em;
+    z-index: -1;
+    height: 25rem;
+    opacity: 70%;
+    transform: rotate(230deg);
+  }
+  .bg2 {
+    display: none;
+  }
+  .bg3 {
+    display: none;
+  }
+  .para-1 {
+    max-width: 400px;
+  }
+  .para-2 {
+    max-width: 400px;
+  }
+  .para-3 {
+    max-width: 400px;
+  }
+  .figure {
+    width: 30vw;
+    margin: 1rem;
+  }
+  .start-btn {
+    margin: 3rem;
+  }
 }

@@ -19,10 +19,9 @@
 }
 
 .close-btn {
-  position: fixed;
-  bottom: 2em;
   background: #53c5cd;
   border-radius: 30px;
+  border: none;
   box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
   color: white;
   padding: 0.5rem;

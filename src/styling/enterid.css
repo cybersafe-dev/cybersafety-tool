@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   padding: 5rem;
+  justify-content: space-between;
 }
 
 .bg-img1 {
@@ -26,8 +27,7 @@
 }
 
 .next-btn {
-  position: fixed;
-  bottom: 10em;
+  margin: 3rem;
   background: #53c5cd;
   border-radius: 30px;
   border: none;
