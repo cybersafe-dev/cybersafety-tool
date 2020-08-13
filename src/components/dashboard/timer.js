@@ -5,7 +5,7 @@ import Time from "../../images/timer.svg"
 import "../../styling/timer.css"
 
 const Timer = () => {
-  const [time, setTime] = React.useContext(TimerStore)
+  const [time] = React.useContext(TimerStore)
 
   return (
     <>

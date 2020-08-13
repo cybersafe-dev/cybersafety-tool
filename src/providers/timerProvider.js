@@ -1,9 +1,11 @@
 import React from "react"
+
 import { useStopwatch } from "react-timer-hook"
+
 export const TimerStore = React.createContext("")
 
 const TimerProvider = props => {
-  const [time, setTime] = React.useState(0)
+  const [time, setTime] = React.useState("00:00")
 
   const { seconds, minutes } = useStopwatch({
     autoStart: true,
