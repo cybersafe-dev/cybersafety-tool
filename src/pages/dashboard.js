@@ -35,7 +35,7 @@ const Dashboard = ({ data }) => {
     data.allFile.edges[2].node.childMarkdownRemark.frontmatter
 
   const allDashMessages =
-    data.allFile.edges[1].node.childMarkdownRemark.frontmatter
+    data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   const [message, setMessage] = React.useState(
     "Click on a key to answer the questions for that category. See if you can complete all the categories before the timer gets to twenty minutes."
@@ -57,6 +57,7 @@ const Dashboard = ({ data }) => {
   }
 
   console.log(user, userSpecificData)
+  console.log("messages", allDashMessages)
   console.log({ store })
 
   return (

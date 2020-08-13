@@ -30,13 +30,14 @@ const ProgressBar = ({ done, sectionLength, questionMessageData }) => {
 
   const progressWidth = (done * 200) / sectionLength
 
-  setTimeout(() => {
+  React.useEffect(() => {
     const newStyle = {
       opacity: 1,
       width: progressWidth,
     }
-    setStyle(newStyle)
-  }, 100)
+    setStyle(() => newStyle)
+    // eslint-disable-next-line
+  }, [progressWidth])
 
   return (
     <section className="progress-container">
