@@ -57,7 +57,7 @@ const Dashboard = ({ data }) => {
   }
 
   // console.log(user, userSpecificData)
-   console.log("messages", allDashMessages)
+  console.log("messages", allDashMessages)
   // console.log({ store })
 
   return (
@@ -78,11 +78,12 @@ const Dashboard = ({ data }) => {
           <SurveyProgress completedSections={completedSections} />
           <div className="col">
             {completedSections.includes("digitalknowledge") ? (
-              <img
-                src={DigitalDone}
-                alt="Digital Knowledge complete"
+              <button
+                className="done-icon-button"
                 onClick={repeatCategoryAlert}
-              />
+              >
+                <img src={DigitalDone} alt="Digital Knowledge complete" />
+              </button>
             ) : (
               <Link
                 to="/category/"
@@ -96,11 +97,12 @@ const Dashboard = ({ data }) => {
             )}{" "}
             <br />
             {completedSections.includes("privacy") ? (
-              <img
-                src={PrivacyDone}
-                alt="Privacy complete"
+              <button
+                className="done-icon-button"
                 onClick={repeatCategoryAlert}
-              />
+              >
+                <img src={PrivacyDone} alt="Privacy complete" />
+              </button>
             ) : (
               <Link
                 to="/category/"
@@ -114,11 +116,12 @@ const Dashboard = ({ data }) => {
             )}{" "}
             <br />
             {completedSections.includes("sharing") ? (
-              <img
-                src={SharingDone}
-                alt="Sharing complete"
+              <button
+                className="done-icon-button"
                 onClick={repeatCategoryAlert}
-              />
+              >
+                <img src={SharingDone} alt="Sharing complete" />
+              </button>
             ) : (
               <Link
                 to="/category/"
@@ -134,11 +137,12 @@ const Dashboard = ({ data }) => {
           </div>
           <div className="col">
             {completedSections.includes("communication") ? (
-              <img
-                src={CommDone}
-                alt="Communication complete"
+              <button
+                className="done-icon-button"
                 onClick={repeatCategoryAlert}
-              />
+              >
+                <img src={CommDone} alt="Communication complete" />
+              </button>
             ) : (
               <Link
                 to="/category/"
@@ -152,11 +156,12 @@ const Dashboard = ({ data }) => {
             )}{" "}
             <br />
             {completedSections.includes("criticalthinking") ? (
-              <img
-                src={CriticalDone}
-                alt="Critical Thinking complete"
+              <button
+                className="done-icon-button"
                 onClick={repeatCategoryAlert}
-              />
+              >
+                <img src={CriticalDone} alt="Critical Thinking complete" />
+              </button>
             ) : (
               <Link
                 to="/category/"
@@ -170,11 +175,12 @@ const Dashboard = ({ data }) => {
             )}{" "}
             <br />
             {completedSections.includes("responsibleuse") ? (
-              <img
-                src={ResponsDone}
-                alt="Responsible Use complete"
+              <button
+                className="done-icon-button"
                 onClick={repeatCategoryAlert}
-              />
+              >
+                <img src={ResponsDone} alt="Responsible Use complete" />
+              </button>
             ) : (
               <Link
                 to="/category/"

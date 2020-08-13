@@ -61,3 +61,8 @@
   text-align: center;
   border: none;
 }
+
+.done-icon-button {
+  border: none;
+  background: white;
+}
