@@ -7,6 +7,9 @@ import Question from "../components/category/question"
 import ProgressBar from "../components/category/progressBar"
 import CategoryProgress from "../components/category/categoryProgress"
 import DataErrorPage from "../components/dataerror/dataerror"
+import BgImg from "../images/bg-gradient.svg"
+
+import "../styling/question.css"
 
 const Category = props => {
   const questionMessageData = useStaticQuery(
@@ -54,22 +57,30 @@ const Category = props => {
   return (
     <Layout>
       <SEO title="Survey" />
+      <h1 className="question-title">{category}</h1>
 
-      <ProgressBar
-        done={currentQ}
-        sectionLength={sectionLength}
-        questionMessageData={questionMessageData}
-      />
+      <section className="question-container">
+        <img src={BgImg} alt="background design" className="bg-img5" />
+        <ProgressBar
+          done={currentQ}
+          sectionLength={sectionLength}
+          questionMessageData={questionMessageData}
+        />
 
-      <Question
-        survey={survey}
-        category={category}
-        currentQ={currentQ}
-        setCurrentQ={setCurrentQ}
-        sectionLength={sectionLength}
-        questionMessageData={questionMessageData}
-      />
-      <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
+        <Question
+          survey={survey}
+          category={category}
+          currentQ={currentQ}
+          setCurrentQ={setCurrentQ}
+          sectionLength={sectionLength}
+          questionMessageData={questionMessageData}
+        />
+        <CategoryProgress
+          currentQ={currentQ}
+          sectionLength={sectionLength}
+          className="category-progress"
+        />
+      </section>
     </Layout>
   )
 }
