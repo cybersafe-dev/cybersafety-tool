@@ -63,6 +63,8 @@ const Dashboard = ({ data }) => {
   return (
     <Layout>
       <SEO title="Your Survey Dashboard" />
+      <img src={BgImg} alt="background design" className="bg-img3" />
+      <img src={BgImg} alt="background design" className="bg-img4" />
       <div className="headline">
         <SurveyDashMessages
           allDashMessages={allDashMessages}
@@ -73,8 +75,6 @@ const Dashboard = ({ data }) => {
         <Timer className="timer-space" />
       </div>
       <section className="dashboard-container">
-        <img src={BgImg} alt="background design" className="bg-img3" />
-        <img src={BgImg} alt="background design" className="bg-img4" />
         <div className="categories">
           <SurveyProgress completedSections={completedSections} />
           <div className="col">
