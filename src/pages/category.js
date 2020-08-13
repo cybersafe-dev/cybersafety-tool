@@ -2,9 +2,9 @@ import React from "react"
 
 import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
-import Question from "../components/question"
-import Progress from "../components/progress"
-import CategoryProgress from "../components/categoryProgress"
+import Question from "../components/category/question"
+import ProgressBar from "../components/category/progressBar"
+import CategoryProgress from "../components/category/categoryProgress"
 import DataErrorPage from "../components/dataerror/dataerror"
 
 const Category = props => {
@@ -19,7 +19,7 @@ const Category = props => {
   return (
     <Layout>
       <SEO title="Survey" />
-      <Progress done={currentQ} sectionLength={sectionLength} />
+      <ProgressBar done={currentQ} sectionLength={sectionLength} />
       <Question
         survey={survey}
         category={category}
