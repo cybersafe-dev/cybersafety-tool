@@ -12,7 +12,7 @@
   right: 5em;
   top: -11em;
   z-index: -1;
-  height: 25vw;
+  height: 20rem;
   transform: rotate(230deg);
 }
 .bg-img4 {
@@ -20,7 +20,7 @@
   left: -3em;
   bottom: -10em;
   z-index: -1;
-  height: 40vw;
+  height: 30rem;
   transform: rotate(90deg);
 }
 
@@ -47,4 +47,22 @@
   align-items: center;
   margin-right: 7rem;
   margin-top: 2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .title {
+    white-space: nowrap;
+  }
+  .explain {
+    margin: 1rem;
+    width: 400px;
+  }
+  .bg-img3 {
+    display: none;
+  }
+  .bg-img4 {
+    z-index: -1;
+    height: 30rem;
+    transform: rotate(90deg);
+  }
 }
