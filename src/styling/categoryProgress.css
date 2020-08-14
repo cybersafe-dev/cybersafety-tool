@@ -1,0 +1,18 @@
+.catprog-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  font-size: 5rem;
+}
+.catprog-container {
+  white-space: nowrap;
+  margin-right: 2rem;
+}
+
+.catprog-title {
+  font-size: 2rem;
+}
+.catprog-fraction {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}

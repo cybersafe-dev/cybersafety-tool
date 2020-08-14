@@ -1,12 +1,14 @@
 import React from "react"
-
+import "../../styling/categoryProgress.css"
 const CategoryProgress = ({ currentQ, sectionLength }) => {
   return (
     <section>
-      <p>question</p>
-      <p>
-        {currentQ + 1}/{sectionLength}
-      </p>
+      <div className="catprog-container">
+        <p className="catprog-title">Question</p>
+        <p className="catprog-fraction">
+          {currentQ + 1}/{sectionLength}
+        </p>
+      </div>
     </section>
   )
 }
