@@ -1,11 +1,11 @@
-.thanks-container {
+.thanku-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 1rem;
 }
 
-.thanks-title {
+.thanku-title {
   margin: 0.5rem;
   text-align: center;
 }
@@ -15,7 +15,7 @@
   right: 23em;
   top: 8.5em;
   z-index: -1;
-  width: 29vw;
+  width: 22rem;
 }
 
 .close-btn {
@@ -29,4 +29,15 @@
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .bg-img6 {
+    left: 2.5rem;
+    z-index: -1;
+    width: 20rem;
+  }
+  .thanku-message {
+    margin-top: 3rem;
+  }
 }
