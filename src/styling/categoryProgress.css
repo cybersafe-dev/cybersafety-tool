@@ -2,7 +2,6 @@
   display: flex;
   justify-content: flex-end;
   text-align: left;
-  font-size: 5rem;
 }
 .catprog-container {
   white-space: nowrap;
@@ -15,4 +14,16 @@
 .catprog-fraction {
   font-size: 2rem;
   margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .catprog-container {
+    margin-right: 1rem;
+  }
+  .catprog-title {
+    font-size: 1rem;
+  }
+  .catprog-fraction {
+    font-size: 1rem;
+  }
 }
