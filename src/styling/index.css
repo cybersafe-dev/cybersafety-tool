@@ -73,13 +73,13 @@
   .intropage-container {
     display: flex;
     justify-content: center;
-    margin-left: 0.5rem;
   }
 
   .introtext-box {
     display: flex;
     text-align: left;
     justify-content: center;
+    margin-left: 1rem;
   }
 
   .bg1 {
@@ -111,8 +111,7 @@
     margin: 1rem;
   }
   .start-btn {
-    margin: 2rem;
-
+    margin: 1rem;
     padding: 0.8rem;
   }
 }
