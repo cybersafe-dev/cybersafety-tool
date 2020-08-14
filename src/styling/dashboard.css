@@ -92,4 +92,7 @@
     height: 30rem;
     transform: rotate(90deg);
   }
+  .file-image {
+    height: 12rem;
+  }
 }
