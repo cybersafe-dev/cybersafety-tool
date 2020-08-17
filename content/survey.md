@@ -29,7 +29,7 @@ leaders:
     - statement: Parents have access to information sessions on online safety and
         responsibility at least once a year.
       responses:
-        - answer: Strongly dgree
+        - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
