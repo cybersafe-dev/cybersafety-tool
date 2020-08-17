@@ -91,7 +91,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.digitalknowledge,
                   category: "Digital Knowledge",
@@ -114,7 +114,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.privacy,
                   category: "Privacy",
@@ -137,7 +137,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.sharing,
                   category: "Sharing",
@@ -162,7 +162,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.communication,
                   category: "Communication",
@@ -185,7 +185,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.criticalthinking,
                   category: "Critical Thinking",
@@ -208,7 +208,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.responsibleuse,
                   category: "Responsible Use",

@@ -18,7 +18,7 @@ const RoleSelection = () => {
       type: "RECORD_USERTYPE",
       payload: user,
     })
-    navigate("/dashboard/")
+    navigate("/survey/dashboard/")
   }
 
   return (

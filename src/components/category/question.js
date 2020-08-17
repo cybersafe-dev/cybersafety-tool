@@ -42,7 +42,7 @@ const Question = ({
       setCurrentQ(currentQ + 1)
     } else if (currentQ === sectionLength - 1) {
       await setSectionResponses([...sectionResponses, id])
-      navigate("/dashboard/")
+      navigate("/survey/dashboard/")
     }
   }
 
