@@ -6,7 +6,7 @@ import SEO from "../../components/seo"
 
 const DataErrorPage = () => {
   React.useEffect(() => {
-    navigate("/")
+    navigate("/survey/")
   })
   return (
     <Layout>

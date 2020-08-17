@@ -28,7 +28,7 @@ const SubmitButton = () => {
     await averageScores()
     // scores will be added to the correct part of the database via schoolId and the userType
     console.log("Send to database:", averagedScores)
-    navigate("/thankyou/")
+    navigate("/survey/thankyou/")
   }
 
   return (

@@ -24,7 +24,7 @@ const SchoolId = () => {
       type: "RECORD_USERID",
       payload: input,
     })
-    navigate("/roleselection/")
+    navigate("/survey/roleselection/")
   }
 
   return (

@@ -32,14 +32,13 @@ const Dashboard = ({ data }) => {
   const [store] = React.useContext(ResponseStore)
 
   const surveyAllData =
-    data.allFile.edges[2].node.childMarkdownRemark.frontmatter
-
-  const allDashMessages =
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   const [message, setMessage] = React.useState(
     "Click on a key to answer the questions for that category. See if you can complete all the categories before the timer gets to twenty minutes."
   )
+
+  const [error, setError] = React.useState("")
 
   if (!store || !store.userType) {
     return <DataErrorPage />
@@ -53,7 +52,7 @@ const Dashboard = ({ data }) => {
   sectionKeys.map(key => completedSections.push(key[0]))
 
   const repeatCategoryAlert = () => {
-    setMessage(allDashMessages.dashboardMessages.categoryRepeat)
+    setError("You can only complete a category once. Please pick another category.")
   }
 
   // console.log(user, userSpecificData)
@@ -67,7 +66,7 @@ const Dashboard = ({ data }) => {
       <img src={BgImg} alt="background design" className="bg-img4" />
       <div className="headline">
         <SurveyDashMessages
-          allDashMessages={allDashMessages}
+          error={error}
           completedSections={completedSections}
           message={message}
           setMessage={setMessage}
@@ -91,7 +90,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.digitalknowledge,
                   category: "Digital Knowledge",
@@ -114,7 +113,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.privacy,
                   category: "Privacy",
@@ -137,7 +136,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.sharing,
                   category: "Sharing",
@@ -162,7 +161,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.communication,
                   category: "Communication",
@@ -185,7 +184,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.criticalthinking,
                   category: "Critical Thinking",
@@ -208,7 +207,7 @@ const Dashboard = ({ data }) => {
               </button>
             ) : (
               <Link
-                to="/category/"
+                to="/survey/category/"
                 state={{
                   survey: userSpecificData.responsibleuse,
                   category: "Responsible Use",
@@ -227,150 +226,124 @@ const Dashboard = ({ data }) => {
 export default Dashboard
 
 export const query = graphql`
-  {
-    allFile(filter: { sourceInstanceName: { eq: "content" } }) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              leaders {
-                digitalknowledge {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                privacy {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                sharing {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                communication {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                criticalthinking {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                responsibleuse {
-                  statement
-                  responses {
-                    answer
-                  }
+{
+  allFile(filter: { sourceInstanceName: { eq: "content" }, name: { eq: "survey" } }) {
+    edges {
+      node {
+        childMarkdownRemark {
+          frontmatter {
+            leaders {
+              digitalknowledge {
+                statement
+                responses {
+                  answer
                 }
               }
-              teachers {
-                digitalknowledge {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                privacy {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                sharing {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                communication {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                criticalthinking {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                responsibleuse {
-                  statement
-                  responses {
-                    answer
-                  }
+              privacy {
+                statement
+                responses {
+                  answer
                 }
               }
-              pupils {
-                digitalknowledge {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                privacy {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                sharing {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                communication {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                criticalthinking {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                responsibleuse {
-                  statement
-                  responses {
-                    answer
-                  }
+              sharing {
+                statement
+                responses {
+                  answer
                 }
               }
-              dashboardMain {
-                fiveDone
-                fourDone
-                oneDone
-                sixDone
-                threeDone
-                twoDone
-                zeroDone
+              communication {
+                statement
+                responses {
+                  answer
+                }
               }
-              dashboardMessages {
-                allCategoriesDone
-                categoryRepeat
-                initial
+              criticalthinking {
+                statement
+                responses {
+                  answer
+                }
               }
-              surveyHints {
-                general
-                last
+              responsibleuse {
+                statement
+                responses {
+                  answer
+                }
               }
-              surveyProgress {
-                first
-                last
-                lessThanThree
-                middle
-                penultimate
+            }
+            teachers {
+              digitalknowledge {
+                statement
+                responses {
+                  answer
+                }
+              }
+              privacy {
+                statement
+                responses {
+                  answer
+                }
+              }
+              sharing {
+                statement
+                responses {
+                  answer
+                }
+              }
+              communication {
+                statement
+                responses {
+                  answer
+                }
+              }
+              criticalthinking {
+                statement
+                responses {
+                  answer
+                }
+              }
+              responsibleuse {
+                statement
+                responses {
+                  answer
+                }
+              }
+            }
+            pupils {
+              digitalknowledge {
+                statement
+                responses {
+                  answer
+                }
+              }
+              privacy {
+                statement
+                responses {
+                  answer
+                }
+              }
+              sharing {
+                statement
+                responses {
+                  answer
+                }
+              }
+              communication {
+                statement
+                responses {
+                  answer
+                }
+              }
+              criticalthinking {
+                statement
+                responses {
+                  answer
+                }
+              }
+              responsibleuse {
+                statement
+                responses {
+                  answer
+                }
               }
             }
           }
@@ -378,4 +351,5 @@ export const query = graphql`
       }
     }
   }
+}
 `
