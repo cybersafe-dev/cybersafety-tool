@@ -10,6 +10,10 @@
   width: 800px;
 }
 
+.dash-error {
+  color: red;
+}
+
 .bg-img3 {
   position: absolute;
   right: 5em;

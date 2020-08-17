@@ -1,37 +1,80 @@
 import React from "react"
 import "../../styling/survey/dashboard.css"
+import { graphql, useStaticQuery } from "gatsby"
 
 const SurveyDashMessages = ({
   message,
   setMessage,
   completedSections,
-  allDashMessages,
+  error,
 }) => {
-  const [dashTitle, setDashTitle] = React.useState("Your time starts now!")
+  const [dashTitle, setDashTitle] = React.useState("")
+
+  const allDashMessages = useStaticQuery(
+    graphql`
+      query {
+        allFile(
+          filter: {
+            sourceInstanceName: { eq: "content" }
+            name: { eq: "hints" }
+          }
+        ) {
+          edges {
+            node {
+              childMarkdownRemark {
+                frontmatter {
+                  dashboardMain {
+                    fiveDone
+                    fourDone
+                    oneDone
+                    sixDone
+                    twoDone
+                    threeDone
+                    zeroDone
+                  }
+                  dashboardMessages {
+                    allCategoriesDone
+                    categoryRepeat
+                    initial
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  const {
+    dashboardMain,
+    dashboardMessages,
+  } = allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   React.useEffect(() => {
     switch (completedSections.length - 1) {
       case 1:
-        setDashTitle(() => allDashMessages.dashboardMain.oneDone)
+        setDashTitle(() => dashboardMain.oneDone)
         break
       case 2:
-        setDashTitle(() => allDashMessages.dashboardMain.twoDone)
+        setDashTitle(() => dashboardMain.twoDone)
         break
       case 3:
-        setDashTitle(() => allDashMessages.dashboardMain.threeDone)
+        setDashTitle(() => dashboardMain.threeDone)
         break
       case 4:
-        setDashTitle(() => allDashMessages.dashboardMain.fourDone)
+        setDashTitle(() => dashboardMain.fourDone)
         break
       case 5:
-        setDashTitle(() => allDashMessages.dashboardMain.fiveDone)
+        setDashTitle(() => dashboardMain.fiveDone)
         break
       case 6:
-        setDashTitle(() => allDashMessages.dashboardMain.sixDone)
-        setMessage(() => allDashMessages.dashboardMessages.allCategoriesDone)
+        setDashTitle(() => dashboardMain.sixDone)
+        setMessage(() => dashboardMessages.allCategoriesDone)
         break
       default:
-        //setMessage(() => allDashMessages.dashboardMessages.initial)
+        setDashTitle(() => dashboardMain.zeroDone)
+        //setMessage(() => dashboardMessages.initial)
     }
     // eslint-disable-next-line
   }, [completedSections])
@@ -40,8 +83,37 @@ const SurveyDashMessages = ({
     <section>
       <h1 className="title">{dashTitle}</h1>
       <p className="explain">{message}</p>
+      <p className="dash-error">{error}</p>
     </section>
   )
 }
 
 export default SurveyDashMessages
+
+// export const query = graphql`
+//   {
+//     allFile(
+//       filter: { sourceInstanceName: { eq: "content" }, name: { eq: "hints" } }
+//     ) {
+//       edges {
+//         node {
+//           childMarkdownRemark {
+//             frontmatter {
+//               surveyHints {
+//                 general
+//                 last
+//               }
+//               surveyProgress {
+//                 first
+//                 last
+//                 lessThanThree
+//                 middle
+//                 penultimate
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
