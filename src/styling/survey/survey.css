@@ -1,8 +1,10 @@
+
 .intropage-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 .introtext-box {
   display: flex;
@@ -26,6 +28,7 @@
   z-index: -1;
   height: 22rem;
   transform: rotate(10deg);
+
 }
 .bg3 {
   position: absolute;
@@ -34,6 +37,7 @@
   z-index: -1;
   height: 22rem;
   transform: rotate(70deg);
+
 }
 
 .para-1 {

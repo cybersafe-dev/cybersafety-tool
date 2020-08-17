@@ -1,0 +1,62 @@
+html {
+  overflow: scroll !important;
+}
+
+.site-container {
+display: flex;
+flex-direction: column;
+margin: 5rem;
+margin-top: 8rem;
+}
+
+#about {
+  text-align: left;
+}
+.about-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fig1{
+  display: flex;
+  justify-content: flex-end;
+}
+#cybersafety {
+text-align: right;
+}
+.cybersafety-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fig2 {
+  display: flex;
+  justify-content: flex-start;
+}
+#csi {
+text-align: left;
+}
+.csi-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fig3 {
+
+}
+#contact-us {
+text-align: right;
+}
+.contact-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#get-started{
+text-align: center;
+}
+.eoi-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

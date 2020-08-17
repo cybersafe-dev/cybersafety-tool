@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  padding-top: 1.5rem;
+}
+.nav {
+  margin: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-logo{
+margin-left: 3rem;
+}
+
+.nav-links {
+margin-right: 3rem;
+}
