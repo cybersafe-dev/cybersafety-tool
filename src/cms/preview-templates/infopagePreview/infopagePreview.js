@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import "../../../styling/index.css"
+import "../../../styling/survey/survey.css"
 import BgImg from "../../../images/bg-gradient.svg"
 import Icon1 from "../../../images/intro-icon1.svg"
 import Icon2 from "../../../images/intro-icon2.svg"
@@ -49,7 +49,7 @@ const InfopagePreview = ({ entry }) => {
         </div>
       </section>
     </Layout>
-    
+
     )
   } else {
     return <div>Loading...</div>

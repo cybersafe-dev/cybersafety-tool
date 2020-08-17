@@ -1,7 +1,7 @@
 import React from "react"
 import { navigate } from "gatsby"
 import { ResponseStore } from "../../providers/responseProvider"
-import "../../styling/dashboard.css"
+import "../../styling/survey/dashboard.css"
 
 const SubmitButton = () => {
   const [store] = React.useContext(ResponseStore)
