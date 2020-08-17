@@ -2,7 +2,6 @@ import React from "react"
 import { navigate } from "gatsby"
 import DataErrorPage from "../../components/dataerror/dataerror"
 import { ResponseStore } from "../../providers/responseProvider"
-import BgImg from "../../images/bg-gradient.svg"
 
 import "../../styling/question.css"
 
@@ -18,7 +17,6 @@ const Question = ({
   const [store, dispatch] = React.useContext(ResponseStore)
   const [sectionResponses, setSectionResponses] = React.useState([])
   const lowerCategory = category.replace(" ", "").toLowerCase()
-
   const {
     surveyHints,
   } = questionMessageData.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -50,29 +48,25 @@ const Question = ({
 
   return (
     <>
-      <h1 className="category-title">{category}</h1>
+      <p className="statement">{survey[currentQ].statement}</p>
+      <section className="responses">
+        {survey[currentQ].responses.map((response, i) => (
+          <button
+            onClick={nextQuestion}
+            className="response-option"
+            key={response.answer}
+            id={i + 1}
+          >
+            {response.answer}
+          </button>
+        ))}
 
-      <section className="category-container">
-        <img src={BgImg} alt="background design" className="bg-img5" />
-        <p className="statement">{survey[currentQ].statement}</p>
-        <section className="responses">
-          {survey[currentQ].responses.map((response, i) => (
-            <button
-              onClick={nextQuestion}
-              className="response-option"
-              key={response.answer}
-              id={i + 1}
-            >
-              {response.answer}
-            </button>
-          ))}
-        </section>
+        {currentQ === sectionLength - 1 ? (
+          <p className="tip">{surveyHints.last}</p>
+        ) : (
+          <p className="tip">{surveyHints.general}</p>
+        )}
       </section>
-      {currentQ === sectionLength - 1 ? (
-        <p className="tip">{surveyHints.last}</p>
-      ) : (
-        <p className="tip">{surveyHints.general}</p>
-      )}
     </>
   )
 }

@@ -15,11 +15,11 @@ const ThankYou = props => {
       <Header />
       <SEO title="Thank you page" />
 
-      <h1 className="thanks-title">Thank you!</h1>
-      <section className="thanks-container">
+      <h1 className="thanku-title">Thank you!</h1>
+      <section className="thanku-container">
         <img src={BgImg} alt="background design" className="bg-img6" />
         <img src={Rocket} alt="rocket icon" className="rocket" />
-        <p>
+        <p className="thanku-message">
           {" "}
           Your answers have been sent off to the cloud. You can close this
           window now.{" "}

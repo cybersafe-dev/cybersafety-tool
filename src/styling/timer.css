@@ -1,7 +1,5 @@
 .timer-container {
-  position: absolute;
-  top: 1em;
-  right: 1em;
+  margin-top: 1rem;
 }
 
 .timer {

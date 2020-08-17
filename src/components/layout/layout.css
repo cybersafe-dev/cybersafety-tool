@@ -375,14 +375,6 @@ dd {
 }
 p {
   font-size: 0.9rem;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.2rem;
 }
 figure {
   margin-left: 0;
@@ -622,9 +614,9 @@ pre tt:after {
 .pills {
   display: flex;
   flex-direction: row;
+  width: 100vw;
+  justify-content: center;
   margin: 1rem;
-  position: absolute;
-  bottom: 0.5em;
 }
 
 .filled-pill {
@@ -645,5 +637,8 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+  h1 {
+    text-align: center;
   }
 }

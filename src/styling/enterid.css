@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   padding: 5rem;
+  justify-content: space-between;
 }
 
 .bg-img1 {
@@ -10,7 +11,7 @@
   left: 20em;
   top: 6em;
   z-index: -1;
-  width: 25vw;
+  width: 25rem;
 }
 
 .id-input {
@@ -26,8 +27,7 @@
 }
 
 .next-btn {
-  position: fixed;
-  bottom: 10em;
+  margin: 3rem;
   background: #53c5cd;
   border-radius: 30px;
   border: none;
@@ -38,4 +38,36 @@
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .id-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .id-title {
+    white-space: nowrap;
+  }
+
+  .tagline {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-width: 380px;
+    font-size: 1rem;
+  }
+
+  .bg-img1 {
+    left: 0.5rem;
+    z-index: -1;
+    width: 22rem;
+  }
+  .id-input {
+    width: 340px;
+  }
+  .next-btn {
+    margin: 5rem;
+    padding: 0.8rem;
+  }
 }

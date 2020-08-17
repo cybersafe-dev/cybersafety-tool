@@ -24,7 +24,7 @@ const IndexPage = props => {
         <img src={BgImg} alt="background design" className="bg2" />
         <img src={BgImg} alt="background design" className="bg3" />
         <div className="introtext-box">
-          <img src={Icon1} alt="background design" />
+          <img src={Icon1} alt="" className="figure" />
           <article className="para-1">
             <p> {data.body.paragraph1} </p>
           </article>
@@ -33,10 +33,10 @@ const IndexPage = props => {
           <article className="para-2">
             <p> {data.body.paragraph2} </p>
           </article>
-          <img src={Icon2} alt="" />
+          <img src={Icon2} alt="" className="figure" />
         </div>
         <div className="introtext-box">
-          <img src={Icon3} alt="" />
+          <img src={Icon3} alt="" className="figure" />
           <article className="para-3">
             <p> {data.body.paragraph3} </p>
           </article>

@@ -57,23 +57,24 @@ const Dashboard = ({ data }) => {
   }
 
   // console.log(user, userSpecificData)
-  console.log("messages", allDashMessages)
+  // console.log("messages", allDashMessages)
   // console.log({ store })
 
   return (
     <Layout>
       <SEO title="Your Survey Dashboard" />
-      <section className="dashboard-container">
+      <img src={BgImg} alt="background design" className="bg-img3" />
+      <img src={BgImg} alt="background design" className="bg-img4" />
+      <div className="headline">
         <SurveyDashMessages
           allDashMessages={allDashMessages}
           completedSections={completedSections}
           message={message}
           setMessage={setMessage}
         />
-
-        <Timer />
-        <img src={BgImg} alt="background design" className="bg-img3" />
-        <img src={BgImg} alt="background design" className="bg-img4" />
+        <Timer className="timer-space" />
+      </div>
+      <section className="dashboard-container">
         <div className="categories">
           <SurveyProgress completedSections={completedSections} />
           <div className="col">
@@ -82,7 +83,11 @@ const Dashboard = ({ data }) => {
                 className="done-icon-button"
                 onClick={repeatCategoryAlert}
               >
-                <img src={DigitalDone} alt="Digital Knowledge complete" />
+                <img
+                  src={DigitalDone}
+                  alt="Digital Knowledge complete"
+                  className="cat-image"
+                />
               </button>
             ) : (
               <Link
@@ -92,7 +97,7 @@ const Dashboard = ({ data }) => {
                   category: "Digital Knowledge",
                 }}
               >
-                <img src={Digital} alt="" />
+                <img src={Digital} alt="" className="cat-image" />
               </Link>
             )}{" "}
             <br />
@@ -101,7 +106,11 @@ const Dashboard = ({ data }) => {
                 className="done-icon-button"
                 onClick={repeatCategoryAlert}
               >
-                <img src={PrivacyDone} alt="Privacy complete" />
+                <img
+                  src={PrivacyDone}
+                  alt="Privacy complete"
+                  className="cat-image"
+                />
               </button>
             ) : (
               <Link
@@ -111,7 +120,7 @@ const Dashboard = ({ data }) => {
                   category: "Privacy",
                 }}
               >
-                <img src={Privacy} alt="" />
+                <img src={Privacy} alt="" className="cat-image" />
               </Link>
             )}{" "}
             <br />
@@ -120,7 +129,11 @@ const Dashboard = ({ data }) => {
                 className="done-icon-button"
                 onClick={repeatCategoryAlert}
               >
-                <img src={SharingDone} alt="Sharing complete" />
+                <img
+                  src={SharingDone}
+                  alt="Sharing complete"
+                  className="cat-image"
+                />
               </button>
             ) : (
               <Link
@@ -130,7 +143,7 @@ const Dashboard = ({ data }) => {
                   category: "Sharing",
                 }}
               >
-                <img src={Sharing} alt="" />
+                <img src={Sharing} alt="" className="cat-image" />
               </Link>
             )}{" "}
             <br />
@@ -141,7 +154,11 @@ const Dashboard = ({ data }) => {
                 className="done-icon-button"
                 onClick={repeatCategoryAlert}
               >
-                <img src={CommDone} alt="Communication complete" />
+                <img
+                  src={CommDone}
+                  alt="Communication complete"
+                  className="cat-image"
+                />
               </button>
             ) : (
               <Link
@@ -151,7 +168,7 @@ const Dashboard = ({ data }) => {
                   category: "Communication",
                 }}
               >
-                <img src={Commun} alt="" />
+                <img src={Commun} alt="" className="cat-image" />
               </Link>
             )}{" "}
             <br />
@@ -160,7 +177,11 @@ const Dashboard = ({ data }) => {
                 className="done-icon-button"
                 onClick={repeatCategoryAlert}
               >
-                <img src={CriticalDone} alt="Critical Thinking complete" />
+                <img
+                  src={CriticalDone}
+                  alt="Critical Thinking complete"
+                  className="cat-image"
+                />
               </button>
             ) : (
               <Link
@@ -170,7 +191,7 @@ const Dashboard = ({ data }) => {
                   category: "Critical Thinking",
                 }}
               >
-                <img src={Critical} alt="" />
+                <img src={Critical} alt="" className="cat-image" />
               </Link>
             )}{" "}
             <br />
@@ -179,7 +200,11 @@ const Dashboard = ({ data }) => {
                 className="done-icon-button"
                 onClick={repeatCategoryAlert}
               >
-                <img src={ResponsDone} alt="Responsible Use complete" />
+                <img
+                  src={ResponsDone}
+                  alt="Responsible Use complete"
+                  className="cat-image"
+                />
               </button>
             ) : (
               <Link
@@ -189,7 +214,7 @@ const Dashboard = ({ data }) => {
                   category: "Responsible Use",
                 }}
               >
-                <img src={Respons} alt="" />
+                <img src={Respons} alt="" className="cat-image" />
               </Link>
             )}{" "}
           </div>
