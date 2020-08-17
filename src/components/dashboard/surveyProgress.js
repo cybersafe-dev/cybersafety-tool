@@ -1,5 +1,5 @@
 import React from "react"
-import "../../styling/dashboard.css"
+import "../../styling/survey/dashboard.css"
 import SubmitButton from "./submitButton"
 
 const SurveyProgress = ({ completedSections }) => {

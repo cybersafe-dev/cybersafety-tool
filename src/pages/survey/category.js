@@ -1,15 +1,15 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
-import Question from "../components/category/question"
-import ProgressBar from "../components/category/progressBar"
-import CategoryProgress from "../components/category/categoryProgress"
-import DataErrorPage from "../components/dataerror/dataerror"
-import BgImg from "../images/bg-gradient.svg"
+import Layout from "../../components/layout/layout"
+import SEO from "../../components/seo"
+import Question from "../../components/category/question"
+import ProgressBar from "../../components/category/progressBar"
+import CategoryProgress from "../../components/category/categoryProgress"
+import DataErrorPage from "../../components/dataerror/dataerror"
+import BgImg from "../../images/bg-gradient.svg"
 
-import "../styling/question.css"
+import "../../styling/survey/question.css"
 
 const Category = props => {
   const questionMessageData = useStaticQuery(

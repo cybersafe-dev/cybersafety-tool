@@ -3,7 +3,7 @@ import { navigate } from "gatsby"
 import DataErrorPage from "../../components/dataerror/dataerror"
 import { ResponseStore } from "../../providers/responseProvider"
 
-import "../../styling/question.css"
+import "../../styling/survey/question.css"
 
 const Question = ({
   survey,

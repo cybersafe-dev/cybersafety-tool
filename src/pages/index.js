@@ -10,7 +10,7 @@ import Icon2 from "../images/intro-icon2.svg"
 import Icon3 from "../images/intro-icon3.svg"
 import BgImg from "../images/bg-gradient.svg"
 
-import "../styling/index.css"
+import "../styling/survey/index.css"
 const IndexPage = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 

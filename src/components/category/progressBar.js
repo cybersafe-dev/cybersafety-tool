@@ -1,5 +1,5 @@
 import React from "react"
-import "../../styling/progressBar.css"
+import "../../styling/survey/progressBar.css"
 const ProgressBar = ({ done, sectionLength, questionMessageData }) => {
   const [style, setStyle] = React.useState({})
   const [progressMessage, setProgressMessage] = React.useState("")

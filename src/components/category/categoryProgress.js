@@ -1,5 +1,5 @@
 import React from "react"
-import "../../styling/categoryProgress.css"
+import "../../styling/survey/categoryProgress.css"
 const CategoryProgress = ({ currentQ, sectionLength }) => {
   return (
     <section>

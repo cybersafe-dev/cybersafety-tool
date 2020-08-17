@@ -1,13 +1,13 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { ResponseStore } from "../providers/responseProvider"
+import { ResponseStore } from "../../providers/responseProvider"
 
-import Layout from "../components/layout/layout"
-import Header from "../components/header/header"
-import SEO from "../components/seo"
-import BgImg from "../images/bg-gradient.svg"
+import Layout from "../../components/layout/layout"
+import Header from "../../components/header/header"
+import SEO from "../../components/seo"
+import BgImg from "../../images/bg-gradient.svg"
 
-import "../styling/roleselection.css"
+import "../../styling/survey/roleselection.css"
 
 const RoleSelection = () => {
   // eslint-disable-next-line

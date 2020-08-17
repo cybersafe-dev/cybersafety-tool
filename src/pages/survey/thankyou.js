@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout/layout"
-import Header from "../components/header/header"
-import SEO from "../components/seo"
-import BgImg from "../images/bg-gradient.svg"
-import Rocket from "../images/rocket.svg"
+import Layout from "../../components/layout/layout"
+import Header from "../../components/header/header"
+import SEO from "../../components/seo"
+import BgImg from "../../images/bg-gradient.svg"
+import Rocket from "../../images/rocket.svg"
 
-import "../styling/thankyou.css"
+import "../../styling/survey/thankyou.css"
 
 const ThankYou = props => {
   return (
