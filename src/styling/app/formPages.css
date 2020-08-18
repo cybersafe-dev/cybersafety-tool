@@ -1,3 +1,7 @@
+html, body {
+  overflow: visible;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -41,7 +45,7 @@ a:hover {
 }
 
 .page-container {
-  height: 80vh;
+  height: auto;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -63,4 +67,14 @@ a:hover {
   top: 6em;
   z-index: -1;
   width: 25rem;
+  animation: rotation 12s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
