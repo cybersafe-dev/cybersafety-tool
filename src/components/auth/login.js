@@ -5,6 +5,8 @@ import useFirebase from "../../firebase"
 import { store } from "../../providers/userProvider"
 
 import "../../styling/app/formPages.css"
+import BgImg from "../../images/bg-gradient.svg"
+
 
 const Login = () => {
   const [email, setEmail] = React.useState("")
@@ -42,10 +44,11 @@ const Login = () => {
 
   return (
     <section className="page-container">
-      <h1 className="text-center">Sign In</h1>
+      <h1 className="text-center">Log In</h1>
       <p className="instruction">
         Please log in below to see your school dashboard.
       </p>
+      <img src={BgImg} alt="background design" className="bg-img1" />
       {error !== null && <div className="">{error}</div>}
 
       <form className="central-form">
@@ -79,7 +82,7 @@ const Login = () => {
             signInWithEmailAndPasswordHandler(event, email, password)
           }}
         >
-          Sign in
+          Log in
         </button>
       </form>
       <div className="other-options">

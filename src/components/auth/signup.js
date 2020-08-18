@@ -5,6 +5,8 @@ import useFirebase from "../../firebase"
 import { store } from "../../providers/userProvider"
 
 import "../../styling/app/formPages.css"
+import BgImg from "../../images/bg-gradient.svg"
+
 
 const Signup = () => {
   const [email, setEmail] = React.useState("")
@@ -49,6 +51,7 @@ const Signup = () => {
       <section className="page-container">
         <h1 className="">Sign Up</h1>
         <p className="instruction">Please fill in the form below to create a school admin account for our self-assessment tool</p>
+        <img src={BgImg} alt="background design" className="bg-img1" />
         {error !== null && <div className="">{error}</div>}
         <form className="">
           <label htmlFor="displayName" className="block">

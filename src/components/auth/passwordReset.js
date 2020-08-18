@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import useFirebase from "../../firebase"
 
 import "../../styling/app/formPages.css"
+import BgImg from "../../images/bg-gradient.svg"
+
 
 const PasswordReset = () => {
   const [email, setEmail] = React.useState("")
@@ -38,11 +40,12 @@ const PasswordReset = () => {
   }
   return (
     <section className="page-container">
-      <h1 className="">Reset your Password</h1>
+      <h1 className="">Lost Password</h1>
       <p className="instruction">
         Enter the email attached to your school account below to receive a
         password reset email
       </p>
+      <img src={BgImg} alt="background design" className="bg-img1" />
       <form action="">
         {emailHasBeenSent && (
           <div className="">An email has been sent to you!</div>
