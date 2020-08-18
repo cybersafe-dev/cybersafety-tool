@@ -10,7 +10,7 @@
 .nav {
   margin: 0.5rem;
   text-decoration: none;
-  color: black;
+  color: #181818;
 }
 
 .nav-logo{
@@ -19,4 +19,15 @@ margin-left: 3rem;
 
 .nav-links {
 margin-right: 5rem;
+}
+
+.started-nav {
+  background-color: #53C5CD;
+  border-radius: 30px;
+  text-align: center;
+  width: 15vw;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
 }

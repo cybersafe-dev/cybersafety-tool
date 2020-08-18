@@ -15,7 +15,9 @@ const MiniNavbar = () => (
         <Link to="/#cybersafety" className="nav">Cybersafety</Link>
         <Link to="/#cybersafeireland" className="nav">CyberSafeIreland</Link>
         <Link to="/#contact-us" className="nav">Contact Us</Link>
-        <Link to="/#get-started" className="nav">Get Started</Link>
+
+        <Link to="/#get-started" className="started-nav">Get Started</Link>
+    
       </div>
       </div>
   </>
