@@ -15,13 +15,13 @@
 }
 
 .nav-logo{
-margin-left: 4rem;
-top: 0;
+  margin-left: 4rem;
+  top: 0;
 }
 
 .nav-links {
-margin-right: 8rem;
-padding-top: 1.2rem;
+  margin-right: 8rem;
+  padding-top: 1.2rem;
 }
 
 .started-nav {
@@ -32,4 +32,5 @@ padding-top: 1.2rem;
   margin-left: 1rem;
   color: white;
   text-decoration: none;
+
 }
