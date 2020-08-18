@@ -41,7 +41,7 @@ const SurveyPage = props => {
             <p> {data.body.paragraph3} </p>
           </article>
         </div>
-        <Link to="/enterid/" className="start-btn">
+        <Link to="/survey/enterid/" className="start-btn">
           Let's get started!
         </Link>
         <div className="pills">
