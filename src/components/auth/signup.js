@@ -70,68 +70,68 @@ const Signup = () => {
       <form className="">
         <label htmlFor="schoolName" className="block">
           Your School's name and county:
+          <input
+            type="text"
+            className=""
+            name="schoolName"
+            value={schoolName}
+            placeholder="e.g. St. Patrick's, Dublin"
+            id="schoolName"
+            onChange={event => onChangeHandler(event)}
+          />
         </label>
-        <input
-          type="text"
-          className=""
-          name="schoolName"
-          value={schoolName}
-          placeholder="e.g. St. Patrick's, Dublin"
-          id="schoolName"
-          onChange={event => onChangeHandler(event)}
-        />
 
         <label htmlFor="schoolId" className="block">
           The school Id we provided:
+          <input
+            type="text"
+            className=""
+            name="schoolId"
+            value={schoolId}
+            placeholder="e.g. SP001A"
+            id="schoolId"
+            onChange={event => onChangeHandler(event)}
+          />
         </label>
-        <input
-          type="text"
-          className=""
-          name="schoolId"
-          value={schoolId}
-          placeholder="e.g. SP001A"
-          id="schoolId"
-          onChange={event => onChangeHandler(event)}
-        />
 
         <label htmlFor="pupilCount" className="block">
           The number of pupils at your school:
+          <input
+            type="text"
+            className=""
+            name="pupilCount"
+            value={pupilCount}
+            placeholder="e.g. 1500"
+            id="pupilCount"
+            onChange={event => onChangeHandler(event)}
+          />
         </label>
-        <input
-          type="text"
-          className=""
-          name="pupilCount"
-          value={pupilCount}
-          placeholder="e.g. 1500"
-          id="pupilCount"
-          onChange={event => onChangeHandler(event)}
-        />
 
         <label htmlFor="userEmail" className="block">
           Your school/work email address:
+          <input
+            type="email"
+            className=""
+            name="userEmail"
+            value={email}
+            placeholder="Enter email"
+            id="userEmail"
+            onChange={event => onChangeHandler(event)}
+          />
         </label>
-        <input
-          type="email"
-          className=""
-          name="userEmail"
-          value={email}
-          placeholder="Enter email"
-          id="userEmail"
-          onChange={event => onChangeHandler(event)}
-        />
 
         <label htmlFor="userPassword" className="block">
           A secure password:
+          <input
+            type="password"
+            className=""
+            name="userPassword"
+            value={password}
+            placeholder="Enter password"
+            id="userPassword"
+            onChange={event => onChangeHandler(event)}
+          />
         </label>
-        <input
-          type="password"
-          className=""
-          name="userPassword"
-          value={password}
-          placeholder="Enter password"
-          id="userPassword"
-          onChange={event => onChangeHandler(event)}
-        />
 
         <button
           className=""

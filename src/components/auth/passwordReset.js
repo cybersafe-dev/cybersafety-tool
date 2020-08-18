@@ -54,16 +54,16 @@ const PasswordReset = () => {
 
         <label htmlFor="userEmail" className="">
           Email:
+          <input
+            type="email"
+            name="userEmail"
+            id="userEmail"
+            value={email}
+            placeholder="Enter your email"
+            onChange={onChangeHandler}
+            className=""
+          />
         </label>
-        <input
-          type="email"
-          name="userEmail"
-          id="userEmail"
-          value={email}
-          placeholder="Enter your email"
-          onChange={onChangeHandler}
-          className=""
-        />
 
         <button
           className=""

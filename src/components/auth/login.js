@@ -52,8 +52,7 @@ const Login = () => {
 
       <form className="central-form">
         <label htmlFor="userEmail" className="block">
-          Email:
-        </label>
+          Email:  
         <input
           type="email"
           className=""
@@ -63,10 +62,10 @@ const Login = () => {
           id="userEmail"
           onChange={event => onChangeHandler(event)}
         />
+        </label>
 
         <label htmlFor="userPassword" className="block">
           Password:
-        </label>
         <input
           type="password"
           className=""
@@ -76,6 +75,7 @@ const Login = () => {
           id="userPassword"
           onChange={event => onChangeHandler(event)}
         />
+        </label>
 
         <button
           className=""
