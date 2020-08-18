@@ -6,9 +6,11 @@ import Login from "../components/auth/login"
 import Signup from "../components/auth/signup"
 import PasswordReset from "../components/auth/passwordReset"
 import PrivateRoute from "../components/auth/privateRoute"
+import Header from "../components/header/header"
 
 const App = () => (
   <Layout>
+    <Header />
     <Router>
       <PrivateRoute path="/app" component={Profile} />
       <Login path="/app/login" />

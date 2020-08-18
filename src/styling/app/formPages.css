@@ -1,0 +1,56 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 380px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #ffbe55;
+  text-align: left;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #53c5cd;
+}
+
+button {
+  margin: 3rem;
+  background: #53c5cd;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem;
+  width: 250px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+}
+
+a {
+    color: #2a94f4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.page-container {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .instruction {
+      width: 380px;
+  }
+  
+  .other-options {
+      text-align: center;
+  }

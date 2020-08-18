@@ -4,6 +4,8 @@ import useFirebase from "../../firebase"
 
 import { store } from "../../providers/userProvider"
 
+import "../../styling/app/formPages.css"
+
 const Signup = () => {
   const [email, setEmail] = React.useState("")
   const [password, setPassword] = React.useState("")
@@ -22,11 +24,9 @@ const Signup = () => {
     event.preventDefault()
     if (!firebase) return
 
-    //const { user } = await auth.createUserWithEmailAndPassword(
     await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      //generateUserDocument(user, { displayName, testField });
       .catch(error => {
         setError(error.message)
       })
@@ -46,9 +46,9 @@ const Signup = () => {
   }
 
   return (
-    <article>
-      <h1 className="">Sign Up</h1>
-      <div className="">
+      <section className="page-container">
+        <h1 className="">Sign Up</h1>
+        <p className="instruction">Please fill in the form below to create a school admin account for our self-assessment tool</p>
         {error !== null && <div className="">{error}</div>}
         <form className="">
           <label htmlFor="displayName" className="block">
@@ -96,14 +96,15 @@ const Signup = () => {
             Sign up
           </button>
         </form>
-        <p className="">
-          Already have an account?{" "}
-          <Link to="/app/login" className="">
-            Sign in here
-          </Link>{" "}
-        </p>
-      </div>
-    </article>
+        <div className="other-options">
+          <p className="">
+            Already have a school account?{" "}
+            <Link to="/app/login" className="">
+              Log in
+            </Link>{" "}
+          </p>
+        </div>
+      </section>
   )
 }
 
