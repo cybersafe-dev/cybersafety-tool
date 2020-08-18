@@ -1,0 +1,129 @@
+html {
+  overflow: scroll !important;
+}
+
+.section-title {
+  margin-top: 5.5rem;
+}
+
+.site-container {
+display: flex;
+flex-direction: column;
+margin: 5rem;
+margin-top: 8rem;
+}
+.site-text {
+  width: 500px;
+}
+
+#about {
+  text-align: left;
+}
+.about-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+#cybersafety {
+  text-align: right;
+}
+.cybersafety-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+#csi {
+  text-align: left;
+}
+.csi-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.flag-container {
+  display: inline-flex;
+flex-direction: row;
+}
+.flag {
+  padding: 1rem;
+  margin-top: 5rem;
+}
+#get-started{
+  text-align: center;
+}
+.eoi-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-image: url("../../images/eoi-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0.5rem;
+  text-align: left;
+}
+.input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #53c5cd;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+  background-color: #53C5CD;
+  border-radius: 30px;
+  border: none;
+  text-align: center;
+  width: 18vw;
+  margin-top: 2.5rem;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+#contact-us {
+  text-align: left;
+  background: #EEEEEE;
+  padding-top: 4rem;
+  padding-left: 5rem;
+}
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contact-details{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+.csi-link {
+  background-color: #53C5CD;
+  border-radius: 30px;
+  text-align: center;
+  width: 18vw;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+}
+.socials {
+  margin-top: 1.5rem;
+}
+.social {
+  margin-right: 0.5rem;
+}
