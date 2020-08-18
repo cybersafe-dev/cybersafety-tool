@@ -1,11 +1,15 @@
 import React from "react";
-import { auth } from "../../firebase";
+//import { auth } from "../../firebase";
+import useFirebase from "../../firebase"
+
 import { Link } from "gatsby";
 
 const PasswordReset = () => {
   const [email, setEmail] = React.useState("");
   const [emailHasBeenSent, setEmailHasBeenSent] = React.useState(false);
   const [error, setError] = React.useState(null);
+
+  const firebase = useFirebase()
 
   const onChangeHandler = (event) => {
     const { name, value } = event.currentTarget;
@@ -17,7 +21,8 @@ const PasswordReset = () => {
 
   const sendResetEmail = (event) => {
     event.preventDefault();
-    auth
+    if (!firebase) return
+    return firebase.auth()
       .sendPasswordResetEmail(email)
       .then(() => {
         setEmailHasBeenSent(true);

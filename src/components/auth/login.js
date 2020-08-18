@@ -1,19 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 // import { signInWithGoogle } from "../../firebase";
-import { auth } from "../../firebase"
+import useFirebase from "../../firebase"
+import { store } from "../../providers/userProvider"
 
 const Login = () => {
+
   const [email, setEmail] = React.useState("")
   const [password, setPassword] = React.useState("")
   const [error, setError] = React.useState(null)
+  const [user] = React.useContext(store)
+    if (user) {
+        navigate("/app/profile")
+    }
+
+  const firebase = useFirebase()
 
   const signInWithEmailAndPasswordHandler = (event, email, password) => {
     event.preventDefault()
-    auth.signInWithEmailAndPassword(email, password).catch(error => {
+    if (!firebase) return
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(error => {
       setError(error.message)
       console.error("Error signing in with password and email", error)
     })
+    navigate("/app/profile")
   }
 
   const onChangeHandler = event => {
@@ -69,20 +79,11 @@ const Login = () => {
         >
           Sign in
         </button>
-        {/* <p className="text-center">or</p>
-        <button
-          className="red-button"
-          onClick={() => {
-            signInWithGoogle();
-          }}
-        >
-          Sign in with Google
-        </button> */}
       </form>
 
       <p className="text-center my-3">
         Don't have an account?{" "}
-        <Link to="signUp" className="">
+        <Link to="/app/signup" className="">
           Sign up here
         </Link>{" "}
         <br />{" "}

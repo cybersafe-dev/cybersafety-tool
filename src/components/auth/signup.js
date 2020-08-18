@@ -1,23 +1,30 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { auth } from "../firebase"
+import { Link, navigate } from "gatsby"
+import useFirebase from "../../firebase"
+
 import { store } from "../../providers/userProvider"
 
 const Signup = () => {
   const [email, setEmail] = React.useState("")
   const [password, setPassword] = React.useState("")
   const [error, setError] = React.useState(null)
-  //eslint-disable-next-line
   const [user, displayName, setDisplayName] = React.useContext(store)
+  if (user) {
+    navigate("/app/profile")
+  }
+  const firebase = useFirebase()
+
   const createUserWithEmailAndPasswordHandler = async (
     event,
     email,
     password
   ) => {
     event.preventDefault()
+    if (!firebase) return
 
     //const { user } = await auth.createUserWithEmailAndPassword(
-    await auth
+    return await firebase
+      .auth()
       .createUserWithEmailAndPassword(email, password)
       //generateUserDocument(user, { displayName, testField });
       .catch(error => {
@@ -88,19 +95,6 @@ const Signup = () => {
             Sign up
           </button>
         </form>
-        {/* <p className="text-center my-3">or</p>
-        <button
-          onClick={() => {
-            try {
-              signInWithGoogle();
-            } catch (error) {
-              console.error("Error signing in with Google", error);
-            }
-          }}
-          className="red-button"
-        >
-          Sign In with Google
-        </button> */}
         <p className="">
           Already have an account?{" "}
           <Link to="/app/login" className="">
