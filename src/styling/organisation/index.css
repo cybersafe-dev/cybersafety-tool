@@ -42,6 +42,17 @@ margin-top: 8rem;
   padding: 2rem;
 }
 
+#get-started{
+  text-align: center;
+}
+.eoi-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+
 #contact-us {
   text-align: left;
   background: #EEEEEE;
@@ -67,13 +78,9 @@ margin-top: 8rem;
   color: white;
   text-decoration: none;
 }
-
-#get-started{
-  text-align: center;
+.socials {
+  margin-top: 1.5rem;
 }
-.eoi-section{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 2rem;
+.social {
+  margin-right: 0.5rem;
 }
