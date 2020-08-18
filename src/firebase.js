@@ -16,7 +16,6 @@ var firebaseConfig = {
 let instance = null
 
 // Initialize Firebase if window is defined
-
 export default function getFirebase() {
   if (typeof window !== "undefined") {
     if (instance) return instance

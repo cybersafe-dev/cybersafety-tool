@@ -6,7 +6,6 @@ import useFirebase from "../../firebase"
 import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
 
-
 const PasswordReset = () => {
   const [email, setEmail] = React.useState("")
   const [emailHasBeenSent, setEmailHasBeenSent] = React.useState(false)
@@ -50,7 +49,9 @@ const PasswordReset = () => {
         {emailHasBeenSent && (
           <div className="">An email has been sent to you!</div>
         )}
+
         {error !== null && <div className="">{error}</div>}
+
         <label htmlFor="userEmail" className="">
           Email:
         </label>
@@ -63,6 +64,7 @@ const PasswordReset = () => {
           onChange={onChangeHandler}
           className=""
         />
+
         <button
           className=""
           onClick={event => {
@@ -72,6 +74,7 @@ const PasswordReset = () => {
           Send me a reset link
         </button>
       </form>
+
       <div className="other-options">
         <p className="">
           Don't have an account?{" "}

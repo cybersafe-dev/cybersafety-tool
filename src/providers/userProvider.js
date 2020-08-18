@@ -15,15 +15,15 @@ const UserProvider = props => {
     if (!firebase) return
 
     return firebase.auth().onAuthStateChanged(async userAuth => {
-      const user = await generateUserDocument(userAuth, { schoolName, schoolId, pupilCount })
+      const user = await generateUserDocument(userAuth, {
+        schoolName,
+        schoolId,
+        pupilCount,
+      })
       setUser(user)
     })
     // eslint-disable-next-line
   }, [schoolName, schoolId, pupilCount, firebase])
-
-  //   React.useEffect(() => {
-  //     console.log("user in provider", user)
-  //   }, [user])
 
   return (
     <store.Provider

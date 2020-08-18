@@ -7,7 +7,6 @@ import { store } from "../../providers/userProvider"
 import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
 
-
 const Login = () => {
   const [email, setEmail] = React.useState("")
   const [password, setPassword] = React.useState("")
@@ -64,6 +63,7 @@ const Login = () => {
           id="userEmail"
           onChange={event => onChangeHandler(event)}
         />
+
         <label htmlFor="userPassword" className="block">
           Password:
         </label>
@@ -76,6 +76,7 @@ const Login = () => {
           id="userPassword"
           onChange={event => onChangeHandler(event)}
         />
+
         <button
           className=""
           onClick={event => {
@@ -85,6 +86,7 @@ const Login = () => {
           Log in
         </button>
       </form>
+
       <div className="other-options">
         <p className="">
           Don't have an account?{" "}
