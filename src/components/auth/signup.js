@@ -65,7 +65,7 @@ const Signup = () => {
         Please fill in the form below to create a school admin account for our
         self-assessment tool
       </p>
-      <img src={BgImg} alt="background design" className="bg-img1" />
+      <img src={BgImg} alt="background design" className="bg-img-auth" />
       {error !== null && <div className="">{error}</div>}
       <form className="">
         <label htmlFor="schoolName" className="block">

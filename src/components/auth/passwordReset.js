@@ -44,7 +44,7 @@ const PasswordReset = () => {
         Enter the email attached to your school account below to receive a
         password reset email
       </p>
-      <img src={BgImg} alt="background design" className="bg-img1" />
+      <img src={BgImg} alt="background design" className="bg-img-auth" />
       <form action="">
         {emailHasBeenSent && (
           <div className="">An email has been sent to you!</div>

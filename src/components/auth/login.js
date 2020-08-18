@@ -47,7 +47,7 @@ const Login = () => {
       <p className="instruction">
         Please log in below to see your school dashboard.
       </p>
-      <img src={BgImg} alt="background design" className="bg-img1" />
+      <img src={BgImg} alt="background design" className="bg-img-auth" />
       {error !== null && <div className="">{error}</div>}
 
       <form className="central-form">
