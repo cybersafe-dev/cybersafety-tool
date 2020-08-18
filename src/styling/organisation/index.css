@@ -43,17 +43,55 @@ margin-top: 8rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
 }
-
+.flag-container {
+  display: inline-flex;
+flex-direction: row;
+}
+.flag {
+  padding: 1rem;
+  margin-top: 5rem;
+}
 #get-started{
   text-align: center;
 }
 .eoi-section{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
+  background-image: url("../../images/eoi-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 0.5rem;
+  text-align: left;
+}
+.input {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #53c5cd;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+  background-color: #53C5CD;
+  border-radius: 30px;
+  border: none;
+  text-align: center;
+  width: 18vw;
+  margin-top: 2.5rem;
+  padding: 0.5rem;
+  color: white;
+  text-decoration: none;
+
 }
 
 

@@ -15,7 +15,7 @@ import Twit from "../images/twit.svg"
 import Link from "../images/link.svg"
 import Insta from "../images/insta.svg"
 import Yout from "../images/yout.svg"
-
+import Flag from "../images/irish-flag.svg"
 
 const MiniSite = () => {
   return (
@@ -23,7 +23,7 @@ const MiniSite = () => {
     <Layout>
   <section id="index-container">
       <MiniNavbar />
-      <SEO title="placeholder" />
+      <SEO title="Home - CyberSafeIreland" />
         <section className="site-container">
         <div id="about">
         <h1>Self-Assessment Tool</h1>
@@ -36,9 +36,9 @@ const MiniSite = () => {
             </p><p>
             Click ‘Get started’ to fill in an expression of interest and the CybersafeIreland team will contact you to get your school going with the tool. Contact us directly if you require more information.
             </p>
-          </div>
+           </div>
             <img src={Fig1} alt="" className="fig1"/>
-        </div>
+          </div>
         </div>
 
           <div id="cybersafety">
@@ -58,7 +58,10 @@ const MiniSite = () => {
           </div>
 
           <div id="cybersafeireland">
+<div className="flag-container">
             <h1 className="section-title">CyberSafeIreland</h1>
+            <img src={Flag} className="flag"/>
+    </div>
           <div className="csi-section">
             <div className="site-text">
               <p>
@@ -75,49 +78,67 @@ const MiniSite = () => {
 
           <div id="get-started">
             <h1 className="section-title">Expression of Interest</h1>
-              <div className="eoi-section">
-              <p className="site-text">Lorem ipsum doodoo daaaa </p>
-              </div>
-          </div>
-          </section>
-            <div id="contact-us">
-              <h1>Contact Us</h1>
-                    <div className="contact-section">
-                    <div className="contact-details">
-                <h3>CyberSafeIreland CLG</h3>
-                  <span>Company number: 568651</span>
-                  <span>Registered charity number: 20104108</span>
-                  <span>93 Upper George Street, Dun Laoghaire,</span>
-                  <span>Co. Dublin, Ireland</span>
-                  <p>info@cybersafeireland.org</p>
 
-              <a className="csi-link" href="https://cybersafeireland.org/" target="_blank" rel="noreferrer">
-              Visit our homepage
-              </a>
-                <div className="socials">
-              <a href="https://www.facebook.com/cybersafeireland" target="_blank" rel="noreferrer">
-                <img src={Fb} alt="" className="social" />
-              </a>
-              <a href="https://twitter.com/CyberSafeIE" target="_blank" rel="noreferrer">
-                <img src={Twit} alt="" className="social"/>
-              </a>
-              <a href="https://www.linkedin.com/company/cybersafeireland/" target="_blank" rel="noreferrer">
-                <img src={Link} alt="" className="social"/>
-              </a>
-              <a href="https://www.instagram.com/cybersafeire/" target="_blank" rel="noreferrer">
-                <img src={Insta} alt="" className="social"/>
-              </a>
-              <a href="https://www.youtube.com/channel/UCbK06TfABt_GIXWeWBziXMA?view_as=subscriber" target="_blank" rel="noreferrer">
-                <img src={Yout} alt="" className="social"/>
-              </a>
-                </div>
-                  </div>
-                <div className="surf-container">
-                  <img src={Surf} alt="" className="surf"/>
-                </div>
-                </div>
-            </div>
-          </section>
+<form className="eoi-section" id="form">
+<label className="label">
+Your first name:
+<input className="input" type="text" name="first-name" />
+</label>
+<label className="label" id="label">
+Your last name:
+<input className="input" type="text" name="last-name" />
+</label>
+<label className="label" id="label">
+Your school's name and location:
+<input className="input" type="text" name="school" />
+</label>
+<label className="label" id="label">
+Your contact email address:
+<input className="input" type="text" name="email" />
+</label>
+<input type="submit" value="Submit" className="submit"/>
+</form>
+</div>
+</section>
+
+<div id="contact-us">
+    <h1>Contact Us</h1>
+        <div className="contact-section">
+          <div className="contact-details">
+            <h3>CyberSafeIreland CLG</h3>
+              <span>Company number: 568651</span>
+              <span>Registered charity number: 20104108</span>
+              <span>93 Upper George Street, Dun Laoghaire,</span>
+              <span>Co. Dublin, Ireland</span>
+              <p>info@cybersafeireland.org</p>
+
+    <a className="csi-link" href="https://cybersafeireland.org/" target="_blank" rel="noreferrer">
+    Visit our homepage
+    </a>
+      <div className="socials">
+          <a href="https://www.facebook.com/cybersafeireland" target="_blank" rel="noreferrer">
+          <img src={Fb} alt="" className="social" />
+          </a>
+          <a href="https://twitter.com/CyberSafeIE" target="_blank" rel="noreferrer">
+          <img src={Twit} alt="" className="social"/>
+          </a>
+          <a href="https://www.linkedin.com/company/cybersafeireland/" target="_blank" rel="noreferrer">
+          <img src={Link} alt="" className="social"/>
+          </a>
+          <a href="https://www.instagram.com/cybersafeire/" target="_blank" rel="noreferrer">
+          <img src={Insta} alt="" className="social"/>
+          </a>
+          <a href="https://www.youtube.com/channel/UCbK06TfABt_GIXWeWBziXMA?view_as=subscriber" target="_blank" rel="noreferrer">
+          <img src={Yout} alt="" className="social"/>
+          </a>
+      </div>
+        </div>
+    <div className="surf-container">
+      <img src={Surf} alt="" className="surf"/>
+    </div>
+    </div>
+  </div>
+</section>
     </Layout>
 
 
