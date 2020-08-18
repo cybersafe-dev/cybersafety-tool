@@ -91,23 +91,23 @@ const MiniSite = () => {
                   <span>Co. Dublin, Ireland</span>
                   <p>info@cybersafeireland.org</p>
 
-              <a className="csi-link" href="https://cybersafeireland.org/" target="_blank">
+              <a className="csi-link" href="https://cybersafeireland.org/" target="_blank" rel="noreferrer">
               Visit our homepage
               </a>
                 <div className="socials">
-              <a href="https://www.facebook.com/cybersafeireland" target="_blank">
+              <a href="https://www.facebook.com/cybersafeireland" target="_blank" rel="noreferrer">
                 <img src={Fb} alt="" className="social" />
               </a>
-              <a href="https://twitter.com/CyberSafeIE" target="_blank">
+              <a href="https://twitter.com/CyberSafeIE" target="_blank" rel="noreferrer">
                 <img src={Twit} alt="" className="social"/>
               </a>
-              <a href="https://www.linkedin.com/company/cybersafeireland/" target="_blank">
+              <a href="https://www.linkedin.com/company/cybersafeireland/" target="_blank" rel="noreferrer">
                 <img src={Link} alt="" className="social"/>
               </a>
-              <a href="https://www.instagram.com/cybersafeire/" target="_blank">
+              <a href="https://www.instagram.com/cybersafeire/" target="_blank" rel="noreferrer">
                 <img src={Insta} alt="" className="social"/>
               </a>
-              <a href="https://www.youtube.com/channel/UCbK06TfABt_GIXWeWBziXMA?view_as=subscriber" target="_blank">
+              <a href="https://www.youtube.com/channel/UCbK06TfABt_GIXWeWBziXMA?view_as=subscriber" target="_blank" rel="noreferrer">
                 <img src={Yout} alt="" className="social"/>
               </a>
                 </div>
