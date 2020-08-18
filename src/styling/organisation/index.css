@@ -9,6 +9,10 @@ margin: 5rem;
 margin-top: 8rem;
 }
 
+.site-text {
+  width: 500px;
+}
+
 #about {
   text-align: left;
 }
@@ -16,6 +20,8 @@ margin-top: 8rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 2rem;
+
 }
 .fig1{
   display: flex;
@@ -23,11 +29,14 @@ margin-top: 8rem;
 }
 #cybersafety {
 text-align: right;
+
 }
 .cybersafety-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 1rem;
+
 }
 .fig2 {
   display: flex;
@@ -35,28 +44,34 @@ text-align: right;
 }
 #csi {
 text-align: left;
+
 }
 .csi-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 .fig3 {
 
 }
 #contact-us {
 text-align: right;
+
 }
 .contact-section{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+padding: 2rem;
 }
 #get-started{
 text-align: center;
+
 }
 .eoi-section{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 2rem;
 }
