@@ -2,6 +2,10 @@ html {
   overflow: scroll !important;
 }
 
+.section-title {
+  margin-top: 5.5rem;
+}
+
 .site-container {
 display: flex;
 flex-direction: column;

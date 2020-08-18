@@ -42,7 +42,7 @@ const MiniSite = () => {
         </div>
 
           <div id="cybersafety">
-          <h1>Cybersafety</h1>
+          <h1 className="section-title">Cybersafety</h1>
           <div className="cybersafety-section">
               <img src={Fig2} alt="" className="fig2"/>
             <div className="site-text">
@@ -58,7 +58,7 @@ const MiniSite = () => {
           </div>
 
           <div id="cybersafeireland">
-            <h1>CyberSafeIreland</h1>
+            <h1 className="section-title">CyberSafeIreland</h1>
           <div className="csi-section">
             <div className="site-text">
               <p>
@@ -74,7 +74,7 @@ const MiniSite = () => {
           </div>
 
           <div id="get-started">
-            <h1>Expression of Interest</h1>
+            <h1 className="section-title">Expression of Interest</h1>
               <div className="eoi-section">
               <p className="site-text">Lorem ipsum doodoo daaaa </p>
               </div>

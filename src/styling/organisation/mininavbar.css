@@ -5,7 +5,8 @@
   width: 100%;
   top: 0;
   position: fixed;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
+  font-size: 0.8rem;
 }
 .nav {
   margin: 0.5rem;
@@ -14,18 +15,19 @@
 }
 
 .nav-logo{
-margin-left: 3rem;
+margin-left: 4rem;
+top: 0;
 }
 
 .nav-links {
-margin-right: 5rem;
+margin-right: 8rem;
+padding-top: 1.2rem;
 }
 
 .started-nav {
   background-color: #53C5CD;
   border-radius: 30px;
   text-align: center;
-  width: 15vw;
   padding: 0.5rem;
   margin-left: 1rem;
   color: white;
