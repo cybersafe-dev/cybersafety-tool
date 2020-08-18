@@ -11,7 +11,7 @@ const Login = () => {
   const [error, setError] = React.useState(null)
   const [user] = React.useContext(store)
     if (user) {
-        navigate("/app/profile")
+        navigate("/app")
     }
 
   const firebase = useFirebase()
@@ -23,7 +23,7 @@ const Login = () => {
       setError(error.message)
       console.error("Error signing in with password and email", error)
     })
-    navigate("/app/profile")
+    navigate("/app")
   }
 
   const onChangeHandler = event => {

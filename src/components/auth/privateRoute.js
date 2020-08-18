@@ -4,9 +4,9 @@ import { store } from "../../providers/userProvider"
 
 const PrivateRoute = ({ component: Component, location, ...rest }) => {
   const [user] = React.useContext(store)
-React.useEffect(() => {
+  React.useEffect(() => {
     console.log("user data", user)
-}, [user])
+  }, [user])
   if (!user && location.pathname !== `/app/login`) {
     navigate("/app/login")
     return null

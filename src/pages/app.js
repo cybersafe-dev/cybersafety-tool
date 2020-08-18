@@ -10,7 +10,7 @@ import PrivateRoute from "../components/auth/privateRoute"
 const App = () => (
   <Layout>
     <Router>
-      <PrivateRoute path="/app/profile" component={Profile} />
+      <PrivateRoute path="/app" component={Profile} />
       <Login path="/app/login" />
       <Signup path="/app/signup" />
       <PasswordReset path="/app/passwordreset" />

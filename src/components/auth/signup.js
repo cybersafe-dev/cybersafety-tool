@@ -10,7 +10,7 @@ const Signup = () => {
   const [error, setError] = React.useState(null)
   const [user, displayName, setDisplayName] = React.useContext(store)
   if (user) {
-    navigate("/app/profile")
+    navigate("/app")
   }
   const firebase = useFirebase()
 
@@ -23,13 +23,14 @@ const Signup = () => {
     if (!firebase) return
 
     //const { user } = await auth.createUserWithEmailAndPassword(
-    return await firebase
+    await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       //generateUserDocument(user, { displayName, testField });
       .catch(error => {
         setError(error.message)
       })
+    navigate("/app")
   }
 
   const onChangeHandler = event => {
