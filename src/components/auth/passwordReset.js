@@ -59,7 +59,7 @@ const PasswordReset = () => {
           name="userEmail"
           id="userEmail"
           value={email}
-          placeholder="Input your email"
+          placeholder="Enter your email"
           onChange={onChangeHandler}
           className=""
         />

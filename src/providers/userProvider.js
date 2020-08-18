@@ -1,33 +1,42 @@
-import React, { createContext, useState } from "react"
+import React from "react"
 import { generateUserDocument } from "../firebase"
 import useFirebase from "../useFirebase"
 
-export const store = createContext([{ user: null }])
+export const store = React.createContext([{ user: null }])
 
 const UserProvider = props => {
-  const [user, setUser] = useState([])
-  const [displayName, setDisplayName] = useState("")
+  const [user, setUser] = React.useState([])
+  const [schoolName, setSchoolName] = React.useState("")
+  const [schoolId, setSchoolId] = React.useState("")
+  const [pupilCount, setPupilCount] = React.useState("")
   const firebase = useFirebase()
 
   React.useEffect(() => {
     if (!firebase) return
 
     return firebase.auth().onAuthStateChanged(async userAuth => {
-      const user = await generateUserDocument(userAuth, { displayName })
+      const user = await generateUserDocument(userAuth, { schoolName, schoolId, pupilCount })
       setUser(user)
-      //setUserState({ user })
-      //setDisplayName("")
     })
     // eslint-disable-next-line
-  }, [displayName, firebase])
+  }, [schoolName, schoolId, pupilCount, firebase])
 
   //   React.useEffect(() => {
   //     console.log("user in provider", user)
   //   }, [user])
 
-  //const { user } = userState;
   return (
-    <store.Provider value={[user, displayName, setDisplayName]}>
+    <store.Provider
+      value={[
+        user,
+        schoolName,
+        setSchoolName,
+        schoolId,
+        setSchoolId,
+        pupilCount,
+        setPupilCount,
+      ]}
+    >
       {props.children}
     </store.Provider>
   )
