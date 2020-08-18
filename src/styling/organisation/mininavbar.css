@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+}
+.nav {
+  margin: 0.5rem;
+  text-decoration: none;
+  color: #181818;
+}
+
+.nav-logo{
+  margin-left: 4rem;
+  top: 0;
+}
+
+.nav-links {
+  margin-right: 8rem;
+  padding-top: 1.2rem;
+}
+
+.started-nav {
+  background-color: #53C5CD;
+  border-radius: 30px;
+  text-align: center;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+
+}

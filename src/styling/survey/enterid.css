@@ -8,10 +8,10 @@
 
 .bg-img1 {
   position: absolute;
-  left: 20em;
+  left: 15em;
   top: 6em;
   z-index: -1;
-  width: 25rem;
+  width: 20rem;
 }
 
 .id-input {
