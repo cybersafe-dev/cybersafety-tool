@@ -1,0 +1,44 @@
+.survey-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaders-box, .teachers-box, .pupils-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30vw;
+  margin: 0 0 1rem 0;
+}
+
+.final-submit-button {
+  margin: 0.5rem 0 0 0;
+  align-self: flex-start;
+}
+
+.quota-box {
+  background-color: #f2f2f2;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: none;
+  width: 25vw;
+  padding: 0 2rem 0 1rem;
+  margin-right: 1rem;
+}
+
+.quota-info {
+    text-align: right;
+}
+
+.quota-box-icon {
+  margin: 0;
+}
+.quota-fraction {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
