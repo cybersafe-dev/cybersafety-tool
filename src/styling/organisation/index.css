@@ -47,7 +47,7 @@ margin-top: 8rem;
 }
 .flag-container {
   display: inline-flex;
-flex-direction: row;
+  flex-direction: row;
 }
 .flag {
   padding: 1rem;
@@ -63,18 +63,20 @@ flex-direction: row;
   padding: 2rem;
   background-image: url("../../images/eoi-bg.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 55rem;
   background-position: center;;
 }
 
 .label {
   display: flex;
   flex-direction: column;
-  width: 500px;
   margin: 0.5rem;
   text-align: left;
 }
 .input {
+  align-items: center;
+  width: 45vw;
+  height: 7vh;
   outline: none;
   border: none;
   border-bottom: 2px solid #53c5cd;
@@ -85,13 +87,14 @@ flex-direction: row;
   background-color: #53C5CD;
   border-radius: 30px;
   border: none;
+  font-size: 20px;
   text-align: center;
-  width: 18vw;
-  margin-top: 2.5rem;
+  width: 15vw;
+  margin-top: 1rem;
   padding: 0.5rem;
   color: white;
   text-decoration: none;
-box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
 
