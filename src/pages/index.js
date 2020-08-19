@@ -96,7 +96,7 @@ Your school's name and location:
 Your contact email address:
 <input className="input" type="text" name="email" />
 </label>
-<input type="submit" value="Submit" className="submit"/>
+<input type="submit" value="submit" className="submit"/>
 </form>
 </div>
 </section>
