@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 
 import Layout from "../../components/layout/layout"
 import Header from "../../components/header/header"
@@ -24,9 +24,7 @@ const ThankYou = props => {
           Your answers have been sent off to the cloud. You can close this
           window now.{" "}
         </p>
-        <Link to="/" className="close-btn">
-          Close
-        </Link>
+
       </section>
     </Layout>
   )
