@@ -1,0 +1,44 @@
+.dashboard-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100vw;
+    height: auto;
+}
+
+.columns {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: center;
+    padding: 3rem;
+}
+
+.user-info {
+    margin: 2rem 0 0 4rem;
+}
+
+.user-surveys {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 5vw;
+}
+
+.user-links {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 5vw;
+}
+
+.logout-button {
+    align-self: flex-end;
+    margin: 3rem 0 3rem 3rem;
+}
