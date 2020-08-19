@@ -1,6 +1,6 @@
 import React from "react"
 import Logo from "../../images/cybersafe-logo.png"
-import "../../styling/organisation/mininavbar.css"
+import "../../styling/app/mininavbar.css"
 import { Link } from "gatsby"
 
 
@@ -17,7 +17,7 @@ const MiniNavbar = () => (
         <Link to="/#contact-us" className="nav">Contact Us</Link>
 
         <Link to="/#get-started" className="started-nav">Get Started</Link>
-    
+
       </div>
       </div>
   </>
