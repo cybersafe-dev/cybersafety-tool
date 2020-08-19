@@ -5,6 +5,7 @@ import Profile from "../components/profile/profile"
 import Login from "../components/auth/login"
 import Signup from "../components/auth/signup"
 import PasswordReset from "../components/auth/passwordReset"
+import Confirmation from "../components/profile/confirmation"
 import PrivateRoute from "../components/auth/privateRoute"
 import Header from "../components/header/header"
 
@@ -16,6 +17,7 @@ const App = () => (
       <Login path="/app/login" />
       <Signup path="/app/signup" />
       <PasswordReset path="/app/passwordreset" />
+      <Confirmation path="/app/confirmation" />
     </Router>
   </Layout>
 )
