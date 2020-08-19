@@ -18,6 +18,14 @@
   width: 22rem;
 }
 
+.bg-img9 {
+  position: absolute;
+  right: 14em;
+width: 40rem;
+  z-index: -1;
+
+}
+
 .close-btn {
   background: #53c5cd;
   border-radius: 30px;
