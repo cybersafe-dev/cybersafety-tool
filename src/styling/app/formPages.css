@@ -1,0 +1,87 @@
+html, body {
+  overflow: visible;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+input {
+  width: 380px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #ffbe55;
+  text-align: left;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #53c5cd;
+  padding-left: 0.5rem;
+}
+
+button {
+  margin: 1rem 3rem 3rem 3rem;
+  background: #53c5cd;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem;
+  width: 250px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  align-self: center;
+}
+
+a {
+  color: #2a94f4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.instruction {
+  width: 380px;
+}
+
+.other-options {
+  text-align: center;
+}
+
+.bg-img-auth {
+  position: absolute;
+  left: 20em;
+  top: 6em;
+  z-index: -1;
+  width: 25rem;
+  animation: rotation 12s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
