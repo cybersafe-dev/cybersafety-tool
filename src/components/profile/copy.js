@@ -9,11 +9,28 @@ export default class Copy extends React.Component {
     value: "",
     copied: false,
   }
+  onChange = ({ target: { value } }) => {
+    this.setState({ value, copied: true })
+  }
+  onClick = ({ target: { value } }) => {}
+  onCopy = () => {
+    this.setState({ copied: true })
+  }
 
   render() {
     return (
       <div>
+        <CopyToClipboard
+          text={this.state.value}
+          onCopy={() => this.setState({ copied: true })}
+        >
+          <button className="copy-btn">Copy</button>
+        </CopyToClipboard>
+        {this.state.copied ? (
+          <span className="copy-message">Copied!</span>
+        ) : null}
         <p
+          className="copy-text"
           value={`https://vigilant-austin-33c3c5.netlify.app/survey/`}
           onChange={({ target: { value } }) =>
             this.setState({ value, copied: false })
@@ -21,17 +38,6 @@ export default class Copy extends React.Component {
         >
           https://vigilant-austin-33c3c5.netlify.app/survey/
         </p>
-
-        <CopyToClipboard
-          text={this.state.value}
-          onCopy={() => this.setState({ copied: true })}
-        >
-          <button className="copy-btn">Copy</button>
-        </CopyToClipboard>
-
-        {this.state.copied ? (
-          <span style={{ color: "red" }}>Copied.</span>
-        ) : null}
       </div>
     )
   }

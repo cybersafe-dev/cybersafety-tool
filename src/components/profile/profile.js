@@ -33,6 +33,7 @@ const Profile = () => {
         <article className="user-links">
           <h2>Your survey link</h2>
           <div className="copy-share">
+            <Copy />
             <Share />
           </div>
           <p>
