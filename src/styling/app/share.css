@@ -1,0 +1,14 @@
+.email-share {
+  width: 10vw;
+  border-radius: 20px;
+  outline: none;
+  background-color: white;
+  color: black;
+}
+
+.copy-btn {
+  width: 10vw;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+}
