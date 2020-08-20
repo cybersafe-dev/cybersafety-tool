@@ -72,7 +72,7 @@ const Signup = () => {
           Your School's name and county:
           <input
             type="text"
-            className=""
+            className="login-input"
             name="schoolName"
             value={schoolName}
             placeholder="e.g. St. Patrick's, Dublin"
@@ -85,7 +85,7 @@ const Signup = () => {
           The school Id we provided:
           <input
             type="text"
-            className=""
+            className="login-input"
             name="schoolId"
             value={schoolId}
             placeholder="e.g. SP001A"
@@ -98,7 +98,7 @@ const Signup = () => {
           The number of pupils at your school:
           <input
             type="text"
-            className=""
+            className="login-input"
             name="pupilCount"
             value={pupilCount}
             placeholder="e.g. 1500"
@@ -111,7 +111,7 @@ const Signup = () => {
           Your school/work email address:
           <input
             type="email"
-            className=""
+            className="login-input"
             name="userEmail"
             value={email}
             placeholder="Enter email"
@@ -124,7 +124,7 @@ const Signup = () => {
           A secure password:
           <input
             type="password"
-            className=""
+            className="login-input"
             name="userPassword"
             value={password}
             placeholder="Enter password"
@@ -132,16 +132,15 @@ const Signup = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
-
-        <button
-          className=""
-          onClick={event => {
-            createUserWithEmailAndPasswordHandler(event, email, password)
-          }}
-        >
-          Sign up
-        </button>
       </form>
+      <button
+        className="login-btn"
+        onClick={event => {
+          createUserWithEmailAndPasswordHandler(event, email, password)
+        }}
+      >
+        Sign up
+      </button>
       <div className="other-options">
         <p className="">
           Already have a school account?{" "}

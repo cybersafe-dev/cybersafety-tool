@@ -49,13 +49,12 @@ const Login = () => {
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
       {error !== null && <div className="">{error}</div>}
-
       <form className="central-form">
         <label htmlFor="userEmail" className="block">
           Email:
           <input
             type="email"
-            className="form-input"
+            className="login-input"
             name="userEmail"
             value={email}
             placeholder="e.g. x@y.com"
@@ -76,17 +75,15 @@ const Login = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
-
-        <button
-          className="login-btn"
-          onClick={event => {
-            signInWithEmailAndPasswordHandler(event, email, password)
-          }}
-        >
-          Log in
-        </button>
-      </form>
-
+      </form>{" "}
+      <button
+        className="login-btn"
+        onClick={event => {
+          signInWithEmailAndPasswordHandler(event, email, password)
+        }}
+      >
+        Log in
+      </button>
       <div className="other-options">
         <p className="">
           Don't have an account?{" "}
