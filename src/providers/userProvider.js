@@ -10,6 +10,32 @@ const UserProvider = props => {
   const [schoolId, setSchoolId] = React.useState("")
   const [pupilCount, setPupilCount] = React.useState("")
   const firebase = useFirebase()
+  const scores = {
+    leaders: {
+      communication: [],
+      criticalThinking: [],
+      digitalKnowledge: [],
+      privacy: [],
+      responsibleUse: [],
+      sharing: []
+    },
+    teachers: {
+      communication: [],
+      criticalThinking: [],
+      digitalKnowledge: [],
+      privacy: [],
+      responsibleUse: [],
+      sharing: []
+    },
+    pupils: {
+      communication: [],
+      criticalThinking: [],
+      digitalKnowledge: [],
+      privacy: [],
+      responsibleUse: [],
+      sharing: []
+    },
+  }
 
   React.useEffect(() => {
     if (!firebase) return
@@ -19,6 +45,7 @@ const UserProvider = props => {
         schoolName,
         schoolId,
         pupilCount,
+        scores
       })
       setUser(user)
     })
