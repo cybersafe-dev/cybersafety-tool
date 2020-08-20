@@ -9,13 +9,6 @@ export default class Copy extends React.Component {
     value: "",
     copied: false,
   }
-  onChange = ({ target: { value } }) => {
-    this.setState({ value, copied: true })
-  }
-  onClick = ({ target: { value } }) => {}
-  onCopy = () => {
-    this.setState({ copied: true })
-  }
 
   render() {
     return (
