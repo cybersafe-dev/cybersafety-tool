@@ -31,19 +31,15 @@ const SurveyStats = () => {
     navigate("/app/confirmation")
   }
 
-  const dummyDb = {
-    leaders: [2, 3, 4, 5, 1],
-    teachers: [3, 4, 3, 2, 1, 1, 2],
-    pupils: [1, 2, 3, 4, 5, 3, 3, 2, 2, 1, 1, 1, 1, 2, 3],
-  }
-
   const quota = {
     leadersQuota: 5,
-    teachersQuota: 10,
-    pupilsQuota: 30,
+    teachersQuota: 5,
+    pupilsQuota: 5,
   }
 
-  const { leaders, teachers, pupils } = dummyDb
+  const leadersFilledSurveys = scores.leaders.sharing.length
+  const teachersFilledSurveys = scores.teachers.sharing.length
+  const pupilsFilledSurveys = scores.pupils.sharing.length
   const { leadersQuota, teachersQuota, pupilsQuota } = quota
 
   return (
@@ -51,10 +47,10 @@ const SurveyStats = () => {
       <section className="leaders-box">
         <SurveyQuotaBox
           userType={"School Leaders"}
-          scores={leaders}
+          scores={leadersFilledSurveys}
           quota={leadersQuota}
         />
-        {leaders.length === leadersQuota ? (
+        {leadersFilledSurveys === leadersQuota ? (
           <img
             src={greenTick}
             alt="Leaders surveys complete"
@@ -65,10 +61,10 @@ const SurveyStats = () => {
       <section className="teachers-box">
         <SurveyQuotaBox
           userType={"Teachers"}
-          scores={teachers}
+          scores={teachersFilledSurveys}
           quota={teachersQuota}
         />
-        {teachers.length === teachersQuota ? (
+        {teachersFilledSurveys === teachersQuota ? (
           <img
             src={greenTick}
             alt="Teachers surveys complete"
@@ -79,10 +75,10 @@ const SurveyStats = () => {
       <section className="pupils-box">
         <SurveyQuotaBox
           userType={"Pupils"}
-          scores={pupils}
+          scores={pupilsFilledSurveys}
           quota={pupilsQuota}
         />
-        {pupils.length === pupilsQuota ? (
+        {pupilsFilledSurveys === pupilsQuota ? (
           <img
             src={greenTick}
             alt="Pupils surveys complete"
@@ -90,9 +86,13 @@ const SurveyStats = () => {
           />
         ) : null}
       </section>
-      <button className="final-submit-button" onClick={handleFinalSubmit}>
-        Submit
-      </button>
+      {leadersFilledSurveys === leadersQuota &&
+      teachersFilledSurveys === teachersQuota &&
+      pupilsFilledSurveys === pupilsQuota ? (
+        <button className="final-submit-button" onClick={handleFinalSubmit}>
+          Submit
+        </button>
+      ) : null}
     </section>
   )
 }
