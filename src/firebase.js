@@ -43,7 +43,7 @@ export const generateUserDocument = async (user, additionalData) => {
   return getUserDocument(user.uid)
 }
 
-const getUserDocument = async uid => {
+export const getUserDocument = async uid => {
   if (!uid) return null
   try {
     const userDocument = await firebase.firestore().doc(`users/${uid}`).get()
@@ -56,3 +56,22 @@ const getUserDocument = async uid => {
     console.error("Error fetching user", error)
   }
 }
+
+// export const getScores = async schoolId => {
+//   if (!schoolId) return null
+//   let thisSchool
+//   await firebase
+//     .firestore()
+//     .collection("users")
+//     .where("schoolId", "==", schoolId)
+//     .get()
+//     .then(querySnapshot => {
+//       querySnapshot.forEach(doc => {
+//         thisSchool = doc.data()
+//       })
+//       return thisSchool
+//     })
+//   .catch(error => {
+//     console.error("Error fetching this school's data", error)
+//   })
+// }

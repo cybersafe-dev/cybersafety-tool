@@ -8,7 +8,7 @@ import "../../styling/app/adminDashboard.css"
 
 const Profile = () => {
   const [user] = React.useContext(store)
-  const { schoolName, email } = user
+  const { schoolName, uid } = user
 
   const firebase = useFirebase()
 
@@ -26,7 +26,7 @@ const Profile = () => {
       <div className="columns">
         <article className="user-surveys">
           <h2>Surveys filled</h2>
-          <SurveyStats />
+          <SurveyStats uid={uid} />
         </article>
         <article className="user-links">
           <h2>Your survey link</h2>

@@ -1,13 +1,34 @@
 import React from "react"
 import { navigate } from "gatsby"
 import "../../styling/app/surveyStats.css"
+import { getUserDocument } from "../../firebase"
+import { store } from "../../providers/userProvider"
 
 import SurveyQuotaBox from "./surveyQuotaBox"
 import greenTick from "../../images/green-tick.svg"
 
 const SurveyStats = () => {
+  const [scores, setScores] = React.useState(null)
+  const [user] = React.useContext(store)
+  const { uid } = user
+
+  React.useEffect(() => {
+    const getScores = async () => {
+      const updatedUserDoc = await getUserDocument(uid)
+      const { scores } = updatedUserDoc
+      setScores(scores)
+    }
+    getScores()
+  }, [uid])
+
+  React.useEffect(() => {
+    console.log({ scores })
+  }, [scores])
+
+  if (!uid) return <p>Loading...</p>
+
   const handleFinalSubmit = () => {
-    navigate("/app/thankyou")
+    navigate("/app/confirmation")
   }
 
   const dummyDb = {

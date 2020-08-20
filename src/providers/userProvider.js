@@ -17,7 +17,7 @@ const UserProvider = props => {
       digitalKnowledge: [],
       privacy: [],
       responsibleUse: [],
-      sharing: []
+      sharing: [],
     },
     teachers: {
       communication: [],
@@ -25,7 +25,7 @@ const UserProvider = props => {
       digitalKnowledge: [],
       privacy: [],
       responsibleUse: [],
-      sharing: []
+      sharing: [],
     },
     pupils: {
       communication: [],
@@ -33,7 +33,7 @@ const UserProvider = props => {
       digitalKnowledge: [],
       privacy: [],
       responsibleUse: [],
-      sharing: []
+      sharing: [],
     },
   }
 
@@ -45,7 +45,7 @@ const UserProvider = props => {
         schoolName,
         schoolId,
         pupilCount,
-        scores
+        scores,
       })
       setUser(user)
     })
