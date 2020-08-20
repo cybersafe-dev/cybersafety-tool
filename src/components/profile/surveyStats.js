@@ -69,7 +69,7 @@ const SurveyStats = () => {
           />
         ) : null}
       </section>
-      <button className="final-submit-button" onClick={handleFinalSubmit}>
+      <button className="final-submit-btn" onClick={handleFinalSubmit}>
         Submit
       </button>
     </section>

@@ -1,14 +1,10 @@
-html, body {
-  overflow: visible;
-}
-
-form {
+.central-form {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 
-input {
+.login-input {
   width: 380px;
   height: 50px;
   margin-bottom: 0.5rem;
@@ -21,7 +17,7 @@ input {
   padding-left: 0.5rem;
 }
 
-button {
+.login-btn {
   margin: 1rem 3rem 3rem 3rem;
   background: #53c5cd;
   border-radius: 30px;
@@ -45,7 +41,7 @@ a:hover {
   text-decoration: underline;
 }
 
-label {
+.block {
   display: flex;
   flex-direction: column;
 }
