@@ -50,7 +50,7 @@ const SurveyStats = ({ uid }) => {
           scores={leadersFilledSurveys}
           quota={leadersQuota}
         />
-        {leadersFilledSurveys === leadersQuota ? (
+        {leadersFilledSurveys >= leadersQuota ? (
           <img
             src={greenTick}
             alt="Leaders surveys complete"
@@ -64,7 +64,7 @@ const SurveyStats = ({ uid }) => {
           scores={teachersFilledSurveys}
           quota={teachersQuota}
         />
-        {teachersFilledSurveys === teachersQuota ? (
+        {teachersFilledSurveys >= teachersQuota ? (
           <img
             src={greenTick}
             alt="Teachers surveys complete"
@@ -78,7 +78,7 @@ const SurveyStats = ({ uid }) => {
           scores={pupilsFilledSurveys}
           quota={pupilsQuota}
         />
-        {pupilsFilledSurveys === pupilsQuota ? (
+        {pupilsFilledSurveys >= pupilsQuota ? (
           <img
             src={greenTick}
             alt="Pupils surveys complete"
@@ -86,9 +86,9 @@ const SurveyStats = ({ uid }) => {
           />
         ) : null}
       </section>
-      {leadersFilledSurveys === leadersQuota &&
-      teachersFilledSurveys === teachersQuota &&
-      pupilsFilledSurveys === pupilsQuota ? (
+      {leadersFilledSurveys >= leadersQuota &&
+      teachersFilledSurveys >= teachersQuota &&
+      pupilsFilledSurveys >= pupilsQuota ? (
         <button className="final-submit-button" onClick={handleFinalSubmit}>
           Submit
         </button>
