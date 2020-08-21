@@ -4,10 +4,10 @@ import { ResponseStore } from "../../providers/responseProvider"
 import { updateScores } from "../../firebase"
 import "../../styling/survey/dashboard.css"
 
-const SubmitButton = () => {
+const SubmitButton = ({ setError }) => {
   const [store] = React.useContext(ResponseStore)
   //eslint-disable-next-line
-  const {schoolId, userType} = store
+  const { schoolId, userType } = store
 
   const averagedScores = {
     digitalknowledge: [],
@@ -33,8 +33,13 @@ const SubmitButton = () => {
     await averageScores()
     // scores will be added to the correct part of the database via schoolId and the userType
     const updateStatus = await updateScores(schoolId, userType, averagedScores)
-    console.log(updateStatus)
-    navigate("/survey/thankyou/")
+    if (updateStatus === "updated") {
+      navigate("/survey/thankyou/")
+    } else {
+      setError(
+        "Sorry, there was an error uploading your survey. Please try again."
+      )
+    }
   }
 
   return (

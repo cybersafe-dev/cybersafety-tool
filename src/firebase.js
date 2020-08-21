@@ -57,40 +57,6 @@ export const getUserDocument = async uid => {
   }
 }
 
-// export const updateScores = async (schoolId, userType, myScores) => {
-//   if (!schoolId || !userType || !myScores) return "error"
-//   let thisSchool
-//   const schoolRef = firebase
-//     .firestore()
-//     .collection("users")
-//     .where("schoolId", "==", schoolId)
-//   schoolRef
-//     .get()
-//     .then(async querySnapshot => {
-//       querySnapshot.forEach(doc => {
-//         thisSchool = doc.data()
-//       })
-//       delete myScores.test
-//       console.log("data used for adding to db", schoolId, userType, myScores)
-//       console.log("data to update scores with", thisSchool.scores)
-//       await thisSchool.scores[userType].push(myScores)
-//       console.log("after push new scores array to send", thisSchool)
-//       await schoolRef
-//         .update({ scores: thisSchool })
-//         .then(() => {
-//           return "updated"
-//         })
-//         .catch(error => {
-//           console.error("Error updating database", error)
-//           return "update error"
-//         })
-//     })
-//     .catch(error => {
-//       console.error("Error fetching this school's data", error)
-//       return "fetch error"
-//     })
-// }
-
 export const updateScores = async (schoolId, userType, myScores) => {
   if (!schoolId || !userType || !myScores) return "error"
   firebase
@@ -106,10 +72,10 @@ export const updateScores = async (schoolId, userType, myScores) => {
       scoresObj[userType].push(myScores)
       await thisSchool.ref
         .update({ scores: scoresObj })
-      return "updated"
     })
     .catch(error => {
       console.error("Error fetching this school's data", error)
-      return "fetch error"
+      return "error"
     })
+    return "updated"
 }
