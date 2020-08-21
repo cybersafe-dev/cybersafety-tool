@@ -2,7 +2,7 @@ import React from "react"
 import { Link, navigate } from "gatsby"
 
 import useFirebase from "../../firebase"
-import { store } from "../../providers/userProvider"
+import { userStore } from "../../providers/userProvider"
 
 import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
@@ -11,7 +11,7 @@ const Login = () => {
   const [email, setEmail] = React.useState("")
   const [password, setPassword] = React.useState("")
   const [error, setError] = React.useState(null)
-  const [user] = React.useContext(store)
+  const [user] = React.useContext(userStore)
   if (user) {
     navigate("/app")
   }

@@ -1,13 +1,13 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { store } from "../../providers/userProvider"
+import { userStore } from "../../providers/userProvider"
 import useFirebase from "../../firebase"
 
 import SurveyStats from "./surveyStats"
 import "../../styling/app/adminDashboard.css"
 
 const Profile = () => {
-  const [user] = React.useContext(store)
+  const [user] = React.useContext(userStore)
   const { schoolName, uid } = user
 
   const firebase = useFirebase()

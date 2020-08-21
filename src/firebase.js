@@ -57,21 +57,22 @@ export const getUserDocument = async uid => {
   }
 }
 
-// export const getScores = async schoolId => {
-//   if (!schoolId) return null
-//   let thisSchool
-//   await firebase
-//     .firestore()
-//     .collection("users")
-//     .where("schoolId", "==", schoolId)
-//     .get()
-//     .then(querySnapshot => {
-//       querySnapshot.forEach(doc => {
-//         thisSchool = doc.data()
-//       })
-//       return thisSchool
-//     })
-//   .catch(error => {
-//     console.error("Error fetching this school's data", error)
-//   })
-// }
+export const updateScores = async (schoolId, myScores) => {
+  if (!schoolId || !myScores) return null
+  let thisSchool
+  const schoolRef = firebase
+    .firestore()
+    .collection("users")
+    .where("schoolId", "==", schoolId)
+    schoolRef.get()
+    .then(querySnapshot => {
+      querySnapshot.forEach(doc => {
+        thisSchool = doc.data()
+      })
+      console.log("data to update", thisSchool)
+    })
+  .catch(error => {
+    console.error("Error fetching this school's data", error)
+    return(error.message)
+  })
+}
