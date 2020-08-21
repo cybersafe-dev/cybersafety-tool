@@ -2,30 +2,29 @@ import React from "react"
 import { navigate } from "gatsby"
 import "../../styling/app/surveyStats.css"
 import { getUserDocument } from "../../firebase"
-import { store } from "../../providers/userProvider"
 
 import SurveyQuotaBox from "./surveyQuotaBox"
 import greenTick from "../../images/green-tick.svg"
 
-const SurveyStats = () => {
-  const [scores, setScores] = React.useState(null)
-  const [user] = React.useContext(store)
-  const { uid } = user
+const SurveyStats = ({ uid }) => {
+  const [currentScores, setCurrentScores] = React.useState(null)
 
   React.useEffect(() => {
     const getScores = async () => {
-      const updatedUserDoc = await getUserDocument(uid)
-      const { scores } = updatedUserDoc
-      setScores(scores)
+      await getUserDocument(uid).then(async updatedUserDoc => {
+        if (updatedUserDoc) {
+          await setCurrentScores(updatedUserDoc.scores)
+        } else return
+      })
     }
     getScores()
   }, [uid])
 
   React.useEffect(() => {
-    console.log({ scores })
-  }, [scores])
+    console.log({ currentScores })
+  }, [currentScores])
 
-  if (!uid) return <p>Loading...</p>
+  if (!uid || !currentScores) return <p>Loading...</p>
 
   const handleFinalSubmit = () => {
     navigate("/app/confirmation")
@@ -37,9 +36,9 @@ const SurveyStats = () => {
     pupilsQuota: 5,
   }
 
-  const leadersFilledSurveys = scores.leaders.sharing.length
-  const teachersFilledSurveys = scores.teachers.sharing.length
-  const pupilsFilledSurveys = scores.pupils.sharing.length
+  const leadersFilledSurveys = currentScores.leaders.sharing.length
+  const teachersFilledSurveys = currentScores.teachers.sharing.length
+  const pupilsFilledSurveys = currentScores.pupils.sharing.length
   const { leadersQuota, teachersQuota, pupilsQuota } = quota
 
   return (
