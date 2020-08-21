@@ -1,44 +1,55 @@
 .dashboard-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100vw;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100vw;
+  height: auto;
 }
 
 .columns {
-    display: flex;
-    flex-direction: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-self: center;
-    padding: 3rem;
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: center;
+  padding: 3rem;
 }
 
 .user-info {
-    margin: 2rem 0 0 4rem;
+  margin: 2rem 0 0 4rem;
 }
 
 .user-surveys {
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-right: 5vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 5vw;
 }
 
 .user-links {
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 5vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 5vw;
 }
 
-.logout-button {
-    align-self: flex-end;
-    margin: 3rem 0 3rem 3rem;
+.logout-btn {
+  align-self: center;
+  margin: 2rem;
+  outline: none;
+  background: #53c5cd;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem;
+  width: 250px;
+
+  font-weight: 600;
+  text-align: center;
 }

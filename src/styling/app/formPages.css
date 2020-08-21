@@ -1,28 +1,27 @@
-html, body {
-  overflow: visible;
-}
-
-form {
+.central-form {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 
-input {
-  width: 380px;
-  height: 50px;
+.login-input {
+  width: 500px;
+
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #ffbe55;
-  text-align: left;
+
+  padding-left: 0.5rem;
+
+  height: 6vh;
   outline: none;
   border: none;
   border-bottom: 2px solid #53c5cd;
-  padding-left: 0.5rem;
 }
 
-button {
-  margin: 1rem 3rem 3rem 3rem;
+.login-btn {
+  align-self: center;
+  margin: 2rem;
   background: #53c5cd;
   border-radius: 30px;
   border: none;
@@ -33,7 +32,6 @@ button {
   text-decoration: none;
   font-weight: 600;
   text-align: center;
-  align-self: center;
 }
 
 a {
@@ -45,7 +43,7 @@ a:hover {
   text-decoration: underline;
 }
 
-label {
+.block {
   display: flex;
   flex-direction: column;
 }

@@ -1,0 +1,37 @@
+.email-share {
+  background: #29788a !important;
+  color: white !important;
+  width: 80px;
+  margin-left: 18rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0 0 10px 10px;
+}
+
+.copy-btn {
+  background: #29788a !important;
+  color: white;
+  width: 80px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.copy-text {
+  background-color: #f2f2f2;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.copy-message {
+  color: #efa642;
+  margin: 0.5rem;
+  font-size: 15px;
+}

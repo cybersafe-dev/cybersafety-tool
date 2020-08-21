@@ -49,44 +49,41 @@ const Login = () => {
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
       {error !== null && <div className="">{error}</div>}
-
       <form className="central-form">
         <label htmlFor="userEmail" className="block">
-          Email:  
-        <input
-          type="email"
-          className=""
-          name="userEmail"
-          value={email}
-          placeholder="e.g. x@y.com"
-          id="userEmail"
-          onChange={event => onChangeHandler(event)}
-        />
+          Email:
+          <input
+            type="email"
+            className="login-input"
+            name="userEmail"
+            value={email}
+            placeholder="e.g. x@y.com"
+            id="userEmail"
+            onChange={event => onChangeHandler(event)}
+          />
         </label>
 
         <label htmlFor="userPassword" className="block">
           Password:
-        <input
-          type="password"
-          className=""
-          name="userPassword"
-          value={password}
-          placeholder="Your Password"
-          id="userPassword"
-          onChange={event => onChangeHandler(event)}
-        />
+          <input
+            type="password"
+            className="login-input"
+            name="userPassword"
+            value={password}
+            placeholder="Your Password"
+            id="userPassword"
+            onChange={event => onChangeHandler(event)}
+          />
         </label>
-
-        <button
-          className=""
-          onClick={event => {
-            signInWithEmailAndPasswordHandler(event, email, password)
-          }}
-        >
-          Log in
-        </button>
-      </form>
-
+      </form>{" "}
+      <button
+        className="login-btn"
+        onClick={event => {
+          signInWithEmailAndPasswordHandler(event, email, password)
+        }}
+      >
+        Log in
+      </button>
       <div className="other-options">
         <p className="">
           Don't have an account?{" "}
