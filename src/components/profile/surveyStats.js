@@ -20,9 +20,10 @@ const SurveyStats = ({ uid }) => {
     getScores()
   }, [uid])
 
-  React.useEffect(() => {
-    console.log({ currentScores })
-  }, [currentScores])
+  // Good for debugging
+  // React.useEffect(() => {
+  //   console.log({ currentScores })
+  // }, [currentScores])
 
   if (!uid || !currentScores) return <p>Loading...</p>
 
@@ -36,9 +37,9 @@ const SurveyStats = ({ uid }) => {
     pupilsQuota: 5,
   }
 
-  const leadersFilledSurveys = currentScores.leaders.sharing.length
-  const teachersFilledSurveys = currentScores.teachers.sharing.length
-  const pupilsFilledSurveys = currentScores.pupils.sharing.length
+  const leadersFilledSurveys = currentScores.leaders.length
+  const teachersFilledSurveys = currentScores.teachers.length
+  const pupilsFilledSurveys = currentScores.pupils.length
   const { leadersQuota, teachersQuota, pupilsQuota } = quota
 
   return (

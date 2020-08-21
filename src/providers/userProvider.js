@@ -11,30 +11,9 @@ const UserProvider = props => {
   const [pupilCount, setPupilCount] = React.useState("")
   const firebase = useFirebase()
   const scores = {
-    leaders: {
-      communication: [],
-      criticalThinking: [],
-      digitalKnowledge: [],
-      privacy: [],
-      responsibleUse: [],
-      sharing: [],
-    },
-    teachers: {
-      communication: [],
-      criticalThinking: [],
-      digitalKnowledge: [],
-      privacy: [],
-      responsibleUse: [],
-      sharing: [],
-    },
-    pupils: {
-      communication: [],
-      criticalThinking: [],
-      digitalKnowledge: [],
-      privacy: [],
-      responsibleUse: [],
-      sharing: [],
-    },
+    leaders: [],
+    teachers: [],
+    pupils: []
   }
 
   React.useEffect(() => {

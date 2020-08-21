@@ -2,15 +2,12 @@ import React from "react"
 import { navigate } from "gatsby"
 import { ResponseStore } from "../../providers/responseProvider"
 import { updateScores } from "../../firebase"
-import { userStore } from "../../providers/userProvider"
 import "../../styling/survey/dashboard.css"
 
 const SubmitButton = () => {
   const [store] = React.useContext(ResponseStore)
   //eslint-disable-next-line
-  const [user, schoolName, setSchoolName, schoolId] = React.useContext(
-    userStore
-  )
+  const {schoolId, userType} = store
 
   const averagedScores = {
     digitalknowledge: [],
@@ -35,10 +32,8 @@ const SubmitButton = () => {
   const handleSubmission = async () => {
     await averageScores()
     // scores will be added to the correct part of the database via schoolId and the userType
-
-    console.log("Send to database:", averagedScores)
-
-    await updateScores(schoolId, averagedScores)
+    const updateStatus = await updateScores(schoolId, userType, averagedScores)
+    console.log(updateStatus)
     navigate("/survey/thankyou/")
   }
 
