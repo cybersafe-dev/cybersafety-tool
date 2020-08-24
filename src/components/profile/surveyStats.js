@@ -7,7 +7,7 @@ import { createReport } from "../../templates/reportTemplate"
 import SurveyQuotaBox from "./surveyQuotaBox"
 import greenTick from "../../images/green-tick.svg"
 
-const SurveyStats = ({ uid, schoolName }) => {
+const SurveyStats = ({ uid, schoolName, reportSubmitted }) => {
   const [currentScores, setCurrentScores] = React.useState(null)
   const [error, setError] = React.useState(null)
 
@@ -25,6 +25,10 @@ const SurveyStats = ({ uid, schoolName }) => {
   if (!uid || !currentScores) return <p>Loading...</p>
 
   const handleFinalSubmit = async () => {
+    if (reportSubmitted) {
+      setError("Looks like you already submitted your report...thanks!")
+      return
+    }
     const report = await createReport(currentScores, schoolName)
     console.log(report)
     const dbPostStatus = await postReportToDb(uid, report)
