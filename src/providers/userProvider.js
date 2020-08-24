@@ -2,7 +2,7 @@ import React from "react"
 import { generateUserDocument } from "../firebase"
 import useFirebase from "../useFirebase"
 
-export const store = React.createContext([{ user: null }])
+export const userStore = React.createContext([{ user: null }])
 
 const UserProvider = props => {
   const [user, setUser] = React.useState([])
@@ -10,6 +10,11 @@ const UserProvider = props => {
   const [schoolId, setSchoolId] = React.useState("")
   const [pupilCount, setPupilCount] = React.useState("")
   const firebase = useFirebase()
+  const scores = {
+    leaders: [],
+    teachers: [],
+    pupils: []
+  }
 
   React.useEffect(() => {
     if (!firebase) return
@@ -19,6 +24,7 @@ const UserProvider = props => {
         schoolName,
         schoolId,
         pupilCount,
+        scores,
       })
       setUser(user)
     })
@@ -26,7 +32,7 @@ const UserProvider = props => {
   }, [schoolName, schoolId, pupilCount, firebase])
 
   return (
-    <store.Provider
+    <userStore.Provider
       value={[
         user,
         schoolName,
@@ -38,7 +44,7 @@ const UserProvider = props => {
       ]}
     >
       {props.children}
-    </store.Provider>
+    </userStore.Provider>
   )
 }
 

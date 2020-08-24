@@ -75,7 +75,7 @@ const Dashboard = ({ data }) => {
       </div>
       <section className="dashboard-container">
         <div className="categories">
-          <SurveyProgress completedSections={completedSections} />
+          <SurveyProgress completedSections={completedSections} setError={setError} />
           <div className="col">
             {completedSections.includes("digitalknowledge") ? (
               <button

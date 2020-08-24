@@ -27,7 +27,7 @@ const SurveyQuotaBox = ({ userType, scores, quota }) => {
       <img src={thisImage} alt={userType} className="quota-box-icon" />
       <div className="quota-info">
         <p className="quota-fraction">
-          {scores.length}/{quota}
+          {scores}/{quota}
         </p>
         <p>{userType}</p>
       </div>

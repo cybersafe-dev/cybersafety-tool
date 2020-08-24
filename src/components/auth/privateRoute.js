@@ -1,9 +1,9 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { store } from "../../providers/userProvider"
+import { userStore } from "../../providers/userProvider"
 
 const PrivateRoute = ({ component: Component, location, ...rest }) => {
-  const [user] = React.useContext(store)
+  const [user] = React.useContext(userStore)
  
   React.useEffect(() => {
     console.log("user data", user)

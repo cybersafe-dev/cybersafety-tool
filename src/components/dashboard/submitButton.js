@@ -1,10 +1,14 @@
 import React from "react"
 import { navigate } from "gatsby"
 import { ResponseStore } from "../../providers/responseProvider"
+import { updateScores } from "../../firebase"
 import "../../styling/survey/dashboard.css"
 
-const SubmitButton = () => {
+const SubmitButton = ({ setError }) => {
   const [store] = React.useContext(ResponseStore)
+  //eslint-disable-next-line
+  const { schoolId, userType } = store
+
   const averagedScores = {
     digitalknowledge: [],
     privacy: [],
@@ -16,10 +20,11 @@ const SubmitButton = () => {
 
   const averageScores = () => {
     store.responses.forEach(category => {
-      const average =
-        Math.round(Object.values(category)[0].reduce((sum, value) => {
+      const average = Math.round(
+        Object.values(category)[0].reduce((sum, value) => {
           return sum + parseInt(value)
-        }, 0) / Object.values(category)[0].length)
+        }, 0) / Object.values(category)[0].length
+      )
       averagedScores[Object.keys(category)[0]] = average
     })
   }
@@ -27,8 +32,14 @@ const SubmitButton = () => {
   const handleSubmission = async () => {
     await averageScores()
     // scores will be added to the correct part of the database via schoolId and the userType
-    console.log("Send to database:", averagedScores)
-    navigate("/survey/thankyou/")
+    const updateStatus = await updateScores(schoolId, userType, averagedScores)
+    if (updateStatus === "updated") {
+      navigate("/survey/thankyou/")
+    } else {
+      setError(
+        "Sorry, there was an error uploading your survey. Please try again."
+      )
+    }
   }
 
   return (

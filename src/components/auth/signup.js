@@ -2,7 +2,7 @@ import React from "react"
 import { Link, navigate } from "gatsby"
 import useFirebase from "../../firebase"
 
-import { store } from "../../providers/userProvider"
+import { userStore } from "../../providers/userProvider"
 
 import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
@@ -19,7 +19,7 @@ const Signup = () => {
     setSchoolId,
     pupilCount,
     setPupilCount,
-  ] = React.useContext(store)
+  ] = React.useContext(userStore)
   if (user) {
     navigate("/app")
   }

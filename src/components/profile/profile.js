@@ -1,6 +1,6 @@
 import React from "react"
 import { navigate } from "gatsby"
-import { store } from "../../providers/userProvider"
+import { userStore } from "../../providers/userProvider"
 import useFirebase from "../../firebase"
 import Share from "./share"
 import Copy from "./copy"
@@ -9,8 +9,8 @@ import SurveyStats from "./surveyStats"
 import "../../styling/app/adminDashboard.css"
 
 const Profile = () => {
-  const [user] = React.useContext(store)
-  const { schoolName, email } = user
+  const [user] = React.useContext(userStore)
+  const { schoolName, uid } = user
 
   const firebase = useFirebase()
 
@@ -28,7 +28,7 @@ const Profile = () => {
       <div className="columns">
         <article className="user-surveys">
           <h2>Surveys filled</h2>
-          <SurveyStats />
+          <SurveyStats uid={uid} />
         </article>
         <article className="user-links">
           <h2>Your survey link</h2>

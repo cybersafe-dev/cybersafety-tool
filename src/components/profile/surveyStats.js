@@ -1,28 +1,45 @@
 import React from "react"
 import { navigate } from "gatsby"
 import "../../styling/app/surveyStats.css"
+import { getUserDocument } from "../../firebase"
 
 import SurveyQuotaBox from "./surveyQuotaBox"
 import greenTick from "../../images/green-tick.svg"
 
-const SurveyStats = () => {
-  const handleFinalSubmit = () => {
-    navigate("/app/thankyou")
-  }
+const SurveyStats = ({ uid }) => {
+  const [currentScores, setCurrentScores] = React.useState(null)
 
-  const dummyDb = {
-    leaders: [2, 3, 4, 5, 1],
-    teachers: [3, 4, 3, 2, 1, 1, 2],
-    pupils: [1, 2, 3, 4, 5, 3, 3, 2, 2, 1, 1, 1, 1, 2, 3],
+  React.useEffect(() => {
+    const getScores = async () => {
+      await getUserDocument(uid).then(async updatedUserDoc => {
+        if (updatedUserDoc) {
+          await setCurrentScores(updatedUserDoc.scores)
+        } else return
+      })
+    }
+    getScores()
+  }, [uid])
+
+  // Good for debugging
+  // React.useEffect(() => {
+  //   console.log({ currentScores })
+  // }, [currentScores])
+
+  if (!uid || !currentScores) return <p>Loading...</p>
+
+  const handleFinalSubmit = () => {
+    navigate("/app/confirmation")
   }
 
   const quota = {
     leadersQuota: 5,
-    teachersQuota: 10,
-    pupilsQuota: 30,
+    teachersQuota: 5,
+    pupilsQuota: 5,
   }
 
-  const { leaders, teachers, pupils } = dummyDb
+  const leadersFilledSurveys = currentScores.leaders.length
+  const teachersFilledSurveys = currentScores.teachers.length
+  const pupilsFilledSurveys = currentScores.pupils.length
   const { leadersQuota, teachersQuota, pupilsQuota } = quota
 
   return (
@@ -30,10 +47,10 @@ const SurveyStats = () => {
       <section className="leaders-box">
         <SurveyQuotaBox
           userType={"School Leaders"}
-          scores={leaders}
+          scores={leadersFilledSurveys}
           quota={leadersQuota}
         />
-        {leaders.length === leadersQuota ? (
+        {leadersFilledSurveys >= leadersQuota ? (
           <img
             src={greenTick}
             alt="Leaders surveys complete"
@@ -44,10 +61,10 @@ const SurveyStats = () => {
       <section className="teachers-box">
         <SurveyQuotaBox
           userType={"Teachers"}
-          scores={teachers}
+          scores={teachersFilledSurveys}
           quota={teachersQuota}
         />
-        {teachers.length === teachersQuota ? (
+        {teachersFilledSurveys >= teachersQuota ? (
           <img
             src={greenTick}
             alt="Teachers surveys complete"
@@ -58,10 +75,10 @@ const SurveyStats = () => {
       <section className="pupils-box">
         <SurveyQuotaBox
           userType={"Pupils"}
-          scores={pupils}
+          scores={pupilsFilledSurveys}
           quota={pupilsQuota}
         />
-        {pupils.length === pupilsQuota ? (
+        {pupilsFilledSurveys >= pupilsQuota ? (
           <img
             src={greenTick}
             alt="Pupils surveys complete"
@@ -69,9 +86,13 @@ const SurveyStats = () => {
           />
         ) : null}
       </section>
-      <button className="final-submit-btn" onClick={handleFinalSubmit}>
-        Submit
-      </button>
+      {leadersFilledSurveys >= leadersQuota &&
+      teachersFilledSurveys >= teachersQuota &&
+      pupilsFilledSurveys >= pupilsQuota ? (
+        <button className="final-submit-button" onClick={handleFinalSubmit}>
+          Submit
+        </button>
+      ) : null}
     </section>
   )
 }
