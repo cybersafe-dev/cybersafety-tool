@@ -1,7 +1,8 @@
 import React from "react"
 import { navigate } from "gatsby"
 import "../../styling/app/surveyStats.css"
-import { getUserDocument } from "../../firebase"
+import { getUserDocument, postReportToDb } from "../../firebase"
+import { createReport } from "../../templates/reportTemplate"
 
 import SurveyQuotaBox from "./surveyQuotaBox"
 import greenTick from "../../images/green-tick.svg"
@@ -25,10 +26,14 @@ const SurveyStats = ({ uid }) => {
   //   console.log({ currentScores })
   // }, [currentScores])
 
+
   if (!uid || !currentScores) return <p>Loading...</p>
 
-  const handleFinalSubmit = () => {
-    navigate("/app/confirmation")
+  const handleFinalSubmit = async () => {
+    const report = await createReport(currentScores)
+    console.log(report)
+    //await postReportToDb(uid, report)
+    //navigate("/app/confirmation")
   }
 
   const quota = {
