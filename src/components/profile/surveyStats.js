@@ -95,7 +95,7 @@ const SurveyStats = ({ uid, schoolName }) => {
       {leadersFilledSurveys >= leadersQuota &&
       teachersFilledSurveys >= teachersQuota &&
       pupilsFilledSurveys >= pupilsQuota ? (
-        <button className="final-submit-button" onClick={handleFinalSubmit}>
+        <button className="final-submit-btn" onClick={handleFinalSubmit}>
           Submit
         </button>
       ) : null}
