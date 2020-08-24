@@ -6,7 +6,7 @@ import "../../styling/app/share.css"
 
 export default class Copy extends React.Component {
   state = {
-    value: "",
+    value: "https://vigilant-austin-33c3c5.netlify.app/survey/",
     copied: false,
   }
 
