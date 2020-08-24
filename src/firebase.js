@@ -84,7 +84,8 @@ export const postReportToDb = async (uid, report) => {
   if (!uid || !report) return "error"
   try{
     await firebase.firestore().collection("users").doc(uid).update({
-    report: report
+    report: report,
+    reportSubmitted: firebase.firestore.FieldValue.serverTimestamp()
   })
   return "updated"
   } catch (error) {
