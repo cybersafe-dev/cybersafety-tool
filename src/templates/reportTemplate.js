@@ -1,4 +1,4 @@
-export const createReport = allScores => {
+export const createReport = (allScores, schoolName) => {
   const userTypeArray = ["leaders", "teachers", "pupils"]
   const combinedScoresInArray = {
     leaders: {
@@ -46,18 +46,18 @@ export const createReport = allScores => {
     })
   })
 
-  console.log({ combinedScoresInArray })
-
   const { leaders, teachers, pupils } = combinedScoresInArray
 
-  const getMean = (array) => {
-      return Math.round(array.reduce((sum, value) => {
+  const getMean = array => {
+    return Math.round(
+      array.reduce((sum, value) => {
         return sum + value
-      }, 0) / array.length)
+      }, 0) / array.length
+    )
   }
 
   const reportTemplate = `
-  # Report for this school  
+  # Report for ${schoolName}  
   _Scores taken from mean average of all survey submissions_ 
   ## School Leaders  
   * Digital Knowledge: ${getMean(leaders.digitalknowledge)}
@@ -94,6 +94,3 @@ export const createReport = allScores => {
 
   return reportTemplate
 }
-
-
-

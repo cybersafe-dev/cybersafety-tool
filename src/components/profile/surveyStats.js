@@ -7,8 +7,9 @@ import { createReport } from "../../templates/reportTemplate"
 import SurveyQuotaBox from "./surveyQuotaBox"
 import greenTick from "../../images/green-tick.svg"
 
-const SurveyStats = ({ uid }) => {
+const SurveyStats = ({ uid, schoolName }) => {
   const [currentScores, setCurrentScores] = React.useState(null)
+  const [error, setError] = React.useState(null)
 
   React.useEffect(() => {
     const getScores = async () => {
@@ -21,19 +22,19 @@ const SurveyStats = ({ uid }) => {
     getScores()
   }, [uid])
 
-  // Good for debugging
-  // React.useEffect(() => {
-  //   console.log({ currentScores })
-  // }, [currentScores])
-
-
   if (!uid || !currentScores) return <p>Loading...</p>
 
   const handleFinalSubmit = async () => {
-    const report = await createReport(currentScores)
+    const report = await createReport(currentScores, schoolName)
     console.log(report)
-    //await postReportToDb(uid, report)
-    //navigate("/app/confirmation")
+    const dbPostStatus = await postReportToDb(uid, report)
+    if (dbPostStatus === "updated") {
+      navigate("/app/confirmation")
+    } else {
+      setError(
+        "Sorry there was a problem uploading your surveys. Please try again"
+      )
+    }
   }
 
   const quota = {
@@ -98,6 +99,7 @@ const SurveyStats = ({ uid }) => {
           Submit
         </button>
       ) : null}
+      <p className="error-message">{error}</p>
     </section>
   )
 }
