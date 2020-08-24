@@ -79,3 +79,17 @@ export const updateScores = async (schoolId, userType, myScores) => {
     })
     return "updated"
 }
+
+export const postReportToDb = async (uid, report) => {
+  if (!uid || !report) return "error"
+  try{
+    await firebase.firestore().collection("users").doc(uid).update({
+    report: report
+  })
+  return "updated"
+  } catch (error) {
+    console.error("Error submitting final report to db")
+    return "error"
+  }
+}
+ 

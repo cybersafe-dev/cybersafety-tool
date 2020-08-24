@@ -1,13 +1,15 @@
 import React from "react"
 import { navigate } from "gatsby"
 import "../../styling/app/surveyStats.css"
-import { getUserDocument } from "../../firebase"
+import { getUserDocument, postReportToDb } from "../../firebase"
+import { createReport } from "../../templates/reportTemplate"
 
 import SurveyQuotaBox from "./surveyQuotaBox"
 import greenTick from "../../images/green-tick.svg"
 
-const SurveyStats = ({ uid }) => {
+const SurveyStats = ({ uid, schoolName }) => {
   const [currentScores, setCurrentScores] = React.useState(null)
+  const [error, setError] = React.useState(null)
 
   React.useEffect(() => {
     const getScores = async () => {
@@ -20,15 +22,19 @@ const SurveyStats = ({ uid }) => {
     getScores()
   }, [uid])
 
-  // Good for debugging
-  // React.useEffect(() => {
-  //   console.log({ currentScores })
-  // }, [currentScores])
-
   if (!uid || !currentScores) return <p>Loading...</p>
 
-  const handleFinalSubmit = () => {
-    navigate("/app/confirmation")
+  const handleFinalSubmit = async () => {
+    const report = await createReport(currentScores, schoolName)
+    console.log(report)
+    const dbPostStatus = await postReportToDb(uid, report)
+    if (dbPostStatus === "updated") {
+      navigate("/app/confirmation")
+    } else {
+      setError(
+        "Sorry there was a problem uploading your surveys. Please try again"
+      )
+    }
   }
 
   const quota = {
@@ -89,10 +95,11 @@ const SurveyStats = ({ uid }) => {
       {leadersFilledSurveys >= leadersQuota &&
       teachersFilledSurveys >= teachersQuota &&
       pupilsFilledSurveys >= pupilsQuota ? (
-        <button className="final-submit-button" onClick={handleFinalSubmit}>
+        <button className="final-submit-btn" onClick={handleFinalSubmit}>
           Submit
         </button>
       ) : null}
+      <p className="error-message">{error}</p>
     </section>
   )
 }
