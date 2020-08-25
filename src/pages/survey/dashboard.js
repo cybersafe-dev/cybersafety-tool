@@ -50,7 +50,9 @@ const Dashboard = ({ data }) => {
   sectionKeys.map(key => completedSections.push(key[0]))
 
   const repeatCategoryAlert = () => {
-    setError("You can only complete a category once. Please pick another category.")
+    setError(
+      "You can only complete a category once. Please pick another category."
+    )
   }
 
   // Debugging logs
@@ -60,286 +62,289 @@ const Dashboard = ({ data }) => {
 
   return (
     <Layout>
-            <section className="dashboard-container">
-      <img src={BgImg} alt="background design" className="bg-img3" />
-      <img src={BgImg} alt="background design" className="bg-img4" />
-      <div className="headline">
-        <SurveyDashMessages
-          error={error}
-          completedSections={completedSections}
-          message={message}
-          setMessage={setMessage}
-        />
-      </div>
-        <div className="categories">
-          <SurveyProgress completedSections={completedSections} setError={setError} />
-          <div className="col">
-            {completedSections.includes("digitalknowledge") ? (
-              <button
-                className="done-icon-button"
-                onClick={repeatCategoryAlert}
-              >
-                <img
-                  src={DigitalDone}
-                  alt="Digital Knowledge complete"
-                  className="cat-image"
-                />
-              </button>
-            ) : (
-              <Link
-                to="/survey/category/"
-                state={{
-                  survey: userSpecificData.digitalknowledge,
-                  category: "Digital Knowledge",
-                }}
-              >
-                <img src={Digital} alt="" className="cat-image" />
-              </Link>
-            )}{" "}
-            <br />
-            {completedSections.includes("privacy") ? (
-              <button
-                className="done-icon-button"
-                onClick={repeatCategoryAlert}
-              >
-                <img
-                  src={PrivacyDone}
-                  alt="Privacy complete"
-                  className="cat-image"
-                />
-              </button>
-            ) : (
-              <Link
-                to="/survey/category/"
-                state={{
-                  survey: userSpecificData.privacy,
-                  category: "Privacy",
-                }}
-              >
-                <img src={Privacy} alt="" className="cat-image" />
-              </Link>
-            )}{" "}
-            <br />
-            {completedSections.includes("sharing") ? (
-              <button
-                className="done-icon-button"
-                onClick={repeatCategoryAlert}
-              >
-                <img
-                  src={SharingDone}
-                  alt="Sharing complete"
-                  className="cat-image"
-                />
-              </button>
-            ) : (
-              <Link
-                to="/survey/category/"
-                state={{
-                  survey: userSpecificData.sharing,
-                  category: "Sharing",
-                }}
-              >
-                <img src={Sharing} alt="" className="cat-image" />
-              </Link>
-            )}{" "}
-            <br />
-          </div>
-          <div className="col">
-            {completedSections.includes("communication") ? (
-              <button
-                className="done-icon-button"
-                onClick={repeatCategoryAlert}
-              >
-                <img
-                  src={CommDone}
-                  alt="Communication complete"
-                  className="cat-image"
-                />
-              </button>
-            ) : (
-              <Link
-                to="/survey/category/"
-                state={{
-                  survey: userSpecificData.communication,
-                  category: "Communication",
-                }}
-              >
-                <img src={Commun} alt="" className="cat-image" />
-              </Link>
-            )}{" "}
-            <br />
-            {completedSections.includes("criticalthinking") ? (
-              <button
-                className="done-icon-button"
-                onClick={repeatCategoryAlert}
-              >
-                <img
-                  src={CriticalDone}
-                  alt="Critical Thinking complete"
-                  className="cat-image"
-                />
-              </button>
-            ) : (
-              <Link
-                to="/survey/category/"
-                state={{
-                  survey: userSpecificData.criticalthinking,
-                  category: "Critical Thinking",
-                }}
-              >
-                <img src={Critical} alt="" className="cat-image" />
-              </Link>
-            )}{" "}
-            <br />
-            {completedSections.includes("responsibleuse") ? (
-              <button
-                className="done-icon-button"
-                onClick={repeatCategoryAlert}
-              >
-                <img
-                  src={ResponsDone}
-                  alt="Responsible Use complete"
-                  className="cat-image"
-                />
-              </button>
-            ) : (
-              <Link
-                to="/survey/category/"
-                state={{
-                  survey: userSpecificData.responsibleuse,
-                  category: "Responsible Use",
-                }}
-              >
-                <img src={Respons} alt="" className="cat-image" />
-              </Link>
-            )}{" "}
+      <section className="dashboard-container">
+        <img src={BgImg} alt="background design" className="bg-img3" />
+        <img src={BgImg} alt="background design" className="bg-img4" />
+        <div className="headline">
+          <SurveyDashMessages
+            error={error}
+            completedSections={completedSections}
+            message={message}
+            setMessage={setMessage}
+          />
+        </div>
+        <div className="body-content">
+          <SurveyProgress
+            completedSections={completedSections}
+            setError={setError}
+          />
+          <div className="categories">
+            <div className="col">
+              {completedSections.includes("digitalknowledge") ? (
+                <button
+                  className="done-icon-button"
+                  onClick={repeatCategoryAlert}
+                >
+                  <img
+                    src={DigitalDone}
+                    alt="Digital Knowledge complete"
+                    className="cat-image"
+                  />
+                </button>
+              ) : (
+                <Link
+                  to="/survey/category/"
+                  state={{
+                    survey: userSpecificData.digitalknowledge,
+                    category: "Digital Knowledge",
+                  }}
+                >
+                  <img src={Digital} alt="" className="cat-image" />
+                </Link>
+              )}{" "}
+              {completedSections.includes("privacy") ? (
+                <button
+                  className="done-icon-button"
+                  onClick={repeatCategoryAlert}
+                >
+                  <img
+                    src={PrivacyDone}
+                    alt="Privacy complete"
+                    className="cat-image"
+                  />
+                </button>
+              ) : (
+                <Link
+                  to="/survey/category/"
+                  state={{
+                    survey: userSpecificData.privacy,
+                    category: "Privacy",
+                  }}
+                >
+                  <img src={Privacy} alt="" className="cat-image" />
+                </Link>
+              )}{" "}
+              {completedSections.includes("sharing") ? (
+                <button
+                  className="done-icon-button"
+                  onClick={repeatCategoryAlert}
+                >
+                  <img
+                    src={SharingDone}
+                    alt="Sharing complete"
+                    className="cat-image"
+                  />
+                </button>
+              ) : (
+                <Link
+                  to="/survey/category/"
+                  state={{
+                    survey: userSpecificData.sharing,
+                    category: "Sharing",
+                  }}
+                >
+                  <img src={Sharing} alt="" className="cat-image" />
+                </Link>
+              )}{" "}
+            </div>
+            <div className="col">
+              {completedSections.includes("communication") ? (
+                <button
+                  className="done-icon-button"
+                  onClick={repeatCategoryAlert}
+                >
+                  <img
+                    src={CommDone}
+                    alt="Communication complete"
+                    className="cat-image"
+                  />
+                </button>
+              ) : (
+                <Link
+                  to="/survey/category/"
+                  state={{
+                    survey: userSpecificData.communication,
+                    category: "Communication",
+                  }}
+                >
+                  <img src={Commun} alt="" className="cat-image" />
+                </Link>
+              )}{" "}
+              {completedSections.includes("criticalthinking") ? (
+                <button
+                  className="done-icon-button"
+                  onClick={repeatCategoryAlert}
+                >
+                  <img
+                    src={CriticalDone}
+                    alt="Critical Thinking complete"
+                    className="cat-image"
+                  />
+                </button>
+              ) : (
+                <Link
+                  to="/survey/category/"
+                  state={{
+                    survey: userSpecificData.criticalthinking,
+                    category: "Critical Thinking",
+                  }}
+                >
+                  <img src={Critical} alt="" className="cat-image" />
+                </Link>
+              )}{" "}
+              {completedSections.includes("responsibleuse") ? (
+                <button
+                  className="done-icon-button"
+                  onClick={repeatCategoryAlert}
+                >
+                  <img
+                    src={ResponsDone}
+                    alt="Responsible Use complete"
+                    className="cat-image"
+                  />
+                </button>
+              ) : (
+                <Link
+                  to="/survey/category/"
+                  state={{
+                    survey: userSpecificData.responsibleuse,
+                    category: "Responsible Use",
+                  }}
+                >
+                  <img src={Respons} alt="" className="cat-image" />
+                </Link>
+              )}{" "}
+            </div>
           </div>
         </div>
-        </section>
-        <img src={FileImg} alt="background design" className="file-image" />
+      </section>
+      <img src={FileImg} alt="background design" className="file-image" />
     </Layout>
   )
 }
 export default Dashboard
 
 export const query = graphql`
-{
-  allFile(filter: { sourceInstanceName: { eq: "content" }, name: { eq: "survey" } }) {
-    edges {
-      node {
-        childMarkdownRemark {
-          frontmatter {
-            leaders {
-              digitalknowledge {
-                statement
-                responses {
-                  answer
+  {
+    allFile(
+      filter: { sourceInstanceName: { eq: "content" }, name: { eq: "survey" } }
+    ) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              leaders {
+                digitalknowledge {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                privacy {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                sharing {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                communication {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                criticalthinking {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                responsibleuse {
+                  statement
+                  responses {
+                    answer
+                  }
                 }
               }
-              privacy {
-                statement
-                responses {
-                  answer
+              teachers {
+                digitalknowledge {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                privacy {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                sharing {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                communication {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                criticalthinking {
+                  statement
+                  responses {
+                    answer
+                  }
+                }
+                responsibleuse {
+                  statement
+                  responses {
+                    answer
+                  }
                 }
               }
-              sharing {
-                statement
-                responses {
-                  answer
+              pupils {
+                digitalknowledge {
+                  statement
+                  responses {
+                    answer
+                  }
                 }
-              }
-              communication {
-                statement
-                responses {
-                  answer
+                privacy {
+                  statement
+                  responses {
+                    answer
+                  }
                 }
-              }
-              criticalthinking {
-                statement
-                responses {
-                  answer
+                sharing {
+                  statement
+                  responses {
+                    answer
+                  }
                 }
-              }
-              responsibleuse {
-                statement
-                responses {
-                  answer
+                communication {
+                  statement
+                  responses {
+                    answer
+                  }
                 }
-              }
-            }
-            teachers {
-              digitalknowledge {
-                statement
-                responses {
-                  answer
+                criticalthinking {
+                  statement
+                  responses {
+                    answer
+                  }
                 }
-              }
-              privacy {
-                statement
-                responses {
-                  answer
-                }
-              }
-              sharing {
-                statement
-                responses {
-                  answer
-                }
-              }
-              communication {
-                statement
-                responses {
-                  answer
-                }
-              }
-              criticalthinking {
-                statement
-                responses {
-                  answer
-                }
-              }
-              responsibleuse {
-                statement
-                responses {
-                  answer
-                }
-              }
-            }
-            pupils {
-              digitalknowledge {
-                statement
-                responses {
-                  answer
-                }
-              }
-              privacy {
-                statement
-                responses {
-                  answer
-                }
-              }
-              sharing {
-                statement
-                responses {
-                  answer
-                }
-              }
-              communication {
-                statement
-                responses {
-                  answer
-                }
-              }
-              criticalthinking {
-                statement
-                responses {
-                  answer
-                }
-              }
-              responsibleuse {
-                statement
-                responses {
-                  answer
+                responsibleuse {
+                  statement
+                  responses {
+                    answer
+                  }
                 }
               }
             }
@@ -348,5 +353,4 @@ export const query = graphql`
       }
     }
   }
-}
 `
