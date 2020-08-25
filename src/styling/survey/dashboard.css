@@ -1,12 +1,31 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
 .headline {
   display: flex;
+  flex-direction: column;
   text-align: left;
+  justify-content: flex-start;
+  min-height: 30vh;
+}
+
+.top-line {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  margin: 1rem;
+  padding: 1rem;
+
 }
 
 .explain {
-  margin: 1rem;
+  margin: 0 1rem 1rem 1rem;
   width: 800px;
 }
 
@@ -38,15 +57,15 @@
 }
 
 .categories {
-  display: inline-flex;
-  flex-wrap: wrap;
-  position: absolute;
-  right: 8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
   z-index: 10;
 }
+
 .col {
-  flex: 1;
-  padding: 1rem;
+ margin-right: 2rem;
 }
 
 .survey-progress {

@@ -3,12 +3,10 @@ import { Link, graphql } from "gatsby"
 import { ResponseStore } from "../../providers/responseProvider"
 
 import Layout from "../../components/layout/layout"
-import SEO from "../../components/seo"
 import DataErrorPage from "../../components/dataerror/dataerror"
 import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
-import Timer from "../../components/dashboard/timer"
 
 import BgImg from "../../images/bg-gradient.svg"
 import FileImg from "../../images/file-graphic.svg"
@@ -55,13 +53,14 @@ const Dashboard = ({ data }) => {
     setError("You can only complete a category once. Please pick another category.")
   }
 
+  // Debugging logs
   // console.log(user, userSpecificData)
   // console.log("messages", allDashMessages)
   // console.log({ store })
 
   return (
     <Layout>
-      <SEO title="Your Survey Dashboard" />
+            <section className="dashboard-container">
       <img src={BgImg} alt="background design" className="bg-img3" />
       <img src={BgImg} alt="background design" className="bg-img4" />
       <div className="headline">
@@ -71,9 +70,7 @@ const Dashboard = ({ data }) => {
           message={message}
           setMessage={setMessage}
         />
-        <Timer className="timer-space" />
       </div>
-      <section className="dashboard-container">
         <div className="categories">
           <SurveyProgress completedSections={completedSections} setError={setError} />
           <div className="col">
@@ -218,8 +215,8 @@ const Dashboard = ({ data }) => {
             )}{" "}
           </div>
         </div>
+        </section>
         <img src={FileImg} alt="background design" className="file-image" />
-      </section>
     </Layout>
   )
 }

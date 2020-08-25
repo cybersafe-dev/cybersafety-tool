@@ -1,6 +1,7 @@
 import React from "react"
 import "../../styling/survey/dashboard.css"
 import { graphql, useStaticQuery } from "gatsby"
+import Timer from "../../components/dashboard/timer"
 
 const SurveyDashMessages = ({
   message,
@@ -74,17 +75,20 @@ const SurveyDashMessages = ({
         break
       default:
         setDashTitle(() => dashboardMain.zeroDone)
-        //setMessage(() => dashboardMessages.initial)
+      //setMessage(() => dashboardMessages.initial)
     }
     // eslint-disable-next-line
   }, [completedSections])
 
   return (
-    <section>
-      <h1 className="title">{dashTitle}</h1>
+    <>
+      <div className="top-line">
+        <h1 className="title">{dashTitle}</h1>
+        <Timer className="timer-space" />
+      </div>
       <p className="explain">{message}</p>
       <p className="dash-error">{error}</p>
-    </section>
+    </>
   )
 }
 
