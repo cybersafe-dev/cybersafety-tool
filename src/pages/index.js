@@ -60,7 +60,7 @@ const MiniSite = () => {
           <div id="cybersafeireland">
 <div className="flag-container">
             <h1 className="section-title">CyberSafeIreland</h1>
-            <img src={Flag} className="flag"/>
+            <img src={Flag} className="flag" alt="The Irish Flag" />
     </div>
           <div className="csi-section">
             <div className="site-text">
@@ -80,21 +80,21 @@ const MiniSite = () => {
             <h1 className="section-title">Expression of Interest</h1>
 
 <form className="eoi-section" id="form">
-<label className="label">
+<label className="label" htmlFor="firstName">
 Your first name:
-<input className="input" type="text" name="first-name" />
+<input className="input" type="text" id="firstName" name="first-name" />
 </label>
-<label className="label" id="label">
+<label className="label" htmlFor="lastName" id="label">
 Your last name:
-<input className="input" type="text" name="last-name" />
+<input className="input" type="text" name="last-name" id="lastName" />
 </label>
-<label className="label" id="label">
+<label className="label" id="label" htmlFor="school">
 Your school's name and location:
-<input className="input" type="text" name="school" />
+<input className="input" type="text" name="school" id="school" />
 </label>
-<label className="label" id="label">
+<label className="label" id="label" htmlFor="email">
 Your contact email address:
-<input className="input" type="text" name="email" />
+<input className="input" type="text" name="email" id="email" />
 </label>
 <input type="submit" value="submit" className="submit"/>
 </form>
