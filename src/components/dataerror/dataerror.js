@@ -7,8 +7,8 @@ const DataErrorPage = () => (
   <Layout>
     <SEO title="Data error" />
     <h1>Data Error</h1>
-    <p>We've lost your school's id from your dashboard!</p>
-    <p>Please start again from the link you were sent orginially.</p>
+    <p>Oops...we've lost your school's id from your dashboard!</p>
+    <p>Please start again from the link you were sent.</p>
   </Layout>
 )
 
