@@ -58,7 +58,7 @@ const Dashboard = ({ data }) => {
   // Debugging logs
   // console.log(user, userSpecificData)
   // console.log("messages", allDashMessages)
-  // console.log({ store })
+   console.log({ store })
 
   return (
     <Layout>
