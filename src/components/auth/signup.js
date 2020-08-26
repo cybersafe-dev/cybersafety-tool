@@ -15,8 +15,6 @@ const Signup = () => {
     user,
     schoolName,
     setSchoolName,
-    schoolId,
-    setSchoolId,
     pupilCount,
     setPupilCount,
   ] = React.useContext(userStore)
@@ -51,8 +49,6 @@ const Signup = () => {
       setPassword(value)
     } else if (name === "schoolName") {
       setSchoolName(value)
-    } else if (name === "schoolId") {
-      setSchoolId(value)
     } else if (name === "pupilCount") {
       setPupilCount(value)
     }
@@ -77,19 +73,6 @@ const Signup = () => {
             value={schoolName}
             placeholder="e.g. St. Patrick's, Dublin"
             id="schoolName"
-            onChange={event => onChangeHandler(event)}
-          />
-        </label>
-
-        <label htmlFor="schoolId" className="block">
-          The school Id we provided:
-          <input
-            type="text"
-            className="login-input"
-            name="schoolId"
-            value={schoolId}
-            placeholder="e.g. SP001A"
-            id="schoolId"
             onChange={event => onChangeHandler(event)}
           />
         </label>
