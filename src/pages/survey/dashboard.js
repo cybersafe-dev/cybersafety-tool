@@ -38,7 +38,7 @@ const Dashboard = ({ data }) => {
 
   const [error, setError] = React.useState("")
 
-  if (!store || !store.userType) {
+  if (!store || !store.userType || !store.schoolId) {
     return <DataErrorPage />
   }
 
@@ -58,7 +58,7 @@ const Dashboard = ({ data }) => {
   // Debugging logs
   // console.log(user, userSpecificData)
   // console.log("messages", allDashMessages)
-  // console.log({ store })
+   console.log({ store })
 
   return (
     <Layout>
