@@ -12,10 +12,10 @@ const Timer = () => {
       <div className="timer-container">
         <div className="timer">
           <span>
-            {time.split(":")[0] >= 1 ? (
-              <p style={{ color: "red" }}> {time}</p>
+            {time.split(":")[0] >= 20 ? (
+              <span style={{ color: "red" }}> {time}</span>
             ) : (
-              <p style={{ color: "black" }}>{time}</p>
+              <span style={{ color: "black" }}>{time}</span>
             )}
           </span>
           <img src={Time} alt="" className="time-icon" />
