@@ -25,7 +25,7 @@ Special thanks to [Delesign](https://delesign.com/) for their lovely free graphi
 4. run `gatsby develop`
 
 ### Create a build
-Step 1 and 2 from above
+Steps 1, 2 and 3 from above
 run `gatsby build`
 
 ### Run this app with netlify functions
