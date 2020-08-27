@@ -75,8 +75,8 @@ const Login = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
-      </form>{" "}
-      <button
+        <button
+        type="submit"
         className="login-btn"
         onClick={event => {
           signInWithEmailAndPasswordHandler(event, email, password)
@@ -84,6 +84,8 @@ const Login = () => {
       >
         Log in
       </button>
+      </form>{" "}
+
       <div className="other-options">
         <p className="">
           Don't have an account?{" "}

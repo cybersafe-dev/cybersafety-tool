@@ -115,15 +115,17 @@ const Signup = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
+        <button
+          type="submit"
+          className="login-btn"
+          onClick={event => {
+            createUserWithEmailAndPasswordHandler(event, email, password)
+          }}
+        >
+          Sign up
+        </button>
       </form>
-      <button
-        className="login-btn"
-        onClick={event => {
-          createUserWithEmailAndPasswordHandler(event, email, password)
-        }}
-      >
-        Sign up
-      </button>
+
       <div className="other-options">
         <p className="">
           Already have a school account?{" "}

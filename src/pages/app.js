@@ -8,6 +8,7 @@ import PasswordReset from "../components/auth/passwordReset"
 import Confirmation from "../components/profile/confirmation"
 import PrivateRoute from "../components/auth/privateRoute"
 import Header from "../components/header/header"
+import NotFound from "../pages/404"
 
 const App = () => (
   <Layout>
@@ -18,6 +19,7 @@ const App = () => (
       <Signup path="/app/signup" />
       <PasswordReset path="/app/passwordreset" />
       <Confirmation path="/app/confirmation" />
+      <NotFound default />
     </Router>
   </Layout>
 )
