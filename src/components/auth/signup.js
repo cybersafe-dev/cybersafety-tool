@@ -63,7 +63,7 @@ const Signup = () => {
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
       {error !== null && <div className="">{error}</div>}
-      <form className="">
+      <form className="central-form">
         <label htmlFor="schoolName" className="block">
           Your School's name and county:
           <input
