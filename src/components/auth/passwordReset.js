@@ -66,6 +66,7 @@ const PasswordReset = () => {
         </label>
 
         <button
+          type="submit"
           className="login-btn"
           onClick={event => {
             sendResetEmail(event)
