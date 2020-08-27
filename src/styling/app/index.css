@@ -61,52 +61,6 @@ html {
   padding: 0.7rem;
 }
 
-/* EXPRESSION OF INTEREST SECTION */
-
-#get-started {
-  text-align: center;
-}
-.eoi-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  background-image: url("../../images/eoi-bg.svg");
-  background-repeat: no-repeat;
-  background-size: 55rem;
-  background-position: center;
-}
-
-.label {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem;
-  text-align: left;
-}
-.input {
-  align-items: center;
-  width: 45vw;
-  height: 7vh;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid #53c5cd;
-}
-.submit {
-  display: flex;
-  justify-content: center;
-  background-color: #53c5cd;
-  border-radius: 30px;
-  border: none;
-  font-size: 20px;
-  text-align: center;
-  width: 15vw;
-  margin-top: 1rem;
-  padding: 0.5rem;
-  color: white;
-  text-decoration: none;
-  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
-}
-
 /* CONTACT SECTION */
 
 #contact-us {
@@ -124,14 +78,14 @@ html {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   font-size: 0.7rem;
 }
 .csi-link {
   background-color: #53c5cd;
   border-radius: 30px;
   text-align: center;
-  width: 18vw;
+  width: 15vw;
   padding: 0.6rem;
   color: white;
   text-decoration: none;
@@ -142,4 +96,8 @@ html {
 }
 .social {
   margin-right: 0.5rem;
+}
+.surf {
+  width: 35vw;
+  margin-right: 5rem;
 }
