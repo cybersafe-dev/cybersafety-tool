@@ -37,8 +37,8 @@ const Profile = () => {
         <article className="user-links">
           <h2>Your survey link</h2>
           <div className="copy-share">
-            <Copy />
-            <Share />
+            <Copy uid={uid} />
+            <Share uid={uid} />
           </div>
           <p>
             Please send this link to the appropriate number of school Leaders,

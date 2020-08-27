@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { ResponseStore } from "../providers/responseProvider"
 
 import Layout from "../components/layout/layout"
 import Header from "../components/header/header"
@@ -12,7 +13,17 @@ import BgImg from "../images/bg-gradient.svg"
 
 import "../styling/survey/survey.css"
 const SurveyPage = props => {
+  const uid = props.location.search.split("=")[1]
+  // eslint-disable-next-line
+  const [store, dispatch] = React.useContext(ResponseStore)
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+
+  React.useEffect(() => {
+    dispatch({
+      type: "RECORD_USERID",
+      payload: uid,
+    })
+  }, [uid, dispatch])
 
   return (
     <Layout>
@@ -41,7 +52,7 @@ const SurveyPage = props => {
             <p> {data.body.paragraph3} </p>
           </article>
         </div>
-        <Link to="/survey/enterid/" className="start-btn">
+        <Link to="/survey/roleselection/" className="start-btn">
           Let's get started!
         </Link>
         <div className="pills">

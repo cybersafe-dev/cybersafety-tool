@@ -2,9 +2,9 @@ import React from "react"
 import useClipboard from "react-use-clipboard"
 import "../../styling/app/share.css"
 
-const Copy = () => {
+const Copy = ({ uid }) => {
   const [isCopied, setCopied] = useClipboard(
-    "https://vigilant-austin-33c3c5.netlify.app/survey/",
+    `https://vigilant-austin-33c3c5.netlify.app/survey/?id=${uid}`,
     {
       successDuration: 1000,
     }
@@ -16,7 +16,7 @@ const Copy = () => {
         Copy
       </button>
       <p className="copy-text">
-        https://vigilant-austin-33c3c5.netlify.app/survey/ {isCopied ? "✓" : ""}
+        https://vigilant-austin-33c3c5.netlify.app/survey/?id={uid} {isCopied ? "✓" : ""}
       </p>
     </>
   )

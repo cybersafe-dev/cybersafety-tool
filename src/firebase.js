@@ -59,38 +59,58 @@ export const getUserDocument = async uid => {
 
 export const updateScores = async (schoolId, userType, myScores) => {
   if (!schoolId || !userType || !myScores) return "error"
-  firebase
-    .firestore()
-    .collection("users")
-    .where("schoolId", "==", schoolId)
-    .limit(1)
+  const schoolRef = firebase.firestore().collection("users").doc(schoolId)
+
+  schoolRef
     .get()
-    .then(async querySnapshot => {
-      const thisSchool = querySnapshot.docs[0]
+    .then(async doc => {
+      const thisSchool = doc.data()
       delete myScores.test
-      const scoresObj = thisSchool.data().scores
+      const scoresObj = thisSchool.scores
       scoresObj[userType].push(myScores)
-      await thisSchool.ref
-        .update({ scores: scoresObj })
+      await schoolRef.update({ scores: scoresObj })
     })
     .catch(error => {
-      console.error("Error fetching this school's data", error)
+      console.error("Error updating this school's data", error)
       return "error"
     })
-    return "updated"
+  return "updated"
 }
 
 export const postReportToDb = async (uid, report) => {
   if (!uid || !report) return "error"
-  try{
+  try {
     await firebase.firestore().collection("users").doc(uid).update({
-    report: report,
-    reportSubmitted: firebase.firestore.FieldValue.serverTimestamp()
-  })
-  return "updated"
+      report: report,
+      reportSubmitted: firebase.firestore.FieldValue.serverTimestamp(),
+    })
+    return "updated"
   } catch (error) {
     console.error("Error submitting final report to db")
     return "error"
   }
 }
- 
+
+// KEEP THIS IN CASE WE NEED IT AGAIN LATER!!!
+// export const updateScores = async (schoolId, userType, myScores) => {
+//   if (!schoolId || !userType || !myScores) return "error"
+//   firebase
+//     .firestore()
+//     .collection("users")
+//     .where("schoolId", "==", schoolId)
+//     .limit(1)
+//     .get()
+//     .then(async querySnapshot => {
+//       const thisSchool = querySnapshot.docs[0]
+//       delete myScores.test
+//       const scoresObj = thisSchool.data().scores
+//       scoresObj[userType].push(myScores)
+//       await thisSchool.ref
+//         .update({ scores: scoresObj })
+//     })
+//     .catch(error => {
+//       console.error("Error fetching this school's data", error)
+//       return "error"
+//     })
+//     return "updated"
+// }

@@ -7,7 +7,6 @@ export const userStore = React.createContext([{ user: null }])
 const UserProvider = props => {
   const [user, setUser] = React.useState([])
   const [schoolName, setSchoolName] = React.useState("")
-  const [schoolId, setSchoolId] = React.useState("")
   const [pupilCount, setPupilCount] = React.useState("")
   const firebase = useFirebase()
   const scores = {
@@ -22,14 +21,13 @@ const UserProvider = props => {
     return firebase.auth().onAuthStateChanged(async userAuth => {
       const user = await generateUserDocument(userAuth, {
         schoolName,
-        schoolId,
         pupilCount,
         scores,
       })
       setUser(user)
     })
     // eslint-disable-next-line
-  }, [schoolName, schoolId, pupilCount, firebase])
+  }, [schoolName, pupilCount, firebase])
 
   return (
     <userStore.Provider
@@ -37,8 +35,6 @@ const UserProvider = props => {
         user,
         schoolName,
         setSchoolName,
-        schoolId,
-        setSchoolId,
         pupilCount,
         setPupilCount,
       ]}
