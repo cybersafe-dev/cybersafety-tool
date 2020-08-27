@@ -25,7 +25,7 @@ const MiniSite = () => {
         <section className="site-container">
           <div id="about">
             <h1>Self-Assessment Tool</h1>
-            <div className="about-section">
+            <div className="section">
               <div className="site-text">
                 <p>
                   Welcome to the CybersafeIreland cybersafety self-assessment
@@ -44,14 +44,14 @@ const MiniSite = () => {
                   information.
                 </p>
               </div>
-              <img src={Fig1} alt="" className="fig1" />
+              <img src={Fig1} alt="" className="fig" />
             </div>
           </div>
 
           <div id="cybersafety">
             <h1 className="section-title">Cybersafety</h1>
-            <div className="cybersafety-section">
-              <img src={Fig2} alt="" className="fig2" />
+            <div className="section">
+              <img src={Fig2} alt="" className="fig" />
               <div className="site-text">
                 <p>
                   Schools today are increasingly connected places and are often
@@ -83,7 +83,7 @@ const MiniSite = () => {
               <h1 className="section-title">CyberSafeIreland</h1>
               <img src={Flag} className="flag" alt="The Irish Flag" />
             </div>
-            <div className="csi-section">
+            <div className="section">
               <div className="site-text">
                 <p>
                   CyberSafeIreland is a not-for-profit organisation that works
@@ -104,7 +104,7 @@ const MiniSite = () => {
                   role to play in supporting children to be safe online.
                 </p>
               </div>
-              <img src={Fig3} alt="" className="fig3" />
+              <img src={Fig3} alt="" className="fig" />
             </div>
           </div>
         </section>

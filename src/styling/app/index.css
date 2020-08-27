@@ -9,13 +9,24 @@ html {
 }
 
 .site-container {
-display: flex;
-flex-direction: column;
-margin: 5rem;
-margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  margin: 5rem;
+  margin-top: 8rem;
 }
 .site-text {
-  width: 500px;
+  width: 45vw;
+}
+
+.fig {
+  width: 30vw;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
 /* ABOUT SECTION */
@@ -23,23 +34,11 @@ margin-top: 8rem;
 #about {
   text-align: left;
 }
-.about-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 2rem;
-}
 
 /* CYBERSAFETY SECTION */
 
 #cybersafety {
   text-align: right;
-}
-.cybersafety-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 2rem;
 }
 
 /* CYBERSAFEIRELAND SECTION */
@@ -51,23 +50,23 @@ margin-top: 8rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem;
+  padding-left: 2rem;
 }
 .flag-container {
   display: inline-flex;
   flex-direction: row;
 }
 .flag {
-  padding: 1rem;
-  margin-top: 5rem;
+  align-self: flex-end;
+  padding: 0.7rem;
 }
 
 /* EXPRESSION OF INTEREST SECTION */
 
-#get-started{
+#get-started {
   text-align: center;
 }
-.eoi-section{
+.eoi-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,7 +74,7 @@ margin-top: 8rem;
   background-image: url("../../images/eoi-bg.svg");
   background-repeat: no-repeat;
   background-size: 55rem;
-  background-position: center;;
+  background-position: center;
 }
 
 .label {
@@ -95,7 +94,7 @@ margin-top: 8rem;
 .submit {
   display: flex;
   justify-content: center;
-  background-color: #53C5CD;
+  background-color: #53c5cd;
   border-radius: 30px;
   border: none;
   font-size: 20px;
@@ -112,7 +111,7 @@ margin-top: 8rem;
 
 #contact-us {
   text-align: left;
-  background: #EEEEEE;
+  background: #eeeeee;
   padding-top: 4rem;
   padding-left: 5rem;
 }
@@ -121,17 +120,19 @@ margin-top: 8rem;
   flex-direction: row;
   justify-content: space-between;
 }
-.contact-details{
+.contact-details {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
+  margin-left: 1rem;
+  font-size: 0.7rem;
 }
 .csi-link {
-  background-color: #53C5CD;
+  background-color: #53c5cd;
   border-radius: 30px;
   text-align: center;
   width: 18vw;
-  padding: 1rem;
+  padding: 0.6rem;
   color: white;
   text-decoration: none;
   box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);

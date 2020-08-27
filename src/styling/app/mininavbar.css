@@ -14,7 +14,7 @@
   color: #181818;
 }
 
-.nav-logo{
+.nav-logo {
   margin-left: 4rem;
   top: 0;
 }
@@ -25,12 +25,11 @@
 }
 
 .started-nav {
-  background-color: #53C5CD;
+  background-color: #53c5cd;
   border-radius: 30px;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.8rem;
   margin-left: 1rem;
   color: white;
   text-decoration: none;
-
 }
