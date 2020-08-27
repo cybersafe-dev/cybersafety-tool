@@ -29,7 +29,7 @@ const SurveyQuotaBox = ({ userType, scores, quota }) => {
         <p className="quota-fraction">
           {scores}/{quota}
         </p>
-        <p>{userType}</p>
+        <p className="quota-user">{userType}</p>
       </div>
     </section>
   )

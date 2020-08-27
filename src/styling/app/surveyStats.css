@@ -35,8 +35,8 @@
   justify-content: space-between;
   align-items: flex-end;
   overflow: none;
-  width: 25vw;
-  padding: 0 2rem 0 1rem;
+  min-width: 25vw;
+  padding: 0 2rem 0 2rem;
   margin-right: 1rem;
 }
 
@@ -46,10 +46,20 @@
 
 .quota-box-icon {
   margin: 0;
+  height: 4rem;
+}
+
+.quota-box-tick {
+  margin: 0;
 }
 .quota-fraction {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.quota-user {
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 .error-message {
