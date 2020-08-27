@@ -9,7 +9,7 @@
 
 .columns {
   display: flex;
-  flex-direction: row wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   align-self: center;
@@ -66,4 +66,41 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+}
+
+@media only screen and (max-width: 900px) {
+  .user-info {
+    margin-left: 1rem;
+  }
+  .admin-dash-heading {
+    position: static;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .columns {
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 0;
+  }
+
+  .user-surveys {
+    width: 100vw;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .user-links {
+    width: 100vw;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .logout-btn {
+    align-self: center;
+    margin: 2rem;
+  }
+
 }

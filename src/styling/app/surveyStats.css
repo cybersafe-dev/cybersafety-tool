@@ -15,7 +15,7 @@
 
 .final-submit-btn {
   align-self: left;
-  margin: 1rem 3rem 1rem 3rem;
+  margin: 1rem 3rem 1rem 0rem;
   background: #53c5cd;
   border-radius: 30px;
   border: none;
@@ -64,4 +64,27 @@
 
 .error-message {
   color: red;
+}
+
+@media only screen and (max-width: 900px) {
+  .quota-box {
+    width: 70vw;
+  }
+
+  .leaders-box,
+  .teachers-box,
+  .pupils-box {
+    width: 100%;
+    /* justify-content: center; */
+  }
+
+  .final-submit-btn {
+    align-self: center;
+    margin: 1rem 3rem 1rem 3rem;
+  }
+
+  .survey-stats {
+    width: 100vw;
+    align-items: center;
+  }
 }
