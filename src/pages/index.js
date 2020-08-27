@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/layout"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import "../styling/app/index.css"
 

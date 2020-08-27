@@ -14,24 +14,23 @@ collections:
         file: "content/minisite.md"
         fields:
           - {
-              label: "Self-Assessment Tool content",
-              name: self-assessment-text,
+              label: "Mini Site Content",
+              name: "mini-site-content",
               widget: object,
-              fields: [{ label: "Text", name: intro1, widget: text }],
-            }
-
-          - {
-              label: "Cybersafety content",
-              name: cybersafety-text,
-              widget: object,
-              fields: [{ label: "Text", name: intro2, widget: text }],
-            }
-
-          - {
-              label: "CyberSafeIreland content",
-              name: cybersafeireland-text,
-              widget: object,
-              fields: [{ label: "Text", name: intro3, widget: text }],
+              fields:
+                [
+                  {
+                    label: "Self-Assessment Tool",
+                    name: "self-assessment-tool",
+                    widget: text,
+                  },
+                  { label: "Cybersafety", name: "cybersafety", widget: text },
+                  {
+                    label: "CyberSafeIreland",
+                    name: "cybersafeireland",
+                    widget: text,
+                  },
+                ],
             }
       - label: "Survey Intro Page"
         name: "infopage"
