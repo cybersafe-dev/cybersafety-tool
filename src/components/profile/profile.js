@@ -23,7 +23,7 @@ const Profile = () => {
   return (
     <section className="dashboard-body">
       <div className="user-info">
-        <h1>{schoolName}</h1>
+        <h1 className="admin-dash-heading">{schoolName}</h1>
       </div>
       <div className="columns">
         <article className="user-surveys">

@@ -2,12 +2,12 @@
   background: #29788a !important;
   color: white !important;
   width: 80px;
-  margin-left: 18rem;
   font-weight: 600;
   border: none;
   outline: none;
   cursor: pointer;
   border-radius: 0 0 10px 10px;
+  align-self: flex-end;
 }
 
 .copy-btn {
