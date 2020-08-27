@@ -6,14 +6,10 @@
 
 .login-input {
   width: 500px;
-
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #ffbe55;
-
-  padding-left: 0.5rem;
-
-  height: 6vh;
+  padding: 0.5rem;
   outline: none;
   border: none;
   border-bottom: 2px solid #53c5cd;
@@ -67,7 +63,7 @@ a:hover {
 }
 
 .bg-img-auth {
-  position: absolute;
+  position: fixed;
   left: 20em;
   top: 6em;
   z-index: -1;
@@ -81,5 +77,24 @@ a:hover {
   }
   to {
     transform: rotate(359deg);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .page-container {
+    width: 100vw;
+    margin: 0;
+    padding: 3rem 1rem 3rem 1rem;
+    overflow: hidden;
+  }
+
+  .bg-img-auth {
+    left: 3rem;
+  }
+
+  .instruction,
+  .central-form,
+  .login-input {
+    width: 100%;
   }
 }

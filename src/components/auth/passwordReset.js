@@ -45,7 +45,7 @@ const PasswordReset = () => {
         password reset email
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
-      <form action="">
+      <form action="" className="central-form">
         {emailHasBeenSent && (
           <div className="">An email has been sent to you!</div>
         )}
@@ -61,12 +61,12 @@ const PasswordReset = () => {
             value={email}
             placeholder="Enter your email"
             onChange={onChangeHandler}
-            className=""
+            className="login-input"
           />
         </label>
 
         <button
-          className=""
+          className="login-btn"
           onClick={event => {
             sendResetEmail(event)
           }}
