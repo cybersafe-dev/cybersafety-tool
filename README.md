@@ -23,6 +23,8 @@ Special thanks to [Delesign](https://delesign.com/) for their lovely free graphi
 2. Install Gatsby CLI on your machine: `npm install -g gatsby-cli` (you will need a recent version of node) 
 3. run `npm i`
 4. run `gatsby develop`
+5. go to localhost:8000 in your browser
+6. To directly view the main routes visit localhost:8000/survey for the survey and localhost:8000/app for the school admin area.
 
 ### Create a build
 Steps 1, 2 and 3 from above
@@ -32,6 +34,7 @@ run `gatsby build`
 Netlify functions control the app's integration with Salesforce. 
 install Netlify CLI on your machine: `npm install netlify-cli -g`
 run `netlify dev`
+Go to localhost:8888 in your browser
 
 ## Firebase
 Database and authentication are provided by Google Firebase. You can log in to the control panel with the CybersafeIreland credentials and view the current db, access the firebase config and add or remove authenticated users and authentication methods.
