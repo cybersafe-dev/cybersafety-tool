@@ -58,14 +58,13 @@ const Category = props => {
     <Layout>
       <SEO title="Survey" />
       <>
-        <h1 className="question-title">{category}</h1>
-
         <img src={BgImg} alt="background design" className="bg-img5" />
         <ProgressBar
           done={currentQ}
           sectionLength={sectionLength}
           questionMessageData={questionMessageData}
         />
+        <h1 className="question-title">{category}</h1>
         <section className="question-container">
           <Question
             survey={survey}
@@ -76,9 +75,7 @@ const Category = props => {
             questionMessageData={questionMessageData}
           />
         </section>
-        <div className="catprog-container">
-          <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
-        </div>
+        <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
       </>
     </Layout>
   )

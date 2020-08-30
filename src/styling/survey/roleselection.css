@@ -5,6 +5,11 @@
   padding: 5rem;
 }
 
+.selection-container h1 {
+  width: 100vw;
+  text-align: center;
+}
+
 .bg-img2 {
   position: absolute;
   right: 20em;
@@ -31,7 +36,9 @@
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
 }
+
 .teacher {
   background: #29788a;
   border-radius: 30px;
@@ -44,7 +51,9 @@
   font-weight: 600;
   text-align: center;
   margin: 1.5rem;
+  cursor: pointer;
 }
+
 .pupil {
   background: #e87927;
   border: none;
@@ -56,14 +65,25 @@
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 480px) {
+  .selection-container {
+    width: 100vw;
+    padding: 3rem 1rem 3rem 1rem;
+  }
+  
   .bg-img2 {
     left: 1rem;
     z-index: -1;
     height: 22rem;
   }
+
+  .roles {
+    width: 100vw;
+  }
+  
   .leader {
     padding: 1rem;
   }
