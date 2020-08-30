@@ -127,7 +127,7 @@
 
   .dashboard-container {
     width: 100vw;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .top-line {
@@ -195,7 +195,7 @@
   }
   .file-image {
     height: 6rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .cat-image {
@@ -203,15 +203,20 @@
   }
 
   .fraction {
+    position: fixed;
+    bottom: 0;
+    right: 0;
     width: 100vw;
     padding: 1rem;
   }
 
-  .fraction-text, .categories-completed {
+  .categories-completed {
     align-self: flex-end;
+    margin: 0;
   }
 
   .fraction-text {
+    align-self: flex-end;
     font-size: 1.5rem;
   }
 
