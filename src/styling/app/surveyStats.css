@@ -28,6 +28,11 @@
   cursor: pointer;
 }
 
+.final-submit-btn:active {
+  transform: translate(0, 3px);
+  box-shadow: 0px -6px 0px rgba(0, 0, 0, 0.1);
+}
+
 .quota-box {
   background-color: #f2f2f2;
   border-radius: 40px;

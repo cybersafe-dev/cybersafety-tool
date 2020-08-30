@@ -39,6 +39,11 @@
   cursor: pointer;
 }
 
+.response-option:active {
+  transform: translate(0, 3px);
+  box-shadow: 0px -6px 0px rgba(0, 0, 0, 0.1);
+}
+
 .bg-img5 {
   position: absolute;
   left: 16em;

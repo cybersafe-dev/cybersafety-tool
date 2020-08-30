@@ -68,6 +68,11 @@
   cursor: pointer;
 }
 
+.leader:active, .teacher:active, .pupil:active {
+  transform: translate(0, 3px);
+  box-shadow: 0px -6px 0px rgba(0, 0, 0, 0.1);
+}
+
 @media only screen and (max-width: 480px) {
   .selection-container {
     width: 100vw;

@@ -55,7 +55,7 @@ const Signup = () => {
   }
 
   return (
-    <section className="page-container">
+    <section className="page-container-long-form">
       <h1 className="">Sign Up</h1>
       <p className="instruction">
         Please fill in the form below to create a school admin account for our
