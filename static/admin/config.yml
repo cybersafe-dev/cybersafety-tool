@@ -15,21 +15,13 @@ collections:
         fields:
           - {
               label: "Mini Site Content",
-              name: "mini-site-content",
+              name: "miniSiteContent",
               widget: object,
               fields:
                 [
-                  {
-                    label: "Self-Assessment Tool",
-                    name: "self-assessment-tool",
-                    widget: text,
-                  },
+                  { label: "Self Assessment Tool", name: "selfassessmenttool", widget: text},
                   { label: "Cybersafety", name: "cybersafety", widget: text },
-                  {
-                    label: "CyberSafeIreland",
-                    name: "cybersafeireland",
-                    widget: text,
-                  },
+                  { label: "CyberSafeIreland", name: "cybersafeireland", widget: text },
                 ],
             }
       - label: "Survey Intro Page"
