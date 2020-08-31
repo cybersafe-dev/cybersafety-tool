@@ -90,4 +90,12 @@ mini-site-content:
     This tool provides an opportunity for you to evaluate your school’s level of cybersafety across a series of categories with questionnaires aimed at school Leaders, Teachers and Pupils.
 
     Click ‘Get started’ to fill in an expression of interest and the CybersSfeIreland team will contact you to get your school going with the tool. Contact us directly if you require more information.
+tool: The cybersafeireland self-assessment tool for schools
+cybersafety: Schools today are increasingly connected places and are often where
+  kids’ early relationships with one other and with tech are formed. Technology
+  plays an increasing role in these interactions but it comes with certain risks
+  and uncertainties that can’t always be easily spotted.
+cybersafeireland: "CyberSafeIreland is a not-for-profit organisation,
+  established in 2015, that works to empower children, parents and teachers to
+  navigate the online world in a safe and responsible manner. "
 ---
