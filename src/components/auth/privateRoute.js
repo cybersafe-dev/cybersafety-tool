@@ -15,7 +15,7 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
     return null
   }
 
-  if (user.email === "cybersafe.dev@gmail.com") {
+  if (user.isAdmin) {
     return <Reporting {...rest} />
   } else {
     return <Component {...rest} />
