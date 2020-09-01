@@ -5,6 +5,7 @@
   align-items: flex-start;
   width: 100vw;
   height: auto;
+  padding-bottom: 3rem;
 }
 
 .admin-dash-heading {
@@ -21,7 +22,7 @@
 
 .logout-btn {
   align-self: flex-end;
-  margin: 2rem 0 2rem 2rem;
+  margin: 1rem 1rem 0 1rem;
   outline: none;
   background: white;
   border-radius: 30px;

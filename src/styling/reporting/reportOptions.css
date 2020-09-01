@@ -1,0 +1,13 @@
+.report-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.tick {
+    color: green;
+}
+
+
+.orange {
+  color: orange;
+}

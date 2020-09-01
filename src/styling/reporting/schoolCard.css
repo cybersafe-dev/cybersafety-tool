@@ -5,3 +5,33 @@
     border-radius: 40px;
     padding: 2rem;
 }
+
+.scorecard-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.score-type {
+    display: block;
+}
+
+.scores-line {
+    display: flex;
+    flex-direction: row;
+}
+
+.scores-toggle-btn {
+    color: #2a94f4;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.orange {
+    color: orange;
+}
+
+@media only screen and (max-width: 1024px) {
+
+}

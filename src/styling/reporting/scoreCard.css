@@ -1,0 +1,33 @@
+.score-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 40px;
+  background-color: white;
+  width: 30%;
+  margin: 1%;
+}
+
+.scores-list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.category {
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+}
+
+.datetime {
+  color: orange;
+}
+
+@media only screen and (max-width: 1024px) {
+    .score-card {
+        width: 100%;
+    }
+}

@@ -40,15 +40,15 @@ const Reporting = () => {
   return (
     <section className="dashboard-body">
       <h1 className="admin-dash-heading">{user.schoolName}</h1>
+      <button className="logout-btn" onClick={signOutApp}>
+        Log out
+      </button>
       <h2 className="descriptive-title">Schools Signed Up:</h2>
       {allSchools.map(school =>
         school.schoolName ? (
           <SchoolCard key={school.schoolName} school={school} />
         ) : null
       )}
-      <button className="logout-btn" onClick={signOutApp}>
-        Log out
-      </button>
     </section>
   )
 }
