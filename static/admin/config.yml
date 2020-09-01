@@ -9,20 +9,20 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Mini Site Landing Page"
-        name: "miniSite"
+      - label: "Mini Site"
+        name: "minisite"
         file: "content/minisite.md"
         fields:
-          - {
-              label: "Mini Site Content",
-              name: "miniSiteContent",
-              widget: object,
-              fields:
-                [
-                  { label: "Self Assessment Tool", name: "selfassessmenttool", widget: text},
-                  { label: "Cybersafety", name: "cybersafety", widget: text },
-                  { label: "CyberSafeIreland", name: "cybersafeireland", widget: text },
-                ],
+            - {
+                label: "Minisite content",
+                name: "minisite content",
+                widget: object,
+                fields:
+                  [
+                    { label: "Tool", name: "tool", widget: string },
+                    { label: "Cybersafety", name: "cybersafety", widget: string },
+                    { label: "Cybersafeireland", name: "cybersafeireland", widget: string },
+                  ],
             }
       - label: "Survey Intro Page"
         name: "infopage"
