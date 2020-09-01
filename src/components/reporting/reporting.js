@@ -8,6 +8,9 @@ import "../../styling/reporting/reporting.css"
 const Reporting = () => {
   const [user] = React.useContext(userStore)
   const [allSchools, setAllSchools] = React.useState(null)
+  const [searchTerm, setsearchTerm] = React.useState("")
+  const [firstLoad, setFirstLoad] = React.useState(true)
+  const [filteredSchools, setFilteredSchools] = React.useState("")
   const firebase = useFirebase()
 
   const signOutApp = () => {
@@ -35,20 +38,54 @@ const Reporting = () => {
     getAllSchools()
   }, [firebase])
 
+  React.useEffect(() => {
+    filterSchools()
+  }, [searchTerm])
+
+  const updateSearchTerm = e => {
+    setsearchTerm(e.target.value)
+    setFirstLoad(false)
+  }
+
+  const filterSchools = () => {
+    if (!firstLoad) {
+      setFilteredSchools(
+        allSchools.filter(school => {
+          return school.schoolName
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase())
+        })
+      )
+    }
+  }
+
   if (!user || !firebase || !allSchools) return <h1>Loading...</h1>
 
   return (
     <section className="dashboard-body">
+      <input
+        className="filter-schools"
+        type="text"
+        placeholder="Filter by name"
+        value={searchTerm}
+        onChange={updateSearchTerm}
+      />
       <h1 className="admin-dash-heading">{user.schoolName}</h1>
+      <h2 className="descriptive-title">Schools Signed Up:</h2>
+      {filteredSchools
+        ? filteredSchools.map(school =>
+            school.schoolName ? (
+              <SchoolCard key={school.schoolName} school={school} />
+            ) : null
+          )
+        : allSchools.map(school =>
+            school.schoolName ? (
+              <SchoolCard key={school.schoolName} school={school} />
+            ) : null
+          )}
       <button className="logout-btn" onClick={signOutApp}>
         Log out
       </button>
-      <h2 className="descriptive-title">Schools Signed Up:</h2>
-      {allSchools.map(school =>
-        school.schoolName ? (
-          <SchoolCard key={school.schoolName} school={school} />
-        ) : null
-      )}
     </section>
   )
 }
