@@ -46,6 +46,8 @@ html {
 #csi {
   text-align: left;
 }
+
+
 .csi-section {
   display: flex;
   flex-direction: row;
@@ -100,4 +102,8 @@ html {
 .surf {
   width: 35vw;
   margin-right: 5rem;
+}
+
+@media only screen and (max-width: 480px) {
+
 }

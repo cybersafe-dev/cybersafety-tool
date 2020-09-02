@@ -15,7 +15,6 @@ import Twit from "../images/twit.svg"
 import Link from "../images/link.svg"
 import Insta from "../images/insta.svg"
 import Yout from "../images/yout.svg"
-import Flag from "../images/irish-flag.svg"
 
 const MiniSite = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -46,10 +45,8 @@ const MiniSite = props => {
           </div>
 
           <div id="cybersafeireland">
-            <div className="flag-container">
-              <h1 className="section-title">CyberSafeIreland</h1>
-              <img src={Flag} className="flag" alt="The Irish Flag" />
-            </div>
+            {/*eslint-disable-next-line*/}
+            <h1 className="section-title">CyberSafeIreland🇮🇪</h1>
             <div className="section">
               <div className="site-text">
                 <p> {data.minisitecontent.cybersafeireland} </p>
