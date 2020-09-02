@@ -102,4 +102,8 @@ cybersafeireland-text:
 
 
     We believe that everybody can play a role in keeping children safe online, including children themselves. Education is a key part of the solution and both schools and parents have a vital role to play in supporting children to be safe online.
+minisitecontent:
+  tool: Test
+  cybersafety: Test
+  cybersafeireland: Test
 ---
