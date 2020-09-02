@@ -17,9 +17,7 @@ import Insta from "../images/insta.svg"
 import Yout from "../images/yout.svg"
 import Flag from "../images/irish-flag.svg"
 
-
-
-const MiniSite = props  => {
+const MiniSite = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
     <Layout>
@@ -31,7 +29,7 @@ const MiniSite = props  => {
             <h1>Self-Assessment Tool</h1>
             <div className="section">
               <div className="site-text">
-              <p> {data.minisite_content.tool} </p>
+                <p> {data.minisitecontent.tool} </p>
               </div>
               <img src={Fig1} alt="" className="fig" />
             </div>
@@ -42,7 +40,7 @@ const MiniSite = props  => {
             <div className="section">
               <img src={Fig2} alt="" className="fig" />
               <div className="site-text">
-                <p> {data.minisite_content.cybersafety} </p>
+                <p> {data.minisitecontent.cybersafety} </p>
               </div>
             </div>
           </div>
@@ -54,7 +52,7 @@ const MiniSite = props  => {
             </div>
             <div className="section">
               <div className="site-text">
-              <p> {data.minisite_content.cybersafeireland} </p>
+                <p> {data.minisitecontent.cybersafeireland} </p>
               </div>
               <img src={Fig3} alt="" className="fig" />
             </div>
@@ -131,15 +129,17 @@ export default MiniSite
 
 export const query = graphql`
   {
-    allFile(filter: {
-      sourceInstanceName: { eq: "content" }
-      name: { eq: "minisite" }
-    }) {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "content" }
+        name: { eq: "minisite" }
+      }
+    ) {
       edges {
         node {
           childMarkdownRemark {
             frontmatter {
-              minisite_content {
+              minisitecontent {
                 cybersafeireland
                 cybersafety
                 tool

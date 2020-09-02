@@ -13,16 +13,16 @@ collections:
         name: "minisite"
         file: "content/minisite.md"
         fields:
-            - {
-                label: "Minisite content",
-                name: "minisite content",
-                widget: object,
-                fields:
-                  [
-                    { label: "Tool", name: "tool", widget: string },
-                    { label: "Cybersafety", name: "cybersafety", widget: string },
-                    { label: "Cybersafeireland", name: "cybersafeireland", widget: string },
-                  ],
+          - {
+              label: "Minisite content",
+              name: "minisitecontent",
+              widget: object,
+              fields:
+                [
+                  { label: "Tool", name: "tool", widget: text },
+                  { label: "Cybersafety", name: "cybersafety", widget: text },
+                  { label: "Cybersafeireland", name: "cybersafeireland", widget: text },
+                ],
             }
       - label: "Survey Intro Page"
         name: "infopage"
