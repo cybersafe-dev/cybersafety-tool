@@ -12,7 +12,7 @@ const SchoolCard = ({ school }) => {
         <p>Contact email: {school.email}</p>
         <p>Number of Pupils: {school.pupilCount}</p>
       </div>
-      <ReportOptions report={school.report} />
+      <ReportOptions report={school.report} reportSubmitted={school.reportSubmitted} />
       <div className="scores-line">
         <p>Individual Survey Scores:</p>
         {scores ? (

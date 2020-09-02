@@ -61,6 +61,8 @@ const Reporting = () => {
 
   if (!user || !firebase || !allSchools) return <h1>Loading...</h1>
 
+//console.log(allSchools[5].reportSubmitted.toDate())
+
   return (
     <section className="dashboard-body">
       <input

@@ -25,10 +25,10 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted }) => {
   if (!uid || !currentScores) return <p>Loading...</p>
 
   const handleFinalSubmit = async () => {
-    if (reportSubmitted) {
-      setError("Looks like you already submitted your report...thanks!")
-      return
-    }
+    // if (reportSubmitted) {
+    //   setError("Looks like you already submitted your report...thanks!")
+    //   return
+    // }
     const report = await createReport(currentScores, schoolName)
     console.log(report)
     const dbPostStatus = await postReportToDb(uid, report)

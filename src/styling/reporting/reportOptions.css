@@ -1,12 +1,22 @@
 .report-bar {
   display: flex;
+  flex-direction: column;
+}
+
+.show-hide-bar {
+  display: flex;
   flex-direction: row;
 }
 
-.tick {
-    color: green;
+.report-toggle-btn {
+  color: #2a94f4;
+  margin-left: 0.5rem;
+  cursor: pointer;
 }
 
+.tick {
+  color: green;
+}
 
 .orange {
   color: orange;

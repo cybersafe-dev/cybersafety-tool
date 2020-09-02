@@ -1,0 +1,13 @@
+.report-template {
+    background-color:white;
+    border-radius: 40px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.scores-rundown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
