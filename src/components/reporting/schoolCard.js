@@ -12,7 +12,10 @@ const SchoolCard = ({ school }) => {
         <p>Contact email: {school.email}</p>
         <p>Number of Pupils: {school.pupilCount}</p>
       </div>
-      <ReportOptions report={school.report} reportSubmitted={school.reportSubmitted} />
+      <ReportOptions
+        report={school.report}
+        reportSubmitted={school.reportSubmitted}
+      />
       <div className="scores-line">
         <p>Individual Survey Scores:</p>
         {scores ? (
@@ -26,7 +29,14 @@ const SchoolCard = ({ school }) => {
         )}
       </div>
       <div style={{ display: scores ? "block" : "none" }}>
-        <p className="score-type">School Leaders</p>
+        <p className="score-type">
+          School Leaders{" "}
+          {school.quota ? (
+            <span>
+              ({school.scores.leaders.length}/{school.quota.leadersQuota})
+            </span>
+          ) : null}
+        </p>
         <div className="scorecard-box">
           {school.scores && school.scores.leaders.length > 0 ? (
             school.scores.leaders.map((score, i) => (
@@ -36,7 +46,14 @@ const SchoolCard = ({ school }) => {
             <p className="orange">No surveys submitted yet.</p>
           )}
         </div>
-        <p className="score-type">Teachers</p>
+        <p className="score-type">
+          Teachers{" "}
+          {school.quota ? (
+            <span>
+              ({school.scores.teachers.length}/{school.quota.teachersQuota})
+            </span>
+          ) : null}
+        </p>
         <div className="scorecard-box">
           {school.scores && school.scores.teachers.length > 0 ? (
             school.scores.teachers.map((score, i) => (
@@ -46,7 +63,14 @@ const SchoolCard = ({ school }) => {
             <p className="orange">No surveys submitted yet.</p>
           )}
         </div>
-        <p className="score-type">Pupils</p>
+        <p className="score-type">
+          Pupils{" "}
+          {school.quota ? (
+            <span>
+              ({school.scores.pupils.length}/{school.quota.pupilsQuota})
+            </span>
+          ) : null}
+        </p>
         <div className="scorecard-box">
           {school.scores && school.scores.pupils.length > 0 ? (
             school.scores.pupils.map((score, i) => (

@@ -46,7 +46,7 @@ const InlineReportTemplate = ({ report, reportSubmitted }) => {
         </div>
       </div>
       {reportSubmitted ? <p>Report submitted: {reportTimestamp}</p> : null}
-      <p>Recommended mark based on average: {report.prospectiveMark}</p>
+      <p>Recommended mark based on overall average: {report.prospectiveMark}</p>
     </section>
   )
 }

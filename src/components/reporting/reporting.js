@@ -60,9 +60,6 @@ const Reporting = () => {
   }
 
   if (!user || !firebase || !allSchools) return <h1>Loading...</h1>
-
-//console.log(allSchools[5].reportSubmitted.toDate())
-
   return (
     <section className="dashboard-body">
       <input
@@ -73,7 +70,7 @@ const Reporting = () => {
         onChange={updateSearchTerm}
       />
       <h1 className="admin-dash-heading">{user.schoolName}</h1>
-      <h2 className="descriptive-title">Schools Signed Up:</h2>
+      <h2 className="descriptive-title">Schools Signed Up: {allSchools.length}</h2>
       {filteredSchools
         ? filteredSchools.map(school =>
             school.schoolName ? (

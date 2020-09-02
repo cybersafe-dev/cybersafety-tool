@@ -7,7 +7,7 @@ import { createReport } from "../../templates/reportTemplate"
 import SurveyQuotaBox from "./surveyQuotaBox"
 import greenTick from "../../images/green-tick.svg"
 
-const SurveyStats = ({ uid, schoolName, reportSubmitted }) => {
+const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
   const [currentScores, setCurrentScores] = React.useState(null)
   const [error, setError] = React.useState(null)
 
@@ -30,7 +30,6 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted }) => {
     //   return
     // }
     const report = await createReport(currentScores, schoolName)
-    console.log(report)
     const dbPostStatus = await postReportToDb(uid, report)
     if (dbPostStatus === "updated") {
       navigate("/app/confirmation")
@@ -41,11 +40,11 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted }) => {
     }
   }
 
-  const quota = {
-    leadersQuota: 5,
-    teachersQuota: 5,
-    pupilsQuota: 5,
-  }
+  // const quota = {
+  //   leadersQuota: 5,
+  //   teachersQuota: 5,
+  //   pupilsQuota: 5,
+  // }
 
   const leadersFilledSurveys = currentScores.leaders.length
   const teachersFilledSurveys = currentScores.teachers.length
