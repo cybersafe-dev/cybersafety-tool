@@ -11,22 +11,26 @@ html {
 .site-container {
   display: flex;
   flex-direction: column;
-  margin: 5rem;
-  margin-top: 8rem;
+  margin: 5rem 5rem 0 5rem;;
+
 }
 .site-text {
   width: 45vw;
+
 }
 
 .fig {
-  width: 30vw;
+  width: 27vw;
+
 }
 
 .section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 0 2rem 2rem 0;
+  height: 100vh;
+
 }
 
 /* ABOUT SECTION */
@@ -47,21 +51,6 @@ html {
   text-align: left;
 }
 
-
-.csi-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 2rem;
-}
-.flag-container {
-  display: inline-flex;
-  flex-direction: row;
-}
-.flag {
-  align-self: flex-end;
-  padding: 0.7rem;
-}
 
 /* CONTACT SECTION */
 
@@ -105,5 +94,7 @@ html {
 }
 
 @media only screen and (max-width: 480px) {
-
+  .section-title {
+    margin-top: 15rem;
+  }
 }

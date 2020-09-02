@@ -20,12 +20,11 @@ const MiniSite = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
     <Layout>
-      <section id="index-container">
-        <MiniNavbar />
-        <SEO title="Home - CyberSafeIreland" />
+    <MiniNavbar />
+    <SEO title="Home - CyberSafeIreland" />
         <section className="site-container">
           <div id="about">
-            <h1>Self-Assessment Tool</h1>
+            <h1>Self-Assessment Tool for Schools</h1>
             <div className="section">
               <div className="site-text">
                 <p> {data.minisitecontent.tool} </p>
@@ -118,7 +117,7 @@ const MiniSite = props => {
             </div>
           </div>
         </div>
-      </section>
+
     </Layout>
   )
 }
