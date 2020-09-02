@@ -40,12 +40,6 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
     }
   }
 
-  // const quota = {
-  //   leadersQuota: 5,
-  //   teachersQuota: 5,
-  //   pupilsQuota: 5,
-  // }
-
   const leadersFilledSurveys = currentScores.leaders.length
   const teachersFilledSurveys = currentScores.teachers.length
   const pupilsFilledSurveys = currentScores.pupils.length
