@@ -2,20 +2,27 @@ html {
   overflow: scroll !important;
 }
 
-/* WHOLE PAGE */
-
-.section-title {
-  margin-top: 5.5rem;
+/* TOP 3 SECTIONS */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 5rem 0 5rem;;
 }
-
-.site-container {
-display: flex;
-flex-direction: column;
-margin: 5rem;
-margin-top: 8rem;
+.section-title {
+  margin-top: 6rem;
 }
 .site-text {
-  width: 500px;
+  width: 45vw;
+}
+.fig {
+  width: 27vw;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem 2rem 0;
+  height: 100vh;
 }
 
 /* ABOUT SECTION */
@@ -23,23 +30,11 @@ margin-top: 8rem;
 #about {
   text-align: left;
 }
-.about-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 2rem;
-}
 
 /* CYBERSAFETY SECTION */
 
 #cybersafety {
   text-align: right;
-}
-.cybersafety-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 2rem;
 }
 
 /* CYBERSAFEIRELAND SECTION */
@@ -47,72 +42,12 @@ margin-top: 8rem;
 #csi {
   text-align: left;
 }
-.csi-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem;
-}
-.flag-container {
-  display: inline-flex;
-  flex-direction: row;
-}
-.flag {
-  padding: 1rem;
-  margin-top: 5rem;
-}
-
-/* EXPRESSION OF INTEREST SECTION */
-
-#get-started{
-  text-align: center;
-}
-.eoi-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  background-image: url("../../images/eoi-bg.svg");
-  background-repeat: no-repeat;
-  background-size: 55rem;
-  background-position: center;;
-}
-
-.label {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem;
-  text-align: left;
-}
-.input {
-  align-items: center;
-  width: 45vw;
-  height: 7vh;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid #53c5cd;
-}
-.submit {
-  display: flex;
-  justify-content: center;
-  background-color: #53C5CD;
-  border-radius: 30px;
-  border: none;
-  font-size: 20px;
-  text-align: center;
-  width: 15vw;
-  margin-top: 1rem;
-  padding: 0.5rem;
-  color: white;
-  text-decoration: none;
-  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
-}
 
 /* CONTACT SECTION */
 
 #contact-us {
   text-align: left;
-  background: #EEEEEE;
+  background: #eeeeee;
   padding-top: 4rem;
   padding-left: 5rem;
 }
@@ -121,17 +56,19 @@ margin-top: 8rem;
   flex-direction: row;
   justify-content: space-between;
 }
-.contact-details{
+.contact-details {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
+  margin-left: 2rem;
+  font-size: 0.7rem;
 }
 .csi-link {
-  background-color: #53C5CD;
+  background-color: #53c5cd;
   border-radius: 30px;
   text-align: center;
-  width: 18vw;
-  padding: 1rem;
+  width: 15vw;
+  padding: 0.6rem;
   color: white;
   text-decoration: none;
   box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
@@ -141,4 +78,68 @@ margin-top: 8rem;
 }
 .social {
   margin-right: 0.5rem;
+}
+.surf {
+  width: 35vw;
+  margin-right: 5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  /* TOP 3 SECTIONS */
+  .section-container {
+    width: 100%;
+    margin-left: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    }
+  .section-title {
+    margin-top: 10rem;
+    }
+    .site-text {
+      margin: 0 0.5rem 0 0.5rem;
+    }
+  .section {
+    height: 100vh;
+    text-align: center;
+    padding: 0;
+    /* display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    align-items: center; */
+    }
+  .fig {
+    align-self: flex-start;
+    width: 50vw;
+    margin: 1rem;
+    }
+
+/* CONTACT SECTION */
+  #contact-us {
+    text-align: left;
+    background: #eeeeee;
+    padding-top: 2rem;
+    padding-left: 0
+  }
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+  .csi-link {
+    width: 50vw;
+  }
+  .socials {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .social {
+    margin-right: 0.5rem;
+    width: 8vw;
+  }
+  .surf {
+    width: 35vw;
+    margin-top: 4rem;
+    margin-right: 0;
+  }
 }
