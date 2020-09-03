@@ -501,7 +501,7 @@ pupils:
         - answer: Not sure
         - answer: Probably not
         - answer: Definitely not
-    - statement: I regularly use digital technologies (tablets, phones, computers,
+    - statement: I use digital technologies regularly (tablets, phones, computers,
         robots) in my learning in school.
       responses:
         - answer: All the time
@@ -603,7 +603,7 @@ pupils:
         - answer: Yes
         - answer: Not sure
         - answer: No
-    - statement: In school we learn how to write a formal e-mail.
+    - statement: In school we learn how to write an e-mail.
       responses:
         - answer: Yes
         - answer: Not sure
