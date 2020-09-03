@@ -165,6 +165,14 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly Disagree
+    - statement: "My school has a culture of positively using online platforms and
+        tools to communicate with each other. "
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly Disagree
   criticalthinking:
     - statement: I generally believe what I read/see online.
       responses:
