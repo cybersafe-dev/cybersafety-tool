@@ -12,10 +12,11 @@ html {
   margin-top: 6rem;
 }
 .site-text {
-  width: 45vw;
+  width: 60vw;
+  line-height: 1.8rem;
 }
 .fig {
-  width: 27vw;
+  width: 45vw;
 }
 .section {
   display: flex;
