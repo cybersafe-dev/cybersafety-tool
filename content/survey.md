@@ -597,8 +597,8 @@ pupils:
         - answer: Sometimes
         - answer: Not as much as I should
         - answer: No
-    - statement: I can use appropriate technology to communicate respectfully and
-        safely with my teacher.
+    - statement: I can use technology to communicate respectfully and safely with my
+        teacher.
       responses:
         - answer: Yes
         - answer: Not sure
