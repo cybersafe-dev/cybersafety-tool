@@ -97,6 +97,7 @@
   font-weight: 600;
   text-align: center;
   border: none;
+  cursor: pointer;
 }
 
 .submit-btn:active {

@@ -1,6 +1,8 @@
 import React from "react"
 import "../../styling/reporting/reportOptions.css"
 import InlineReportTemplate from "./inlineReportTemplate"
+import { PDFDownloadLink } from "@react-pdf/renderer"
+import PdfReportTemplate from "../../templates/pdfReportTemplate"
 
 const ReportOptions = ({ report, reportSubmitted }) => {
   const [visibleReport, toggleReport] = React.useState(false)
@@ -28,9 +30,17 @@ const ReportOptions = ({ report, reportSubmitted }) => {
                 show report
               </p>
             )}
+            <PDFDownloadLink document={<PdfReportTemplate />} fileName={`${report.reportFor}.pdf`}>
+              {({ blob, url, loading, error }) =>
+                loading ? "Loading document..." : "Download PDF"
+              }
+            </PDFDownloadLink>
           </div>
           <div style={{ display: visibleReport ? "block" : "none" }}>
-            <InlineReportTemplate report={report} reportSubmitted={reportSubmitted} />
+            <InlineReportTemplate
+              report={report}
+              reportSubmitted={reportSubmitted}
+            />
           </div>
         </>
       ) : (
