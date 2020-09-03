@@ -165,22 +165,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly Disagree
-    - statement: "My school has a culture of positively using online platforms and
-        tools to communicate with each other. "
-      responses:
-        - answer: Strongly agree
-        - answer: Agree
-        - answer: Neutral
-        - answer: Disagree
-        - answer: Strongly Disagree
   criticalthinking:
-    - statement: I generally believe what I read/see online.
-      responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
     - statement: I always check information I find online by searching for similar
         sources.
       responses:
@@ -197,13 +182,6 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: I usually click on the first two or three results in a Google search.
-      responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
   responsibleuse:
     - statement: Pupils are taught to always reference sources and images they use in
         research and presentation.
@@ -408,6 +386,14 @@ teachers:
         - answer: Strongly disagree
     - statement: I use technology to communicate respectfully and safely with my
         colleagues.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: "My school has a culture of positively using online platforms and
+        tools to communicate with each other. "
       responses:
         - answer: Strongly agree
         - answer: Agree
