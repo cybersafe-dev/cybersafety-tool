@@ -40,6 +40,7 @@ const Reporting = () => {
 
   React.useEffect(() => {
     filterSchools()
+    //eslint-disable-next-line
   }, [searchTerm])
 
   const updateSearchTerm = e => {
