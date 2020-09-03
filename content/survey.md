@@ -2,7 +2,7 @@
 title: Edit the Survey
 leaders:
   digitalknowledge:
-    - statement: My staff has online safety and responsibility training at least once
+    - statement: My staff have online safety and responsibility training at least once
         a year.
       responses:
         - answer: Strongly agree
