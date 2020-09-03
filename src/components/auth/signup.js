@@ -55,7 +55,7 @@ const Signup = () => {
   }
 
   return (
-    <section className="page-container">
+    <section className="page-container-long-form">
       <h1 className="">Sign Up</h1>
       <p className="instruction">
         Please fill in the form below to create a school admin account for our
@@ -63,7 +63,7 @@ const Signup = () => {
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
       {error !== null && <div className="">{error}</div>}
-      <form className="">
+      <form className="central-form">
         <label htmlFor="schoolName" className="block">
           Your School's name and county:
           <input
@@ -115,15 +115,17 @@ const Signup = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
+        <button
+          type="submit"
+          className="login-btn"
+          onClick={event => {
+            createUserWithEmailAndPasswordHandler(event, email, password)
+          }}
+        >
+          Sign up
+        </button>
       </form>
-      <button
-        className="login-btn"
-        onClick={event => {
-          createUserWithEmailAndPasswordHandler(event, email, password)
-        }}
-      >
-        Sign up
-      </button>
+
       <div className="other-options">
         <p className="">
           Already have a school account?{" "}

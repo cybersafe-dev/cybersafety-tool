@@ -64,7 +64,7 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted }) => {
           <img
             src={greenTick}
             alt="Leaders surveys complete"
-            className="quota-box-icon"
+            className="quota-box-tick"
           />
         ) : null}
       </section>
@@ -78,7 +78,7 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted }) => {
           <img
             src={greenTick}
             alt="Teachers surveys complete"
-            className="quota-box-icon"
+            className="quota-box-tick"
           />
         ) : null}
       </section>
@@ -92,7 +92,7 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted }) => {
           <img
             src={greenTick}
             alt="Pupils surveys complete"
-            className="quota-box-icon"
+            className="quota-box-tick"
           />
         ) : null}
       </section>

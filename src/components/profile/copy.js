@@ -15,9 +15,14 @@ const Copy = ({ uid }) => {
       <button className="copy-btn" onClick={setCopied}>
         Copy
       </button>
-      <p className="copy-text">
-        https://vigilant-austin-33c3c5.netlify.app/survey/?id={uid} {isCopied ? "✓" : ""}
-      </p>
+      {!uid ? (
+        <p className="copy-text">Loading...</p>
+      ) : (
+        <p className="copy-text">
+          https://vigilant-austin-33c3c5.netlify.app/survey/?id={uid}{" "}
+          {isCopied ? "✓" : ""}
+        </p>
+      )}
     </>
   )
 }

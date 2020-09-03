@@ -9,15 +9,15 @@
 
 .columns {
   display: flex;
-  flex-direction: row wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   align-self: center;
-  padding: 3rem;
+  padding: 1rem 3rem 3rem 3rem;
 }
 
 .user-info {
-  margin: 2rem 0 0 4rem;
+  margin: 1rem 0 0 4rem;
 }
 
 .user-surveys {
@@ -30,7 +30,7 @@
 }
 
 .user-links {
-  width: 30vw;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -39,17 +39,74 @@
 }
 
 .logout-btn {
-  align-self: center;
-  margin: 2rem;
+  align-self: flex-end;
+  margin: 2rem 0 2rem 2rem;
   outline: none;
-  background: #53c5cd;
+  background: white;
   border-radius: 30px;
-  border: none;
+  border: 2px solid #53c5cd;
   box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
-  color: white;
+  color: #53c5cd;
   padding: 0.5rem;
   width: 250px;
-
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
+}
+
+.logout-btn:active {
+  transform: translate(0, 3px);
+  box-shadow: 0px -6px 0px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dash-heading {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  text-align: right;
+  max-width: 70vw;
+}
+
+.copy-share {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 900px) {
+  .user-info {
+    margin-left: 1rem;
+  }
+  .admin-dash-heading {
+    position: static;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .columns {
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 0;
+  }
+
+  .user-surveys {
+    width: 100vw;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .user-links {
+    width: 100vw;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .logout-btn {
+    align-self: center;
+    margin: 2rem;
+  }
+
 }

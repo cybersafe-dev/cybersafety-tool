@@ -25,6 +25,6 @@
 
 @media only screen and (max-width: 480px) {
   .progress-container {
-    margin: 0.5rem;
+    margin: 0.5rem 0.5rem 2rem 0.5rem;
   }
 }

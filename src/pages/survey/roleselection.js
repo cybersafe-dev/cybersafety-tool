@@ -57,7 +57,6 @@ const RoleSelection = () => {
         </p>
         <div className="pills">
           <div className="unfilled-pill"></div>
-          <div className="unfilled-pill"></div>
           <div className="filled-pill"></div>
         </div>
       </section>

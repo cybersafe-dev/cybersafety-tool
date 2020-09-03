@@ -58,7 +58,6 @@ const SurveyPage = props => {
         <div className="pills">
           <div className="filled-pill"></div>
           <div className="unfilled-pill"></div>
-          <div className="unfilled-pill"></div>
         </div>
       </section>
     </Layout>

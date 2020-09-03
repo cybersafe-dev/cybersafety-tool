@@ -6,14 +6,10 @@
 
 .login-input {
   width: 500px;
-
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #ffbe55;
-
-  padding-left: 0.5rem;
-
-  height: 6vh;
+  padding: 0.5rem;
   outline: none;
   border: none;
   border-bottom: 2px solid #53c5cd;
@@ -32,6 +28,12 @@
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
+}
+
+.login-btn:active {
+  transform: translate(0, 3px);
+  box-shadow: 0px -6px 0px rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -58,6 +60,16 @@ a:hover {
   padding-top: 3rem;
 }
 
+.page-container-long-form {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
 .instruction {
   width: 380px;
 }
@@ -67,7 +79,7 @@ a:hover {
 }
 
 .bg-img-auth {
-  position: absolute;
+  position: fixed;
   left: 20em;
   top: 6em;
   z-index: -1;
@@ -81,5 +93,35 @@ a:hover {
   }
   to {
     transform: rotate(359deg);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .page-container {
+    width: 100vw;
+    margin: 0;
+    padding: 3rem 1rem 3rem 1rem;
+    overflow: hidden;
+  }
+
+  .page-container-long-form {
+    width: 100vw;
+    margin: 0;
+    padding: 3rem 1rem 3rem 1rem;
+    overflow:visible;
+  }
+
+  .bg-img-auth {
+    left: 3rem;
+  }
+
+  .instruction,
+  .central-form,
+  .login-input {
+    width: 100%;
+  }
+
+  .other-options {
+    margin-bottom: 3rem;
   }
 }

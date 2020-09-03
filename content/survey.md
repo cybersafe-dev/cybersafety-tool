@@ -2,7 +2,7 @@
 title: Edit the Survey
 leaders:
   digitalknowledge:
-    - statement: My staff has online safety and responsibility training at least once
+    - statement: My staff have online safety and responsibility training at least once
         a year.
       responses:
         - answer: Strongly agree
@@ -18,8 +18,8 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: Staff talk regularly throughout the year about online safety and
-        responsibility.
+    - statement: Staff talk regularly to pupils throughout the year about online
+        safety and responsibility.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -157,14 +157,15 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-  criticalthinking:
-    - statement: I generally believe what I read/see online.
+    - statement: "My school has a culture of positively using online platforms and
+        tools to communicate with each other. "
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
         - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly Disagree
+  criticalthinking:
     - statement: I always check information I find online by searching for similar
         sources.
       responses:
@@ -181,16 +182,17 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: I usually click on the first two or three results in a Google search.
-      responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
   responsibleuse:
     - statement: Pupils are taught to always reference sources and images they use in
-        research and presentation.
+        research and presentations.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: Staff are encouraged to always reference sources and images they use
+        in presentations and materials.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -274,6 +276,14 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
+    - statement: I talk regularly to my pupils throughout the year about online safety
+        and responsibility.
+      responses:
+        - answer: Strongly Agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly Disagree
     - statement: My pupils feel they can come and talk to me about anything that
         happens to them online.
       responses:
@@ -390,14 +400,15 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-  criticalthinking:
-    - statement: I generally believe what I read/see online.
+    - statement: "My school has a culture of positively using online platforms and
+        tools to communicate with each other. "
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
         - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+  criticalthinking:
     - statement: I always check information I find online by searching for similar
         sources.
       responses:
@@ -414,13 +425,6 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: I usually click on the first two or three results in a Google search.
-      responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
   responsibleuse:
     - statement: I teach my pupils to reference sources and images they use in
         research and presentation.
@@ -491,7 +495,7 @@ pupils:
         - answer: Not sure
         - answer: Probably not
         - answer: Definitely not
-    - statement: I regularly use digital technologies (tablets, phones, computers,
+    - statement: I use digital technologies regularly (tablets, phones, computers,
         robots) in my learning in school.
       responses:
         - answer: All the time
@@ -587,25 +591,18 @@ pupils:
         - answer: Sometimes
         - answer: Not as much as I should
         - answer: No
-    - statement: I can use appropriate technology to communicate respectfully and
-        safely with my teacher.
+    - statement: I can use technology to communicate respectfully and safely with my
+        teacher.
       responses:
         - answer: Yes
         - answer: Not sure
         - answer: No
-    - statement: In school we learn how to write a formal e-mail.
+    - statement: In school we learn how to write an e-mail.
       responses:
         - answer: Yes
         - answer: Not sure
         - answer: No
   criticalthinking:
-    - statement: I believe what I see or read online.
-      responses:
-        - answer: No
-        - answer: Not usually
-        - answer: Sometimes
-        - answer: Usually
-        - answer: Yes
     - statement: I always check information I find online by searching for the same
         information in other places.
       responses:
@@ -619,13 +616,6 @@ pupils:
         - answer: Yes
         - answer: Not sure
         - answer: No
-    - statement: I usually click on the top two or three results in a Google search.
-      responses:
-        - answer: No
-        - answer: Not usually
-        - answer: Sometimes
-        - answer: Usually
-        - answer: Yes
   responsibleuse:
     - statement: In school we have to list all the websites and images we use in our
         research and presentations.
