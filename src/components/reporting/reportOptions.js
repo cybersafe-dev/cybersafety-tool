@@ -30,7 +30,11 @@ const ReportOptions = ({ report, reportSubmitted }) => {
                 show report
               </p>
             )}
-            <PDFDownloadLink document={<PdfReportTemplate />} fileName={`${report.reportFor}.pdf`}>
+            <PDFDownloadLink
+              className="pdf-dl-btn"
+              document={<PdfReportTemplate />}
+              fileName={`Report for ${report.reportFor}.pdf`}
+            >
               {({ blob, url, loading, error }) =>
                 loading ? "Loading document..." : "Download PDF"
               }

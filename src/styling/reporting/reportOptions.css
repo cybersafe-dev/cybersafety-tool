@@ -6,6 +6,8 @@
 .show-hide-bar {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .report-toggle-btn {
@@ -14,10 +16,33 @@
   cursor: pointer;
 }
 
+.report-toggle-btn:hover {
+  text-decoration: underline;
+}
+
 .tick {
   color: green;
 }
 
 .orange {
   color: orange;
+}
+
+.pdf-dl-btn {
+  padding: 0.25rem 0.5rem;
+  background-color: #f2f2f2;
+  color: red;
+  border: 2px solid red;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 0 0 0 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pdf-dl-btn:hover {
+  background-color: red;
+  color: white;
+  border: 2px solid red;
+  text-decoration: none;
 }

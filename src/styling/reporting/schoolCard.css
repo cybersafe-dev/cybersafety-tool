@@ -28,6 +28,10 @@
     cursor: pointer;
 }
 
+.scores-toggle-btn:hover {
+    text-decoration:underline;
+}
+
 .orange {
     color: orange;
 }

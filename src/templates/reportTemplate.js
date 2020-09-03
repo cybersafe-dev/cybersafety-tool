@@ -131,7 +131,7 @@ export const createReport = (allScores, schoolName) => {
   // `
 
   const reportTemplate = {
-    reportFor: `Final Report for ${schoolName}`,
+    reportFor: schoolName,
     prospectiveMark: prospectiveMark(), 
     leaders: {
       digitalknowledge: applyStatus(getMean(leaders.digitalknowledge)),

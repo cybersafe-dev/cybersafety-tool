@@ -9,7 +9,7 @@ const InlineReportTemplate = ({ report, reportSubmitted }) => {
     new Date(dateInMillis).toLocaleTimeString()
   return (
     <section className="report-template">
-      <h2>{report.reportFor}</h2>
+      <h2>Final Report for {report.reportFor}</h2>
       <div className="scores-rundown">
         <div className="leaders">
           <p>School Leaders</p>
