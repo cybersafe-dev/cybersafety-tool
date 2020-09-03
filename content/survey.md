@@ -18,8 +18,8 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: Staff talk regularly throughout the year about online safety and
-        responsibility.
+    - statement: Staff talk regularly to pupils throughout the year about online
+        safety and responsibility.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -282,6 +282,14 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
+    - statement: I talk regularly to my pupils throughout the year about online safety
+        and responsibility.
+      responses:
+        - answer: Strongly Agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly Disagree
     - statement: My pupils feel they can come and talk to me about anything that
         happens to them online.
       responses:
@@ -422,13 +430,13 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: I usually click on the first two or three results in a Google search.
+    - statement: I usually cross check information I find online in several places.
       responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
         - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
   responsibleuse:
     - statement: I teach my pupils to reference sources and images they use in
         research and presentation.
