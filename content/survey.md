@@ -184,7 +184,15 @@ leaders:
         - answer: Strongly disagree
   responsibleuse:
     - statement: Pupils are taught to always reference sources and images they use in
-        research and presentation.
+        research and presentations.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: Staff are encouraged to always reference sources and images they use
+        in presentations and materials.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -401,13 +409,6 @@ teachers:
         - answer: Disagree
         - answer: Strongly disagree
   criticalthinking:
-    - statement: I generally believe what I read/see online.
-      responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly agree
     - statement: I always check information I find online by searching for similar
         sources.
       responses:
@@ -418,13 +419,6 @@ teachers:
         - answer: Strongly disagree
     - statement: I teach my pupils how to check information they find online by
         searching for similar sources.
-      responses:
-        - answer: Strongly agree
-        - answer: Agree
-        - answer: Neutral
-        - answer: Disagree
-        - answer: Strongly disagree
-    - statement: I usually cross check information I find online in several places.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -609,13 +603,6 @@ pupils:
         - answer: Not sure
         - answer: No
   criticalthinking:
-    - statement: I believe what I see or read online.
-      responses:
-        - answer: No
-        - answer: Not usually
-        - answer: Sometimes
-        - answer: Usually
-        - answer: Yes
     - statement: I always check information I find online by searching for the same
         information in other places.
       responses:
@@ -629,13 +616,6 @@ pupils:
         - answer: Yes
         - answer: Not sure
         - answer: No
-    - statement: I usually click on the top two or three results in a Google search.
-      responses:
-        - answer: No
-        - answer: Not usually
-        - answer: Sometimes
-        - answer: Usually
-        - answer: Yes
   responsibleuse:
     - statement: In school we have to list all the websites and images we use in our
         research and presentations.
