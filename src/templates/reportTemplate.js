@@ -1,27 +1,29 @@
+// Replace numbered score with appropriate text string
 export const applyStatus = number => {
   let status
   switch (number) {
     case 1:
-      status = "Gold"
+      status = "CyberChampion"
       break
     case 2:
-      status = "Silver"
+      status = "CyberStrong"
       break
     case 3:
-      status = "Bronze"
+      status = "CyberSmart"
       break
     case 4:
-      status = "Completed"
+      status = "CyberStarter"
       break
     case 5:
-      status = "Completed"
+      status = "CyberStarter"
       break
     default:
-      status = "completed"
+      status = "CyberStarter"
   }
   return status
 }
 
+// Combine all individual score objects into a single object for each user type.
 export const createReport = (allScores, schoolName) => {
   const userTypeArray = ["leaders", "teachers", "pupils"]
   const combinedScoresInArray = {
@@ -72,6 +74,7 @@ export const createReport = (allScores, schoolName) => {
 
   const { leaders, teachers, pupils } = combinedScoresInArray
 
+  // Get the mean avg of an array of numbers
   const getMean = array => {
     return Math.round(
       array.reduce((sum, value) => {
@@ -80,6 +83,7 @@ export const createReport = (allScores, schoolName) => {
     )
   }
 
+  // Average all summarised scores into a single overall score in text form
   const prospectiveMark = () => {
     const finalScores = []
     for (const scores in combinedScoresInArray.leaders) {
@@ -94,6 +98,40 @@ export const createReport = (allScores, schoolName) => {
     return applyStatus(getMean(finalScores))
   }
 
+  // Create worded report object for posting to DB
+  const reportTemplate = {
+    reportFor: schoolName,
+    prospectiveMark: prospectiveMark(), 
+    leaders: {
+      digitalknowledge: applyStatus(getMean(leaders.digitalknowledge)),
+      privacy: applyStatus(getMean(leaders.privacy)),
+      sharing: applyStatus(getMean(leaders.sharing)),
+      criticalthinking: applyStatus(getMean(leaders.criticalthinking)),
+      communication: applyStatus(getMean(leaders.communication)),
+      responsibleuse: applyStatus(getMean(leaders.responsibleuse)),
+    },
+    teachers: {
+      digitalknowledge: applyStatus(getMean(teachers.digitalknowledge)),
+      privacy: applyStatus(getMean(teachers.privacy)),
+      sharing: applyStatus(getMean(teachers.sharing)),
+      criticalthinking: applyStatus(getMean(teachers.criticalthinking)),
+      communication: applyStatus(getMean(teachers.communication)),
+      responsibleuse: applyStatus(getMean(teachers.responsibleuse)),
+    },
+    pupils: {
+      digitalknowledge: applyStatus(getMean(pupils.digitalknowledge)),
+      privacy: applyStatus(getMean(pupils.privacy)),
+      sharing: applyStatus(getMean(pupils.sharing)),
+      criticalthinking: applyStatus(getMean(pupils.criticalthinking)),
+      communication: applyStatus(getMean(pupils.communication)),
+      responsibleuse: applyStatus(getMean(pupils.responsibleuse)),
+    },
+  }
+
+  return reportTemplate
+}
+
+// Keep until we know definitely not required
   // const reportTemplate = `
   // # Report for ${schoolName}
   // _Scores taken from mean average of all survey submissions_
@@ -129,35 +167,3 @@ export const createReport = (allScores, schoolName) => {
 
   // Recommendations:
   // `
-
-  const reportTemplate = {
-    reportFor: schoolName,
-    prospectiveMark: prospectiveMark(), 
-    leaders: {
-      digitalknowledge: applyStatus(getMean(leaders.digitalknowledge)),
-      privacy: applyStatus(getMean(leaders.privacy)),
-      sharing: applyStatus(getMean(leaders.sharing)),
-      criticalthinking: applyStatus(getMean(leaders.criticalthinking)),
-      communication: applyStatus(getMean(leaders.communication)),
-      responsibleuse: applyStatus(getMean(leaders.responsibleuse)),
-    },
-    teachers: {
-      digitalknowledge: applyStatus(getMean(teachers.digitalknowledge)),
-      privacy: applyStatus(getMean(teachers.privacy)),
-      sharing: applyStatus(getMean(teachers.sharing)),
-      criticalthinking: applyStatus(getMean(teachers.criticalthinking)),
-      communication: applyStatus(getMean(teachers.communication)),
-      responsibleuse: applyStatus(getMean(teachers.responsibleuse)),
-    },
-    pupils: {
-      digitalknowledge: applyStatus(getMean(pupils.digitalknowledge)),
-      privacy: applyStatus(getMean(pupils.privacy)),
-      sharing: applyStatus(getMean(pupils.sharing)),
-      criticalthinking: applyStatus(getMean(pupils.criticalthinking)),
-      communication: applyStatus(getMean(pupils.communication)),
-      responsibleuse: applyStatus(getMean(pupils.responsibleuse)),
-    },
-  }
-
-  return reportTemplate
-}
