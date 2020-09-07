@@ -57,6 +57,7 @@
 
 .quota-box-tick {
   margin: 0;
+  align-self: center;
 }
 .quota-fraction {
   font-size: 1.5rem;
@@ -75,13 +76,14 @@
 @media only screen and (max-width: 900px) {
   .quota-box {
     width: 70vw;
+    margin-right: 0;
   }
 
   .leaders-box,
   .teachers-box,
   .pupils-box {
     width: 100%;
-    /* justify-content: center; */
+    justify-content: center;
   }
 
   .final-submit-btn {
@@ -90,7 +92,7 @@
   }
 
   .survey-stats {
-    width: 100vw;
+    width: 100%;
     align-items: center;
   }
 }

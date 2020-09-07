@@ -35,6 +35,10 @@ const SubmitButton = ({ setError }) => {
     const updateStatus = await updateScores(schoolId, userType, averagedScores)
     if (updateStatus === "updated") {
       navigate("/survey/thankyou/")
+    } else if (updateStatus === "quota filled") {
+      setError(
+        `Sorry, it looks like your school already has enough completed surveys for ${userType}.`
+      )
     } else {
       setError(
         "Sorry, there was an error uploading your survey. Please try again."

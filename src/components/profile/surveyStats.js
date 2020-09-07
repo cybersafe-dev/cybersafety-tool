@@ -53,13 +53,13 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
           scores={leadersFilledSurveys}
           quota={leadersQuota}
         />
-        {leadersFilledSurveys >= leadersQuota ? (
+        {/* {leadersFilledSurveys >= leadersQuota ? (
           <img
             src={greenTick}
             alt="Leaders surveys complete"
             className="quota-box-tick"
           />
-        ) : null}
+        ) : null} */}
       </section>
       <section className="teachers-box">
         <SurveyQuotaBox
@@ -67,13 +67,13 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
           scores={teachersFilledSurveys}
           quota={teachersQuota}
         />
-        {teachersFilledSurveys >= teachersQuota ? (
+        {/* {teachersFilledSurveys >= teachersQuota ? (
           <img
             src={greenTick}
             alt="Teachers surveys complete"
             className="quota-box-tick"
           />
-        ) : null}
+        ) : null} */}
       </section>
       <section className="pupils-box">
         <SurveyQuotaBox
@@ -81,13 +81,13 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
           scores={pupilsFilledSurveys}
           quota={pupilsQuota}
         />
-        {pupilsFilledSurveys >= pupilsQuota ? (
+        {/* {pupilsFilledSurveys >= pupilsQuota ? (
           <img
             src={greenTick}
             alt="Pupils surveys complete"
             className="quota-box-tick"
           />
-        ) : null}
+        ) : null} */}
       </section>
       {leadersFilledSurveys >= leadersQuota &&
       teachersFilledSurveys >= teachersQuota &&

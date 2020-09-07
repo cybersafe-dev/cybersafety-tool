@@ -27,7 +27,7 @@ const Profile = () => {
       </div>
       <div className="columns">
         <article className="user-surveys">
-          <h2>Surveys filled</h2>
+          <h2>Surveys Completed</h2>
           <SurveyStats
             uid={uid}
             schoolName={schoolName}
