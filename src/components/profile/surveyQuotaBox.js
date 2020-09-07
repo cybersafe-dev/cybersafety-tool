@@ -5,6 +5,8 @@ import "../../styling/app/surveyStats.css"
 import leaders from "../../images/leader.svg"
 import teachers from "../../images/teacher.svg"
 import pupils from "../../images/pupil.svg"
+import greenTick from "../../images/green-tick.svg"
+
 
 const SurveyQuotaBox = ({ userType, scores, quota }) => {
     let thisImage;
@@ -24,7 +26,12 @@ const SurveyQuotaBox = ({ userType, scores, quota }) => {
 
   return (
     <section className="quota-box">
-      <img src={thisImage} alt={userType} className="quota-box-icon" />
+      {scores >= quota ? <img
+            src={greenTick}
+            alt="Leaders surveys complete"
+            className="quota-box-tick"
+          /> : 
+      <img src={thisImage} alt={userType} className="quota-box-icon" /> }
       <div className="quota-info">
         <p className="quota-fraction">
           {scores}/{quota}
