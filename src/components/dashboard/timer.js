@@ -12,7 +12,7 @@ const Timer = () => {
       <div className="timer-container">
         <div className="timer">
           <span>
-            {time.split(":")[0] >= 20 ? (
+            {time.split(":")[0] >= 10 ? (
               <span style={{ color: "red" }}> {time}</span>
             ) : (
               <span style={{ color: "black" }}>{time}</span>
