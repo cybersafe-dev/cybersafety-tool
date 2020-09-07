@@ -24,11 +24,16 @@ const Login = () => {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        navigate("/app")
+      })
       .catch(error => {
         setError(error.message)
         console.error("Error signing in with password and email", error)
+        setTimeout(() => {
+          setError(null)
+        }, 3000);
       })
-    navigate("/app")
   }
 
   const onChangeHandler = event => {
@@ -48,7 +53,6 @@ const Login = () => {
         Please log in below to see your school dashboard.
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
-      {error !== null && <div className="">{error}</div>}
       <form className="central-form">
         <label htmlFor="userEmail" className="block">
           Email:
@@ -75,17 +79,17 @@ const Login = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
+        {error !== null && <p className="error-message">{error}</p>}
         <button
-        type="submit"
-        className="login-btn"
-        onClick={event => {
-          signInWithEmailAndPasswordHandler(event, email, password)
-        }}
-      >
-        Log in
-      </button>
+          type="submit"
+          className="login-btn"
+          onClick={event => {
+            signInWithEmailAndPasswordHandler(event, email, password)
+          }}
+        >
+          Log in
+        </button>
       </form>{" "}
-
       <div className="other-options">
         <p className="">
           Don't have an account?{" "}

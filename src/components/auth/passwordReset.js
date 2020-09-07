@@ -35,6 +35,9 @@ const PasswordReset = () => {
       })
       .catch(error => {
         setError(error.message)
+        setTimeout(() => {
+          setError(null)
+        }, 3000)
       })
   }
   return (
@@ -50,8 +53,6 @@ const PasswordReset = () => {
           <div className="">An email has been sent to you!</div>
         )}
 
-        {error !== null && <div className="">{error}</div>}
-
         <label htmlFor="userEmail" className="">
           Email:
           <input
@@ -64,7 +65,7 @@ const PasswordReset = () => {
             className="login-input"
           />
         </label>
-
+        {error !== null && <p className="error-message">{error}</p>}
         <button
           type="submit"
           className="login-btn"

@@ -71,10 +71,17 @@ a:hover {
 }
 
 .instruction {
-  width: 380px;
+  width: 500px;
+  text-align: center;
 }
 
 .other-options {
+  text-align: center;
+}
+
+.error-message {
+  width: 500px;
+  color: red;
   text-align: center;
 }
 
@@ -117,7 +124,8 @@ a:hover {
 
   .instruction,
   .central-form,
-  .login-input {
+  .login-input,
+  .error-message {
     width: 100%;
   }
 
