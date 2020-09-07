@@ -13,7 +13,7 @@
 .statement {
   font-size: 22px;
   max-width: 60vw;
-  min-height: 5rem;
+  min-height: 3.5rem;
   text-align: center;
 }
 
@@ -22,7 +22,7 @@
   align-items: center;
   flex-direction: column;
   border: none;
-  cursor: pointer;
+
 }
 
 .response-option {
@@ -51,6 +51,13 @@
   padding: 1rem;
 }
 
+.tip {
+  color: #8e8e8e;
+  font-size: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .bg-img5 {
   position: absolute;
   left: 16em;
@@ -60,12 +67,7 @@
   transform: rotate(90deg);
 }
 
-.tip {
-  color: #8e8e8e;
-  font-size: 1rem;
-  margin-top: 1rem;
-  text-align: center;
-}
+
 
 @media only screen and (max-width: 768px) {
   .question-title {
