@@ -101,7 +101,7 @@ const Signup = () => {
             className="login-input"
             name="pupilCount"
             value={pupilCount}
-            placeholder="e.g. 1500"
+            placeholder="e.g. 150"
             id="pupilCount"
             onChange={event => onChangeHandler(event)}
           />

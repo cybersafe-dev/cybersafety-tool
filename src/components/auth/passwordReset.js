@@ -60,7 +60,7 @@ const PasswordReset = () => {
             name="userEmail"
             id="userEmail"
             value={email}
-            placeholder="Enter your email"
+            placeholder="Enter email"
             onChange={onChangeHandler}
             className="login-input"
           />

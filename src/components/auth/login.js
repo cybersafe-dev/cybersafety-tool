@@ -61,7 +61,7 @@ const Login = () => {
             className="login-input"
             name="userEmail"
             value={email}
-            placeholder="e.g. x@y.com"
+            placeholder="Enter email"
             id="userEmail"
             onChange={event => onChangeHandler(event)}
           />
@@ -74,7 +74,7 @@ const Login = () => {
             className="login-input"
             name="userPassword"
             value={password}
-            placeholder="Your Password"
+            placeholder="Enter Password"
             id="userPassword"
             onChange={event => onChangeHandler(event)}
           />
