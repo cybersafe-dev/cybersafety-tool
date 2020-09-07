@@ -18,10 +18,23 @@ const Signup = () => {
     pupilCount,
     setPupilCount,
   ] = React.useContext(userStore)
+  
   if (user) {
     navigate("/app")
   }
+
   const firebase = useFirebase()
+
+  const validateSignupForm = () => {
+    if (!schoolName || !pupilCount) {
+      setError("Please fill in all the form fields")
+      setTimeout(() => {
+        setError(null)
+      }, 3000);
+      return false
+    }
+    return true
+  }
 
   const createUserWithEmailAndPasswordHandler = async (
     event,
@@ -30,7 +43,8 @@ const Signup = () => {
   ) => {
     event.preventDefault()
     if (!firebase) return
-
+    const validated = await validateSignupForm()
+    if (!validated) return
     await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
@@ -118,6 +132,7 @@ const Signup = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
+
         {error !== null && <p className="error-message">{error}</p>}
 
         <button
