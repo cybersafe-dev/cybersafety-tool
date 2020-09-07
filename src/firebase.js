@@ -66,6 +66,7 @@ export const updateScores = async (schoolId, userType, myScores) => {
     .then(async doc => {
       const thisSchool = doc.data()
       delete myScores.test
+      myScores.timestamp = Date.now()
       const scoresObj = thisSchool.scores
       scoresObj[userType].push(myScores)
       await schoolRef.update({ scores: scoresObj })
