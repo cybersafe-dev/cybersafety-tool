@@ -25,6 +25,7 @@ export default function getFirebase() {
   return null
 }
 
+// Create a new user document if there is none for that email address already
 export const generateUserDocument = async (user, additionalData) => {
   if (!user) return
   const userRef = firebase.firestore().doc(`users/${user.uid}`)
@@ -43,6 +44,7 @@ export const generateUserDocument = async (user, additionalData) => {
   return getUserDocument(user.uid)
 }
 
+// Get the authenticated user's document from database
 export const getUserDocument = async uid => {
   if (!uid) return null
   try {
@@ -57,27 +59,47 @@ export const getUserDocument = async uid => {
   }
 }
 
+// Add a single survey score to the database after checking that the quota isnt already filled.
 export const updateScores = async (schoolId, userType, myScores) => {
   if (!schoolId || !userType || !myScores) return "error"
   const schoolRef = firebase.firestore().collection("users").doc(schoolId)
-
-  schoolRef
+  let updateStatusMessage = schoolRef
     .get()
     .then(async doc => {
       const thisSchool = doc.data()
       delete myScores.test
       myScores.timestamp = Date.now()
-      const scoresObj = thisSchool.scores
-      scoresObj[userType].push(myScores)
-      await schoolRef.update({ scores: scoresObj })
+      let currentQuota
+      switch (userType) {
+        case "leaders":
+          currentQuota = thisSchool.quota.leadersQuota
+          break
+        case "teachers":
+          currentQuota = thisSchool.quota.teachersQuota
+          break
+        case "pupils":
+          currentQuota = thisSchool.quota.pupilsQuota
+          break
+        default:
+          currentQuota = 100
+      }
+      if (currentQuota > thisSchool.scores[userType].length) {
+        const scoresObj = thisSchool.scores
+        scoresObj[userType].push(myScores)
+        await schoolRef.update({ scores: scoresObj })
+        return "updated"
+      } else {
+        return "quota filled"
+      }
     })
     .catch(error => {
       console.error("Error updating this school's data", error)
       return "error"
     })
-  return "updated"
+  return updateStatusMessage
 }
 
+// Submit a final averaged report of scores to the database with a timestamp
 export const postReportToDb = async (uid, report) => {
   if (!uid || !report) return "error"
   try {
