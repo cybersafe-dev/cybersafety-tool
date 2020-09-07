@@ -34,15 +34,19 @@ const Signup = () => {
     await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        navigate("/app")
+      })
       .catch(error => {
         setError(error.message)
+        setTimeout(() => {
+          setError(null)
+        }, 3000)
       })
-    navigate("/app")
   }
 
   const onChangeHandler = event => {
     const { name, value } = event.currentTarget
-
     if (name === "userEmail") {
       setEmail(value)
     } else if (name === "userPassword") {
@@ -62,7 +66,6 @@ const Signup = () => {
         self-assessment tool
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
-      {error !== null && <div className="">{error}</div>}
       <form className="central-form">
         <label htmlFor="schoolName" className="block">
           Your School's name and county:
@@ -115,6 +118,8 @@ const Signup = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
+        {error !== null && <p className="error-message">{error}</p>}
+
         <button
           type="submit"
           className="login-btn"
