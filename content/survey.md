@@ -2,15 +2,15 @@
 title: Edit the Survey
 leaders:
   digitalknowledge:
-    - statement: My staff have online safety and responsibility training at least once
-        a year.
+    - statement: 1. My staff have online safety and responsibility training at least
+        once a year.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: My staff feel confident talking about online safety and
+    - statement: 2. My staff feel confident talking about online safety and
         responsibility to pupils.
       responses:
         - answer: Strongly agree
@@ -18,7 +18,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: Staff talk regularly to pupils throughout the year about online
+    - statement: 3. Staff talk regularly to pupils throughout the year about online
         safety and responsibility.
       responses:
         - answer: Strongly agree
@@ -26,7 +26,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: Parents have access to information sessions on online safety and
+    - statement: 4. Parents have access to information sessions on online safety and
         responsibility at least once a year.
       responses:
         - answer: Strongly agree
@@ -34,7 +34,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: Pupils feel they can come to staff and talk to them about anything
+    - statement: 5. Pupils feel they can come to staff and talk to them about anything
         that happens to them online.
       responses:
         - answer: Strongly agree
@@ -42,7 +42,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: My staff regularly use digital technologies (tablets, phones,
+    - statement: 6. My staff regularly use digital technologies (tablets, phones,
         computers, robots) in their teaching.
       responses:
         - answer: Strongly agree
@@ -50,15 +50,15 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: My staff are comfortable using digital technologies (tablets, phones,
-        computers, robots) in their teaching.
+    - statement: 7. My staff are comfortable using digital technologies (tablets,
+        phones, computers, robots) in their teaching.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: Pupils regularly use digital technologies (tablets, phones,
+    - statement: 8. Pupils regularly use digital technologies (tablets, phones,
         computers, robots) in their learning.
       responses:
         - answer: Strongly agree
@@ -66,15 +66,15 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: My school has a clear policy on smartphone use, created in
-        consultation with the parent body.
+    - statement: "9. My school has a clear policy on smartphone use, created in
+        consultation with the parent body.9. "
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: My school is implementing a Digital Learning Plan.
+    - statement: 10. My school is implementing a Digital Learning Plan.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -82,15 +82,15 @@ leaders:
         - answer: Disagree
         - answer: Strongly disagree
   privacy:
-    - statement: Any online profiles I have online are set to private, or use a name
-        my pupils cannot find.
+    - statement: 1. Any online profiles I have online are set to private, or use a
+        name my pupils cannot find.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: My staff's online profiles are set to private, or use names pupils
+    - statement: 2. My staff's online profiles are set to private, or use names pupils
         cannot find.
       responses:
         - answer: Strongly agree
@@ -98,29 +98,29 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: I understand how to create a very secure password for my accounts.
+    - statement: 3. I understand how to create a very secure password for my accounts.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: I change my passwords regularly.
+    - statement: 4. I change my passwords regularly.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: I keep school-related digital data secure.
+    - statement: 5. I keep school-related digital data secure.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: The school has a clear privacy policy about sharing images of pupils
-        (in school activities and events etc.) online.
+    - statement: 6. The school has a clear privacy policy about sharing images of
+        pupils (in school activities and events etc.) online.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -128,21 +128,21 @@ leaders:
         - answer: Disagree
         - answer: Strongly disagree
   sharing:
-    - statement: I post regularly on social media.
+    - statement: 1. I post regularly on social media.
       responses:
         - answer: I'm not on socia media at all
         - answer: Not at all
         - answer: Not really
         - answer: Most days
         - answer: Daily
-    - statement: I post photos and videos on social media.
+    - statement: 2. I post photos and videos on social media.
       responses:
         - answer: Strongly disagree
         - answer: Disagree
         - answer: Neutral
         - answer: Agree
         - answer: Strongly agree
-    - statement: I post selfies on social media.
+    - statement: 3. I post selfies on social media.
       responses:
         - answer: Strongly disagree
         - answer: Disagree
@@ -150,14 +150,14 @@ leaders:
         - answer: Agree
         - answer: Strongly agree
   communication:
-    - statement: I use technology to communicate respectfully and safely with my staff.
+    - statement: 1. I use technology to communicate respectfully and safely with my staff.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: "My school has a culture of positively using online platforms and
+    - statement: "2. My school has a culture of positively using online platforms and
         tools to communicate with each other. "
       responses:
         - answer: Strongly agree
@@ -166,7 +166,7 @@ leaders:
         - answer: Disagree
         - answer: Strongly Disagree
   criticalthinking:
-    - statement: I always check information I find online by searching for similar
+    - statement: 1. I always check information I find online by searching for similar
         sources.
       responses:
         - answer: Strongly agree
@@ -174,7 +174,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: Pupils are taught how to check information they find online by
+    - statement: 2. Pupils are taught how to check information they find online by
         searching for similar sources.
       responses:
         - answer: Strongly agree
@@ -183,51 +183,53 @@ leaders:
         - answer: Disagree
         - answer: Strongly disagree
   responsibleuse:
-    - statement: Pupils are taught to always reference sources and images they use in
-        research and presentations.
+    - statement: 1. Pupils are taught to always reference sources and images they use
+        in research and presentations.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: Staff are encouraged to always reference sources and images they use
-        in presentations and materials.
+    - statement: 2. Staff are encouraged to always reference sources and images they
+        use in presentations and materials.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: The school has an Acceptable Use Policy (AUP) for digital technologies.
+    - statement: 3. The school has an Acceptable Use Policy (AUP) for digital
+        technologies.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: The Acceptable Use Policy (AUP) is readily available to all stakeholders.
+    - statement: 4. The Acceptable Use Policy (AUP) is readily available to all
+        stakeholders.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: The school has a clear cyberbullying policy.
+    - statement: 5. The school has a clear cyberbullying policy.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: The cyberbullying policy is readily available to all stakeholders.
+    - statement: 6. The cyberbullying policy is readily available to all stakeholders.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: There is no policy
-    - statement: Staff clearly understand the appropriate steps to take when a
+    - statement: 7. Staff clearly understand the appropriate steps to take when a
         cyberbullying/online incident involving my pupils is brought to their
         attention.
       responses:
@@ -236,14 +238,14 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: I know how approximately how much time I am online each day.
+    - statement: 8. I know how approximately how much time I am online each day.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: I set limits for my own online time.
+    - statement: 9. I set limits for my own online time.
       responses:
         - answer: Strongly agree
         - answer: Agree
