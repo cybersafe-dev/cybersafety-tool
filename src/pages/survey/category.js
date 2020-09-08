@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../../components/layout/layout"
-import SEO from "../../components/seo"
 import Question from "../../components/category/question"
 import ProgressBar from "../../components/category/progressBar"
 import CategoryProgress from "../../components/category/categoryProgress"
@@ -56,7 +55,6 @@ const Category = props => {
 
   return (
     <Layout>
-      <SEO title="Survey" />
       <>
         <img src={BgImg} alt="background design" className="bg-img5" />
 

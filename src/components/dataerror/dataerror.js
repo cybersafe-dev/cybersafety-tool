@@ -7,7 +7,7 @@ import unknown from "../../images/unknown.svg"
 
 const DataErrorPage = () => (
   <Layout>
-    <SEO title="Data error" />
+    <SEO title="Data Error" />
     <Header />
     <section className="page-container">
       <h1 className="error-heading">Data Error</h1>

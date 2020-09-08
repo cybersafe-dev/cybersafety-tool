@@ -2,6 +2,7 @@ import React from "react"
 import { navigate } from "gatsby"
 import DataErrorPage from "../../components/dataerror/dataerror"
 import { ResponseStore } from "../../providers/responseProvider"
+import SEO from "../seo"
 
 import "../../styling/survey/question.css"
 
@@ -20,6 +21,14 @@ const Question = ({
   const {
     surveyHints,
   } = questionMessageData.allFile.edges[0].node.childMarkdownRemark.frontmatter
+
+  React.useEffect(() => {
+    store.responses.forEach(response => {
+      if (Object.keys(response).includes(lowerCategory)) {
+        navigate("/survey/dashboard/")
+      }
+    })
+  }, [])
 
   React.useEffect(() => {
     if (sectionResponses.length === sectionLength) {
@@ -48,6 +57,7 @@ const Question = ({
 
   return (
     <>
+      <SEO title={category} />
       <p className="statement">{survey[currentQ].statement}</p>
       <section className="responses">
         {survey[currentQ].responses.map((response, i) => (

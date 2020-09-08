@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import useFirebase from "../../firebase"
+import SEO from "../seo"
 
 import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
@@ -42,6 +43,7 @@ const PasswordReset = () => {
   }
   return (
     <section className="page-container">
+      <SEO title="Lost Password" />
       <h1 className="">Lost Password</h1>
       <p className="instruction">
         Enter the email attached to your school account below to receive a

@@ -5,7 +5,6 @@ import { getUserDocument, postReportToDb } from "../../firebase"
 import { createReport } from "../../templates/reportTemplate"
 
 import SurveyQuotaBox from "./surveyQuotaBox"
-import greenTick from "../../images/green-tick.svg"
 
 const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
   const [currentScores, setCurrentScores] = React.useState(null)
