@@ -72,7 +72,7 @@ const Reporting = () => {
         value={searchTerm}
         onChange={updateSearchTerm}
       />
-      <h1 className="admin-dash-heading">{user.schoolName}</h1>
+      <h1 className="admin-dash-heading-reporting">{user.schoolName}</h1>
       <h2 className="descriptive-title">Schools Signed Up: {allSchools.length}</h2>
       {filteredSchools
         ? filteredSchools.map(school =>
