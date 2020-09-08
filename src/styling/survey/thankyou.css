@@ -3,10 +3,12 @@
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .thanku-title {
-  margin: 0.5rem;
+  margin: 0 0 3rem 0;
   text-align: center;
 }
 .thanku-message {
@@ -40,7 +42,11 @@
   text-align: center;
 }
 
-@media only screen and (max-width: 480px) {
+.rocket {
+  width: 400px;
+}
+
+@media only screen and (max-width: 768px) {
   .bg-img6 {
     left: 2.5rem;
     z-index: -1;
@@ -48,5 +54,10 @@
   }
   .thanku-message {
     margin-top: 3rem;
+    text-align: center;
+  }
+
+  .rocket {
+    width: 100%;
   }
 }

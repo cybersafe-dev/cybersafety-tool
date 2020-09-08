@@ -1,6 +1,7 @@
 import React from "react"
 import { userStore } from "../../providers/userProvider"
 import { navigate } from "gatsby"
+import SEO from "../seo"
 import SchoolCard from "./schoolCard"
 import useFirebase from "../../firebase"
 import "../../styling/reporting/reporting.css"
@@ -63,6 +64,7 @@ const Reporting = () => {
   if (!user || !firebase || !allSchools) return <h1>Loading...</h1>
   return (
     <section className="dashboard-body">
+      <SEO title="CSI Admin" />
       <input
         className="filter-schools"
         type="text"
@@ -70,7 +72,7 @@ const Reporting = () => {
         value={searchTerm}
         onChange={updateSearchTerm}
       />
-      <h1 className="admin-dash-heading">{user.schoolName}</h1>
+      <h1 className="admin-dash-heading-reporting">{user.schoolName}</h1>
       <h2 className="descriptive-title">Schools Signed Up: {allSchools.length}</h2>
       {filteredSchools
         ? filteredSchools.map(school =>

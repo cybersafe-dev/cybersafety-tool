@@ -28,7 +28,7 @@ const SurveyPage = props => {
   return (
     <Layout>
       <Header />
-      <SEO title="Home" />
+      <SEO title="Survey Introduction" />
       <section className="intropage-container">
         <h1> {data.title} </h1>
         <img src={BgImg} alt="background design" className="bg1" />

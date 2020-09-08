@@ -5,6 +5,7 @@ import { ResponseStore } from "../../providers/responseProvider"
 import Layout from "../../components/layout/layout"
 import DataErrorPage from "../../components/dataerror/dataerror"
 import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
+import SEO from "../../components/seo"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
 
@@ -62,6 +63,7 @@ const Dashboard = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Choose a Category" />
       <section className="dashboard-container">
         <img src={BgImg} alt="background design" className="bg-img3" />
         <img src={BgImg} alt="background design" className="bg-img4" />

@@ -26,6 +26,27 @@
   font-weight: 600;
   text-align: center;
   cursor: pointer;
+  animation: shake 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 3s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  2% {
+    transform: translate(0px, -4px);
+  }
+  4% {
+    transform: translate(0px, 0px);
+  }
+  6% {
+    transform: translate(0px, -4px);
+  }
+  8% {
+    transform: translate(0px, 0px);
+  }
 }
 
 .final-submit-btn:active {

@@ -3,6 +3,7 @@ import { Link, navigate } from "gatsby"
 
 import useFirebase from "../../firebase"
 import { userStore } from "../../providers/userProvider"
+import SEO from "../seo"
 
 import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
@@ -48,6 +49,7 @@ const Login = () => {
 
   return (
     <section className="page-container">
+      <SEO title="Log In" />
       <h1 className="text-center">Log In</h1>
       <p className="instruction">
         Please log in below to see your school dashboard.
@@ -98,7 +100,7 @@ const Login = () => {
           </Link>{" "}
           <br />{" "}
           <Link to="/app/passwordreset" className="">
-            Forgot Password?
+            Lost your password?
           </Link>
         </p>
       </div>

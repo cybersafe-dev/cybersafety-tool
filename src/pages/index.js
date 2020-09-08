@@ -21,7 +21,7 @@ const MiniSite = props => {
   return (
     <Layout>
     <MiniNavbar />
-    <SEO title="Home - CyberSafeIreland" />
+    <SEO title="Home" />
         <section className="section-container">
           <div id="about">
             <h1 className="section-title">Self-Assessment Tool for Schools</h1>

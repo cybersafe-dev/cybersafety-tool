@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `CyberSafe Self Assessment Tool for Schools`,
+    title: `CyberSafeIreland Self-Assessment Tool for Schools`,
     description: `Cybersafety survey for primary schools in Ireland`,
     author: `@gatsbyjs`,
   },

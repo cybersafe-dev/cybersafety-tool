@@ -4,6 +4,7 @@ import { userStore } from "../../providers/userProvider"
 import useFirebase from "../../firebase"
 import Share from "./share"
 import Copy from "./copy"
+import SEO from "../seo"
 
 import SurveyStats from "./surveyStats"
 import "../../styling/app/adminDashboard.css"
@@ -22,6 +23,7 @@ const Profile = () => {
 
   return (
     <section className="dashboard-body">
+      <SEO title="Your School Admin Dashboard" />
       <div className="user-info">
         <h1 className="admin-dash-heading">{schoolName}</h1>
       </div>

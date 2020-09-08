@@ -46,3 +46,9 @@
   border: 2px solid red;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 900px) {
+  .pdf-dl-btn, .report-toggle-btn {
+    text-align: center;
+  }
+}
