@@ -6,6 +6,7 @@ import Reporting from "../reporting/reporting"
 const PrivateRoute = ({ component: Component, location, ...rest }) => {
   const [user] = React.useContext(userStore)
 
+  // user debug log here
   React.useEffect(() => {
     console.log("user data", user)
   }, [user])
