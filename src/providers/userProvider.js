@@ -9,6 +9,10 @@ const UserProvider = props => {
   const [schoolName, setSchoolName] = React.useState("")
   const [pupilCount, setPupilCount] = React.useState("")
   const [quota, setQuota] = React.useState(null)
+  const [firstName, setFirstName] = React.useState("")
+  const [lastName, setLastName] = React.useState("")
+  const [rollNumber, setRollNumber] = React.useState("")
+
   const firebase = useFirebase()
   const scores = {
     leaders: [],
@@ -47,15 +51,30 @@ const UserProvider = props => {
         pupilCount,
         scores,
         quota,
+        firstName,
+        lastName,
+        rollNumber,
       })
       setUser(user)
     })
     // eslint-disable-next-line
-  }, [firebase, schoolName, pupilCount, quota])
+  }, [firebase, schoolName, pupilCount, quota, firstName, lastName, rollNumber])
 
   return (
     <userStore.Provider
-      value={[user, schoolName, setSchoolName, pupilCount, setPupilCount]}
+      value={[
+        user,
+        schoolName,
+        setSchoolName,
+        pupilCount,
+        setPupilCount,
+        firstName,
+        setFirstName,
+        lastName,
+        setLastName,
+        rollNumber,
+        setRollNumber,
+      ]}
     >
       {props.children}
     </userStore.Provider>

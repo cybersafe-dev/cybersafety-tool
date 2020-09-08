@@ -17,11 +17,30 @@ const Signup = () => {
     setSchoolName,
     pupilCount,
     setPupilCount,
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName,
+    rollNumber,
+    setRollNumber,
   ] = React.useContext(userStore)
+
   if (user) {
     navigate("/app")
   }
+
   const firebase = useFirebase()
+
+  const validateSignupForm = () => {
+    if (!firstName || !lastName || !schoolName || !pupilCount) {
+      setError("Please fill in all the form fields with asterisks")
+      setTimeout(() => {
+        setError(null)
+      }, 3000)
+      return false
+    }
+    return true
+  }
 
   const createUserWithEmailAndPasswordHandler = async (
     event,
@@ -30,19 +49,24 @@ const Signup = () => {
   ) => {
     event.preventDefault()
     if (!firebase) return
-
+    const validated = await validateSignupForm()
+    if (!validated) return
     await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
+      .then(() => {
+        navigate("/app")
+      })
       .catch(error => {
         setError(error.message)
+        setTimeout(() => {
+          setError(null)
+        }, 3000)
       })
-    navigate("/app")
   }
 
   const onChangeHandler = event => {
     const { name, value } = event.currentTarget
-
     if (name === "userEmail") {
       setEmail(value)
     } else if (name === "userPassword") {
@@ -51,6 +75,12 @@ const Signup = () => {
       setSchoolName(value)
     } else if (name === "pupilCount") {
       setPupilCount(value)
+    } else if (name === "firstName") {
+      setFirstName(value)
+    } else if (name === "lastName") {
+      setLastName(value)
+    } else if (name === "rollNumber") {
+      setRollNumber(value)
     }
   }
 
@@ -62,10 +92,41 @@ const Signup = () => {
         self-assessment tool
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
-      {error !== null && <div className="">{error}</div>}
       <form className="central-form">
+        <label htmlFor="firstName" className="block">
+          <p className="form-label">
+            <span className="asterisk">*</span> Your first name:
+          </p>
+          <input
+            type="text"
+            className="login-input"
+            name="firstName"
+            value={firstName}
+            placeholder="Enter first name"
+            id="firstName"
+            onChange={event => onChangeHandler(event)}
+          />
+        </label>
+
+        <label htmlFor="lastName" className="block">
+          <p className="form-label">
+            <span className="asterisk">*</span> Your last name:
+          </p>
+          <input
+            type="text"
+            className="login-input"
+            name="lastName"
+            value={lastName}
+            placeholder="Enter last name"
+            id="lastName"
+            onChange={event => onChangeHandler(event)}
+          />
+        </label>
+
         <label htmlFor="schoolName" className="block">
-          Your School's name and county:
+          <p className="form-label">
+            <span className="asterisk">*</span> Your School's name and county:
+          </p>
           <input
             type="text"
             className="login-input"
@@ -77,21 +138,42 @@ const Signup = () => {
           />
         </label>
 
+        <label htmlFor="rollNumber" className="block">
+          <p className="form-label">
+            Your School's Roll Number (if not applicable leave blank):
+          </p>
+          <input
+            type="text"
+            className="login-input"
+            name="rollNumber"
+            value={rollNumber}
+            placeholder="Enter Roll Number"
+            id="rollNumber"
+            onChange={event => onChangeHandler(event)}
+          />
+        </label>
+
         <label htmlFor="pupilCount" className="block">
-          The number of pupils at your school:
+          <p className="form-label">
+            {" "}
+            <span className="asterisk">*</span> The number of pupils at your
+            school:
+          </p>
           <input
             type="text"
             className="login-input"
             name="pupilCount"
             value={pupilCount}
-            placeholder="e.g. 1500"
+            placeholder="e.g. 150"
             id="pupilCount"
             onChange={event => onChangeHandler(event)}
           />
         </label>
 
         <label htmlFor="userEmail" className="block">
-          Your school/work email address:
+          <p className="form-label">
+            <span className="asterisk">*</span> Your school/work email address:
+          </p>
           <input
             type="email"
             className="login-input"
@@ -104,7 +186,9 @@ const Signup = () => {
         </label>
 
         <label htmlFor="userPassword" className="block">
-          A secure password:
+          <p className="form-label">
+            <span className="asterisk">*</span> A secure password:
+          </p>
           <input
             type="password"
             className="login-input"
@@ -115,6 +199,9 @@ const Signup = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
+
+        {error !== null && <p className="error-message">{error}</p>}
+
         <button
           type="submit"
           className="login-btn"

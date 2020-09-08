@@ -71,10 +71,17 @@ a:hover {
 }
 
 .instruction {
-  width: 380px;
+  width: 500px;
+  text-align: center;
 }
 
 .other-options {
+  text-align: center;
+}
+
+.error-message {
+  width: 500px;
+  color: red;
   text-align: center;
 }
 
@@ -85,6 +92,14 @@ a:hover {
   z-index: -1;
   width: 25rem;
   animation: rotation 12s infinite linear;
+}
+
+.asterisk {
+  color: red;
+}
+
+.form-label {
+  margin-bottom: 0;
 }
 
 @keyframes rotation {
@@ -117,7 +132,8 @@ a:hover {
 
   .instruction,
   .central-form,
-  .login-input {
+  .login-input,
+  .error-message {
     width: 100%;
   }
 
