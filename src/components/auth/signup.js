@@ -32,8 +32,8 @@ const Signup = () => {
   const firebase = useFirebase()
 
   const validateSignupForm = () => {
-    if (!schoolName || !pupilCount) {
-      setError("Please fill in all the form fields")
+    if (!firstName || !lastName || !schoolName || !pupilCount) {
+      setError("Please fill in all the form fields with asterisks")
       setTimeout(() => {
         setError(null)
       }, 3000)
@@ -77,7 +77,7 @@ const Signup = () => {
       setPupilCount(value)
     } else if (name === "firstName") {
       setFirstName(value)
-    } else if (name === "lastName")  {
+    } else if (name === "lastName") {
       setLastName(value)
     } else if (name === "rollNumber") {
       setRollNumber(value)
@@ -94,7 +94,9 @@ const Signup = () => {
       <img src={BgImg} alt="background design" className="bg-img-auth" />
       <form className="central-form">
         <label htmlFor="firstName" className="block">
-          Your first name:
+          <p className="form-label">
+            <span className="asterisk">*</span> Your first name:
+          </p>
           <input
             type="text"
             className="login-input"
@@ -107,7 +109,9 @@ const Signup = () => {
         </label>
 
         <label htmlFor="lastName" className="block">
-          Your last name:
+          <p className="form-label">
+            <span className="asterisk">*</span> Your last name:
+          </p>
           <input
             type="text"
             className="login-input"
@@ -120,7 +124,9 @@ const Signup = () => {
         </label>
 
         <label htmlFor="schoolName" className="block">
-          Your School's name and county:
+          <p className="form-label">
+            <span className="asterisk">*</span> Your School's name and county:
+          </p>
           <input
             type="text"
             className="login-input"
@@ -133,7 +139,9 @@ const Signup = () => {
         </label>
 
         <label htmlFor="rollNumber" className="block">
-          Your School's Roll Number (if not applicable leave blank):
+          <p className="form-label">
+            Your School's Roll Number (if not applicable leave blank):
+          </p>
           <input
             type="text"
             className="login-input"
@@ -146,7 +154,11 @@ const Signup = () => {
         </label>
 
         <label htmlFor="pupilCount" className="block">
-          The number of pupils at your school:
+          <p className="form-label">
+            {" "}
+            <span className="asterisk">*</span> The number of pupils at your
+            school:
+          </p>
           <input
             type="text"
             className="login-input"
@@ -159,7 +171,9 @@ const Signup = () => {
         </label>
 
         <label htmlFor="userEmail" className="block">
-          Your school/work email address:
+          <p className="form-label">
+            <span className="asterisk">*</span> Your school/work email address:
+          </p>
           <input
             type="email"
             className="login-input"
@@ -172,7 +186,9 @@ const Signup = () => {
         </label>
 
         <label htmlFor="userPassword" className="block">
-          A secure password:
+          <p className="form-label">
+            <span className="asterisk">*</span> A secure password:
+          </p>
           <input
             type="password"
             className="login-input"
