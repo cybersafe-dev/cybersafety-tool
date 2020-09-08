@@ -281,11 +281,11 @@ teachers:
     - statement: 4. I talk regularly to my pupils throughout the year about online
         safety and responsibility.
       responses:
-        - answer: Strongly Agree
+        - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
-        - answer: Strongly Disagree
+        - answer: Strongly disagree
     - statement: 5. My pupils feel they can come and talk to me about anything that
         happens to them online.
       responses:
