@@ -9,7 +9,9 @@
   margin: 0.5rem;
   text-align: center;
 }
-
+.thanku-message {
+  margin-top: 3rem;
+}
 .bg-img6 {
   position: absolute;
   right: 23em;
@@ -21,9 +23,8 @@
 .bg-img9 {
   position: absolute;
   right: 14em;
-width: 40rem;
+  width: 40rem;
   z-index: -1;
-
 }
 
 .close-btn {

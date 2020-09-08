@@ -3,6 +3,13 @@ html {
 }
 
 /* TOP 3 SECTIONS */
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 2rem 2rem 0;
+  height: 100vh;
+}
 .section-container {
   display: flex;
   flex-direction: column;
@@ -18,13 +25,7 @@ html {
 .fig {
   width: 45vw;
 }
-.section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 2rem 2rem 0;
-  height: 100vh;
-}
+
 
 /* ABOUT SECTION */
 

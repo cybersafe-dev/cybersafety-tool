@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
+  /* justify-content: space-between;
+  overflow: hidden; */
 }
 .introtext-box {
   display: flex;
@@ -28,7 +28,6 @@
   z-index: -1;
   height: 22rem;
   transform: rotate(10deg);
-
 }
 .bg3 {
   position: absolute;
@@ -37,7 +36,6 @@
   z-index: -1;
   height: 22rem;
   transform: rotate(70deg);
-
 }
 
 .para-1 {
@@ -85,14 +83,13 @@
 @media only screen and (max-width: 480px) {
   .intropage-container {
     display: flex;
-    justify-content: center;
+    margin: 0 1rem 0 1rem;
   }
 
   .introtext-box {
     display: flex;
     text-align: left;
     justify-content: center;
-    margin-left: 1rem;
   }
 
   .bg1 {
@@ -121,7 +118,6 @@
   }
   .figure {
     width: 30vw;
-    margin: 1rem;
   }
   .start-btn {
     margin: 1rem;

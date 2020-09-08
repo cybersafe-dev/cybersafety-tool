@@ -9,16 +9,19 @@
 }
 
 .catprog-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
+
 .catprog-fraction {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-left: 0.5rem;
 }
 
 @media only screen and (max-width: 480px) {
   .catprog-container {
-    margin-right: 1rem;
+    display: flex;
+  
+    justify-content: flex-start;
   }
   .catprog-title {
     font-size: 1rem;

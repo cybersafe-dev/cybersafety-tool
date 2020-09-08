@@ -9,7 +9,7 @@ import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
 import SurveyProgress from "../../components/dashboard/surveyProgress"
 
 import BgImg from "../../images/bg-gradient.svg"
-import FileImg from "../../images/file-graphic.svg"
+import Graphic from "../../images/dash.svg"
 
 import Digital from "../../images/Digital-open.svg"
 import DigitalDone from "../../images/Digital-done.svg"
@@ -218,7 +218,7 @@ const Dashboard = ({ data }) => {
           </div>
         </div>
       </section>
-      <img src={FileImg} alt="background design" className="file-image" />
+      <img src={Graphic} alt="background design" className="graphic" />
     </Layout>
   )
 }
