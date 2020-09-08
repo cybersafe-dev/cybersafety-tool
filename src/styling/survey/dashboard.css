@@ -70,11 +70,11 @@
 }
 
 .col {
- margin-right: 2rem;
- display: flex;
- flex-direction: column;
- align-items: flex-start;
- justify-content: flex-start;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .survey-progress {
@@ -97,6 +97,27 @@
   text-align: center;
   border: none;
   cursor: pointer;
+  animation: shake 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  2% {
+    transform: translate(0px, -4px);
+  }
+  4% {
+    transform: translate(0px, 0px);
+  }
+  6% {
+    transform: translate(0px, -4px);
+  }
+  8% {
+    transform: translate(0px, 0px);
+  }
 }
 
 .submit-btn:active {
@@ -114,7 +135,6 @@
 .cat-image {
   height: 6rem;
   margin-top: 1rem;
-
 }
 .cat-image:active {
   transform: translate(0, 3px);
@@ -131,7 +151,8 @@
 }
 
 @media only screen and (max-width: 768px) {
-  html, body {
+  html,
+  body {
     width: 100vw;
   }
 
@@ -206,8 +227,7 @@
     transform: rotate(90deg);
   }
   .graphic {
-    height:7rem;
-
+    height: 7rem;
   }
 
   .cat-image {
