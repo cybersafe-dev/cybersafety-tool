@@ -56,18 +56,23 @@ const SurveyDashMessages = ({
     switch (completedSections.length - 1) {
       case 1:
         setDashTitle(() => dashboardMain.oneDone)
+        setMessage(() => dashboardMessages.initial)
         break
       case 2:
         setDashTitle(() => dashboardMain.twoDone)
+        setMessage(() => dashboardMessages.initial)
         break
       case 3:
         setDashTitle(() => dashboardMain.threeDone)
+        setMessage(() => dashboardMessages.initial)
         break
       case 4:
         setDashTitle(() => dashboardMain.fourDone)
+        setMessage(() => dashboardMessages.initial)
         break
       case 5:
         setDashTitle(() => dashboardMain.fiveDone)
+        setMessage(() => dashboardMessages.initial)
         break
       case 6:
         setDashTitle(() => dashboardMain.sixDone)
@@ -75,7 +80,7 @@ const SurveyDashMessages = ({
         break
       default:
         setDashTitle(() => dashboardMain.zeroDone)
-      //setMessage(() => dashboardMessages.initial)
+        setMessage(() => dashboardMessages.initial)
     }
     // eslint-disable-next-line
   }, [completedSections])
