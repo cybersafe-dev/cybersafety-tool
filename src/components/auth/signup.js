@@ -17,8 +17,14 @@ const Signup = () => {
     setSchoolName,
     pupilCount,
     setPupilCount,
+    firstName,
+    setFirstName,
+    lastName,
+    setLastName,
+    rollNumber,
+    setRollNumber,
   ] = React.useContext(userStore)
-  
+
   if (user) {
     navigate("/app")
   }
@@ -30,7 +36,7 @@ const Signup = () => {
       setError("Please fill in all the form fields")
       setTimeout(() => {
         setError(null)
-      }, 3000);
+      }, 3000)
       return false
     }
     return true
@@ -69,6 +75,12 @@ const Signup = () => {
       setSchoolName(value)
     } else if (name === "pupilCount") {
       setPupilCount(value)
+    } else if (name === "firstName") {
+      setFirstName(value)
+    } else if (name === "lastName")  {
+      setLastName(value)
+    } else if (name === "rollNumber") {
+      setRollNumber(value)
     }
   }
 
@@ -81,6 +93,32 @@ const Signup = () => {
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
       <form className="central-form">
+        <label htmlFor="firstName" className="block">
+          Your first name:
+          <input
+            type="text"
+            className="login-input"
+            name="firstName"
+            value={firstName}
+            placeholder="Enter first name"
+            id="firstName"
+            onChange={event => onChangeHandler(event)}
+          />
+        </label>
+
+        <label htmlFor="lastName" className="block">
+          Your last name:
+          <input
+            type="text"
+            className="login-input"
+            name="lastName"
+            value={lastName}
+            placeholder="Enter last name"
+            id="lastName"
+            onChange={event => onChangeHandler(event)}
+          />
+        </label>
+
         <label htmlFor="schoolName" className="block">
           Your School's name and county:
           <input
@@ -90,6 +128,19 @@ const Signup = () => {
             value={schoolName}
             placeholder="e.g. St. Patrick's, Dublin"
             id="schoolName"
+            onChange={event => onChangeHandler(event)}
+          />
+        </label>
+
+        <label htmlFor="rollNumber" className="block">
+          Your School's Roll Number (if not applicable leave blank):
+          <input
+            type="text"
+            className="login-input"
+            name="rollNumber"
+            value={rollNumber}
+            placeholder="Enter Roll Number"
+            id="rollNumber"
             onChange={event => onChangeHandler(event)}
           />
         </label>
