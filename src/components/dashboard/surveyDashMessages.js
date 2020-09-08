@@ -93,31 +93,3 @@ const SurveyDashMessages = ({
 }
 
 export default SurveyDashMessages
-
-// export const query = graphql`
-//   {
-//     allFile(
-//       filter: { sourceInstanceName: { eq: "content" }, name: { eq: "hints" } }
-//     ) {
-//       edges {
-//         node {
-//           childMarkdownRemark {
-//             frontmatter {
-//               surveyHints {
-//                 general
-//                 last
-//               }
-//               surveyProgress {
-//                 first
-//                 last
-//                 lessThanThree
-//                 middle
-//                 penultimate
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

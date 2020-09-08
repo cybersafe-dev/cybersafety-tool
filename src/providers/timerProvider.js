@@ -7,8 +7,8 @@ export const TimerStore = React.createContext("")
 const TimerProvider = props => {
   const [time, setTime] = React.useState(0)
 
-  let { seconds, minutes } = useStopwatch({
-    autoStart: true,
+  let { seconds, minutes, start } = useStopwatch({
+    autoStart: false,
   })
 
   if (minutes < 10) {
@@ -23,7 +23,7 @@ const TimerProvider = props => {
   }, [minutes, seconds])
 
   return (
-    <TimerStore.Provider value={[time, setTime]}>
+    <TimerStore.Provider value={[time, start, setTime]}>
       {props.children}
     </TimerStore.Provider>
   )
