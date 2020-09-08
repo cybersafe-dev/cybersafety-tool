@@ -33,9 +33,7 @@ const Dashboard = ({ data }) => {
   const surveyAllData =
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
-  const [message, setMessage] = React.useState(
-    "Click on a key to answer the questions for that category. See if you can complete all the categories before the timer gets to twenty minutes."
-  )
+  const [message, setMessage] = React.useState("")
 
   const [error, setError] = React.useState("")
 
