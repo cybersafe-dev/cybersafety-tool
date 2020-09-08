@@ -130,7 +130,7 @@ leaders:
   sharing:
     - statement: 1. I post regularly on social media.
       responses:
-        - answer: I'm not on socia media at all
+        - answer: I'm not on social media at all
         - answer: Not at all
         - answer: Not really
         - answer: Most days
@@ -281,11 +281,11 @@ teachers:
     - statement: 4. I talk regularly to my pupils throughout the year about online
         safety and responsibility.
       responses:
-        - answer: Strongly Agree
+        - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
-        - answer: Strongly Disagree
+        - answer: Strongly disagree
     - statement: 5. My pupils feel they can come and talk to me about anything that
         happens to them online.
       responses:
