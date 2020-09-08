@@ -130,7 +130,7 @@ leaders:
   sharing:
     - statement: 1. I post regularly on social media.
       responses:
-        - answer: I'm not on socia media at all
+        - answer: I'm not on social media at all
         - answer: Not at all
         - answer: Not really
         - answer: Most days
