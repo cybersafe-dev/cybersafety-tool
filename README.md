@@ -17,6 +17,7 @@ Special thanks to [Delesign](https://delesign.com/) for their lovely free graphi
 * Netlify functions
 * Firebase Firestore
 * Firebase Auth
+* react-pdf
 
 ### Run this app
 1. Clone this repository
@@ -47,12 +48,18 @@ Content management is provided for:
 * Editing survey questions and responses.
 * Editing some page hints and messages.
 * Editing some informational page content.
-* Viewing up-to-date progress of school's progress through the tool.
-* Viewing reports of schools whose surveys are complete.
-* Viewing a page that can be printed to PDF as a report to send back to schools.
 
 The CMS can be accessed [here](https://the full url/admin). You can log in and edit with CybersafeIreland's github credentials or if you are a collaborator on this repository.
 CMS edits update markdown files in this repository via commits on master directly.
+
+## Reporting and analysis
+An admin page is provided to view schools signed up, schools progress through the app and to download PDF reports when they have been submitted.
+This page can be found by logging in to the app through the log in page [here](https://the full url/app/login) with cybersafe credentials.
+
+When logged in you can see a filterable list of schools with option to show or hide details, view individual's survey submission scores and download a report.
+You can also see timestamps for when each score was submitted and for the time and date at which the final report was submitted.
+
+PDFs are created from a template react component via the react-pdf package.
 
 ## Costs
 Currently all SAAS accounts are on free tier (Firebase and Netlify) except Salesforce. It is unexpected that calls, writes etc will break the free provisions for the current userbase, but if the scale is extended, it may be worth looking at the quotas. Emails regarding running out of calls will be sent to cybersafe.dev@gmail.com. This email is accessible using CybersafeIreland credentials.
