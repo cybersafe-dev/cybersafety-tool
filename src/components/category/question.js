@@ -28,6 +28,7 @@ const Question = ({
         navigate("/survey/dashboard/")
       }
     })
+    // eslint-disable-next-line
   }, [])
 
   React.useEffect(() => {

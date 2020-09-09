@@ -4,7 +4,13 @@ import InlineReportTemplate from "./inlineReportTemplate"
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfReportTemplate from "../../templates/pdfReportTemplate"
 
-const ReportOptions = ({ report, reportSubmitted }) => {
+const ReportOptions = ({
+  report,
+  reportSubmitted,
+  reportSentBool,
+  toggleReportSentBool,
+  reportSentInitialValue,
+}) => {
   const [visibleReport, toggleReport] = React.useState(false)
 
   return (
@@ -16,19 +22,19 @@ const ReportOptions = ({ report, reportSubmitted }) => {
               Report: <span className="tick">✓</span>
             </p>
             {visibleReport ? (
-              <p
+              <button
                 className="report-toggle-btn"
                 onClick={() => toggleReport(!visibleReport)}
               >
                 hide report
-              </p>
+              </button>
             ) : (
-              <p
+              <button
                 className="report-toggle-btn"
                 onClick={() => toggleReport(!visibleReport)}
               >
                 show report
-              </p>
+              </button>
             )}
             <PDFDownloadLink
               className="pdf-dl-btn"
@@ -44,6 +50,18 @@ const ReportOptions = ({ report, reportSubmitted }) => {
                 loading ? "Loading document..." : "Download PDF"
               }
             </PDFDownloadLink>
+            <label htmlFor="reportSent" className="report-toggle-btn">
+              <input
+                className="checkbox"
+                type="checkbox"
+                id="reportSent"
+                name="reportSent"
+                value={reportSentBool}
+                onClick={() => toggleReportSentBool(!reportSentBool)}
+                defaultChecked={reportSentInitialValue}
+              />
+              report sent
+            </label>
           </div>
           <div style={{ display: visibleReport ? "block" : "none" }}>
             <InlineReportTemplate

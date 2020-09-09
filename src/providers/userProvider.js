@@ -42,6 +42,8 @@ const UserProvider = props => {
     }
   }, [pupilCount])
 
+  const reportSent = false
+
   React.useEffect(() => {
     if (!firebase) return
 
@@ -54,11 +56,21 @@ const UserProvider = props => {
         firstName,
         lastName,
         rollNumber,
+        reportSent,
       })
       setUser(user)
     })
     // eslint-disable-next-line
-  }, [firebase, schoolName, pupilCount, quota, firstName, lastName, rollNumber])
+  }, [
+    firebase,
+    schoolName,
+    pupilCount,
+    quota,
+    firstName,
+    lastName,
+    rollNumber,
+    reportSent,
+  ])
 
   return (
     <userStore.Provider
