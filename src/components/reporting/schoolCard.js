@@ -2,40 +2,58 @@ import React from "react"
 import ScoreCard from "./scoreCard"
 import ReportOptions from "./reportOptions"
 import "../../styling/reporting/schoolCard.css"
+import { updateReportSentValue } from "../../firebase"
 
 const SchoolCard = ({ school }) => {
   const [details, toggleDetails] = React.useState(false)
   const [scores, toggleScores] = React.useState(false)
+  const [reportSentBool, toggleReportSentBool] = React.useState(
+    school.reportSent
+  )
+
+  React.useEffect(() => {
+    updateReportSentValue(school.uid, reportSentBool)
+    //eslint-disable-next-line
+  }, [reportSentBool])
+
   return (
-    <section className="school-card" key={school.schoolName}>
+    <section
+      className={reportSentBool ? "school-card-complete" : "school-card"}
+      key={school.schoolName}
+    >
       <div className="bar-line">
-      <h2 className="bar-school-title">{school.schoolName}</h2>
-      {details ? (
-            <button
-              className="bar-toggle-btn"
-              onClick={() => toggleDetails(!details)}
-            >
-              hide details
-            </button>
-          ) : (
-            <button
-              className="bar-toggle-btn"
-              onClick={() => toggleDetails(!details)}
-            >
-              show details
-            </button>
-          )}
+        <h2 className="bar-school-title">{school.schoolName}</h2>
+        {details ? (
+          <button
+            className="bar-toggle-btn"
+            onClick={() => toggleDetails(!details)}
+          >
+            hide details
+          </button>
+        ) : (
+          <button
+            className="bar-toggle-btn"
+            onClick={() => toggleDetails(!details)}
+          >
+            show details
+          </button>
+        )}
       </div>
       <div style={{ display: details ? "block" : "none" }}>
         <div className="school-info">
           <p>Roll Number: {school.rollNumber ? school.rollNumber : "N/A"}</p>
-          <p>Contact name: {school.firstName} {school.lastName}</p>
+          <p>
+            Contact name: {school.firstName} {school.lastName}
+          </p>
           <p>Contact email: {school.email}</p>
           <p>Number of Pupils: {school.pupilCount}</p>
         </div>
         <ReportOptions
           report={school.report}
           reportSubmitted={school.reportSubmitted}
+          reportSentInitialValue={school.reportSent}
+          reportSentBool={reportSentBool}
+          toggleReportSentBool={toggleReportSentBool}
         />
         <div className="bar-line">
           <p>Individual Survey Scores:</p>

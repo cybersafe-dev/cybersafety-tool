@@ -114,6 +114,17 @@ export const postReportToDb = async (uid, report) => {
   }
 }
 
+// Update the reportSent value to whatever bool in a schools DB doc via their UID 
+export const updateReportSentValue = (uid, bool) => {
+  try {
+    firebase.firestore().collection("users").doc(uid).update({
+      reportSent: bool,
+    })
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 // KEEP THIS IN CASE WE NEED IT AGAIN LATER!!!
 // export const updateScores = async (schoolId, userType, myScores) => {
 //   if (!schoolId || !userType || !myScores) return "error"

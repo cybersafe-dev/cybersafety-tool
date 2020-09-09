@@ -6,6 +6,14 @@
     padding: 2rem;
 }
 
+.school-card-complete {
+    width: 90vw;
+    margin: 1rem auto 0 auto;
+    background-color: #C1FFC1;
+    border-radius: 40px;
+    padding: 2rem;
+}
+
 .scorecard-box {
     width: 100%;
     display: flex;
@@ -27,6 +35,7 @@
     margin-left: 0.5rem;
     cursor: pointer;
     border: none;
+    background-color: transparent;
 }
 
 .bar-school-title {

@@ -20,6 +20,7 @@ const Reporting = () => {
     navigate("/app/login")
   }
 
+  // Get and store all signed up schools from database when firebase exists
   React.useEffect(() => {
     let holdingArray = []
     const getAllSchools = async () => {
@@ -30,7 +31,9 @@ const Reporting = () => {
         .get()
         .then(query => {
           query.forEach(doc => {
-            holdingArray.push(doc.data())
+            const data = doc.data()
+            const uid = doc.id
+            holdingArray.push({ uid: uid, ...data })
           })
           setAllSchools(holdingArray)
         })
@@ -39,16 +42,20 @@ const Reporting = () => {
     getAllSchools()
   }, [firebase])
 
+  // If searchTerm state item is updated, run filter function
   React.useEffect(() => {
     filterSchools()
     //eslint-disable-next-line
   }, [searchTerm])
 
+  // Update the search term store/input text and update first load status
   const updateSearchTerm = e => {
     setsearchTerm(e.target.value)
     setFirstLoad(false)
   }
 
+  // If not the first load filter the schools based on search term and store.
+  // If truthy the filtered schools will replace the full list on next render.
   const filterSchools = () => {
     if (!firstLoad) {
       setFilteredSchools(
@@ -61,7 +68,10 @@ const Reporting = () => {
     }
   }
 
-  if (!user || !firebase || !allSchools) return <h1>Loading...</h1>
+  // check for vital data before attempting to render schools.
+  if (!user || !firebase || !allSchools)
+    return <h1 className="admin-dash-heading-reporting">Loading...</h1>
+
   return (
     <section className="dashboard-body">
       <SEO title="CSI Admin" />
@@ -73,7 +83,9 @@ const Reporting = () => {
         onChange={updateSearchTerm}
       />
       <h1 className="admin-dash-heading-reporting">{user.schoolName}</h1>
-      <h2 className="descriptive-title">Schools Signed Up: {allSchools.length}</h2>
+      <h2 className="descriptive-title">
+        Schools Signed Up: {allSchools.length}
+      </h2>
       {filteredSchools
         ? filteredSchools.map(school =>
             school.schoolName ? (
