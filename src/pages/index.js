@@ -19,6 +19,7 @@ import Yout from "../images/yout.svg"
 const MiniSite = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
+
     <Layout>
     <MiniNavbar />
     <SEO title="Home" />
@@ -119,6 +120,7 @@ const MiniSite = props => {
         </div>
 
     </Layout>
+
   )
 }
 export default MiniSite

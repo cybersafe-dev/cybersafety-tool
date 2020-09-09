@@ -1,19 +1,15 @@
-html {
-  overflow: scroll !important;
-}
-
 /* TOP 3 SECTIONS */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem 5rem 0 5rem;
+}
 .section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 0 2rem 2rem 0;
   height: 100vh;
-}
-.section-container {
-  display: flex;
-  flex-direction: column;
-  margin: 5rem 5rem 0 5rem;;
 }
 .section-title {
   margin-top: 6rem;
@@ -52,11 +48,13 @@ html {
   background: #eeeeee;
   padding-top: 4rem;
   padding-left: 5rem;
+
 }
 .contact-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
 .contact-details {
   display: flex;

@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   padding: 5rem;
+  height: 80vh;
 }
 
 .selection-container h1 {
@@ -78,7 +79,7 @@
     width: 100vw;
     padding: 3rem 1rem 3rem 1rem;
   }
-  
+
   .bg-img2 {
     left: 1rem;
     z-index: -1;
@@ -88,7 +89,7 @@
   .roles {
     width: 100vw;
   }
-  
+
   .leader {
     padding: 1rem;
   }
