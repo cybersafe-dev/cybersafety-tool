@@ -14,14 +14,8 @@ import logo from "../images/cybersafe-logo.png"
 // import blob from "../images/bg-gradient.svg"
 
 // Download fonts - curl the typical embed link given by google to get individual ttf links
-Font.register(
-  "https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6V1s.ttf",
-  { family: "PoppinsBody" }
-)
-Font.register(
-  "https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLCz7V1s.ttf",
-  { family: "PoppinsHeading" }
-)
+ Font.register({ family: 'PoppinsBody', src: "https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6V1s.ttf", fontStyle: 'normal', fontWeight: 600, });
+ Font.register({ family: 'PoppinsHeading', src: "https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLCz7V1s.ttf", fontStyle: 'normal', fontWeight: 700, });
 
 // Create styles
 const styles = StyleSheet.create({
@@ -88,7 +82,7 @@ const styles = StyleSheet.create({
     },
     columnTitle: {
       fontSize: 12,
-      fontFamily: "PoppinsBody",
+      fontFamily: "PoppinsHeading",
       fontWeight: 700,
       color: "#181818",
     },
