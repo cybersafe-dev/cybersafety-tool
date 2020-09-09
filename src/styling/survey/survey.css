@@ -1,18 +1,16 @@
-
 .intropage-container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* justify-content: space-between;
-  overflow: hidden; */
+  height: 80vh;
 }
 .introtext-box {
   display: flex;
   flex-direction: row;
-  padding: 0;
+  padding: 1rem;
   margin: -1em;
-}
 
+}
 .bg1 {
   position: absolute;
   left: 2em;
@@ -23,20 +21,28 @@
 }
 .bg2 {
   position: absolute;
-  right: -5em;
-  bottom: -10em;
+  right: 0;
   z-index: -1;
-  height: 22rem;
-  transform: rotate(10deg);
+  height: 20rem;
+  opacity: 80%;
 }
 .bg3 {
+  position: absolute;
+  left: 0;
+  top: 20em;
+  z-index: -1;
+  height: 15rem;
+  opacity: 80%;
+  transform: rotate(180deg);
+}
+/* .bg3 {
   position: absolute;
   left: -7em;
   bottom: -10em;
   z-index: -1;
   height: 22rem;
   transform: rotate(70deg);
-}
+} */
 
 .para-1 {
   display: flex;

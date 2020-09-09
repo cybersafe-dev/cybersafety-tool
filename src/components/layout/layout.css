@@ -4,7 +4,8 @@ html {
   font-family: "Poppins", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  /* overflow: hidden !important;  */
+
+
 }
 body {
   margin: 0;
@@ -89,8 +90,9 @@ sup {
 }
 img {
   border-style: none;
+  overflow: hidden;
 }
-svg:not(:root) {
+svg {
   overflow: hidden;
 }
 code,
@@ -103,11 +105,11 @@ samp {
 figure {
   margin: 1em 40px;
 }
-hr {
+/* hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
-}
+} */
 button,
 input,
 optgroup,
