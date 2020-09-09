@@ -28,6 +28,8 @@ const SchoolCard = ({ school }) => {
       </div>
       <div style={{ display: details ? "block" : "none" }}>
         <div className="school-info">
+          <p>Roll Number: {school.rollNumber ? school.rollNumber : "N/A"}</p>
+          <p>Contact name: {school.firstName} {school.lastName}</p>
           <p>Contact email: {school.email}</p>
           <p>Number of Pupils: {school.pupilCount}</p>
         </div>
