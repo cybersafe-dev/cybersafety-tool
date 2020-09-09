@@ -32,10 +32,11 @@ Steps 1, 2 and 3 from above
 run `gatsby build`
 
 ### Run this app with netlify functions
-Netlify functions control the app's integration with Salesforce. 
-install Netlify CLI on your machine: `npm install netlify-cli -g`
-run `netlify dev`
-Go to localhost:8888 in your browser
+Steps 1, 2 and 3 from above  
+Netlify functions control the app's integration with Salesforce.   
+install Netlify CLI on your machine: `npm install netlify-cli -g`  
+run `netlify dev`  
+Go to localhost:8888 in your browser  
 
 ## Firebase
 Database and authentication are provided by Google Firebase. You can log in to the control panel with the CyberSafeIreland credentials and view the current db, access the firebase config and add or remove authenticated users and authentication methods.
