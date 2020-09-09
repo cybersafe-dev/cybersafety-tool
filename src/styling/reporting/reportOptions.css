@@ -14,6 +14,7 @@
   color: #2a94f4;
   margin-left: 0.5rem;
   cursor: pointer;
+  border: none;
 }
 
 .report-toggle-btn:hover {

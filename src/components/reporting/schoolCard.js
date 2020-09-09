@@ -19,13 +19,13 @@ const SchoolCard = ({ school }) => {
       <div className="scores-line">
         <p>Individual Survey Scores:</p>
         {scores ? (
-          <p className="scores-toggle-btn" onClick={() => showScores(!scores)}>
+          <button className="scores-toggle-btn" onClick={() => showScores(!scores)}>
             hide
-          </p>
+          </button>
         ) : (
-          <p className="scores-toggle-btn" onClick={() => showScores(!scores)}>
+          <button className="scores-toggle-btn" onClick={() => showScores(!scores)}>
             show
-          </p>
+          </button>
         )}
       </div>
       <div style={{ display: scores ? "block" : "none" }}>

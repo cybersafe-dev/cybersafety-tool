@@ -16,19 +16,19 @@ const ReportOptions = ({ report, reportSubmitted }) => {
               Report: <span className="tick">✓</span>
             </p>
             {visibleReport ? (
-              <p
+              <button
                 className="report-toggle-btn"
                 onClick={() => toggleReport(!visibleReport)}
               >
                 hide report
-              </p>
+              </button>
             ) : (
-              <p
+              <button
                 className="report-toggle-btn"
                 onClick={() => toggleReport(!visibleReport)}
               >
                 show report
-              </p>
+              </button>
             )}
             <PDFDownloadLink
               className="pdf-dl-btn"
