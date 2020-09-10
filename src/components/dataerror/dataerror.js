@@ -12,8 +12,8 @@ const DataErrorPage = () => (
     <section className="page-container">
       <h1 className="error-heading">Data Error</h1>
       <img src={unknown} alt="Question Mark" className="unknown" />
-      <p>Oops...your school's id went missing!</p>
-      <p>Please start your survey again from the full link you were sent.</p>
+      <p className="message">Oops...your school's id went missing!</p>
+      <p className="message">Please start your survey again from the full link you were sent.</p>
     </section>
   </Layout>
 )
