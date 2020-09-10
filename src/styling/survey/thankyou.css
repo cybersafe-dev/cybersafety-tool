@@ -8,7 +8,7 @@
 }
 
 .thanku-title {
-  margin: 0 0 3rem 0;
+  margin: 0 0 2rem 0;
   text-align: center;
 }
 .thanku-message {
@@ -55,11 +55,14 @@
     z-index: -1;
     width: 20rem;
   }
+  .bg-img9 {
+  display: none;
+  }
   .thanku-message {
     margin-top: 2rem;
     text-align: center;
+    font-size: 1rem;
   }
-
   .design {
     width: 100%;
   }
