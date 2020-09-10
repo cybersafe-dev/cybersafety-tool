@@ -8,7 +8,14 @@ import MiniNavbarMobile from "./miniNavbarMobile"
 const MiniNavbar = () => {
   const [user] = React.useContext(userStore)
 
-  const [isDesktop, setDesktop] = React.useState(window.innerWidth < 1000)
+  const [isDesktop, setDesktop] = React.useState(false)
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setDesktop(window.innerWidth < 1000)
+    }
+    // eslint-disable-next-line
+  }, [])
 
   const updateMedia = () => {
     if (typeof window !== "undefined") {
