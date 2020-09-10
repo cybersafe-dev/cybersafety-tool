@@ -24,7 +24,6 @@
   top: 0;
   left: 0;
   background-color: white;
-  /* height: 15vh; */
 }
 
 .mobile-logo-bar {
@@ -78,14 +77,14 @@
   top: 2rem;
   right: 2rem;
   background: transparent;
-  border:0; 
+  border: 0;
   padding: 0;
   cursor: pointer;
 }
 
 .burger-button {
   background: transparent;
-  border:0; 
+  border: 0;
   padding: 0;
   cursor: pointer;
 }
@@ -116,10 +115,11 @@
     position: fixed;
     width: 100%;
   }
+
   .nav-logo {
     width: 30vw;
-    /* margin-left: 1rem; */
   }
+
   .nav-links {
     display: flex;
     flex-direction: column;
