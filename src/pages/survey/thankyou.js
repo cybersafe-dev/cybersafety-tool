@@ -20,10 +20,10 @@ const ThankYou = () => (
       <p className="thanku-message">
         {" "}
         Your answers have been sent off to the cloud. You can close this window
-        now.{" "}
+        now or visit our website.{" "}
       </p>
       <a className="csi-btn" href="https://www.cybersafeireland.com/" target="_blank"
-      rel="noreferrer">CyberSafeIreland Homepage</a>
+      rel="noreferrer">CyberSafeIreland</a>
     </section>
   </Layout>
 )
