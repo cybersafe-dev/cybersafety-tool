@@ -3,16 +3,32 @@
   align-items: center;
   flex-direction: column;
   height: 80vh;
+  width: 100vw;
 }
-.introtext-box {
+.introtext-box,
+.introtext-box-horiz-flipped {
   display: flex;
   flex-direction: row;
   padding: 1rem;
   margin: -1em;
-
 }
+
+.button-and-pills {
+  width: 100vw;
+  background-color: transparent;
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  /* padding: 1rem; */
+}
+
 .bg1 {
-  position: absolute;
+  position: fixed;
   left: 2em;
   top: -12em;
   z-index: -1;
@@ -20,14 +36,14 @@
   transform: rotate(230deg);
 }
 .bg2 {
-  position: absolute;
+  position: fixed;
   right: 0;
   z-index: -1;
   height: 20rem;
   opacity: 80%;
 }
 .bg3 {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 20em;
   z-index: -1;
@@ -36,13 +52,17 @@
   transform: rotate(180deg);
 }
 /* .bg3 {
-  position: absolute;
+  position: fixed;
   left: -7em;
   bottom: -10em;
   z-index: -1;
   height: 22rem;
   transform: rotate(70deg);
 } */
+
+.figure {
+  width: 8rem;
+}
 
 .para-1 {
   display: flex;
@@ -56,6 +76,7 @@
   padding: 1rem;
   max-width: 50vw;
 }
+
 .para-3 {
   display: flex;
   align-items: center;
@@ -86,24 +107,46 @@
   text-decoration: none;
 }
 
+.welcome {
+  margin-top: 2rem;
+}
+
 @media only screen and (max-width: 480px) {
   .intropage-container {
     display: flex;
-    margin: 0 1rem 0 1rem;
+    padding: 1rem;
+    height: auto;
+    overflow-x: hidden;
   }
 
   .introtext-box {
     display: flex;
     text-align: left;
     justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0;
+    margin: 0;
   }
 
+  .introtext-box-horiz-flipped {
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+ 
+
   .bg1 {
-    position: absolute;
+    position: fixed;
     left: -5em;
     top: 8em;
     z-index: -1;
-    height: 25rem;
+    height: 15rem;
     opacity: 70%;
     transform: rotate(230deg);
   }
@@ -113,17 +156,17 @@
   .bg3 {
     display: none;
   }
-  .para-1 {
-    max-width: 400px;
-  }
-  .para-2 {
-    max-width: 400px;
-  }
+  .para-1,
+  .para-2,
   .para-3 {
-    max-width: 400px;
+    padding: 0;
+    max-width: 100%;
+    margin: 2rem 0 2rem 0;
   }
+
   .figure {
-    width: 30vw;
+    width: 70vw;
+    margin: 1rem 0 1rem 0;
   }
   .start-btn {
     margin: 1rem;
