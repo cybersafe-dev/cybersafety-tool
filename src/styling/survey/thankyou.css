@@ -51,16 +51,20 @@
 
 @media only screen and (max-width: 768px) {
   .bg-img6 {
-    left: 2.5rem;
+    justify-content: center;
     z-index: -1;
     width: 20rem;
   }
   .thanku-message {
-    margin-top: 3rem;
+    margin-top: 2rem;
     text-align: center;
   }
 
-  .rocket {
+  .design {
     width: 100%;
+  }
+
+  .csi-btn {
+    width: 300px;
   }
 }
