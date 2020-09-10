@@ -57,7 +57,7 @@
   text-align: center;
 }
 
-.bg-img5 {
+.bg-img-q {
   position: absolute;
   left: 16em;
   top: 9em;
@@ -103,10 +103,10 @@
   .response-option {
     width: 300px;
   }
-  .bg-img5 {
+  .bg-img-q {
     left: 0.5rem;
     z-index: -1;
-    width: 30rem;
+    width: 20rem;
     transform: rotate(90deg);
   }
   .tip {
