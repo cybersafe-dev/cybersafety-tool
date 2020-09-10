@@ -47,8 +47,6 @@
   cursor: pointer;
 }
 
-
-
 @media only screen and (max-width: 768px) {
   .bg-img6 {
     justify-content: center;
