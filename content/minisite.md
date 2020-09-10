@@ -1,13 +1,13 @@
 ---
 minisitecontent:
   tool: >+
-    Welcome to the CyberSafeIreland Self-Assessment Tool for Schools.
+    Welcome to the CyberSafeIreland Self-Assessment Tool for Schools.    
 
 
-    This tool provides an opportunity for you to evaluate your school’s level of cybersafety across a series of categories with questionnaires aimed at school Leaders, Teachers and Pupils.
+    This tool provides an opportunity for you to evaluate your school’s level of cybersafety across a series of categories with questionnaires aimed at school Leadership, Teachers and Pupils.  
 
 
-    Click ‘Get started’ to fill in an expression of interest and the CyberSafeIreland team will contact you to get your school going with the tool. Contact us directly if you require more information.
+    Click ‘Get started’ to create an account for your school. Contact us directly if you require more information.
 
   cybersafety: >-
     Schools today are increasingly connected places and are often where kids’

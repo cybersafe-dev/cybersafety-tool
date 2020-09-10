@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Logo from "../../images/logosvg.svg"
+import Logo from "../../images/cybersafe-logo.png"
 import "../../styling/app/mininavbar.css"
 import MenuModal from "./menuModal"
 import menuBtn from "../../images/menu-icon.svg"
