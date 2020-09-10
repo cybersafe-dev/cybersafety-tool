@@ -1,30 +1,52 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: white;
   width: 100%;
+  height: 15vh;
   top: 0;
   position: fixed;
-  padding-top: 1rem;
+  padding: 1rem 10vw 0 10vw;
   font-size: 0.8rem;
   padding-bottom: 1rem;
   overflow: hidden;
 }
+
+.mobile-navbar {
+  width: 100vw;
+  display: flex;
+  padding: 2rem 1rem 2rem 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  /* height: 15vh; */
+}
+
+.mobile-logo-bar {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
 .nav-logo {
   width: 15vw;
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
   top: 0;
 }
-.nav-links {
-  margin-right: 8rem;
-  padding-top: 1.2rem;
-}
+
 .nav {
   margin: 0.5rem;
   text-decoration: none;
   color: #181818;
-
 }
+
 .started-nav {
   background-color: #53c5cd;
   border-radius: 30px;
@@ -35,9 +57,40 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 480px) {
+.menu-modal-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #53c5cd;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
 
+.x-button {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+}
+
+.modal-link {
+  color: white;
+  font-size: 2rem;
+}
+
+.modal-link:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1000px) {
   .navbar {
+    height: auto;
     display: flex;
     flex-direction: column;
     font-size: 0.9rem;
@@ -46,9 +99,8 @@
     width: 100%;
   }
   .nav-logo {
-    width: 35vw;
-    margin-left: 1rem;
-    top: 0;
+    width: 30vw;
+    /* margin-left: 1rem; */
   }
   .nav-links {
     display: flex;
@@ -63,10 +115,9 @@
     margin: 0.2rem;
   }
 
-
   .started-nav {
-    padding: 0.4rem;
-    width: 35vw;
+    padding: 0.8rem;
+    /* width: 35vw; */
     margin-left: 0.2rem;
   }
 }
