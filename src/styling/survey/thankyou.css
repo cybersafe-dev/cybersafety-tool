@@ -12,39 +12,42 @@
   text-align: center;
 }
 .thanku-message {
-  margin-top: 3rem;
+    margin-top: 1rem;
 }
 .bg-img6 {
   position: absolute;
-  right: 23em;
-  top: 8.5em;
+  justify-content: center;
+  top: 10rem;
+  height: 18rem;
   z-index: -1;
-  width: 22rem;
 }
 
 .bg-img9 {
   position: absolute;
-  right: 14em;
-  width: 40rem;
+  justify-content: center;
+  height: 20rem;
   z-index: -1;
 }
 
-.close-btn {
+.design {
+  height: 20rem;
+}
+
+.csi-btn {
   background: #53c5cd;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
   color: white;
   padding: 0.5rem;
-  width: 250px;
+  width: 350px;
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+  cursor: pointer;
 }
 
-.rocket {
-  width: 400px;
-}
+
 
 @media only screen and (max-width: 768px) {
   .bg-img6 {

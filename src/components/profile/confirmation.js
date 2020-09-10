@@ -14,7 +14,7 @@ const Confirmation = () => (
     <h1 className="thanku-title">Thank you!</h1>
     <section className="thanku-container">
       <img src={BgImg} alt="background design" className="bg-img9" />
-      <img src={High5} alt="rocket icon" className="high-five" />
+      <img src={High5} alt="high-five icon" className="design" />
       <p className="thanku-message">
         {" "}
         The results have been sent off to be evaluated. You will recieve your
