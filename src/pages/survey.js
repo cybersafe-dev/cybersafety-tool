@@ -1,13 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { ResponseStore } from "../providers/responseProvider"
-// <img src={BgImg} alt="background design" className="bg3" />
 import Layout from "../components/layout/layout"
 import Header from "../components/header/header"
 import SEO from "../components/seo"
 
 import Icon1 from "../images/intro-icon1.svg"
-// import Icon2 from "../images/intro-icon2.svg"
 import Icon2 from "../images/self-assess.svg"
 import Icon3 from "../images/intro-icon3.svg"
 import BgImg from "../images/bg-gradient.svg"

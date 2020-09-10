@@ -611,14 +611,6 @@ pre tt:after {
   padding: 1rem;
 }
 
-.pills {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  justify-content: center;
-  margin: 1rem;
-}
-
 .filled-pill {
   background-color: #181818;
   width: 2.6rem;
