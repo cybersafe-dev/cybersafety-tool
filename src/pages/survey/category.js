@@ -56,7 +56,7 @@ const Category = props => {
   return (
     <Layout>
       <>
-        <img src={BgImg} alt="background design" className="bg-img5" />
+        <img src={BgImg} alt="background design" className="bg-img-q" />
 
         <h1 className="question-title">{category}</h1>
         <section className="question-container">

@@ -34,7 +34,7 @@
   margin: 0 1rem 0 1rem;
 }
 
-.bg-img3 {
+.bg-img-dash {
   position: absolute;
   right: 5em;
   top: -11em;
@@ -43,7 +43,7 @@
   transform: rotate(230deg);
 }
 
-.bg-img4 {
+.bg-img-dash1 {
   visibility: hidden;
   position: absolute;
   z-index: -1;
