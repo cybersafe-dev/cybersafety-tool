@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "../../styling/app/mininavbar.css"
+import xBtn from "../../images/x-icon.svg"
 
 const MenuModal = ({ toggleMenuModal, menuModalVisible }) => {
   return (
@@ -9,7 +10,7 @@ const MenuModal = ({ toggleMenuModal, menuModalVisible }) => {
         className="x-button"
         onClick={() => toggleMenuModal(!menuModalVisible)}
       >
-        x
+        <img className="menu-toggle-button" src={xBtn} alt="close menu" />
       </button>
       <Link to="/#about" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
         About Us

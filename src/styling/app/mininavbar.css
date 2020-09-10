@@ -16,7 +16,7 @@
 .mobile-navbar {
   width: 100vw;
   display: flex;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 2rem 2rem 1rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -76,7 +76,25 @@
 .x-button {
   position: fixed;
   top: 2rem;
-  right: 1rem;
+  right: 2rem;
+  background: transparent;
+  border:0; 
+  padding: 0;
+  cursor: pointer;
+}
+
+.burger-button {
+  background: transparent;
+  border:0; 
+  padding: 0;
+  cursor: pointer;
+}
+
+.menu-toggle-button {
+  width: 2rem;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .modal-link {

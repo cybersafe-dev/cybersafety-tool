@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Logo from "../../images/logosvg.svg"
 import "../../styling/app/mininavbar.css"
 import MenuModal from "./menuModal"
+import menuBtn from "../../images/menu-icon.svg"
 
 const MiniNavbarMobile = ({ user }) => {
   const [menuModalVisible, toggleMenuModal] = React.useState(false)
@@ -27,7 +28,9 @@ const MiniNavbarMobile = ({ user }) => {
           </Link>
         )}
       </div>
-      <button onClick={() => toggleMenuModal(!menuModalVisible)}>hi</button>
+      <button className="burger-button" onClick={() => toggleMenuModal(!menuModalVisible)}>
+        <img className="menu-toggle-button" src={menuBtn} alt="view menu" />
+      </button>
     </nav>
   )
 }
