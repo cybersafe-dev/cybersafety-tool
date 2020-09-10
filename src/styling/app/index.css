@@ -2,43 +2,61 @@
 .section-container {
   display: flex;
   flex-direction: column;
-  margin: 5rem 5rem 0 5rem;
+  margin: 0 10vw 0 10vw;
 }
 .section {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 2rem 2rem 0;
-  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  /* flex-grow: 1; */
 }
 .section-title {
-  margin-top: 6rem;
+  margin-top: 2rem;
 }
 .site-text {
-  width: 60vw;
+  width: 50vw;
   line-height: 1.8rem;
 }
 .fig {
-  width: 45vw;
+  align-self: flex-end;
+  max-width: 40vw;
 }
-
 
 /* ABOUT SECTION */
 
 #about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: left;
+  height: 85vh;
+  padding-top: 15vh;
+  box-sizing: content-box;
 }
 
 /* CYBERSAFETY SECTION */
 
 #cybersafety {
-  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  text-align: left;
+  height: 85vh;
+  padding-top: 15vh;
+  box-sizing: content-box;
 }
 
 /* CYBERSAFEIRELAND SECTION */
 
-#csi {
+#cybersafeireland {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: left;
+  height: 85vh;
+  padding-top: 15vh;
+  box-sizing: content-box;
 }
 
 /* CONTACT SECTION */
@@ -46,23 +64,24 @@
 #contact-us {
   text-align: left;
   background: #eeeeee;
-  padding-top: 4rem;
-  padding-left: 5rem;
-
+  height: 85vh;
+  padding: 15vh 4rem 0 4rem;
+  box-sizing: content-box;
 }
+
 .contact-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
+
 .contact-details {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
-  margin-left: 2rem;
   font-size: 0.7rem;
 }
+
 .csi-link {
   background-color: #53c5cd;
   border-radius: 30px;
@@ -73,73 +92,106 @@
   text-decoration: none;
   box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
 }
+
 .socials {
   margin-top: 1.5rem;
 }
+
 .social {
   margin-right: 0.5rem;
 }
+
 .surf {
   width: 35vw;
-  margin-right: 5rem;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1000px) {
   /* TOP 3 SECTIONS */
   .section-container {
-    width: 100%;
-    margin-left: 0.3rem;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    }
-  .section-title {
-    margin-top: 10rem;
-    }
-    .site-text {
-      margin: 0 0.5rem 0 0.5rem;
-    }
-  .section {
-    height: 100vh;
-    text-align: center;
-    padding: 0;
-    /* display: flex;
-    flex-direction: column;
-    padding: 0;
-    width: 100%;
-    align-items: center; */
-    }
-  .fig {
-    align-self: flex-start;
-    width: 50vw;
-    margin: 1rem;
-    }
+    padding: 1rem;
+    margin: 0;
+  }
 
-/* CONTACT SECTION */
+  .section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 0;
+  }
+
+  .section-title {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: left;
+  }
+  .site-text {
+    width: 50vw;
+    line-height: 1.8rem;
+    width: 100%;
+  }
+
+  .fig {
+    align-self: center;
+    max-width: 80vw;
+    margin: 1rem;
+  }
+
+  #about,
+  #cybersafety,
+  #cybersafeireland {
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* CONTACT SECTION */
   #contact-us {
     text-align: left;
     background: #eeeeee;
-    padding-top: 2rem;
-    padding-left: 0
+    padding: 0;
+    height: auto;
+    padding: 15vh 1rem 0 1rem;
   }
+
+  .contact-section {
+    flex-direction: column;
+  }
+
   .contact-details {
     display: flex;
     flex-direction: column;
     font-size: 0.9rem;
+    align-items: flex-start;
   }
   .csi-link {
-    width: 50vw;
+    width: 250px;
+    margin: 1rem 0 1rem 0;
+    align-self: center;
   }
   .socials {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
   .social {
     margin-right: 0.5rem;
     width: 8vw;
   }
+
+  .surf-container {
+    display: flex;
+    justify-content: center;
+  }
+
   .surf {
-    width: 35vw;
+    width: 80vw;
     margin-top: 4rem;
     margin-right: 0;
+    align-self: center;
   }
 }
