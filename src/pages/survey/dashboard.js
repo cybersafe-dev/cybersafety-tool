@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import { ResponseStore } from "../../providers/responseProvider"
 
 import Layout from "../../components/layout/layout"
-// import DataErrorPage from "../../components/dataerror/dataerror"
 import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
 import SEO from "../../components/seo"
 
@@ -29,13 +28,11 @@ import "../../styling/survey/dashboard.css"
 
 const Dashboard = ({ data }) => {
   const [store] = React.useContext(ResponseStore)
+  const [message, setMessage] = React.useState("")
+  const [error, setError] = React.useState("")
 
   const surveyAllData =
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
-
-  const [message, setMessage] = React.useState("")
-
-  const [error, setError] = React.useState("")
 
   if (!store || !store.userType || !store.schoolId) {
     return <h1 className="title">Reloading...</h1>
