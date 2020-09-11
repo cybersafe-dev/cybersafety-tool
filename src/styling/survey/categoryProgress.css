@@ -1,32 +1,37 @@
-.catprog-container {
+.catprogress-container {
   display: flex;
   justify-content: flex-end;
-  text-align: left;
-}
-.catprog-container {
-  white-space: nowrap;
-  margin-right: 2rem;
+  padding: 0;
 }
 
-.catprog-title {
-  font-size: 1.5rem;
+.catprogress-title {
+  font-size: 1.2rem;
 }
 
-.catprog-fraction {
-  font-size: 1.5rem;
+.catprogress-fraction {
+  font-size: 1.6rem;
   margin-left: 0.5rem;
 }
 
 @media only screen and (max-width: 480px) {
-  .catprog-container {
+  .catprogress-container {
     display: flex;
-  
-    justify-content: flex-start;
+    justify-content: left;
+    align-items: baseline;
   }
-  .catprog-title {
-    font-size: 1rem;
+  .catprogress-title {
+    font-size: 1.5rem;
+    margin: 0;
   }
-  .catprog-fraction {
-    font-size: 1rem;
+  .catprogress-fraction {
+    margin: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  .catprogress-container {
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
   }
 }

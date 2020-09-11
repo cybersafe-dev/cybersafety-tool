@@ -57,7 +57,6 @@ const Category = props => {
     <Layout>
       <>
         <img src={BgImg} alt="background design" className="bg-img-q" />
-
         <h1 className="question-title">{category}</h1>
         <section className="question-container">
           <Question
@@ -70,12 +69,12 @@ const Category = props => {
           />
         </section>
         <section className="progression">
-        <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
         <ProgressBar
           done={currentQ}
           sectionLength={sectionLength}
           questionMessageData={questionMessageData}
         />
+        <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
         </section>
       </>
     </Layout>
