@@ -9,7 +9,7 @@
 }
 
 .catprogress-fraction {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-left: 0.5rem;
 }
 
@@ -25,6 +25,13 @@
   }
   .catprogress-fraction {
     margin: 0.5rem;
+  }
+}
 
+@media only screen and (max-width: 900px){
+  .catprogress-container {
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
   }
 }

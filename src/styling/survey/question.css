@@ -77,7 +77,7 @@
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px){
   .question-title {
     text-align: center;
     font-size: 2rem;
@@ -105,7 +105,7 @@
   .bg-img-q {
     left: 0.5rem;
     z-index: -1;
-    width: 20rem;
+    width: 18rem;
     transform: rotate(90deg);
   }
   .tip {
