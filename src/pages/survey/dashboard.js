@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { ResponseStore } from "../../providers/responseProvider"
 
 import Layout from "../../components/layout/layout"
-import DataErrorPage from "../../components/dataerror/dataerror"
+// import DataErrorPage from "../../components/dataerror/dataerror"
 import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
 import SEO from "../../components/seo"
 
@@ -38,7 +38,7 @@ const Dashboard = ({ data }) => {
   const [error, setError] = React.useState("")
 
   if (!store || !store.userType || !store.schoolId) {
-    return <DataErrorPage />
+    return <h1 className="title">Reloading...</h1>
   }
 
   const user = store.userType
@@ -57,7 +57,7 @@ const Dashboard = ({ data }) => {
   // Debugging logs
   // console.log(user, userSpecificData)
   // console.log("messages", allDashMessages)
-  // console.log({ store })
+  // console.log("store in survey dash", store)
 
   return (
     <Layout>
