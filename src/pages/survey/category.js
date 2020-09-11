@@ -70,12 +70,12 @@ const Category = props => {
           />
         </section>
         <section className="progression">
-        <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
         <ProgressBar
           done={currentQ}
           sectionLength={sectionLength}
           questionMessageData={questionMessageData}
         />
+        <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
         </section>
       </>
     </Layout>

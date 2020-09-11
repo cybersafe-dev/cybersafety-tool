@@ -45,9 +45,8 @@
 
 .progression {
   position: absolute;
-  bottom: 1em;
-  right: 1em;
-  padding: 1rem;
+  bottom: 1rem;
+  right: 3rem;
 }
 
 .tip {
