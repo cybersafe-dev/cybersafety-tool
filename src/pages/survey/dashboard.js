@@ -3,9 +3,9 @@ import { Link, graphql } from "gatsby"
 import { ResponseStore } from "../../providers/responseProvider"
 
 import Layout from "../../components/layout/layout"
-import DataErrorPage from "../../components/dataerror/dataerror"
 import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
 import SEO from "../../components/seo"
+import DataError from "../../components/dataerror/dataerror"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
 
@@ -29,16 +29,14 @@ import "../../styling/survey/dashboard.css"
 
 const Dashboard = ({ data }) => {
   const [store] = React.useContext(ResponseStore)
+  const [message, setMessage] = React.useState("")
+  const [error, setError] = React.useState("")
 
   const surveyAllData =
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
-  const [message, setMessage] = React.useState("")
-
-  const [error, setError] = React.useState("")
-
   if (!store || !store.userType || !store.schoolId) {
-    return <DataErrorPage />
+    return <DataError />
   }
 
   const user = store.userType
@@ -57,7 +55,7 @@ const Dashboard = ({ data }) => {
   // Debugging logs
   // console.log(user, userSpecificData)
   // console.log("messages", allDashMessages)
-  // console.log({ store })
+  // console.log("store in survey dash", store)
 
   return (
     <Layout>

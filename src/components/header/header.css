@@ -1,5 +1,15 @@
+.app-header {
+  height: 7vh;
+}
+
 .logo {
   height: 3rem;
   margin: 0.6rem;
   margin-bottom: 0.2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .app-header {
+    height: auto;
+  }
 }
