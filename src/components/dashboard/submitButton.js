@@ -41,7 +41,7 @@ const SubmitButton = ({ setError }) => {
       )
     } else {
       setError(
-        "Sorry, there was an error uploading your survey. Please try again."
+        "Sorry, there was an error uploading your survey. Please begin again from the full link you were sent."
       )
     }
   }

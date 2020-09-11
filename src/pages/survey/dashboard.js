@@ -5,6 +5,7 @@ import { ResponseStore } from "../../providers/responseProvider"
 import Layout from "../../components/layout/layout"
 import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
 import SEO from "../../components/seo"
+import DataError from "../../components/dataerror/dataerror"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
 
@@ -35,7 +36,7 @@ const Dashboard = ({ data }) => {
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   if (!store || !store.userType || !store.schoolId) {
-    return <h1 className="title">Reloading...</h1>
+    return <DataError />
   }
 
   const user = store.userType
