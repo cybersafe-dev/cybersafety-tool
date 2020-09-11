@@ -63,6 +63,16 @@
   z-index: -1;
   width: 20rem;
   transform: rotate(90deg);
+  animation: rotation 12s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 
@@ -105,8 +115,7 @@
   .progression {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 0.1rem;
-
+    left: 1rem;
+    bottom: 0.5rem;
   }
 }
