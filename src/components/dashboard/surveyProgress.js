@@ -5,10 +5,8 @@ import SubmitButton from "./submitButton"
 const SurveyProgress = ({ completedSections, setError }) => {
   return (
     <section className="survey-progress">
-      <div className="fraction">
-        <h1 className="fraction-text">{completedSections.length - 1}/6</h1>
-        <p className="categories-completed">categories completed</p>
-      </div>
+        <h1 className="fraction">{completedSections.length - 1}/6</h1>
+        <p className="fraction-text">categories completed</p>
       {completedSections.length - 1 === 6 ? (
         <SubmitButton setError={setError} />
       ) : null}
