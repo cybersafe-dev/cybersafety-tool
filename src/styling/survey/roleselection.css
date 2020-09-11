@@ -4,6 +4,7 @@
   flex-direction: column;
   padding: 5rem;
   height: 80vh;
+  overflow-x: hidden;
 }
 
 .selection-container h1 {
@@ -12,7 +13,7 @@
 }
 
 .bg-img2 {
-  position: absolute;
+  position: fixed;
   right: 20em;
   top: 7em;
   z-index: -1;
@@ -84,6 +85,17 @@
   box-shadow: 0px -6px 0px rgba(0, 0, 0, 0.1);
 }
 
+.role-pills {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+
 @media only screen and (max-width: 480px) {
   .selection-container {
     width: 100vw;
@@ -103,10 +115,17 @@
   .leader {
     padding: 1rem;
   }
+  
   .teacher {
     padding: 1rem;
   }
+
   .pupil {
     padding: 1rem;
+  }
+
+  .tagline {
+    width: 100%;
+    text-align: center;
   }
 }

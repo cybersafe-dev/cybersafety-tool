@@ -28,6 +28,7 @@
 .bar-line {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .bar-toggle-btn {
@@ -50,6 +51,9 @@
     color: orange;
 }
 
-@media only screen and (max-width: 1024px) {
-
+@media only screen and (max-width: 900px) {
+.bar-school-title {
+    font-size: 1rem;
+    max-width: 70vw;
+}
 }
