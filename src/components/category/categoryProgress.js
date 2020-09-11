@@ -3,9 +3,9 @@ import "../../styling/survey/categoryProgress.css"
 const CategoryProgress = ({ currentQ, sectionLength }) => {
   return (
     <section>
-      <div className="catprog-container">
-        <p className="catprog-title">Question</p>
-        <p className="catprog-fraction">
+      <div className="catprogress-container">
+        <p className="catprogress-title">Question</p>
+        <p className="catprogress-fraction">
           {currentQ + 1}/{sectionLength}
         </p>
       </div>
