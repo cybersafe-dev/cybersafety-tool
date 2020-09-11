@@ -67,7 +67,7 @@ leaders:
         - answer: Disagree
         - answer: Strongly disagree
     - statement: "9. My school has a clear policy on smartphone use, created in
-        consultation with the parent body.9. "
+        consultation with the parent body. "
       responses:
         - answer: Strongly agree
         - answer: Agree
