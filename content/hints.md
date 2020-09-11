@@ -21,5 +21,5 @@ surveyProgress:
   lessThanThree: Just a short category this time!
 surveyHints:
   general: Click one of the buttons to choose an answer.
-  last: Completing the category will take you back to the dashboard.
+  last: Completing the category will take you back to the dashboard
 ---
