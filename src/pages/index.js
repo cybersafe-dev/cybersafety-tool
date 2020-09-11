@@ -19,108 +19,104 @@ import Yout from "../images/yout.svg"
 const MiniSite = props => {
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
-
     <Layout>
-    <MiniNavbar />
-    <SEO title="Home" />
-        <section className="section-container">
-          <div id="about">
+      <MiniNavbar />
+      <SEO title="Home" />
+      <section className="section-container">
+        <div id="about">
+          <div className="section">
             <h1 className="section-title">Self-Assessment Tool for Schools</h1>
-            <div className="section">
-              <div className="site-text">
-                <p> {data.minisitecontent.tool} </p>
-              </div>
-              <img src={Fig1} alt="" className="fig" />
-            </div>
+            <p className="site-text">{data.minisitecontent.tool}</p>
           </div>
+          <img src={Fig1} alt="" className="fig" />
+        </div>
 
-          <div id="cybersafety">
+        <div id="cybersafety">
+          <div className="section">
             <h1 className="section-title">Cybersafety</h1>
-            <div className="section">
-              <img src={Fig2} alt="" className="fig" />
-              <div className="site-text">
-                <p> {data.minisitecontent.cybersafety} </p>
-              </div>
-            </div>
+            <p className="site-text">{data.minisitecontent.cybersafety}</p>
           </div>
+          <img src={Fig2} alt="" className="fig" />
+        </div>
 
-          <div id="cybersafeireland">
-            {/*eslint-disable-next-line*/}
-            <h1 className="section-title">CyberSafeIreland🇮🇪</h1>
-            <div className="section">
-              <div className="site-text">
-                <p> {data.minisitecontent.cybersafeireland} </p>
-              </div>
-              <img src={Fig3} alt="" className="fig" />
-            </div>
+        <div id="cybersafeireland">
+          {/*eslint-disable-next-line*/}
+          <div className="section">
+            <h1 className="section-title">
+              CyberSafeIreland
+              <span role="img" aria-label="Irish flag">
+                🇮🇪
+              </span>
+            </h1>
+            <p className="site-text">{data.minisitecontent.cybersafeireland}</p>
           </div>
-        </section>
+          <img src={Fig3} alt="" className="fig" />
+        </div>
+      </section>
 
-        <div id="contact-us">
-          <h1>Contact Us</h1>
-          <div className="contact-section">
-            <div className="contact-details">
-              <h3>CyberSafeIreland CLG</h3>
-              <span>Company number: 568651</span>
-              <span>Registered charity number: 20104108</span>
-              <span>93 Upper George Street, Dun Laoghaire,</span>
-              <span>Co. Dublin, Ireland</span>
-              <p>info@cybersafeireland.org</p>
+      <div id="contact-us">
+        <h1 className="section-title">Contact Us</h1>
+        <div className="contact-section">
+          <div className="contact-details">
+            <h3>CyberSafeIreland CLG</h3>
+            <span>Company number: 568651</span>
+            <span>Registered charity number: 20104108</span>
+            <span>93 Upper George Street, Dun Laoghaire,</span>
+            <span>Co. Dublin, Ireland</span>
+            <p>info@cybersafeireland.org</p>
 
+            <a
+              className="csi-link"
+              href="https://cybersafeireland.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit our homepage
+            </a>
+            <div className="socials">
               <a
-                className="csi-link"
-                href="https://cybersafeireland.org/"
+                href="https://www.facebook.com/cybersafeireland"
                 target="_blank"
                 rel="noreferrer"
               >
-                Visit our homepage
+                <img src={Fb} alt="" className="social" />
               </a>
-              <div className="socials">
-                <a
-                  href="https://www.facebook.com/cybersafeireland"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Fb} alt="" className="social" />
-                </a>
-                <a
-                  href="https://twitter.com/CyberSafeIE"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Twit} alt="" className="social" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/cybersafeireland/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Link} alt="" className="social" />
-                </a>
-                <a
-                  href="https://www.instagram.com/cybersafeire/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Insta} alt="" className="social" />
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UCbK06TfABt_GIXWeWBziXMA?view_as=subscriber"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src={Yout} alt="" className="social" />
-                </a>
-              </div>
-            </div>
-            <div className="surf-container">
-              <img src={Surf} alt="" className="surf" />
+              <a
+                href="https://twitter.com/CyberSafeIE"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={Twit} alt="" className="social" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/cybersafeireland/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={Link} alt="" className="social" />
+              </a>
+              <a
+                href="https://www.instagram.com/cybersafeire/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={Insta} alt="" className="social" />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCbK06TfABt_GIXWeWBziXMA?view_as=subscriber"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={Yout} alt="" className="social" />
+              </a>
             </div>
           </div>
+          <div className="surf-container">
+            <img src={Surf} alt="" className="surf" />
+          </div>
         </div>
-
+      </div>
     </Layout>
-
   )
 }
 export default MiniSite

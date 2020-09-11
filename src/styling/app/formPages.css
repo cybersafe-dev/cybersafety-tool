@@ -94,14 +94,6 @@ a:hover {
   animation: rotation 12s infinite linear;
 }
 
-.asterisk {
-  color: red;
-}
-
-.form-label {
-  margin-bottom: 0;
-}
-
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -109,6 +101,14 @@ a:hover {
   to {
     transform: rotate(359deg);
   }
+}
+
+.asterisk {
+  color: red;
+}
+
+.form-label {
+  margin-bottom: 0;
 }
 
 @media only screen and (max-width: 500px) {

@@ -55,7 +55,7 @@ const RoleSelection = () => {
           {" "}
           Click the button below that best describes your role at your school.
         </p>
-        <div className="pills">
+        <div className="role-pills">
           <div className="unfilled-pill"></div>
           <div className="filled-pill"></div>
         </div>
