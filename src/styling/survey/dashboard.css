@@ -34,7 +34,7 @@
   margin: 0 1rem 0 1rem;
 }
 
-.bg-img3 {
+.bg-img-dash {
   position: absolute;
   right: 5em;
   top: -11em;
@@ -43,7 +43,7 @@
   transform: rotate(230deg);
 }
 
-.bg-img4 {
+.bg-img-dash1 {
   visibility: hidden;
   position: absolute;
   z-index: -1;
@@ -84,7 +84,6 @@
   align-items: flex-end;
   margin-left: 6rem;
   margin-top: 2rem;
-
 }
 
 .submit-btn {
@@ -204,18 +203,21 @@
     line-height: 0.75rem;
   }
 
-  .timer {
-    justify-content: flex-end;
+  .top-line {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: right;
   }
 
   .survey-progress {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    margin-right: 0;
+
     margin-top: 1rem;
-    width: 100vw;
-    padding: 0 1rem 0 1rem;
+    margin-left: 8rem;
+
+
   }
 
   .bg-img3 {
@@ -230,6 +232,7 @@
   }
   .graphic {
     height: 7rem;
+    margin-left: 1rem;
   }
 
   .cat-image {

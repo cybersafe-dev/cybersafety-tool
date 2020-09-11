@@ -63,8 +63,8 @@ const Dashboard = ({ data }) => {
     <Layout>
       <SEO title="Choose a Category" />
       <section className="dashboard-container">
-        <img src={BgImg} alt="background design" className="bg-img3" />
-        <img src={BgImg} alt="background design" className="bg-img4" />
+        <img src={BgImg} alt="background design" className="bg-img-dash" />
+        <img src={BgImg} alt="background design" className="bg-img-dash1" />
         <div className="headline">
           <SurveyDashMessages
             error={error}

@@ -8,28 +8,32 @@
 }
 
 .thanku-title {
-  margin: 0 0 3rem 0;
+  margin: 0 0 2rem 0;
   text-align: center;
 }
 .thanku-message {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .bg-img6 {
   position: absolute;
-  right: 23em;
-  top: 8.5em;
+  justify-content: center;
+  top: 10rem;
+  height: 18rem;
   z-index: -1;
-  width: 22rem;
 }
 
 .bg-img9 {
   position: absolute;
-  right: 14em;
-  width: 40rem;
+  justify-content: center;
+  height: 20rem;
   z-index: -1;
 }
 
-.close-btn {
+.design {
+  height: 20rem;
+}
+
+.csi-btn {
   background: #53c5cd;
   border-radius: 30px;
   border: none;
@@ -40,24 +44,28 @@
   text-decoration: none;
   font-weight: 600;
   text-align: center;
-}
-
-.rocket {
-  width: 400px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
   .bg-img6 {
-    left: 2.5rem;
+    justify-content: center;
     z-index: -1;
     width: 20rem;
   }
+  .bg-img9 {
+  display: none;
+  }
   .thanku-message {
-    margin-top: 3rem;
+    margin-top: 2rem;
     text-align: center;
+    font-size: 1rem;
+  }
+  .design {
+    width: 100%;
   }
 
-  .rocket {
-    width: 100%;
+  .csi-btn {
+    width: 200px;
   }
 }
