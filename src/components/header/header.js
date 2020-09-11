@@ -3,7 +3,7 @@ import Logo from "../../images/cybersafe-logo.png"
 import "./header.css"
 
 const Header = () => (
-  <header>
+  <header className="app-header">
     <img src={Logo} alt="cybersafe logo" className="logo" />
   </header>
 )
