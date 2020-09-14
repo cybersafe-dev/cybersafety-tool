@@ -1,4 +1,21 @@
 .buffer-container {
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 1rem 3rem 1rem;
+  position: absolute;
+  top: 12rem;
+  left: 13rem;
+
+
+}
+
+/* .buffer-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,4 +44,4 @@
   font-size: 1rem;
   animation: shake 5s;
   animation-iteration-count: infinite;
-}
+} */

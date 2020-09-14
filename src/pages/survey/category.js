@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Buffer from "../../components/category/Buffer";
 import Layout from "../../components/layout/layout"
 import Question from "../../components/category/question"
 import ProgressBar from "../../components/category/progressBar"
@@ -11,6 +11,7 @@ import BgImg from "../../images/bg-gradient.svg"
 import "../../styling/survey/question.css"
 
 const Category = props => {
+
   const questionMessageData = useStaticQuery(
     graphql`
       query {
@@ -53,9 +54,11 @@ const Category = props => {
   }
   const sectionLength = survey.length
 
+
   return (
     <Layout>
       <>
+      <Buffer />
         <img src={BgImg} alt="background design" className="bg-img-q" />
         <h1 className="question-title">{category}</h1>
         <section className="question-container">
