@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import "../styling/app/index.css"
 
 import MiniNavbar from "../components/miniSite/miniNavbar"
+import PrivacyModal from "../components/miniSite/privacyModal"
 
 import Fig1 from "../images/self-assess.svg"
 import Fig2 from "../images/cybersafety.svg"
@@ -30,7 +31,6 @@ const MiniSite = props => {
           </div>
           <img src={Fig1} alt="" className="fig" />
         </div>
-
         <div id="cybersafety">
           <div className="section">
             <h1 className="section-title">Cybersafety</h1>
@@ -38,7 +38,6 @@ const MiniSite = props => {
           </div>
           <img src={Fig2} alt="" className="fig" />
         </div>
-
         <div id="cybersafeireland">
           {/*eslint-disable-next-line*/}
           <div className="section">
@@ -64,7 +63,7 @@ const MiniSite = props => {
             <span>93 Upper George Street, Dun Laoghaire,</span>
             <span>Co. Dublin, Ireland</span>
             <p>info@cybersafeireland.org</p>
-
+            <PrivacyModal />
             <a
               className="csi-link"
               href="https://cybersafeireland.org/"

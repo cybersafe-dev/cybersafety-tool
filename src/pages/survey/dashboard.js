@@ -8,10 +8,9 @@ import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
 import SEO from "../../components/seo"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
-import Buffer from "../../components/category/Buffer";
+import Buffer from "../../components/dashboard/Buffer";
 import BgImg from "../../images/bg-gradient.svg"
 import Graphic from "../../images/dash.svg"
-
 import Digital from "../../images/Digital-open.svg"
 import DigitalDone from "../../images/Digital-done.svg"
 import Privacy from "../../images/Privacy-open.svg"

@@ -1,0 +1,76 @@
+.modal-container {
+  background-color: #D4F1EE;
+  border-color: black;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 1);
+  border-radius: 30px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2rem;
+  z-index: 11;
+}
+
+.modal-content, .privacy-modal-content {
+  padding: 1rem;
+  text-align: justify;
+}
+
+.modal-btn {
+  background: #53c5cd;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem;
+  width: 250px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.privacy-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.open-modal-btn {
+  background-color: #53c5cd;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  width: 15vw;
+  padding: 0.6rem;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+.open-modal-btn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+.modal-container {
+  width: 90vw;
+}
+.modal-content {
+  text-align: justify;
+  padding: 0;
+  padding-bottom: 0.5rem;
+}
+.modal-btn {
+  margin-top: 1rem;
+}
+.privacy-title{
+  margin-bottom: 1rem;
+}
+.open-modal-btn {
+width: 250px;
+margin: 1rem 0 1rem 0;
+align-self: center;
+}
+}

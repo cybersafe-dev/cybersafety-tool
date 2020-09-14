@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Modal } from 'semantic-ui-react'
-import '../../styling/survey/buffer.css'
+import '../../styling/survey/modal.css'
 const Buffer = () => {
   const [open, setOpen] = React.useState(false)
 
@@ -12,14 +12,14 @@ const Buffer = () => {
       onOpen={() => setOpen(true)}
       trigger={<Button>Show Modal</Button>}
     >
-    <section className="buffer-container">
-      <Modal.Content className="buffer-content">
+    <section className="modal-container">
+      <Modal.Content className="modal-content">
         <Modal.Description>
           You will have one opportunity to answer each question. Please read the statements carefully and select the answer which matches your opinion best!
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
-        <Button className="buffer-btn" onClick={() => setOpen(false)}>Let's begin!</Button>
+        <Button className="modal-btn" onClick={() => setOpen(false)}>Let's begin</Button>
       </Modal.Actions>
       </section>
     </Modal>
