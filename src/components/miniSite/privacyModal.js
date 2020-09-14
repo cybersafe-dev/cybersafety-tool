@@ -16,7 +16,7 @@ const PrivacyModal = () => {
     <Modal.Header className="privacy-title">Privacy Policy</Modal.Header>
       <Modal.Content className="privacy-modal-content">
         <Modal.Description>
-        For now, please link to this <a href="https://cybersafeireland.org/privacy-policy-and-data-protection/" target="_blank">existing page on our site</a>
+        For now, please link to this <a className="privacy-link" href="https://cybersafeireland.org/privacy-policy-and-data-protection/" target="_blank">existing page on our site</a>
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
