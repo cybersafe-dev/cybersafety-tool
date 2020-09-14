@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import useFirebase from "../../firebase"
+import { addNewSalesforceLead } from "../../salesforce"
 
 import { userStore } from "../../providers/userProvider"
 import SEO from "../seo"
@@ -55,7 +56,8 @@ const Signup = () => {
     await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(() => {
+      .then(async () => {
+        await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
         navigate("/app")
       })
       .catch(error => {
