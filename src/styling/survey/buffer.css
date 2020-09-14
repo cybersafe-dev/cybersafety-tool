@@ -1,20 +1,33 @@
 .buffer-container {
-  background-color: white;
+  background-color: #EAFFFC;
   border-color: black;
-  border-style: solid;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 1);
   border-radius: 30px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-
   padding: 2rem;
   z-index: 11;
 }
 .buffer-content {
   padding: 1rem;
   text-align: justify;
+}
+
+.buffer-btn {  background: #53c5cd;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem;
+  width: 250px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+
 }
 @media only screen and (max-width: 768px) {
 .buffer-container {
@@ -26,34 +39,3 @@
   padding-bottom: 0.5rem;
 }
 }
-
-/* .buffer-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 15vh;
-}
-
-.buffer {
-  z-index: -2;
-  height: 20rem;
-  animation: rotation 10s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-.buffer-message {
-  width: 540px;
-  font-size: 1rem;
-  animation: shake 5s;
-  animation-iteration-count: infinite;
-} */

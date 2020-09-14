@@ -7,7 +7,6 @@ const Buffer = () => {
   return (
 
     <Modal
-      centered={false}
       open={open}
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
@@ -16,11 +15,11 @@ const Buffer = () => {
     <section className="buffer-container">
       <Modal.Content className="buffer-content">
         <Modal.Description>
-          You will have one opportunity to answer each question. Please read the statement carefully and select the answer which matches your opinion best!
+          You will have one opportunity to answer each question. Please read the statements carefully and select the answer which matches your opinion best!
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
-        <Button onClick={() => setOpen(false)}>CLOSE</Button>
+        <Button className="buffer-btn" onClick={() => setOpen(false)}>Let's begin!</Button>
       </Modal.Actions>
       </section>
     </Modal>

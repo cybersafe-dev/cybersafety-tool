@@ -64,7 +64,6 @@ const Dashboard = ({ data }) => {
   <Buffer />
       <SEO title="Choose a Category" />
       <section className="dashboard-container">
-
         <img src={BgImg} alt="background design" className="bg-img-dash" />
         <img src={BgImg} alt="background design" className="bg-img-dash1" />
         <div className="headline">
