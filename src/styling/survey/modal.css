@@ -54,6 +54,21 @@
   text-decoration: underline;
   cursor: pointer;
 }
+.temp-open-modal-btn {
+  margin-left: 2rem;
+  background-color: #53c5cd;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  width: 15vw;
+  padding: 0.1rem;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+}
+
 
 .privacy-link {
   color: white;

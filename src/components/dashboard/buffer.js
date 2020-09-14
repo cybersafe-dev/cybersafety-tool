@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Modal } from 'semantic-ui-react'
 import '../../styling/survey/modal.css'
+
 const Buffer = () => {
   const [open, setOpen] = React.useState(false)
 
@@ -10,7 +11,7 @@ const Buffer = () => {
       open={open}
       onClose={() => setOpen(false)}
       onOpen={() => setOpen(true)}
-      trigger={<Button>Show Modal</Button>}
+      trigger={<Button className="temp-open-modal-btn">Temporary button</Button>}
     >
     <section className="modal-container">
       <Modal.Content className="modal-content">

@@ -60,7 +60,7 @@ const Dashboard = ({ data }) => {
 
   return (
     <Layout>
-  <Buffer />
+
       <SEO title="Choose a Category" />
       <section className="dashboard-container">
         <img src={BgImg} alt="background design" className="bg-img-dash" />
@@ -73,6 +73,7 @@ const Dashboard = ({ data }) => {
             setMessage={setMessage}
           />
         </div>
+        <Buffer />
         <div className="body-content">
           <SurveyProgress
             completedSections={completedSections}
