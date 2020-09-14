@@ -6,7 +6,7 @@ import { createReport } from "../../templates/reportTemplate"
 
 import SurveyQuotaBox from "./surveyQuotaBox"
 
-const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
+const SurveyStats = ({ uid, schoolName, reportSubmitted, quota, rollNumber }) => {
   const [currentScores, setCurrentScores] = React.useState(null)
   const [error, setError] = React.useState(null)
 
@@ -30,8 +30,17 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
     // }
     const report = await createReport(currentScores, schoolName)
     const dbPostStatus = await postReportToDb(uid, report)
+
+    // post something to the relevant SF lead
+    await fetch(`/.netlify/functions/postReport`, {
+      method: "POST",
+      body: JSON.stringify({rollNumber: rollNumber, hello: "hello"}),
+      headers: {"Content-Type": "application/json"}
+    }).then(res => console.log(res)).catch(error => console.error(error))
+
+
     if (dbPostStatus === "updated") {
-      navigate("/app/confirmation")
+      // navigate("/app/confirmation")
     } else {
       setError(
         "Sorry there was a problem uploading your surveys. Please try again"
