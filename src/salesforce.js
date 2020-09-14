@@ -5,14 +5,15 @@ export const addNewSalesforceLead = (
   company,
   rollNumber
 ) => {
-  //e.preventDefault()
   var urlencoded = new URLSearchParams()
+  // This id will need to come from the client's SF org web to lead generator
   urlencoded.append("oid", "00D4K0000018ITl")
   urlencoded.append("retURL", "http://")
   urlencoded.append("first_name", firstName)
   urlencoded.append("last_name", lastName)
   urlencoded.append("email", email)
   urlencoded.append("company", company)
+  // This id will need to come from the client's SF org web to lead generator
   urlencoded.append("00N4K000003FxTE", rollNumber)
 
   // console.log(...urlencoded);
