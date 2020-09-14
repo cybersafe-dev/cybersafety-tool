@@ -9,6 +9,14 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           },
         ],
       },
+      module: {
+        rules: [
+          {
+            test: /semantic-ui-react/,
+            use: loaders.null(),
+          },
+        ],
+      },
     })
   }
 }
