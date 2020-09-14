@@ -3,14 +3,14 @@ import "firebase/auth"
 import "firebase/firestore"
 
 var firebaseConfig = {
-  apiKey: "AIzaSyC_-5zXDsEaB_yyBariq0cnrhvZPBaedDc",
-  authDomain: "fir-auth-test-43ec6.firebaseapp.com",
-  databaseURL: "https://fir-auth-test-43ec6.firebaseio.com",
-  projectId: "fir-auth-test-43ec6",
-  storageBucket: "fir-auth-test-43ec6.appspot.com",
-  messagingSenderId: "540475601492",
-  appId: "1:540475601492:web:1c1301a9b10453c74673c1",
-  measurementId: "G-4HXR0QMRCR",
+  apiKey: process.env.GATSBY_FIREBASE_APIKEY,
+  authDomain: process.env.GATSBY_FIREBASE_AUTHDOMAIN,
+  databaseURL: process.env.GATSBY_FIREBASE_DATABASEURL,
+  projectId: process.env.GATSBY_FIREBASE_PROJECTID,
+  storageBucket: process.env.GATSBY_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.GATSBY_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.GATSBY_FIREBASE_APPID,
+  measurementId: process.env.GATSBY_FIREBASE_MEASUREMENTID,
 }
 
 let instance = null

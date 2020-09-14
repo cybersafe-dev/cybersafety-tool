@@ -34,9 +34,9 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted, quota, rollNumber }) =>
     // post something to the relevant SF lead
     await fetch(`/.netlify/functions/postReport`, {
       method: "POST",
-      body: JSON.stringify({rollNumber: rollNumber, hello: "hello"}),
+      body: JSON.stringify({rollNumber: rollNumber }),
       headers: {"Content-Type": "application/json"}
-    }).then(res => console.log(res)).catch(error => console.error(error))
+    }).catch(error => console.error(error))
 
 
     if (dbPostStatus === "updated") {
