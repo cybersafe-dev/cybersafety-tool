@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Buffer from "../../components/category/Buffer";
 import Layout from "../../components/layout/layout"
 import Question from "../../components/category/question"
 import ProgressBar from "../../components/category/progressBar"
@@ -58,7 +57,6 @@ const Category = props => {
   return (
     <Layout>
       <>
-      <Buffer />
         <img src={BgImg} alt="background design" className="bg-img-q" />
         <h1 className="question-title">{category}</h1>
         <section className="question-container">

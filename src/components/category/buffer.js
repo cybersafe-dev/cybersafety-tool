@@ -14,10 +14,9 @@ const Buffer = () => {
       trigger={<Button>Show Modal</Button>}
     >
     <section className="buffer-container">
-      <Modal.Header>Thank you!</Modal.Header>
       <Modal.Content className="buffer-content">
         <Modal.Description>
-          The survey will start in a few seconds. Read the questions carefully and answer honestly!
+          You will have one opportunity to answer each question. Please read the statement carefully and select the answer which matches your opinion best!
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>

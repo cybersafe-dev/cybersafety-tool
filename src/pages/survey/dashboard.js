@@ -8,7 +8,7 @@ import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
 import SEO from "../../components/seo"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
-
+import Buffer from "../../components/category/Buffer";
 import BgImg from "../../images/bg-gradient.svg"
 import Graphic from "../../images/dash.svg"
 
@@ -61,8 +61,10 @@ const Dashboard = ({ data }) => {
 
   return (
     <Layout>
+  <Buffer />
       <SEO title="Choose a Category" />
       <section className="dashboard-container">
+
         <img src={BgImg} alt="background design" className="bg-img-dash" />
         <img src={BgImg} alt="background design" className="bg-img-dash1" />
         <div className="headline">

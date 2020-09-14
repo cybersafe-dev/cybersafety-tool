@@ -3,16 +3,28 @@
   border-color: black;
   border-style: solid;
   border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 3rem 1rem 3rem 1rem;
   position: absolute;
-  top: 12rem;
-  left: 13rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 
-
+  padding: 2rem;
+  z-index: 11;
+}
+.buffer-content {
+  padding: 1rem;
+  text-align: justify;
+}
+@media only screen and (max-width: 768px) {
+.buffer-container {
+  width: 100vw;
+}
+.buffer-content {
+  text-align: justify;
+  padding: 0;
+  padding-bottom: 0.5rem;
+}
 }
 
 /* .buffer-container {
