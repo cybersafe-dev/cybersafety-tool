@@ -14,17 +14,17 @@ exports.handler = async (event, context) => {
 
   // create the connection with the Salesforce connected app
   var org = nforce.createConnection({
-    clientId: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: process.env.CALLBACK_URL,
+    clientId: process.env.SF_CLIENT_ID,
+    clientSecret: process.env.SF_CLIENT_SECRET,
+    redirectUri: process.env.SF_CALLBACK_URL,
     mode: "single",
   })
 
   // authenticate and return OAuth token
   org.authenticate(
     {
-      username: process.env.USERNAME,
-      password: process.env.PASSWORD + process.env.SECURITY_TOKEN,
+      username: SF_process.env.USERNAME,
+      password: SF_process.env.PASSWORD + SF_process.env.SECURITY_TOKEN,
     },
     function (err, resp) {
       if (!err) {
