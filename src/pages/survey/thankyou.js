@@ -12,7 +12,6 @@ const ThankYou = () => (
   <Layout>
     <Header />
     <SEO title="Thank you!" />
-
     <section className="thanku-container">
       <h1 className="thanku-title">Thank you!</h1>
       <img src={BgImg} alt="background design" className="bg-img6" />
