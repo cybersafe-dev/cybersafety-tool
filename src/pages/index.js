@@ -17,10 +17,17 @@ import Link from "../images/link.svg"
 import Insta from "../images/insta.svg"
 import Yout from "../images/yout.svg"
 
+
+
 const MiniSite = props => {
+
+const [privacyModalVisible, toggle] = React.useState(true);
+
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
     <Layout>
+    {privacyModalVisible && (
+    <PrivacyModal privacyModalVisible={privacyModalVisible} toggle={toggle} /> )} 
       <MiniNavbar />
       <SEO title="Home" />
       <section className="section-container">
@@ -63,8 +70,7 @@ const MiniSite = props => {
             <span>93 Upper George Street, Dun Laoghaire,</span>
             <span>Co. Dublin, Ireland</span>
             <p>info@cybersafeireland.org</p>
-            <button className="open-modal-btn" id="privacyBtn">Privacy Policy</button>
-            <PrivacyModal btnID="privacyBtn" />
+
             <a
               className="csi-link"
               href="https://cybersafeireland.org/"
@@ -145,3 +151,6 @@ export const query = graphql`
     }
   }
 `
+
+
+// <button className="open-modal-btn" id="privacyBtn">Privacy Policy</button>

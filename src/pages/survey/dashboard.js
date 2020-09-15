@@ -27,6 +27,7 @@ import ResponsDone from "../../images/Respons-done.svg"
 import "../../styling/survey/dashboard.css"
 
 const Dashboard = ({ data }) => {
+  const [bufferModalVisible, toggle] = React.useState(true);
   const [store] = React.useContext(ResponseStore)
 
   const surveyAllData =
@@ -58,9 +59,9 @@ const Dashboard = ({ data }) => {
   // console.log("messages", allDashMessages)
   // console.log({ store })
 
+
   return (
     <Layout>
-
       <SEO title="Choose a Category" />
       <section className="dashboard-container">
         <img src={BgImg} alt="background design" className="bg-img-dash" />
@@ -73,8 +74,8 @@ const Dashboard = ({ data }) => {
             setMessage={setMessage}
           />
         </div>
-<button className="temp-open-modal-btn" id="bufferBtn">temporary</button>
-<Buffer btnID="bufferBtn" />
+        {bufferModalVisible && (
+        <Buffer bufferModalVisible={bufferModalVisible} toggle={toggle} /> )}
         <div className="body-content">
           <SurveyProgress
             completedSections={completedSections}
