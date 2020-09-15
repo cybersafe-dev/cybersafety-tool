@@ -18,26 +18,28 @@
   text-align: justify;
 }
 
+.privacy-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+/* CLOSE BUTTON ON MODAL */
 .modal-btn {
   background: #53c5cd;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 0px 8px 5px rgba(43,86,101,0.3);
   color: white;
-  padding: 0.5rem;
+  padding: 0.6rem;
   margin-top: 2rem;
-  width: 250px;
   text-decoration: none;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
 }
 
-.privacy-title {
-  font-size: 1.5rem;
-  font-weight: 900;
-}
 
+/* OPENING BUTTONS ON DASH/MINISITE */
 .open-modal-btn {
   background-color: #53c5cd;
   border: none;
@@ -65,10 +67,8 @@
   color: white;
   text-decoration: none;
   box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
-
   cursor: pointer;
 }
-
 
 .privacy-link {
   color: white;

@@ -63,7 +63,8 @@ const MiniSite = props => {
             <span>93 Upper George Street, Dun Laoghaire,</span>
             <span>Co. Dublin, Ireland</span>
             <p>info@cybersafeireland.org</p>
-            <PrivacyModal />
+            <button className="open-modal-btn" id="privacyBtn">Privacy Policy</button>
+            <PrivacyModal btnID="privacyBtn" />
             <a
               className="csi-link"
               href="https://cybersafeireland.org/"

@@ -73,7 +73,8 @@ const Dashboard = ({ data }) => {
             setMessage={setMessage}
           />
         </div>
-        <Buffer />
+<button className="temp-open-modal-btn" id="bufferBtn">temporary</button>
+<Buffer btnID="bufferBtn" />
         <div className="body-content">
           <SurveyProgress
             completedSections={completedSections}

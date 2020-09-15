@@ -1,31 +1,38 @@
-import React from 'react'
-import { Button, Modal } from 'semantic-ui-react'
-import '../../styling/survey/modal.css'
-const PrivacyModal = () => {
-  const [open, setOpen] = React.useState(false)
 
+
+import React, { useEffect } from "react"
+import "../../styling/survey/modal.css"
+
+const PrivacyModal = ({ btnID }) => {
+  useEffect(() => {
+    var modal = document.getElementById("privacyModal")
+    var btn = document.getElementById(btnID)
+    var span = document.getElementsByClassName("modal-btn")
+    btn.onclick = function() {
+      modal.style.display = "block"
+    }
+    span.onclick = function() {
+      modal.style.display = "none"
+    }
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none"
+      }
+    }
+  })
   return (
+    <div id="privacyModal">
+      <div className="modal-container">
+        <div className="privacy-title">
 
-    <Modal
-      open={open}
-      onClose={() => setOpen(false)}
-      onOpen={() => setOpen(true)}
-      trigger={<Button className="open-modal-btn">Privacy Policy</Button>}
-    >
-    <section className="modal-container">
-    <Modal.Header className="privacy-title">Privacy Policy</Modal.Header>
-      <Modal.Content className="privacy-modal-content">
-        <Modal.Description>
-        For now, please link to this <a className="privacy-link" href="https://cybersafeireland.org/privacy-policy-and-data-protection/" target="_blank">existing page on our site</a>
-        </Modal.Description>
-      </Modal.Content>
-      <Modal.Actions>
-        <Button className="modal-btn" onClick={() => setOpen(false)}>close</Button>
-      </Modal.Actions>
-      </section>
-    </Modal>
-
+          <h2>Privacy Policy</h2>
+        </div>
+        <div className="modal-content">
+          <p>  For now, please link to this <a className="privacy-link" rel="noreferrer" href="https://cybersafeireland.org/privacy-policy-and-data-protection/" target="_blank">existing page on our site</a></p>
+        </div>
+        <span className="modal-btn">close</span>
+      </div>
+    </div>
   )
 }
-
 export default PrivacyModal
