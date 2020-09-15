@@ -6,7 +6,6 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 11;
 }
 
 .privacy-title {
@@ -32,8 +31,12 @@
   margin: 1rem 0 1rem 2rem;
 }
 
-@media only screen and (max-width: 768px) {
+.privacy-link {
+  color: white;
+  text-decoration: underline;
+}
 
+@media only screen and (max-width: 768px) {
   .privacy-content {
     padding: 0 0 0 2rem;
     text-align: left;
