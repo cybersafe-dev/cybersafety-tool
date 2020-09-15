@@ -23,8 +23,8 @@ exports.handler = async (event, context) => {
   // authenticate and return OAuth token
   org.authenticate(
     {
-      username: SF_process.env.USERNAME,
-      password: SF_process.env.PASSWORD + SF_process.env.SECURITY_TOKEN,
+      username: process.env.SF_USERNAME,
+      password: process.env.SF_PASSWORD + process.env.SF_SECURITY_TOKEN,
     },
     function (err, resp) {
       if (!err) {
