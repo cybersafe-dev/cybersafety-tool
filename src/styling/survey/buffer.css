@@ -1,4 +1,4 @@
-.modal-container {
+.buffer-container {
   background-color: #181818E6;
   color: white;
   border-color: black;
@@ -13,18 +13,18 @@
   z-index: 11;
 }
 
-.modal-content, .privacy-modal-content {
+.buffer-content {
   padding: 1rem;
   text-align: justify;
 }
 
-.privacy-title {
+.buffer-title {
   font-size: 1.5rem;
   font-weight: 900;
 }
 
 /* CLOSE BUTTON ON MODAL */
-.modal-btn {
+.buffer-btn {
   background: #53c5cd;
   border-radius: 30px;
   border: none;
