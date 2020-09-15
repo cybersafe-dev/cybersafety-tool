@@ -4,13 +4,13 @@ exports.handler = async (event, context) => {
   // bring id and data to post into function
   const { rollNumber } = await JSON.parse(event.body)
 
-  if (!rollNumber) return {
-    statusCode: 404,
-    body: "user to update not found",
-    headers: {
-      "Access-Control-Allow-Methods": "*",
-    },
-  }
+//   if (!rollNumber) return {
+//     statusCode: 404,
+//     body: "user to update not found",
+//     headers: {
+//       "Access-Control-Allow-Methods": "*",
+//     },
+//   }
 
   // create the connection with the Salesforce connected app
   var org = nforce.createConnection({
