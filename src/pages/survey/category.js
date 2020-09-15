@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Layout from "../../components/layout/layout"
 import Question from "../../components/category/question"
 import ProgressBar from "../../components/category/progressBar"
@@ -11,6 +10,7 @@ import BgImg from "../../images/bg-gradient.svg"
 import "../../styling/survey/question.css"
 
 const Category = props => {
+
   const questionMessageData = useStaticQuery(
     graphql`
       query {
@@ -52,6 +52,7 @@ const Category = props => {
     return <DataErrorPage />
   }
   const sectionLength = survey.length
+
 
   return (
     <Layout>

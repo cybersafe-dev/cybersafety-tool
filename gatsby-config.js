@@ -4,7 +4,7 @@ module.exports = {
     description: `Cybersafety survey for primary schools in Ireland`,
     author: `@gatsbyjs`,
   },
-  plugins: [
+  plugins: [ 
     {
       resolve: `gatsby-source-filesystem`,
       options: {

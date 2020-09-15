@@ -12,18 +12,15 @@ const ThankYou = () => (
   <Layout>
     <Header />
     <SEO title="Thank you!" />
-
     <section className="thanku-container">
       <h1 className="thanku-title">Thank you!</h1>
       <img src={BgImg} alt="background design" className="bg-img6" />
       <img src={Rocket} alt="rocket icon" className="design" />
       <p className="thanku-message">
-        {" "}
-        Your answers have been sent off to the cloud. You can close this window
-        now or visit our website.{" "}
+        Thank you for completing the assessment. Your responses have now been sent to CyberSafeIreland and you will receive your report soon. In the meantime, to find out more about getting the CyberSafe Tool for Schools mark, please click <a className="link-back" href="/survey" target="_blank"
+        rel="noreferrer">here</a>
       </p>
-      <a className="csi-btn" href="https://www.cybersafeireland.com/" target="_blank"
-      rel="noreferrer">CyberSafeIreland</a>
+
     </section>
   </Layout>
 )

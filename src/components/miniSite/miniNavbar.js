@@ -41,7 +41,6 @@ const MiniNavbar = () => {
           <Link to="/#cybersafety" className="nav">
             Cybersafety
           </Link>
-
           <Link to="/#cybersafeireland" className="nav">
             CyberSafeIreland
           </Link>

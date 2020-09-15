@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import "../styling/app/index.css"
 
 import MiniNavbar from "../components/miniSite/miniNavbar"
+import PrivacyModal from "../components/miniSite/privacyModal"
 
 import Fig1 from "../images/self-assess.svg"
 import Fig2 from "../images/cybersafety.svg"
@@ -16,10 +17,17 @@ import Link from "../images/link.svg"
 import Insta from "../images/insta.svg"
 import Yout from "../images/yout.svg"
 
+
+
 const MiniSite = props => {
+
+const [privacyModalVisible, toggle] = React.useState(true);
+
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
     <Layout>
+    {privacyModalVisible && (
+    <PrivacyModal privacyModalVisible={privacyModalVisible} toggle={toggle} /> )} 
       <MiniNavbar />
       <SEO title="Home" />
       <section className="section-container">
@@ -30,7 +38,6 @@ const MiniSite = props => {
           </div>
           <img src={Fig1} alt="" className="fig" />
         </div>
-
         <div id="cybersafety">
           <div className="section">
             <h1 className="section-title">Cybersafety</h1>
@@ -38,7 +45,6 @@ const MiniSite = props => {
           </div>
           <img src={Fig2} alt="" className="fig" />
         </div>
-
         <div id="cybersafeireland">
           {/*eslint-disable-next-line*/}
           <div className="section">
@@ -145,3 +151,6 @@ export const query = graphql`
     }
   }
 `
+
+
+// <button className="open-modal-btn" id="privacyBtn">Privacy Policy</button>

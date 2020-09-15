@@ -1,0 +1,47 @@
+.buffer-container {
+  background-color: #181818E6;
+  color: white;
+  border-color: black;
+  box-shadow:  0px 0px 20px 5px rgba(0,0,0,0.5);
+  border-radius: 30px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2rem;
+  z-index: 11;
+}
+
+.buffer-content {
+  padding: 1rem;
+  text-align: justify;
+}
+
+.buffer-btn {
+  background: #53c5cd;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 0px 8px 5px rgba(43,86,101,0.3);
+  color: white;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+.buffer-container {
+  width: 90vw;
+}
+.buffer-content {
+  text-align: left;
+  padding: 0;
+  padding-bottom: 0.5rem;
+}
+.buffer-btn {
+  margin-top: 1rem;
+}
+}
