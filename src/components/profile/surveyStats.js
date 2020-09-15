@@ -6,7 +6,13 @@ import { createReport } from "../../templates/reportTemplate"
 
 import SurveyQuotaBox from "./surveyQuotaBox"
 
-const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
+const SurveyStats = ({
+  uid,
+  schoolName,
+  reportSubmitted,
+  quota,
+  rollNumber,
+}) => {
   const [currentScores, setCurrentScores] = React.useState(null)
   const [error, setError] = React.useState(null)
 
@@ -24,12 +30,20 @@ const SurveyStats = ({ uid, schoolName, reportSubmitted, quota }) => {
   if (!uid || !currentScores) return <p>Loading...</p>
 
   const handleFinalSubmit = async () => {
-    // if (reportSubmitted) {
-    //   setError("Looks like you already submitted your report...thanks!")
-    //   return
-    // }
+    if (reportSubmitted) {
+      setError("Looks like you already submitted your report...thanks!")
+      return
+    }
     const report = await createReport(currentScores, schoolName)
     const dbPostStatus = await postReportToDb(uid, report)
+
+    // post something to the relevant SF lead
+    await fetch(`/.netlify/functions/postReport`, {
+      method: "POST",
+      body: JSON.stringify({ rollNumber: rollNumber }),
+      headers: { "Content-Type": "application/json" },
+    }).catch(error => console.error(error))
+
     if (dbPostStatus === "updated") {
       navigate("/app/confirmation")
     } else {

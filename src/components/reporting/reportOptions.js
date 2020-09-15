@@ -46,7 +46,7 @@ const ReportOptions = ({
               }
               fileName={`Report for ${report.reportFor}.pdf`}
             >
-              {({ blob, url, loading, error }) =>
+              {({ blob, url, loading, error }) => 
                 loading ? "Loading document..." : "Download PDF"
               }
             </PDFDownloadLink>

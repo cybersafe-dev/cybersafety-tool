@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import useFirebase from "../../firebase"
+import { addNewSalesforceLead } from "../../salesforce"
 
 import { userStore } from "../../providers/userProvider"
 import SEO from "../seo"
@@ -12,6 +13,7 @@ const Signup = () => {
   const [email, setEmail] = React.useState("")
   const [password, setPassword] = React.useState("")
   const [error, setError] = React.useState(null)
+  const [honeypot, setHoneypot] = React.useState("")
   const [
     user,
     schoolName,
@@ -33,6 +35,7 @@ const Signup = () => {
   const firebase = useFirebase()
 
   const validateSignupForm = () => {
+    if (honeypot) return false
     if (!firstName || !lastName || !schoolName || !pupilCount) {
       setError("Please fill in all the form fields with asterisks")
       setTimeout(() => {
@@ -52,12 +55,21 @@ const Signup = () => {
     if (!firebase) return
     const validated = await validateSignupForm()
     if (!validated) return
+    // For testing web to lead without creating a user...
+    //await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
     await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(() => {
-        navigate("/app")
+      .then(async () => {
+        await addNewSalesforceLead(
+          firstName,
+          lastName,
+          email,
+          schoolName,
+          rollNumber
+        )
       })
+      .then(() => navigate("/app"))
       .catch(error => {
         setError(error.message)
         setTimeout(() => {
@@ -82,6 +94,8 @@ const Signup = () => {
       setLastName(value)
     } else if (name === "rollNumber") {
       setRollNumber(value)
+    } else if (name === "honeypot") {
+      setHoneypot(value)
     }
   }
 
@@ -201,6 +215,21 @@ const Signup = () => {
             onChange={event => onChangeHandler(event)}
           />
         </label>
+
+        <input
+          onChange={event => onChangeHandler(event)}
+          id="honeypot1"
+          name="honeypot"
+          type="hidden"
+          value="honeypot"
+        />
+        <input
+          onChange={event => onChangeHandler(event)}
+          id="honeypot2"
+          name="honeypot"
+          style={{ display: "none" }}
+          value="honeypot"
+        />
 
         {error !== null && <p className="error-message">{error}</p>}
 

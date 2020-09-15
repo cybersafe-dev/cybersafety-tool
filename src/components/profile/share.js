@@ -8,9 +8,9 @@ const Share = ({ uid }) => {
     <>
       <EmailShareButton
         className="email-share"
-        subject={`CyberSafeIreland: Self-Assessment Tool for Schools`}
-        body={`Welcome to CyberSafeIreland's Self Assessment Tool. Click this link to find the app and follow the on-screen instructions.`}
-        url={`https://vigilant-austin-33c3c5.netlify.app/survey/?id=${uid}`}
+        subject={`CYBERSAFE TOOL for SCHOOLS`}
+        body={`Thank you for taking part in a survey as part of the CYBERSAFE TOOL for SCHOOLS! Click this link to find the app and follow the on-screen instructions to complete your survey.`}
+        url={`https://cybersafetoolforschools.netlify.app/survey/?id=${uid}`}
       >
         Share
       </EmailShareButton>
