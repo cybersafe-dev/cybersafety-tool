@@ -53,20 +53,21 @@ const Signup = () => {
     if (!firebase) return
     const validated = await validateSignupForm()
     if (!validated) return
-    await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
-    // await firebase
-    //   .auth()
-    //   .createUserWithEmailAndPassword(email, password)
-    //   .then(async () => {
-    //     await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
-    //     navigate("/app")
-      // })
-      // .catch(error => {
-      //   setError(error.message)
-      //   setTimeout(() => {
-      //     setError(null)
-      //   }, 3000)
-      // })
+    // For testing web to lead without creating a user...
+    //await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
+    await firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(async () => {
+        await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
+      })
+      .then(() => navigate("/app"))
+      .catch(error => {
+        setError(error.message)
+        setTimeout(() => {
+          setError(null)
+        }, 3000)
+      })
   }
 
   const onChangeHandler = event => {

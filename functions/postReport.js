@@ -24,7 +24,7 @@ exports.handler = async (event, context) => {
 
         // execute the query by Roll Number (custom unique id)
         var q =
-          "SELECT Id, Name, Company, roll_number__c, report_available__c FROM Lead WHERE roll_number__c=" +
+          "SELECT Id, Name, Company, roll_number__c, tool_for_schools_progress__c FROM Lead WHERE roll_number__c=" +
           "'" +
           rollNumber +
           "'"
@@ -35,7 +35,7 @@ exports.handler = async (event, context) => {
             // use id of SF record to update the Lead object
             var act = nforce.createSObject("Lead", {
               Id: useId,
-              report_available__c: true,
+              tool_for_schools_progress__c: "Surveys completed...report available",
             })
 
             org.update({ sobject: act }, function (err, resp) {
