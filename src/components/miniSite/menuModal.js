@@ -25,6 +25,7 @@ const MenuModal = ({ toggleMenuModal, menuModalVisible }) => {
       <Link to="/#contact-us" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
         Contact Us
       </Link>
+      
     </nav>
   )
 }

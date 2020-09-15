@@ -8,10 +8,9 @@ import SEO from "../../components/seo"
 import DataError from "../../components/dataerror/dataerror"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
-
+import Buffer from "../../components/dashboard/buffer";
 import BgImg from "../../images/bg-gradient.svg"
 import Graphic from "../../images/dash.svg"
-
 import Digital from "../../images/Digital-open.svg"
 import DigitalDone from "../../images/Digital-done.svg"
 import Privacy from "../../images/Privacy-open.svg"
@@ -28,6 +27,7 @@ import ResponsDone from "../../images/Respons-done.svg"
 import "../../styling/survey/dashboard.css"
 
 const Dashboard = ({ data }) => {
+  const [bufferModalVisible, toggle] = React.useState(true);
   const [store] = React.useContext(ResponseStore)
   const [message, setMessage] = React.useState("")
   const [error, setError] = React.useState("")
@@ -57,6 +57,7 @@ const Dashboard = ({ data }) => {
   // console.log("messages", allDashMessages)
   // console.log("store in survey dash", store)
 
+
   return (
     <Layout>
       <SEO title="Choose a Category" />
@@ -71,6 +72,8 @@ const Dashboard = ({ data }) => {
             setMessage={setMessage}
           />
         </div>
+        {bufferModalVisible && (
+        <Buffer bufferModalVisible={bufferModalVisible} toggle={toggle} /> )}
         <div className="body-content">
           <SurveyProgress
             completedSections={completedSections}

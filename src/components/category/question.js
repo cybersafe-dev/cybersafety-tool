@@ -2,6 +2,7 @@ import React from "react"
 import { navigate } from "gatsby"
 import DataErrorPage from "../../components/dataerror/dataerror"
 import { ResponseStore } from "../../providers/responseProvider"
+
 import SEO from "../seo"
 
 import "../../styling/survey/question.css"
@@ -78,6 +79,7 @@ const Question = ({
           <p className="tip">{surveyHints.general}</p>
         )}
       </section>
+
     </>
   )
 }
