@@ -15,8 +15,8 @@ import Digital from "../../images/Digital-open.svg"
 import DigitalDone from "../../images/Digital-done.svg"
 import Privacy from "../../images/Privacy-open.svg"
 import PrivacyDone from "../../images/Privacy-done.svg"
-import Sharing from "../../images/Sharing-open.svg"
-import SharingDone from "../../images/Sharing-done.svg"
+import Living from "../../images/Onlife-open.svg"
+import LivingDone from "../../images/Onlife-done.svg"
 import Commun from "../../images/Comm-open.svg"
 import CommDone from "../../images/Comm-done.svg"
 import Critical from "../../images/Critical-open.svg"
@@ -130,7 +130,7 @@ const Dashboard = ({ data }) => {
                   onClick={repeatCategoryAlert}
                 >
                   <img
-                    src={SharingDone}
+                    src={LivingDone}
                     alt="Sharing complete"
                     className="cat-image"
                   />
@@ -143,7 +143,7 @@ const Dashboard = ({ data }) => {
                     category: "Sharing",
                   }}
                 >
-                  <img src={Sharing} alt="" className="cat-image" />
+                  <img src={Living} alt="" className="cat-image" />
                 </Link>
               )}{" "}
             </div>

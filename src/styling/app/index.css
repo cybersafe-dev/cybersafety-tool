@@ -15,12 +15,12 @@
   margin-top: 2rem;
 }
 .site-text {
-  width: 50vw;
+  width: 45vw;
   line-height: 1.8rem;
 }
 .fig {
   align-self: flex-end;
-  max-width: 40vw;
+  max-width: 35vw;
 }
 
 /* ABOUT SECTION */
