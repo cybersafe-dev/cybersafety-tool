@@ -35,9 +35,9 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: "Paragraph One", name: paragraph1, widget: markdown },
-                  { label: "Paragraph Two", name: paragraph2, widget: markdown },
-                  { label: "Paragraph Three", name: paragraph3, widget: markdown },
+                  { label: "Paragraph One", name: paragraph1, widget: text },
+                  { label: "Paragraph Two", name: paragraph2, widget: text },
+                  { label: "Paragraph Three", name: paragraph3, widget: text },
                 ],
             }
       - label: "Survey"

@@ -13,7 +13,7 @@ const NotFoundPage = () => (
       <img src={unknown} alt="Question Mark" className="unknown" />
       <p className="message">Sorry, the page you tried to reach does not exist.</p>
       <p className="message">
-        If you were trying to sign your school up for the self-assessment tool{" "}
+        If you were trying to sign up for the CyberSafe Tool for Schools{" "}
         <Link to="/">try here</Link>.
       </p>
       <p className="message">

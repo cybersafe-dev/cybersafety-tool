@@ -1,12 +1,19 @@
 .timer {
-  font-size: 40px;
+  font-size: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+  text-align: right;
+  position: relative;
+  margin-left: 1rem
+}
+.time-icon {
+  margin-right: 0.8rem;
 }
 
-.time-icon {
-  margin: 0 0 0 1rem;
+.timer-msg {
+  font-size: 0.65rem;
+  color: #E87927;
 }
 
 .btn {
@@ -25,10 +32,15 @@
 
 @media only screen and (max-width: 768px) {
   .timer-container {
-    margin: 0 0 0.5rem 0;
-
+    margin: 0;
   }
   .timer {
-    font-size: 30px;
+    font-size: 1.5rem;
+  }
+  .time-icon {
+    margin-right: 0.2rem;
+  }
+  .timer-msg {
+    display: none;
   }
 }
