@@ -1,18 +1,19 @@
 var nforce = require("nforce")
 
-exports.handler = async (event, context) => {
+exports.handler = (event, context, callback) => {
   // bring id and data to post into function
-  const { rollNumber } = await JSON.parse(event.body)
-
-  if (!rollNumber)
-    return {
+  const { rollNumber } = JSON.parse(event.body)
+  let response
+  if (!rollNumber) {
+    response = {
       statusCode: 404,
-      body: "user to update not found",
+      body: JSON.stringify("user to update not found"),
       headers: {
         "Access-Control-Allow-Methods": "*",
       },
     }
-
+    callback(null, response)
+  }
   // create the connection with the Salesforce connected app
   var org = nforce.createConnection({
     clientId: process.env.SF_CLIENT_ID,
@@ -30,7 +31,6 @@ exports.handler = async (event, context) => {
     function (err, resp) {
       if (!err) {
         console.log("Successfully logged in!")
-
         // execute the query by Roll Number (custom unique id)
         var q =
           "SELECT Id, Name, Company, roll_number__c, tool_for_schools_progress__c FROM Lead WHERE roll_number__c=" +
@@ -52,26 +52,49 @@ exports.handler = async (event, context) => {
               if (err) {
                 console.error("--> unable to update Lead")
                 console.error("--> " + JSON.stringify(err))
-                return 500
+                response = {
+                  statusCode: 500,
+                  body: JSON.stringify("unable to update lead"),
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                }
+                callback(null, response)
               } else {
                 console.log("--> Lead updated")
-                status = 200
+                response = {
+                  statusCode: 200,
+                  body: JSON.stringify("Lead updated"),
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                }
+                callback(null, response)
               }
             })
           } else {
             console.log("Error: " + err.message)
+            response = {
+              statusCode: 500,
+              body: JSON.stringify(err.message),
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+            callback(null, response)
           }
         })
       } else {
         console.log("Error: " + err.message)
+        response = {
+          statusCode: 500,
+          body: JSON.stringify(err.message),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+        callback(null, response)
       }
     }
   )
-  return {
-    statusCode: 200,
-    body: JSON.stringify("updated"),
-    headers: {
-      "Access-Control-Allow-Methods": "*",
-    },
-  }
 }
