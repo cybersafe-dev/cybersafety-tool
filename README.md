@@ -1,7 +1,7 @@
-# CYBERSAFE TOOL for SCHOOLS
+# CyberSafeIreland: CyberSafe Tool for Schools
 
 ## About this app
-Created by Carter & Scott: [@bethanyios](https://github.com/bethanyios) and [@jc2820](https://github.com/jc2820), this is the repository for the Cybersafe Tool for Schools.
+Created by Carter & Scott: [@bethanyios](https://github.com/bethanyios) and [@jc2820](https://github.com/jc2820), this is the repository for the CyberSafe Tool for Schools.
 
 The tool is for primary schools in Ireland to self-assess their level of 'cybersafety' across several categories (digital knowledge, privacy, sharing, communication, critical thinking and responsible use). The survey is to be completed by a variable quota of school Leaders, Teachers and Pupils depending on the size of the school. Once complete, schools will be given a report of their cybersafety by CyberSafeIreland, and the opportunity to purchase a mark of their level of cybersafety that they can display.
 
@@ -33,7 +33,7 @@ run `gatsby build`
 
 ### Run this app with netlify functions
 Steps 1, 2 and 3 from above  
-Netlify functions control the app's integration with Salesforce.   
+Netlify functions control the app's integration with Salesforce. Specifically updating leads when a report is created   
 install Netlify CLI on your machine: `npm install netlify-cli -g`  
 run `netlify dev`  
 Go to localhost:8888 in your browser  
@@ -50,14 +50,14 @@ Content management is provided for:
 * Editing some page hints and messages.
 * Editing some informational page content.
 
-The CMS can be accessed [here](https://the full url/admin). You can log in and edit with CyberSafeIreland's github credentials or if you are a collaborator on this repository.
+The CMS can be accessed [here](https://cybersafetoolforschools.ie/admin). You can log in and edit with CyberSafeIreland's github credentials or if you are a collaborator on this repository.
 CMS edits update markdown files in this repository via commits on master directly.
 
 The CMS is provided by Netlify CMS via Gatsby plugins. Named users can be added using the Netlify Identify service via email invite. This is currently not being utilised but can be if CyberSafeIreland require named users who are not likely to log in or be invited as a Github collaborator on this repo.
 
 ## Reporting and analysis
 An admin page is provided to view schools signed up, schools progress through the app and to download PDF reports when they have been submitted.
-This page can be found by logging in to the app through the log in page [here](https://the full url/app/login) with CyberSafeIreland credentials.
+This page can be found by logging in to the app through the log in page [here](https://cybersafetoolforschools.ie/app/login) with CyberSafeIreland credentials.
 
 When logged in you can see a filterable list of schools with option to show or hide details, view individual's survey submission scores and download a report.
 You can also see timestamps for when each score was submitted and for the time and date at which the final report was submitted.
