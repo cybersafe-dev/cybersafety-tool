@@ -45,12 +45,15 @@ const Profile = () => {
             <Share uid={uid} />
           </div>
           <p>
-            Please send this link to the appropriate number of school Leaders,
-            Teachers and Pupils along with your unique school ID.
+            Please send the above survey link to the appropriate number of your
+            school's Leaders, Teachers and Pupils as indicated on the left panel
+            of this page.
           </p>
           <p>
-            Once the correct number of surveys have been filled you will be able
-            to submit the responses to CybersafeIreland
+            Keep an eye on this page and refresh it occasionally. After the
+            correct number of surveys have been completed a button will appear
+            to submit the responses to CybersafeIreland. You will then receive a
+            report back in due course.
           </p>
           <button className="logout-btn" onClick={signOutApp}>
             Log out
