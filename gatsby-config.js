@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `CyberSafe Tool for Schools`,
-    description: `Cybersafety survey for primary schools in Ireland`,
+    description: `Cybersafety survey tool for primary schools in Ireland`,
     author: `@gatsbyjs`,
   },
   plugins: [
