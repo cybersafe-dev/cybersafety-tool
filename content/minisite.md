@@ -1,7 +1,7 @@
 ---
 minisitecontent:
   tool: >-
-    Welcome to our CYBERSAFE TOOL for SCHOOLS. This free tool provides an
+    Welcome to our CyberSafe Tool for Schools. This free tool provides an
     opportunity for you to self-evaluate your school’s level of cybersafety
     against best practice. We survey a cross-section of School Leadership,
     Teachers and Pupils and will provide you with a report of your results,
@@ -23,7 +23,7 @@ minisitecontent:
     and dangers inherent in the online world.  
 
 
-    While we continue to call for online safety to become a mandatory part of the curriculum in primary schools, CyberSafeIreland has developed CYBERSAFE TOOL for SCHOOLS, an online self-assessment tool for measuring school’s understanding of cybersafety against a number of key performance categories. Our goal is to establish a national benchmark for online safety and digital literacy across primary schools in Ireland. 
+    While we continue to call for online safety to become a mandatory part of the curriculum in primary schools, CyberSafeIreland has developed CyberSafe Tool for Schools, an online self-assessment tool for measuring school’s understanding of cybersafety against a number of key performance categories. Our goal is to establish a national benchmark for online safety and digital literacy across primary schools in Ireland. 
   cybersafeireland: >-
     CyberSafeIreland is a not-for-profit organisation, established in 2015, that
     works to empower children, parents and teachers to navigate the online world
