@@ -4,13 +4,14 @@ exports.handler = async (event, context) => {
   // bring id and data to post into function
   const { rollNumber } = await JSON.parse(event.body)
 
-//   if (!rollNumber) return {
-//     statusCode: 404,
-//     body: "user to update not found",
-//     headers: {
-//       "Access-Control-Allow-Methods": "*",
-//     },
-//   }
+  if (!rollNumber)
+    return {
+      statusCode: 404,
+      body: "user to update not found",
+      headers: {
+        "Access-Control-Allow-Methods": "*",
+      },
+    }
 
   // create the connection with the Salesforce connected app
   var org = nforce.createConnection({
@@ -39,11 +40,12 @@ exports.handler = async (event, context) => {
         org.query({ query: q }, function (err, resp) {
           if (!err && resp.records) {
             const useId = resp.records[0]._fields.id
-            
+
             // use id of SF record to update the Lead object
             var act = nforce.createSObject("Lead", {
               Id: useId,
-              tool_for_schools_progress__c: "Surveys completed...report available",
+              tool_for_schools_progress__c:
+                "Surveys completed...report available",
             })
 
             org.update({ sobject: act }, function (err, resp) {
@@ -56,14 +58,18 @@ exports.handler = async (event, context) => {
                 status = 200
               }
             })
+          } else {
+            console.log("Error: " + err.message)
           }
         })
+      } else {
+        console.log("Error: " + err.message)
       }
     }
   )
   return {
     statusCode: 200,
-    body: "updated",
+    body: JSON.stringify("updated"),
     headers: {
       "Access-Control-Allow-Methods": "*",
     },
