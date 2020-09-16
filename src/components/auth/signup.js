@@ -148,7 +148,7 @@ const Signup = () => {
             className="login-input"
             name="schoolName"
             value={schoolName}
-            placeholder="e.g. St. Patrick's, Dublin"
+            placeholder="e.g. St. Philip's National School, Co. Dublin"
             id="schoolName"
             onChange={event => onChangeHandler(event)}
           />

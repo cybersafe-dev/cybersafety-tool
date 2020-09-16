@@ -7,9 +7,9 @@ const PrivateRoute = ({ component: Component, location, ...rest }) => {
   const [user] = React.useContext(userStore)
 
   // user debug log here
-  React.useEffect(() => {
-    console.log("user data", user)
-  }, [user])
+  // React.useEffect(() => {
+  //   console.log("user data", user)
+  // }, [user])
 
   if (!user && location.pathname !== `/app/login`) {
     navigate("/app/login")
