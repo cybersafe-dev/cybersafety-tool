@@ -386,7 +386,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
           <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
         </View>
         <View style={styles.body}>
-          <Text style={styles.h1}>CyberSafeIreland</Text>
+          <Text style={styles.h1}>CyberSafeIreland CLG</Text>
           <View style={styles.centered}>
             <Text style={styles.address}>Company number: 568651</Text>
             <Text style={styles.address}>
