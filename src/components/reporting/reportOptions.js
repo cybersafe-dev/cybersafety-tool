@@ -44,7 +44,7 @@ const ReportOptions = ({
                   reportSubmitted={reportSubmitted}
                 />
               }
-              fileName={`Report for ${report.reportFor}.pdf`}
+              fileName={`CyberSafe Tool for Schools report for ${report.reportFor}.pdf`}
             >
               {({ blob, url, loading, error }) => 
                 loading ? "Loading document..." : "Download PDF"
