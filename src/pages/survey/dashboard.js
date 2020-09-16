@@ -8,7 +8,7 @@ import SEO from "../../components/seo"
 import DataError from "../../components/dataerror/dataerror"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
-import Buffer from "../../components/dashboard/buffer";
+import Buffer from "../../components/dashboard/buffer"
 import BgImg from "../../images/bg-gradient.svg"
 import Graphic from "../../images/dash.svg"
 import Digital from "../../images/Digital-open.svg"
@@ -27,10 +27,10 @@ import OnlineLifeDone from "../../images/Onlife-done.svg"
 import "../../styling/survey/dashboard.css"
 
 const Dashboard = ({ data }) => {
-  const [bufferModalVisible, toggle] = React.useState(true);
   const [store] = React.useContext(ResponseStore)
   const [message, setMessage] = React.useState("")
   const [error, setError] = React.useState("")
+  const [bufferModalVisible, toggle] = React.useState(true)
 
   const surveyAllData =
     data.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -57,12 +57,10 @@ const Dashboard = ({ data }) => {
   // console.log("messages", allDashMessages)
   // console.log("store in survey dash", store)
 
-
   return (
     <Layout>
       <SEO title="Choose a Category" />
       <section className="dashboard-container">
-
         <div className="headline">
           <SurveyDashMessages
             error={error}
@@ -71,8 +69,12 @@ const Dashboard = ({ data }) => {
             setMessage={setMessage}
           />
         </div>
-        {bufferModalVisible && (
-        <Buffer bufferModalVisible={bufferModalVisible} toggle={toggle} /> )}
+        {completedSections.length === 1 && bufferModalVisible ? (
+          <Buffer
+            bufferModalVisible={bufferModalVisible}
+            toggle={toggle}
+          />
+        ) : null}
         <div className="body-content">
           <SurveyProgress
             completedSections={completedSections}
