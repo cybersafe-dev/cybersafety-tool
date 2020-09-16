@@ -15,6 +15,7 @@ const SurveyStats = ({
 }) => {
   const [currentScores, setCurrentScores] = React.useState(null)
   const [error, setError] = React.useState(null)
+  const [submitting, setSubmitting] = React.useState(false)
 
   React.useEffect(() => {
     const getScores = async () => {
@@ -34,6 +35,7 @@ const SurveyStats = ({
       setError("Looks like you already submitted your report...thanks!")
       return
     }
+    setSubmitting(true)
     const report = await createReport(currentScores, schoolName)
     const dbPostStatus = await postReportToDb(uid, report)
 
@@ -69,13 +71,6 @@ const SurveyStats = ({
           scores={leadersFilledSurveys}
           quota={leadersQuota}
         />
-        {/* {leadersFilledSurveys >= leadersQuota ? (
-          <img
-            src={greenTick}
-            alt="Leaders surveys complete"
-            className="quota-box-tick"
-          />
-        ) : null} */}
       </section>
       <section className="teachers-box">
         <SurveyQuotaBox
@@ -83,13 +78,6 @@ const SurveyStats = ({
           scores={teachersFilledSurveys}
           quota={teachersQuota}
         />
-        {/* {teachersFilledSurveys >= teachersQuota ? (
-          <img
-            src={greenTick}
-            alt="Teachers surveys complete"
-            className="quota-box-tick"
-          />
-        ) : null} */}
       </section>
       <section className="pupils-box">
         <SurveyQuotaBox
@@ -97,20 +85,19 @@ const SurveyStats = ({
           scores={pupilsFilledSurveys}
           quota={pupilsQuota}
         />
-        {/* {pupilsFilledSurveys >= pupilsQuota ? (
-          <img
-            src={greenTick}
-            alt="Pupils surveys complete"
-            className="quota-box-tick"
-          />
-        ) : null} */}
       </section>
       {leadersFilledSurveys >= leadersQuota &&
       teachersFilledSurveys >= teachersQuota &&
       pupilsFilledSurveys >= pupilsQuota ? (
-        <button className="final-submit-btn" onClick={handleFinalSubmit}>
-          Submit
-        </button>
+        submitting ? (
+          <button className="final-submit-btn-processing">
+            Processing...
+          </button>
+        ) : (
+          <button className="final-submit-btn" onClick={handleFinalSubmit}>
+            Submit
+          </button>
+        )
       ) : null}
       <p className="error-message">{error}</p>
     </section>
