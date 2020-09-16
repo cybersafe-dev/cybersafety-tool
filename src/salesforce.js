@@ -26,10 +26,10 @@ export const addNewSalesforceLead = (
       "Content-type": "application/x-www-form-urlencoded",
     },
   })
-    .then(res => {
-      console.log(res)
-    })
-    .catch(error => {
-      console.error(error)
-    })
+    // .then(res => {
+    //   console.log(res)
+    // })
+    // .catch(error => {
+    //   console.error(error)
+    // })
 }

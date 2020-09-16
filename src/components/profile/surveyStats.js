@@ -30,10 +30,10 @@ const SurveyStats = ({
   if (!uid || !currentScores) return <p>Loading...</p>
 
   const handleFinalSubmit = async () => {
-    // if (reportSubmitted) {
-    //   setError("Looks like you already submitted your report...thanks!")
-    //   return
-    // }
+    if (reportSubmitted) {
+      setError("Looks like you already submitted your report...thanks!")
+      return
+    }
     const report = await createReport(currentScores, schoolName)
     const dbPostStatus = await postReportToDb(uid, report)
 
@@ -42,10 +42,13 @@ const SurveyStats = ({
       method: "POST",
       body: JSON.stringify({ rollNumber: rollNumber }),
       headers: { "Content-Type": "application/json" },
-    }).then(res => res.json()).then(data => console.log(data)).catch(console.error)
+    })
+      // .then(res => res.json())
+      // .then(data => console.log(data))
+      .catch(console.error)
 
     if (dbPostStatus === "updated") {
-      // navigate("/app/confirmation")
+      navigate("/app/confirmation")
     } else {
       setError(
         "Sorry there was a problem uploading your surveys. Please try again"
