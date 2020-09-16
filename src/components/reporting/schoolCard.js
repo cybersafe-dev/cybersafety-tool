@@ -18,7 +18,13 @@ const SchoolCard = ({ school }) => {
 
   return (
     <section
-      className={reportSentBool ? "school-card-complete" : "school-card"}
+      className={
+        reportSentBool
+          ? "school-card-complete"
+          : school.report
+          ? "school-card-with-report"
+          : "school-card"
+      }
       key={school.schoolName}
     >
       <div className="bar-line">
