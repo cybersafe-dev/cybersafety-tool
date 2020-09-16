@@ -17,7 +17,7 @@ const ThankYou = () => (
       <img src={BgImg} alt="background design" className="bg-img6" />
       <img src={Rocket} alt="rocket icon" className="design" />
       <p className="thanku-message">
-        Thank you for completing the assessment. Your responses have now been sent to CyberSafeIreland and you will receive your report soon. In the meantime, to find out more about getting the CyberSafe Tool for Schools mark, please click <a className="link-back" href="/survey" target="_blank"
+        Thank you for completing the assessment. Your responses have now been sent to CyberSafeIreland and you will receive your report soon. In the meantime, to find out more about getting the CyberSafe Tool for Schools' mark, please click <a className="link-back" href="/survey" target="_blank"
         rel="noreferrer">here</a>
       </p>
 
