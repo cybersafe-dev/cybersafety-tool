@@ -19,9 +19,6 @@
   flex-direction: row;
   width: 100vw;
   justify-content: center;
-  /* position: fixed;
-  bottom: 0;
-  left: 0; */
   padding-bottom: 0.5rem;
 }
 
@@ -47,21 +44,21 @@
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  max-width: 50vw;
+  max-width: 55vw;
 }
 
 .para-2 {
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  max-width: 50vw;
+  max-width: 55vw;
 }
 
 .para-3 {
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  max-width: 50vw;
+  max-width: 55vw;
 }
 
 .start-btn {
