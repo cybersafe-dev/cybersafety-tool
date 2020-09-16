@@ -10,8 +10,7 @@ import {
 } from "@react-pdf/renderer"
 
 import logo from "../images/cybersafe-logo.png"
-// import surfer from "../images/surfer.svg"
-// import blob from "../images/bg-gradient.svg"
+import BlobSurfer from "../images/blobsurfer.png"
 
 import { awardLevelBlurbs } from "./pdfReportBlurbs"
 
@@ -100,6 +99,11 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 100,
   },
+  blobSurfer: {
+    width: 300,
+    alignSelf: "center",
+    marginVertical: 50,
+  },
   table: {
     flexDirection: "column",
     borderTopWidth: 2,
@@ -143,6 +147,9 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
         </View>
         <View style={styles.body}>
           <Text style={styles.h1}>CyberSafe Tool for Schools Report</Text>
+        </View>
+        <View style={styles.body}>
+          <Image style={styles.blobSurfer} src={BlobSurfer} alt="Surfer on a blue blob" />
         </View>
         <View style={styles.body}>
           <View style={styles.table}>
