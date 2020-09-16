@@ -33,7 +33,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
       <section className="section-container">
         <div id="about">
           <div className="section">
-            <h1 className="section-title">CYBERSAFE TOOL for SCHOOLS</h1>
+            <h1 className="section-title">CyberSafe Tool for Schools</h1>
             <p className="site-text">{data.minisitecontent.tool}</p>
           </div>
           <img src={Fig1} alt="" className="fig" />

@@ -1,7 +1,7 @@
 ---
 minisitecontent:
   tool: >-
-    Welcome to the CyberSafeIreland Self-Assessment Tool for Schools.\
+    Welcome to the CyberSafe Tool for Schools.\
 
     \
 
@@ -24,7 +24,7 @@ minisitecontent:
   cybersafeireland: >-
     CyberSafeIreland is a not-for-profit organisation, established in 2015, that
     works to empower children, parents and teachers to navigate the online world
-    in a safe and responsible manner. 
+    in a safe and responsible manner.
 
 
     We want our children to be able to embrace the opportunities for learning and enjoyment that technology can deliver, but we recognise that as parents and educators we have a responsibility to equip them with the tools to stay safe and avoid harm.

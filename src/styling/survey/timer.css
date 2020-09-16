@@ -8,7 +8,7 @@
   margin-left: 1rem
 }
 .time-icon {
-  margin-right: 0.9rem;
+  margin-right: 0.8rem;
 }
 
 .timer-msg {
@@ -33,7 +33,6 @@
 @media only screen and (max-width: 768px) {
   .timer-container {
     margin: 0;
-
   }
   .timer {
     font-size: 1.5rem;
