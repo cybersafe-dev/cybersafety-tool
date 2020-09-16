@@ -25,6 +25,7 @@ const Timer = () => {
           </span>
           <img src={Time} alt="" className="time-icon" />
         </div>
+        <p className="timer-msg">This should take 15 minutes</p>
       </div>
     </>
   )
