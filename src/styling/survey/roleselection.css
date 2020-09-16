@@ -3,7 +3,6 @@
   align-items: center;
   flex-direction: column;
   padding: 5rem;
-  /* height: 93vh; */
   overflow-x: hidden;
 }
 
@@ -11,6 +10,10 @@
   width: 100vw;
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.tagline {
+  text-align: justify;
 }
 
 .bg-img2 {
