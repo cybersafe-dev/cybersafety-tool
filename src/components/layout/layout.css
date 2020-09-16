@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap");
 
 html {
   font-family: "Poppins", sans-serif;
@@ -67,6 +67,7 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+
 }
 mark {
   background-color: #ff0;
@@ -233,7 +234,7 @@ h1 {
   margin-bottom: 0.2rem;
   color: inherit;
   font-family: "Poppins", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
   font-size: 4vw;
   line-height: 1.1;
