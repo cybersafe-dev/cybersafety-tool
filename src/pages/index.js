@@ -27,13 +27,13 @@ const [privacyModalVisible, toggle] = React.useState(true);
   return (
     <Layout>
     {privacyModalVisible && (
-    <PrivacyModal privacyModalVisible={privacyModalVisible} toggle={toggle} /> )} 
+    <PrivacyModal privacyModalVisible={privacyModalVisible} toggle={toggle} /> )}
       <MiniNavbar />
       <SEO title="Home" />
       <section className="section-container">
         <div id="about">
           <div className="section">
-            <h1 className="section-title">Self-Assessment Tool for Schools</h1>
+            <h1 className="section-title">CYBERSAFE TOOL for SCHOOLS</h1>
             <p className="site-text">{data.minisitecontent.tool}</p>
           </div>
           <img src={Fig1} alt="" className="fig" />
@@ -50,6 +50,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
           <div className="section">
             <h1 className="section-title">
               CyberSafeIreland
+              <span> </span>
               <span role="img" aria-label="Irish flag">
                 🇮🇪
               </span>
@@ -70,7 +71,6 @@ const [privacyModalVisible, toggle] = React.useState(true);
             <span>93 Upper George Street, Dun Laoghaire,</span>
             <span>Co. Dublin, Ireland</span>
             <p>info@cybersafeireland.org</p>
-
             <a
               className="csi-link"
               href="https://cybersafeireland.org/"
@@ -78,6 +78,14 @@ const [privacyModalVisible, toggle] = React.useState(true);
               rel="noreferrer"
             >
               Visit our homepage
+            </a>
+            <a
+              className="csi-link"
+              href="https://cybersafeireland.org/privacy-policy-and-data-protection/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Privacy Policy
             </a>
             <div className="socials">
               <a
