@@ -21,8 +21,8 @@ import Critical from "../../images/Critical-open.svg"
 import CriticalDone from "../../images/Critical-done.svg"
 import Respons from "../../images/Respons-open.svg"
 import ResponsDone from "../../images/Respons-done.svg"
-import OnlineLife from "../../images/Living-open.svg"
-import OnlineLifeDone from "../../images/Living-done.svg"
+import OnlineLife from "../../images/Onlife-open.svg"
+import OnlineLifeDone from "../../images/Onlife-done.svg"
 
 import "../../styling/survey/dashboard.css"
 
