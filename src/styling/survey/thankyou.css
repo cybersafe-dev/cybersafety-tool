@@ -21,9 +21,15 @@
 }
 
 .link-back {
-  text-decoration: underline;
-  color: #181818;
+  text-decoration: none;
+  color: #2a94f4;
 }
+
+.link-back:hover {
+  text-decoration: underline;
+  color: #2a94f4;
+}
+
 .bg-img6 {
   position: absolute;
   justify-content: center;

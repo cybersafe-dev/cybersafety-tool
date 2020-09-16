@@ -16,9 +16,18 @@ const Confirmation = () => (
       <img src={BgImg} alt="background design" className="bg-img9" />
       <img src={High5} alt="high-five icon" className="design" />
       <p className="thanku-message">
-        {" "}
-        The results have been sent off to be evaluated. You will recieve your
-        report shortly!{" "}
+        Thank you for completing the assessment. Your responses have now been
+        sent to CyberSafeIreland and you will receive your report soon. In the
+        meantime, to find out more about getting the CyberSafe Tool for Schools'
+        mark, please click{" "}
+        <a
+          className="link-back"
+          href="https://www.cybersafeireland.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          here
+        </a>
       </p>
     </section>
   </Layout>
