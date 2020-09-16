@@ -4,7 +4,7 @@ import "../../styling/app/share.css"
 
 const Copy = ({ uid }) => {
   const [isCopied, setCopied] = useClipboard(
-    `https://cybersafetoolforschools.netlify.app/survey/?id=${uid}`,
+    `http://cybersafetoolforschools.ie/survey/?id=${uid}`,
     {
       successDuration: 1000,
     }
@@ -19,7 +19,7 @@ const Copy = ({ uid }) => {
         <p className="copy-text">Loading...</p>
       ) : (
         <p className="copy-text">
-          https://cybersafetoolforschools.netlify.app/survey/?id={uid}{" "}
+          http://cybersafetoolforschools.ie/survey/?id={uid}{" "}
           {isCopied ? "✓" : ""}
         </p>
       )}
