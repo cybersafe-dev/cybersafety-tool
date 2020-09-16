@@ -14,7 +14,7 @@ const ScoreCard = ({ score }) => {
           Digital Knowledge: {score.digitalknowledge}
         </li>
         <li className="category">Privacy: {score.privacy}</li>
-        <li className="category">Sharing: {score.sharing}</li>
+        <li className="category">Online Life: {score.onlinelife}</li>
         <li className="category">Communication: {score.communication}</li>
         <li className="category">
           Critical Thinking: {score.criticalthinking}

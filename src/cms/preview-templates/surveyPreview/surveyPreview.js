@@ -69,10 +69,10 @@ const SurveyPreview = ({ entry }) => {
           </div>
           <div className="category">
             <button onClick={() => setS(!s)}>&#9660;</button>
-            <h3>Sharing</h3>
+            <h3>Online Life</h3>
           </div>
           <div style={{ display: s ? "block" : "none" }}>
-            {data.leaders.sharing.map(question => (
+            {data.leaders.onlinelife.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -201,10 +201,10 @@ const SurveyPreview = ({ entry }) => {
           </div>
           <div className="category">
             <button onClick={() => setS(!s)}>&#9660;</button>
-            <h3>Sharing</h3>
+            <h3>Online Life</h3>
           </div>
           <div style={{ display: s ? "block" : "none" }}>
-            {data.teachers.sharing.map(question => (
+            {data.teachers.onlinelife.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -333,10 +333,10 @@ const SurveyPreview = ({ entry }) => {
           </div>
           <div className="category">
             <button onClick={() => setS(!s)}>&#9660;</button>
-            <h3>Sharing</h3>
+            <h3>Online Life</h3>
           </div>
           <div style={{ display: s ? "block" : "none" }}>
-            {data.pupils.sharing.map(question => (
+            {data.pupils.onlinelife.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>

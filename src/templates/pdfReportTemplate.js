@@ -205,7 +205,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
             Digital Knowledge: {report.leaders.digitalknowledge}
           </Text>
           <Text style={styles.para}>Privacy: {report.leaders.privacy}</Text>
-          <Text style={styles.para}>Sharing: {report.leaders.sharing}</Text>
+          <Text style={styles.para}>Online Life: {report.leaders.onlinelife}</Text>
           <Text style={styles.para}>
             Communication: {report.leaders.communication}
           </Text>
@@ -220,7 +220,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
             Digital Knowledge: {report.teachers.digitalknowledge}
           </Text>
           <Text style={styles.para}>Privacy: {report.teachers.privacy}</Text>
-          <Text style={styles.para}>Sharing: {report.teachers.sharing}</Text>
+          <Text style={styles.para}>Online Life: {report.teachers.onlinelife}</Text>
           <Text style={styles.para}>
             Communication: {report.teachers.communication}
           </Text>
@@ -235,7 +235,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
             Digital Knowledge: {report.pupils.digitalknowledge}
           </Text>
           <Text style={styles.para}>Privacy: {report.pupils.privacy}</Text>
-          <Text style={styles.para}>Sharing: {report.pupils.sharing}</Text>
+          <Text style={styles.para}>Online Life: {report.pupils.onlinelife}</Text>
           <Text style={styles.para}>
             Communication: {report.pupils.communication}
           </Text>

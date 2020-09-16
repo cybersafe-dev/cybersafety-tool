@@ -127,7 +127,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-  sharing:
+  onlinelife:
     - statement: 1. I post regularly on social media.
       responses:
         - answer: I'm not on social media at all
@@ -364,7 +364,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-  sharing:
+  onlinelife:
     - statement: 1. My social media accounts are private or use another name.
       responses:
         - answer: I'm not on social media at all.
@@ -544,7 +544,7 @@ pupils:
         - answer: Sometimes
         - answer: Usually
         - answer: Always
-  sharing:
+  onlinelife:
     - statement: 1. I post regularly on social media.
       responses:
         - answer: I'm not on social media at all.
