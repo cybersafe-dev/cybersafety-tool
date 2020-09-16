@@ -12,7 +12,7 @@ const SubmitButton = ({ setError }) => {
   const averagedScores = {
     digitalknowledge: [],
     privacy: [],
-    sharing: [],
+    onlinelife: [],
     communication: [],
     criticalthinking: [],
     responsibleuse: [],

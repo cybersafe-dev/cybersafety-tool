@@ -30,7 +30,7 @@ export const createReport = (allScores, schoolName) => {
     leaders: {
       digitalknowledge: [],
       privacy: [],
-      sharing: [],
+      onlinelife: [],
       communication: [],
       criticalthinking: [],
       responsibleuse: [],
@@ -38,7 +38,7 @@ export const createReport = (allScores, schoolName) => {
     teachers: {
       digitalknowledge: [],
       privacy: [],
-      sharing: [],
+      onlinelife: [],
       communication: [],
       criticalthinking: [],
       responsibleuse: [],
@@ -46,7 +46,7 @@ export const createReport = (allScores, schoolName) => {
     pupils: {
       digitalknowledge: [],
       privacy: [],
-      sharing: [],
+      onlinelife: [],
       communication: [],
       criticalthinking: [],
       responsibleuse: [],
@@ -59,7 +59,7 @@ export const createReport = (allScores, schoolName) => {
         submission.digitalknowledge
       )
       combinedScoresInArray[userType].privacy.push(submission.privacy)
-      combinedScoresInArray[userType].sharing.push(submission.sharing)
+      combinedScoresInArray[userType].onlinelife.push(submission.onlinelife)
       combinedScoresInArray[userType].communication.push(
         submission.communication
       )
@@ -101,11 +101,11 @@ export const createReport = (allScores, schoolName) => {
   // Create worded report object for posting to DB
   const reportTemplate = {
     reportFor: schoolName,
-    prospectiveMark: prospectiveMark(), 
+    prospectiveMark: prospectiveMark(),
     leaders: {
       digitalknowledge: applyStatus(getMean(leaders.digitalknowledge)),
       privacy: applyStatus(getMean(leaders.privacy)),
-      sharing: applyStatus(getMean(leaders.sharing)),
+      onlinelife: applyStatus(getMean(leaders.onlinelife)),
       criticalthinking: applyStatus(getMean(leaders.criticalthinking)),
       communication: applyStatus(getMean(leaders.communication)),
       responsibleuse: applyStatus(getMean(leaders.responsibleuse)),
@@ -113,7 +113,7 @@ export const createReport = (allScores, schoolName) => {
     teachers: {
       digitalknowledge: applyStatus(getMean(teachers.digitalknowledge)),
       privacy: applyStatus(getMean(teachers.privacy)),
-      sharing: applyStatus(getMean(teachers.sharing)),
+      onlinelife: applyStatus(getMean(teachers.onlinelife)),
       criticalthinking: applyStatus(getMean(teachers.criticalthinking)),
       communication: applyStatus(getMean(teachers.communication)),
       responsibleuse: applyStatus(getMean(teachers.responsibleuse)),
@@ -121,7 +121,7 @@ export const createReport = (allScores, schoolName) => {
     pupils: {
       digitalknowledge: applyStatus(getMean(pupils.digitalknowledge)),
       privacy: applyStatus(getMean(pupils.privacy)),
-      sharing: applyStatus(getMean(pupils.sharing)),
+      onlinelife: applyStatus(getMean(pupils.onlinelife)),
       criticalthinking: applyStatus(getMean(pupils.criticalthinking)),
       communication: applyStatus(getMean(pupils.communication)),
       responsibleuse: applyStatus(getMean(pupils.responsibleuse)),
@@ -130,40 +130,3 @@ export const createReport = (allScores, schoolName) => {
 
   return reportTemplate
 }
-
-// Keep until we know definitely not required
-  // const reportTemplate = `
-  // # Report for ${schoolName}
-  // _Scores taken from mean average of all survey submissions_
-  // ## School Leaders
-  // * Digital Knowledge: ${getMean(leaders.digitalknowledge)}
-  // * Privacy: ${getMean(leaders.privacy)}
-  // * Sharing: ${getMean(leaders.sharing)}
-  // * Critical Thinking: ${getMean(leaders.criticalthinking)}
-  // * Communication: ${getMean(leaders.communication)}
-  // * Responsible Use: ${getMean(leaders.responsibleuse)}
-
-  // ---
-
-  // ## Teachers
-  // * Digital Knowledge: ${getMean(teachers.digitalknowledge)}
-  // * Privacy: ${getMean(teachers.privacy)}
-  // * Sharing: ${getMean(teachers.sharing)}
-  // * Critical Thinking: ${getMean(teachers.criticalthinking)}
-  // * Communication: ${getMean(teachers.communication)}
-  // * Responsible Use: ${getMean(teachers.responsibleuse)}
-
-  // ---
-
-  // ## Pupils
-  // * Digital Knowledge: ${getMean(pupils.digitalknowledge)}
-  // * Privacy: ${getMean(pupils.privacy)}
-  // * Sharing: ${getMean(pupils.sharing)}
-  // * Critical Thinking: ${getMean(pupils.criticalthinking)}
-  // * Communication: ${getMean(pupils.communication)}
-  // * Responsible Use: ${getMean(pupils.responsibleuse)}
-
-  // ---
-
-  // Recommendations:
-  // `

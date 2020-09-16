@@ -103,8 +103,8 @@ collections:
                       ],
                   },
                   {
-                    label: "Sharing",
-                    name: "sharing",
+                    label: "Online Life",
+                    name: "onlinelife",
                     widget: list,
                     fields:
                       [
@@ -267,8 +267,8 @@ collections:
                       ],
                   },
                   {
-                    label: "Sharing",
-                    name: "sharing",
+                    label: "Online Life",
+                    name: "onlinelife",
                     widget: list,
                     fields:
                       [
@@ -431,8 +431,8 @@ collections:
                       ],
                   },
                   {
-                    label: "Sharing",
-                    name: "sharing",
+                    label: "Online Life",
+                    name: "onlinelife",
                     widget: list,
                     fields:
                       [

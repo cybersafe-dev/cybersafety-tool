@@ -16,7 +16,7 @@ const InlineReportTemplate = ({ report, reportSubmitted }) => {
           <ul>
             <li>Digital Knowledge: {report.leaders.digitalknowledge}</li>
             <li>Privacy: {report.leaders.privacy}</li>
-            <li>Sharing: {report.leaders.sharing}</li>
+            <li>Online Life: {report.leaders.onlinelife}</li>
             <li>Communication: {report.leaders.communication}</li>
             <li>Critical Thinking: {report.leaders.criticalthinking}</li>
             <li>Responsible Use: {report.leaders.responsibleuse}</li>
@@ -27,7 +27,7 @@ const InlineReportTemplate = ({ report, reportSubmitted }) => {
           <ul>
             <li>Digital Knowledge: {report.teachers.digitalknowledge}</li>
             <li>Privacy: {report.teachers.privacy}</li>
-            <li>Sharing: {report.teachers.sharing}</li>
+            <li>Online Life: {report.teachers.onlinelife}</li>
             <li>Communication: {report.teachers.communication}</li>
             <li>Critical Thinking: {report.teachers.criticalthinking}</li>
             <li>Responsible Use: {report.teachers.responsibleuse}</li>
@@ -38,7 +38,7 @@ const InlineReportTemplate = ({ report, reportSubmitted }) => {
           <ul>
             <li>Digital Knowledge: {report.pupils.digitalknowledge}</li>
             <li>Privacy: {report.pupils.privacy}</li>
-            <li>Sharing: {report.pupils.sharing}</li>
+            <li>Online Life: {report.pupils.onlinelife}</li>
             <li>Communication: {report.pupils.communication}</li>
             <li>Critical Thinking: {report.pupils.criticalthinking}</li>
             <li>Responsible Use: {report.pupils.responsibleuse}</li>

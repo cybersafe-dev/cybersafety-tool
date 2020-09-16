@@ -15,14 +15,14 @@ import Digital from "../../images/Digital-open.svg"
 import DigitalDone from "../../images/Digital-done.svg"
 import Privacy from "../../images/Privacy-open.svg"
 import PrivacyDone from "../../images/Privacy-done.svg"
-import Living from "../../images/Onlife-open.svg"
-import LivingDone from "../../images/Onlife-done.svg"
 import Commun from "../../images/Comm-open.svg"
 import CommDone from "../../images/Comm-done.svg"
 import Critical from "../../images/Critical-open.svg"
 import CriticalDone from "../../images/Critical-done.svg"
 import Respons from "../../images/Respons-open.svg"
 import ResponsDone from "../../images/Respons-done.svg"
+import OnlineLife from "../../images/Onlife-open.svg"
+import OnlineLifeDone from "../../images/Onlife-done.svg"
 
 import "../../styling/survey/dashboard.css"
 
@@ -124,14 +124,14 @@ const Dashboard = ({ data }) => {
                   <img src={Privacy} alt="" className="cat-image" />
                 </Link>
               )}{" "}
-              {completedSections.includes("sharing") ? (
+              {completedSections.includes("onlinelife") ? (
                 <button
                   className="done-icon-button"
                   onClick={repeatCategoryAlert}
                 >
                   <img
-                    src={LivingDone}
-                    alt="Sharing complete"
+                    src={OnlineLifeDone}
+                    alt="Online Life complete"
                     className="cat-image"
                   />
                 </button>
@@ -139,11 +139,11 @@ const Dashboard = ({ data }) => {
                 <Link
                   to="/survey/category/"
                   state={{
-                    survey: userSpecificData.sharing,
-                    category: "Sharing",
+                    survey: userSpecificData.onlinelife,
+                    category: "Online Life",
                   }}
                 >
-                  <img src={Living} alt="" className="cat-image" />
+                  <img src={OnlineLife} alt="" className="cat-image" />
                 </Link>
               )}{" "}
             </div>
@@ -248,7 +248,7 @@ export const query = graphql`
                     answer
                   }
                 }
-                sharing {
+                onlinelife {
                   statement
                   responses {
                     answer
@@ -286,7 +286,7 @@ export const query = graphql`
                     answer
                   }
                 }
-                sharing {
+                onlinelife {
                   statement
                   responses {
                     answer
@@ -324,7 +324,7 @@ export const query = graphql`
                     answer
                   }
                 }
-                sharing {
+                onlinelife {
                   statement
                   responses {
                     answer
