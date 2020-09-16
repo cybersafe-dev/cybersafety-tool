@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
   if (!rollNumber)
     return {
       statusCode: 404,
-      body: "user to update not found",
+      body: JSON.stringify("user to update not found"),
       headers: {
         "Access-Control-Allow-Methods": "*",
       },
