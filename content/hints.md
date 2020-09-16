@@ -8,8 +8,9 @@ dashboardMain:
   fiveDone: Nearly finished...
   sixDone: All done!
 dashboardMessages:
-  initial: Click on a key to answer the questions for that category. See if you
-    can complete all the categories before the timer gets to fifteen minutes.
+  initial: Click on a category to answer the questions for that category. See if
+    you can complete all the categories before the timer gets to fifteen
+    minutes.
   categoryRepeat: You can only complete a category once. Please pick another category.
   allCategoriesDone: You've completed all the sections...well done! You can now
     click the submit button to send us your survey.
