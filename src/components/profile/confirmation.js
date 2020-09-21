@@ -27,7 +27,7 @@ const Confirmation = () => (
           rel="noreferrer"
         >
           here
-        </a>
+        </a>.
       </p>
     </section>
   </Layout>

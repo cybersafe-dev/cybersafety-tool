@@ -33,7 +33,7 @@
   align-items: center;
   justify-content: space-between;
   flex-grow: 1;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 
 .figure {
@@ -72,6 +72,7 @@
   text-decoration: none;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .start-btn:active {

@@ -13,11 +13,8 @@
 }
 .thanku-message {
   margin-top: 1rem;
-}
-
-.thanku-message {
   text-align: justify;
-  max-width: 60vw;
+  max-width: 50vw;
 }
 
 .link-back {
@@ -48,7 +45,19 @@
 .design {
   height: 20rem;
 }
-
+.ty-btn {
+  background: #53c5cd;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 0.5rem;
+  width: 250px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer; 
+}
 
 
 @media only screen and (max-width: 768px) {
