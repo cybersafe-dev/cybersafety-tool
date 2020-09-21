@@ -9,7 +9,7 @@ const Share = ({ uid }) => {
       <EmailShareButton
         className="email-share"
         subject={`CyberSafe Tool for Schools`}
-        body={`Hello and Thank you for taking part in a survey as part of the CyberSafe Tool for Schools! Click this link to find the app and follow the on-screen instructions to complete your survey.`}
+        body={`As a school we are taking part in a survey, click this link to find the app and follow the onscreen instructions to complete the survey.`}
         url={`https://cybersafetoolforschools.ie/survey/?id=${uid}`}
       >
         Share
