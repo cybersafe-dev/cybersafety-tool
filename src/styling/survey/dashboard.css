@@ -111,10 +111,7 @@
 }
 
 .slash {
-  font-size: 1.8rem;
-  margin-bottom: 0.6rem;
-  font-weight: 900;
-  padding: 0 0.1rem;
+font-family: arial, sans-serif;
 }
 
 .submit-btn {
@@ -248,12 +245,6 @@
   }
   .fraction-text {
     margin: 0;
-  }
-
-  .slash {
-    font-size: 1.45rem;
-    margin-bottom: 0.2rem;
-    font-weight: 800;
   }
 
  /* SUBMIT BUTTON */
