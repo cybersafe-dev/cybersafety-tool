@@ -6,7 +6,7 @@ export const applyStatus = number => {
       status = "CyberChampion"
       break
     case 2:
-      status = "CyberStrong"
+      status = "CyberSmart"
       break
     case 3:
       status = "CyberSmart"

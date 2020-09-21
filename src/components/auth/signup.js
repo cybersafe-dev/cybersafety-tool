@@ -36,6 +36,8 @@ const Signup = () => {
 
   const validateSignupForm = () => {
     if (honeypot) return false
+    if (!rollNumber) {
+      setRollNumber(Math.floor(Math.random() * 100000) + 1) }
     if (!firstName || !lastName || !schoolName || !pupilCount) {
       setError("Please fill in all the form fields with asterisks")
       setTimeout(() => {
@@ -156,7 +158,7 @@ const Signup = () => {
 
         <label htmlFor="rollNumber" className="block">
           <p className="form-label">
-            Your School's Roll Number (if not applicable leave blank):
+            Your School's Roll Number (if not applicable, please leave blank):
           </p>
           <input
             type="text"
