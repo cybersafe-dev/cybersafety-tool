@@ -266,15 +266,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 5. My pupils feel they can come and talk to me about anything that
-        happens to them online.
-      responses:
-        - answer: Strongly agree
-        - answer: Agree
-        - answer: Neutral
-        - answer: Disagree
-        - answer: Strongly disagree
-    - statement: 6. I regularly use digital technologies (tablets, phones, computers,
+    - statement: 5. I regularly use digital technologies (tablets, phones, computers,
         robots) in my teaching.
       responses:
         - answer: Strongly agree
@@ -282,7 +274,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 7. I am comfortable using digital technologies (tablets, phones,
+    - statement: 6. I am comfortable using digital technologies (tablets, phones,
         computers, robots) in my teaching.
       responses:
         - answer: Strongly agree
@@ -290,7 +282,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 8. My pupils regularly use digital technologies (tablets, phones,
+    - statement: 7. My pupils regularly use digital technologies (tablets, phones,
         computers, robots) in their learning.
       responses:
         - answer: Strongly agree
@@ -298,7 +290,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 9. My school has a clear policy on smartphone use, created in
+    - statement: 8. My school has a clear policy on smartphone use, created in
         consultation with the parent body.
       responses:
         - answer: Strongly agree
@@ -315,7 +307,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 2. I understand how to create a very secure password for my accounts.
+    - statement: 2. I understand how to create secure passwords for my accounts.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -329,15 +321,16 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 4. I keep school-related digital data secure.
+    - statement: 4. I keep school-related digital data secure by keeping it onsite and
+        password protected.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 5. My school has a clear privacy policy about sharing images of
-        pupils (in school activities and events etc.) online.
+    - statement: 5. My school has a clear privacy policy about sharing images online
+        of pupils engaged in school activities and events etc.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -347,25 +340,26 @@ teachers:
   onlinelife:
     - statement: 1. My social media accounts are private or use another name.
       responses:
-        - answer: I'm not on social media at all.
-        - answer: Yes
-        - answer: Mostly
-        - answer: Not really
-        - answer: No
-    - statement: 2. I post photos and videos on social media.
-      responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
-        - answer: Strongly Agree
-    - statement: 3. I post selfies on social media.
-      responses:
-        - answer: Strongly disagree
-        - answer: Disagree
-        - answer: Neutral
-        - answer: Agree
         - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: 2. I never post selfies or personal information on social media.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: 3. My pupils feel they can come and talk to me about anything that
+        happens to them online.
+      responses:
+        - answer: Strongly Agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
   communication:
     - statement: 1. I use technology to communicate respectfully and safely with my
         pupils.
