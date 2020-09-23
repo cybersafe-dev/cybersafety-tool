@@ -551,7 +551,7 @@ pupils:
         - answer: Daily
     - statement: 3. I post selfies on social media.
       responses:
-        - answer: I never really post
+        - answer: I never post
         - answer: Not very often
         - answer: Usually
         - answer: Sometimes
@@ -586,17 +586,14 @@ pupils:
         - answer: Sometimes
         - answer: Not as much as I should
         - answer: No
-    - statement: 4. I can use technology to communicate respectfully and safely with
-        my teacher.
+    - statement: 4. In school we learn how to use technology to communicate properly
+        e.g. writing a polite e-mail to an adult
       responses:
-        - answer: Yes
+        - answer: Definitely
+        - answer: Kind of
         - answer: Not sure
-        - answer: No
-    - statement: 5. In school we learn how to write an e-mail.
-      responses:
-        - answer: Yes
-        - answer: Not sure
-        - answer: No
+        - answer: Not really
+        - answer: Definitely not
   criticalthinking:
     - statement: 1. I always check information I find online by searching for the same
         information in other places.
