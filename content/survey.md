@@ -360,6 +360,14 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
+    - statement: "4. I feel confident dealing with problems that my pupils encounter
+        online and issues which arise when they are brought into school. "
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
   communication:
     - statement: 1. I use technology to communicate respectfully and safely with my
         pupils.
@@ -403,7 +411,15 @@ teachers:
         - answer: Disagree
         - answer: Strongly disagree
   responsibleuse:
-    - statement: 1. I teach my pupils to reference sources and images they use in
+    - statement: 1. I am required by my school to reference sources and images I use
+        in materials  presentations.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: 2. I teach my pupils to reference sources and images they use in
         research and presentation.
       responses:
         - answer: Strongly agree
@@ -411,21 +427,21 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 2. My school has an Acceptable Use Policy (AUP) for digital technologies.
+    - statement: 3. My school has an Acceptable Use Policy (AUP) for digital technologies.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: There is no policy
-    - statement: 3. My school has a clear cyberbullying policy.
+    - statement: 4. My school has a clear cyberbullying policy.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: There is no policy
-    - statement: 4. I clearly understand the appropriate steps to take when a
+    - statement: 5. I clearly understand the appropriate steps to take when a
         cyberbullying/online incident involving my pupils is brought to my
         attention.
       responses:
@@ -434,14 +450,14 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 5. I know how approximately how much time I am online each day.
+    - statement: 6. I know how approximately how much time I am online each day.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 6. I set limits for my online time.
+    - statement: 7. I set limits for my online time.
       responses:
         - answer: Strongly agree
         - answer: Agree
