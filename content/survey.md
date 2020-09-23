@@ -97,7 +97,7 @@ leaders:
         - answer: Disagree
         - answer: Strongly disagree
     - statement: 4. The school has a clear privacy policy about sharing images of
-        pupils engaged in school activities and events online.
+        pupils online engaged in school activities and events.
       responses:
         - answer: Strongly agree
         - answer: Agree
