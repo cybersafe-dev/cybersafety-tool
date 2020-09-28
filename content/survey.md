@@ -345,7 +345,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 2. I never post selfies or personal information on social media.
+    - statement: 2. I never post personal information on social media.
       responses:
         - answer: Strongly agree
         - answer: Agree
