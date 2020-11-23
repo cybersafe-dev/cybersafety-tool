@@ -20,7 +20,7 @@ const ThankYou = () => (
         Thank you for completing the survey. Your responses have now been
         sent to CyberSafeIreland, you can close this window now.
       </p>
-      <button className="ty-btn" href="https://cybersafeireland.org/">CyberSafeIreland</button>
+      <a href="https://cybersafeireland.org/"><button className="ty-btn">CyberSafeIreland</button></a>
     </section>
   </Layout>
 )
