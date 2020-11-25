@@ -24,7 +24,7 @@
 }
 .marks {
   align-self: center;
-  height: 25vh;
+  height: 20vh;
 }
 
 /* LEFT SIDE*/
@@ -38,7 +38,16 @@
   padding-top: 15vh;
   box-sizing: content-box;
 }
-
+/* levels section is slightly different */
+#levels  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  height: 50vh;
+  padding-top: 15vh;
+  box-sizing: content-box;
+}
 /* RIGHT SIDE */
 
 #awards, #pricing  {
@@ -50,28 +59,6 @@
   padding-top: 10vh;
   box-sizing: content-box;
 }
-
-#levels  {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: left;
-  height: 50vh;
-  padding-top: 15vh;
-  box-sizing: content-box;
-
-}
-/* CYBERSAFEIRELAND SECTION */
-/*
-#cybersafeireland {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: left;
-  height: 85vh;
-  padding-top: 15vh;
-  box-sizing: content-box;
-} */
 
 /* CONTACT SECTION */
 
