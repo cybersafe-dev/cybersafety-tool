@@ -13,6 +13,7 @@
 }
 .section-title {
   margin-top: 2rem;
+  width: 60vw;
 }
 .site-text {
   width: 50vw;
@@ -25,6 +26,9 @@
 .marks {
   align-self: center;
   height: 20vh;
+}
+.italics {
+  font-style: italic;
 }
 
 
