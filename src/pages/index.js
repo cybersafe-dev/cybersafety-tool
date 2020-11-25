@@ -35,35 +35,34 @@ const [privacyModalVisible, toggle] = React.useState(true);
       <section className="section-container">
         <div id="tool">
           <div className="section">
-            <h1 className="section-title">The Tool: What is it?</h1>
+            <h1 className="section-title">The Tool: <span className="italics">What is it?</span></h1>
             <ReactMarkdown className="site-text" source={data.minisitecontent.tool} />
           </div>
             <img src={Fig1} alt="" className="fig" />
           </div>
         <div id="awards">
           <div className="section">
-            <h1 className="section-title">Awards: Why use the tool?</h1>
+            <h1 className="section-title">Awards: <span className="italics">Why use the tool?</span></h1>
             <ReactMarkdown className="site-text" source={data.minisitecontent.awards} />
           </div>
             <img src={Fig2} alt="" className="fig" />
           </div>
         <div id="levels">
           <div className="section">
-            <h1 className="section-title">Levels: What are they? </h1>
+            <h1 className="section-title">Levels: <span className="italics">What are they?</span></h1>
             <ReactMarkdown className="site-text" source={data.minisitecontent.levels} />
           </div>
           </div>
             <img src={Marks} alt="" className="marks" />
-
           <div id="pricing">
             <div className="section">
-              <h1 className="section-title">Pricing: How much does it cost?</h1>
+              <h1 className="section-title">Pricing: <span className="italics">How much does it cost?</span></h1>
               <ReactMarkdown className="site-text" source={data.minisitecontent.pricing} />
             </div>
           </div>
         <div id="about">
           <div className="section">
-            <h1 className="section-title">About us: Who are we? </h1>
+            <h1 className="section-title">About us: <span className="italics">Who are we?</span></h1>
             <ReactMarkdown className="site-text" source={data.minisitecontent.aboutus} />
           </div>
             <img src={Fig3} alt="" className="fig" />
