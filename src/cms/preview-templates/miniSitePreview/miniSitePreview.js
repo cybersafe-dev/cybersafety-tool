@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown"
 import Fig1 from "../../../images/self-assess.svg"
 import Fig2 from "../../../images/cybersafety.svg"
 import Fig3 from "../../../images/csi.svg"
-import Marks from "../images/minisite-marks-bw.svg"
+import Marks from "../../images/minisite-marks-bw.svg"
 
 const MiniSitePreview = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS()
