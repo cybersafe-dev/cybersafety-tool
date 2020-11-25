@@ -1,4 +1,4 @@
-/* TOP 3 SECTIONS */
+/* MAIN SECTIONS */
 .section-container {
   display: flex;
   flex-direction: column;
@@ -26,6 +26,7 @@
   align-self: center;
   height: 20vh;
 }
+
 
 /* LEFT SIDE*/
 
@@ -108,7 +109,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  /* TOP 3 SECTIONS */
+  /* MAIN SECTIONS */
   .section-container {
     width: 100vw;
     display: flex;
@@ -130,15 +131,20 @@
     text-align: left;
   }
   .site-text {
-    width: 50vw;
+    width: 40vw;
     line-height: 1.8rem;
     width: 100%;
+    text-align: left;
   }
 
   .fig {
     align-self: center;
     max-width: 80vw;
     margin: 1rem;
+  }
+
+  .marks {
+   height: 8vh;
   }
 
   #tool,

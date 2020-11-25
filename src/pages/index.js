@@ -12,7 +12,8 @@ import Fig1 from "../images/self-assess.svg"
 import Fig2 from "../images/cybersafety.svg"
 import Fig3 from "../images/csi.svg"
 import Marks from "../images/minisite-marks-bw.svg"
-// non-bw marks exist
+// colourful marks exist (remove -bw)
+
 import Surf from "../images/surfer.svg"
 import Fb from "../images/fb.svg"
 import Twit from "../images/twit.svg"
@@ -53,6 +54,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
           </div>
           </div>
             <img src={Marks} alt="" className="marks" />
+
           <div id="pricing">
             <div className="section">
               <h1 className="section-title">Pricing: How much does it cost?</h1>
