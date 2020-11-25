@@ -35,14 +35,20 @@ const MiniNavbar = () => {
       <div className="navbar">
         <img src={Logo} alt="cybersafe logo" className="nav-logo" />
         <div className="nav-links">
+          <Link to="/#tool" className="nav">
+            The Tool
+          </Link>
+          <Link to="/#awards" className="nav">
+            Awards
+          </Link>
+          <Link to="/#levels" className="nav">
+            Levels
+          </Link>
+          <Link to="/#pricing" className="nav">
+          Pricing
+          </Link>
           <Link to="/#about" className="nav">
-            About Us
-          </Link>
-          <Link to="/#cybersafety" className="nav">
-            Cybersafety
-          </Link>
-          <Link to="/#cybersafeireland" className="nav">
-            CyberSafeIreland
+          About Us
           </Link>
           <Link to="/#contact-us" className="nav">
             Contact Us

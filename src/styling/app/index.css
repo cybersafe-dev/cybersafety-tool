@@ -15,17 +15,21 @@
   margin-top: 2rem;
 }
 .site-text {
-  width: 45vw;
+  width: 50vw;
   line-height: 1.8rem;
 }
 .fig {
   align-self: flex-end;
   max-width: 35vw;
 }
+.marks {
+  align-self: center;
+  height: 25vh;
+}
 
-/* ABOUT SECTION */
+/* LEFT SIDE*/
 
-#about {
+#tool, #about  {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -35,20 +39,30 @@
   box-sizing: content-box;
 }
 
-/* CYBERSAFETY SECTION */
+/* RIGHT SIDE */
 
-#cybersafety {
+#awards, #pricing  {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   text-align: left;
   height: 85vh;
-  padding-top: 15vh;
+  padding-top: 10vh;
   box-sizing: content-box;
 }
 
-/* CYBERSAFEIRELAND SECTION */
+#levels  {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  height: 50vh;
+  padding-top: 15vh;
+  box-sizing: content-box;
 
+}
+/* CYBERSAFEIRELAND SECTION */
+/*
 #cybersafeireland {
   display: flex;
   flex-direction: row;
@@ -57,7 +71,7 @@
   height: 85vh;
   padding-top: 15vh;
   box-sizing: content-box;
-}
+} */
 
 /* CONTACT SECTION */
 
@@ -140,9 +154,11 @@
     margin: 1rem;
   }
 
-  #about,
-  #cybersafety,
-  #cybersafeireland {
+  #tool,
+  #awards,
+  #levels,
+  #pricing,
+  #about {
     height: auto;
     flex-direction: column;
     justify-content: space-between;
