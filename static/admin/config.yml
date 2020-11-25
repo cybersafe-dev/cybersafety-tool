@@ -20,8 +20,10 @@ collections:
               fields:
                 [
                   { label: "Tool", name: "tool", widget: text },
-                  { label: "Cybersafety", name: "cybersafety", widget: text },
-                  { label: "Cybersafeireland", name: "cybersafeireland", widget: text },
+                  { label: "Awards", name: "awards", widget: text },
+                  { label: "Levels", name: "levels", widget: text },
+                  { label: "Pricing", name: "pricing", widget: text },
+                  { label: "Aboutus", name: "aboutus", widget: text },
                 ],
             }
       - label: "Survey Intro Page"

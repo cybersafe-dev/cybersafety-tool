@@ -149,9 +149,11 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               minisitecontent {
-                cybersafeireland
-                cybersafety
                 tool
+                awards
+                levels
+                pricing
+                aboutus
               }
             }
           }

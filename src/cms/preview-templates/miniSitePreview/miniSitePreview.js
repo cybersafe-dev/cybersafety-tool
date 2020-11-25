@@ -14,7 +14,6 @@ const MiniSitePreview = ({ entry }) => {
     return (
       <Layout>
         <section id="index-container">
-
           <section className="site-container">
             <div id="about">
               <h1>Self-Assessment Tool</h1>
