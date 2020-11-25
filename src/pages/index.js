@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout/layout"
 import { graphql } from "gatsby"
+import ReactMarkdown from "react-markdown"
 import SEO from "../components/seo"
 import "../styling/app/index.css"
 
@@ -34,14 +35,14 @@ const [privacyModalVisible, toggle] = React.useState(true);
         <div id="about">
           <div className="section">
             <h1 className="section-title">CyberSafe Tool for Schools</h1>
-            <p className="site-text">{data.minisitecontent.tool}</p>
+            <ReactMarkdown className="site-text" source={data.minisitecontent.tool} />
           </div>
           <img src={Fig1} alt="" className="fig" />
         </div>
         <div id="cybersafety">
           <div className="section">
             <h1 className="section-title">Cybersafety</h1>
-            <p className="site-text">{data.minisitecontent.cybersafety}</p>
+            <ReactMarkdown className="site-text" source={data.minisitecontent.cybersafety} />
           </div>
           <img src={Fig2} alt="" className="fig" />
         </div>
@@ -55,7 +56,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
                 🇮🇪
               </span>
             </h1>
-            <p className="site-text">{data.minisitecontent.cybersafeireland}</p>
+            <ReactMarkdown className="site-text" source={data.minisitecontent.cybersafeireland} />
           </div>
           <img src={Fig3} alt="" className="fig" />
         </div>
@@ -159,6 +160,3 @@ export const query = graphql`
     }
   }
 `
-
-
-// <button className="open-modal-btn" id="privacyBtn">Privacy Policy</button>
