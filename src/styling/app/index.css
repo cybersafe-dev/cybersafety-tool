@@ -73,11 +73,9 @@
 
 .table-header {
   display: table-header-group;
-  background-color: none;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
-
 .header-field {
   display: table-cell;
   padding: 1rem;
@@ -100,8 +98,7 @@
 }
 .body-field {
   display: table-cell;
-  width: 900px;
-  font-weight: lighter;
+  font-weight: 400;
   font-size: 0.8rem;
   padding-left: 1rem;
 }
@@ -115,6 +112,7 @@
 .platinum {
 color: #658181;
 }
+
 /* CONTACT SECTION */
 
 #contact-us {
