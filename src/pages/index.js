@@ -54,12 +54,62 @@ const [privacyModalVisible, toggle] = React.useState(true);
           </div>
           </div>
             <img src={Marks} alt="" className="marks" />
+
           <div id="pricing">
             <div className="section">
               <h1 className="section-title">Pricing: <span className="italics">How much does it cost?</span></h1>
               <ReactMarkdown className="site-text" source={data.minisitecontent.pricing} />
+              <div className="table">
+                <div className="table-header">
+
+                  <div className="header-field">
+                    <span className="silver">
+                      Silver
+                    </span> (free)
+                      <div className="subheader-field">
+                        €0
+                      </div>
+                  </div>
+
+                <div className="header-field">
+                  <span className="gold">
+                    Gold
+                  </span> (paid)
+                    <div className="subheader-field">
+                        €99
+                    </div>
+                </div>
+
+                <div className="header-field">
+                  <span className="platinum">
+                    Platinum
+                  </span> (paid)
+                    <div className="subheader-field">
+                      €249
+                    </div>
+                </div>
+
+                </div>
+                    <div className="table-body">
+                      <div className="table-row">
+                        <div className="body-field">
+                          Assessment Grade
+                        </div>
+                        <div className="body-field">
+                          Assessment Grade
+                        </div>
+                        <div className="body-field">
+                          Assessment Grade
+                        </div>
+                      </div>
+                    </div>
+              </div>
+
             </div>
           </div>
+
+
+
         <div id="about">
           <div className="section">
             <h1 className="section-title">About us: <span className="italics">Who are we?</span></h1>
