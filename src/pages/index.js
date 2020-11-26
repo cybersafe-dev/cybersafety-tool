@@ -105,7 +105,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
 
                               <div className="table-row">
                                 <div className="body-field">
-                                  Completion Assessment
+                                  Completion Certificate
                                 </div>
                                 <div className="body-field">
                                   Full Assessment Report
@@ -153,7 +153,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
                                 <div className="body-field">
                                 </div>
                                 <div className="body-field">
-                                  Access to choice of 1 free e-learning module for 10 staff 
+                                  Access to choice of 1 free e-learning module for 10 staff
                                 </div>
                               </div>
                     </div>

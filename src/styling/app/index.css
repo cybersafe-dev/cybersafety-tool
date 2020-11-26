@@ -99,7 +99,7 @@
 .body-field {
   display: table-cell;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding-left: 1rem;
 }
 
@@ -208,6 +208,30 @@ color: #658181;
     flex-direction: column;
     justify-content: space-between;
   }
+
+/* TABLE */
+ .header-field {
+  font-size: 1.3rem;
+}
+
+.subheader-field {
+  padding: 0.5rem;
+}
+
+.body-field {
+  font-size: 0.8rem;
+  padding: 0 0 0 0.6rem;
+}
+.silver {
+  font-size: 1.6rem
+}
+.gold {
+  font-size: 1.6rem
+}
+.platinum {
+font-size: 1.6rem
+}
+
 
   /* CONTACT SECTION */
   #contact-us {
