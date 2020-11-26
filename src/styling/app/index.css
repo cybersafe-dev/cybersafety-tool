@@ -16,18 +16,27 @@
   margin-top: 2rem;
   max-width: 50vw;
 }
+.section-title-hidden {
+  display: none;
+}
 .site-text {
   width: 50vw;
   line-height: 1.8rem;
   text-align: justify;
+  font-weight: 100;
+}
+.cstfs-logo {
+  width: 50vw;
+  margin-top: 2rem;
 }
 .fig {
   align-self: flex-end;
-  max-width: 20vw;
+  max-width: 25vw;
 }
 .marks {
   align-self: center;
-  height: 20vh;
+  width: 80vw;
+  margin: 2rem 0 2rem 0;
 }
 .italics {
   font-style: italic;
@@ -48,10 +57,10 @@
 /* levels section is slightly different */
 #levels  {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
   text-align: left;
-  height: 50vh;
+  height: 85vh;
   padding-top: 15vh;
   box-sizing: content-box;
 }
@@ -63,7 +72,7 @@
   justify-content: space-between;
   text-align: left;
   height: 85vh;
-  padding-top: 10vh;
+  padding-top: 15vh;
   box-sizing: content-box;
 }
 
