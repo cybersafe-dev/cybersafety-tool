@@ -100,8 +100,10 @@
 }
 .body-field {
   display: table-cell;
+  width: 900px;
   font-weight: lighter;
-  padding: 1rem;
+  font-size: 0.8rem;
+  padding-left: 1rem;
 }
 
 .silver {

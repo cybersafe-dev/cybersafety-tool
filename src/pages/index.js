@@ -90,18 +90,72 @@ const [privacyModalVisible, toggle] = React.useState(true);
                 </div>
 
                 </div>
-                    <div className="table-body">
-                      <div className="table-row">
-                        <div className="body-field">
-                          Assessment Grade
-                        </div>
-                        <div className="body-field">
-                          Assessment Grade
-                        </div>
-                        <div className="body-field">
-                          Assessment Grade
-                        </div>
-                      </div>
+                      <div className="table-body">
+                              <div className="table-row">
+                                <div className="body-field">
+                                  Assessment Grade
+                                </div>
+                                <div className="body-field">
+                                  Assessment Grade
+                                </div>
+                                <div className="body-field">
+                                  Assessment Grade
+                                </div>
+                              </div>
+
+                              <div className="table-row">
+                                <div className="body-field">
+                                  Completion Assessment
+                                </div>
+                                <div className="body-field">
+                                  Full Assessment Report
+                                </div>
+                                <div className="body-field">
+                                  Full Assessment Report with recommendations
+                                </div>
+                              </div>
+
+                              <div className="table-row">
+                                <div className="body-field">
+                                </div>
+                                <div className="body-field">
+                                  Award Certificate
+                                </div>
+                                <div className="body-field">
+                                  Award Certificate
+                                </div>
+                              </div>
+
+                              <div className="table-row">
+                                <div className="body-field">
+                                </div>
+                                <div className="body-field">
+                                  Access to Award Mark (valid for 1 year)
+                                </div>
+                                <div className="body-field">
+                                  Access to Award Mark (valid for 1 year)
+                                </div>
+                              </div>
+
+                              <div className="table-row">
+                                <div className="body-field">
+                                </div>
+                                <div className="body-field">
+                                </div>
+                                <div className="body-field">
+                                  Sticker for all pupils
+                                </div>
+                              </div>
+
+                              <div className="table-row">
+                                <div className="body-field">
+                                </div>
+                                <div className="body-field">
+                                </div>
+                                <div className="body-field">
+                                  Access to choice of 1 free e-learning module for 10 staff 
+                                </div>
+                              </div>
                     </div>
               </div>
 
