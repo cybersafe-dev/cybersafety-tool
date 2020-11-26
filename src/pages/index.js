@@ -8,10 +8,11 @@ import "../styling/app/index.css"
 import MiniNavbar from "../components/miniSite/miniNavbar"
 import PrivacyModal from "../components/miniSite/privacyModal"
 
+import toolForSchoolsLogo from "../images/toolforschools-logo.png"
 import Fig1 from "../images/self-assess.svg"
 import Fig2 from "../images/cybersafety.svg"
 import Fig3 from "../images/csi.svg"
-import Marks from "../images/minisite-marks-bw.svg"
+import Marks from "../images/minisite-marks-bw.png"
 // colourful marks exist (remove -bw)
 
 import Surf from "../images/surfer.svg"
@@ -35,29 +36,30 @@ const [privacyModalVisible, toggle] = React.useState(true);
       <section className="section-container">
         <div id="tool">
           <div className="section">
-            <h1 className="section-title">The Tool: <span className="italics">What is it?</span></h1>
+            <h1 className="section-title-hidden">CyberSafe Tool for Schools</h1>
+            <img src={toolForSchoolsLogo} alt="CyberSafe Tool for Schools Logo" className="cstfs-logo" />
             <ReactMarkdown className="site-text" source={data.minisitecontent.tool} />
           </div>
             <img src={Fig1} alt="" className="fig" />
           </div>
         <div id="awards">
           <div className="section">
-            <h1 className="section-title">Awards: <span className="italics">Why use the tool?</span></h1>
+            <h2 className="section-title">Awards: <span className="italics">Why use the tool?</span></h2>
             <ReactMarkdown className="site-text" source={data.minisitecontent.awards} />
           </div>
             <img src={Fig2} alt="" className="fig" />
           </div>
         <div id="levels">
           <div className="section">
-            <h1 className="section-title">Levels: <span className="italics">What are they?</span></h1>
+            <h2 className="section-title">Levels: <span className="italics">What are they?</span></h2>
             <ReactMarkdown className="site-text" source={data.minisitecontent.levels} />
-          </div>
-          </div>
-            <img src={Marks} alt="" className="marks" />
+            <img src={Marks} alt="The logos for each level of the mark" className="marks" />
 
+          </div>
+          </div>
           <div id="pricing">
             <div className="section">
-              <h1 className="section-title">Pricing: <span className="italics">How much does it cost?</span></h1>
+              <h2 className="section-title">Pricing: <span className="italics">How much does it cost?</span></h2>
               <ReactMarkdown className="site-text" source={data.minisitecontent.pricing} />
               <div className="table">
                 <div className="table-header">
@@ -65,7 +67,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
                   <div className="header-field">
                     <span className="silver">
                       Silver
-                    </span> (free)
+                    </span> <span className="italics">(free)</span>
                       <div className="subheader-field">
                         €0
                       </div>
@@ -74,7 +76,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
                 <div className="header-field">
                   <span className="gold">
                     Gold
-                  </span> (paid)
+                  </span> <span className="italics">(paid)</span>
                     <div className="subheader-field">
                         €99
                     </div>
@@ -83,7 +85,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
                 <div className="header-field">
                   <span className="platinum">
                     Platinum
-                  </span> (paid)
+                  </span> <span className="italics">(paid)</span>
                     <div className="subheader-field">
                       €249
                     </div>
@@ -166,7 +168,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
 
         <div id="about">
           <div className="section">
-            <h1 className="section-title">About us: <span className="italics">Who are we?</span></h1>
+            <h2 className="section-title">About us: <span className="italics">Who are we?</span></h2>
             <ReactMarkdown className="site-text" source={data.minisitecontent.aboutus} />
           </div>
             <img src={Fig3} alt="" className="fig" />
@@ -174,7 +176,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
       </section>
 
       <div id="contact-us">
-        <h1 className="section-title">Contact Us</h1>
+        <h2 className="section-title">Contact Us</h2>
         <div className="contact-section">
           <div className="contact-details">
             <h3>CyberSafeIreland CLG</h3>

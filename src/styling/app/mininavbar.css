@@ -35,7 +35,7 @@
 }
 
 .nav-logo {
-  width: 15vw;
+  width: 10vw;
   /* margin-left: 4rem; */
   top: 0;
 }
@@ -117,7 +117,7 @@ text-decoration: underline;
   }
 
   .nav-logo {
-    width: 30vw;
+    width: 20vw;
   }
 
   .nav-links {
