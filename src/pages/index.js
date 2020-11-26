@@ -67,7 +67,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
                   <div className="header-field">
                     <span className="silver">
                       Silver
-                    </span> <span className="italics">(free)</span>
+                    </span> (free)
                       <div className="subheader-field">
                         €0
                       </div>
@@ -76,7 +76,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
                 <div className="header-field">
                   <span className="gold">
                     Gold
-                  </span> <span className="italics">(paid)</span>
+                  </span> (paid)
                     <div className="subheader-field">
                         €99
                     </div>
@@ -85,7 +85,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
                 <div className="header-field">
                   <span className="platinum">
                     Platinum
-                  </span> <span className="italics">(paid)</span>
+                  </span> (paid)
                     <div className="subheader-field">
                       €249
                     </div>
