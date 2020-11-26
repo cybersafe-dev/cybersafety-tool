@@ -23,7 +23,7 @@
   width: 50vw;
   line-height: 1.8rem;
   text-align: justify;
-  font-weight: 100;
+  font-weight: 400;
 }
 .cstfs-logo {
   width: 50vw;
@@ -41,7 +41,6 @@
 .italics {
   font-style: italic;
 }
-
 
 /* LEFT SIDE*/
 
@@ -84,7 +83,6 @@
 
 .table-header {
   display: table-header-group;
-  font-weight: bold;
   font-size: 1.5rem;
 }
 .header-field {
@@ -116,12 +114,15 @@
 
 .silver {
   color: #9C9C9C;
+  font-weight: 700;
 }
 .gold {
   color: #C09A4F;
+  font-weight: 700;
 }
 .platinum {
 color: #658181;
+font-weight: 700;
 }
 
 /* CONTACT SECTION */
