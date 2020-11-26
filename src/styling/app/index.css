@@ -65,6 +65,54 @@
   box-sizing: content-box;
 }
 
+/* TABLE */
+.table {
+  display: table;
+  width: 100%;
+}
+
+.table-header {
+  display: table-header-group;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.header-field {
+  display: table-cell;
+  padding: 1rem;
+  text-align: justify;
+}
+.subheader-field {
+  display: table-cell;
+  padding: 1.5rem;
+  text-align: justify;
+  font-size: 2.2rem;
+  border-bottom: solid grey;
+  width: 500px;
+}
+
+.table-body {
+  display: table-row-group;
+}
+.table-row {
+  display: table-row;
+}
+.body-field {
+  display: table-cell;
+  font-weight: 400;
+  font-size: 0.9rem;
+  padding-left: 1rem;
+}
+
+.silver {
+  color: #9C9C9C;
+}
+.gold {
+  color: #C09A4F;
+}
+.platinum {
+color: #658181;
+}
+
 /* CONTACT SECTION */
 
 #contact-us {
@@ -160,6 +208,30 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+/* TABLE */
+ .header-field {
+  font-size: 1.3rem;
+}
+
+.subheader-field {
+  padding: 0.5rem;
+}
+
+.body-field {
+  font-size: 0.8rem;
+  padding: 0 0 0 0.6rem;
+}
+.silver {
+  font-size: 1.6rem
+}
+.gold {
+  font-size: 1.6rem
+}
+.platinum {
+font-size: 1.6rem
+}
+
 
   /* CONTACT SECTION */
   #contact-us {
