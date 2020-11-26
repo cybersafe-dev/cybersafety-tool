@@ -129,7 +129,7 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem;
     margin: 0;
   }
 
@@ -143,13 +143,19 @@
   .section-title {
     margin-top: 2rem;
     width: 100%;
+    max-width: 100%;
     text-align: left;
+    align-self: left;
   }
   .site-text {
     width: 40vw;
     line-height: 1.8rem;
     width: 100%;
-    text-align: left;
+    text-align: justify;
+  }
+
+  .cstfs-logo {
+    width: 100%;
   }
 
   .fig {
@@ -159,7 +165,7 @@
   }
 
   .marks {
-   height: 8vh;
+   width: 100%;
   }
 
   #tool,

@@ -12,20 +12,25 @@ const MenuModal = ({ toggleMenuModal, menuModalVisible }) => {
       >
         <img className="menu-toggle-button" src={xBtn} alt="close menu" />
       </button>
+     
+      <Link to="/#tool" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
+        The Tool
+      </Link>
+      <Link to="/#awards" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
+        Awards
+      </Link>
+      <Link to="/#levels" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
+        Levels
+      </Link>
+      <Link to="/#pricing" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
+        Pricing
+      </Link>
       <Link to="/#about" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
         About Us
-      </Link>
-      <Link to="/#cybersafety" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
-        Cybersafety
-      </Link>
-
-      <Link to="/#cybersafeireland" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
-        CyberSafeIreland
       </Link>
       <Link to="/#contact-us" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
         Contact Us
       </Link>
-      
     </nav>
   )
 }
