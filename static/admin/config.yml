@@ -19,11 +19,11 @@ collections:
               widget: object,
               fields:
                 [
-                  { label: "Tool", name: "tool", widget: text },
-                  { label: "Awards", name: "awards", widget: text },
-                  { label: "Levels", name: "levels", widget: text },
-                  { label: "Pricing", name: "pricing", widget: text },
-                  { label: "Aboutus", name: "aboutus", widget: text },
+                  { label: "Tool", name: "tool", widget: markdown },
+                  { label: "Awards", name: "awards", widget: markdown },
+                  { label: "Levels", name: "levels", widget: markdown },
+                  { label: "Pricing", name: "pricing", widget: markdown },
+                  { label: "Aboutus", name: "aboutus", widget: markdown },
                 ],
             }
       - label: "Survey Intro Page"
