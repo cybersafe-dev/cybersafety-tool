@@ -92,7 +92,7 @@
 }
 .subheader-field {
   display: table-cell;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 1.5rem 0;
   text-align: justify;
   font-size: 2.2rem;
   border-bottom: solid grey;
