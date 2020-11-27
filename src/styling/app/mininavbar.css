@@ -36,7 +36,8 @@
 
 .nav-logo {
   width: 10vw;
-  /* margin-left: 4rem; */
+  position: relative;
+  left: 1rem;
   top: 0;
 }
 
