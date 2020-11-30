@@ -368,6 +368,20 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
+    - statement: 5.  I know how approximately how much time I am online each day.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: 6. I set myself clear limits for time online.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
   communication:
     - statement: 1. I use technology to communicate respectfully and safely with my
         pupils, e.g. e-mails, WhatsApp group, Google Classroom etc.
@@ -450,14 +464,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 6. I know how approximately how much time I am online each day.
-      responses:
-        - answer: Strongly agree
-        - answer: Agree
-        - answer: Neutral
-        - answer: Disagree
-        - answer: Strongly disagree
-    - statement: 7. I set limits for my online time.
+    - statement: 7. I set myself limits for time online.
       responses:
         - answer: Strongly agree
         - answer: Agree
