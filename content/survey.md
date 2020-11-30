@@ -104,6 +104,14 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
+    - statement: 5. My staff keep school-related digital data secure by keeping it
+        onsite and password-protected.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
   onlinelife:
     - statement: 1. Any profiles I have online are set to private, or use a name my
         pupils cannot find.
