@@ -370,7 +370,7 @@ teachers:
         - answer: Strongly disagree
   communication:
     - statement: 1. I use technology to communicate respectfully and safely with my
-        pupils.
+        pupils, e.g. e-mails, WhatsApp group, Google Classroom etc.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -412,7 +412,7 @@ teachers:
         - answer: Strongly disagree
   responsibleuse:
     - statement: 1. I am required by my school to reference sources and images I use
-        in materials  presentations.
+        in teaching materials and presentations.
       responses:
         - answer: Strongly agree
         - answer: Agree
