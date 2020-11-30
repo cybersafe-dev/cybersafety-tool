@@ -620,7 +620,8 @@ pupils:
         - answer: Yes
         - answer: Not sure
         - answer: I don't know
-    - statement: 3. I try to balance my online time each day with other activities.
+    - statement: 3. I think it's important to balance my online time each day with
+        other activities.
       responses:
         - answer: Yes
         - answer: Usually
