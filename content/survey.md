@@ -544,7 +544,7 @@ pupils:
         - answer: Yes
     - statement: 2. I post photos and videos on social media.
       responses:
-        - answer: I never really post
+        - answer: I never post
         - answer: Not very often
         - answer: Sometimes
         - answer: Usually
