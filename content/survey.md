@@ -587,7 +587,7 @@ pupils:
         - answer: Not as much as I should
         - answer: No
     - statement: 4. In school we learn how to use technology to communicate properly
-        e.g. writing a polite e-mail to an adult
+        e.g. writing a polite e-mail to an adult, using spellcheck etc.
       responses:
         - answer: Definitely
         - answer: Kind of
@@ -595,18 +595,18 @@ pupils:
         - answer: Not really
         - answer: Definitely not
   criticalthinking:
-    - statement: 1. I always check information I find online by searching for the same
+    - statement: 1. In school we learn how to check information we find online.
+      responses:
+        - answer: Yes
+        - answer: Not sure
+        - answer: No
+    - statement: 2. I always check information I find online by searching for the same
         information in other places.
       responses:
         - answer: Yes
         - answer: Usually
         - answer: Sometimes
         - answer: Not usually
-        - answer: No
-    - statement: 2. In school we learn how to check information we find online.
-      responses:
-        - answer: Yes
-        - answer: Not sure
         - answer: No
   responsibleuse:
     - statement: 1. In school we have to list all the websites and images we use in
@@ -620,7 +620,7 @@ pupils:
         - answer: Yes
         - answer: Not sure
         - answer: I don't know
-    - statement: 3. I set my own limits for my online time each day.
+    - statement: 3. I try to balance my online time each day with other activities.
       responses:
         - answer: Yes
         - answer: Usually
