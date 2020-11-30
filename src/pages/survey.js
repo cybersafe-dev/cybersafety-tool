@@ -35,17 +35,17 @@ const SurveyPage = props => {
         <img src={Half} alt="background design" className="bg2" />
         <img src={Half} alt="background design" className="bg3" />
         <div className="introtext-box">
-          <img src={Icon1} alt="" className="figure" />
-          <p className="para-1"> {data.body.paragraph1} </p>
-        </div>
-        <div className="introtext-box-horiz-flipped">
-          <p className="para-2"> {data.body.paragraph2} </p>
-          <img src={Icon2} alt="" className="figure" />
-        </div>
-        <div className="introtext-box">
-          <img src={Icon3} alt="" className="figure" />
-          <p className="para-3"> {data.body.paragraph3} </p>
-        </div>
+         <img src={Icon1} alt="" className="figure" />
+         <p className="para-1"> {data.body.paragraph1} </p>
+       </div>
+       <div className="introtext-box-horiz-flipped">
+         <p className="para-2"> {data.body.paragraph2} </p>
+         <img src={Icon2} alt="" className="figure" />
+       </div>
+       <div className="introtext-box">
+         <img src={Icon3} alt="" className="figure" />
+         <p className="para-3"> {data.body.paragraph3} </p>
+       </div>
         <div className="button-and-pills">
           <Link to="/survey/roleselection/" className="start-btn">
             Let's get started!
