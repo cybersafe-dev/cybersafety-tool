@@ -464,13 +464,6 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 7. I set myself limits for time online.
-      responses:
-        - answer: Strongly agree
-        - answer: Agree
-        - answer: Neutral
-        - answer: Disagree
-        - answer: Strongly disagree
 pupils:
   digitalknowledge:
     - statement: 1. We learn in school about online safety and responsibility.
