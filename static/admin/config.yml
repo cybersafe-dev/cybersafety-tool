@@ -30,16 +30,16 @@ collections:
         name: "infopage"
         file: "content/infopage.md"
         fields:
-          - { label: Title, name: title, widget: string }
+
           - {
               label: Body,
               name: body,
               widget: object,
               fields:
                 [
-                  { label: "Paragraph One", name: paragraph1, widget: text },
-                  { label: "Paragraph Two", name: paragraph2, widget: text },
-                  { label: "Paragraph Three", name: paragraph3, widget: text },
+                  { label: "Paragraph One", name: paragraph1, widget: markdown },
+                  { label: "Paragraph Two", name: paragraph2, widget: markdown },
+                  { label: "Paragraph Three", name: paragraph3, widget: markdown },
                 ],
             }
       - label: "Survey"
