@@ -60,6 +60,7 @@ const SchoolCard = ({ school }) => {
           reportSentInitialValue={school.reportSent}
           reportSentBool={reportSentBool}
           toggleReportSentBool={toggleReportSentBool}
+          quota={school.quota}
         />
         <div className="bar-line">
           <p>Individual Survey Scores:</p>

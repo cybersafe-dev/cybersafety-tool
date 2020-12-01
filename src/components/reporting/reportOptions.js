@@ -10,6 +10,7 @@ const ReportOptions = ({
   reportSentBool,
   toggleReportSentBool,
   reportSentInitialValue,
+  quota
 }) => {
   const [visibleReport, toggleReport] = React.useState(false)
 
@@ -42,6 +43,7 @@ const ReportOptions = ({
                 <PdfReportTemplate
                   report={report}
                   reportSubmitted={reportSubmitted}
+                  quota={quota}
                 />
               }
               fileName={`CyberSafe Tool for Schools report for ${report.reportFor}.pdf`}
