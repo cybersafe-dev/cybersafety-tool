@@ -14,7 +14,7 @@ import toolLogo from "../images/toolforschools-logo.png"
 import cyberAwareLogo from "../images/CyberAware-Col.png"
 import cyberSmartLogo from "../images/CyberSmart-Col.png"
 import cyberChampionLogo from "../images/CyberChampion-Col.png"
-import BlobSurfer from "../images/blobsurfer.png"
+//import BlobSurfer from "../images/blobsurfer.png"
 
 import { awardLevelBlurbs } from "./pdfReportBlurbs"
 
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
   },
   header: {
-    flexDirection: "column",
+    flexDirection: "row",
     alignItems: "space-between",
     margin: 10,
     padding: 10,
@@ -94,13 +94,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     textAlign: "center",
   },
-  signature: {
+  sign: {
     fontSize: 8,
-    fontWeight: "bold",
-    fontStyle: "italic",
-    fontFamily: "PoppinsBody",
+    fontFamily: "PoppinsHeading",
+    fontWeight: 700,
     color: "#181818",
-    marginBottom: 5,
+    marginBottom: 20,
+    marginTop: 20,
   },
   address: {
     fontSize: 8,
@@ -151,9 +151,9 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
   const totalCompletedSurveys =
     quota.leadersQuota + quota.teachersQuota + quota.pupilsQuota
 
-  const selectMarkLevel = () => {
+  const selectMarkLevel = (attained) => {
     let mark
-    switch (report.prospectiveMark) {
+    switch (attained) {
       case "cyberChampion":
         mark = cyberChampionLogo
         break
@@ -171,7 +171,11 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
       {/* Page One - Intro with table */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image
+            style={styles.logo}
+            src={csiLogo}
+            alt="CyberSafeIreland Logo"
+          />
         </View>
         <View style={styles.body}>
           <Image src={toolLogo} alt="CyberSafe Tool for Schools" />
@@ -219,13 +223,13 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
           />
         </View>
         <View style={styles.body}>
-          <text style={styles.h2}>
+          <Text style={styles.h2}>
             Congratulations, you are currently a {report.prospectiveMark}{" "}
             school!
-          </text>
+          </Text>
           <Image
             style={styles.awardImgSml}
-            src={selectMarkLevel()}
+            src={selectMarkLevel(report.prospectiveMark)}
             alt="Your Mark Level Badge"
           />
           <Text style={styles.h2}>Awards</Text>
@@ -258,10 +262,10 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
             </View>
             <View style={styles.table.row}>
               <View style={styles.table.cell}>
-                <Text style={styles.para}>CyberStarter School</Text>
+                <Text style={styles.para}>CyberAware School</Text>
               </View>
               <View style={styles.table.cell}>
-                <Text style={styles.para}>{awardLevelBlurbs.CyberStarter}</Text>
+                <Text style={styles.para}>{awardLevelBlurbs.CyberAware}</Text>
               </View>
             </View>
           </View>
@@ -271,7 +275,11 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
       {/* Page three - Completion Certificate */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image
+            style={styles.logo}
+            src={csiLogo}
+            alt="CyberSafeIreland Logo"
+          />
         </View>
         <View style={styles.body}>
           <Image src={toolLogo} alt="CyberSafe Tool for Schools" />
@@ -280,7 +288,7 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
             free CyberSafe Tool for Schools online assessment.
           </Text>
           <Text style={styles.para}>Date: {reportTimestamp}</Text>
-          <Text style={styles.signature}>CyberSafeIreland</Text>
+          <Text style={styles.sign}>CyberSafeIreland</Text>
         </View>
       </Page>
 
@@ -317,11 +325,17 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
           </Text>
         </View>
       </Page>
+
+      {/* Page Five - Contact page */}
       <Page size="A4" style={styles.contactPage} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image
+            style={styles.logo}
+            src={csiLogo}
+            alt="CyberSafeIreland Logo"
+          />
         </View>
-        <View style={styles.body}>
+        {/* <View style={styles.body}>
           <Image src={toolLogo} alt="CyberSafe Tool for Schools" />
           <Text style={styles.h1}>CyberSafeIreland CLG</Text>
           <View style={styles.centered}>
@@ -332,16 +346,16 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
             <Text style={styles.address}>
               93 Upper George Street, Dun Laoghaire,
             </Text>
-            <Text style={styles.para}>Dublin, Ireland</Text>
-            <Text style={styles.para}>cybersafeireland.ie</Text>
-            <Text style={styles.para}>info@cybersafeireland.ie</Text>
+            <Text style={styles.address}>Dublin, Ireland</Text>
+            <Text style={styles.address}>cybersafeireland.ie</Text>
+            <Text style={styles.address}>info@cybersafeireland.ie</Text>
           </View>
           <Image
             style={styles.blobSurfer}
             src={BlobSurfer}
             alt="Surfer on a blue blob"
           />{" "}
-        </View>
+        </View> */}
       </Page>
     </Document>
   )

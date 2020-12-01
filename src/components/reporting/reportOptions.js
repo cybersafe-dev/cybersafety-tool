@@ -2,7 +2,7 @@ import React from "react"
 import "../../styling/reporting/reportOptions.css"
 import InlineReportTemplate from "./inlineReportTemplate"
 import { PDFDownloadLink } from "@react-pdf/renderer"
-import PdfReportTemplate from "../../templates/pdfReportTemplate"
+import PdfReportSilver from "../../templates/pdfReportSilver"
 
 const ReportOptions = ({
   report,
@@ -40,16 +40,16 @@ const ReportOptions = ({
             <PDFDownloadLink
               className="pdf-dl-btn"
               document={
-                <PdfReportTemplate
+                <PdfReportSilver
                   report={report}
                   reportSubmitted={reportSubmitted}
                   quota={quota}
                 />
               }
-              fileName={`CyberSafe Tool for Schools report for ${report.reportFor}.pdf`}
+              fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Silver.pdf`}
             >
               {({ blob, url, loading, error }) => 
-                loading ? "Loading document..." : "Download PDF"
+                loading ? "Loading document..." : "Silver Report"
               }
             </PDFDownloadLink>
             <label htmlFor="reportSent" className="report-toggle-btn">
