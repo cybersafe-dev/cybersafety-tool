@@ -75,6 +75,12 @@
   box-sizing: content-box;
 }
 
+.asterix {
+  font-size: 0.7rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
 /* TABLE */
 .table {
   display: table;
@@ -146,6 +152,12 @@ font-weight: 700;
   flex-direction: column;
   padding-top: 1rem;
   font-size: 0.7rem;
+}
+
+.hyperlink {
+  font-size: 0.9rem;
+  color: #53c5cd;
+  padding-bottom: 1rem;
 }
 
 .csi-link {
