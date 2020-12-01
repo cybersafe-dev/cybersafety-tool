@@ -11,6 +11,9 @@ import {
 
 import csiLogo from "../images/cybersafe-logo.png"
 import toolLogo from "../images/toolforschools-logo.png"
+import cyberAwareLogo from "../images/CyberAware-Col.png"
+import cyberSmartLogo from "../images/CyberSmart-Col.png"
+import cyberChampionLogo from "../images/CyberChampion-Col.png"
 import BlobSurfer from "../images/blobsurfer.png"
 
 import { awardLevelBlurbs } from "./pdfReportBlurbs"
@@ -91,6 +94,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     textAlign: "center",
   },
+  signature: {
+    fontSize: 8,
+    fontWeight: "bold",
+    fontStyle: "italic",
+    fontFamily: "PoppinsBody",
+    color: "#181818",
+    marginBottom: 5,
+  },
   address: {
     fontSize: 8,
     fontFamily: "PoppinsBody",
@@ -140,19 +151,30 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
   const totalCompletedSurveys =
     quota.leadersQuota + quota.teachersQuota + quota.pupilsQuota
 
+  const selectMarkLevel = () => {
+    let mark
+    switch (report.prospectiveMark) {
+      case "cyberChampion":
+        mark = cyberChampionLogo
+        break
+      case "cyberSmart":
+        mark = cyberSmartLogo
+        break
+      default:
+        mark = cyberAwareLogo
+    }
+    return mark
+  }
+
   return (
     <Document>
+      {/* Page One - Intro with table */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
           <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
         </View>
         <View style={styles.body}>
-          <Text style={styles.h1}>CyberSafe Tool for Schools Report</Text>
-        </View>
-        <View style={styles.body}>
           <Image src={toolLogo} alt="CyberSafe Tool for Schools" />
-        </View>
-        <View style={styles.body}>
           <View style={styles.table}>
             <View style={styles.table.row}>
               <View style={styles.table.cell}>
@@ -175,39 +197,37 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
                 <Text style={styles.para}>Total Surveys Completed</Text>
               </View>
               <View style={styles.table.cell}>
-                <Text style={styles.para}>
-                  {totalCompletedSurveys}
-                </Text>
+                <Text style={styles.para}>{totalCompletedSurveys}</Text>
               </View>
             </View>
           </View>
         </View>
       </Page>
+
+      {/* Page Two - Your grade and grade explainer table */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image
+            style={styles.logo}
+            src={toolLogo}
+            alt="CyberSafe Tool for Schools Logo"
+          />
+          <Image
+            style={styles.logo}
+            src={csiLogo}
+            alt="CyberSafeIreland Logo"
+          />
         </View>
         <View style={styles.body}>
-          <Text style={styles.h1}>CyberSafe Tool for Schools</Text>
-        </View>
-        <View style={styles.body}>
-          <Text style={styles.para}>
-            Now that you've completed the tool and received your report, you can
-            purchase an award badge for your school from CyberSafeIreland to
-            display your school’s commitment to online safety.{" "}
-          </Text>
-          <Text style={styles.para}>
-            We have 3 levels of award for schools: CyberChampion, CyberSmart and
-            CyberStarter. This virtual badge can be used for two years on your
-            school website, social media channels and all school communications.{" "}
-          </Text>
-          <Text style={styles.para}>
-            If you want to try and aim for a higher award for your school, the
-            tool can be used again for free after 6 months, once you have made
-            changes based on the recommendations in this report.
-          </Text>
-        </View>
-        <View style={styles.body}>
+          <text style={styles.h2}>
+            Congratulations, you are currently a {report.prospectiveMark}{" "}
+            school!
+          </text>
+          <Image
+            style={styles.awardImgSml}
+            src={selectMarkLevel()}
+            alt="Your Mark Level Badge"
+          />
           <Text style={styles.h2}>Awards</Text>
           <View style={styles.table}>
             <View style={styles.table.row}>
@@ -247,17 +267,53 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
           </View>
         </View>
       </Page>
-      <Page size="A4" style={styles.awardPage} wrap>
+
+      {/* Page three - Completion Certificate */}
+      <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
           <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
         </View>
         <View style={styles.body}>
-          <Image style={styles.awardImg} src={logo} alt="Award Badge" />
+          <Image src={toolLogo} alt="CyberSafe Tool for Schools" />
+          <Text style={styles.para}>
+            You have proved your commitment to online safety by completing the
+            free CyberSafe Tool for Schools online assessment.
+          </Text>
+          <Text style={styles.para}>Date: {reportTimestamp}</Text>
+          <Text style={styles.signature}>CyberSafeIreland</Text>
+        </View>
+      </Page>
+
+      {/* Page Four - Next Steps */}
+      <Page size="A4" style={styles.page} wrap>
+        <View style={styles.header}>
+          <Image
+            style={styles.logo}
+            src={toolLogo}
+            alt="CyberSafe Tool for Schools Logo"
+          />
+          <Image
+            style={styles.logo}
+            src={csiLogo}
+            alt="CyberSafeIreland Logo"
+          />
         </View>
         <View style={styles.body}>
-          <Text style={styles.h1}>{report.prospectiveMark} School</Text>
-          <Text style={styles.awardPara}>
-            {awardLevelBlurbs[report.prospectiveMark]}
+          <Text style={styles.h1}>Next Steps</Text>
+          <Text style={styles.para}>
+            Now that you've completed the tool and received your free report,
+            you can upgrade by purchasing the CyberSafe Tool for Schools{" "}
+            {report.prospectiveMark} award badge for your school.
+          </Text>
+          <Text style={styles.para}>
+            This mark is valid for 12 months and you can display it on your
+            website, social media and all school communications to demonstrate
+            your school’s commitment to online safety. You will also receive a
+            breakdown of your school’s results by topic area.{" "}
+          </Text>
+          <Text style={styles.para}>
+            For more information please visit cybersafetoolforschools.ie or
+            contact us directly on info@cybersafeireland.org
           </Text>
         </View>
       </Page>
@@ -266,6 +322,7 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
           <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
         </View>
         <View style={styles.body}>
+          <Image src={toolLogo} alt="CyberSafe Tool for Schools" />
           <Text style={styles.h1}>CyberSafeIreland CLG</Text>
           <View style={styles.centered}>
             <Text style={styles.address}>Company number: 568651</Text>
@@ -276,8 +333,14 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
               93 Upper George Street, Dun Laoghaire,
             </Text>
             <Text style={styles.para}>Dublin, Ireland</Text>
-            <Text style={styles.para}>info@cybersafeireland.org</Text>
+            <Text style={styles.para}>cybersafeireland.ie</Text>
+            <Text style={styles.para}>info@cybersafeireland.ie</Text>
           </View>
+          <Image
+            style={styles.blobSurfer}
+            src={BlobSurfer}
+            alt="Surfer on a blue blob"
+          />{" "}
         </View>
       </Page>
     </Document>
