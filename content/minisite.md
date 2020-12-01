@@ -14,8 +14,8 @@ minisitecontent:
   levels: "We have **3 levels of award** for schools depending on the results of
     the survey: **CyberAware**, **CyberSmart** and **CyberChampion**. You can
     display this award mark on your school website, social media channels and
-    other school communication for 12 months. The marks you receive will be
-    dates and in full colour."
+    other school communication for 12 months. *\\*Final award mark sent to
+    schools will be full colour version.*"
   pricing: "CyberSafe Tool for Schools is **free** for all schools. If you want to
     get the award mark for your school we have 2 options:"
   aboutus: "**CyberSafeIreland** is a charity working to empower children, parents
