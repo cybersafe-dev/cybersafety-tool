@@ -54,7 +54,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
             <h2 className="section-title">Levels: <span className="italics">What are they?</span></h2>
             <ReactMarkdown className="site-text" source={data.minisitecontent.levels} />
             <img src={Marks} alt="The logos for each level of the mark" className="marks" />
-
+            <span className="asterix"> *Final award mark sent to schools will be full colour version.</span>
           </div>
           </div>
           <div id="pricing">
@@ -160,11 +160,8 @@ const [privacyModalVisible, toggle] = React.useState(true);
                               </div>
                     </div>
               </div>
-
             </div>
           </div>
-
-
 
         <div id="about">
           <div className="section">
@@ -176,7 +173,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
       </section>
 
       <div id="contact-us">
-        <h2 className="section-title">Contact Us</h2>
+        <h2 className="section-title">Contact</h2>
         <div className="contact-section">
           <div className="contact-details">
             <h3>CyberSafeIreland CLG</h3>
@@ -184,14 +181,21 @@ const [privacyModalVisible, toggle] = React.useState(true);
             <span>Registered charity number: 20104108</span>
             <span>93 Upper George Street, Dun Laoghaire,</span>
             <span>Co. Dublin, Ireland</span>
-            <p>info@cybersafeireland.org</p>
             <a
-              className="csi-link"
+              className="hyperlink"
               href="https://cybersafeireland.org/"
               target="_blank"
               rel="noreferrer"
             >
-              Visit our homepage
+            cybersafeireland.ie
+            </a>
+            <a
+              className="csi-link"
+              href="https://cybersafeireland.org/contact/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Contact Us
             </a>
             <a
               className="csi-link"
