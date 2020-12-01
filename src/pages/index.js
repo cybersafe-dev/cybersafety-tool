@@ -160,11 +160,8 @@ const [privacyModalVisible, toggle] = React.useState(true);
                               </div>
                     </div>
               </div>
-
             </div>
           </div>
-
-
 
         <div id="about">
           <div className="section">

@@ -30,10 +30,9 @@ collections:
         name: "infopage"
         file: "content/infopage.md"
         fields:
-          - { label: Title, name: title, widget: string }
           - {
-              label: Body,
-              name: body,
+              label: "Intro Page Content",
+              name: "Intro Page Content",
               widget: object,
               fields:
                 [
