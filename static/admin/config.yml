@@ -30,7 +30,6 @@ collections:
         name: "infopage"
         file: "content/infopage.md"
         fields:
-
           - {
               label: Body,
               name: body,

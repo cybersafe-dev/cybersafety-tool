@@ -45,7 +45,7 @@ const SurveyPage = props => {
        </div>
        <div className="introtext-box">
          <img src={Icon3} alt="" className="figure" />
-         <ReactMarkdown className="para-3" source={data.body.paragraph3} /> 
+         <ReactMarkdown className="para-3" source={data.body.paragraph3} />
        </div>
         <div className="button-and-pills">
           <Link to="/survey/roleselection/" className="start-btn">
@@ -74,7 +74,6 @@ export const query = graphql`
               paragraph2
               paragraph3
             }
-            title
           }
         }
       }
