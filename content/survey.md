@@ -514,7 +514,7 @@ pupils:
     - statement: 1. My online accounts are private (no one can see them with
         requesting permission).
       responses:
-        - answer: Yes
+        - answer: Yes / I don't have accounts
         - answer: "Most are "
         - answer: Some are
         - answer: A few are
