@@ -30,7 +30,7 @@ const SurveyPage = props => {
       <Header />
       <SEO title="Survey Introduction" />
       <section className="intropage-container">
-        <h1 className="welcome"> Welcome! Fáilte! </h1>
+        <h1 className="welcome"> {data.title} </h1>
         <img src={BgImg} alt="background design" className="bg1" />
         <img src={Half} alt="background design" className="bg2" />
         <img src={Half} alt="background design" className="bg3" />
