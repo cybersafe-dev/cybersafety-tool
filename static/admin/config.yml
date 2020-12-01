@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: cybersafe-dev/cybersafety-tool
-
+  branch: master
 media_folder: static/assets
 public_folder: assets
 

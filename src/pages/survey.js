@@ -62,27 +62,22 @@ const SurveyPage = props => {
 export default SurveyPage
 
 export const query = graphql`
-  query {
-    allFile(
-      filter: {
-        sourceInstanceName: { eq: "content" }
-        name: { eq: "infopage" }
-      }
-    ) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              title
-              body {
-                paragraph1
-                paragraph2
-                paragraph3
-              }
+{
+  allFile(filter: {sourceInstanceName: {eq: "content"}, name: {eq: "infopage"}}) {
+    edges {
+      node {
+        childMarkdownRemark {
+          frontmatter {
+            body {
+              paragraph1
+              paragraph2
+              paragraph3
             }
+            title
           }
         }
       }
     }
   }
+}
 `
