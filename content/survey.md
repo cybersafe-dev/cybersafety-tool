@@ -58,8 +58,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: "8. My school has a clear policy on smartphone use, created in
-        consultation with the parent body. "
+    - statement: 8. The school has a clear policy on smartphone / device usage in school.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -81,15 +80,15 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 2. I change my passwords regularly.
+    - statement: 2. I use a range of passwords for different accounts.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 3. I keep school-related digital data secure by keeping it on site
-        and password-protected.
+    - statement: 3. I keep school-related digital data secure by keeping it onsite and
+        password-protected.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -106,6 +105,13 @@ leaders:
         - answer: Strongly disagree
     - statement: 5. My staff keep school-related digital data secure by keeping it
         onsite and password-protected.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: 6. The school is GDPR compliant.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -298,8 +304,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 8. My school has a clear policy on smartphone use, created in
-        consultation with the parent body.
+    - statement: 8. The school has a clear policy on smartphone / device usage in school.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -322,7 +327,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 3. I change my passwords regularly.
+    - statement: 3. I use a range of passwords for different accounts.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -521,7 +526,7 @@ pupils:
         - answer: Kind of
         - answer: Not really
         - answer: I don't know how
-    - statement: 3. I change my passwords regularly.
+    - statement: 3. I use a range of passwords for different accounts.
       responses:
         - answer: Yes
         - answer: Pretty often
@@ -628,8 +633,7 @@ pupils:
         - answer: Yes
         - answer: Not sure
         - answer: I don't know
-    - statement: 3. I think it's important to balance my online time each day with
-        other activities.
+    - statement: 3. It's important to balance online time each day with other activities.
       responses:
         - answer: Yes
         - answer: Usually
