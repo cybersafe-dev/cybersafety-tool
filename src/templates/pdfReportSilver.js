@@ -14,21 +14,33 @@ import toolLogo from "../images/toolforschools-logo.png"
 import cyberAwareLogo from "../images/CyberAware-Col.png"
 import cyberSmartLogo from "../images/CyberSmart-Col.png"
 import cyberChampionLogo from "../images/CyberChampion-Col.png"
-//import BlobSurfer from "../images/blobsurfer.png"
+import BlobSurfer from "../images/blobsurfer.png"
 
 import { awardLevelBlurbs } from "./pdfReportBlurbs"
 
 // Download fonts - curl the typical embed link given by google to get individual ttf links
 Font.register({
-  family: "PoppinsBody",
-  src: "https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLEj6V1s.ttf",
+  family: "Poppins",
+  src: "https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf",
   fontStyle: "normal",
-  fontWeight: 600,
+  fontWeight: 400,
 })
 Font.register({
-  family: "PoppinsHeading",
-  src: "https://fonts.gstatic.com/s/poppins/v12/pxiByp8kv8JHgFVrLCz7V1s.ttf",
+  family: "Poppins",
+  src: "https://fonts.gstatic.com/s/poppins/v15/pxiGyp8kv8JHgFVrJJLedw.ttf",
+  fontStyle: "italic",
+  fontWeight: 400,
+})
+Font.register({
+  family: "Poppins",
+  src: "https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7V1s.ttf",
   fontStyle: "normal",
+  fontWeight: 700,
+})
+Font.register({
+  family: "Poppins",
+  src: "https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLmy15lEA.ttf",
+  fontStyle: "italic",
   fontWeight: 700,
 })
 
@@ -38,30 +50,52 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: "#ffffff",
   },
-  contactPage: {
-    flexDirection: "column",
-    backgroundColor: "#eeeeee",
-  },
-  awardPage: {
-    flexDirection: "column",
-    backgroundColor: "#ffffff",
-  },
   header: {
-    flexDirection: "row",
-    alignItems: "space-between",
-    margin: 10,
-    padding: 10,
+    oneLogo: {
+      width: "90%",
+      height: "10vh",
+      flexDirection: "row",
+      alignItems: "center",
+      marginHorizontal: "5%",
+      justifyContent: "flex-end",
+    },
+    twoLogo: {
+      width: "90%",
+      height: "10vh",
+      flexDirection: "row",
+      alignItems: "center",
+      marginHorizontal: "5%",
+      justifyContent: "space-between",
+    },
   },
   body: {
-    marginHorizontal: 40,
-    padding: 10,
+    topAlign: {
+      width: "90%",
+      height: "90vh",
+      marginHorizontal: "5%",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      justifyContent: "flex-start",
+      padding: 20,
+    },
+    centerAlign: {
+      width: "90%",
+      height: "90vh",
+      marginHorizontal: "5%",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      justifyContent: "center",
+      padding: 20,
+    },
   },
-  centered: {
-    alignSelf: "center",
+  div: {
+    centered: {
+      alignSelf: "center",
+    },
   },
   h1: {
     fontSize: 20,
-    fontFamily: "PoppinsHeading",
+    fontFamily: "Poppins",
     fontWeight: 700,
     color: "#181818",
     textAlign: "center",
@@ -69,53 +103,81 @@ const styles = StyleSheet.create({
   },
   h2: {
     fontSize: 15,
-    fontFamily: "PoppinsHeading",
+    fontFamily: "Poppins",
     fontWeight: 700,
     color: "#181818",
     marginBottom: 20,
     marginTop: 20,
+    centered: {
+      fontSize: 14,
+      fontFamily: "Poppins",
+      fontWeight: 700,
+      color: "#181818",
+      marginBottom: 20,
+      marginTop: 20,
+      alignSelf: "center",
+    },
+  },
+  para: {
+    fontSize: 12,
+    fontFamily: "Poppins",
+    textAlign: "justify",
+    color: "#181818",
+    marginBottom: 10,
+    bold: {
+      fontSize: 12,
+      fontWeight: 700,
+      fontFamily: "Poppins",
+      textAlign: "justify",
+      color: "#181818",
+      marginBottom: 10,
+    },
+    boldItalic: {
+      fontSize: 12,
+      fontWeight: 700,
+      fontFamily: "Poppins",
+      fontStyle: "italic",
+      textAlign: "justify",
+      color: "#181818",
+      marginBottom: 10,
+    },
+    address: {
+      fontSize: 8,
+      fontWeight: 400,
+      fontFamily: "Poppins",
+      textAlign: "justify",
+      color: "#181818",
+    },
+    slimWidth: {
+      width: 400,
+      fontSize: 12,
+      fontFamily: "Poppins",
+      textAlign: "justify",
+      color: "#181818",
+      marginBottom: 10,
+    },
   },
   logo: {
     height: "5vh",
-    margin: 10,
-    alignSelf: "flex-end",
-  },
-  para: {
-    fontSize: 8,
-    fontFamily: "PoppinsBody",
-    color: "#181818",
-    marginBottom: 5,
-  },
-  awardPara: {
-    fontSize: 8,
-    fontFamily: "PoppinsBody",
-    color: "#181818",
-    marginBottom: 5,
-    paddingHorizontal: 20,
-    textAlign: "center",
-  },
-  sign: {
-    fontSize: 8,
-    fontFamily: "PoppinsHeading",
-    fontWeight: 700,
-    color: "#181818",
-    marginBottom: 20,
-    marginTop: 20,
-  },
-  address: {
-    fontSize: 8,
-    fontFamily: "PoppinsBody",
-    color: "#181818",
   },
   awardImg: {
-    width: 250,
+    width: 400,
     alignSelf: "center",
-    marginTop: 100,
+    marginBottom: 80,
+    noBorder: {
+      width: 400,
+      alignSelf: "center",
+    },
+  },
+  awardImgSml: {
+    width: 200,
+    alignSelf: "center",
+    margin: 40,
   },
   blobSurfer: {
-    width: 300,
+    width: 200,
     alignSelf: "center",
-    marginVertical: 50,
+    marginVertical: 100,
   },
   table: {
     flexDirection: "column",
@@ -136,10 +198,16 @@ const styles = StyleSheet.create({
       width: "50%",
     },
     columnTitle: {
-      fontSize: 12,
-      fontFamily: "PoppinsHeading",
+      fontSize: 8,
+      fontFamily: "Poppins",
       fontWeight: 700,
       color: "#181818",
+    },
+    text: {
+      fontSize: 8,
+      fontFamily: "Poppins",
+      color: "#181818",
+      marginBottom: 5,
     },
   },
 })
@@ -151,13 +219,13 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
   const totalCompletedSurveys =
     quota.leadersQuota + quota.teachersQuota + quota.pupilsQuota
 
-  const selectMarkLevel = (attained) => {
+  const selectMarkLevel = attained => {
     let mark
     switch (attained) {
-      case "cyberChampion":
+      case "CyberChampion":
         mark = cyberChampionLogo
         break
-      case "cyberSmart":
+      case "CyberSmart":
         mark = cyberSmartLogo
         break
       default:
@@ -170,38 +238,46 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
     <Document>
       {/* Page One - Intro with table */}
       <Page size="A4" style={styles.page} wrap>
-        <View style={styles.header}>
+        <View style={styles.header.oneLogo}>
           <Image
             style={styles.logo}
             src={csiLogo}
             alt="CyberSafeIreland Logo"
           />
         </View>
-        <View style={styles.body}>
-          <Image src={toolLogo} alt="CyberSafe Tool for Schools" />
-          <View style={styles.table}>
-            <View style={styles.table.row}>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>School Name:</Text>
+        <View style={styles.body.centerAlign}>
+          <View style={styles.div.centered}>
+            <Image
+              src={toolLogo}
+              style={styles.awardImg}
+              alt="CyberSafe Tool for Schools"
+            />
+            <View style={styles.table}>
+              <View style={styles.table.row}>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>School Name:</Text>
+                </View>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}> {report.reportFor}</Text>
+                </View>
               </View>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}> {report.reportFor}</Text>
+              <View style={styles.table.row}>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>Report Generated:</Text>
+                </View>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>{reportTimestamp}</Text>
+                </View>
               </View>
-            </View>
-            <View style={styles.table.row}>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>Report Generated:</Text>
-              </View>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>{reportTimestamp}</Text>
-              </View>
-            </View>
-            <View style={styles.table.row}>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>Total Surveys Completed</Text>
-              </View>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>{totalCompletedSurveys}</Text>
+              <View style={styles.table.row}>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>
+                    Total Surveys Completed:
+                  </Text>
+                </View>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>{totalCompletedSurveys}</Text>
+                </View>
               </View>
             </View>
           </View>
@@ -210,7 +286,7 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
 
       {/* Page Two - Your grade and grade explainer table */}
       <Page size="A4" style={styles.page} wrap>
-        <View style={styles.header}>
+        <View style={styles.header.twoLogo}>
           <Image
             style={styles.logo}
             src={toolLogo}
@@ -222,50 +298,56 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafeIreland Logo"
           />
         </View>
-        <View style={styles.body}>
-          <Text style={styles.h2}>
-            Congratulations, you are currently a {report.prospectiveMark}{" "}
-            school!
-          </Text>
-          <Image
-            style={styles.awardImgSml}
-            src={selectMarkLevel(report.prospectiveMark)}
-            alt="Your Mark Level Badge"
-          />
-          <Text style={styles.h2}>Awards</Text>
-          <View style={styles.table}>
-            <View style={styles.table.row}>
-              <View style={styles.table.cell}>
-                <Text style={styles.table.columnTitle}>Award Level</Text>
+        <View style={styles.body.centerAlign}>
+          <View style={styles.div.centered}>
+            <Text style={styles.h2.centered}>
+              Congratulations, you are currently a {report.prospectiveMark}{" "}
+              school!
+            </Text>
+            <Image
+              style={styles.awardImgSml}
+              src={selectMarkLevel(report.prospectiveMark)}
+              alt="Your Mark Level Badge"
+            />
+            <Text style={styles.h2}>Awards</Text>
+            <View style={styles.table}>
+              <View style={styles.table.row}>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.columnTitle}>Award Level</Text>
+                </View>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.columnTitle}>Description</Text>
+                </View>
               </View>
-              <View style={styles.table.cell}>
-                <Text style={styles.table.columnTitle}>Description</Text>
+              <View style={styles.table.row}>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>CyberChampion School</Text>
+                </View>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>
+                    {awardLevelBlurbs.CyberChampion}
+                  </Text>
+                </View>
               </View>
-            </View>
-            <View style={styles.table.row}>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>CyberChampion School</Text>
+              <View style={styles.table.row}>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>CyberSmart School</Text>
+                </View>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>
+                    {awardLevelBlurbs.CyberSmart}
+                  </Text>
+                </View>
               </View>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>
-                  {awardLevelBlurbs.CyberChampion}
-                </Text>
-              </View>
-            </View>
-            <View style={styles.table.row}>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>CyberSmart School</Text>
-              </View>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>{awardLevelBlurbs.CyberSmart}</Text>
-              </View>
-            </View>
-            <View style={styles.table.row}>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>CyberAware School</Text>
-              </View>
-              <View style={styles.table.cell}>
-                <Text style={styles.para}>{awardLevelBlurbs.CyberAware}</Text>
+              <View style={styles.table.row}>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>CyberAware School</Text>
+                </View>
+                <View style={styles.table.cell}>
+                  <Text style={styles.table.text}>
+                    {awardLevelBlurbs.CyberAware}
+                  </Text>
+                </View>
               </View>
             </View>
           </View>
@@ -274,27 +356,35 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
 
       {/* Page three - Completion Certificate */}
       <Page size="A4" style={styles.page} wrap>
-        <View style={styles.header}>
+        <View style={styles.header.oneLogo}>
           <Image
             style={styles.logo}
             src={csiLogo}
             alt="CyberSafeIreland Logo"
           />
         </View>
-        <View style={styles.body}>
-          <Image src={toolLogo} alt="CyberSafe Tool for Schools" />
-          <Text style={styles.para}>
-            You have proved your commitment to online safety by completing the
-            free CyberSafe Tool for Schools online assessment.
-          </Text>
-          <Text style={styles.para}>Date: {reportTimestamp}</Text>
-          <Text style={styles.sign}>CyberSafeIreland</Text>
+        <View style={styles.body.centerAlign}>
+          <View style={styles.div.centered}>
+            <Image
+              src={toolLogo}
+              style={styles.awardImg}
+              alt="CyberSafe Tool for Schools"
+            />
+            <Text style={styles.para.slimWidth}>
+              You have proved your commitment to online safety by completing the
+              free{" "}
+              <Text style={styles.para.bold}>CyberSafe Tool for Schools</Text>{" "}
+              online assessment.
+            </Text>
+            <Text style={styles.para}>Date: {reportTimestamp}</Text>
+            <Text style={styles.para.bold}>CyberSafeIreland</Text>
+          </View>
         </View>
       </Page>
 
       {/* Page Four - Next Steps */}
       <Page size="A4" style={styles.page} wrap>
-        <View style={styles.header}>
+        <View style={styles.header.twoLogo}>
           <Image
             style={styles.logo}
             src={toolLogo}
@@ -306,56 +396,63 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafeIreland Logo"
           />
         </View>
-        <View style={styles.body}>
-          <Text style={styles.h1}>Next Steps</Text>
-          <Text style={styles.para}>
-            Now that you've completed the tool and received your free report,
-            you can upgrade by purchasing the CyberSafe Tool for Schools{" "}
-            {report.prospectiveMark} award badge for your school.
-          </Text>
-          <Text style={styles.para}>
-            This mark is valid for 12 months and you can display it on your
-            website, social media and all school communications to demonstrate
-            your school’s commitment to online safety. You will also receive a
-            breakdown of your school’s results by topic area.{" "}
-          </Text>
-          <Text style={styles.para}>
-            For more information please visit cybersafetoolforschools.ie or
-            contact us directly on info@cybersafeireland.org
-          </Text>
+        <View style={styles.body.topAlign}>
+          <View style={styles.div.centered}>
+            <Text style={styles.h2}>Next Steps</Text>
+            <Text style={styles.para}>
+              Now that you've completed the tool and received your free report,
+              you can upgrade by purchasing the{" "}
+              <Text style={styles.para.bold}>CyberSafe Tool for Schools</Text>{" "}
+              {report.prospectiveMark} award badge for your school.
+            </Text>
+            <Text style={styles.para}>
+              This mark is valid for 12 months and you can display it on your
+              website, social media and all school communications to demonstrate
+              your school’s commitment to online safety. You will also receive a
+              breakdown of your school’s results by topic area.{" "}
+            </Text>
+            <Text style={styles.para}>
+              For more information please visit cybersafetoolforschools.ie or
+              contact us directly on info@cybersafeireland.org
+            </Text>
+          </View>
         </View>
       </Page>
 
       {/* Page Five - Contact page */}
-      <Page size="A4" style={styles.contactPage} wrap>
-        <View style={styles.header}>
+      <Page size="A4" style={styles.page} wrap>
+        <View style={styles.header.oneLogo}>
           <Image
             style={styles.logo}
             src={csiLogo}
             alt="CyberSafeIreland Logo"
           />
         </View>
-        {/* <View style={styles.body}>
-          <Image src={toolLogo} alt="CyberSafe Tool for Schools" />
-          <Text style={styles.h1}>CyberSafeIreland CLG</Text>
-          <View style={styles.centered}>
-            <Text style={styles.address}>Company number: 568651</Text>
-            <Text style={styles.address}>
+        <View style={styles.body.centerAlign}>
+          <Image
+            src={toolLogo}
+            style={styles.awardImg.noBorder}
+            alt="CyberSafe Tool for Schools"
+          />
+          <View style={styles.div.centered}>
+            <Text style={styles.h2.centered}>CyberSafeIreland CLG</Text>
+            <Text style={styles.para.address}>Company number: 568651</Text>
+            <Text style={styles.para.address}>
               Registered charity number: 20104108
             </Text>
-            <Text style={styles.address}>
+            <Text style={styles.para.address}>
               93 Upper George Street, Dun Laoghaire,
             </Text>
-            <Text style={styles.address}>Dublin, Ireland</Text>
-            <Text style={styles.address}>cybersafeireland.ie</Text>
-            <Text style={styles.address}>info@cybersafeireland.ie</Text>
+            <Text style={styles.para.address}>Dublin, Ireland</Text>
+            <Text style={styles.para.address}>cybersafeireland.ie</Text>
+            <Text style={styles.para.address}>info@cybersafeireland.ie</Text>
           </View>
           <Image
             style={styles.blobSurfer}
             src={BlobSurfer}
             alt="Surfer on a blue blob"
-          />{" "}
-        </View> */}
+          />
+        </View>
       </Page>
     </Document>
   )
