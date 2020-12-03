@@ -26,22 +26,7 @@ collections:
                   { label: "Aboutus", name: "aboutus", widget: markdown },
                 ],
             }
-      - label: "Survey Intro Page"
-        name: "infopage"
-        file: "content/infopage.md"
-        fields:
-          - {
-              label: "Intro content",
-              name: "introcontent",
-              widget: object,
-              fields:
-                [
-                  { label: "Paragraph One", name: paragraph1, widget: markdown },
-                  { label: "Paragraph Two", name: paragraph2, widget: markdown },
-                  { label: "Paragraph Three", name: paragraph3, widget: markdown },
-                ],
-            }
-      - label: "Info Page"
+      - label: "Survey Landing Page"
         name: "infopage1"
         file: "content/infopage1.md"
         fields:
