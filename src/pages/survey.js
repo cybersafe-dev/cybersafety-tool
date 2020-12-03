@@ -37,15 +37,15 @@ const SurveyPage = props => {
         <img src={Half} alt="background design" className="bg3" />
         <div className="introtext-box">
          <img src={Icon1} alt="" className="figure" />
-         <ReactMarkdown className="para-1" source={data.body.paragraph1} />
+         <ReactMarkdown className="para-1" source={data.infocontent.firstpara} />
        </div>
        <div className="introtext-box-horiz-flipped">
-         <ReactMarkdown className="para-2" source={data.body.paragraph2} />
+         <ReactMarkdown className="para-2" source={data.infocontent.secondpara} />
          <img src={Icon2} alt="" className="figure" />
        </div>
        <div className="introtext-box">
          <img src={Icon3} alt="" className="figure" />
-         <ReactMarkdown className="para-3" source={data.body.paragraph3} />
+         <ReactMarkdown className="para-3" source={data.infocontent.thirdpara} />
        </div>
         <div className="button-and-pills">
           <Link to="/survey/roleselection/" className="start-btn">
@@ -64,15 +64,15 @@ export default SurveyPage
 
 export const query = graphql`
 {
-  allFile(filter: {sourceInstanceName: {eq: "content"}, name: {eq: "infopage"}}) {
+  allFile(filter: {sourceInstanceName: {eq: "content"}, name: {eq: "infopage1"}}) {
     edges {
       node {
         childMarkdownRemark {
           frontmatter {
-            body {
-              paragraph1
-              paragraph2
-              paragraph3
+            infocontent {
+              firstpara
+              secondpara
+              thirdpara
             }
           }
         }

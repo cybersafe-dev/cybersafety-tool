@@ -31,8 +31,8 @@ collections:
         file: "content/infopage.md"
         fields:
           - {
-              label: Body,
-              name: body,
+              label: "Intro content",
+              name: "introcontent",
               widget: object,
               fields:
                 [
@@ -41,6 +41,21 @@ collections:
                   { label: "Paragraph Three", name: paragraph3, widget: markdown },
                 ],
             }
+      - label: "Info Page"
+        name: "infopage1"
+        file: "content/infopage1.md"
+        fields:
+          - {
+              label: "Info Content",
+              name: "infocontent",
+              widget: object,
+              fields:
+                [
+                  { label: "paragraph one", name: firstpara, widget: markdown },
+                  { label: "paragraph two", name: secondpara, widget: markdown },
+                  { label: "paragraph three", name: thirdpara, widget: markdown },
+                ],
+          }
       - label: "Survey"
         name: "survey"
         file: "content/survey.md"
