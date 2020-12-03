@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
 })
 
 // Create Document Component
-const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
+const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
   const dateInMillis = reportSubmitted.seconds * 1000
   const reportTimestamp = new Date(dateInMillis).toDateString()
   const totalCompletedSurveys =
@@ -458,4 +458,4 @@ const PdfReportTemplate = ({ report, reportSubmitted, quota }) => {
   )
 }
 
-export default PdfReportTemplate
+export default PdfReportTemplateSilver
