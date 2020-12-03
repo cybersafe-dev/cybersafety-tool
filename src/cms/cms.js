@@ -7,5 +7,5 @@ import HintsPreview from './preview-templates/hintsPreview/hintsPreview'
 
 CMS.registerPreviewTemplate('minisite', MiniSitePreview)
 CMS.registerPreviewTemplate('survey', SurveyPreview)
-CMS.registerPreviewTemplate('infopage', InfopagePreview)
+CMS.registerPreviewTemplate('infopage1', InfopagePreview)
 CMS.registerPreviewTemplate('hints', HintsPreview)

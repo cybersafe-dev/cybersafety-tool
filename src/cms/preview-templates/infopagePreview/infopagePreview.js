@@ -17,26 +17,27 @@ const InfopagePreview = ({ entry }) => {
       <Layout>
       <Header />
       <section className="intropage-container">
-        <h1> {data.title} </h1>
+        <h1 className="welcome"> Welcome! Fáilte!</h1>
         <img src={BgImg} alt="background design" className="bg1" />
         <img src={BgImg} alt="background design" className="bg2" />
         <img src={BgImg} alt="background design" className="bg3" />
         <div className="introtext-box">
           <img src={Icon1} alt="background design" />
           <article className="para-1">
-            <p> {data.body.paragraph1} </p>
+            <p> {data.infocontent.firstpara} </p>
           </article>
         </div>
         <div className="introtext-box">
+        <img src={Icon2} alt="" />
           <article className="para-2">
-            <p> {data.body.paragraph2} </p>
+            <p> {data.infocontent.secondpara} </p>
           </article>
-          <img src={Icon2} alt="" />
+
         </div>
         <div className="introtext-box">
           <img src={Icon3} alt="" />
           <article className="para-3">
-            <p> {data.body.paragraph3} </p>
+            <p> {data.infocontent.thirdpara} </p>
           </article>
         </div>
         <Link to="/enterid/" className="start-btn">
