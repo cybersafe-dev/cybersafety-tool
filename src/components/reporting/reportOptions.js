@@ -24,22 +24,6 @@ const ReportOptions = ({
             <p>
               Report: <span className="tick">✓</span>
             </p>
-            {visibleReport ? (
-              <button
-                className="report-toggle-btn"
-                onClick={() => toggleReport(!visibleReport)}
-              >
-                hide report
-              </button>
-            ) : (
-              <button
-                className="report-toggle-btn"
-                onClick={() => toggleReport(!visibleReport)}
-              >
-                show report
-              </button>
-            )}
-            
             <PDFDownloadLink
               className="pdf-dl-btn-silver"
               document={
@@ -85,6 +69,24 @@ const ReportOptions = ({
                 loading ? "Loading document..." : "Platinum Report"
               }
             </PDFDownloadLink>
+            
+            {visibleReport ? (
+              <button
+                className="report-toggle-btn"
+                onClick={() => toggleReport(!visibleReport)}
+              >
+                hide report
+              </button>
+            ) : (
+              <button
+                className="report-toggle-btn"
+                onClick={() => toggleReport(!visibleReport)}
+              >
+                show report
+              </button>
+            )}
+            
+            
             <label htmlFor="reportSent" className="report-toggle-btn">
               <input
                 className="checkbox"
