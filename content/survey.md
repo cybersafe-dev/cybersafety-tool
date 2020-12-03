@@ -58,8 +58,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: "8. My school has a clear policy on smartphone use, created in
-        consultation with the parent body. "
+    - statement: 8. The school has a clear policy on smartphone / device usage in school.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -81,15 +80,15 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 2. I change my passwords regularly.
+    - statement: 2. I use a range of passwords for different accounts.
       responses:
         - answer: Strongly agree
         - answer: Agree
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 3. I keep school-related digital data secure by keeping it on site
-        and password-protected.
+    - statement: 3. I keep school-related digital data secure by keeping it onsite and
+        password-protected.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -106,6 +105,13 @@ leaders:
         - answer: Strongly disagree
     - statement: 5. My staff keep school-related digital data secure by keeping it
         onsite and password-protected.
+      responses:
+        - answer: Strongly agree
+        - answer: Agree
+        - answer: Neutral
+        - answer: Disagree
+        - answer: Strongly disagree
+    - statement: 6. The school is GDPR compliant.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -298,8 +304,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 8. My school has a clear policy on smartphone use, created in
-        consultation with the parent body.
+    - statement: 8. The school has a clear policy on smartphone / device usage in school.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -322,7 +327,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 3. I change my passwords regularly.
+    - statement: 3. I use a range of passwords for different accounts.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -506,11 +511,11 @@ pupils:
         - answer: Not very often
         - answer: Never
   privacy:
-    - statement: 1. All accounts or profiles I have online are set to private (no one
-        can see them with requesting permission).
+    - statement: 1. My online accounts are private (no one can see them with
+        requesting permission).
       responses:
-        - answer: All are private
-        - answer: Most are
+        - answer: Yes / I don't have accounts
+        - answer: "Most are "
         - answer: Some are
         - answer: A few are
         - answer: None are
@@ -521,7 +526,7 @@ pupils:
         - answer: Kind of
         - answer: Not really
         - answer: I don't know how
-    - statement: 3. I change my passwords regularly.
+    - statement: 3. I use a range of passwords for different accounts.
       responses:
         - answer: Yes
         - answer: Pretty often
@@ -552,7 +557,7 @@ pupils:
         - answer: Yes
     - statement: 2. I post photos and videos on social media.
       responses:
-        - answer: I never post
+        - answer: I don't post
         - answer: Not very often
         - answer: Sometimes
         - answer: Usually
@@ -623,13 +628,12 @@ pupils:
         - answer: Yes
         - answer: Not sure
         - answer: No
-    - statement: 2. I know how approximately how much time I am online each day.
+    - statement: 2. I know how roughly how much time I am online each day.
       responses:
         - answer: Yes
         - answer: Not sure
         - answer: I don't know
-    - statement: 3. I think it's important to balance my online time each day with
-        other activities.
+    - statement: 3. It's important to balance online time each day with other activities.
       responses:
         - answer: Yes
         - answer: Usually
