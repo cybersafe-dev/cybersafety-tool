@@ -1,5 +1,6 @@
 import React from "react"
 import "../../styling/reporting/scoreCard.css"
+import { applyStatus } from "../../templates/reportTemplate"
 
 const ScoreCard = ({ score }) => {
   const submissionTimestamp =
@@ -11,15 +12,21 @@ const ScoreCard = ({ score }) => {
     <section className="score-card">
       <ul className="scores-list">
         <li className="category">
-          Digital Knowledge: {score.digitalknowledge}
+          Digital Knowledge: {applyStatus(score.digitalknowledge)}
         </li>
-        <li className="category">Privacy: {score.privacy}</li>
-        <li className="category">Online Life: {score.onlinelife}</li>
-        <li className="category">Communication: {score.communication}</li>
+        <li className="category">Privacy: {applyStatus(score.privacy)}</li>
         <li className="category">
-          Critical Thinking: {score.criticalthinking}
+          Online Life: {applyStatus(score.onlinelife)}
         </li>
-        <li className="category">Responsible Use: {score.responsibleuse}</li>
+        <li className="category">
+          Communication: {applyStatus(score.communication)}
+        </li>
+        <li className="category">
+          Critical Thinking: {applyStatus(score.criticalthinking)}
+        </li>
+        <li className="category">
+          Responsible Use: {applyStatus(score.responsibleuse)}
+        </li>
       </ul>
       {score.timestamp ? (
         <p className="timestamp">
