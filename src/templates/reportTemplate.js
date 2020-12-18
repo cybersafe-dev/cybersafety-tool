@@ -12,13 +12,13 @@ export const applyStatus = number => {
       status = "CyberSmart"
       break
     case 4:
-      status = "CyberStarter"
+      status = "CyberAware"
       break
     case 5:
-      status = "CyberStarter"
+      status = "CyberAware"
       break
     default:
-      status = "CyberStarter"
+      status = "CyberAware"
   }
   return status
 }

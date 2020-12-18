@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: cybersafe-dev/cybersafety-tool
-
+  branch: master
 media_folder: static/assets
 public_folder: assets
 
@@ -26,22 +26,21 @@ collections:
                   { label: "Aboutus", name: "aboutus", widget: markdown },
                 ],
             }
-      - label: "Survey Intro Page"
-        name: "infopage"
-        file: "content/infopage.md"
+      - label: "Survey Landing Page"
+        name: "infopage1"
+        file: "content/infopage1.md"
         fields:
-          - { label: Title, name: title, widget: string }
           - {
-              label: Body,
-              name: body,
+              label: "Info Content",
+              name: "infocontent",
               widget: object,
               fields:
                 [
-                  { label: "Paragraph One", name: paragraph1, widget: text },
-                  { label: "Paragraph Two", name: paragraph2, widget: text },
-                  { label: "Paragraph Three", name: paragraph3, widget: text },
+                  { label: "paragraph one", name: firstpara, widget: markdown },
+                  { label: "paragraph two", name: secondpara, widget: markdown },
+                  { label: "paragraph three", name: thirdpara, widget: markdown },
                 ],
-            }
+          }
       - label: "Survey"
         name: "survey"
         file: "content/survey.md"

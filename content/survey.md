@@ -511,11 +511,11 @@ pupils:
         - answer: Not very often
         - answer: Never
   privacy:
-    - statement: 1. All accounts or profiles I have online are set to private (no one
-        can see them with requesting permission).
+    - statement: 1. My online accounts are private (no one can see them with
+        requesting permission).
       responses:
-        - answer: All are private
-        - answer: Most are
+        - answer: Yes / I don't have accounts
+        - answer: "Most are "
         - answer: Some are
         - answer: A few are
         - answer: None are
@@ -557,7 +557,7 @@ pupils:
         - answer: Yes
     - statement: 2. I post photos and videos on social media.
       responses:
-        - answer: I never post
+        - answer: I don't post
         - answer: Not very often
         - answer: Sometimes
         - answer: Usually
@@ -628,7 +628,7 @@ pupils:
         - answer: Yes
         - answer: Not sure
         - answer: No
-    - statement: 2. I know how approximately how much time I am online each day.
+    - statement: 2. I know how roughly how much time I am online each day.
       responses:
         - answer: Yes
         - answer: Not sure
