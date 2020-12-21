@@ -413,17 +413,21 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
         </View>
         <View style={styles.body.centerAlign}>
           <View style={styles.div.centered}>
-            <Image
-              src={toolLogo}
-              style={styles.awardImg}
-              alt="CyberSafe Tool for Schools"
-            />
             <Text style={styles.para.slimWidth}>
               You have proved your commitment to online safety by completing the
-              free{" "}
-              <Text style={styles.para.bold}>CyberSafe Tool for Schools</Text>{" "}
-              online assessment.
+              <Text style={styles.para.bold}>
+                CyberSafe Tool for Schools
+              </Text>{" "}
+              online assessment. Measured against standards of best practice,
+              the results of your survey show that your school is 
+              
             </Text>
+
+            <Image
+              style={styles.awardImg}
+              src={selectMarkLevel(report.prospectiveMark)}
+              alt="Your Mark Level Badge"
+            />
             <Text style={styles.para}>Date: {reportTimestamp}</Text>
             <Text style={styles.para}>
               Signed: <Text style={styles.para.bold}>CyberSafeIreland</Text>
@@ -432,7 +436,27 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
         </View>
       </Page>
 
-      {/* Page Four - Next Steps */}
+      {/* Page Four - Survey Breakdown */}
+      <Page size="A4" style={styles.page} wrap>
+        <View style={styles.header.twoLogo}>
+          <Image
+            style={styles.logo.tfs}
+            src={toolLogo}
+            alt="CyberSafe Tool for Schools Logo"
+          />
+          <Image
+            style={styles.logo.csi}
+            src={csiLogo}
+            alt="CyberSafeIreland Logo"
+          />
+        </View>
+        <View style={styles.body.topAlign}>
+        <Text style={styles.h2}>SURVEY BREAKDOWN</Text>
+          
+        </View>
+      </Page>
+
+      {/* Page Five - Next Steps */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header.twoLogo}>
           <Image
@@ -450,8 +474,7 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
           <View style={styles.div.centered}>
             <Text style={styles.h2}>NEXT STEPS</Text>
             <Text style={styles.para}>
-              Now that you've completed the tool and received your free report,
-              you can upgrade by purchasing the{" "}
+            Now that you've completed the tool and received your report, we will be sending you your{" "}
               <Text style={styles.para.bold}>CyberSafe Tool for Schools</Text>{" "}
               {report.prospectiveMark} award badge for your school.
             </Text>
@@ -462,21 +485,33 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
               breakdown of your school’s results by topic area.{" "}
             </Text>
             <Text style={styles.para}>
-              For more information please visit{" "}
-              <Link
-                style={styles.hyperlink}
-                src={"https://cybersafetoolforschools.ie"}
-              >
-                cybersafetoolforschools.ie
-              </Link>{" "}
-              or contact us directly on{" "}
-              <Text style={styles.hyperlink}>info@cybersafeireland.ie</Text>.
+            Thank you for joining the CyberSafe Tool for Schools initiative!
             </Text>
           </View>
         </View>
       </Page>
 
-      {/* Page Five - Contact page */}
+      {/* Page Six - Recommendations */}
+      <Page size="A4" style={styles.page} wrap>
+        <View style={styles.header.twoLogo}>
+          <Image
+            style={styles.logo.tfs}
+            src={toolLogo}
+            alt="CyberSafe Tool for Schools Logo"
+          />
+          <Image
+            style={styles.logo.csi}
+            src={csiLogo}
+            alt="CyberSafeIreland Logo"
+          />
+        </View>
+        <View style={styles.body.topAlign}>
+        <Text style={styles.h2}>RECOMMENDATIONS</Text>
+          
+        </View>
+      </Page>
+
+      {/* Page Seven - Contact page */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header.oneLogo}>
           <Image
