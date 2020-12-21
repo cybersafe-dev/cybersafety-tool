@@ -264,6 +264,49 @@ const styles = StyleSheet.create({
       marginBottom: 5,
       hyphens: "none",
     },
+    columnTitleSml: {
+      fontSize: 8,
+      fontFamily: "Poppins",
+      fontWeight: 700,
+      color: "#181818",
+    },
+    textSml: {
+      fontSize: 8,
+      fontFamily: "Poppins",
+      color: "#181818",
+      marginBottom: 2,
+      textAlign: "justify",
+    },
+  },
+  breakdownGrid: {
+    flexDirection: "column",
+    justifyContent: "center",
+    marginBottom: 250,
+    row: {
+      flexDirection: "row",
+    },
+    cell: {
+      padding: "2px",
+      textAlign: "left",
+      width: "35%",
+    },
+    columnTitle: {
+      fontSize: 13,
+      fontFamily: "Poppins",
+      fontWeight: 700,
+      color: "#181818",
+    },
+    text: {
+      fontSize: 9,
+      fontFamily: "Poppins",
+      color: "#181818",
+    },
+    bold: {
+      fontSize: 9,
+      fontWeight: 700,
+      fontFamily: "Poppins",
+      color: "#181818",
+    },
   },
 })
 
@@ -459,63 +502,161 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
         </View>
         <View style={styles.body.topAlign}>
           <Text style={styles.h2}>SURVEY BREAKDOWN</Text>
-          <Text style={styles.para.bold}>School Leadership</Text>
-          <Text style={styles.para.breakdown}>
-            Digital Knowledge: {report.leaders.digitalknowledge}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Privacy: {report.leaders.privacy}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Online Life: {report.leaders.onlinelife}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Communication: {report.leaders.communication}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Critical Thinking: {report.leaders.criticalthinking}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Responsible Use: {report.leaders.responsibleuse}
-          </Text>
-          <Text style={styles.para.bold}>Teachers</Text>
-          <Text style={styles.para.breakdown}>
-            Digital Knowledge: {report.teachers.digitalknowledge}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Privacy: {report.teachers.privacy}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Online Life: {report.teachers.onlinelife}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Communication: {report.teachers.communication}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Critical Thinking: {report.teachers.criticalthinking}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Responsible Use: {report.teachers.responsibleuse}
-          </Text>
-          <Text style={styles.para.bold}>Pupils</Text>
-          <Text style={styles.para.breakdown}>
-            Digital Knowledge: {report.pupils.digitalknowledge}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Privacy: {report.pupils.privacy}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Online Life: {report.pupils.onlinelife}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Communication: {report.pupils.communication}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Critical Thinking: {report.pupils.criticalthinking}
-          </Text>
-          <Text style={styles.para.breakdown}>
-            Responsible Use: {report.pupils.responsibleuse}
-          </Text>
+          <View style={styles.breakdownGrid}>
+            <View style={styles.breakdownGrid.row}>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.columnTitle}>
+                  School Leadership
+                </Text>
+              </View>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.columnTitle}>Teachers</Text>
+              </View>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.columnTitle}>Pupils</Text>
+              </View>
+            </View>
+            <View style={styles.breakdownGrid.row}>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>
+                    Digital Knowledge:
+                  </Text>{" "}
+                  {report.leaders.digitalknowledge}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>Privacy:</Text>{" "}
+                  {report.leaders.privacy}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>Online Life:</Text>{" "}
+                  {report.leaders.onlinelife}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>Communication:</Text>{" "}
+                  {report.leaders.communication}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>
+                    Critical Thinking:
+                  </Text>{" "}
+                  {report.leaders.criticalthinking}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>
+                    Responsible Use:
+                  </Text>{" "}
+                  {report.leaders.responsibleuse}
+                </Text>
+              </View>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>
+                    Digital Knowledge:
+                  </Text>{" "}
+                  {report.teachers.digitalknowledge}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>Privacy:</Text>{" "}
+                  {report.teachers.privacy}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>Online Life:</Text>{" "}
+                  {report.teachers.onlinelife}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>Communication:</Text>{" "}
+                  {report.teachers.communication}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>
+                    Critical Thinking:
+                  </Text>{" "}
+                  {report.teachers.criticalthinking}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>
+                    Responsible Use:
+                  </Text>{" "}
+                  {report.teachers.responsibleuse}
+                </Text>
+              </View>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>
+                    Digital Knowledge:
+                  </Text>{" "}
+                  {report.pupils.digitalknowledge}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>Privacy:</Text>{" "}
+                  {report.pupils.privacy}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>Online Life:</Text>{" "}
+                  {report.pupils.onlinelife}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>Communication:</Text>{" "}
+                  {report.pupils.communication}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>
+                    Critical Thinking:
+                  </Text>{" "}
+                  {report.pupils.criticalthinking}
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  <Text style={styles.breakdownGrid.bold}>
+                    Responsible Use:
+                  </Text>{" "}
+                  {report.pupils.responsibleuse}
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View style={styles.div.inline}>
+            <View style={styles.table}>
+              <View style={styles.table.row}>
+                <View style={styles.table.leftCell}>
+                  <Text style={styles.table.columnTitleSml}>Award Level</Text>
+                </View>
+                <View style={styles.table.rightCell}>
+                  <Text style={styles.table.columnTitleSml}>Description</Text>
+                </View>
+              </View>
+              <View style={styles.table.row}>
+                <View style={styles.table.leftCell}>
+                  <Text style={styles.table.textSml}>CyberChampion</Text>
+                </View>
+                <View style={styles.table.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    {awardLevelBlurbs.CyberChampion}
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.table.row}>
+                <View style={styles.table.leftCell}>
+                  <Text style={styles.table.textSml}>CyberSmart</Text>
+                </View>
+                <View style={styles.table.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    {awardLevelBlurbs.CyberSmart}
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.table.row}>
+                <View style={styles.table.leftCell}>
+                  <Text style={styles.table.textSml}>CyberAware</Text>
+                </View>
+                <View style={styles.table.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    {awardLevelBlurbs.CyberAware}
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
         </View>
       </Page>
 
