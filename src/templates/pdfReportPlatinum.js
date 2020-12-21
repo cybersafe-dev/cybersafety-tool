@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins",
     fontWeight: 700,
     color: "#181818",
-    marginBottom: 10,
+    marginBottom: 20,
     alignSelf: "center",
   },
   h2: {
@@ -164,6 +164,12 @@ const styles = StyleSheet.create({
       color: "#181818",
       marginBottom: 10,
     },
+    breakdown: {
+      fontSize: 8,
+      fontFamily: "Poppins",
+      textAlign: "justify",
+      color: "#181818",
+    },
   },
   hyperlink: {
     fontSize: 12,
@@ -188,6 +194,11 @@ const styles = StyleSheet.create({
       width: 400,
       alignSelf: "center",
       marginBottom: 40,
+    },
+    certificate: {
+      width: 400,
+      alignSelf: "center",
+      marginVertical: 20,
     },
   },
   awardImgSml: {
@@ -357,7 +368,7 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
             <Text style={styles.h2.centered}>school.</Text>
           </View>
           <View style={styles.div.centered}>
-            <Text style={styles.h2}>Awards</Text>
+            <Text style={styles.h2}>AWARDS</Text>
             <View style={styles.table}>
               <View style={styles.table.row}>
                 <View style={styles.table.leftCell}>
@@ -414,17 +425,13 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
         <View style={styles.body.centerAlign}>
           <View style={styles.div.centered}>
             <Text style={styles.para.slimWidth}>
-              You have proved your commitment to online safety by completing the
-              <Text style={styles.para.bold}>
-                CyberSafe Tool for Schools
-              </Text>{" "}
+              You have proved your commitment to online safety by completing the{" "}
+              <Text style={styles.para.bold}>CyberSafe Tool for Schools</Text>{" "}
               online assessment. Measured against standards of best practice,
-              the results of your survey show that your school is 
-              
+              the results of your survey show that your school is
             </Text>
-
             <Image
-              style={styles.awardImg}
+              style={styles.awardImg.certificate}
               src={selectMarkLevel(report.prospectiveMark)}
               alt="Your Mark Level Badge"
             />
@@ -451,8 +458,64 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
           />
         </View>
         <View style={styles.body.topAlign}>
-        <Text style={styles.h2}>SURVEY BREAKDOWN</Text>
-          
+          <Text style={styles.h2}>SURVEY BREAKDOWN</Text>
+          <Text style={styles.para.bold}>School Leadership</Text>
+          <Text style={styles.para.breakdown}>
+            Digital Knowledge: {report.leaders.digitalknowledge}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Privacy: {report.leaders.privacy}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Online Life: {report.leaders.onlinelife}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Communication: {report.leaders.communication}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Critical Thinking: {report.leaders.criticalthinking}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Responsible Use: {report.leaders.responsibleuse}
+          </Text>
+          <Text style={styles.para.bold}>Teachers</Text>
+          <Text style={styles.para.breakdown}>
+            Digital Knowledge: {report.teachers.digitalknowledge}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Privacy: {report.teachers.privacy}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Online Life: {report.teachers.onlinelife}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Communication: {report.teachers.communication}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Critical Thinking: {report.teachers.criticalthinking}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Responsible Use: {report.teachers.responsibleuse}
+          </Text>
+          <Text style={styles.para.bold}>Pupils</Text>
+          <Text style={styles.para.breakdown}>
+            Digital Knowledge: {report.pupils.digitalknowledge}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Privacy: {report.pupils.privacy}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Online Life: {report.pupils.onlinelife}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Communication: {report.pupils.communication}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Critical Thinking: {report.pupils.criticalthinking}
+          </Text>
+          <Text style={styles.para.breakdown}>
+            Responsible Use: {report.pupils.responsibleuse}
+          </Text>
         </View>
       </Page>
 
@@ -474,7 +537,8 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
           <View style={styles.div.centered}>
             <Text style={styles.h2}>NEXT STEPS</Text>
             <Text style={styles.para}>
-            Now that you've completed the tool and received your report, we will be sending you your{" "}
+              Now that you've completed the tool and received your report, we
+              will be sending you your{" "}
               <Text style={styles.para.bold}>CyberSafe Tool for Schools</Text>{" "}
               {report.prospectiveMark} award badge for your school.
             </Text>
@@ -485,7 +549,9 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
               breakdown of your school’s results by topic area.{" "}
             </Text>
             <Text style={styles.para}>
-            Thank you for joining the CyberSafe Tool for Schools initiative!
+              Thank you for joining the{" "}
+              <Text style={styles.para.bold}>CyberSafe Tool for Schools</Text>{" "}
+              initiative!
             </Text>
           </View>
         </View>
@@ -506,8 +572,8 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
           />
         </View>
         <View style={styles.body.topAlign}>
-        <Text style={styles.h2}>RECOMMENDATIONS</Text>
-          
+          <Text style={styles.h2}>RECOMMENDATIONS</Text>
+          <Text style={styles.para}>TBC</Text>
         </View>
       </Page>
 
@@ -536,7 +602,9 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
               93 Upper George Street, Dun Laoghaire,
             </Text>
             <Text style={styles.para.address}>Dublin, Ireland</Text>
-            <Link style={styles.hyperlink}>cybersafeireland.ie</Link>
+            <Link style={styles.hyperlink} src={"https://cybersafeireland.ie"}>
+              cybersafeireland.ie
+            </Link>
             <Text style={styles.hyperlink}>info@cybersafeireland.ie</Text>
           </View>
           <Image
