@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
       color: "#181818",
     },
     slimWidth: {
-      width: 400,
+      width: 420,
       fontSize: 12,
       fontFamily: "Poppins",
       textAlign: "justify",
