@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins",
     fontWeight: 700,
     color: "#181818",
-    marginBottom: 10,
+    marginBottom: 20,
     alignSelf: "center",
   },
   h2: {
@@ -157,12 +157,18 @@ const styles = StyleSheet.create({
       color: "#181818",
     },
     slimWidth: {
-      width: 400,
+      width: 420,
       fontSize: 12,
       fontFamily: "Poppins",
       textAlign: "justify",
       color: "#181818",
       marginBottom: 10,
+    },
+    breakdown: {
+      fontSize: 8,
+      fontFamily: "Poppins",
+      textAlign: "justify",
+      color: "#181818",
     },
   },
   hyperlink: {
@@ -188,6 +194,11 @@ const styles = StyleSheet.create({
       width: 400,
       alignSelf: "center",
       marginBottom: 40,
+    },
+    certificate: {
+      width: 400,
+      alignSelf: "center",
+      marginVertical: 20,
     },
   },
   awardImgSml: {
@@ -238,11 +249,24 @@ const styles = StyleSheet.create({
       fontWeight: 700,
       color: "#181818",
     },
+    columnTitleSml: {
+      fontSize: 8,
+      fontFamily: "Poppins",
+      fontWeight: 700,
+      color: "#181818",
+    },
     text: {
       fontSize: 10,
       fontFamily: "Poppins",
       color: "#181818",
       marginBottom: 5,
+      textAlign: "justify",
+    },
+    textSml: {
+      fontSize: 7,
+      fontFamily: "Poppins",
+      color: "#181818",
+      marginBottom: 2,
       textAlign: "justify",
     },
     boldText: {
@@ -357,7 +381,7 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
             <Text style={styles.h2.centered}>school.</Text>
           </View>
           <View style={styles.div.centered}>
-            <Text style={styles.h2}>Awards</Text>
+            <Text style={styles.h2}>AWARDS</Text>
             <View style={styles.table}>
               <View style={styles.table.row}>
                 <View style={styles.table.leftCell}>
@@ -492,7 +516,7 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafe Tool for Schools"
           />
           <View style={styles.div.centered}>
-            <Text style={styles.h2.centered}>CyberSafeIreland CLG</Text>
+            <Text style={styles.h2}>CyberSafeIreland CLG</Text>
             <Text style={styles.para.address}>Company number: 568651</Text>
             <Text style={styles.para.address}>
               Registered charity number: 20104108

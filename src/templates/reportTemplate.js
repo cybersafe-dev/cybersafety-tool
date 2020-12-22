@@ -83,8 +83,6 @@ export const createReport = (allScores, schoolName) => {
 
   const { leaders, teachers, pupils } = combinedScoresInArray
 
-
-
   // Average all summarised scores into a single overall score in text form
   const prospectiveMark = () => {
     const finalScores = []
