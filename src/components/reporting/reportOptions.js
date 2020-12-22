@@ -2,7 +2,9 @@ import React from "react"
 import "../../styling/reporting/reportOptions.css"
 import InlineReportTemplate from "./inlineReportTemplate"
 import { PDFDownloadLink } from "@react-pdf/renderer"
-import PdfReportTemplate from "../../templates/pdfReportTemplate"
+import PdfReportSilver from "../../templates/pdfReportSilver"
+import PdfReportGold from "../../templates/pdfReportGold"
+import PdfReportPlatinum from "../../templates/pdfReportPlatinum"
 
 const ReportOptions = ({
   report,
@@ -10,6 +12,7 @@ const ReportOptions = ({
   reportSentBool,
   toggleReportSentBool,
   reportSentInitialValue,
+  quota
 }) => {
   const [visibleReport, toggleReport] = React.useState(false)
 
@@ -21,6 +24,52 @@ const ReportOptions = ({
             <p>
               Report: <span className="tick">✓</span>
             </p>
+            <PDFDownloadLink
+              className="pdf-dl-btn-silver"
+              document={
+                <PdfReportSilver
+                  report={report}
+                  reportSubmitted={reportSubmitted}
+                  quota={quota}
+                />
+              }
+              fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Silver.pdf`}
+            >
+              {({ blob, url, loading, error }) => 
+                loading ? "Loading document..." : "Silver Report"
+              }
+            </PDFDownloadLink>
+            <PDFDownloadLink
+              className="pdf-dl-btn-gold"
+              document={
+                <PdfReportGold
+                  report={report}
+                  reportSubmitted={reportSubmitted}
+                  quota={quota}
+                />
+              }
+              fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Gold.pdf`}
+            >
+              {({ blob, url, loading, error }) => 
+                loading ? "Loading document..." : "Gold Report"
+              }
+            </PDFDownloadLink>
+            <PDFDownloadLink
+              className="pdf-dl-btn-platinum"
+              document={
+                <PdfReportPlatinum
+                  report={report}
+                  reportSubmitted={reportSubmitted}
+                  quota={quota}
+                />
+              }
+              fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Platinum.pdf`}
+            >
+              {({ blob, url, loading, error }) => 
+                loading ? "Loading document..." : "Platinum Report"
+              }
+            </PDFDownloadLink>
+            
             {visibleReport ? (
               <button
                 className="report-toggle-btn"
@@ -36,20 +85,8 @@ const ReportOptions = ({
                 show report
               </button>
             )}
-            <PDFDownloadLink
-              className="pdf-dl-btn"
-              document={
-                <PdfReportTemplate
-                  report={report}
-                  reportSubmitted={reportSubmitted}
-                />
-              }
-              fileName={`CyberSafe Tool for Schools report for ${report.reportFor}.pdf`}
-            >
-              {({ blob, url, loading, error }) => 
-                loading ? "Loading document..." : "Download PDF"
-              }
-            </PDFDownloadLink>
+            
+            
             <label htmlFor="reportSent" className="report-toggle-btn">
               <input
                 className="checkbox"

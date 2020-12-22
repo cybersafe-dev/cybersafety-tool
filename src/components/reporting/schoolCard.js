@@ -16,6 +16,17 @@ const SchoolCard = ({ school }) => {
     //eslint-disable-next-line
   }, [reportSentBool])
 
+  const reportTimestamp = () => {
+    if (school.reportSubmitted) {
+      const dateInMillis = school.reportSubmitted.seconds * 1000
+      const timestamp =
+        new Date(dateInMillis).toDateString() +
+        " at " +
+        new Date(dateInMillis).toLocaleTimeString()
+      return timestamp
+    } else return
+  }
+
   return (
     <section
       className={
@@ -45,6 +56,11 @@ const SchoolCard = ({ school }) => {
           </button>
         )}
       </div>
+      {school.report ? (
+        <p style={{ margin: "1rem 0 0 0" }}>
+          {school.report.prospectiveMark} School since {reportTimestamp()}
+        </p>
+      ) : null}
       <div style={{ display: details ? "block" : "none" }}>
         <div className="school-info">
           <p>Roll Number: {school.rollNumber ? school.rollNumber : "N/A"}</p>
@@ -60,6 +76,7 @@ const SchoolCard = ({ school }) => {
           reportSentInitialValue={school.reportSent}
           reportSentBool={reportSentBool}
           toggleReportSentBool={toggleReportSentBool}
+          quota={school.quota}
         />
         <div className="bar-line">
           <p>Individual Survey Scores:</p>

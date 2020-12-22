@@ -53,6 +53,63 @@
   text-decoration: none;
 }
 
+.pdf-dl-btn-silver {
+  padding: 0.25rem 0.5rem;
+  background-color: #9C9C9C;
+  color: white;
+  border: 2px solid #9C9C9C;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pdf-dl-btn-silver:hover {
+  background-color: transparent;
+  color: #9C9C9C;
+  border: 2px solid #9C9C9C;
+  text-decoration: none;
+}
+
+.pdf-dl-btn-gold {
+  padding: 0.25rem 0.5rem;
+  background-color: #C09A4F;
+  color: white;
+  border: 2px solid #C09A4F;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pdf-dl-btn-gold:hover {
+  background-color: transparent;
+  color: #C09A4F;
+  border: 2px solid #C09A4F;
+  text-decoration: none;
+}
+
+.pdf-dl-btn-platinum {
+  padding: 0.25rem 0.5rem;
+  background-color: #658181;
+  color: white;
+  border: 2px solid #658181;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pdf-dl-btn-platinum:hover {
+  background-color: transparent;
+  color: #658181;
+  border: 2px solid #658181;
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 900px) {
   .pdf-dl-btn, .report-toggle-btn {
     text-align: center;
