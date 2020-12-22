@@ -18,6 +18,7 @@ import cyberChampionLogo from "../images/CyberChampion-Col.png"
 import BlobSurfer from "../images/blobsurfer.png"
 
 import { awardLevelBlurbs } from "./pdfReportBlurbs"
+import { awardByUserType } from "./reportTemplate"
 
 // Download fonts - curl the typical embed link given by google to get individual ttf links
 Font.register({
@@ -249,11 +250,24 @@ const styles = StyleSheet.create({
       fontWeight: 700,
       color: "#181818",
     },
+    columnTitleSml: {
+      fontSize: 8,
+      fontFamily: "Poppins",
+      fontWeight: 700,
+      color: "#181818",
+    },
     text: {
       fontSize: 10,
       fontFamily: "Poppins",
       color: "#181818",
       marginBottom: 5,
+      textAlign: "justify",
+    },
+    textSml: {
+      fontSize: 7,
+      fontFamily: "Poppins",
+      color: "#181818",
+      marginBottom: 2,
       textAlign: "justify",
     },
     boldText: {
@@ -263,19 +277,6 @@ const styles = StyleSheet.create({
       color: "#181818",
       marginBottom: 5,
       hyphens: "none",
-    },
-    columnTitleSml: {
-      fontSize: 8,
-      fontFamily: "Poppins",
-      fontWeight: 700,
-      color: "#181818",
-    },
-    textSml: {
-      fontSize: 8,
-      fontFamily: "Poppins",
-      color: "#181818",
-      marginBottom: 2,
-      textAlign: "justify",
     },
   },
   breakdownGrid: {
@@ -303,6 +304,17 @@ const styles = StyleSheet.create({
     },
     bold: {
       fontSize: 9,
+      fontWeight: 700,
+      fontFamily: "Poppins",
+      color: "#181818",
+    },
+    highlight: {
+      fontSize: 10,
+      fontFamily: "Poppins",
+      color: "#181818",
+    },
+    highlightB: {
+      fontSize: 10,
       fontWeight: 700,
       fontFamily: "Poppins",
       color: "#181818",
@@ -502,6 +514,10 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
         </View>
         <View style={styles.body.topAlign}>
           <Text style={styles.h2}>SURVEY BREAKDOWN</Text>
+          <Text style={styles.para}>
+            The overall mark for your school is:{" "}
+            <Text style={styles.para.bold}>{report.prospectiveMark}</Text>
+          </Text>
           <View style={styles.breakdownGrid}>
             <View style={styles.breakdownGrid.row}>
               <View style={styles.breakdownGrid.cell}>
@@ -519,98 +535,134 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
             <View style={styles.breakdownGrid.row}>
               <View style={styles.breakdownGrid.cell}>
                 <Text style={styles.breakdownGrid.text}>
+                  Digital Knowledge:{" "}
                   <Text style={styles.breakdownGrid.bold}>
-                    Digital Knowledge:
-                  </Text>{" "}
-                  {report.leaders.digitalknowledge}
+                    {report.leaders.digitalknowledge}
+                  </Text>
                 </Text>
                 <Text style={styles.breakdownGrid.text}>
-                  <Text style={styles.breakdownGrid.bold}>Privacy:</Text>{" "}
-                  {report.leaders.privacy}
-                </Text>
-                <Text style={styles.breakdownGrid.text}>
-                  <Text style={styles.breakdownGrid.bold}>Online Life:</Text>{" "}
-                  {report.leaders.onlinelife}
-                </Text>
-                <Text style={styles.breakdownGrid.text}>
-                  <Text style={styles.breakdownGrid.bold}>Communication:</Text>{" "}
-                  {report.leaders.communication}
-                </Text>
-                <Text style={styles.breakdownGrid.text}>
+                  Privacy:{" "}
                   <Text style={styles.breakdownGrid.bold}>
-                    Critical Thinking:
-                  </Text>{" "}
-                  {report.leaders.criticalthinking}
+                    {report.leaders.privacy}
+                  </Text>
                 </Text>
                 <Text style={styles.breakdownGrid.text}>
+                  Online Life:{" "}
                   <Text style={styles.breakdownGrid.bold}>
-                    Responsible Use:
-                  </Text>{" "}
-                  {report.leaders.responsibleuse}
+                    {report.leaders.onlinelife}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Communication:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.leaders.communication}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Critical Thinking:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.leaders.criticalthinking}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Responsible Use:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.leaders.responsibleuse}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.highlight}>
+                  Overall:{" "}
+                  <Text style={styles.breakdownGrid.highlightB}>
+                    {awardByUserType(report.leaders)}
+                  </Text>
                 </Text>
               </View>
               <View style={styles.breakdownGrid.cell}>
                 <Text style={styles.breakdownGrid.text}>
+                  Digital Knowledge:{" "}
                   <Text style={styles.breakdownGrid.bold}>
-                    Digital Knowledge:
-                  </Text>{" "}
-                  {report.teachers.digitalknowledge}
+                    {report.teachers.digitalknowledge}
+                  </Text>
                 </Text>
                 <Text style={styles.breakdownGrid.text}>
-                  <Text style={styles.breakdownGrid.bold}>Privacy:</Text>{" "}
-                  {report.teachers.privacy}
-                </Text>
-                <Text style={styles.breakdownGrid.text}>
-                  <Text style={styles.breakdownGrid.bold}>Online Life:</Text>{" "}
-                  {report.teachers.onlinelife}
-                </Text>
-                <Text style={styles.breakdownGrid.text}>
-                  <Text style={styles.breakdownGrid.bold}>Communication:</Text>{" "}
-                  {report.teachers.communication}
-                </Text>
-                <Text style={styles.breakdownGrid.text}>
+                  Privacy:{" "}
                   <Text style={styles.breakdownGrid.bold}>
-                    Critical Thinking:
-                  </Text>{" "}
-                  {report.teachers.criticalthinking}
+                    {report.teachers.privacy}
+                  </Text>
                 </Text>
                 <Text style={styles.breakdownGrid.text}>
+                  Online Life:{" "}
                   <Text style={styles.breakdownGrid.bold}>
-                    Responsible Use:
-                  </Text>{" "}
-                  {report.teachers.responsibleuse}
+                    {report.teachers.onlinelife}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Communication:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.teachers.communication}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Critical Thinking:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.teachers.criticalthinking}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Responsible Use:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.teachers.responsibleuse}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.highlight}>
+                  Overall:{" "}
+                  <Text style={styles.breakdownGrid.highlightB}>
+                    {awardByUserType(report.teachers)}
+                  </Text>
                 </Text>
               </View>
               <View style={styles.breakdownGrid.cell}>
                 <Text style={styles.breakdownGrid.text}>
+                  Digital Knowledge:{" "}
                   <Text style={styles.breakdownGrid.bold}>
-                    Digital Knowledge:
-                  </Text>{" "}
-                  {report.pupils.digitalknowledge}
+                    {report.pupils.digitalknowledge}
+                  </Text>
                 </Text>
                 <Text style={styles.breakdownGrid.text}>
-                  <Text style={styles.breakdownGrid.bold}>Privacy:</Text>{" "}
-                  {report.pupils.privacy}
-                </Text>
-                <Text style={styles.breakdownGrid.text}>
-                  <Text style={styles.breakdownGrid.bold}>Online Life:</Text>{" "}
-                  {report.pupils.onlinelife}
-                </Text>
-                <Text style={styles.breakdownGrid.text}>
-                  <Text style={styles.breakdownGrid.bold}>Communication:</Text>{" "}
-                  {report.pupils.communication}
-                </Text>
-                <Text style={styles.breakdownGrid.text}>
+                  Privacy:{" "}
                   <Text style={styles.breakdownGrid.bold}>
-                    Critical Thinking:
-                  </Text>{" "}
-                  {report.pupils.criticalthinking}
+                    {report.pupils.privacy}
+                  </Text>
                 </Text>
                 <Text style={styles.breakdownGrid.text}>
+                  Online Life:{" "}
                   <Text style={styles.breakdownGrid.bold}>
-                    Responsible Use:
-                  </Text>{" "}
-                  {report.pupils.responsibleuse}
+                    {report.pupils.onlinelife}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Communication:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.pupils.communication}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Critical Thinking:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.pupils.criticalthinking}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Responsible Use:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.pupils.responsibleuse}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.highlight}>
+                  Overall:{" "}
+                  <Text style={styles.breakdownGrid.highlightB}>
+                    {awardByUserType(report.pupils)}
+                  </Text>
                 </Text>
               </View>
             </View>
@@ -734,7 +786,7 @@ const PdfReportTemplateSilver = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafe Tool for Schools"
           />
           <View style={styles.div.centered}>
-            <Text style={styles.h2.centered}>CyberSafeIreland CLG</Text>
+            <Text style={styles.h2}>CyberSafeIreland CLG</Text>
             <Text style={styles.para.address}>Company number: 568651</Text>
             <Text style={styles.para.address}>
               Registered charity number: 20104108

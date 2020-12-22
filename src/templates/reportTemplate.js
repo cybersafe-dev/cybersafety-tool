@@ -23,6 +23,15 @@ export const applyStatus = number => {
   return status
 }
 
+// Get the mean avg of an array of numbers
+const getMean = array => {
+  return Math.round(
+    array.reduce((sum, value) => {
+      return sum + value
+    }, 0) / array.length
+  )
+}
+
 // Combine all individual score objects into a single object for each user type.
 export const createReport = (allScores, schoolName) => {
   const userTypeArray = ["leaders", "teachers", "pupils"]
@@ -74,15 +83,6 @@ export const createReport = (allScores, schoolName) => {
 
   const { leaders, teachers, pupils } = combinedScoresInArray
 
-  // Get the mean avg of an array of numbers
-  const getMean = array => {
-    return Math.round(
-      array.reduce((sum, value) => {
-        return sum + value
-      }, 0) / array.length
-    )
-  }
-
   // Average all summarised scores into a single overall score in text form
   const prospectiveMark = () => {
     const finalScores = []
@@ -129,4 +129,22 @@ export const createReport = (allScores, schoolName) => {
   }
 
   return reportTemplate
+}
+
+export const awardByUserType = (userType) => {
+  const numberedScoresList = []
+  const textScoresList = Object.values(userType)
+  textScoresList.forEach((score) => {
+    switch(score) {
+      case "CyberChampion":
+        numberedScoresList.push(1)
+        break
+      case "CyberSmart":
+        numberedScoresList.push(3)
+        break
+      default:
+        numberedScoresList.push(5)
+    }
+  })
+  return applyStatus(getMean(numberedScoresList))
 }
