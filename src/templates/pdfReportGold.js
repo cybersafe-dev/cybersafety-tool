@@ -666,27 +666,18 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
           <View style={styles.div.centered}>
             <Text style={styles.h2}>NEXT STEPS</Text>
             <Text style={styles.para}>
-              Now that you've completed the tool and received your free report,
-              you can upgrade by purchasing the{" "}
-              <Text style={styles.para.bold}>CyberSafe Tool for Schools</Text>{" "}
+                Now that you've completed the tool and received your report,
+                we will be sending you your
+              <Text style={styles.para.bold}> CyberSafe Tool for Schools</Text>{" "}
               {report.prospectiveMark} award badge for your school.
             </Text>
             <Text style={styles.para}>
-              This mark is valid for 12 months and you can display it on your
-              website, social media and all school communications to demonstrate
-              your school’s commitment to online safety. You will also receive a
-              breakdown of your school’s results by topic area.{" "}
+            This mark is valid for 12 months and you can display it on your website,
+            social media and all school communications to demonstrate your school’s commitment to online safety.
+            You will also receive a breakdown of your school’s results by topic area.
             </Text>
             <Text style={styles.para}>
-              For more information please visit{" "}
-              <Link
-                style={styles.hyperlink}
-                src={"https://cybersafetoolforschools.ie"}
-              >
-                cybersafetoolforschools.ie
-              </Link>{" "}
-              or contact us directly on{" "}
-              <Text style={styles.hyperlink}>info@cybersafeireland.ie</Text>.
+              Thank you for joining the CyberSafe Tool for Schools initiative!
             </Text>
           </View>
         </View>
@@ -708,7 +699,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafe Tool for Schools"
           />
           <View style={styles.div.centered}>
-            <Text style={styles.h2.centered}>CyberSafeIreland CLG</Text>
+            <Text style={styles.h2}>CyberSafeIreland CLG</Text>
             <Text style={styles.para.address}>Company number: 568651</Text>
             <Text style={styles.para.address}>
               Registered charity number: 20104108
