@@ -708,7 +708,9 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
               93 Upper George Street, Dun Laoghaire,
             </Text>
             <Text style={styles.para.address}>Dublin, Ireland</Text>
-            <Link style={styles.hyperlink}>cybersafeireland.ie</Link>
+            <Link style={styles.hyperlink} src={"https://cybersafeireland.ie"}>
+              cybersafeireland.ie
+            </Link>
             <Text style={styles.hyperlink}>info@cybersafeireland.ie</Text>
           </View>
           <Image
