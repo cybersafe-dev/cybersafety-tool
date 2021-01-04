@@ -125,26 +125,3 @@ export const updateReportSentValue = (uid, bool) => {
   }
 }
 
-// KEEP THIS IN CASE WE NEED IT AGAIN LATER!!!
-// export const updateScores = async (schoolId, userType, myScores) => {
-//   if (!schoolId || !userType || !myScores) return "error"
-//   firebase
-//     .firestore()
-//     .collection("users")
-//     .where("schoolId", "==", schoolId)
-//     .limit(1)
-//     .get()
-//     .then(async querySnapshot => {
-//       const thisSchool = querySnapshot.docs[0]
-//       delete myScores.test
-//       const scoresObj = thisSchool.data().scores
-//       scoresObj[userType].push(myScores)
-//       await thisSchool.ref
-//         .update({ scores: scoresObj })
-//     })
-//     .catch(error => {
-//       console.error("Error fetching this school's data", error)
-//       return "error"
-//     })
-//     return "updated"
-// }

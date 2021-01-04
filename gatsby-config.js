@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `CyberSafe Tool for Schools`,
     description: `Cybersafety survey tool for primary schools in Ireland`,
-    author: `@gatsbyjs`,
+    author: `@CyberSafeIE`,
   },
   plugins: [
     {
@@ -33,8 +33,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `CyberSafe Tool for Schools`,
+        short_name: `Tool for Schools`,
         start_url: `/`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
