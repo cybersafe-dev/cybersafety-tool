@@ -36,7 +36,9 @@
     "prettier": "2.0.5"
   },
   "keywords": [
-    "CyberSafeIreland", "CyberSafe", "Tool for Schools"
+    "CyberSafeIreland",
+    "CyberSafe",
+    "Tool for Schools"
   ],
   "license": "",
   "scripts": {
