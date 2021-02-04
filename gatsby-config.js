@@ -4,6 +4,10 @@ module.exports = {
     description: `Cybersafety survey tool for primary schools in Ireland`,
     author: `@CyberSafeIE`,
   },
+  flags: {
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    PRESERVE_WEBPACK_CACHE: true
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
