@@ -15,9 +15,9 @@ minisitecontent:
     the survey: **CyberAware**, **CyberSmart** and **CyberChampion**. You can
     display this award mark on your school website, social media channels and
     other school communication for 12 months."
-  pricing: "CyberSafe Tool for Schools is **free** for all schools. If you want to
-    get the award mark for your school we have 2 options:"
-  aboutus: "**CyberSafeIreland** is a charity working to empower children, parents
+  pricing: "**CyberSafe Tool for Schools** is **free** for all schools. If you
+    want to get the award mark for your school we have 2 options:"
+  aboutus: "**CyberSafeKids** is a charity working to empower children, parents
     and teachers to navigate the online world safely and responsibly. We call
     for mandatory online safety and digital literacy education in schools across
     Ireland and want to establish our **CyberSafe Tool for Schools** as a
