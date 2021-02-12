@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from "../../images/cybersafe-logo.png"
+import Logo from "../../images/cybersafekids-logo.png"
 import "../../styling/app/mininavbar.css"
 import { Link } from "gatsby"
 import { userStore } from "../../providers/userProvider"

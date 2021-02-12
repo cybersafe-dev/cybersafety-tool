@@ -143,7 +143,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
     <Document>
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image style={styles.logo} src={logo} alt="CyberSafeKids Logo" />
         </View>
         <View style={styles.body}>
           <Text style={styles.h1}>CyberSafe Tool for Schools Report</Text>
@@ -184,7 +184,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
       </Page>
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image style={styles.logo} src={logo} alt="CyberSafeKids Logo" />
         </View>
         <View style={styles.body}>
           <Text style={styles.h1}>CyberSafe Tool for Schools</Text>
@@ -192,7 +192,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
         <View style={styles.body}>
           <Text style={styles.para}>
             Now that you've completed the tool and received your report, you can
-            purchase an award badge for your school from CyberSafeIreland to
+            purchase an award badge for your school from CyberSafeKids to
             display your school’s commitment to online safety.{" "}
           </Text>
           <Text style={styles.para}>
@@ -248,7 +248,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
       </Page>
       <Page size="A4" style={styles.awardPage} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image style={styles.logo} src={logo} alt="CyberSafeKids Logo" />
         </View>
         <View style={styles.body}>
           <Image style={styles.awardImg} src={logo} alt="Award Badge" />
@@ -262,7 +262,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
       </Page>
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image style={styles.logo} src={logo} alt="CyberSafeKids Logo" />
         </View>
         <View style={styles.body}>
           <Text style={styles.h1}>Award Breakdown</Text>
@@ -327,7 +327,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
       </Page>
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image style={styles.logo} src={logo} alt="CyberSafeKids Logo" />
         </View>
         <View style={styles.body}>
           <Text style={styles.h1}>Recommendations</Text>
@@ -383,10 +383,10 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
       </Page>
       <Page size="A4" style={styles.contactPage} wrap>
         <View style={styles.header}>
-          <Image style={styles.logo} src={logo} alt="CyberSafeIreland Logo" />
+          <Image style={styles.logo} src={logo} alt="CyberSafeKids Logo" />
         </View>
         <View style={styles.body}>
-          <Text style={styles.h1}>CyberSafeIreland CLG</Text>
+          <Text style={styles.h1}>CyberSafeKids CLG</Text>
           <View style={styles.centered}>
             <Text style={styles.address}>Company number: 568651</Text>
             <Text style={styles.address}>
@@ -396,7 +396,7 @@ const PdfReportTemplate = ({ report, reportSubmitted }) => {
               93 Upper George Street, Dun Laoghaire,
             </Text>
             <Text style={styles.para}>Dublin, Ireland</Text>
-            <Text style={styles.para}>info@cybersafeireland.org</Text>
+            <Text style={styles.para}>info@cybersafekids.ie</Text>
           </View>
         </View>
       </Page>

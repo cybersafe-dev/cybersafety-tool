@@ -10,7 +10,7 @@ import {
   Link,
 } from "@react-pdf/renderer"
 
-import csiLogo from "../images/cybersafe-logo.png"
+import csiLogo from "../images/cybersafekids-logo.png"
 import toolLogo from "../images/toolforschools-logo.png"
 import cyberAwareLogo from "../images/CyberAware-Col.png"
 import cyberSmartLogo from "../images/CyberSmart-Col.png"
@@ -341,7 +341,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
           <Image
             style={styles.logo.csi}
             src={csiLogo}
-            alt="CyberSafeIreland Logo"
+            alt="CyberSafeKids Logo"
           />
         </View>
         <View style={styles.body.centerAlign}>
@@ -397,7 +397,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
           <Image
             style={styles.logo.csi}
             src={csiLogo}
-            alt="CyberSafeIreland Logo"
+            alt="CyberSafeKids Logo"
           />
         </View>
         <View style={styles.body.centerAlign}>
@@ -468,7 +468,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
           <Image
             style={styles.logo.csi}
             src={csiLogo}
-            alt="CyberSafeIreland Logo"
+            alt="CyberSafeKids Logo"
           />
         </View>
         <View style={styles.body.centerAlign}>
@@ -485,7 +485,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
             />
             <Text style={styles.para}>Date: {reportTimestamp}</Text>
             <Text style={styles.para}>
-              Signed: <Text style={styles.para.bold}>CyberSafeIreland</Text>
+              Signed: <Text style={styles.para.bold}>CyberSafeKids</Text>
             </Text>
           </View>
         </View>
@@ -502,7 +502,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
           <Image
             style={styles.logo.csi}
             src={csiLogo}
-            alt="CyberSafeIreland Logo"
+            alt="CyberSafeKids Logo"
           />
         </View>
         <View style={styles.body.topAlign}>
@@ -659,7 +659,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
           <Image
             style={styles.logo.csi}
             src={csiLogo}
-            alt="CyberSafeIreland Logo"
+            alt="CyberSafeKids Logo"
           />
         </View>
         <View style={styles.body.topAlign}>
@@ -689,7 +689,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
           <Image
             style={styles.logo.csi}
             src={csiLogo}
-            alt="CyberSafeIreland Logo"
+            alt="CyberSafeKids Logo"
           />
         </View>
         <View style={styles.body.centerAlign}>
@@ -699,7 +699,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafe Tool for Schools"
           />
           <View style={styles.div.centered}>
-            <Text style={styles.h2}>CyberSafeIreland CLG</Text>
+            <Text style={styles.h2}>CyberSafeKids CLG</Text>
             <Text style={styles.para.address}>Company number: 568651</Text>
             <Text style={styles.para.address}>
               Registered charity number: 20104108
@@ -708,10 +708,10 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
               93 Upper George Street, Dun Laoghaire,
             </Text>
             <Text style={styles.para.address}>Dublin, Ireland</Text>
-            <Link style={styles.hyperlink} src={"https://cybersafeireland.ie"}>
-              cybersafeireland.ie
+            <Link style={styles.hyperlink} src={"https://www.cybersafekids.ie"}>
+            www.cybersafekids.ie
             </Link>
-            <Text style={styles.hyperlink}>info@cybersafeireland.ie</Text>
+            <Text style={styles.hyperlink}>info@cybersafekids.ie</Text>
           </View>
           <Image
             style={styles.blobSurfer}

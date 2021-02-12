@@ -15,6 +15,7 @@ import Fig3 from "../images/csi.svg"
 import Marks from "../images/minisite-marks-bw.png"
 // colourful marks exist (remove -bw)
 
+import Blogo from "../images/cybersafekids-blklogo.png"
 import Surf from "../images/surfer.svg"
 import Fb from "../images/fb.svg"
 import Twit from "../images/twit.svg"
@@ -176,30 +177,30 @@ const [privacyModalVisible, toggle] = React.useState(true);
         <h2 className="section-title">Contact</h2>
         <div className="contact-section">
           <div className="contact-details">
-            <h3>CyberSafeIreland CLG</h3>
+            <img src={Blogo} alt="black-logo" className="blk-logo" />
             <span>Company number: 568651</span>
             <span>Registered charity number: 20104108</span>
             <span>93 Upper George Street, Dun Laoghaire,</span>
             <span>Co. Dublin, Ireland</span>
             <a
               className="hyperlink"
-              href="https://cybersafeireland.org/"
+              href="mailto:info@cybersafekids.ie"
               target="_blank"
               rel="noreferrer"
             >
-            cybersafeireland.ie
+            info@cybersafekids.ie
             </a>
             <a
               className="csi-link"
-              href="https://cybersafeireland.org/contact/"
+              href="https://www.cybersafekids.ie/"
               target="_blank"
               rel="noreferrer"
             >
-              Contact Us
+              Main Site
             </a>
             <a
               className="csi-link"
-              href="https://cybersafeireland.org/privacy-policy-and-data-protection/"
+              href="https://www.cybersafekids.ie/privacy-policy/"
               target="_blank"
               rel="noreferrer"
             >
@@ -228,7 +229,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
                 <img src={Link} alt="" className="social" />
               </a>
               <a
-                href="https://www.instagram.com/cybersafeire/"
+                href="https://www.instagram.com/cybersafekidsie/"
                 target="_blank"
                 rel="noreferrer"
               >

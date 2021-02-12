@@ -18,9 +18,9 @@ const ThankYou = () => (
       <img src={Rocket} alt="rocket icon" className="design" />
       <p className="thanku-message">
         Thank you for completing the survey. Your responses have now been
-        sent to CyberSafeIreland, you can close this window now.
+        sent to CyberSafeKids, you can close this window now.
       </p>
-      <a href="https://cybersafeireland.org/"><button className="ty-btn">CyberSafeIreland</button></a>
+      <a href="https://www.cybersafekids.ie/"><button className="ty-btn">CyberSafeKids</button></a>
     </section>
   </Layout>
 )

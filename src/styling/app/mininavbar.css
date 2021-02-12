@@ -35,9 +35,9 @@
 }
 
 .nav-logo {
-  width: 10vw;
+  width: 13vw;
   position: relative;
-  left: 1rem;
+  left: 0.5rem;
   top: 0;
 }
 
@@ -118,7 +118,7 @@ text-decoration: underline;
   }
 
   .nav-logo {
-    width: 20vw;
+    width: 30vw;
   }
 
   .nav-links {

@@ -11,7 +11,7 @@ const PrivacyModal = ({ privacyModalVisible, toggle }) => {
         </div>
         <div className="privacy-content">
           <p>  In accordance with GDPR, we would like to obtain your consent for marketing efforts. We’ll only ask once. </p>
-          <p>Please read our privacy policy <a className="privacy-link" rel="noreferrer" href="https://cybersafeireland.org/privacy-policy-and-data-protection/" target="_blank">here.</a></p>
+          <p>Please read our privacy policy <a className="privacy-link" rel="noreferrer" href="https://www.cybersafekids.ie/privacy-policy/" target="_blank">here.</a></p>
         </div>
         <button onClick={() => toggle(!privacyModalVisible)} className="privacy-btn">accept</button>
       </div>
