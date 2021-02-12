@@ -52,7 +52,7 @@ const Profile = () => {
           <p>
             Keep an eye on this page and refresh it occasionally. After the
             correct number of surveys have been completed a button will appear
-            to submit the responses to CybersafeIreland. You will then receive a
+            to submit the responses to CyberSafeKids. You will then receive a
             report back in due course.
           </p>
           <button className="logout-btn" onClick={signOutApp}>

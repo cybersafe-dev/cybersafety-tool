@@ -160,6 +160,11 @@ font-weight: 700;
   padding-bottom: 1rem;
 }
 
+.blk-logo {
+  width: 15vw;
+  margin-bottom: 1rem;
+}
+
 .csi-link {
   background-color: #53c5cd;
   border-radius: 30px;
