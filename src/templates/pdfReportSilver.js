@@ -12,9 +12,9 @@ import {
 
 import csiLogo from "../images/cybersafekids-logo.png"
 import toolLogo from "../images/toolforschools-logo.png"
-import cyberAwareLogo from "../images/2020CyberAware-Col.png"
-import cyberSmartLogo from "../images/2020CyberSmart-Col.png"
-import cyberChampionLogo from "../images/2020CyberChampion-Col.png"
+import cyberAwareLogo from "../images/CyberAware-Col.png"
+import cyberSmartLogo from "../images/CyberSmart-Col.png"
+import cyberChampionLogo from "../images/CyberChampion-Col.png"
 import BlobSurfer from "../images/blobsurfer.png"
 
 import { awardLevelBlurbs } from "./pdfReportBlurbs"
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
   awardImgSml: {
     width: 200,
     alignSelf: "center",
-    // margin: 40,
+    margin: 20,
   },
   blobSurfer: {
     width: 150,
