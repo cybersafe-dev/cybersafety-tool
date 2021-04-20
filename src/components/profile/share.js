@@ -5,7 +5,7 @@ import "../../styling/app/share.css"
 
 const Share = ({ uid }) => {
   const bodyString =
-    "Please copy and paste the link into a new browser tab if you have any problems clicking on it directly.\n\nAs a school we are taking part in a survey. Please use this link to find the survey and follow the onscreen instructions to complete it. Remember to click 'Submit'.\n\n"
+    "*Please copy and paste the link into a new browser tab if you have any problems clicking on it directly.\n\nAs a school we are taking part in a survey. Please use this link to find the survey and follow the onscreen instructions to complete it. Remember to click 'Submit'.\n\n"
   return (
     <>
       <EmailShareButton
