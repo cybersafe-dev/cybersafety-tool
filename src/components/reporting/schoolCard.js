@@ -1,9 +1,9 @@
 import React from "react"
 import ScoreCard from "./scoreCard"
 import ReportOptions from "./reportOptions"
+import SchoolOptions from "./schoolOptions"
 import "../../styling/reporting/schoolCard.css"
-import { updateReportSentValue, postReportToDb } from "../../firebase"
-import { createReport } from "../../templates/reportTemplate"
+import { updateReportSentValue } from "../../firebase"
 
 const SchoolCard = ({ school }) => {
   const [details, toggleDetails] = React.useState(false)
@@ -26,39 +26,6 @@ const SchoolCard = ({ school }) => {
         new Date(dateInMillis).toLocaleTimeString()
       return timestamp
     } else return
-  }
-
-  const manualReportSubmit = async () => {
-    let replaceReport = true
-    let confirmGenerate = window.confirm(
-      "Are you sure you want to generate this report?"
-    )
-    if (school.reportSubmitted && confirmGenerate) {
-      replaceReport = window.confirm(
-        "This will replace the existing report. Continue?"
-      )
-    }
-    if (!replaceReport || !confirmGenerate) return
-    else {
-      const report = await createReport(school.scores, school.schoolName)
-      const dbPostStatus = await postReportToDb(school.uid, report)
-
-      // post something to the relevant SF lead
-      await fetch(`/.netlify/functions/postReport`, {
-        method: "POST",
-        body: JSON.stringify({ rollNumber: school.rollNumber }),
-        headers: { "Content-Type": "application/json" },
-      })
-        // .then(res => res.json())
-        // .then(data => console.log(data))
-        .catch(console.error)
-
-      if (dbPostStatus === "updated") {
-        alert("Report Submitted - You may need to refresh your page to update")
-      } else {
-        alert("There was a problem creating this report. Please try again")
-      }
-    }
   }
 
   return (
@@ -183,9 +150,7 @@ const SchoolCard = ({ school }) => {
             )}
           </div>
         </div>
-        <button className="generate-report-btn" onClick={manualReportSubmit}>
-          Generate report
-        </button>
+        <SchoolOptions school={school} />
       </div>
     </section>
   )

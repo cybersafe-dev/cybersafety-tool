@@ -59,24 +59,6 @@
     color: orange;
 }
 
-.generate-report-btn {
-    padding: 0.25rem 0.5rem;
-    background-color: #001AFF;
-    color: white;
-    border: 2px solid #001AFF;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    margin: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
-  .generate-report-btn:hover {
-    background-color: transparent;
-    color: #001AFF;
-    border: 2px solid #001AFF;
-    text-decoration: none;
-  }
 
 @media only screen and (max-width: 900px) {
 .bar-school-title {

@@ -33,7 +33,7 @@ const ReportOptions = ({
                 Generate PDFs
               </button>
             ) : (
-              <div>
+              <div className="show-hide-bar">
                 <PDFDownloadLink
                   className="pdf-dl-btn-silver"
                   document={
