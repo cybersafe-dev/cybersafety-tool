@@ -88,14 +88,14 @@ const Reporting = () => {
       </h2>
       {filteredSchools
         ? filteredSchools.map(school =>
-            school.schoolName ? (
+           // school.schoolName ? (
               <SchoolCard key={school.schoolName} school={school} />
-            ) : null
+          //  ) : null
           )
         : allSchools.map(school =>
-            school.schoolName ? (
+          //  school.schoolName ? (
               <SchoolCard key={school.schoolName} school={school} />
-            ) : null
+          //  ) : null
           )}
       <button className="logout-btn" onClick={signOutApp}>
         Log out

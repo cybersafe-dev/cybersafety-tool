@@ -100,7 +100,6 @@ export const createReport = (allScores, schoolName) => {
     for (const category in pupils) {
       finalScores.push(getMean(pupils[category]))
     }
-    console.log(finalScores)
     return applyStatus(getMean(finalScores))
   }
 
