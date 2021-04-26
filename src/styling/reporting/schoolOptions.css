@@ -24,6 +24,15 @@
     text-decoration: none;
   }
 
+  .danger-area {
+    border: 2px solid red;
+    color: red;
+  }
+
+  .danger-area legend {
+    margin: 0 20px;
+  }
+
 
   @media only screen and (max-width: 900px) {
     .red-warning-btn {

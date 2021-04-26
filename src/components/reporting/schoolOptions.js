@@ -1,9 +1,9 @@
 import React from "react"
 import "../../styling/reporting/schoolOptions.css"
-import { postReportToDb } from "../../firebase"
+import { postReportToDb, deleteUserAccount } from "../../firebase"
 import { createReport } from "../../templates/reportTemplate"
 
-const SchoolOptions = ({ school }) => {
+const SchoolOptions = ({ school, refreshData }) => {
   const manualReportSubmit = async () => {
     let replaceReport = true
     let confirmGenerate = window.confirm(
@@ -30,22 +30,46 @@ const SchoolOptions = ({ school }) => {
         .catch(console.error)
 
       if (dbPostStatus === "updated") {
-        alert("Report Submitted - You may need to refresh your page to update")
+        alert("Report Submitted.")
+        refreshData()
       } else {
-        alert("There was a problem creating this report. Please try again")
+        alert("There was a problem creating this report. Please try again.")
       }
     }
   }
 
+  const handleDeleteAccount = async () => {
+    let confirmDelete = window.confirm(
+      "Are you sure you want to delete this user? This action cannot be reversed."
+    )
+    if (!confirmDelete) return
+    else {
+      const deleteStatus = await deleteUserAccount(school.uid)
+      if (deleteStatus === "uid error") {
+        alert("Error: No account ID provided")
+      } else if (deleteStatus === "deletion error") {
+        alert(
+          "Sorry, there was a problem deleting this account, please try again."
+        )
+      } else if (deleteStatus === "deleted") {
+        alert("Account successfully deleted.")
+        refreshData()
+      } else return
+    }
+  }
+
   return (
-    <div className="button-bar">
-      <button className="red-warning-btn" onClick={manualReportSubmit}>
-        Generate report
-      </button>
-      <button className="red-warning-btn">
-        Delete School
-      </button>
-    </div>
+    <fieldset className="danger-area">
+      <legend>Danger Area</legend>
+      <div className="button-bar">
+        <button className="red-warning-btn" onClick={manualReportSubmit}>
+          Generate report
+        </button>
+        <button className="red-warning-btn" onClick={handleDeleteAccount}>
+          Delete School
+        </button>
+      </div>
+    </fieldset>
   )
 }
 

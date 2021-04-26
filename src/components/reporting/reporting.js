@@ -12,6 +12,7 @@ const Reporting = () => {
   const [searchTerm, setsearchTerm] = React.useState("")
   const [firstLoad, setFirstLoad] = React.useState(true)
   const [filteredSchools, setFilteredSchools] = React.useState("")
+  const [refreshCalls, refreshData] = React.useReducer(x => x + 1, 0)
   const firebase = useFirebase()
 
   const signOutApp = () => {
@@ -40,7 +41,7 @@ const Reporting = () => {
         .catch(error => console.error(error))
     }
     getAllSchools()
-  }, [firebase])
+  }, [firebase, refreshCalls])
 
   // If searchTerm state item is updated, run filter function
   React.useEffect(() => {
@@ -87,15 +88,27 @@ const Reporting = () => {
         Schools Signed Up: {allSchools.length}
       </h2>
       {filteredSchools
-        ? filteredSchools.map(school =>
-           // school.schoolName ? (
-              <SchoolCard key={school.schoolName} school={school} />
-          //  ) : null
+        ? filteredSchools.map(
+            school => (
+              // school.schoolName ? (
+              <SchoolCard
+                key={school.uid}
+                school={school}
+                refreshData={refreshData}
+              />
+            )
+            //  ) : null
           )
-        : allSchools.map(school =>
-          //  school.schoolName ? (
-              <SchoolCard key={school.schoolName} school={school} />
-          //  ) : null
+        : allSchools.map(
+            school => (
+              //  school.schoolName ? (
+              <SchoolCard
+                key={school.uid}
+                school={school}
+                refreshData={refreshData}
+              />
+            )
+            //  ) : null
           )}
       <button className="logout-btn" onClick={signOutApp}>
         Log out

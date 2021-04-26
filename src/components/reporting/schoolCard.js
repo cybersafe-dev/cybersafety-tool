@@ -5,7 +5,7 @@ import SchoolOptions from "./schoolOptions"
 import "../../styling/reporting/schoolCard.css"
 import { updateReportSentValue } from "../../firebase"
 
-const SchoolCard = ({ school }) => {
+const SchoolCard = ({ school, refreshData }) => {
   const [details, toggleDetails] = React.useState(false)
   const [scores, toggleScores] = React.useState(false)
   const [reportSentBool, toggleReportSentBool] = React.useState(
@@ -150,7 +150,7 @@ const SchoolCard = ({ school }) => {
             )}
           </div>
         </div>
-        <SchoolOptions school={school} />
+        <SchoolOptions school={school} refreshData={refreshData} />
       </div>
     </section>
   )
