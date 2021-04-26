@@ -17,11 +17,8 @@ export const applyStatus = number => {
     case 5:
       status = "CyberAware"
       break
-    case null:
-      status = "no score"
-      break
     default:
-      status = "CyberAware"
+      status = "no score"
   }
   return status
 }
@@ -31,7 +28,7 @@ export const applyStatus = number => {
 const getMean = array => {
   if (!array.length) return null
   else {
-    let filteredArray = array.filter(item => typeof item === "number")
+    let filteredArray = array.filter(item => typeof item === "number" && !Number.isNaN(item))
     return Math.round(
       filteredArray.reduce((sum, value) => {
         return sum + value
@@ -103,6 +100,7 @@ export const createReport = (allScores, schoolName) => {
     for (const category in pupils) {
       finalScores.push(getMean(pupils[category]))
     }
+    console.log(finalScores)
     return applyStatus(getMean(finalScores))
   }
 
@@ -150,8 +148,11 @@ export const awardByUserType = userType => {
       case "CyberSmart":
         numberedScoresList.push(3)
         break
-      default:
+      case "CyberAware":
         numberedScoresList.push(5)
+        break
+      default:
+        numberedScoresList.push(null)
     }
   })
   return applyStatus(getMean(numberedScoresList))

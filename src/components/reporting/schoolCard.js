@@ -29,13 +29,15 @@ const SchoolCard = ({ school }) => {
   }
 
   const manualReportSubmit = async () => {
-    let replaceReport = true;
-    if (school.reportSubmitted) {
+    let replaceReport = true
+    let confirmGenerate = window.confirm(
+      "Are you sure you want to generate this report?"
+    )
+    if (school.reportSubmitted && confirmGenerate) {
       replaceReport = window.confirm(
         "This will replace the existing report. Continue?"
       )
     }
-    let confirmGenerate = window.confirm("Are you sure?")
     if (!replaceReport || !confirmGenerate) return
     else {
       const report = await createReport(school.scores, school.schoolName)
@@ -54,7 +56,7 @@ const SchoolCard = ({ school }) => {
       if (dbPostStatus === "updated") {
         alert("Report Submitted - You may need to refresh your page to update")
       } else {
-        alert("There was a problem creating this report. Please try again")   
+        alert("There was a problem creating this report. Please try again")
       }
     }
   }
@@ -181,7 +183,9 @@ const SchoolCard = ({ school }) => {
             )}
           </div>
         </div>
-        <button onClick={manualReportSubmit}>Generate report</button>
+        <button className="generate-report-btn" onClick={manualReportSubmit}>
+          Generate report
+        </button>
       </div>
     </section>
   )
