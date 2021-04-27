@@ -1,6 +1,10 @@
 import React from "react"
 import "../../styling/reporting/schoolOptions.css"
-import { postReportToDb, deleteUserAccount } from "../../firebase"
+import {
+  postReportToDb,
+  deleteUserAccount,
+  getUserDocument,
+} from "../../firebase"
 import { createReport } from "../../templates/reportTemplate"
 
 const SchoolOptions = ({ school, refreshData }) => {
@@ -16,7 +20,8 @@ const SchoolOptions = ({ school, refreshData }) => {
     }
     if (!replaceReport || !confirmGenerate) return
     else {
-      const report = await createReport(school.scores, school.schoolName)
+      const { scores } = await getUserDocument(school.uid)
+      const report = await createReport(scores, school.schoolName)
       const dbPostStatus = await postReportToDb(school.uid, report)
 
       // post something to the relevant SF lead

@@ -36,7 +36,7 @@ const Reporting = () => {
             const uid = doc.id
             holdingArray.push({ uid: uid, ...data })
           })
-          setAllSchools(holdingArray)
+          setAllSchools(holdingArray.filter(school => !school.isAdmin))
         })
         .catch(error => console.error(error))
     }
