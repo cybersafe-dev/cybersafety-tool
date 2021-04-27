@@ -18,18 +18,23 @@ export const applyStatus = number => {
       status = "CyberAware"
       break
     default:
-      status = "CyberAware"
+      status = "no score"
   }
   return status
 }
 
 // Get the mean avg of an array of numbers
+// also deals with cases where a report is manually requested with incomplete quotas
 const getMean = array => {
-  return Math.round(
-    array.reduce((sum, value) => {
-      return sum + value
-    }, 0) / array.length
-  )
+  if (!array.length) return null
+  else {
+    let filteredArray = array.filter(item => typeof item === "number" && !Number.isNaN(item))
+    return Math.round(
+      filteredArray.reduce((sum, value) => {
+        return sum + value
+      }, 0) / filteredArray.length
+    )
+  }
 }
 
 // Combine all individual score objects into a single object for each user type.
@@ -86,19 +91,17 @@ export const createReport = (allScores, schoolName) => {
   // Average all summarised scores into a single overall score in text form
   const prospectiveMark = () => {
     const finalScores = []
-    for (const scores in combinedScoresInArray.leaders) {
-      finalScores.push(getMean(combinedScoresInArray.leaders[scores]))
+    for (const category in leaders) {
+      finalScores.push(getMean(leaders[category]))
     }
-    for (const scores in combinedScoresInArray.teachers) {
-      finalScores.push(getMean(combinedScoresInArray.teachers[scores]))
+    for (const category in teachers) {
+      finalScores.push(getMean(teachers[category]))
     }
-    for (const scores in combinedScoresInArray.pupils) {
-      finalScores.push(getMean(combinedScoresInArray.pupils[scores]))
+    for (const category in pupils) {
+      finalScores.push(getMean(pupils[category]))
     }
     return applyStatus(getMean(finalScores))
   }
-
-
 
   // Create worded report object for posting to DB
   const reportTemplate = {
@@ -111,8 +114,6 @@ export const createReport = (allScores, schoolName) => {
       criticalthinking: applyStatus(getMean(leaders.criticalthinking)),
       communication: applyStatus(getMean(leaders.communication)),
       responsibleuse: applyStatus(getMean(leaders.responsibleuse)),
-
-
     },
     teachers: {
       digitalknowledge: applyStatus(getMean(teachers.digitalknowledge)),
@@ -121,7 +122,6 @@ export const createReport = (allScores, schoolName) => {
       criticalthinking: applyStatus(getMean(teachers.criticalthinking)),
       communication: applyStatus(getMean(teachers.communication)),
       responsibleuse: applyStatus(getMean(teachers.responsibleuse)),
-
     },
     pupils: {
       digitalknowledge: applyStatus(getMean(pupils.digitalknowledge)),
@@ -130,26 +130,28 @@ export const createReport = (allScores, schoolName) => {
       criticalthinking: applyStatus(getMean(pupils.criticalthinking)),
       communication: applyStatus(getMean(pupils.communication)),
       responsibleuse: applyStatus(getMean(pupils.responsibleuse)),
-
     },
   }
 
   return reportTemplate
 }
 
-export const awardByUserType = (userType) => {
+export const awardByUserType = userType => {
   const numberedScoresList = []
   const textScoresList = Object.values(userType)
-  textScoresList.forEach((score) => {
-    switch(score) {
+  textScoresList.forEach(score => {
+    switch (score) {
       case "CyberChampion":
         numberedScoresList.push(1)
         break
       case "CyberSmart":
         numberedScoresList.push(3)
         break
-      default:
+      case "CyberAware":
         numberedScoresList.push(5)
+        break
+      default:
+        numberedScoresList.push(null)
     }
   })
   return applyStatus(getMean(numberedScoresList))

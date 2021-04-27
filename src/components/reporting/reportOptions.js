@@ -12,9 +12,13 @@ const ReportOptions = ({
   reportSentBool,
   toggleReportSentBool,
   reportSentInitialValue,
-  quota
+  quota,
 }) => {
   const [visibleReport, toggleReport] = React.useState(false)
+  const [documentsGenerated, setDocumentsGenerated] = React.useState(false)
+  const generatePdfs = () => {
+    setDocumentsGenerated(() => !documentsGenerated)
+  }
 
   return (
     <div className="report-bar">
@@ -24,52 +28,62 @@ const ReportOptions = ({
             <p>
               Report: <span className="tick">✓</span>
             </p>
-            <PDFDownloadLink
-              className="pdf-dl-btn-silver"
-              document={
-                <PdfReportSilver
-                  report={report}
-                  reportSubmitted={reportSubmitted}
-                  quota={quota}
-                />
-              }
-              fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Silver.pdf`}
-            >
-              {({ blob, url, loading, error }) => 
-                loading ? "Loading document..." : "Silver Report"
-              }
-            </PDFDownloadLink>
-            <PDFDownloadLink
-              className="pdf-dl-btn-gold"
-              document={
-                <PdfReportGold
-                  report={report}
-                  reportSubmitted={reportSubmitted}
-                  quota={quota}
-                />
-              }
-              fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Gold.pdf`}
-            >
-              {({ blob, url, loading, error }) => 
-                loading ? "Loading document..." : "Gold Report"
-              }
-            </PDFDownloadLink>
-            <PDFDownloadLink
-              className="pdf-dl-btn-platinum"
-              document={
-                <PdfReportPlatinum
-                  report={report}
-                  reportSubmitted={reportSubmitted}
-                  quota={quota}
-                />
-              }
-              fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Platinum.pdf`}
-            >
-              {({ blob, url, loading, error }) => 
-                loading ? "Loading document..." : "Platinum Report"
-              }
-            </PDFDownloadLink>
-            
+            {!documentsGenerated ? (
+              <button className="pdf-dl-btn" onClick={generatePdfs}>
+                Generate PDFs
+              </button>
+            ) : (
+              <div className="show-hide-bar">
+                <PDFDownloadLink
+                  className="pdf-dl-btn-silver"
+                  document={
+                    <PdfReportSilver
+                      report={report}
+                      reportSubmitted={reportSubmitted}
+                      quota={quota}
+                    />
+                  }
+                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Silver.pdf`}
+                >
+                  {({ blob, url, loading, error }) =>
+                    loading ? "Loading document..." : "Silver Report"
+                  }
+                </PDFDownloadLink>
+
+                <PDFDownloadLink
+                  className="pdf-dl-btn-gold"
+                  document={
+                    <PdfReportGold
+                      report={report}
+                      reportSubmitted={reportSubmitted}
+                      quota={quota}
+                    />
+                  }
+                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Gold.pdf`}
+                >
+                  {({ blob, url, loading, error }) =>
+                    loading ? "Loading document..." : "Gold Report"
+                  }
+                </PDFDownloadLink>
+
+                <PDFDownloadLink
+                  className="pdf-dl-btn-platinum"
+                  document={
+                    <PdfReportPlatinum
+                      report={report}
+                      reportSubmitted={reportSubmitted}
+                      quota={quota}
+                    />
+                  }
+                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Platinum.pdf`}
+                >
+                  {({ blob, url, loading, error }) =>
+                    loading ? "Loading document..." : "Platinum Report"
+                  }
+                </PDFDownloadLink>
+              </div>
+            )}
+
             {visibleReport ? (
               <button
                 className="report-toggle-btn"
@@ -85,8 +99,7 @@ const ReportOptions = ({
                 show report
               </button>
             )}
-            
-            
+
             <label htmlFor="reportSent" className="report-toggle-btn">
               <input
                 className="checkbox"

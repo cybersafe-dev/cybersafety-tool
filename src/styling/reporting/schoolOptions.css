@@ -1,0 +1,45 @@
+
+.button-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .red-warning-btn {
+    padding: 0.25rem 0.5rem;
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .red-warning-btn:hover {
+    background-color: transparent;
+    color: red;
+    border: 2px solid red;
+    text-decoration: none;
+  }
+
+  .danger-area {
+    border: 2px solid red;
+    color: red;
+  }
+
+  .danger-area legend {
+    margin: 0 20px;
+  }
+
+
+  @media only screen and (max-width: 900px) {
+    .red-warning-btn {
+      text-align: center;
+    }
+  
+    .button-bar {
+      flex-wrap: wrap;
+    }
+  }

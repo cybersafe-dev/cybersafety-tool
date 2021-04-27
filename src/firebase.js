@@ -114,7 +114,7 @@ export const postReportToDb = async (uid, report) => {
   }
 }
 
-// Update the reportSent value to whatever bool in a schools DB doc via their UID 
+// Update the reportSent value to whatever bool in a schools DB doc via their UID
 export const updateReportSentValue = (uid, bool) => {
   try {
     firebase.firestore().collection("users").doc(uid).update({
@@ -125,3 +125,18 @@ export const updateReportSentValue = (uid, bool) => {
   }
 }
 
+// Delete a user document from the admin account
+export const deleteUserAccount = async uid => {
+  if (!uid) return "uid error"
+  try {
+    await firebase
+      .firestore()
+      .collection("users")
+      .doc(uid)
+      .delete()
+    return "deleted"
+  } catch (error) {
+    console.error("Error removing document: ", error)
+    return "deletion error"
+  }
+}
