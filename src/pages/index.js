@@ -24,153 +24,125 @@ import Insta from "../images/insta.svg"
 import Yout from "../images/yout.svg"
 
 const MiniSite = props => {
-
-const [privacyModalVisible, toggle] = React.useState(true);
+  const [privacyModalVisible, toggle] = React.useState(true)
 
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
   return (
     <Layout>
-    {privacyModalVisible && (
-    <PrivacyModal privacyModalVisible={privacyModalVisible} toggle={toggle} /> )}
+      {privacyModalVisible && (
+        <PrivacyModal
+          privacyModalVisible={privacyModalVisible}
+          toggle={toggle}
+        />
+      )}
       <MiniNavbar />
       <SEO title="Home" />
       <section className="section-container">
         <div id="tool">
           <div className="section">
             <h1 className="section-title-hidden">CyberSafe Tool for Schools</h1>
-            <img src={toolForSchoolsLogo} alt="CyberSafe Tool for Schools Logo" className="cstfs-logo" />
-            <ReactMarkdown className="site-text" source={data.minisitecontent.tool} />
+            <img
+              src={toolForSchoolsLogo}
+              alt="CyberSafe Tool for Schools Logo"
+              className="cstfs-logo"
+            />
+            <ReactMarkdown
+              className="site-text"
+              source={data.minisitecontent.tool}
+            />
           </div>
-            <img src={Fig1} alt="" className="fig" />
-          </div>
+          <img src={Fig1} alt="" className="fig" />
+        </div>
         <div id="awards">
           <div className="section">
-            <h2 className="section-title">Awards: <span className="italics">Why use the tool?</span></h2>
-            <ReactMarkdown className="site-text" source={data.minisitecontent.awards} />
+            <h2 className="section-title">
+              Awards: <span className="italics">Why use the tool?</span>
+            </h2>
+            <ReactMarkdown
+              className="site-text"
+              source={data.minisitecontent.awards}
+            />
           </div>
-            <img src={Fig2} alt="" className="fig" />
-          </div>
+          <img src={Fig2} alt="" className="fig" />
+        </div>
         <div id="levels">
           <div className="section">
-            <h2 className="section-title">Levels: <span className="italics">What are they?</span></h2>
-            <ReactMarkdown className="site-text" source={data.minisitecontent.levels} />
-            <img src={Marks} alt="The logos for each level of the mark" className="marks" />
-            <span className="asterix"> *Final award mark sent to schools will be full colour version.</span>
+            <h2 className="section-title">
+              Levels: <span className="italics">What are they?</span>
+            </h2>
+            <ReactMarkdown
+              className="site-text"
+              source={data.minisitecontent.levels}
+            />
+            <img
+              src={Marks}
+              alt="The logos for each level of the mark"
+              className="marks"
+            />
+            <span className="asterix">
+              {" "}
+              *Final award mark sent to schools will be full colour version.
+            </span>
           </div>
-          </div>
-          <div id="pricing">
-            <div className="section">
-              <h2 className="section-title">Pricing: <span className="italics">How much does it cost?</span></h2>
-              <ReactMarkdown className="site-text" source={data.minisitecontent.pricing} />
-              <div className="table">
-                <div className="table-header">
-
-                  <div className="header-field">
-                    <span className="silver">
-                      Silver
-                    </span>
-                      <div className="subheader-field">
-                        €0
-                      </div>
-                  </div>
-
-                <div className="header-field">
-                  <span className="gold">
-                    Gold
-                  </span>
-                    <div className="subheader-field">
-                        €99
-                    </div>
-                </div>
-
-                <div className="header-field">
-                  <span className="platinum">
-                    Platinum
-                  </span>
-                    <div className="subheader-field">
-                      €249
-                    </div>
-                </div>
-
-                </div>
-                      <div className="table-body">
-                              <div className="table-row">
-                                <div className="body-field">
-                                  Assessment Grade
-                                </div>
-                                <div className="body-field">
-                                  Assessment Grade
-                                </div>
-                                <div className="body-field">
-                                  Assessment Grade
-                                </div>
-                              </div>
-
-                              <div className="table-row">
-                                <div className="body-field">
-                                  Completion Certificate
-                                </div>
-                                <div className="body-field">
-                                  Full Assessment Report
-                                </div>
-                                <div className="body-field">
-                                  Full Assessment Report with recommendations
-                                </div>
-                              </div>
-
-                              <div className="table-row">
-                                <div className="body-field">
-                                </div>
-                                <div className="body-field">
-                                  Award Certificate
-                                </div>
-                                <div className="body-field">
-                                  Award Certificate
-                                </div>
-                              </div>
-
-                              <div className="table-row">
-                                <div className="body-field">
-                                </div>
-                                <div className="body-field">
-                                  Access to Award Mark (valid for 1 year)
-                                </div>
-                                <div className="body-field">
-                                  Access to Award Mark (valid for 1 year)
-                                </div>
-                              </div>
-
-                              <div className="table-row">
-                                <div className="body-field">
-                                </div>
-                                <div className="body-field">
-                                </div>
-                                <div className="body-field">
-                                  Sticker for all pupils
-                                </div>
-                              </div>
-
-                              <div className="table-row">
-                                <div className="body-field">
-                                </div>
-                                <div className="body-field">
-                                </div>
-                                <div className="body-field">
-                                  Access to choice of 1 free e-learning module for 10 staff
-                                </div>
-                              </div>
-                    </div>
-              </div>
+        </div>
+        <div id="pricing">
+          <div className="section">
+            <h2 className="section-title">
+              Pricing: <span className="italics">How much does it cost?</span>
+            </h2>
+            <ReactMarkdown
+              className="site-text"
+              source={data.minisitecontent.pricing}
+            />
+            <div className="pricing-table-container">
+              <section className="pricing-table-column">
+                <h2 className="silver">Silver</h2>
+                <p className="column-price">€0</p>
+                <ul className="perks-list">
+                  <li>School Assessment Grade (overall)</li>
+                  <li>Basic Completion Report</li>
+                </ul>
+              </section>
+              <section className="pricing-table-column">
+                <h2 className="gold">Gold</h2>
+                <p className="column-price">€99</p>
+                <ul className="perks-list">
+                  <li>School Assessment Grade (overall)</li>
+                  <li>School Assessment Report (Pupils/Teachers/Leaders)</li>
+                  <li>Award Certificate (for printing)</li>
+                  <li>Access to Award Mark (valid for one year)</li>
+                </ul>
+              </section>
+              <section className="pricing-table-column">
+                <h2 className="platinum">Platinum</h2>
+                <p className="column-price">€249</p>
+                <ul className="perks-list">
+                  <li>School Assessment Grade (overall)</li>
+                  <li>Full Assessment Report with Recommendations</li>
+                  <li>Award Certificate (for printing)</li>
+                  <li>Access to Award Mark (valid for one year)</li>
+                  <li>Sticker for all Pupils</li>
+                  <li>
+                    Access to choice of one free e-learning module for ten staff
+                  </li>
+                </ul>
+              </section>
             </div>
           </div>
+        </div>
 
         <div id="about">
           <div className="section">
-            <h2 className="section-title">About us: <span className="italics">Who are we?</span></h2>
-            <ReactMarkdown className="site-text" source={data.minisitecontent.aboutus} />
+            <h2 className="section-title">
+              About us: <span className="italics">Who are we?</span>
+            </h2>
+            <ReactMarkdown
+              className="site-text"
+              source={data.minisitecontent.aboutus}
+            />
           </div>
-            <img src={Fig3} alt="" className="fig" />
-          </div>
+          <img src={Fig3} alt="" className="fig" />
+        </div>
       </section>
 
       <div id="contact-us">
@@ -188,7 +160,7 @@ const [privacyModalVisible, toggle] = React.useState(true);
               target="_blank"
               rel="noreferrer"
             >
-            info@cybersafekids.ie
+              info@cybersafekids.ie
             </a>
             <a
               className="csi-link"

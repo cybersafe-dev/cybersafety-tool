@@ -82,53 +82,46 @@
 }
 
 /* TABLE */
-.table {
-  display: table;
+.pricing-table-container {
   width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.table-header {
-  display: table-header-group;
-  font-size: 1.5rem;
+.pricing-table-column {
+  width: 30%;
 }
-.header-field {
-  display: table-cell;
-  padding: 1rem;
-  text-align: justify;
-}
-.subheader-field {
-  display: table-cell;
+
+.column-price {
   padding: 1.5rem 1.5rem 1.5rem 0;
-  text-align: justify;
+  margin: 1rem 0;
   font-size: 2.2rem;
   border-bottom: solid grey;
-  width: 500px;
 }
 
-.table-body {
-  display: table-row-group;
-}
-.table-row {
-  display: table-row;
-}
-.body-field {
-  display: table-cell;
+.perks-list {
+  list-style-type: none;
   font-weight: 400;
   font-size: 0.9rem;
-  padding-left: 1rem;
+  margin: 0;
 }
 
 .silver {
   color: #9C9C9C;
   font-weight: 700;
+  margin: 1rem 0 0 0;
 }
 .gold {
   color: #C09A4F;
   font-weight: 700;
+  margin: 1rem 0 0 0;
 }
 .platinum {
 color: #658181;
 font-weight: 700;
+margin: 1rem 0 0 0;
 }
 
 /* CONTACT SECTION */
@@ -245,26 +238,21 @@ font-weight: 700;
   }
 
 /* TABLE */
- .header-field {
-  font-size: 1.3rem;
+
+.pricing-table-container {
+  flex-direction: column;
 }
 
-.subheader-field {
-  padding: 0.5rem;
+.pricing-table-column {
+  width: 100%;
 }
 
-.body-field {
-  font-size: 0.8rem;
-  padding: 0 0 0 0.6rem;
+.column-price {
+  margin: 0 0 1rem 0;
 }
-.silver {
-  font-size: 1.6rem
-}
-.gold {
-  font-size: 1.6rem
-}
-.platinum {
-font-size: 1.6rem
+
+.silver, .gold, .platinum {
+  margin: 3rem 0 0 0;
 }
 
 
