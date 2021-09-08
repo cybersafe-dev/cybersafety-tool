@@ -28,7 +28,7 @@ const Reporting = () => {
       await firebase
         .firestore()
         .collection("users")
-        .orderBy("schoolName")
+        .orderBy("createdAt", "desc")
         .get()
         .then(query => {
           query.forEach(doc => {

@@ -34,6 +34,7 @@ export const generateUserDocument = async (user, additionalData) => {
     const { email } = user
     try {
       await userRef.set({
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         email,
         ...additionalData,
       })
