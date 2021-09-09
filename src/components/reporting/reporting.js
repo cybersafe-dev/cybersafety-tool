@@ -12,6 +12,10 @@ const Reporting = () => {
   const [searchTerm, setsearchTerm] = React.useState("")
   const [firstLoad, setFirstLoad] = React.useState(true)
   const [filteredSchools, setFilteredSchools] = React.useState("")
+  const [orderedBy, setOrderedBy] = React.useState({
+    by: "createdAt",
+    ascDesc: "desc",
+  })
   const [refreshCalls, refreshData] = React.useReducer(x => x + 1, 0)
   const firebase = useFirebase()
 
@@ -28,7 +32,7 @@ const Reporting = () => {
       await firebase
         .firestore()
         .collection("users")
-        .orderBy("createdAt", "desc")
+        .orderBy(orderedBy.by, orderedBy.ascDesc)
         .get()
         .then(query => {
           query.forEach(doc => {
@@ -41,7 +45,7 @@ const Reporting = () => {
         .catch(error => console.error(error))
     }
     getAllSchools()
-  }, [firebase, refreshCalls])
+  }, [firebase, orderedBy, refreshCalls])
 
   // If searchTerm state item is updated, run filter function
   React.useEffect(() => {
@@ -53,6 +57,22 @@ const Reporting = () => {
   const updateSearchTerm = e => {
     setsearchTerm(e.target.value)
     setFirstLoad(false)
+  }
+
+  // Update the object by which the list is sorted on firebase query or toggle
+  const updateOrderedBy = e => {
+    const { value } = e.target
+    setOrderedBy(prevState => {
+      let args = { ...prevState }
+      if (value === "schoolName") {
+        args.by = "schoolName"
+        args.ascDesc = "asc"
+      } else {
+        args.by = "createdAt"
+        args.ascDesc = "desc"
+      }
+      return args
+    })
   }
 
   // If not the first load filter the schools based on search term and store.
@@ -83,33 +103,34 @@ const Reporting = () => {
         value={searchTerm}
         onChange={updateSearchTerm}
       />
+
+      <label>
+        Order by:
+        <select value={orderedBy.by} onChange={updateOrderedBy}>
+          <option value="createdAt">Sign up date</option>
+          <option value="schoolName">Alphabetical</option>
+        </select>
+      </label>
+
       <h1 className="admin-dash-heading-reporting">{user.schoolName}</h1>
       <h2 className="descriptive-title">
         Schools Signed Up: {allSchools.length}
       </h2>
       {filteredSchools
-        ? filteredSchools.map(
-            school => (
-              // school.schoolName ? (
-              <SchoolCard
-                key={school.uid}
-                school={school}
-                refreshData={refreshData}
-              />
-            )
-            //  ) : null
-          )
-        : allSchools.map(
-            school => (
-              //  school.schoolName ? (
-              <SchoolCard
-                key={school.uid}
-                school={school}
-                refreshData={refreshData}
-              />
-            )
-            //  ) : null
-          )}
+        ? filteredSchools.map(school => (
+            <SchoolCard
+              key={school.uid}
+              school={school}
+              refreshData={refreshData}
+            />
+          ))
+        : allSchools.map(school => (
+            <SchoolCard
+              key={school.uid}
+              school={school}
+              refreshData={refreshData}
+            />
+          ))}
       <button className="logout-btn" onClick={signOutApp}>
         Log out
       </button>
