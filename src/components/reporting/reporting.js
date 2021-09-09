@@ -104,9 +104,9 @@ const Reporting = () => {
         onChange={updateSearchTerm}
       />
 
-      <label>
+      <label className="order-schools-label">
         Order by:
-        <select value={orderedBy.by} onChange={updateOrderedBy}>
+        <select className="order-schools" value={orderedBy.by} onChange={updateOrderedBy}>
           <option value="createdAt">Sign up date</option>
           <option value="schoolName">Alphabetical</option>
         </select>
