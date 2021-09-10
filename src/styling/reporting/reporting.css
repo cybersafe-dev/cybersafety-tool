@@ -49,6 +49,15 @@
   background-color: #f2f2f2;
 }
 
+.order-schools-label {
+  margin: 0 0 0 4rem;
+}
+
+.order-schools {
+  margin: 0 0 0 0.5rem;
+  border: none;
+}
+
 .logout-btn:active {
   transform: translate(0, 3px);
   box-shadow: 0px -6px 0px rgba(0, 0, 0, 0.1);
