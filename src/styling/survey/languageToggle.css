@@ -1,0 +1,39 @@
+.toggle-container {
+    position: relative; 
+}
+
+
+input {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+input:checked + .slider {
+    background-color: #87B6A7;
+}
+
+input:checked ~ .slider::before {
+    left: 27px;
+}
+
+.slider {
+    display: flex;
+    width: 50px;
+    height: 25px;
+    border-radius: 100px;
+    background-color: #bfbfbf;
+    position: relative;
+    transition: background-color 0.2s;
+} 
+
+.slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    border-radius: 21px;
+    transition: 0.2s;
+    background: #fff;
+}
