@@ -5,6 +5,8 @@ import ReactMarkdown from "react-markdown"
 import SEO from "../components/seo"
 import "../styling/app/index.css"
 
+import { LanguageStore } from "../providers/languageProvider"
+
 import MiniNavbar from "../components/miniSite/miniNavbar"
 import PrivacyModal from "../components/miniSite/privacyModal"
 
@@ -24,9 +26,17 @@ import Insta from "../images/insta.svg"
 import Yout from "../images/yout.svg"
 
 const MiniSite = props => {
+  const [language] = React.useContext(LanguageStore)
+
   const [privacyModalVisible, toggle] = React.useState(true)
 
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+
+React.useEffect(() => {
+  console.log("Language:", language)
+  // eslint-disable-next-line
+}, [])
+
   return (
     <Layout>
       {privacyModalVisible && (
