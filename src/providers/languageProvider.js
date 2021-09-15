@@ -11,8 +11,8 @@ const LanguageProvider = props => {
   return (
     <LanguageStore.Provider value={[language, setLanguage]}>
       {props.children}
-  {/* <Toggle onChange={(event) => setLanguage(event.target.checked)}/>  */}
-  {/* <p> language is {language ? "english" : "irish"}</p> */}
+  {/* <Toggle onChange={(event) => setLanguage(event.target.checked)}/> 
+  <p> language is {language ? "english" : "irish"}</p> */}
     </LanguageStore.Provider>
   )
 }
