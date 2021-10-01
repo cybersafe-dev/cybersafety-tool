@@ -6,13 +6,11 @@ import "../styling/survey/languageToggle.css"
 export const LanguageStore = React.createContext("")
 
 const LanguageProvider = props => {
-  const [language, setLanguage] = React.useState("en")
+  const [irish, setIrish] = React.useState(false)
 
   return (
-    <LanguageStore.Provider value={[language, setLanguage]}>
+    <LanguageStore.Provider value={[irish, setIrish]}>
       {props.children}
-  {/* <Toggle onChange={(event) => setLanguage(event.target.checked)}/> 
-  <p> language is {language ? "english" : "irish"}</p> */}
     </LanguageStore.Provider>
   )
 }
