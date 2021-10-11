@@ -13,6 +13,7 @@ import BgImg from "../images/bg-gradient.svg"
 import Half from "../images/half.svg"
 
 import "../styling/survey/survey.css"
+
 const SurveyPage = props => {
   const uid = props.location.search.split("=")[1]
   // eslint-disable-next-line

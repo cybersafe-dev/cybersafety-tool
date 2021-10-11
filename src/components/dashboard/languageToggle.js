@@ -13,7 +13,7 @@ React.useEffect(() => {
 
 return (
 <label className = "toggle-container">
-<input type="checkbox"  onChange={() => setIrish(!irish)}/>
+<input type="checkbox"  checked={irish} onChange={() => setIrish(!irish)}/>
 <span className="slider"/>
 </label>
 )
