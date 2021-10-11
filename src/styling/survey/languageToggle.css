@@ -1,18 +1,22 @@
 .toggle-container {
-    position: relative; 
+    position: fixed;
+    top: 0.2rem;
+    right: 0.5rem; 
+    display: flex;
+    flex-direction: row;
 }
 
 
-input {
+.toggle-input {
     position: absolute;
     left: -9999px;
     top: -9999px;
 }
-input:checked + .slider {
+.toggle-input:checked + .slider {
     background-color: #87B6A7;
 }
 
-input:checked ~ .slider::before {
+.toggle-input:checked ~ .slider::before {
     left: 27px;
 }
 
@@ -23,8 +27,10 @@ input:checked ~ .slider::before {
     border-radius: 100px;
     background-color: #bfbfbf;
     position: relative;
+    margin: 0.7rem 0 0 0.7rem;
     transition: background-color 0.2s;
-} 
+  
+}
 
 .slider::before {
     content: "";
@@ -36,4 +42,9 @@ input:checked ~ .slider::before {
     border-radius: 21px;
     transition: 0.2s;
     background: #fff;
+}
+
+.toggle-text {
+    font-size: 0.7rem;
+    font-weight: 100;
 }
