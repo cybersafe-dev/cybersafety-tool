@@ -24,7 +24,7 @@ const ThankYou = () => {
         <img src={BgImg} alt="background design" className="bg-img6" />
         <img src={Rocket} alt="rocket icon" className="design" />
         <p className="thanku-message">
-          Thank you for completing the survey. Your responses have now been sent
+          Thank you for completing the survey. Your responses have been sent
           to CyberSafeKids, you can close this window now.
         </p>
         <a href="https://www.cybersafekids.ie/">

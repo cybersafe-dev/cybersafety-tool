@@ -14,10 +14,14 @@ import Half from "../images/half.svg"
 
 import "../styling/survey/survey.css"
 
+import LanguageToggle from "../components/dashboard/languageToggle"
+import { LanguageStore } from "../providers/languageProvider"
+
 const SurveyPage = props => {
   const uid = props.location.search.split("=")[1]
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
+  const [irish] = React.useContext(LanguageStore)
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   React.useEffect(() => {
@@ -32,7 +36,8 @@ const SurveyPage = props => {
       <Header />
       <SEO title="Survey Introduction" />
       <section className="intropage-container">
-        <h1 className="welcome"> Welcome! Fáilte! </h1>
+        <LanguageToggle />
+        <h1 className="welcome">{irish ? "Fáilte!" : "Welcome!"}</h1>
         <img src={BgImg} alt="background design" className="bg1" />
         <img src={Half} alt="background design" className="bg2" />
         <img src={Half} alt="background design" className="bg3" />
