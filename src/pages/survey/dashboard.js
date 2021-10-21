@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { ResponseStore } from "../../providers/responseProvider"
+import { LanguageStore } from "../../providers/languageProvider"
 
 import Layout from "../../components/layout/layout"
 import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
@@ -28,6 +29,7 @@ import "../../styling/survey/dashboard.css"
 
 const Dashboard = ({ data }) => {
   const [store] = React.useContext(ResponseStore)
+  const [irish] = React.useContext(LanguageStore)
   const [message, setMessage] = React.useState("")
   const [error, setError] = React.useState("")
   const [bufferModalVisible, toggle] = React.useState(true)
@@ -47,9 +49,11 @@ const Dashboard = ({ data }) => {
   sectionKeys.map(key => completedSections.push(key[0]))
 
   const repeatCategoryAlert = () => {
-    setError(
-      "You can only complete a category once. Please pick another category."
-    )
+    irish
+      ? setError("Irish Error for attempting a category twice")
+      : setError(
+          "You can only complete a category once. Please pick another category."
+        )
   }
 
   // Debugging logs
@@ -70,10 +74,7 @@ const Dashboard = ({ data }) => {
           />
         </div>
         {completedSections.length === 1 && bufferModalVisible ? (
-          <Buffer
-            bufferModalVisible={bufferModalVisible}
-            toggle={toggle}
-          />
+          <Buffer bufferModalVisible={bufferModalVisible} toggle={toggle} />
         ) : null}
         <div className="body-content">
           <SurveyProgress
