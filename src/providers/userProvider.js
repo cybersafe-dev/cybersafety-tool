@@ -24,20 +24,20 @@ const UserProvider = props => {
     if (parseInt(pupilCount) < 100) {
       setQuota({
         leadersQuota: 1,
-        teachersQuota: 3,
-        pupilsQuota: 12,
+        teachersQuota: 1,
+        pupilsQuota: 2,
       })
     } else if (parseInt(pupilCount) > 199) {
       setQuota({
-        leadersQuota: 2,
-        teachersQuota: 5,
-        pupilsQuota: 30,
+        leadersQuota: 1,
+        teachersQuota: 3,
+        pupilsQuota: 4,
       })
     } else {
       setQuota({
         leadersQuota: 1,
-        teachersQuota: 4,
-        pupilsQuota: 20,
+        teachersQuota: 2,
+        pupilsQuota: 3,
       })
     }
   }, [pupilCount])
