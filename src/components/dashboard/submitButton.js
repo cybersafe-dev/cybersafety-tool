@@ -4,7 +4,10 @@ import { ResponseStore } from "../../providers/responseProvider"
 import { updateScores } from "../../firebase"
 import "../../styling/survey/dashboard.css"
 
+import { LanguageStore } from "../../providers/languageProvider"
+
 const SubmitButton = ({ setError }) => {
+  const [irish] = React.useContext(LanguageStore)
   const [store] = React.useContext(ResponseStore)
   //eslint-disable-next-line
   const { schoolId, userType } = store
@@ -36,19 +39,23 @@ const SubmitButton = ({ setError }) => {
     if (updateStatus === "updated") {
       navigate("/survey/thankyou/")
     } else if (updateStatus === "quota filled") {
-      setError(
-        `Sorry, it looks like your school already has enough completed surveys for ${userType}.`
-      )
+      irish
+        ? setError(`Enough surverys error in Irish for ${userType}.`)
+        : setError(
+            `Sorry, it looks like your school already has enough completed surveys for ${userType}.`
+          )
     } else {
-      setError(
-        "Sorry, there was an error uploading your survey. Please begin again from the full link you were sent."
-      )
+      irish
+        ? setError(`Survey upload internal error in Irish.`)
+        : setError(
+            "Sorry, there was an error uploading your survey. Please begin again from the full link you were sent."
+          )
     }
   }
 
   return (
     <button className="submit-btn" onClick={handleSubmission}>
-      Submit
+      {irish ? "Timbus" : "Submit"}
     </button>
   )
 }

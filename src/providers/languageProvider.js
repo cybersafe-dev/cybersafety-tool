@@ -1,7 +1,5 @@
 import React from "react"
-import Toggle from "../components/dashboard/languageToggle"
 import "../styling/survey/languageToggle.css"
-
 
 export const LanguageStore = React.createContext("")
 

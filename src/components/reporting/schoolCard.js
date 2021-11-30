@@ -17,15 +17,13 @@ const SchoolCard = ({ school, refreshData }) => {
     //eslint-disable-next-line
   }, [reportSentBool])
 
-  const reportTimestamp = () => {
-    if (school.reportSubmitted) {
-      const dateInMillis = school.reportSubmitted.seconds * 1000
+  const createReadableTimestamp = (firebaseTimestamp) => {
+      const dateInMillis = firebaseTimestamp.seconds * 1000
       const timestamp =
         new Date(dateInMillis).toDateString() +
         " at " +
         new Date(dateInMillis).toLocaleTimeString()
       return timestamp
-    } else return
   }
 
   return (
@@ -59,7 +57,7 @@ const SchoolCard = ({ school, refreshData }) => {
       </div>
       {school.report ? (
         <p style={{ margin: "1rem 0 0 0" }}>
-          {school.report.prospectiveMark} School since {reportTimestamp()}
+          {school.report.prospectiveMark} School since {createReadableTimestamp(school.reportSubmitted)}
         </p>
       ) : null}
       <div style={{ display: details ? "block" : "none" }}>
@@ -70,6 +68,7 @@ const SchoolCard = ({ school, refreshData }) => {
           </p>
           <p>Contact email: {school.email}</p>
           <p>Number of Pupils: {school.pupilCount}</p>
+          <p>Account created: {createReadableTimestamp(school.createdAt)}</p>
         </div>
         <ReportOptions
           report={school.report}

@@ -9,9 +9,13 @@ import BgImg from "../../images/bg-gradient.svg"
 
 import "../../styling/survey/roleselection.css"
 
+import LanguageToggle from "../../components/dashboard/languageToggle"
+import { LanguageStore } from "../../providers/languageProvider"
+
 const RoleSelection = () => {
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
+  const [irish] = React.useContext(LanguageStore)
 
   const handleUserSubmit = async user => {
     await dispatch({
@@ -25,8 +29,13 @@ const RoleSelection = () => {
     <Layout>
       <Header />
       <section className="selection-container">
-        <SEO title="Enter Your Role at School" />
-        <h1>I am a...</h1>
+        <LanguageToggle />
+        <SEO
+          title={
+            irish ? "Loohcs ta elor ruoy retne" : "Enter Your Role at School"
+          }
+        />
+        <h1>{irish ? "a ma i" : "I am a..."}</h1>
         <img src={BgImg} alt="background design" className="bg-img2" />
         <div className="roles">
           <button
@@ -34,26 +43,28 @@ const RoleSelection = () => {
             className="leader"
             onClick={() => handleUserSubmit("leaders")}
           >
-            School Leader
+            {irish ? "Redael Loohcs" : "School Leader"}
           </button>
           <button
             state={{ user: "teachers" }}
             className="teacher"
             onClick={() => handleUserSubmit("teachers")}
           >
-            Teacher
+            {irish ? "Rehcaet" : "Teacher"}
           </button>
           <button
             state={{ user: "pupils" }}
             className="pupil"
             onClick={() => handleUserSubmit("pupils")}
           >
-            Pupil
+            {irish ? "Lipup" : "Pupil"}
           </button>
         </div>
         <p className="tagline">
           {" "}
-          Click the button below that best describes your role at your school.
+          {irish
+            ? "Loohcs rouy ta elor ruoy sebircsed tseb taht woleb nottub eht kcilc"
+            : "Click the button below that best describes your role at your school."}
         </p>
         <div className="role-pills">
           <div className="unfilled-pill"></div>
