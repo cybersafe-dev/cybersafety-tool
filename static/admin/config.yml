@@ -4,14 +4,16 @@ backend:
   branch: master
 media_folder: static/assets
 public_folder: assets
+# when using the default proxy server port
+local_backend: true
 
 collections:
-  - label: "Pages"
-    name: "pages"
+  - label: "English Pages"
+    name: "englishpages"
     files:
       - label: "Mini Site"
         name: "minisite"
-        file: "content/minisite.md"
+        file: "content/english/minisite.md"
         fields:
           - {
               label: "Minisite content",
@@ -28,7 +30,7 @@ collections:
             }
       - label: "Survey Landing Page"
         name: "infopage1"
-        file: "content/infopage1.md"
+        file: "content/english/infopage1.md"
         fields:
           - {
               label: "Info Content",
@@ -43,7 +45,7 @@ collections:
           }
       - label: "Survey"
         name: "survey"
-        file: "content/survey.md"
+        file: "content/english/survey.md"
         fields:
           - {
               label: "Leaders",
@@ -539,7 +541,611 @@ collections:
             }
       - label: "Hints and messages"
         name: "hints"
-        file: "content/hints.md"
+        file: "content/english/hints.md"
+        fields:
+          - {
+              label: "Dashboard large text",
+              name: dashboardMain,
+              widget: object,
+              fields:
+                [
+                  { label: "Zero Completed", name: zeroDone, widget: string },
+                  { label: "One Completed", name: oneDone, widget: string },
+                  { label: "Two Completed", name: twoDone, widget: string },
+                  { label: "Three Completed", name: threeDone, widget: string },
+                  { label: "Four Completed", name: fourDone, widget: string },
+                  { label: "Five Completed", name: fiveDone, widget: string },
+                  { label: "Six Completed", name: sixDone, widget: string },
+                ],
+            }
+          - {
+              label: "Dashboard messages",
+              name: dashboardMessages,
+              widget: object,
+              fields:
+                [
+                  { label: "Initial message", name: initial, widget: text },
+                  {
+                    label: "Category Repeat Attempt",
+                    name: categoryRepeat,
+                    widget: text,
+                  },
+                  {
+                    label: "All categories completed",
+                    name: allCategoriesDone,
+                    widget: text,
+                  },
+                ],
+            }
+          - {
+              label: "Survey progress messages",
+              name: surveyProgress,
+              widget: object,
+              fields:
+                [
+                  { label: "First Question", name: first, widget: text },
+                  {
+                    label: "Penultimate Question",
+                    name: penultimate,
+                    widget: text,
+                  },
+                  { label: "Last Question", name: last, widget: text },
+                  { label: "In-between Question", name: middle, widget: text },
+                  {
+                    label: "Section has fewer than three questions",
+                    name: lessThanThree,
+                    widget: text,
+                  },
+                ],
+            }
+          - {
+              label: "Survey small hints",
+              name: surveyHints,
+              widget: object,
+              fields:
+                [
+                  { label: "General hint", name: general, widget: text },
+                  {
+                    label: "What happens when category is completed",
+                    name: last,
+                    widget: text,
+                  },
+                ],
+            }
+  - label: "Irish Pages"
+    name: "irishpages"
+    files:
+      - label: "Mini Site"
+        name: "irishminisite"
+        file: "content/irish/irishminisite.md"
+        fields:
+          - {
+              label: "Minisite content",
+              name: "irishminisitecontent",
+              widget: object,
+              fields:
+                [
+                  { label: "Tool", name: "tool", widget: markdown },
+                  { label: "Awards", name: "awards", widget: markdown },
+                  { label: "Levels", name: "levels", widget: markdown },
+                  { label: "Pricing", name: "pricing", widget: markdown },
+                  { label: "Aboutus", name: "aboutus", widget: markdown },
+                ],
+            }
+      - label: "Survey Landing Page"
+        name: "irishinfopage"
+        file: "content/irish/irishinfopage.md"
+        fields:
+          - {
+              label: "Info Content",
+              name: "infocontent",
+              widget: object,
+              fields:
+                [
+                  { label: "paragraph one", name: firstpara, widget: markdown },
+                  { label: "paragraph two", name: secondpara, widget: markdown },
+                  { label: "paragraph three", name: thirdpara, widget: markdown },
+                ],
+          }
+      - label: "Survey"
+        name: "irishsurvey"
+        file: "content/irish/irishsurvey.md"
+        fields:
+          - {
+              label: "Leaders",
+              name: "leaders",
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Digital Knowledge",
+                    name: "digitalknowledge",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Privacy",
+                    name: "privacy",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Online Life",
+                    name: "onlinelife",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Communication",
+                    name: "communication",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Critical Thinking",
+                    name: "criticalthinking",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Responsible Use",
+                    name: "responsibleuse",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: "Teachers",
+              name: "teachers",
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Digital Knowledge",
+                    name: "digitalknowledge",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Privacy",
+                    name: "privacy",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Online Life",
+                    name: "onlinelife",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Communication",
+                    name: "communication",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Critical Thinking",
+                    name: "criticalthinking",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Responsible Use",
+                    name: "responsibleuse",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: "Pupils",
+              name: "pupils",
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Digital Knowledge",
+                    name: "digitalknowledge",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Privacy",
+                    name: "privacy",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Online Life",
+                    name: "onlinelife",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Communication",
+                    name: "communication",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Critical Thinking",
+                    name: "criticalthinking",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Responsible Use",
+                    name: "responsibleuse",
+                    widget: list,
+                    fields:
+                      [
+                        {
+                          label: "Statement",
+                          name: "statement",
+                          widget: string,
+                        },
+                        {
+                          label: "Responses",
+                          name: "responses",
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: string,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                ],
+            }
+      - label: "Hints and messages"
+        name: "irishhints"
+        file: "content/irish/irishhints.md"
         fields:
           - {
               label: "Dashboard large text",
