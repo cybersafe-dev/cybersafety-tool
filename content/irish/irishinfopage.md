@@ -1,0 +1,6 @@
+---
+infocontentIrish:
+  firstpara: Is é an sprioc atá againn ná go mbeidh marc an **Uirlis CyberSafe do Scoileanna** le feiceáil á tháispéaint go bródúil ag gach scoil in Éirinn. Tá tusa anseo mar gheall go bhfuil sé tábhachtach duit do scoil féin a bheith cliste agus sábhailte ar líne. Tús iontach ar d'aistear atá ann!
+  secondpara: Ar an gcéad scáileán eile, cuir in iúl, le do thoil, an Dalta, Múinteoir nó Ball den Fhoireann Cheannaireachta tú. Feicfidh tú painéal a bhfuil 6 chatagóir air. Cliceáil ar aon cheann de na cnaipí chun na ceisteanna a fhreagairt. Tá 15 nóiméad agat an suirbhé a chríochnú, ach is féidir é a dhéanamh níos tapúla ná sin. Léigh go cúramach gach abairt sula gcuireann tú do fhreagra isteach, le do thoil!
+  thirdpara: Níl a leithéid de rud agus freagra ceart nó mícheart ann; bí chomh hionraic linn agus is féidir leat le do thoil. Roghnaigh an freagra is fearr a chloíonn le do thuairim féin. Cuideoidh gach rud a deir tú le do scoil an chibearshábháilteacht inti a chur i bhfeabhas.
+---
