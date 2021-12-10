@@ -1,25 +1,23 @@
 ---
 dashboardMainIrish:
-  zeroDone: Your time starts now!
-  oneDone: One down...
-  twoDone: Keep going...
-  threeDone: Halfway there!
-  fourDone: Just two more...
-  fiveDone: Nearly finished...
-  sixDone: All done. Nice!
+  zeroDone: Tosaíonn do chuid ama anois!
+  oneDone: Ceann amháin déanta...
+  twoDone: Coinnigh ort...
+  threeDone: Leath bealaigh ann!
+  fourDone: Dhá cheann eile...
+  fiveDone: Beagnach ann...
+  sixDone: Críochnaithe. Maith thú!
 dashboardMessagesIrish:
-  initial: Click on a category to answer the questions. Please complete all the
-    categories before the timer gets to fifteen minutes.
-  categoryRepeat: You can only complete a category once. Please pick another category.
-  allCategoriesDone: You've completed all the categories...well done! You can now
-    click the submit button to send us your answers.
+  initial: Cliceáil ar chatagóir chun na ceisteanna a fhreagairt. Críochanigh gach ceist le do thoil sula mbuaileann an t-amadóir cúig nóiméad déag.
+  categoryRepeat: Ní féidir catagóir a chríochnú ach uair amháin. Roghnaigh catagóir eile le do thoil.
+  allCategoriesDone: Tá gach catagóir críochnaithe agat.... Maith thú! Is féidir leat an cnaipe “cuir isteach” a bhrú anois chun do chuid freagraí a chur chugainn.
 surveyProgressIrish:
-  first: Here we go...
-  penultimate: Nearly done...
-  last: Last question!
-  middle: Keep going!
-  lessThanThree: Just a short category this time!
+  first: As go brách linn...
+  penultimate: Beagnach críochnaithe...
+  last: Ceist dheireanach!
+  middle: Coinnigh ort!
+  lessThanThree: Catagóir ghairid atá ann an babhta seo!
 surveyHintsIrish:
-  general: Click one of the buttons to choose an answer.
-  last: Completing the category will take you back to the dashboard.
+  general: Cliceáil ar cheann de na cnaipí chun freagra a roghnú.
+  last: Nuair a chríochnóidh tú an chatagóir seo, tabharfar ar ais chuig an bpainéal tosaigh tú.
 ---

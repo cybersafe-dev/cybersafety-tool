@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import "../styling/app/index.css"
 
 import LanguageToggle from "../components/dashboard/languageToggle"
+import { LanguageStore } from "../providers/languageProvider"
 
 import MiniNavbar from "../components/miniSite/miniNavbar"
 import PrivacyModal from "../components/miniSite/privacyModal"
@@ -27,8 +28,11 @@ import Yout from "../images/yout.svg"
 
 const MiniSite = props => {
   const [privacyModalVisible, toggle] = React.useState(true)
+  const [irish] = React.useContext(LanguageStore)
 
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  const irishData =
+    props.data.allFile.edges[1].node.childMarkdownRemark.frontmatter
 
   return (
     <Layout>
@@ -41,7 +45,7 @@ const MiniSite = props => {
       <MiniNavbar />
       <SEO title="Home" />
       <section className="section-container">
-      <LanguageToggle />
+        <LanguageToggle />
 
         <div id="tool">
           <div className="section">
@@ -51,10 +55,17 @@ const MiniSite = props => {
               alt="CyberSafe Tool for Schools Logo"
               className="cstfs-logo"
             />
-            <ReactMarkdown
-              className="site-text"
-              source={data.minisitecontent.tool}
-            />
+            {irish ? (
+              <ReactMarkdown
+                className="site-text"
+                source={irishData.minisitecontentIrish.tool}
+              />
+            ) : (
+              <ReactMarkdown
+                className="site-text"
+                source={data.minisitecontent.tool}
+              />
+            )}
           </div>
           <img src={Fig1} alt="" className="fig" />
         </div>
@@ -63,10 +74,17 @@ const MiniSite = props => {
             <h2 className="section-title">
               Awards: <span className="italics">Why use the tool?</span>
             </h2>
-            <ReactMarkdown
-              className="site-text"
-              source={data.minisitecontent.awards}
-            />
+            {irish ? (
+              <ReactMarkdown
+                className="site-text"
+                source={irishData.minisitecontentIrish.awards}
+              />
+            ) : (
+              <ReactMarkdown
+                className="site-text"
+                source={data.minisitecontent.awards}
+              />
+            )}
           </div>
           <img src={Fig2} alt="" className="fig" />
         </div>
@@ -75,10 +93,17 @@ const MiniSite = props => {
             <h2 className="section-title">
               Levels: <span className="italics">What are they?</span>
             </h2>
-            <ReactMarkdown
-              className="site-text"
-              source={data.minisitecontent.levels}
-            />
+            {irish ? (
+              <ReactMarkdown
+                className="site-text"
+                source={irishData.minisitecontentIrish.levels}
+              />
+            ) : (
+              <ReactMarkdown
+                className="site-text"
+                source={data.minisitecontent.levels}
+              />
+            )}
             <img
               src={Marks}
               alt="The logos for each level of the mark"
@@ -95,10 +120,17 @@ const MiniSite = props => {
             <h2 className="section-title">
               Pricing: <span className="italics">How much does it cost?</span>
             </h2>
-            <ReactMarkdown
-              className="site-text"
-              source={data.minisitecontent.pricing}
-            />
+            {irish ? (
+              <ReactMarkdown
+                className="site-text"
+                source={irishData.minisitecontentIrish.pricing}
+              />
+            ) : (
+              <ReactMarkdown
+                className="site-text"
+                source={data.minisitecontent.pricing}
+              />
+            )}
             <div className="pricing-table-container">
               <section className="pricing-table-column">
                 <h2 className="silver">Silver</h2>
@@ -141,10 +173,17 @@ const MiniSite = props => {
             <h2 className="section-title">
               About us: <span className="italics">Who are we?</span>
             </h2>
-            <ReactMarkdown
-              className="site-text"
-              source={data.minisitecontent.aboutus}
-            />
+            {irish ? (
+              <ReactMarkdown
+                className="site-text"
+                source={irishData.minisitecontentIrish.aboutus}
+              />
+            ) : (
+              <ReactMarkdown
+                className="site-text"
+                source={data.minisitecontent.aboutus}
+              />
+            )}
           </div>
           <img src={Fig3} alt="" className="fig" />
         </div>
@@ -236,7 +275,7 @@ export const query = graphql`
     allFile(
       filter: {
         sourceInstanceName: { eq: "content" }
-        name: { eq: "minisite" }
+        name: { in: ["minisite", "irishminisite"] }
       }
     ) {
       edges {
@@ -249,6 +288,13 @@ export const query = graphql`
                 levels
                 pricing
                 aboutus
+              }
+              minisitecontentIrish {
+                aboutus
+                awards
+                levels
+                pricing
+                tool
               }
             }
           }
