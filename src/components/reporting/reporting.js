@@ -106,6 +106,7 @@ const Reporting = () => {
 
       <label className="order-schools-label">
         Order by:
+        {/* eslint-disable-next-line */}
         <select className="order-schools" value={orderedBy.by} onChange={updateOrderedBy}>
           <option value="createdAt">Sign up date</option>
           <option value="schoolName">Alphabetical</option>

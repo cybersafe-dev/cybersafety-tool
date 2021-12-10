@@ -2,6 +2,7 @@ import React from "react"
 import { navigate } from "gatsby"
 import DataErrorPage from "../../components/dataerror/dataerror"
 import { ResponseStore } from "../../providers/responseProvider"
+import { LanguageStore } from "../../providers/languageProvider"
 
 import SEO from "../seo"
 
@@ -17,11 +18,29 @@ const Question = ({
 }) => {
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
+  const [irish] = React.useContext(LanguageStore)
   const [sectionResponses, setSectionResponses] = React.useState([])
+  const [hint, setHint] = React.useState("")
   const lowerCategory = category.replace(" ", "").toLowerCase()
-  const {
-    surveyHints,
-  } = questionMessageData.allFile.edges[0].node.childMarkdownRemark.frontmatter
+
+  React.useEffect(() => {
+    let surveyHints
+    if (!irish) {
+      surveyHints =
+        questionMessageData.allFile.edges[0].node.childMarkdownRemark
+          .frontmatter.surveyHints
+    } else {
+      surveyHints =
+        questionMessageData.allFile.edges[1].node.childMarkdownRemark
+          .frontmatter.surveyHintsIrish
+    }
+    if (currentQ === sectionLength - 1) {
+      setHint(surveyHints.last)
+    } else {
+      setHint(surveyHints.general)
+    }
+    // eslint-disable-next-line
+  }, [irish, currentQ])
 
   React.useEffect(() => {
     store.responses.forEach(response => {
@@ -72,14 +91,8 @@ const Question = ({
             {response.answer}
           </button>
         ))}
-
-        {currentQ === sectionLength - 1 ? (
-          <p className="tip">{surveyHints.last}</p>
-        ) : (
-          <p className="tip">{surveyHints.general}</p>
-        )}
+        <p className="tip">{hint}</p>
       </section>
-
     </>
   )
 }
