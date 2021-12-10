@@ -7,6 +7,7 @@ import Layout from "../../components/layout/layout"
 import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
 import SEO from "../../components/seo"
 import DataError from "../../components/dataerror/dataerror"
+import LanguageToggle from "../../components/dashboard/languageToggle"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
 import Buffer from "../../components/dashboard/buffer"
@@ -65,6 +66,7 @@ const Dashboard = ({ data }) => {
     <Layout>
       <SEO title="Choose a Category" />
       <section className="dashboard-container">
+        <LanguageToggle />
         <div className="headline">
           <SurveyDashMessages
             error={error}
