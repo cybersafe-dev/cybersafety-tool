@@ -1,13 +1,25 @@
 import React from "react"
 import "../../styling/survey/progressBar.css"
+import { LanguageStore } from "../../providers/languageProvider"
+
 const ProgressBar = ({ done, sectionLength, questionMessageData }) => {
   const [style, setStyle] = React.useState({})
   const [progressMessage, setProgressMessage] = React.useState("")
-  const {
-    surveyProgress,
-  } = questionMessageData.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  const [irish] = React.useContext(LanguageStore)
 
   React.useEffect(() => {
+    let surveyProgress
+
+    if (!irish) {
+      surveyProgress =
+        questionMessageData.allFile.edges[0].node.childMarkdownRemark
+          .frontmatter.surveyProgress
+    } else {
+      surveyProgress =
+        questionMessageData.allFile.edges[1].node.childMarkdownRemark
+          .frontmatter.surveyProgressIrish
+    }
+
     if (sectionLength < 3) {
       setProgressMessage(() => surveyProgress.lessThanThree)
     } else {

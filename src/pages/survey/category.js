@@ -14,12 +14,7 @@ const Category = props => {
   const questionMessageData = useStaticQuery(
     graphql`
       query {
-        allFile(
-          filter: {
-            sourceInstanceName: { eq: "content" }
-            name: { eq: "hints" }
-          }
-        ) {
+        allFile(filter: {sourceInstanceName: {eq: "content"}, name: {in: ["hints", "irishhints"]}}) {
           edges {
             node {
               childMarkdownRemark {
@@ -29,6 +24,17 @@ const Category = props => {
                     last
                   }
                   surveyProgress {
+                    first
+                    last
+                    lessThanThree
+                    middle
+                    penultimate
+                  }
+                  surveyHintsIrish {
+                    general
+                    last
+                  }
+                  surveyProgressIrish {
                     first
                     last
                     lessThanThree
