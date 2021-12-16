@@ -43,7 +43,7 @@ const Dashboard = ({ data }) => {
   }
 
   const user = store.userType
-  const userSpecificData = surveyAllData[user]
+  const userSpecificData = surveyAllData.survey[user]
 
   let completedSections = []
   let sectionKeys = store.responses.map(response => Object.keys(response))
@@ -232,126 +232,125 @@ const Dashboard = ({ data }) => {
 export default Dashboard
 
 export const query = graphql`
-  {
-    allFile(
-      filter: { sourceInstanceName: { eq: "content" }, name: { eq: "survey" } }
-    ) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
+{
+  allFile(filter: {sourceInstanceName: {eq: "content"}, name: {in: ["survey"]}}) {
+    edges {
+      node {
+        childMarkdownRemark {
+          frontmatter {
+            survey {
               leaders {
-                digitalknowledge {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                privacy {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                onlinelife {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
                 communication {
-                  statement
                   responses {
                     answer
                   }
+                  statement
                 }
                 criticalthinking {
-                  statement
                   responses {
                     answer
                   }
-                }
-                responsibleuse {
                   statement
-                  responses {
-                    answer
-                  }
                 }
-              }
-              teachers {
                 digitalknowledge {
-                  statement
                   responses {
                     answer
                   }
-                }
-                privacy {
                   statement
-                  responses {
-                    answer
-                  }
                 }
                 onlinelife {
-                  statement
                   responses {
                     answer
                   }
+                  statement
                 }
-                communication {
-                  statement
+                privacy {
                   responses {
                     answer
                   }
-                }
-                criticalthinking {
                   statement
-                  responses {
-                    answer
-                  }
                 }
                 responsibleuse {
-                  statement
                   responses {
                     answer
                   }
+                  statement
                 }
               }
               pupils {
-                digitalknowledge {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                privacy {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
-                onlinelife {
-                  statement
-                  responses {
-                    answer
-                  }
-                }
                 communication {
-                  statement
                   responses {
                     answer
                   }
+                  statement
                 }
                 criticalthinking {
-                  statement
                   responses {
                     answer
                   }
+                  statement
+                }
+                digitalknowledge {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                onlinelife {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                privacy {
+                  responses {
+                    answer
+                  }
+                  statement
                 }
                 responsibleuse {
-                  statement
                   responses {
                     answer
                   }
+                  statement
+                }
+              }
+              teachers {
+                communication {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                criticalthinking {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                digitalknowledge {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                onlinelife {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                privacy {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                responsibleuse {
+                  responses {
+                    answer
+                  }
+                  statement
                 }
               }
             }
@@ -360,4 +359,5 @@ export const query = graphql`
       }
     }
   }
+}
 `
