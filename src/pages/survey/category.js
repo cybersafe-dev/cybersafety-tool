@@ -58,16 +58,40 @@ const Category = props => {
   const [irish] = React.useContext(LanguageStore)
   const [survey, setSurvey] = React.useState(surveyData.english)
   const [currentQ, setCurrentQ] = React.useState(0)
+  const [categoryTitle, setCategoryTitle] = React.useState(category)
 
   React.useEffect(() => {
     if (irish) {
       setSurvey(surveyData.irish)
+      switch(category) {
+        case "Digital Knowledge":
+          setCategoryTitle("Eolas Digiteach")
+          break
+        case "Privacy":
+          setCategoryTitle("An Príobháideachas")
+          break
+        case "Communication":
+          setCategoryTitle("Cumarsáid")
+          break
+        case "Critical Thinking":
+          setCategoryTitle("Smaointeoireacht Chriticiúil")
+          break
+        case "Online Life":
+          setCategoryTitle("An saol ar líne")
+          break
+        case "Responsible Use":
+          setCategoryTitle("Úsáid Fhreagrach")
+          break
+        default:
+          setCategoryTitle(category)
+      }
     } else {
       setSurvey(surveyData.english)
+      setCategoryTitle(category)
     }
     //eslint-disable-next-line
   }, [irish])
-  
+
   if (!survey) {
     return <DataErrorPage />
   }
@@ -78,7 +102,7 @@ const Category = props => {
     <Layout>
       <>
         <img src={BgImg} alt="background design" className="bg-img-q" />
-        <h1 className="question-title">{category}</h1>
+        <h1 className="question-title">{categoryTitle}</h1>
         <LanguageToggle />
         <section className="question-container">
           <Question
