@@ -38,7 +38,7 @@ const ProgressBar = ({ done, sectionLength, questionMessageData }) => {
       }
     }
     // eslint-disable-next-line
-  }, [done])
+  }, [done, irish])
 
   const progressWidth = (done * 200) / sectionLength
 
