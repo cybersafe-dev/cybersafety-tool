@@ -22,9 +22,9 @@ const SurveyPage = props => {
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
   const [irish] = React.useContext(LanguageStore)
-  const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  const data = props.data.allFile.edges[1].node.childMarkdownRemark.frontmatter
   const irishData =
-    props.data.allFile.edges[1].node.childMarkdownRemark.frontmatter
+    props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   React.useEffect(() => {
     dispatch({

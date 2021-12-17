@@ -30,9 +30,9 @@ const MiniSite = props => {
   const [privacyModalVisible, toggle] = React.useState(true)
   const [irish] = React.useContext(LanguageStore)
 
-  const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  const data = props.data.allFile.edges[1].node.childMarkdownRemark.frontmatter
   const irishData =
-    props.data.allFile.edges[1].node.childMarkdownRemark.frontmatter
+    props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   return (
     <Layout>

@@ -27,11 +27,11 @@ const Question = ({
     let surveyHints
     if (!irish) {
       surveyHints =
-        questionMessageData.allFile.edges[0].node.childMarkdownRemark
+        questionMessageData.allFile.edges[1].node.childMarkdownRemark
           .frontmatter.surveyHints
     } else {
       surveyHints =
-        questionMessageData.allFile.edges[1].node.childMarkdownRemark
+        questionMessageData.allFile.edges[0].node.childMarkdownRemark
           .frontmatter.surveyHintsIrish
     }
     if (currentQ === sectionLength - 1) {

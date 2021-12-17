@@ -67,17 +67,17 @@ const SurveyDashMessages = ({
     let dashboardMain, dashboardMessages
     if (!irish) {
       dashboardMain =
-        allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
+        allDashMessages.allFile.edges[1].node.childMarkdownRemark.frontmatter
           .dashboardMain
           dashboardMessages =
-        allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
+        allDashMessages.allFile.edges[1].node.childMarkdownRemark.frontmatter
           .dashboardMessages
     } else {
       dashboardMain =
-        allDashMessages.allFile.edges[1].node.childMarkdownRemark.frontmatter
+        allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
           .dashboardMainIrish
           dashboardMessages =
-        allDashMessages.allFile.edges[1].node.childMarkdownRemark.frontmatter
+        allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
           .dashboardMessagesIrish
     }
     switch (completedSections.length - 1) {

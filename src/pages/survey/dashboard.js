@@ -36,8 +36,8 @@ const Dashboard = ({ data }) => {
   const [bufferModalVisible, toggle] = React.useState(true)
 
   const surveyAllData = {
-    englishSurvey: data.allFile.edges[0].node.childMarkdownRemark.frontmatter.survey,
-    irishSurvey: data.allFile.edges[1].node.childMarkdownRemark.frontmatter.surveyIrish
+    englishSurvey: data.allFile.edges[1].node.childMarkdownRemark.frontmatter.survey,
+    irishSurvey: data.allFile.edges[0].node.childMarkdownRemark.frontmatter.surveyIrish
   }
 
   if (!store || !store.userType || !store.schoolId) {
