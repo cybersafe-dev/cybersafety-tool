@@ -30,7 +30,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Digital Knowledge</h3>
           </div>
           <div style={{ display: dk ? "block" : "none" }}>
-            {data.leaders.digitalknowledge.map(question => (
+            {data.survey.leaders.digitalknowledge.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -51,7 +51,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Privacy</h3>
           </div>
           <div style={{ display: p ? "block" : "none" }}>
-            {data.leaders.privacy.map(question => (
+            {data.survey.leaders.privacy.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -72,7 +72,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Online Life</h3>
           </div>
           <div style={{ display: s ? "block" : "none" }}>
-            {data.leaders.onlinelife.map(question => (
+            {data.survey.leaders.onlinelife.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -93,7 +93,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Communication</h3>
           </div>
           <div style={{ display: c ? "block" : "none" }}>
-            {data.leaders.communication.map(question => (
+            {data.survey.leaders.communication.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -114,7 +114,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Critical Thinking</h3>
           </div>
           <div style={{ display: ct ? "block" : "none" }}>
-            {data.leaders.criticalthinking.map(question => (
+            {data.survey.leaders.criticalthinking.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -135,7 +135,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Responsible Use</h3>
           </div>
           <div style={{ display: ru ? "block" : "none" }}>
-            {data.leaders.responsibleuse.map(question => (
+            {data.survey.leaders.responsibleuse.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -162,7 +162,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Digital Knowledge</h3>
           </div>
           <div style={{ display: dk ? "block" : "none" }}>
-            {data.teachers.digitalknowledge.map(question => (
+            {data.survey.teachers.digitalknowledge.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -183,7 +183,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Privacy</h3>
           </div>
           <div style={{ display: p ? "block" : "none" }}>
-            {data.teachers.privacy.map(question => (
+            {data.survey.teachers.privacy.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -204,7 +204,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Online Life</h3>
           </div>
           <div style={{ display: s ? "block" : "none" }}>
-            {data.teachers.onlinelife.map(question => (
+            {data.survey.teachers.onlinelife.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -225,7 +225,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Communication</h3>
           </div>
           <div style={{ display: c ? "block" : "none" }}>
-            {data.teachers.communication.map(question => (
+            {data.survey.teachers.communication.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -246,7 +246,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Critical Thinking</h3>
           </div>
           <div style={{ display: ct ? "block" : "none" }}>
-            {data.teachers.criticalthinking.map(question => (
+            {data.survey.teachers.criticalthinking.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -267,7 +267,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Responsible Use</h3>
           </div>
           <div style={{ display: ru ? "block" : "none" }}>
-            {data.teachers.responsibleuse.map(question => (
+            {data.survey.teachers.responsibleuse.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -294,7 +294,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Digital Knowledge</h3>
           </div>
           <div style={{ display: dk ? "block" : "none" }}>
-            {data.pupils.digitalknowledge.map(question => (
+            {data.survey.pupils.digitalknowledge.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -315,7 +315,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Privacy</h3>
           </div>
           <div style={{ display: p ? "block" : "none" }}>
-            {data.pupils.privacy.map(question => (
+            {data.survey.pupils.privacy.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -336,7 +336,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Online Life</h3>
           </div>
           <div style={{ display: s ? "block" : "none" }}>
-            {data.pupils.onlinelife.map(question => (
+            {data.survey.pupils.onlinelife.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -357,7 +357,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Communication</h3>
           </div>
           <div style={{ display: c ? "block" : "none" }}>
-            {data.pupils.communication.map(question => (
+            {data.survey.pupils.communication.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -378,7 +378,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Critical Thinking</h3>
           </div>
           <div style={{ display: ct ? "block" : "none" }}>
-            {data.pupils.criticalthinking.map(question => (
+            {data.survey.pupils.criticalthinking.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
@@ -399,7 +399,7 @@ const SurveyPreview = ({ entry }) => {
             <h3>Responsible Use</h3>
           </div>
           <div style={{ display: ru ? "block" : "none" }}>
-            {data.pupils.responsibleuse.map(question => (
+            {data.survey.pupils.responsibleuse.map(question => (
               <div key={question.statement}>
                 <p>{question.statement}</p>
                 <div>
