@@ -5,7 +5,7 @@ backend:
 media_folder: static/assets
 public_folder: assets
 # when using the default proxy server port
-local_backend: true
+# local_backend: true
 
 collections:
   - label: "English Pages"
