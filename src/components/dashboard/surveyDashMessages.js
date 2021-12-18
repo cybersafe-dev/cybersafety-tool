@@ -2,6 +2,7 @@ import React from "react"
 import "../../styling/survey/dashboard.css"
 import { graphql, useStaticQuery } from "gatsby"
 import Timer from "../../components/dashboard/timer"
+import { LanguageStore } from "../../providers/languageProvider"
 
 const SurveyDashMessages = ({
   message,
@@ -10,6 +11,7 @@ const SurveyDashMessages = ({
   error,
 }) => {
   const [dashTitle, setDashTitle] = React.useState("")
+  const [irish] = React.useContext(LanguageStore)
 
   const allDashMessages = useStaticQuery(
     graphql`
@@ -17,7 +19,7 @@ const SurveyDashMessages = ({
         allFile(
           filter: {
             sourceInstanceName: { eq: "content" }
-            name: { eq: "hints" }
+            name: { in: ["hints", "irishhints"] }
           }
         ) {
           edges {
@@ -38,6 +40,20 @@ const SurveyDashMessages = ({
                     categoryRepeat
                     initial
                   }
+                  dashboardMainIrish {
+                    fiveDone
+                    fourDone
+                    oneDone
+                    sixDone
+                    threeDone
+                    twoDone
+                    zeroDone
+                  }
+                  dashboardMessagesIrish {
+                    allCategoriesDone
+                    categoryRepeat
+                    initial
+                  }
                 }
               }
             }
@@ -47,12 +63,23 @@ const SurveyDashMessages = ({
     `
   )
 
-  const {
-    dashboardMain,
-    dashboardMessages,
-  } = allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
-
   React.useEffect(() => {
+    let dashboardMain, dashboardMessages
+    if (!irish) {
+      dashboardMain =
+        allDashMessages.allFile.edges[1].node.childMarkdownRemark.frontmatter
+          .dashboardMain
+          dashboardMessages =
+        allDashMessages.allFile.edges[1].node.childMarkdownRemark.frontmatter
+          .dashboardMessages
+    } else {
+      dashboardMain =
+        allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
+          .dashboardMainIrish
+          dashboardMessages =
+        allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
+          .dashboardMessagesIrish
+    }
     switch (completedSections.length - 1) {
       case 1:
         setDashTitle(() => dashboardMain.oneDone)
@@ -83,7 +110,7 @@ const SurveyDashMessages = ({
         setMessage(() => dashboardMessages.initial)
     }
     // eslint-disable-next-line
-  }, [completedSections])
+  }, [completedSections, irish])
 
   return (
     <>

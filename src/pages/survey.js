@@ -22,7 +22,9 @@ const SurveyPage = props => {
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
   const [irish] = React.useContext(LanguageStore)
-  const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  const data = props.data.allFile.edges[1].node.childMarkdownRemark.frontmatter
+  const irishData =
+    props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
   React.useEffect(() => {
     dispatch({
@@ -42,17 +44,47 @@ const SurveyPage = props => {
         <img src={Half} alt="background design" className="bg2" />
         <img src={Half} alt="background design" className="bg3" />
         <div className="introtext-box">
-         <img src={Icon1} alt="" className="figure" />
-         <ReactMarkdown className="para-1" source={data.infocontent.firstpara} />
-       </div>
-       <div className="introtext-box-horiz-flipped">
-         <ReactMarkdown className="para-2" source={data.infocontent.secondpara} />
-         <img src={Icon2} alt="" className="figure" />
-       </div>
-       <div className="introtext-box">
-         <img src={Icon3} alt="" className="figure" />
-         <ReactMarkdown className="para-3" source={data.infocontent.thirdpara} />
-       </div>
+          <img src={Icon1} alt="" className="figure" />
+          {irish ? (
+            <ReactMarkdown
+              className="para-1"
+              source={irishData.infocontentIrish.firstpara}
+            />
+          ) : (
+            <ReactMarkdown
+              className="para-1"
+              source={data.infocontent.firstpara}
+            />
+          )}
+        </div>
+        <div className="introtext-box-horiz-flipped">
+        {irish ? (
+            <ReactMarkdown
+              className="para-1"
+              source={irishData.infocontentIrish.secondpara}
+            />
+          ) : (
+            <ReactMarkdown
+              className="para-1"
+              source={data.infocontent.secondpara}
+            />
+          )}
+          <img src={Icon2} alt="" className="figure" />
+        </div>
+        <div className="introtext-box">
+          <img src={Icon3} alt="" className="figure" />
+          {irish ? (
+            <ReactMarkdown
+              className="para-1"
+              source={irishData.infocontentIrish.thirdpara}
+            />
+          ) : (
+            <ReactMarkdown
+              className="para-1"
+              source={data.infocontent.thirdpara}
+            />
+          )}
+        </div>
         <div className="button-and-pills">
           <Link to="/survey/roleselection/" className="start-btn">
             {irish ? "detrats teg s'tel" : "Let's get started!"}
@@ -69,21 +101,31 @@ const SurveyPage = props => {
 export default SurveyPage
 
 export const query = graphql`
-{
-  allFile(filter: {sourceInstanceName: {eq: "content"}, name: {eq: "infopage1"}}) {
-    edges {
-      node {
-        childMarkdownRemark {
-          frontmatter {
-            infocontent {
-              firstpara
-              secondpara
-              thirdpara
+  {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "content" }
+        name: { in: ["infopage1", "irishinfopage"] }
+      }
+    ) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              infocontent {
+                firstpara
+                secondpara
+                thirdpara
+              }
+              infocontentIrish {
+                firstpara
+                secondpara
+                thirdpara
+              }
             }
           }
         }
       }
     }
   }
-}
 `
