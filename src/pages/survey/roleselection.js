@@ -32,10 +32,10 @@ const RoleSelection = () => {
         <LanguageToggle />
         <SEO
           title={
-            irish ? "Loohcs ta elor ruoy retne" : "Enter Your Role at School"
+            irish ? "Cuir isteach do Ról sa Scoil" : "Enter Your Role at School"
           }
         />
-        <h1>{irish ? "a ma i" : "I am a..."}</h1>
+        <h1>{irish ? "Is…. Mé" : "I am a..."}</h1>
         <img src={BgImg} alt="background design" className="bg-img2" />
         <div className="roles">
           <button
@@ -43,27 +43,27 @@ const RoleSelection = () => {
             className="leader"
             onClick={() => handleUserSubmit("leaders")}
           >
-            {irish ? "Redael Loohcs" : "School Leader"}
+            {irish ? "Ceannaire" : "School Leader"}
           </button>
           <button
             state={{ user: "teachers" }}
             className="teacher"
             onClick={() => handleUserSubmit("teachers")}
           >
-            {irish ? "Rehcaet" : "Teacher"}
+            {irish ? "Múinteoir" : "Teacher"}
           </button>
           <button
             state={{ user: "pupils" }}
             className="pupil"
             onClick={() => handleUserSubmit("pupils")}
           >
-            {irish ? "Lipup" : "Pupil"}
+            {irish ? "Dalta" : "Pupil"}
           </button>
         </div>
         <p className="tagline">
           {" "}
           {irish
-            ? "Loohcs rouy ta elor ruoy sebircsed tseb taht woleb nottub eht kcilc"
+            ? "Cliceáil ar an gcnaipe thíos is fearr a dhéanann cur síos ar do ról feín i do scoil."
             : "Click the button below that best describes your role at your school."}
         </p>
         <div className="role-pills">

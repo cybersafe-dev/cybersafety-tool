@@ -82,7 +82,7 @@ const SurveyPage = props => {
   return (
     <Layout>
       <Header />
-      <SEO title={irish ? "Noitcudortni Yevrus" : "Survey Introduction"} />
+      <SEO title={irish ? "Réamhrá an tSuirbhé" : "Survey Introduction"} />
       <section className="intropage-container">
         <LanguageToggle />
         <h1 className="welcome">{irish ? "Fáilte!" : "Welcome!"}</h1>
@@ -133,7 +133,7 @@ const SurveyPage = props => {
         </div>
         <div className="button-and-pills">
           <Link to="/survey/roleselection/" className="start-btn">
-            {irish ? "detrats teg s'tel" : "Let's get started!"}
+            {irish ? "Irish Get started!" : "Let's get started!"}
           </Link>
           <div className="pills">
             <div className="filled-pill"></div>
