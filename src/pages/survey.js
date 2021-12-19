@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import { ResponseStore } from "../providers/responseProvider"
 import Layout from "../components/layout/layout"
 import Header from "../components/header/header"
@@ -22,9 +22,55 @@ const SurveyPage = props => {
   // eslint-disable-next-line
   const [store, dispatch] = React.useContext(ResponseStore)
   const [irish] = React.useContext(LanguageStore)
-  const data = props.data.allFile.edges[1].node.childMarkdownRemark.frontmatter
+
+  const surveyInfoData = useStaticQuery(graphql`
+    {
+      english: allFile(
+        filter: {
+          sourceInstanceName: { eq: "content" }
+          name: { eq: "infopage1" }
+        }
+      ) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                infocontent {
+                  firstpara
+                  secondpara
+                  thirdpara
+                }
+              }
+            }
+          }
+        }
+      }
+      irish: allFile(
+        filter: {
+          sourceInstanceName: { eq: "content" }
+          name: { eq: "irishinfopage" }
+        }
+      ) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                infocontentIrish {
+                  firstpara
+                  secondpara
+                  thirdpara
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const data = surveyInfoData.english.edges[0].node.childMarkdownRemark.frontmatter
   const irishData =
-    props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+    surveyInfoData.irish.edges[0].node.childMarkdownRemark.frontmatter
 
   React.useEffect(() => {
     dispatch({
@@ -58,7 +104,7 @@ const SurveyPage = props => {
           )}
         </div>
         <div className="introtext-box-horiz-flipped">
-        {irish ? (
+          {irish ? (
             <ReactMarkdown
               className="para-1"
               source={irishData.infocontentIrish.secondpara}
@@ -100,32 +146,3 @@ const SurveyPage = props => {
 }
 export default SurveyPage
 
-export const query = graphql`
-  {
-    allFile(
-      filter: {
-        sourceInstanceName: { eq: "content" }
-        name: { in: ["infopage1", "irishinfopage"] }
-      }
-    ) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              infocontent {
-                firstpara
-                secondpara
-                thirdpara
-              }
-              infocontentIrish {
-                firstpara
-                secondpara
-                thirdpara
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`

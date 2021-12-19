@@ -16,10 +16,10 @@ const SurveyDashMessages = ({
   const allDashMessages = useStaticQuery(
     graphql`
       query {
-        allFile(
+        english: allFile(
           filter: {
             sourceInstanceName: { eq: "content" }
-            name: { in: ["hints", "irishhints"] }
+            name: { eq: "hints" }
           }
         ) {
           edges {
@@ -40,6 +40,21 @@ const SurveyDashMessages = ({
                     categoryRepeat
                     initial
                   }
+                }
+              }
+            }
+          }
+        }
+        irish: allFile(
+          filter: {
+            sourceInstanceName: { eq: "content" }
+            name: { eq: "irishhints" }
+          }
+        ) {
+          edges {
+            node {
+              childMarkdownRemark {
+                frontmatter {
                   dashboardMainIrish {
                     fiveDone
                     fourDone
@@ -67,17 +82,17 @@ const SurveyDashMessages = ({
     let dashboardMain, dashboardMessages
     if (!irish) {
       dashboardMain =
-        allDashMessages.allFile.edges[1].node.childMarkdownRemark.frontmatter
+        allDashMessages.english.edges[0].node.childMarkdownRemark.frontmatter
           .dashboardMain
-          dashboardMessages =
-        allDashMessages.allFile.edges[1].node.childMarkdownRemark.frontmatter
+      dashboardMessages =
+        allDashMessages.english.edges[0].node.childMarkdownRemark.frontmatter
           .dashboardMessages
     } else {
       dashboardMain =
-        allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
+        allDashMessages.irish.edges[0].node.childMarkdownRemark.frontmatter
           .dashboardMainIrish
-          dashboardMessages =
-        allDashMessages.allFile.edges[0].node.childMarkdownRemark.frontmatter
+      dashboardMessages =
+        allDashMessages.irish.edges[0].node.childMarkdownRemark.frontmatter
           .dashboardMessagesIrish
     }
     switch (completedSections.length - 1) {

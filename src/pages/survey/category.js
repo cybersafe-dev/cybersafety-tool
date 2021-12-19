@@ -13,11 +13,15 @@ import BgImg from "../../images/bg-gradient.svg"
 import "../../styling/survey/question.css"
 
 const Category = props => {
-
   const questionMessageData = useStaticQuery(
     graphql`
       query {
-        allFile(filter: {sourceInstanceName: {eq: "content"}, name: {in: ["hints", "irishhints"]}}) {
+        english: allFile(
+          filter: {
+            sourceInstanceName: { eq: "content" }
+            name: { eq: "hints" }
+          }
+        ) {
           edges {
             node {
               childMarkdownRemark {
@@ -33,6 +37,21 @@ const Category = props => {
                     middle
                     penultimate
                   }
+                }
+              }
+            }
+          }
+        }
+        irish: allFile(
+          filter: {
+            sourceInstanceName: { eq: "content" }
+            name: { eq: "irishhints" }
+          }
+        ) {
+          edges {
+            node {
+              childMarkdownRemark {
+                frontmatter {
                   surveyHintsIrish {
                     general
                     last
@@ -63,7 +82,7 @@ const Category = props => {
   React.useEffect(() => {
     if (irish) {
       setSurvey(surveyData.irish)
-      switch(category) {
+      switch (category) {
         case "Digital Knowledge":
           setCategoryTitle("Eolas Digiteach")
           break
@@ -115,12 +134,12 @@ const Category = props => {
           />
         </section>
         <section className="progression">
-        <ProgressBar
-          done={currentQ}
-          sectionLength={sectionLength}
-          questionMessageData={questionMessageData}
-        />
-        <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
+          <ProgressBar
+            done={currentQ}
+            sectionLength={sectionLength}
+            questionMessageData={questionMessageData}
+          />
+          <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
         </section>
       </>
     </Layout>
