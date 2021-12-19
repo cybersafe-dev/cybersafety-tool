@@ -8,6 +8,7 @@ import Rocket from "../../images/rocket.svg"
 
 import "../../styling/survey/thankyou.css"
 
+import LanguageToggle from "../../components/dashboard/languageToggle"
 import { LanguageStore } from "../../providers/languageProvider"
 
 const ThankYou = () => {
@@ -17,6 +18,7 @@ const ThankYou = () => {
     <Layout>
       <Header />
       <SEO title={irish ? "Go raibh maith agat!" : "Thank you!"} />
+      <LanguageToggle />
       <section className="thanku-container">
         <h1 className="thanku-title">
           {irish ? "Go raibh maith agat!" : "Thank you!"}
