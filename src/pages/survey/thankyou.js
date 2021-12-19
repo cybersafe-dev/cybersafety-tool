@@ -16,14 +16,16 @@ const ThankYou = () => {
   return (
     <Layout>
       <Header />
-      <SEO title={irish ? "Uoy knaht!" : "Thank you!"} />
+      <SEO title={irish ? "Go raibh maith agat!" : "Thank you!"} />
       <section className="thanku-container">
-        <h1 className="thanku-title">{irish ? "Uoy knaht!" : "Thank you!"}</h1>
+        <h1 className="thanku-title">
+          {irish ? "Go raibh maith agat!" : "Thank you!"}
+        </h1>
         <img src={BgImg} alt="background design" className="bg-img6" />
         <img src={Rocket} alt="rocket icon" className="design" />
         <p className="thanku-message">
           {irish
-            ? "won wodniw siht esolc nac uoy ,sdiKefaSrebyC ot tnes neeb evah sesnopser ruoY .yevrus eht gnitelpmoc rof uoy knahT"
+            ? "Go raibh maith agat as ucht an suirbhé a chríochnú. Táthar tar éis do chuid freagraí a chur chuig CyberSafeKids, is féidir leat an fhuinneog seo a dhúnadh anois."
             : "Thank you for completing the survey. Your responses have been sent to CyberSafeKids, you can close this window now."}
         </p>
         <a href="https://www.cybersafekids.ie/">
