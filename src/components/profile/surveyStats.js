@@ -4,6 +4,8 @@ import "../../styling/app/surveyStats.css"
 import { getUserDocument, postReportToDb } from "../../firebase"
 import { createReport } from "../../templates/reportTemplate"
 
+import { LanguageStore } from "../../providers/languageProvider"
+
 import SurveyQuotaBox from "./surveyQuotaBox"
 
 const SurveyStats = ({
@@ -16,6 +18,7 @@ const SurveyStats = ({
   const [currentScores, setCurrentScores] = React.useState(null)
   const [error, setError] = React.useState(null)
   const [submitting, setSubmitting] = React.useState(false)
+  const [irish] = React.useContext(LanguageStore)
 
   React.useEffect(() => {
     const getScores = async () => {
@@ -66,36 +69,34 @@ const SurveyStats = ({
   return (
     <section className="survey-stats">
       <section className="leaders-box">
-        <SurveyQuotaBox
-          userType={"School Leaders"}
-          scores={leadersFilledSurveys}
-          quota={leadersQuota}
-        />
+          <SurveyQuotaBox
+            userType={"School Leaders"}
+            scores={leadersFilledSurveys}
+            quota={leadersQuota}
+          />
       </section>
       <section className="teachers-box">
-        <SurveyQuotaBox
-          userType={"Teachers"}
-          scores={teachersFilledSurveys}
-          quota={teachersQuota}
-        />
+          <SurveyQuotaBox
+            userType={"Teachers"}
+            scores={teachersFilledSurveys}
+            quota={teachersQuota}
+          />
       </section>
       <section className="pupils-box">
-        <SurveyQuotaBox
-          userType={"Pupils"}
-          scores={pupilsFilledSurveys}
-          quota={pupilsQuota}
-        />
+          <SurveyQuotaBox
+            userType={"Pupils"}
+            scores={pupilsFilledSurveys}
+            quota={pupilsQuota}
+          />
       </section>
       {leadersFilledSurveys >= leadersQuota &&
       teachersFilledSurveys >= teachersQuota &&
       pupilsFilledSurveys >= pupilsQuota ? (
         submitting ? (
-          <button className="final-submit-btn-processing">
-            Processing...
-          </button>
+          <button className="final-submit-btn-processing">Processing...</button>
         ) : (
           <button className="final-submit-btn" onClick={handleFinalSubmit}>
-            Submit
+            {irish ? "Cuir Isteach" : "Submit"}
           </button>
         )
       ) : null}
