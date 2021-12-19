@@ -55,7 +55,7 @@ const SubmitButton = ({ setError }) => {
 
   return (
     <button className="submit-btn" onClick={handleSubmission}>
-      {irish ? "Timbus" : "Submit"}
+      {irish ? "Cuir Isteach" : "Submit"}
     </button>
   )
 }
