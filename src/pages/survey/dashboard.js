@@ -36,8 +36,8 @@ const Dashboard = ({ data }) => {
   const [bufferModalVisible, toggle] = React.useState(true)
 
   const surveyAllData = {
-    englishSurvey: data.allFile.edges[1].node.childMarkdownRemark.frontmatter.survey,
-    irishSurvey: data.allFile.edges[0].node.childMarkdownRemark.frontmatter.surveyIrish
+    englishSurvey: data.english.edges[0].node.childMarkdownRemark.frontmatter.survey,
+    irishSurvey: data.irish.edges[0].node.childMarkdownRemark.frontmatter.surveyIrish
   }
 
   if (!store || !store.userType || !store.schoolId) {
@@ -254,247 +254,130 @@ const Dashboard = ({ data }) => {
 export default Dashboard
 
 export const query = graphql`
-  {
-    allFile(
-      filter: {
-        sourceInstanceName: { eq: "content" }
-        name: { in: ["survey", "irishsurvey"] }
-      }
-    ) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              survey {
-                leaders {
-                  communication {
-                    responses {
-                      answer
-                    }
-                    statement
+{
+  english: allFile(
+    filter: {
+      sourceInstanceName: { eq: "content" }
+      name: { eq: "survey" }
+    }
+  ) {
+    edges {
+      node {
+        childMarkdownRemark {
+          frontmatter {
+            survey {
+              leaders {
+                communication {
+                  responses {
+                    answer
                   }
-                  criticalthinking {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  digitalknowledge {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  onlinelife {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  privacy {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  responsibleuse {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
+                  statement
                 }
-                pupils {
-                  communication {
-                    responses {
-                      answer
-                    }
-                    statement
+                criticalthinking {
+                  responses {
+                    answer
                   }
-                  criticalthinking {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  digitalknowledge {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  onlinelife {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  privacy {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  responsibleuse {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
+                  statement
                 }
-                teachers {
-                  communication {
-                    responses {
-                      answer
-                    }
-                    statement
+                digitalknowledge {
+                  responses {
+                    answer
                   }
-                  criticalthinking {
-                    responses {
-                      answer
-                    }
-                    statement
+                  statement
+                }
+                onlinelife {
+                  responses {
+                    answer
                   }
-                  digitalknowledge {
-                    responses {
-                      answer
-                    }
-                    statement
+                  statement
+                }
+                privacy {
+                  responses {
+                    answer
                   }
-                  onlinelife {
-                    responses {
-                      answer
-                    }
-                    statement
+                  statement
+                }
+                responsibleuse {
+                  responses {
+                    answer
                   }
-                  privacy {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  responsibleuse {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
+                  statement
                 }
               }
-              surveyIrish {
-                leaders {
-                  communication {
-                    responses {
-                      answer
-                    }
-                    statement
+              pupils {
+                communication {
+                  responses {
+                    answer
                   }
-                  criticalthinking {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  digitalknowledge {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  onlinelife {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  privacy {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  responsibleuse {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
+                  statement
                 }
-                pupils {
-                  communication {
-                    responses {
-                      answer
-                    }
-                    statement
+                criticalthinking {
+                  responses {
+                    answer
                   }
-                  criticalthinking {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  digitalknowledge {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  onlinelife {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  privacy {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
-                  responsibleuse {
-                    responses {
-                      answer
-                    }
-                    statement
-                  }
+                  statement
                 }
-                teachers {
-                  communication {
-                    responses {
-                      answer
-                    }
-                    statement
+                digitalknowledge {
+                  responses {
+                    answer
                   }
-                  criticalthinking {
-                    responses {
-                      answer
-                    }
-                    statement
+                  statement
+                }
+                onlinelife {
+                  responses {
+                    answer
                   }
-                  digitalknowledge {
-                    responses {
-                      answer
-                    }
-                    statement
+                  statement
+                }
+                privacy {
+                  responses {
+                    answer
                   }
-                  onlinelife {
-                    responses {
-                      answer
-                    }
-                    statement
+                  statement
+                }
+                responsibleuse {
+                  responses {
+                    answer
                   }
-                  privacy {
-                    responses {
-                      answer
-                    }
-                    statement
+                  statement
+                }
+              }
+              teachers {
+                communication {
+                  responses {
+                    answer
                   }
-                  responsibleuse {
-                    responses {
-                      answer
-                    }
-                    statement
+                  statement
+                }
+                criticalthinking {
+                  responses {
+                    answer
                   }
+                  statement
+                }
+                digitalknowledge {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                onlinelife {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                privacy {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                responsibleuse {
+                  responses {
+                    answer
+                  }
+                  statement
                 }
               }
             }
@@ -503,4 +386,136 @@ export const query = graphql`
       }
     }
   }
+irish: allFile(
+    filter: {
+      sourceInstanceName: { eq: "content" }
+      name: { eq: "irishsurvey" }
+    }
+  ) {
+    edges {
+      node {
+        childMarkdownRemark {
+          frontmatter {
+            surveyIrish {
+              leaders {
+                communication {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                criticalthinking {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                digitalknowledge {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                onlinelife {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                privacy {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                responsibleuse {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+              }
+              pupils {
+                communication {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                criticalthinking {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                digitalknowledge {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                onlinelife {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                privacy {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                responsibleuse {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+              }
+              teachers {
+                communication {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                criticalthinking {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                digitalknowledge {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                onlinelife {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                privacy {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+                responsibleuse {
+                  responses {
+                    answer
+                  }
+                  statement
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 `

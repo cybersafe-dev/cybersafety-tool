@@ -9,7 +9,7 @@ const CategoryProgress = ({ currentQ, sectionLength }) => {
   return (
     <section>
       <div className="catprogress-container">
-        <p className="catprogress-title">{irish ? "Cheist" : "Question"}</p>
+        <p className="catprogress-title">{irish ? "Ceist" : "Question"}</p>
         <p className="catprogress-fraction">
           {currentQ + 1}/{sectionLength}
         </p>

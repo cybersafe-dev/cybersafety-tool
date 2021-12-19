@@ -12,11 +12,11 @@ const ProgressBar = ({ done, sectionLength, questionMessageData }) => {
 
     if (!irish) {
       surveyProgress =
-        questionMessageData.allFile.edges[1].node.childMarkdownRemark
+        questionMessageData.english.edges[0].node.childMarkdownRemark
           .frontmatter.surveyProgress
     } else {
       surveyProgress =
-        questionMessageData.allFile.edges[0].node.childMarkdownRemark
+        questionMessageData.irish.edges[0].node.childMarkdownRemark
           .frontmatter.surveyProgressIrish
     }
 
