@@ -13,7 +13,7 @@ const SurveyProgress = ({ completedSections, setError }) => {
         {completedSections.length - 1} <span className="slash">/</span> 6
       </h1>
       <p className="fraction-text">
-        {irish ? "Detelpmoc seirogetac" : "categories completed"}
+        {irish ? "Catagóirí críochnaithe" : "categories completed"}
       </p>
       {completedSections.length - 1 === 6 ? (
         <SubmitButton setError={setError} />

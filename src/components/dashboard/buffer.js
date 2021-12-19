@@ -9,14 +9,17 @@ const Buffer = ({ bufferModalVisible, toggle }) => {
   return (
     <div className="buffer-container">
       <div className="buffer-content">
-        <h2>{irish ? "Egassem kciuq a tsuj..." : "Just a quick message..."}</h2>
+        <h2>
+          {irish ? "Teachtaireacht sciobtha…." : "Just a quick message..."}
+        </h2>
         <p>
-          {irish ? "" : ""}You will have one opportunity to answer each
-          question.
+          {irish
+            ? "Beidh deis amháin agat gach ceist a fhreagairt."
+            : "You will have one opportunity to answer each question."}
         </p>
         <p>
           {irish
-            ? "Tseb noinipo ruoy sehctam hcihw rewsna eht tceles ylluferac stnemetats eht daer esaelp"
+            ? "Léigh go cúramh na ráitis le do thoill agus roghnaigh an freagra is fearr a chloíonn le do thuairim féin!"
             : "Please read the statements carefully and select the answer which matches your opinion best!"}
         </p>
       </div>
@@ -24,7 +27,7 @@ const Buffer = ({ bufferModalVisible, toggle }) => {
         onClick={() => toggle(!bufferModalVisible)}
         className="buffer-btn"
       >
-        {irish ? "retne" : "enter"}
+        {irish ? "Irish enter" : "enter"}
       </button>
     </div>
   )
