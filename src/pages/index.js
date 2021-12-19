@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/layout"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/seo"
 import "../styling/app/index.css"
@@ -30,9 +30,61 @@ const MiniSite = props => {
   const [privacyModalVisible, toggle] = React.useState(true)
   const [irish] = React.useContext(LanguageStore)
 
-  const data = props.data.allFile.edges[1].node.childMarkdownRemark.frontmatter
+  const miniSiteData = useStaticQuery(
+    graphql`
+    {
+      english: allFile(
+        filter: {
+          sourceInstanceName: { eq: "content" }
+          name: { eq: "minisite" }
+        }
+      ) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                minisitecontent {
+                  tool
+                  awards
+                  levels
+                  pricing
+                  aboutus
+                }
+              }
+            }
+          }
+        }
+      }
+      irish: allFile(
+        filter: {
+          sourceInstanceName: { eq: "content" }
+          name: { eq: "irishminisite" }
+        }
+      ) {
+        edges {
+          node {
+            childMarkdownRemark {
+              frontmatter {
+                minisitecontentIrish {
+                  aboutus
+                  awards
+                  levels
+                  pricing
+                  tool
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    `
+  )
+
+  const data =
+    miniSiteData.english.edges[0].node.childMarkdownRemark.frontmatter
   const irishData =
-    props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+    miniSiteData.irish.edges[0].node.childMarkdownRemark.frontmatter
 
   return (
     <Layout>
@@ -270,36 +322,36 @@ const MiniSite = props => {
 }
 export default MiniSite
 
-export const query = graphql`
-  {
-    allFile(
-      filter: {
-        sourceInstanceName: { eq: "content" }
-        name: { in: ["minisite", "irishminisite"] }
-      }
-    ) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              minisitecontent {
-                tool
-                awards
-                levels
-                pricing
-                aboutus
-              }
-              minisitecontentIrish {
-                aboutus
-                awards
-                levels
-                pricing
-                tool
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     allFile(
+//       filter: {
+//         sourceInstanceName: { eq: "content" }
+//         name: { in: ["minisite", "irishminisite"] }
+//       }
+//     ) {
+//       edges {
+//         node {
+//           childMarkdownRemark {
+//             frontmatter {
+//               minisitecontent {
+//                 tool
+//                 awards
+//                 levels
+//                 pricing
+//                 aboutus
+//               }
+//               minisitecontentIrish {
+//                 aboutus
+//                 awards
+//                 levels
+//                 pricing
+//                 tool
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
