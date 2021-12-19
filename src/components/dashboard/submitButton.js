@@ -40,13 +40,13 @@ const SubmitButton = ({ setError }) => {
       navigate("/survey/thankyou/")
     } else if (updateStatus === "quota filled") {
       irish
-        ? setError(`Enough surverys error in Irish for ${userType}.`)
+        ? setError(`Ár leithscéal, is cosúil go bhfuil a dóthain suirbhéanna críochnaithe ag scoil i gcomhair… cheana féin: ${userType}.`)
         : setError(
             `Sorry, it looks like your school already has enough completed surveys for ${userType}.`
           )
     } else {
       irish
-        ? setError(`Survey upload internal error in Irish.`)
+        ? setError(`Ár leithscéal, bhí earráid ann agus do suirbhé á uaslódáil. Bain úsáid as an nasc iomlán a cuireadh chugat chun an suribhé a thosú arís le do thoil.`)
         : setError(
             "Sorry, there was an error uploading your survey. Please begin again from the full link you were sent."
           )
