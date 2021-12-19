@@ -322,36 +322,3 @@ const MiniSite = props => {
 }
 export default MiniSite
 
-// export const query = graphql`
-//   {
-//     allFile(
-//       filter: {
-//         sourceInstanceName: { eq: "content" }
-//         name: { in: ["minisite", "irishminisite"] }
-//       }
-//     ) {
-//       edges {
-//         node {
-//           childMarkdownRemark {
-//             frontmatter {
-//               minisitecontent {
-//                 tool
-//                 awards
-//                 levels
-//                 pricing
-//                 aboutus
-//               }
-//               minisitecontentIrish {
-//                 aboutus
-//                 awards
-//                 levels
-//                 pricing
-//                 tool
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
