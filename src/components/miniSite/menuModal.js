@@ -2,8 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import "../../styling/app/mininavbar.css"
 import xBtn from "../../images/x-icon.svg"
+import { LanguageStore } from "../../providers/languageProvider"
 
 const MenuModal = ({ toggleMenuModal, menuModalVisible }) => {
+  const [irish] = React.useContext(LanguageStore)
+
   return (
     <nav className="menu-modal-container">
       <button
@@ -14,22 +17,22 @@ const MenuModal = ({ toggleMenuModal, menuModalVisible }) => {
       </button>
      
       <Link to="/#tool" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
-        The Tool
+        {irish ? "An Uirlis" : "The Tool"}
       </Link>
       <Link to="/#awards" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
-        Awards
+      {irish ? "Gradaim" : "Awards"}
       </Link>
       <Link to="/#levels" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
-        Levels
+        {irish ? "Leibhéil" : "Levels"}
       </Link>
       <Link to="/#pricing" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
-        Pricing
+        {irish ? "Praghsáil" : "Pricing"}
       </Link>
       <Link to="/#about" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
-        About Us
+        {irish ? "Eolas Fúinn" : "About Us"}
       </Link>
       <Link to="/#contact-us" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
-        Contact Us
+        {irish ? "Teagmháil" : "Contact Us"}
       </Link>
     </nav>
   )

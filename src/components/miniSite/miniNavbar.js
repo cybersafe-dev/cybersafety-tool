@@ -3,10 +3,12 @@ import Logo from "../../images/cybersafekids-logo.png"
 import "../../styling/app/mininavbar.css"
 import { Link } from "gatsby"
 import { userStore } from "../../providers/userProvider"
+import { LanguageStore } from "../../providers/languageProvider"
 import MiniNavbarMobile from "./miniNavbarMobile"
 
 const MiniNavbar = () => {
   const [user] = React.useContext(userStore)
+  const [irish] = React.useContext(LanguageStore)
 
   const [isDesktop, setDesktop] = React.useState(false)
 
@@ -36,30 +38,30 @@ const MiniNavbar = () => {
         <img src={Logo} alt="cybersafe logo" className="nav-logo" />
         <div className="nav-links">
           <Link to="/#tool" className="nav">
-            The Tool
+            {irish ? "An Uirlis" : "The Tool"}
           </Link>
           <Link to="/#awards" className="nav">
-            Awards
+            {irish ? "Gradaim" : "Awards"}
           </Link>
           <Link to="/#levels" className="nav">
-            Levels
+            {irish ? "Leibhéil" : "Levels"}
           </Link>
           <Link to="/#pricing" className="nav">
-          Pricing
+            {irish ? "Praghsáil" : "Pricing"}
           </Link>
           <Link to="/#about" className="nav">
-          About Us
+            {irish ? "Eolas Fúinn" : "About Us"}
           </Link>
           <Link to="/#contact-us" className="nav">
-            Contact Us
+            {irish ? "Teagmháil" : "Contact Us"}
           </Link>
           {user ? (
             <Link to="/app/login" className="started-nav">
-              Log in
+              {irish ? "Logáil Isteach" : "Log in"}
             </Link>
           ) : (
             <Link to="/app/signup" className="started-nav">
-              Get Started
+              {irish ? "Cuir tú leis" : "Get Started"}
             </Link>
           )}
         </div>
