@@ -44,7 +44,11 @@ const Signup = () => {
       setRollNumber(Math.floor(Math.random() * 100000) + 1)
     }
     if (!firstName || !lastName || !schoolName || !pupilCount) {
-      setError("Please fill in all the form fields with asterisks")
+      if (!irish) {
+        setError("Please fill in all the form fields with asterisks")
+      } else {
+        setError("Líon isteach gach réimse a bhfuil réiltín air")
+      }
       setTimeout(() => {
         setError(null)
       }, 3000)
