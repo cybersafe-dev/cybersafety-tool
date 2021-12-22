@@ -8,7 +8,6 @@ import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
 
 import { LanguageStore } from "../../providers/languageProvider"
-import LanguageToggle from "../../components/dashboard/languageToggle"
 
 const PasswordReset = () => {
   const [email, setEmail] = React.useState("")
@@ -48,7 +47,6 @@ const PasswordReset = () => {
   return (
     <section className="page-container">
       <SEO title={irish ? "Pashfocal caillte" : "Lost Password"} />
-      <LanguageToggle />
       <h1 className="">{irish ? "Pashfocal caillte" : "Lost Password"}</h1>
       <p className="instruction">
         {irish
