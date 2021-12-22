@@ -119,29 +119,29 @@ const Category = props => {
 
   return (
     <Layout>
-      <>
-        <img src={BgImg} alt="background design" className="bg-img-q" />
+      <img src={BgImg} alt="background design" className="bg-img-q" />
+      <div className="category-header">
         <h1 className="question-title">{categoryTitle}</h1>
         <LanguageToggle />
-        <section className="question-container">
-          <Question
-            survey={survey}
-            category={category}
-            currentQ={currentQ}
-            setCurrentQ={setCurrentQ}
-            sectionLength={sectionLength}
-            questionMessageData={questionMessageData}
-          />
-        </section>
-        <section className="progression">
-          <ProgressBar
-            done={currentQ}
-            sectionLength={sectionLength}
-            questionMessageData={questionMessageData}
-          />
-          <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
-        </section>
-      </>
+      </div>
+      <section className="question-container">
+        <Question
+          survey={survey}
+          category={category}
+          currentQ={currentQ}
+          setCurrentQ={setCurrentQ}
+          sectionLength={sectionLength}
+          questionMessageData={questionMessageData}
+        />
+      </section>
+      <section className="progression">
+        <ProgressBar
+          done={currentQ}
+          sectionLength={sectionLength}
+          questionMessageData={questionMessageData}
+        />
+        <CategoryProgress currentQ={currentQ} sectionLength={sectionLength} />
+      </section>
     </Layout>
   )
 }
