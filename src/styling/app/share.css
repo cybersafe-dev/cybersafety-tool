@@ -18,12 +18,12 @@
 .copy-btn {
   background: #29788a !important;
   color: white;
-  width: 80px;
   font-weight: 600;
   border: none;
   outline: none;
   cursor: pointer;
   margin: 0;
+  padding: 0 15px;
   border-radius: 10px 10px 0 0;
 }
 
