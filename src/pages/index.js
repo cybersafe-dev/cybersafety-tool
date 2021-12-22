@@ -5,7 +5,6 @@ import ReactMarkdown from "react-markdown"
 import SEO from "../components/seo"
 import "../styling/app/index.css"
 
-import LanguageToggle from "../components/dashboard/languageToggle"
 import { LanguageStore } from "../providers/languageProvider"
 
 import MiniNavbar from "../components/miniSite/miniNavbar"
@@ -97,8 +96,6 @@ const MiniSite = props => {
       <MiniNavbar />
       <SEO title={irish ? "Baile" : "Home"} />
       <section className="section-container">
-        <LanguageToggle />
-
         <div id="tool">
           <div className="section">
             <h1 className="section-title-hidden">CyberSafe Tool for Schools</h1>

@@ -3,6 +3,7 @@ import "../../styling/survey/dashboard.css"
 import { graphql, useStaticQuery } from "gatsby"
 import Timer from "../../components/dashboard/timer"
 import { LanguageStore } from "../../providers/languageProvider"
+import LanguageToggle from "./languageToggle"
 
 const SurveyDashMessages = ({
   message,
@@ -130,10 +131,15 @@ const SurveyDashMessages = ({
   return (
     <>
       <div className="top-line">
-        <h1 className="title">{dashTitle}</h1>
-        <Timer className="timer-space" />
+        <div className="dashboard-messaging">
+          <h1 className="title">{dashTitle}</h1>
+          <p className="explain">{message}</p>
+        </div>
+        <div className="dashboard-utils">
+          <LanguageToggle />
+          <Timer className="timer-space" />
+        </div>
       </div>
-      <p className="explain">{message}</p>
       <p className="dash-error">{error}</p>
     </>
   )

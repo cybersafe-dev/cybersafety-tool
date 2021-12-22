@@ -1,7 +1,15 @@
+.category-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.6rem;
+}
+
 .question-title {
   text-align: left;
-  margin: 1rem;
   max-width: 100%;
+  margin: 0.4rem;
 }
 
 .question-container {
@@ -80,7 +88,15 @@
 
 
 @media only screen and (max-width: 768px){
+  .category-header {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0.6rem;
+  }
+
   .question-title {
+    align-self: center;
     text-align: center;
     font-size: 2rem;
     margin-top: 2rem;
@@ -114,7 +130,7 @@
   .tip {
     width: 100%;
     padding: 0 1rem;
-    margin-top: 1rem;
+    margin-top: 0;
   }
   .progression {
     display: flex;

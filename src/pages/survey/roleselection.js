@@ -9,7 +9,6 @@ import BgImg from "../../images/bg-gradient.svg"
 
 import "../../styling/survey/roleselection.css"
 
-import LanguageToggle from "../../components/dashboard/languageToggle"
 import { LanguageStore } from "../../providers/languageProvider"
 
 const RoleSelection = () => {
@@ -29,7 +28,6 @@ const RoleSelection = () => {
     <Layout>
       <Header />
       <section className="selection-container">
-        <LanguageToggle />
         <SEO
           title={
             irish ? "Cuir isteach do Ról sa Scoil" : "Enter Your Role at School"

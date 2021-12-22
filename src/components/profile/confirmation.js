@@ -5,7 +5,6 @@ import SEO from "../../components/seo"
 import BgImg from "../../images/eoi-bg.svg"
 import High5 from "../../images/mini-thanku.svg"
 
-import LanguageToggle from "../dashboard/languageToggle"
 import { LanguageStore } from "../../providers/languageProvider"
 
 import "../../styling/survey/thankyou.css"
@@ -19,7 +18,6 @@ const Confirmation = () => {
       <h1 className="thanku-title">
         {irish ? "Go raibh maith agat!" : "Thank you!"}
       </h1>
-      <LanguageToggle />
       <section className="thanku-container">
         <img src={BgImg} alt="background design" className="bg-img9" />
         <img src={High5} alt="high-five icon" className="design" />

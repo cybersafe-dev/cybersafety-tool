@@ -5,7 +5,6 @@ import useFirebase from "../../firebase"
 import { userStore } from "../../providers/userProvider"
 import { LanguageStore } from "../../providers/languageProvider"
 import SEO from "../seo"
-import LanguageToggle from "../../components/dashboard/languageToggle"
 
 import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
@@ -55,7 +54,6 @@ const Login = () => {
     <section className="page-container">
       <SEO title={irish ? "Logáil isteach" : "Log In"} />
       <h1 className="text-center">{irish ? "Logáil isteach" : "Log In"}</h1>
-      <LanguageToggle />
       <p className="instruction">
         {irish
           ? "Lógáil isteach thíos chun deais do scoile a fheiceáil"

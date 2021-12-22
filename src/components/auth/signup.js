@@ -5,7 +5,6 @@ import { addNewSalesforceLead } from "../../salesforce"
 
 import { userStore } from "../../providers/userProvider"
 import { LanguageStore } from "../../providers/languageProvider"
-import LanguageToggle from "../../components/dashboard/languageToggle"
 
 import SEO from "../seo"
 
@@ -114,7 +113,6 @@ const Signup = () => {
     <section className="page-container-long-form">
       <SEO title={irish ? "Cláraigh" : "Sign Up"} />
       <h1 className="">{irish ? "Cláraigh" : "Sign Up"}</h1>
-      <LanguageToggle />
       <p className="instruction">
         {irish
           ? "Líon amach an fhoirm thíos le do thoil chun cuntas riarthóra a chruthú le haghaidh ár n-uirlis fhéinmheasaithe."

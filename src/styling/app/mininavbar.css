@@ -7,9 +7,8 @@
   height: 15vh;
   top: 0;
   position: fixed;
-  padding: 3rem 10vw 0 10vw;
+  padding: 0 10vw;
   font-size: 0.8rem;
-  padding-bottom: 1rem;
   overflow: hidden;
 }
 

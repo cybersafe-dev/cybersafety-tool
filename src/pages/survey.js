@@ -14,7 +14,6 @@ import Half from "../images/half.svg"
 
 import "../styling/survey/survey.css"
 
-import LanguageToggle from "../components/dashboard/languageToggle"
 import { LanguageStore } from "../providers/languageProvider"
 
 const SurveyPage = props => {
@@ -84,7 +83,6 @@ const SurveyPage = props => {
       <Header />
       <SEO title={irish ? "Réamhrá an tSuirbhé" : "Survey Introduction"} />
       <section className="intropage-container">
-        <LanguageToggle />
         <h1 className="welcome">{irish ? "Fáilte!" : "Welcome!"}</h1>
         <img src={BgImg} alt="background design" className="bg1" />
         <img src={Half} alt="background design" className="bg2" />

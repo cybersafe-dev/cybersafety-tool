@@ -4,6 +4,7 @@ import "../../styling/app/mininavbar.css"
 import { Link } from "gatsby"
 import { userStore } from "../../providers/userProvider"
 import { LanguageStore } from "../../providers/languageProvider"
+import LanguageToggle from "../../components/dashboard/languageToggle"
 import MiniNavbarMobile from "./miniNavbarMobile"
 
 const MiniNavbar = () => {
@@ -64,6 +65,7 @@ const MiniNavbar = () => {
               {irish ? "Cuir tú leis" : "Get Started"}
             </Link>
           )}
+          <LanguageToggle />
         </div>
       </div>
     </>

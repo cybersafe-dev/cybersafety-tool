@@ -10,10 +10,12 @@
 
 .admin-dash-heading-reporting {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0;
+  right: 0;
   text-align: right;
+  padding: 0.6rem;
   max-width: 70vw;
+  background-color: white;
 }
 
 .descriptive-title {
