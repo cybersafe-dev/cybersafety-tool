@@ -32,52 +32,52 @@ const MiniSite = props => {
 
   const miniSiteData = useStaticQuery(
     graphql`
-    {
-      english: allFile(
-        filter: {
-          sourceInstanceName: { eq: "content" }
-          name: { eq: "minisite" }
+      {
+        english: allFile(
+          filter: {
+            sourceInstanceName: { eq: "content" }
+            name: { eq: "minisite" }
+          }
+        ) {
+          edges {
+            node {
+              childMarkdownRemark {
+                frontmatter {
+                  minisitecontent {
+                    tool
+                    awards
+                    levels
+                    pricing
+                    aboutus
+                  }
+                }
+              }
+            }
+          }
         }
-      ) {
-        edges {
-          node {
-            childMarkdownRemark {
-              frontmatter {
-                minisitecontent {
-                  tool
-                  awards
-                  levels
-                  pricing
-                  aboutus
+        irish: allFile(
+          filter: {
+            sourceInstanceName: { eq: "content" }
+            name: { eq: "irishminisite" }
+          }
+        ) {
+          edges {
+            node {
+              childMarkdownRemark {
+                frontmatter {
+                  minisitecontentIrish {
+                    aboutus
+                    awards
+                    levels
+                    pricing
+                    tool
+                  }
                 }
               }
             }
           }
         }
       }
-      irish: allFile(
-        filter: {
-          sourceInstanceName: { eq: "content" }
-          name: { eq: "irishminisite" }
-        }
-      ) {
-        edges {
-          node {
-            childMarkdownRemark {
-              frontmatter {
-                minisitecontentIrish {
-                  aboutus
-                  awards
-                  levels
-                  pricing
-                  tool
-                }
-              }
-            }
-          }
-        }
-      }
-    }
     `
   )
 
@@ -95,7 +95,7 @@ const MiniSite = props => {
         />
       )}
       <MiniNavbar />
-      <SEO title="Home" />
+      <SEO title={irish ? "Baile" : "Home"} />
       <section className="section-container">
         <LanguageToggle />
 
@@ -123,9 +123,18 @@ const MiniSite = props => {
         </div>
         <div id="awards">
           <div className="section">
-            <h2 className="section-title">
-              Awards: <span className="italics">Why use the tool?</span>
-            </h2>
+            {irish ? (
+              <h2 className="section-title">
+                Gradaim:{" "}
+                <span className="italics">
+                  Cén fáth gur fiú an uirlis a úsáid?
+                </span>
+              </h2>
+            ) : (
+              <h2 className="section-title">
+                Awards: <span className="italics">Why use the tool?</span>
+              </h2>
+            )}
             {irish ? (
               <ReactMarkdown
                 className="site-text"
@@ -142,9 +151,15 @@ const MiniSite = props => {
         </div>
         <div id="levels">
           <div className="section">
-            <h2 className="section-title">
-              Levels: <span className="italics">What are they?</span>
-            </h2>
+            {irish ? (
+              <h2 className="section-title">
+                Na Leibhéil: <span className="italics">Céard iad?</span>
+              </h2>
+            ) : (
+              <h2 className="section-title">
+                Levels: <span className="italics">What are they?</span>
+              </h2>
+            )}
             {irish ? (
               <ReactMarkdown
                 className="site-text"
@@ -169,9 +184,15 @@ const MiniSite = props => {
         </div>
         <div id="pricing">
           <div className="section">
-            <h2 className="section-title">
-              Pricing: <span className="italics">How much does it cost?</span>
-            </h2>
+            {irish ? (
+              <h2 className="section-title">
+                Praghasáil: <span className="italics">Cé mhéad atá air?</span>
+              </h2>
+            ) : (
+              <h2 className="section-title">
+                Pricing: <span className="italics">How much does it cost?</span>
+              </h2>
+            )}
             {irish ? (
               <ReactMarkdown
                 className="site-text"
@@ -222,9 +243,15 @@ const MiniSite = props => {
 
         <div id="about">
           <div className="section">
-            <h2 className="section-title">
-              About us: <span className="italics">Who are we?</span>
-            </h2>
+            {irish ? (
+              <h2 className="section-title">
+                Eolas fúinn: <span className="italics">Cé muid?</span>
+              </h2>
+            ) : (
+              <h2 className="section-title">
+                About us: <span className="italics">Who are we?</span>
+              </h2>
+            )}
             {irish ? (
               <ReactMarkdown
                 className="site-text"
@@ -242,7 +269,7 @@ const MiniSite = props => {
       </section>
 
       <div id="contact-us">
-        <h2 className="section-title">Contact</h2>
+        <h2 className="section-title">{irish ? "Teaghmháil" : "Contact"}</h2>
         <div className="contact-section">
           <div className="contact-details">
             <img src={Blogo} alt="black-logo" className="blk-logo" />
@@ -264,7 +291,7 @@ const MiniSite = props => {
               target="_blank"
               rel="noreferrer"
             >
-              Main Site
+              {irish ? "Príomhshuíomh" : "Main Site"}
             </a>
             <a
               className="csi-link"
@@ -272,7 +299,7 @@ const MiniSite = props => {
               target="_blank"
               rel="noreferrer"
             >
-              Privacy Policy
+              {irish ? "Polasaí Príobháideachais" : "Privacy Policy"}
             </a>
             <div className="socials">
               <a
@@ -321,4 +348,3 @@ const MiniSite = props => {
   )
 }
 export default MiniSite
-

@@ -7,10 +7,14 @@ import SEO from "../seo"
 import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
 
+import { LanguageStore } from "../../providers/languageProvider"
+import LanguageToggle from "../../components/dashboard/languageToggle"
+
 const PasswordReset = () => {
   const [email, setEmail] = React.useState("")
   const [emailHasBeenSent, setEmailHasBeenSent] = React.useState(false)
   const [error, setError] = React.useState(null)
+  const [irish] = React.useContext(LanguageStore)
 
   const firebase = useFirebase()
 
@@ -43,26 +47,28 @@ const PasswordReset = () => {
   }
   return (
     <section className="page-container">
-      <SEO title="Lost Password" />
-      <h1 className="">Lost Password</h1>
+      <SEO title={irish ? "Pashfocal caillte" : "Lost Password"} />
+      <LanguageToggle />
+      <h1 className="">{irish ? "Pashfocal caillte" : "Lost Password"}</h1>
       <p className="instruction">
-        Enter the email attached to your school account below to receive a
-        password reset email
+        {irish
+          ? "Cuir isteach an seoladh ríomhphoist a bhaineann le do chuntas scoile san áit chuí thíos chun ríomhphost a fháil chun do phasfhocal a athshocrú."
+          : "Enter the email attached to your school account below to receive a password reset email."}
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
       <form action="" className="central-form">
         {emailHasBeenSent && (
-          <div className="">An email has been sent to you!</div>
+          <div className="">A password reset email has been sent to you!</div>
         )}
 
-        <label htmlFor="userEmail" className="">
-          Email:
+        <label htmlFor="userEmail" className="block">
+          {irish ? "Ríomhphost:" : "Email:"}
           <input
             type="email"
             name="userEmail"
             id="userEmail"
             value={email}
-            placeholder="Enter email"
+            placeholder={irish ? "Cuir isteach do ríomphost" : "Enter email"}
             onChange={onChangeHandler}
             className="login-input"
           />
@@ -75,17 +81,26 @@ const PasswordReset = () => {
             sendResetEmail(event)
           }}
         >
-          Send me a reset link
+          {irish ? "Cuir nasc athshocraithe chugam" : "Send me a reset link"}
         </button>
       </form>
 
       <div className="other-options">
-        <p className="">
-          Don't have an account?{" "}
-          <Link to="/app/signup" className="">
-            Sign up here
-          </Link>{" "}
-        </p>
+        {irish ? (
+          <p className="">
+            Níl cuntas agat?{" "}
+            <Link to="/app/signup" className="">
+              Cláraigh anseo
+            </Link>{" "}
+          </p>
+        ) : (
+          <p className="">
+            Don't have an account?{" "}
+            <Link to="/app/signup" className="">
+              Sign up here
+            </Link>{" "}
+          </p>
+        )}
       </div>
     </section>
   )

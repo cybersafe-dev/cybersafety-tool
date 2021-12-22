@@ -4,6 +4,9 @@ import useFirebase from "../../firebase"
 import { addNewSalesforceLead } from "../../salesforce"
 
 import { userStore } from "../../providers/userProvider"
+import { LanguageStore } from "../../providers/languageProvider"
+import LanguageToggle from "../../components/dashboard/languageToggle"
+
 import SEO from "../seo"
 
 import "../../styling/app/formPages.css"
@@ -27,6 +30,7 @@ const Signup = () => {
     rollNumber,
     setRollNumber,
   ] = React.useContext(userStore)
+  const [irish] = React.useContext(LanguageStore)
 
   if (user) {
     navigate("/app")
@@ -37,9 +41,14 @@ const Signup = () => {
   const validateSignupForm = () => {
     if (honeypot) return false
     if (!rollNumber) {
-      setRollNumber(Math.floor(Math.random() * 100000) + 1) }
+      setRollNumber(Math.floor(Math.random() * 100000) + 1)
+    }
     if (!firstName || !lastName || !schoolName || !pupilCount) {
-      setError("Please fill in all the form fields with asterisks")
+      if (!irish) {
+        setError("Please fill in all the form fields with asterisks")
+      } else {
+        setError("Líon isteach gach réimse a bhfuil réiltín air")
+      }
       setTimeout(() => {
         setError(null)
       }, 3000)
@@ -103,24 +112,27 @@ const Signup = () => {
 
   return (
     <section className="page-container-long-form">
-      <SEO title="Sign Up" />
-      <h1 className="">Sign Up</h1>
+      <SEO title={irish ? "Cláraigh" : "Sign Up"} />
+      <h1 className="">{irish ? "Cláraigh" : "Sign Up"}</h1>
+      <LanguageToggle />
       <p className="instruction">
-        Please fill in the form below to create a school admin account for our
-        self-assessment tool
+        {irish
+          ? "Líon amach an fhoirm thíos le do thoil chun cuntas riarthóra a chruthú le haghaidh ár n-uirlis fhéinmheasaithe."
+          : "Please fill in the form below to create a school admin account for our self-assessment tool."}
       </p>
       <img src={BgImg} alt="background design" className="bg-img-auth" />
       <form className="central-form">
         <label htmlFor="firstName" className="block">
           <p className="form-label">
-            <span className="asterisk">*</span> Your first name:
+            <span className="asterisk">*</span>{" "}
+            {irish ? "D'ainm:" : "Your first name:"}
           </p>
           <input
             type="text"
             className="login-input"
             name="firstName"
             value={firstName}
-            placeholder="Enter first name"
+            placeholder={irish ? "D'ainm" : "Enter first name"}
             id="firstName"
             onChange={event => onChangeHandler(event)}
           />
@@ -128,14 +140,15 @@ const Signup = () => {
 
         <label htmlFor="lastName" className="block">
           <p className="form-label">
-            <span className="asterisk">*</span> Your last name:
+            <span className="asterisk">*</span>{" "}
+            {irish ? "Do shloinne:" : "Your last name:"}
           </p>
           <input
             type="text"
             className="login-input"
             name="lastName"
             value={lastName}
-            placeholder="Enter last name"
+            placeholder={irish ? "Do shloinne" : "Enter last name"}
             id="lastName"
             onChange={event => onChangeHandler(event)}
           />
@@ -143,7 +156,10 @@ const Signup = () => {
 
         <label htmlFor="schoolName" className="block">
           <p className="form-label">
-            <span className="asterisk">*</span> Your School's name and county:
+            <span className="asterisk">*</span>{" "}
+            {irish
+              ? "Ainm agus contae do scoile:"
+              : "Your School's name and county:"}
           </p>
           <input
             type="text"
@@ -158,14 +174,16 @@ const Signup = () => {
 
         <label htmlFor="rollNumber" className="block">
           <p className="form-label">
-            Your School's Roll Number (if not applicable, please leave blank):
+            {irish
+              ? "Uimhir Rolla do Scoile (mura mbaineann sé seo le do scoil, fág bán é le do thoil):"
+              : "Your School's Roll Number (if not applicable, please leave blank):"}
           </p>
           <input
             type="text"
             className="login-input"
             name="rollNumber"
             value={rollNumber}
-            placeholder="Enter Roll Number"
+            placeholder={irish ? "Uimhir Rolla do Scoile" : "Enter Roll Number"}
             id="rollNumber"
             onChange={event => onChangeHandler(event)}
           />
@@ -174,8 +192,10 @@ const Signup = () => {
         <label htmlFor="pupilCount" className="block">
           <p className="form-label">
             {" "}
-            <span className="asterisk">*</span> The number of pupils at your
-            school:
+            <span className="asterisk">*</span>{" "}
+            {irish
+              ? "Líon na ndaltaí i do scoil:"
+              : "The number of pupils at your school:"}
           </p>
           <input
             type="text"
@@ -190,14 +210,17 @@ const Signup = () => {
 
         <label htmlFor="userEmail" className="block">
           <p className="form-label">
-            <span className="asterisk">*</span> Your school/work email address:
+            <span className="asterisk">*</span>{" "}
+            {irish
+              ? "Do sheoladh ríomphoist scoile/áit oibre"
+              : "Your school/work email address:"}
           </p>
           <input
             type="email"
             className="login-input"
             name="userEmail"
             value={email}
-            placeholder="Enter email"
+            placeholder={irish ? "Cuir isteach do ríomphost" : "Enter email"}
             id="userEmail"
             onChange={event => onChangeHandler(event)}
           />
@@ -205,14 +228,17 @@ const Signup = () => {
 
         <label htmlFor="userPassword" className="block">
           <p className="form-label">
-            <span className="asterisk">*</span> A secure password:
+            <span className="asterisk">*</span>{" "}
+            {irish ? "Pasfhocal slán" : "A secure password:"}
           </p>
           <input
             type="password"
             className="login-input"
             name="userPassword"
             value={password}
-            placeholder="Enter password"
+            placeholder={
+              irish ? "Cuir isteach do phasfhocal" : "Enter password"
+            }
             id="userPassword"
             onChange={event => onChangeHandler(event)}
           />
@@ -242,17 +268,26 @@ const Signup = () => {
             createUserWithEmailAndPasswordHandler(event, email, password)
           }}
         >
-          Sign up
+          {irish ? "Cláraigh" : "Sign Up"}
         </button>
       </form>
 
       <div className="other-options">
-        <p className="">
-          Already have a school account?{" "}
-          <Link to="/app/login" className="">
-            Log in
-          </Link>{" "}
-        </p>
+        {irish ? (
+          <p className="">
+            Cuntas scoile agat cheana féin?{" "}
+            <Link to="/app/login" className="">
+              Logáil isteach
+            </Link>{" "}
+          </p>
+        ) : (
+          <p className="">
+            Already have a school account?{" "}
+            <Link to="/app/login" className="">
+              Log in
+            </Link>{" "}
+          </p>
+        )}
       </div>
     </section>
   )

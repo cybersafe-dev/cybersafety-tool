@@ -55,7 +55,7 @@ const Dashboard = ({ data }) => {
 
   const repeatCategoryAlert = () => {
     irish
-      ? setError("Irish Error for attempting a category twice")
+      ? setError("")
       : setError(
           "You can only complete a category once. Please pick another category."
         )
@@ -68,7 +68,7 @@ const Dashboard = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Choose a Category" />
+      <SEO title={irish ? "Roghnaigh Catagóir" : "Choose a Category"} />
       <section className="dashboard-container">
         <LanguageToggle />
         <div className="headline">

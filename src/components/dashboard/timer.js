@@ -29,7 +29,7 @@ const Timer = () => {
         </div>
         <p className="timer-msg">
           {irish
-            ? "Setunim 15 ekat dluohs siht"
+            ? "Ba cheart go dtógfaidh sé seo 15 nóiméad"
             : "This should take 15 minutes"}
         </p>
       </div>
