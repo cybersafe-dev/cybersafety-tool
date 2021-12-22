@@ -32,7 +32,7 @@
   text-decoration: underline;
 }
 
-.toggle-container {
+/* .toggle-container {
   position: fixed;
   top: 0.2rem;
   right: 0.5rem;
@@ -74,4 +74,4 @@
   border-radius: 21px;
   transition: 0.2s;
   background: #fff;
-}
+} */
