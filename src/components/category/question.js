@@ -4,8 +4,6 @@ import DataErrorPage from "../../components/dataerror/dataerror"
 import { ResponseStore } from "../../providers/responseProvider"
 import { LanguageStore } from "../../providers/languageProvider"
 
-import SEO from "../seo"
-
 import "../../styling/survey/question.css"
 
 const Question = ({
@@ -78,7 +76,6 @@ const Question = ({
 
   return (
     <>
-      <SEO title={category} />
       <p className="statement">{survey[currentQ].statement}</p>
       <section className="responses">
         {survey[currentQ].responses.map((response, i) => (

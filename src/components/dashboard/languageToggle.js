@@ -6,10 +6,6 @@ import { LanguageStore } from "../../providers/languageProvider"
 const LanguageToggle = ({ usage }) => {
   const [irish, setIrish] = React.useContext(LanguageStore)
 
-  React.useEffect(() => {
-    console.log("Irish?", irish)
-  }, [irish])
-
   if (usage === "mobile navbar") {
     return (
       <button className="mobile-nav-toggle-button" onClick={() => setIrish(!irish)}>
