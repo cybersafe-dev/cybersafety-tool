@@ -10,6 +10,7 @@
 .thanku-title {
   margin: 0 0 2rem 0;
   text-align: center;
+  max-width: 100%;
 }
 .thanku-message {
   margin-top: 1rem;
@@ -73,6 +74,7 @@
     margin-top: 2rem;
     text-align: center;
     font-size: 1rem;
+    max-width: 100%;
   }
   .design {
     width: 100%;
