@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import "../../styling/app/mininavbar.css"
 import xBtn from "../../images/x-icon.svg"
 import { LanguageStore } from "../../providers/languageProvider"
+import LanguageToggle from "../dashboard/languageToggle"
 
 const MenuModal = ({ toggleMenuModal, menuModalVisible }) => {
   const [irish] = React.useContext(LanguageStore)
@@ -34,6 +35,7 @@ const MenuModal = ({ toggleMenuModal, menuModalVisible }) => {
       <Link to="/#contact-us" className="modal-link" onClick={() => toggleMenuModal(!menuModalVisible)}>
         {irish ? "Teagmháil" : "Contact Us"}
       </Link>
+      <LanguageToggle usage={"mobile navbar"} />
     </nav>
   )
 }
