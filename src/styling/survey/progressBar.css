@@ -1,6 +1,7 @@
 .progress-message {
   margin: 0;
   font-size: 0.8rem;
+  max-width: 200px;
 }
 
 .progress {
@@ -22,5 +23,9 @@
   .progress {
     height: 14px;
     width: 180px;
+  }
+
+  .progress-message {
+    max-width: 100%;
   }
 }
