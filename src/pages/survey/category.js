@@ -9,6 +9,7 @@ import CategoryProgress from "../../components/category/categoryProgress"
 import DataErrorPage from "../../components/dataerror/dataerror"
 import LanguageToggle from "../../components/dashboard/languageToggle"
 import BgImg from "../../images/bg-gradient.svg"
+import SEO from "../../components/seo"
 
 import "../../styling/survey/question.css"
 
@@ -119,6 +120,7 @@ const Category = props => {
 
   return (
     <Layout>
+      <SEO title={categoryTitle} />
       <img src={BgImg} alt="background design" className="bg-img-q" />
       <div className="category-header">
         <h1 className="question-title">{categoryTitle}</h1>
