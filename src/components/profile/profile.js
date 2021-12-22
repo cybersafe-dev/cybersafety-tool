@@ -2,8 +2,6 @@ import React from "react"
 import { navigate } from "gatsby"
 import { userStore } from "../../providers/userProvider"
 import useFirebase from "../../firebase"
-
-import LanguageToggle from "../dashboard/languageToggle"
 import { LanguageStore } from "../../providers/languageProvider"
 
 import Share from "./share"
@@ -32,7 +30,6 @@ const Profile = () => {
       <div className="user-info">
         <h1 className="admin-dash-heading">{schoolName}</h1>
       </div>
-      <LanguageToggle />
       <div className="columns">
         <article className="user-surveys">
           <h2>{irish ? "Suirbhéanna Críochnaithe" : "Surveys Completed"}</h2>
