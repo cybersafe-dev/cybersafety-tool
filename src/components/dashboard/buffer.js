@@ -27,7 +27,7 @@ const Buffer = ({ bufferModalVisible, toggle }) => {
         onClick={() => toggle(!bufferModalVisible)}
         className="buffer-btn"
       >
-        {irish ? "Irish enter" : "enter"}
+        {irish ? "Téigh isteach" : "enter"}
       </button>
     </div>
   )
