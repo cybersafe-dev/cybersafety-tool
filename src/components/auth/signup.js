@@ -166,7 +166,7 @@ const Signup = () => {
             value={schoolName}
             placeholder={
               irish
-                ? "M.sh. Scoil Naomh Pilib, Co. Átha Cliath."
+                ? "e.g. M.sh. Scoil Naomh Pilib, Co. Átha Cliath."
                 : "e.g. St. Philip's National School, Co. Dublin"
             }
             id="schoolName"
