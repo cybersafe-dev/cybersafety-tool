@@ -5,436 +5,436 @@ surveyIrish:
     digitalknowledge:
       - statement: 1. Bíonn oiliúint faoin tsábháilteacht agus faoin bhfreagracht ar líne ag m’fhoireann uair sa bhliain ar a laghad.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Pléann an fhoireann an tsábhailteacht agus an fhreagracht ar líne le daltaí i rith na bliana.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 3. Mothaíonn m’fhoireann muiníneach agus iad ag caint le daltaí faoin tsábháilteacht agus faoin bhfreagracht ar líne.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 4. Bíonn rochtain ag tuismitheoirí ar sheisiúin eolais faoin tsabháilteacht agus faoin bhfreagracht ar líne uair sa bhliain ar a laghad.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 5. Baineann m’fhoireann úsáid rialta as teicneolaíochtaí digiteacha (taibléidí, gutháin, ríomhairí, róbait) ina gcuid múinteoireachta.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 6. Bíonn m’fhoireann ar a compord agus iad ag baint úsáid as teicneolaíochtaí digiteacha (taibléidí, gutháin, ríomhairí, róbait) ina gcuid múinteoireachta.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 7. Baineann daltaí úsáid rialta as teicneolaíochtaí digiteacha (taibléidí, gutháin, ríomhairí, róbait) ina gcuid foghlama.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 8. Tá polasaí soiléir ag an scoil faoi úsáid guthán/gléasanna ar scoil.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 9. Tá Plean um Fhoghlaim Dhigiteach á chur i bhfeidhm ag mo scoil.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     privacy:
       - statement: 1. Tuigim conas is féidir liom pasfhocail shlána a chruthú le haghaidh mo chuid cuntas.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Bainim úsáid as éagsúlacht pasfhocal do chuntais dhifriúla.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 3. Chun sonraí digiteacha a bhaineann leis an scoil a choinneáil slán, coinním iad sa scoil agus cosnaím iad le pasfhocal.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 4. Tá polasaí soiléir ag an scoil maidir le híomhánna de dhaltaí agus iad ag glacadh páirte i ngníomhaíochtaí agus imeachtaí scoile a chomhroinnt ar líne.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 5. Chun sonraí digiteacha a bhaineann leis an scoil a choinneáil slán, coinníonn m'fhoireann iad sa scoil agus cosnaíonn siad iad le pasfhocal.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 6. Cloíonn an scoil leis an RGCS (GDPR).
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     onlinelife:
       - statement: 1. Tá mo chuid próifílí ar líne socraithe ar “phríobháideach” agam, nó bainim úsáid as ainm nach mbeidh mo chuid daltaí in ann a aimsiú.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Bíonn ar bhaill m’fhoirne a gcuid próifílí a shocrú ar “phríobháideach”, nó úsáid a bhaint as ainmneacha nach mbeidh a gcuid daltaí in ann a aimsiú.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 3. Tá tuiscint gharbh agam ar an méid ama a chaithim ar líne gach lá.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 4. Tá srianta i bhfeidhm agam ar an méid ama a chaithim ar líne gach lá.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 5. Tuigeann daltaí gur féidir leo labhairt le ball foirne faoi rud ar bith a tharlaíonn dóibh agus iad ar líne.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     communication:
       - statement: 1. Bainim úsáid as an teicneolaíocht chun cumarsáid a dhéanamh go measúil agus go sábháilte le m’fhoireann.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: "2. Tá cultúr i bhfeidhm i mo scoil ina mbaintear úsáid dhearfach as ardáin agus uirlisí ar líne chun cumarsáid a dhéanamh lena chéile. "
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly Disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     criticalthinking:
       - statement: 1. Déanaim seiceáil i gcónaí ar eolas a fhaighim ar líne trí chuardach a dhéanamh le  haghaidh foinsí cosúla eile.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Múintear do dhaltaí conas is féidir leo deimhniú a dhéanamh ar eolas a aimsíonn siad ar líne a dheimhniú trí chuardach a dhéanamh le hadhaigh foinsí cosúla eile.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     responsibleuse:
       - statement: 1. Múintear do dhaltaí tagairt a dheánamh i gcónaí d’fhoinsí agus d’íomhánna a mbaineann siad úsáid astu agus iad i mbun taighde nó cúr ar láthair ar siúl acu.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Bíonn ar bhaill foirne tagairt a dhéanamh i gcónaí d’fhoinsí eolais agus d’íomhánnna a mbaineann siad úsáid astu ina gcuid cur i láthair agus acmhainní.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 3. Tá Polasaí Úsáide Inghlactha (PÚI) i bhfeidhm ag an scoil le haghaidh teicneolaíochtaí digiteacha.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 4. Tá an Polasaí Úsáide Inghlactha ar fáil go héasca do gach duine lena mbaineann sé.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 5. Tá polasaí soiléir ag an scoil maidir leis an gcibearbhulaíocht.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 6. Tá an polasaí cibearbhulaíochta ar fáil go héasca do gach duine lena mbaineann sé.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: There is no policy
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Níl polasaí ar bith ann
       - statement: 7. Tá tuiscint shoiléir ag baill foirne ar na céimeanna cuí is ceart dóibh a ghlacadh nuair a chuirtear eachtra cibearbhulaíochta nó eachtra ar líne ar a súile dóibh agus agus baint a bheith ag duine de mo chuid daltaí léi.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
   teachers:
     digitalknowledge:
       - statement: 1. Bíonn oiliúint do mhúinteoirí faoin tsábháilteacht agus faoin bhfreagracht ar líne againn uair sa bhliain ar a laghad.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Mothaím muiníneach agus mé ag caint le mo chuid daltaí maidir leis an tsábháilteacht agus leis an bhfeagracht ar líne.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 3. Pléimid an tsábhailteacht agus an fhreagracht ar líne go rialta mar fhoireann i rith na bliana.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 4. Pléim an tsabháilteacht agus an fhreagracht ar líne go rialta le mo chuid daltaí.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 5. Bainim úsáid rialta as teicneolaíochtaí digiteacha (taibléidí, gutháin, ríomhairí, róbait) mar chuid de mo chuid múinteoireachta.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 6. Bím ar mo chompord agus teicneolaíochtaí digiteacha in úsáid agam.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 7. Baineann mo chuid daltaí úsáid rialta as teicneolaíochtaí digiteacha (taibléidí, gutháin, ríomhairí, róbait) mar chuid dá gcuid foghlama.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 8. Tá polasaí soiléir ag an scoil maidir le húsáid guthán cliste nó úsáid gléasanna ar scoil.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     privacy:
       - statement: 1. Bíonn aon phróifílí ar líne de mo chuid socraithe ar “príobháideach” agam, nó bainim úsáid as ainm nach mbeidh mo chuid daltaí in ann a aimsiú.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Tuigim conas is féidir liom pasfhocail shlána a chruthú i gcomhair mo chuid cuntas.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 3. Bainim úsáid as éagsúlacht pasfhocal i gcomhair cuntais dhifriúla.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 4. Chun sonraí digiteacha a bhaineann leis an scoil a choinneáil slán, coinním iad sa scoil agus cosnaím iad le pasfhocal.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 5. Tá polasaí soiléir ag an scoil maidir le híomhánna de dhaltaí agus iad ag glacadh páirte i ngníomhaíochtaí agus imeachtaí scoile a chomhroinnt ar líne.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     onlinelife:
       - statement: 1. Tá mo chuid cuntas ar na meáin shóisialta ar “príobháideach” agam nó tá ainm difriúil in úsáid agam.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Ní phostálaim eolas pearsanta go poiblí riamh.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 3. Tuigeann mo chuid daltaí gur féidir leo teacht chugam agus labhairt liom faoi rud ar bith a tharlaíonn dóibh agus iad ar líne.
         responses:
-          - answer: Strongly Agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: "4. Mothaím muiníneach agus mé ag deiléail le fadhbanna a gcasann mo chuid daltaí orthu agus iad ar líne, agus leis na deacrachtaí a thagann as na fadhbanna seo nuair a thugtar ar scoil iad. "
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 5. Tá tuiscint gharbh agam ar an méid ama a chaithim ar líne gach lá.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 6. Cuirim srianta soiléire i bhfeidhm ar an méid ama a chaithim ar líne gach lá.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     communication:
       - statement: "1. Bainim úsáid rialta as an teicneolaíocht le cumarsáid a dhéanamh go measúil agus go sábháilte le mo chuid daltaí, mar shampla: ríomhphoist, grúpa WhatsApp, Google Classroom srl."
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Úsáidim an teicneolaíocht le cumarsáid a dhéanamh go measúil agus go sábhailte le mo chuid comhghleacaithe.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: "3. Tá cultúr i bhfeidhm i mo scoil ina mbaintear úsáid dhearfach as ardáin agus uirlisí ar líne le cumarsáid a dhéanamh le daoine eile sa scoil. "
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     criticalthinking:
       - statement: 1. Déanaim seiceáil i gcónaí ar eolas a fhaighim ar líne trí chuardach a dhéanamh le haghaidh foinsí cosúla eile.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Múinim do mo chuid daltaí conas conas is féidir leo deimhniú a dheanamh ar eolas a dtagann siad air ar líne trí chuardach a dhéanamh le hadhaidh foinsí eile a bhfuil an t-eolas céanna iontu.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
     responsibleuse:
       - statement: 1. Iarrann mo scoil orm tagairt a dhéanamh do na foinsí eolais agus do na pictiúir a mbainim úsáid astu i mo chuid acmhainní teagaisc agus cur i láthair.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 2. Múinim do mo chuid daltaí tagairt a dheánamh i gcónaí do na foinsí agus do na híomhánna a mbaineann siad úsáid astu agus iad i mbun taighde nó cúr i láthair ar siúl acu.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
       - statement: 3. Tá Polasaí Úsáide Inghlactha (PUI) i bhfeidhm ag mo scoil le haghaidh teicneolaíochtaí digiteacha.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: There is no policy
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Níl polasaí ar bith ann
       - statement: 4. Tá polasaí soiléir ag an scoil maidir leis an gcibearbhulaíocht.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: There is no policy
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Níl polasaí ar bith ann
       - statement: 5. Tá tuiscint shoiléir agam ar na céimeanna cuí is ceart dom a ghlacadh nuair a chuirtear eachtra cibearbhulaíochta nó eachtra ar líne ar mo shúile dom agus agus baint a bheith ag duine de mo chuid daltaí léi.
         responses:
-          - answer: Strongly agree
-          - answer: Agree
-          - answer: Neutral
-          - answer: Disagree
-          - answer: Strongly disagree
+          - answer: Aontaím go hiomlán
+          - answer: Aontaím
+          - answer: Idir dhá chomhairle
+          - answer: Ní aontaím
+          - answer: Ní aontaím ar chor ar bith
   pupils:
     digitalknowledge:
       - statement: 1. Foghlaimímid faoin tsabháilteacht agus faoin bhfreagracht ar líne ar scoil.
