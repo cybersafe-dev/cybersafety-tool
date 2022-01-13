@@ -164,7 +164,11 @@ const Signup = () => {
             className="login-input"
             name="schoolName"
             value={schoolName}
-            placeholder="e.g. St. Philip's National School, Co. Dublin"
+            placeholder={
+              irish
+                ? "e.g. M.sh. Scoil Naomh Pilib, Co. Átha Cliath."
+                : "e.g. St. Philip's National School, Co. Dublin"
+            }
             id="schoolName"
             onChange={event => onChangeHandler(event)}
           />

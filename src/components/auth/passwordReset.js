@@ -56,7 +56,11 @@ const PasswordReset = () => {
       <img src={BgImg} alt="background design" className="bg-img-auth" />
       <form action="" className="central-form">
         {emailHasBeenSent && (
-          <div className="">A password reset email has been sent to you!</div>
+          <div className="">
+            {irish
+              ? "Táthar tar éis ríomphost a chur chugat chun do phasfhocal a athshocrú!"
+              : "A password reset email has been sent to you!"}
+          </div>
         )}
 
         <label htmlFor="userEmail" className="block">

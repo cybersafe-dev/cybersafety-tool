@@ -131,7 +131,7 @@ const SurveyPage = props => {
         </div>
         <div className="button-and-pills">
           <Link to="/survey/roleselection/" className="start-btn">
-            {irish ? "Irish Get started!" : "Let's get started!"}
+            {irish ? "Cuirimis tús leis!" : "Let's get started!"}
           </Link>
           <div className="pills">
             <div className="filled-pill"></div>
