@@ -46,7 +46,7 @@ const SubmitButton = ({ setError }) => {
           )
     } else {
       irish
-        ? setError(`Ár leithscéal, bhí earráid ann agus do suirbhé á uaslódáil. Bain úsáid as an nasc iomlán a cuireadh chugat chun an suribhé a thosú arís le do thoil.`)
+        ? setError(`Ár leithscéal, bhí earráid ann agus do suirbhé á uaslódáil. Bain úsáid as an nasc iomlán a cuireadh chugat chun an suirbhé a thosú arís le do thoil.`)
         : setError(
             "Sorry, there was an error uploading your survey. Please begin again from the full link you were sent."
           )
