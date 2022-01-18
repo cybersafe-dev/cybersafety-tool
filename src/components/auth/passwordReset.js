@@ -58,7 +58,7 @@ const PasswordReset = () => {
         {emailHasBeenSent && (
           <div className="">
             {irish
-              ? "Táthar tar éis ríomphost a chur chugat chun do phasfhocal a athshocrú!"
+              ? "Tá pasfhocal athshocraithe á chur chugat i r-phost."
               : "A password reset email has been sent to you!"}
           </div>
         )}
