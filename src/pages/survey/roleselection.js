@@ -33,7 +33,7 @@ const RoleSelection = () => {
             irish ? "Cuir isteach do Ról sa Scoil" : "Enter Your Role at School"
           }
         />
-        <h1>{irish ? "Is…. Mé" : "I am a..."}</h1>
+        <h1>{irish ? "Is.... Mé" : "I am a..."}</h1>
         <img src={BgImg} alt="background design" className="bg-img2" />
         <div className="roles">
           <button
@@ -61,7 +61,7 @@ const RoleSelection = () => {
         <p className="tagline">
           {" "}
           {irish
-            ? "Cliceáil ar an gcnaipe thíos is fearr a dhéanann cur síos ar do ról feín i do scoil."
+            ? "Cliceáil ar an gcnaipe thíos a dhéanann an cur síos is fearr ar do ról féin i do scoil."
             : "Click the button below that best describes your role at your school."}
         </p>
         <div className="role-pills">
