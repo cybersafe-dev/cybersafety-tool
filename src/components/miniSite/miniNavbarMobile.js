@@ -27,7 +27,7 @@ const MiniNavbarMobile = ({ user }) => {
           </Link>
         ) : (
           <Link to="/app/signup" className="started-nav">
-            {irish ? "Cuir tú leis" : "Get Started"}
+            {irish ? "Cuir tús leis" : "Get Started"}
           </Link>
         )}
       </div>
