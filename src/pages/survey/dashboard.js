@@ -70,7 +70,7 @@ const Dashboard = ({ data }) => {
 
   const repeatCategoryAlert = () => {
     irish
-      ? setError("")
+      ? setError("Roghnaigh catagóir eile")
       : setError(
           "You can only complete a category once. Please pick another category."
         )

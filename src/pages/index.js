@@ -124,7 +124,7 @@ const MiniSite = props => {
               <h2 className="section-title">
                 Gradaim:{" "}
                 <span className="italics">
-                  Cén fáth gur fiú an uirlis a úsáid?
+                  Cén fáth ar fiú an uirlis a úsáid?
                 </span>
               </h2>
             ) : (

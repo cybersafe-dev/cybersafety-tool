@@ -26,7 +26,7 @@ const Profile = () => {
 
   return (
     <section className="dashboard-body">
-      <SEO title={irish ? "" : "Your School Admin Dashboard"} />
+      <SEO title={irish ? "Deais riaracháin do scoile" : "Your School Admin Dashboard"} />
       <div className="user-info">
         <h1 className="admin-dash-heading">{schoolName}</h1>
       </div>

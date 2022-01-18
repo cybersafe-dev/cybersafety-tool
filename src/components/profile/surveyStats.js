@@ -35,7 +35,11 @@ const SurveyStats = ({
 
   const handleFinalSubmit = async () => {
     if (reportSubmitted) {
-      setError("Looks like you already submitted your report...thanks!")
+      if (irish) {
+        setError("Tá an chuma air gur chur tú do thuairisc isteach cheana féin.... Go raibh maith agat!")
+      } else {
+        setError("Looks like you already submitted your report...thanks!")
+      }
       return
     }
     setSubmitting(true)
@@ -55,9 +59,15 @@ const SurveyStats = ({
     if (dbPostStatus === "updated") {
       navigate("/app/confirmation")
     } else {
-      setError(
-        "Sorry there was a problem uploading your surveys. Please try again"
-      )
+      if (irish) {
+        setError(
+          "Ár leithscéal, bhí fadhb ann agus na suirbhéanna á n-uaslódáil. Bain triail as arís le do thoil."
+        )
+      } else {
+        setError(
+          "Sorry there was a problem uploading your surveys. Please try again"
+        )
+      }
     }
   }
 

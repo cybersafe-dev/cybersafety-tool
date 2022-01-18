@@ -23,16 +23,20 @@ const Confirmation = () => {
         <img src={High5} alt="high-five icon" className="design" />
         {irish ? (
           <p className="thanku-message">
-            Irish thank you message and {" "}
+            Go raibh maith agat as ucht an measúnú a chríochnú. Fuair
+            CyberSafeKids na freagraí agus gheobhaidh tú do thuairisc go luath.
+            Idir an dá linn, chun tuilleadh eolais a fhail faoi conas is féidir
+            marc na hUirlise CyberSafe do Scoileanna a fháil do do scoil,
+            cliceáil{" "}
             <a
               className="link-back"
               href="https://www.cybersafekids.ie/"
               target="_blank"
               rel="noreferrer"
             >
-              link
-            </a>
-            .
+              anseo
+            </a>{" "}
+            le do thoil.
           </p>
         ) : (
           <p className="thanku-message">
@@ -46,7 +50,8 @@ const Confirmation = () => {
               target="_blank"
               rel="noreferrer"
             >
-              {" "}here
+              {" "}
+              here
             </a>
             .
           </p>

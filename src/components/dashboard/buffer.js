@@ -10,7 +10,7 @@ const Buffer = ({ bufferModalVisible, toggle }) => {
     <div className="buffer-container">
       <div className="buffer-content">
         <h2>
-          {irish ? "Teachtaireacht sciobtha…." : "Just a quick message..."}
+          {irish ? "Teachtaireacht sciobtha...." : "Just a quick message..."}
         </h2>
         <p>
           {irish
