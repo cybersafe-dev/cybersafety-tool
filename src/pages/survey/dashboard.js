@@ -12,6 +12,7 @@ import SurveyProgress from "../../components/dashboard/surveyProgress"
 import Buffer from "../../components/dashboard/buffer"
 import BgImg from "../../images/bg-gradient.svg"
 import Graphic from "../../images/dash.svg"
+
 import Digital from "../../images/Digital-open.svg"
 import DigitalDone from "../../images/Digital-done.svg"
 import Privacy from "../../images/Privacy-open.svg"
@@ -25,6 +26,19 @@ import ResponsDone from "../../images/Respons-done.svg"
 import OnlineLife from "../../images/Onlife-open.svg"
 import OnlineLifeDone from "../../images/Onlife-done.svg"
 
+import IrishDigital from "../../images/irish-digital-open.svg"
+import IrishDigitalDone from "../../images/irish-digital-done.svg"
+import IrishPrivacy from "../../images/irish-privacy-open.svg"
+import IrishPrivacyDone from "../../images/irish-privacy-done.svg"
+import IrishCommun from "../../images/irish-comm-open.svg"
+import IrishCommDone from "../../images/irish-comm-done.svg"
+import IrishCritical from "../../images/irish-critical-open.svg"
+import IrishCriticalDone from "../../images/irish-critical-done.svg"
+import IrishRespons from "../../images/irish-respons-open.svg"
+import IrishResponsDone from "../../images/irish-respons-done.svg"
+import IrishOnlineLife from "../../images/irish-onlife-open.svg"
+import IrishOnlineLifeDone from "../../images/irish-onlife-done.svg"
+
 import "../../styling/survey/dashboard.css"
 
 const Dashboard = ({ data }) => {
@@ -35,8 +49,10 @@ const Dashboard = ({ data }) => {
   const [bufferModalVisible, toggle] = React.useState(true)
 
   const surveyAllData = {
-    englishSurvey: data.english.edges[0].node.childMarkdownRemark.frontmatter.survey,
-    irishSurvey: data.irish.edges[0].node.childMarkdownRemark.frontmatter.surveyIrish
+    englishSurvey:
+      data.english.edges[0].node.childMarkdownRemark.frontmatter.survey,
+    irishSurvey:
+      data.irish.edges[0].node.childMarkdownRemark.frontmatter.surveyIrish,
   }
 
   if (!store || !store.userType || !store.schoolId) {
@@ -85,162 +101,321 @@ const Dashboard = ({ data }) => {
             completedSections={completedSections}
             setError={setError}
           />
-          <div className="categories">
-            <div className="col">
-              {completedSections.includes("digitalknowledge") ? (
-                <button
-                  className="done-icon-button"
-                  onClick={repeatCategoryAlert}
-                >
-                  <img
-                    src={DigitalDone}
-                    alt="Digital Knowledge complete"
-                    className="cat-image"
-                  />
-                </button>
-              ) : (
-                <Link
-                  to="/survey/category/"
-                  state={{
-                    surveyData: {
-                      english: userTypeEnglishSurvey.digitalknowledge,
-                      irish: userTypeIrishSurvey.digitalknowledge
-                    },
-                    category: "Digital Knowledge",
-                  }}
-                >
-                  <img src={Digital} alt="" className="cat-image" />
-                </Link>
-              )}{" "}
-              {completedSections.includes("privacy") ? (
-                <button
-                  className="done-icon-button"
-                  onClick={repeatCategoryAlert}
-                >
-                  <img
-                    src={PrivacyDone}
-                    alt="Privacy complete"
-                    className="cat-image"
-                  />
-                </button>
-              ) : (
-                <Link
-                  to="/survey/category/"
-                  state={{
-                    surveyData: {
-                      english: userTypeEnglishSurvey.privacy,
-                      irish: userTypeIrishSurvey.privacy
-                    },
-                    category: "Privacy",
-                  }}
-                >
-                  <img src={Privacy} alt="" className="cat-image" />
-                </Link>
-              )}{" "}
-              {completedSections.includes("onlinelife") ? (
-                <button
-                  className="done-icon-button"
-                  onClick={repeatCategoryAlert}
-                >
-                  <img
-                    src={OnlineLifeDone}
-                    alt="Online Life complete"
-                    className="cat-image"
-                  />
-                </button>
-              ) : (
-                <Link
-                  to="/survey/category/"
-                  state={{
-                    surveyData: {
-                      english: userTypeEnglishSurvey.onlinelife,
-                      irish: userTypeIrishSurvey.onlinelife
-                    },
-                    category: "Online Life",
-                  }}
-                >
-                  <img src={OnlineLife} alt="" className="cat-image" />
-                </Link>
-              )}{" "}
+          {!irish ? (
+            <div className="categories">
+              <div className="col">
+                {completedSections.includes("digitalknowledge") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={DigitalDone}
+                      alt="Digital Knowledge complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.digitalknowledge,
+                        irish: userTypeIrishSurvey.digitalknowledge,
+                      },
+                      category: "Digital Knowledge",
+                    }}
+                  >
+                    <img src={Digital} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+                {completedSections.includes("privacy") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={PrivacyDone}
+                      alt="Privacy complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.privacy,
+                        irish: userTypeIrishSurvey.privacy,
+                      },
+                      category: "Privacy",
+                    }}
+                  >
+                    <img src={Privacy} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+                {completedSections.includes("onlinelife") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={OnlineLifeDone}
+                      alt="Online Life complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.onlinelife,
+                        irish: userTypeIrishSurvey.onlinelife,
+                      },
+                      category: "Online Life",
+                    }}
+                  >
+                    <img src={OnlineLife} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+              </div>
+              <div className="col">
+                {completedSections.includes("communication") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={CommDone}
+                      alt="Communication complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.communication,
+                        irish: userTypeIrishSurvey.communication,
+                      },
+                      category: "Communication",
+                    }}
+                  >
+                    <img src={Commun} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+                {completedSections.includes("criticalthinking") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={CriticalDone}
+                      alt="Critical Thinking complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.criticalthinking,
+                        irish: userTypeIrishSurvey.criticalthinking,
+                      },
+                      category: "Critical Thinking",
+                    }}
+                  >
+                    <img src={Critical} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+                {completedSections.includes("responsibleuse") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={ResponsDone}
+                      alt="Responsible Use complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.responsibleuse,
+                        irish: userTypeIrishSurvey.responsibleuse,
+                      },
+                      category: "Responsible Use",
+                    }}
+                  >
+                    <img src={Respons} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+              </div>
             </div>
-            <div className="col">
-              {completedSections.includes("communication") ? (
-                <button
-                  className="done-icon-button"
-                  onClick={repeatCategoryAlert}
-                >
-                  <img
-                    src={CommDone}
-                    alt="Communication complete"
-                    className="cat-image"
-                  />
-                </button>
-              ) : (
-                <Link
-                  to="/survey/category/"
-                  state={{
-                    surveyData: {
-                      english: userTypeEnglishSurvey.communication,
-                      irish: userTypeIrishSurvey.communication
-                    },
-                    category: "Communication",
-                  }}
-                >
-                  <img src={Commun} alt="" className="cat-image" />
-                </Link>
-              )}{" "}
-              {completedSections.includes("criticalthinking") ? (
-                <button
-                  className="done-icon-button"
-                  onClick={repeatCategoryAlert}
-                >
-                  <img
-                    src={CriticalDone}
-                    alt="Critical Thinking complete"
-                    className="cat-image"
-                  />
-                </button>
-              ) : (
-                <Link
-                  to="/survey/category/"
-                  state={{
-                    surveyData: {
-                      english: userTypeEnglishSurvey.criticalthinking,
-                      irish: userTypeIrishSurvey.criticalthinking
-                    },
-                    category: "Critical Thinking",
-                  }}
-                >
-                  <img src={Critical} alt="" className="cat-image" />
-                </Link>
-              )}{" "}
-              {completedSections.includes("responsibleuse") ? (
-                <button
-                  className="done-icon-button"
-                  onClick={repeatCategoryAlert}
-                >
-                  <img
-                    src={ResponsDone}
-                    alt="Responsible Use complete"
-                    className="cat-image"
-                  />
-                </button>
-              ) : (
-                <Link
-                  to="/survey/category/"
-                  state={{
-                    surveyData: {
-                      english: userTypeEnglishSurvey.responsibleuse,
-                      irish: userTypeIrishSurvey.responsibleuse
-                    },
-                    category: "Responsible Use",
-                  }}
-                >
-                  <img src={Respons} alt="" className="cat-image" />
-                </Link>
-              )}{" "}
+          ) : (
+            <div className="categories">
+              <div className="col">
+                {completedSections.includes("digitalknowledge") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={IrishDigitalDone}
+                      alt="Digital Knowledge complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.digitalknowledge,
+                        irish: userTypeIrishSurvey.digitalknowledge,
+                      },
+                      category: "Digital Knowledge",
+                    }}
+                  >
+                    <img src={IrishDigital} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+                {completedSections.includes("privacy") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={IrishPrivacyDone}
+                      alt="Privacy complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.privacy,
+                        irish: userTypeIrishSurvey.privacy,
+                      },
+                      category: "Privacy",
+                    }}
+                  >
+                    <img src={IrishPrivacy} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+                {completedSections.includes("onlinelife") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={IrishOnlineLifeDone}
+                      alt="Online Life complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.onlinelife,
+                        irish: userTypeIrishSurvey.onlinelife,
+                      },
+                      category: "Online Life",
+                    }}
+                  >
+                    <img src={IrishOnlineLife} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+              </div>
+              <div className="col">
+                {completedSections.includes("communication") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={IrishCommDone}
+                      alt="Communication complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.communication,
+                        irish: userTypeIrishSurvey.communication,
+                      },
+                      category: "Communication",
+                    }}
+                  >
+                    <img src={IrishCommun} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+                {completedSections.includes("criticalthinking") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={IrishCriticalDone}
+                      alt="Critical Thinking complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.criticalthinking,
+                        irish: userTypeIrishSurvey.criticalthinking,
+                      },
+                      category: "Critical Thinking",
+                    }}
+                  >
+                    <img src={IrishCritical} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+                {completedSections.includes("responsibleuse") ? (
+                  <button
+                    className="done-icon-button"
+                    onClick={repeatCategoryAlert}
+                  >
+                    <img
+                      src={IrishResponsDone}
+                      alt="Responsible Use complete"
+                      className="cat-image"
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    to="/survey/category/"
+                    state={{
+                      surveyData: {
+                        english: userTypeEnglishSurvey.responsibleuse,
+                        irish: userTypeIrishSurvey.responsibleuse,
+                      },
+                      category: "Responsible Use",
+                    }}
+                  >
+                    <img src={IrishRespons} alt="" className="cat-image" />
+                  </Link>
+                )}{" "}
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <img src={BgImg} alt="background design" className="bg-img-dash" />
         <img src={BgImg} alt="background design" className="bg-img-dash1" />
@@ -252,130 +427,259 @@ const Dashboard = ({ data }) => {
 export default Dashboard
 
 export const query = graphql`
-{
-  english: allFile(
-    filter: {
-      sourceInstanceName: { eq: "content" }
-      name: { eq: "survey" }
+  {
+    english: allFile(
+      filter: { sourceInstanceName: { eq: "content" }, name: { eq: "survey" } }
+    ) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              survey {
+                leaders {
+                  communication {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  criticalthinking {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  digitalknowledge {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  onlinelife {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  privacy {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  responsibleuse {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                }
+                pupils {
+                  communication {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  criticalthinking {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  digitalknowledge {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  onlinelife {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  privacy {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  responsibleuse {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                }
+                teachers {
+                  communication {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  criticalthinking {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  digitalknowledge {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  onlinelife {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  privacy {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  responsibleuse {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
-  ) {
-    edges {
-      node {
-        childMarkdownRemark {
-          frontmatter {
-            survey {
-              leaders {
-                communication {
-                  responses {
-                    answer
+    irish: allFile(
+      filter: {
+        sourceInstanceName: { eq: "content" }
+        name: { eq: "irishsurvey" }
+      }
+    ) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              surveyIrish {
+                leaders {
+                  communication {
+                    responses {
+                      answer
+                    }
+                    statement
                   }
-                  statement
+                  criticalthinking {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  digitalknowledge {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  onlinelife {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  privacy {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  responsibleuse {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
                 }
-                criticalthinking {
-                  responses {
-                    answer
+                pupils {
+                  communication {
+                    responses {
+                      answer
+                    }
+                    statement
                   }
-                  statement
+                  criticalthinking {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  digitalknowledge {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  onlinelife {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  privacy {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
+                  responsibleuse {
+                    responses {
+                      answer
+                    }
+                    statement
+                  }
                 }
-                digitalknowledge {
-                  responses {
-                    answer
+                teachers {
+                  communication {
+                    responses {
+                      answer
+                    }
+                    statement
                   }
-                  statement
-                }
-                onlinelife {
-                  responses {
-                    answer
+                  criticalthinking {
+                    responses {
+                      answer
+                    }
+                    statement
                   }
-                  statement
-                }
-                privacy {
-                  responses {
-                    answer
+                  digitalknowledge {
+                    responses {
+                      answer
+                    }
+                    statement
                   }
-                  statement
-                }
-                responsibleuse {
-                  responses {
-                    answer
+                  onlinelife {
+                    responses {
+                      answer
+                    }
+                    statement
                   }
-                  statement
-                }
-              }
-              pupils {
-                communication {
-                  responses {
-                    answer
+                  privacy {
+                    responses {
+                      answer
+                    }
+                    statement
                   }
-                  statement
-                }
-                criticalthinking {
-                  responses {
-                    answer
+                  responsibleuse {
+                    responses {
+                      answer
+                    }
+                    statement
                   }
-                  statement
-                }
-                digitalknowledge {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                onlinelife {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                privacy {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                responsibleuse {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-              }
-              teachers {
-                communication {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                criticalthinking {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                digitalknowledge {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                onlinelife {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                privacy {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                responsibleuse {
-                  responses {
-                    answer
-                  }
-                  statement
                 }
               }
             }
@@ -384,136 +688,4 @@ export const query = graphql`
       }
     }
   }
-irish: allFile(
-    filter: {
-      sourceInstanceName: { eq: "content" }
-      name: { eq: "irishsurvey" }
-    }
-  ) {
-    edges {
-      node {
-        childMarkdownRemark {
-          frontmatter {
-            surveyIrish {
-              leaders {
-                communication {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                criticalthinking {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                digitalknowledge {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                onlinelife {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                privacy {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                responsibleuse {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-              }
-              pupils {
-                communication {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                criticalthinking {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                digitalknowledge {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                onlinelife {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                privacy {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                responsibleuse {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-              }
-              teachers {
-                communication {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                criticalthinking {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                digitalknowledge {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                onlinelife {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                privacy {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-                responsibleuse {
-                  responses {
-                    answer
-                  }
-                  statement
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 `
