@@ -4,6 +4,8 @@ backend:
   branch: master
 media_folder: static/assets
 public_folder: assets
+editor:
+  preview: false
 # when using the default proxy server port
 # local_backend: true
 
