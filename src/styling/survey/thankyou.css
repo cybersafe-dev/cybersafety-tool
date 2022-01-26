@@ -67,15 +67,19 @@
     z-index: -1;
     width: 20rem;
   }
+
   .bg-img9 {
-  display: none;
+    display: none;
   }
+
   .thanku-message {
     margin-top: 2rem;
-    text-align: center;
+    text-align: left;
     font-size: 1rem;
     max-width: 100%;
+    margin-bottom: 2rem;
   }
+
   .design {
     width: 100%;
   }
