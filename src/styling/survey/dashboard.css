@@ -39,6 +39,10 @@
   align-items: flex-end;
 }
 
+.title {
+  max-width: 80vw;
+}
+
 .explain {
   margin: 0.5rem 1rem 0 0;
   width: 50vw;
@@ -200,6 +204,7 @@ font-family: arial, sans-serif;
   .title {
     text-align: left;
     font-size: 1.5rem;
+    max-width: 100%;
   }
 
   .explain {
