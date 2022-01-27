@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown"
 import Fig1 from "../../../images/self-assess.svg"
 import Fig2 from "../../../images/cybersafety.svg"
 import Fig3 from "../../../images/csi.svg"
-import Marks from "../../../images/minisite-marks-bw.svg"
+// import Marks from "../../../images/minisite-marks-bw.svg"
 
 const MiniSitePreview = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS()
@@ -36,7 +36,7 @@ const MiniSitePreview = ({ entry }) => {
               <ReactMarkdown className="site-text" source={data.minisitecontent.levels} />
             </div>
             </div>
-              <img src={Marks} alt="" className="marks" />
+              {/* <img src={Marks} alt="" className="marks" /> */}
             <div id="pricing">
               <div className="section">
                 <h1 className="section-title">Pricing: <span className="italics">How much does it cost?</span></h1>
