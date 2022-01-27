@@ -14,7 +14,7 @@ import toolForSchoolsLogo from "../images/toolforschools-logo.png"
 import Fig1 from "../images/self-assess.svg"
 import Fig2 from "../images/cybersafety.svg"
 import Fig3 from "../images/csi.svg"
-import Marks from "../images/minisite-marks-bw.png"
+import Marks from "../images/minisite-marks-bw-2022.png"
 // colourful marks exist (remove -bw)
 
 import Blogo from "../images/cybersafekids-blklogo.png"
