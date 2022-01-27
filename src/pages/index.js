@@ -190,14 +190,14 @@ React.useEffect(() => {
             </a>
             <div className="socials">
               <a
-                href="https://www.facebook.com/cybersafeireland"
+                href="https://www.facebook.com/cybersafekidsie/"
                 target="_blank"
                 rel="noreferrer"
               >
                 <img src={Fb} alt="" className="social" />
               </a>
               <a
-                href="https://twitter.com/CyberSafeIE"
+                href="https://twitter.com/cybersafekidsie"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -218,7 +218,7 @@ React.useEffect(() => {
                 <img src={Insta} alt="" className="social" />
               </a>
               <a
-                href="https://www.youtube.com/channel/UCbK06TfABt_GIXWeWBziXMA?view_as=subscriber"
+                href="https://www.youtube.com/channel/UCXQOFv_SBI_TDfuYeyToqaQ"
                 target="_blank"
                 rel="noreferrer"
               >
