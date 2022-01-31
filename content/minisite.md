@@ -22,16 +22,20 @@ minisitecontent:
     * Educate your school community so they can be smart and safe online
 
 
-    All schools receive a notification of their **level award** and a basic **completion certificate**. If you want to display your school’s commitment to online safety you can then purchase one of our two **CyberSafe Tool for Schools** ‘award mark’ packages. Read on for more information of What these are and how to do this.
+    All schools receive a notification of their **level award** and a basic **confirmation of completion**. If you want to display your school’s commitment to online safety you can then purchase our **CyberSafe Tool for Schools** digital award badge. Read on for more information on how to do this.
   levels: >-
     **CyberSafe Tool for Schools** is completely free and offers the opportunity
-    to purchase an annual digital badge to show your school's commitment to
-    online safety.
+    to purchase a digital award badge to show your school's commitment to online
+    safety.
 
 
-    We have **3 levels of award** for schools depending on the results of the survey: **CyberAware**, **CyberSmart** and **CyberChampion**. You can display this digital award mark on your school website, social media channels and other school communication for 12 months from purchase. This mark is accompanied by a **report with a full breakdown of your schools's results**.
-  pricing: "**CyberSafe Tool for Schools** is **free** for all schools. If you
-    want to get the award mark for your school we have 3 options:"
+    We have **3 levels of award** for schools depending on the results of the survey: **CyberAware**, **CyberSmart** and **CyberChampion**. You can display this digital award badge on your school website, social media channels and other school communication for 12 months from purchase. This mark is accompanied by a **report with a full breakdown of your school's results**.
+  pricing: >-
+    Registering and using **CyberSafe Tool for Schools** is **free** for all
+    schools. 
+
+
+    If you want to get the digital award badge for your school, it can be easily purchased for only **€99** and will be **valid for 12 months**. You will also receive an **award certificate** and a **report** with a full breakdown of your school's results.
   aboutus: "**CyberSafeKids** is a charity working to empower children, parents
     and teachers to navigate the online world safely and responsibly. We call
     for mandatory online safety and digital literacy education in schools across
