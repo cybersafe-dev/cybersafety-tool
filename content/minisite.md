@@ -1,9 +1,9 @@
 ---
 minisitecontent:
   tool: >-
-    **CyberSafe Tool for Schools** is a **free** online tool the first of its
-    kind in Ireland. It offers a unique opportunity as a quick and efficient way
-    to assess your school’s approach to online safety. By completing a short
+    **CyberSafe Tool for Schools** is a **free** online tool and the first of
+    its kind in Ireland. It offers a unique opportunity as a quick and efficient
+    way to assess your school’s approach to online safety. By completing a short
     online survey you can get a clear snapshot of where your school stands on
     its online safety journey, measured against standards of best practice.
 
@@ -12,12 +12,7 @@ minisitecontent:
 
 
     **CyberSafe Tool for Schools** is completely free and offers the opportunity to purchase an annual digital badge to show your school's commitment to online safety.
-  awards: All schools receive a notification of their **level award** and a basic
-    **completion certificate**. If you want to display your school’s commitment
-    to online safety you can then purchase one of our two **CyberSafe Tool for
-    Schools** ‘award mark’ packages. Read on for more information of What these
-    are and how to do this.
-  levels: >-
+  awards: >-
     * Understand how cybersafe your school community is, including your
     strengths & weaknesses
 
@@ -30,7 +25,13 @@ minisitecontent:
     * Educate your school community so they can be smart and safe online
 
 
-    We have **3 levels of award** for schools depending on the results of the survey: **CyberAware**, **CyberSmart** and **CyberChampion**. You can display this digital award mark on your school website, social media channels and other school communication for 12 months from purchase. This mark is accompanied by a **report with a full breakdown of your schools's results**.
+    All schools receive a notification of their **level award** and a basic **completion certificate**. If you want to display your school’s commitment to online safety you can then purchase one of our two **CyberSafe Tool for Schools** ‘award mark’ packages. Read on for more information of What these are and how to do this.
+  levels: "We have **3 levels of award** for schools depending on the results of
+    the survey: **CyberAware**, **CyberSmart** and **CyberChampion**. You can
+    display this digital award mark on your school website, social media
+    channels and other school communication for 12 months from purchase. This
+    mark is accompanied by a **report with a full breakdown of your schools's
+    results**."
   pricing: "**CyberSafe Tool for Schools** is **free** for all schools. If you
     want to get the award mark for your school we have 3 options:"
   aboutus: "**CyberSafeKids** is a charity working to empower children, parents
