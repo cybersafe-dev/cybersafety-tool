@@ -153,9 +153,7 @@ React.useEffect(() => {
           </div>
           <img src={Fig3} alt="" className="fig" />
         </div>
-      </section>
-
-      <div id="contact-us">
+        <div id="contact-us">
         <h2 className="section-title">Contact</h2>
         <div className="contact-section">
           <div className="contact-details">
@@ -231,6 +229,7 @@ React.useEffect(() => {
           </div>
         </div>
       </div>
+      </section>
     </Layout>
   )
 }
