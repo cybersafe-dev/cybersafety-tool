@@ -8,12 +8,15 @@ minisitecontent:
     its online safety journey, measured against standards of best practice.
 
 
-    Once you click on the ‘Get Started’ button at the top, you will be asked to register by email, and you’re good to go! Relative to your school size your dashboard will give you a specific number of leaders, teachers and pupils who must complete the short online survey, which takes **no more than 15 minutes**. Once the surveys are complete you can submit the results and we do the rest. **CyberSafe Tool for Schools** is completely free and offers the opportunity to purchase an annual digital badge to show your school's commitment to online safety.
+    Once you click on the ‘Get Started’ button at the top, you will be asked to register by email, and you’re good to go! Relative to your school size your dashboard will give you a specific number of leaders, teachers and pupils who must complete the short online survey, which takes **no more than 15 minutes**. Once the surveys are complete you can submit the results and we do the rest. 
+
+
+    **CyberSafe Tool for Schools** is completely free and offers the opportunity to purchase an annual digital badge to show your school's commitment to online safety.
   awards: All schools receive a notification of their **level award** and a basic
     **completion certificate**. If you want to display your school’s commitment
     to online safety you can then purchase one of our two **CyberSafe Tool for
-    Schools** ‘award mark’ packages. Read on for more information of how to do
-    this.
+    Schools** ‘award mark’ packages. Read on for more information of What these
+    are and how to do this.
   levels: >-
     * Understand how cybersafe your school community is, including your
     strengths & weaknesses
