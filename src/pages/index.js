@@ -32,10 +32,10 @@ const MiniSite = props => {
 
   const data = props.data.allFile.edges[0].node.childMarkdownRemark.frontmatter
 
-React.useEffect(() => {
-  console.log("Language:", language)
-  // eslint-disable-next-line
-}, [])
+  React.useEffect(() => {
+    console.log("Language:", language)
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <Layout>
@@ -154,81 +154,81 @@ React.useEffect(() => {
           <img src={Fig3} alt="" className="fig" />
         </div>
         <div id="contact-us">
-        <h2 className="section-title">Contact</h2>
-        <div className="contact-section">
-          <div className="contact-details">
-            <img src={Blogo} alt="black-logo" className="blk-logo" />
-            <span>Company number: 568651</span>
-            <span>Registered charity number: 20104108</span>
-            <span>93 Upper George Street, Dun Laoghaire,</span>
-            <span>Co. Dublin, Ireland</span>
-            <a
-              className="hyperlink"
-              href="mailto:info@cybersafekids.ie"
-              target="_blank"
-              rel="noreferrer"
-            >
-              info@cybersafekids.ie
-            </a>
-            <a
-              className="csi-link"
-              href="https://www.cybersafekids.ie/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Main Site
-            </a>
-            <a
-              className="csi-link"
-              href="https://www.cybersafekids.ie/privacy-policy/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Privacy Policy
-            </a>
-            <div className="socials">
+          <h2 className="section-title">Contact</h2>
+          <div className="contact-section">
+            <div className="contact-details">
+              <img src={Blogo} alt="black-logo" className="blk-logo" />
+              <span>Company number: 568651</span>
+              <span>Registered charity number: 20104108</span>
+              <span>93 Upper George Street, Dun Laoghaire,</span>
+              <span>Co. Dublin, Ireland</span>
               <a
-                href="https://www.facebook.com/cybersafekidsie/"
+                className="hyperlink"
+                href="mailto:info@cybersafekids.ie"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={Fb} alt="" className="social" />
+                info@cybersafekids.ie
               </a>
               <a
-                href="https://twitter.com/cybersafekidsie"
+                className="csi-link"
+                href="https://www.cybersafekids.ie/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={Twit} alt="" className="social" />
+                Main Site
               </a>
               <a
-                href="https://www.linkedin.com/company/cybersafeireland/"
+                className="csi-link"
+                href="https://www.cybersafekids.ie/privacy-policy/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={Link} alt="" className="social" />
+                Privacy Policy
               </a>
-              <a
-                href="https://www.instagram.com/cybersafekidsie/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={Insta} alt="" className="social" />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCXQOFv_SBI_TDfuYeyToqaQ"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={Yout} alt="" className="social" />
-              </a>
+              <div className="socials">
+                <a
+                  href="https://www.facebook.com/cybersafekidsie/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Fb} alt="" className="social" />
+                </a>
+                <a
+                  href="https://twitter.com/cybersafekidsie"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Twit} alt="" className="social" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/cybersafeireland/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Link} alt="" className="social" />
+                </a>
+                <a
+                  href="https://www.instagram.com/cybersafekidsie/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Insta} alt="" className="social" />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCXQOFv_SBI_TDfuYeyToqaQ"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Yout} alt="" className="social" />
+                </a>
+              </div>
+            </div>
+            <div className="surf-container">
+              <img src={Surf} alt="" className="surf" />
             </div>
           </div>
-          <div className="surf-container">
-            <img src={Surf} alt="" className="surf" />
-          </div>
         </div>
-      </div>
       </section>
     </Layout>
   )
