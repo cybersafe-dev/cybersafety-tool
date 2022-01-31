@@ -25,6 +25,11 @@
   text-align: justify;
   font-weight: 400;
 }
+
+.site-text li {
+  margin: 0;
+}
+
 .cstfs-logo {
   max-width: 50vw;
   width: auto;
