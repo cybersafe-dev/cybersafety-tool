@@ -14,12 +14,20 @@ minisitecontent:
     to online safety you can then purchase one of our two **CyberSafe Tool for
     Schools** ‘award mark’ packages. Read on for more information of how to do
     this.
-  levels: "We have **3 levels of award** for schools depending on the results of
-    the survey: **CyberAware**, **CyberSmart** and **CyberChampion**. You can
-    display this digital award mark on your school website, social media
-    channels and other school communication for 12 months from purchase. This
-    mark is accompanied by a **report with a full breakdown of your schools's
-    results**."
+  levels: >-
+    * Understand how cybersafe your school community is, including your
+    strengths & weaknesses
+
+    * Be ready when online safety issues arise in your school
+
+    * Start to understand how to reduce the number of online safety issues in your school
+
+    * Publicly demonstrate your commitment to online safety and be involved in a unique initiative in Irish primary schools
+
+    * Educate your school community so they can be smart and safe online
+
+
+    We have **3 levels of award** for schools depending on the results of the survey: **CyberAware**, **CyberSmart** and **CyberChampion**. You can display this digital award mark on your school website, social media channels and other school communication for 12 months from purchase. This mark is accompanied by a **report with a full breakdown of your schools's results**.
   pricing: "**CyberSafe Tool for Schools** is **free** for all schools. If you
     want to get the award mark for your school we have 3 options:"
   aboutus: "**CyberSafeKids** is a charity working to empower children, parents
