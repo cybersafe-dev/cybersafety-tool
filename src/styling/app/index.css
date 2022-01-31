@@ -28,6 +28,8 @@
 
 .site-text li {
   margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .cstfs-logo {
