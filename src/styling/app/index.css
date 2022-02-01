@@ -25,9 +25,19 @@
   text-align: justify;
   font-weight: 400;
 }
+
+.site-text li {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
 .cstfs-logo {
-  width: 50vw;
+  max-width: 50vw;
+  width: auto;
+  height: auto;
   margin-top: 2rem;
+  overflow: visible;
 }
 .fig {
   align-self: flex-end;
@@ -37,6 +47,7 @@
   align-self: center;
   width: 80vw;
   margin: 2rem 0 2rem 0;
+  overflow: visible;
 }
 .italics {
   font-style: italic;
@@ -44,7 +55,8 @@
 
 /* LEFT SIDE*/
 
-#tool, #about  {
+#tool,
+#about {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -54,7 +66,7 @@
   box-sizing: content-box;
 }
 /* levels section is slightly different */
-#levels  {
+#levels {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -65,7 +77,8 @@
 }
 /* RIGHT SIDE */
 
-#awards, #pricing  {
+#awards,
+#pricing {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -84,14 +97,14 @@
 /* TABLE */
 .pricing-table-container {
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
 }
 
 .pricing-table-column {
-  width: 30%;
+  width: 45%;
 }
 
 .column-price {
@@ -109,28 +122,28 @@
 }
 
 .silver {
-  color: #9C9C9C;
+  color: #9c9c9c;
   font-weight: 700;
   margin: 1rem 0 0 0;
 }
 .gold {
-  color: #C09A4F;
+  color: #c09a4f;
   font-weight: 700;
   margin: 1rem 0 0 0;
 }
 .platinum {
-color: #658181;
-font-weight: 700;
-margin: 1rem 0 0 0;
+  color: #658181;
+  font-weight: 700;
+  margin: 1rem 0 0 0;
 }
 
 /* CONTACT SECTION */
 
 #contact-us {
   text-align: left;
-  background: #eeeeee;
+  /* background: #eeeeee; */
   height: 85vh;
-  padding: 15vh 4rem 0 4rem;
+  padding: 15vh 0 0 0;
   box-sizing: content-box;
 }
 
@@ -215,6 +228,7 @@ margin: 1rem 0 0 0;
 
   .cstfs-logo {
     width: 100%;
+    max-width: 100%;
   }
 
   .fig {
@@ -224,7 +238,7 @@ margin: 1rem 0 0 0;
   }
 
   .marks {
-   width: 100%;
+    width: 100%;
   }
 
   #tool,
@@ -237,36 +251,42 @@ margin: 1rem 0 0 0;
     justify-content: space-between;
   }
 
-/* TABLE */
+  /* TABLE */
 
-.pricing-table-container {
-  flex-direction: column;
-}
+  .pricing-table-container {
+    flex-direction: column;
+  }
 
-.pricing-table-column {
-  width: 100%;
-}
+  .pricing-table-column {
+    width: 100%;
+  }
 
-.column-price {
-  margin: 0 0 1rem 0;
-}
+  .column-price {
+    margin: 0 0 1rem 0;
+  }
 
-.silver, .gold, .platinum {
-  margin: 3rem 0 0 0;
-}
-
+  .silver,
+  .gold,
+  .platinum {
+    margin: 3rem 0 0 0;
+  }
 
   /* CONTACT SECTION */
   #contact-us {
     text-align: left;
-    background: #eeeeee;
+    /* background: #eeeeee; */
     padding: 0;
     height: auto;
-    padding: 15vh 1rem 0 1rem;
+    padding: 15vh 0 0 0;
   }
 
   .contact-section {
     flex-direction: column;
+  }
+
+  .blk-logo {
+    width: 50%;
+    margin-bottom: 1rem;
   }
 
   .contact-details {

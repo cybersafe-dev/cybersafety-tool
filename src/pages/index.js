@@ -14,7 +14,7 @@ import toolForSchoolsLogo from "../images/toolforschools-logo.png"
 import Fig1 from "../images/self-assess.svg"
 import Fig2 from "../images/cybersafety.svg"
 import Fig3 from "../images/csi.svg"
-import Marks from "../images/minisite-marks-bw.png"
+import Marks from "../images/minisite-marks-bw-2022.png"
 // colourful marks exist (remove -bw)
 
 import Blogo from "../images/cybersafekids-blklogo.png"
@@ -207,7 +207,7 @@ const MiniSite = props => {
                 <p className="column-price">€0</p>
                 <ul className="perks-list">
                   <li>School Assessment Grade (overall)</li>
-                  <li>Basic Completion Report</li>
+                  <li>Confirmation of Completion</li>
                 </ul>
               </section>
               <section className="pricing-table-column">
@@ -215,23 +215,9 @@ const MiniSite = props => {
                 <p className="column-price">€99</p>
                 <ul className="perks-list">
                   <li>School Assessment Grade (overall)</li>
-                  <li>School Assessment Report (Pupils/Teachers/Leaders)</li>
-                  <li>Award Certificate (for printing)</li>
-                  <li>Access to Award Mark (valid for one year)</li>
-                </ul>
-              </section>
-              <section className="pricing-table-column">
-                <h2 className="platinum">Platinum</h2>
-                <p className="column-price">€249</p>
-                <ul className="perks-list">
-                  <li>School Assessment Grade (overall)</li>
-                  <li>Full Assessment Report with Recommendations</li>
-                  <li>Award Certificate (for printing)</li>
-                  <li>Access to Award Mark (valid for one year)</li>
-                  <li>Sticker for all Pupils</li>
-                  <li>
-                    Access to choice of one free e-learning module for ten staff
-                  </li>
+                  <li>School Assessment Breakdown Report</li>
+                  <li>Award Certificate (for printing and display)</li>
+                  <li>Access to Digital Award Badge (valid for one year)</li>
                 </ul>
               </section>
             </div>
@@ -263,84 +249,85 @@ const MiniSite = props => {
           </div>
           <img src={Fig3} alt="" className="fig" />
         </div>
-      </section>
 
-      <div id="contact-us">
-        <h2 className="section-title">{irish ? "Teaghmháil" : "Contact"}</h2>
-        <div className="contact-section">
-          <div className="contact-details">
-            <img src={Blogo} alt="black-logo" className="blk-logo" />
-            <span>Company number: 568651</span>
-            <span>Registered charity number: 20104108</span>
-            <span>93 Upper George Street, Dun Laoghaire,</span>
-            <span>Co. Dublin, Ireland</span>
-            <a
-              className="hyperlink"
-              href="mailto:info@cybersafekids.ie"
-              target="_blank"
-              rel="noreferrer"
-            >
-              info@cybersafekids.ie
-            </a>
-            <a
-              className="csi-link"
-              href="https://www.cybersafekids.ie/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {irish ? "Príomhshuíomh" : "Main Site"}
-            </a>
-            <a
-              className="csi-link"
-              href="https://www.cybersafekids.ie/privacy-policy/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {irish ? "Polasaí Príobháideachais" : "Privacy Policy"}
-            </a>
-            <div className="socials">
+        <div id="contact-us">
+          <h2 className="section-title">{irish ? "Teaghmháil" : "Contact"}</h2>
+          <div className="contact-section">
+            <div className="contact-details">
+              <img src={Blogo} alt="black-logo" className="blk-logo" />
+              <span>Company number: 568651</span>
+              <span>Registered charity number: 20104108</span>
+              <span>93 Upper George Street, Dun Laoghaire,</span>
+              <span>Co. Dublin, Ireland</span>
               <a
-                href="https://www.facebook.com/cybersafeireland"
+                className="hyperlink"
+                href="mailto:info@cybersafekids.ie"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={Fb} alt="" className="social" />
+                info@cybersafekids.ie
               </a>
               <a
-                href="https://twitter.com/CyberSafeIE"
+                className="csi-link"
+                href="https://www.cybersafekids.ie/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={Twit} alt="" className="social" />
+                {irish ? "Príomhshuíomh" : "Main Site"}
               </a>
               <a
-                href="https://www.linkedin.com/company/cybersafeireland/"
+                className="csi-link"
+                href="https://www.cybersafekids.ie/privacy-policy/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={Link} alt="" className="social" />
+                {irish ? "Polasaí Príobháideachais" : "Privacy Policy"}
               </a>
-              <a
-                href="https://www.instagram.com/cybersafekidsie/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={Insta} alt="" className="social" />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCbK06TfABt_GIXWeWBziXMA?view_as=subscriber"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={Yout} alt="" className="social" />
-              </a>
+
+              <div className="socials">
+                <a
+                  href="https://www.facebook.com/cybersafekidsie/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Fb} alt="" className="social" />
+                </a>
+                <a
+                  href="https://twitter.com/cybersafekidsie"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Twit} alt="" className="social" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/cybersafeireland/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Link} alt="" className="social" />
+                </a>
+                <a
+                  href="https://www.instagram.com/cybersafekidsie/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Insta} alt="" className="social" />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCXQOFv_SBI_TDfuYeyToqaQ"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Yout} alt="" className="social" />
+                </a>
+              </div>
+            </div>
+            <div className="surf-container">
+              <img src={Surf} alt="" className="surf" />
             </div>
           </div>
-          <div className="surf-container">
-            <img src={Surf} alt="" className="surf" />
-          </div>
         </div>
-      </div>
+      </section>
     </Layout>
   )
 }

@@ -12,9 +12,9 @@ import {
 
 import csiLogo from "../images/cybersafekids-logo.png"
 import toolLogo from "../images/toolforschools-logo.png"
-import cyberAwareLogo from "../images/CyberAware-Col.png"
-import cyberSmartLogo from "../images/CyberSmart-Col.png"
-import cyberChampionLogo from "../images/CyberChampion-Col.png"
+import cyberAwareLogo from "../images/cyberaware-mark-2022.png"
+import cyberSmartLogo from "../images/cybersmart-mark-2022.png"
+import cyberChampionLogo from "../images/cyberchampion-mark-2022.png"
 import BlobSurfer from "../images/blobsurfer.png"
 
 import { awardLevelBlurbs } from "./pdfReportBlurbs"
@@ -189,6 +189,11 @@ const styles = StyleSheet.create({
       width: 400,
       alignSelf: "center",
       marginBottom: 40,
+    },
+    certificate: {
+      width: 400,
+      alignSelf: "center",
+      marginVertical: 20,
     },
   },
   awardImgSml: {
@@ -479,7 +484,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
               online assessment. Measured against standards of best practice, the results of your survey show that your school is:
             </Text>
             <Image
-              style={styles.awardImg}
+              style={styles.awardImg.certificate}
               src={selectMarkLevel(report.prospectiveMark)}
               alt="Your Mark Level Badge"
             />
