@@ -76,9 +76,9 @@ const Category = props => {
   const { state = {} } = props.location
   const { surveyData, category } = state
   const [irish] = React.useContext(LanguageStore)
-  const [survey, setSurvey] = React.useState(surveyData.english)
+  const [survey, setSurvey] = React.useState(null)
   const [currentQ, setCurrentQ] = React.useState(0)
-  const [categoryTitle, setCategoryTitle] = React.useState(category)
+  const [categoryTitle, setCategoryTitle] = React.useState("")
 
   React.useEffect(() => {
     if (irish) {
