@@ -1,11 +1,12 @@
 ---
 minisitecontent:
   tool: >-
-    **CyberSafe Tool for Schools** is a **free** online tool and the first of
-    its kind in Ireland. It offers a unique opportunity as a quick and efficient
-    way to assess your school’s approach to online safety. By completing a short
-    online survey you can get a clear snapshot of where your school stands on
-    its online safety journey, measured against standards of best practice.
+    **CyberSafe Tool for Schools** is a **free** online tool and the **first
+    solution of its kind** in Ireland. It offers a unique opportunity as a quick
+    and efficient way to assess your school’s approach to online safety. By
+    completing a short online survey you can get a clear snapshot of where your
+    school stands on its online safety journey, measured against standards of
+    best practice.
 
 
     Once you click on the ‘Get Started’ button at the top, you will be asked to register by email, and you’re good to go! Relative to your school size your dashboard will give you a specific number of leaders, teachers and pupils who must complete the short online survey, which takes **no more than 15 minutes**. Once the surveys are complete you can submit the results and we do the rest.
