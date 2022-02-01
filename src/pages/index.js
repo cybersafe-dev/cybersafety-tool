@@ -110,7 +110,7 @@ const MiniSite = props => {
                 <p className="column-price">€0</p>
                 <ul className="perks-list">
                   <li>School Assessment Grade (overall)</li>
-                  <li>Basic Completion Report</li>
+                  <li>Confirmation of Completion</li>
                 </ul>
               </section>
               <section className="pricing-table-column">
@@ -118,23 +118,9 @@ const MiniSite = props => {
                 <p className="column-price">€99</p>
                 <ul className="perks-list">
                   <li>School Assessment Grade (overall)</li>
-                  <li>School Assessment Report (Pupils/Teachers/Leaders)</li>
-                  <li>Award Certificate (for printing)</li>
-                  <li>Access to Award Mark (valid for one year)</li>
-                </ul>
-              </section>
-              <section className="pricing-table-column">
-                <h2 className="platinum">Platinum</h2>
-                <p className="column-price">€249</p>
-                <ul className="perks-list">
-                  <li>School Assessment Grade (overall)</li>
-                  <li>Full Assessment Report with Recommendations</li>
-                  <li>Award Certificate (for printing)</li>
-                  <li>Access to Award Mark (valid for one year)</li>
-                  <li>Sticker for all Pupils</li>
-                  <li>
-                    Access to choice of one free e-learning module for ten staff
-                  </li>
+                  <li>School Assessment Breakdown Report</li>
+                  <li>Award Certificate (for printing and display)</li>
+                  <li>Access to Digital Award Badge (valid for one year)</li>
                 </ul>
               </section>
             </div>
