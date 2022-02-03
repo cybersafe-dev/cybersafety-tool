@@ -4,7 +4,6 @@ import InlineReportTemplate from "./inlineReportTemplate"
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfReportSilver from "../../templates/pdfReportSilver"
 import PdfReportGold from "../../templates/pdfReportGold"
-import PdfReportPlatinum from "../../templates/pdfReportPlatinum"
 
 const ReportOptions = ({
   report,
