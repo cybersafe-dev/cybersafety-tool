@@ -4,7 +4,6 @@ import InlineReportTemplate from "./inlineReportTemplate"
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfReportSilver from "../../templates/pdfReportSilver"
 import PdfReportGold from "../../templates/pdfReportGold"
-import PdfReportPlatinum from "../../templates/pdfReportPlatinum"
 
 const ReportOptions = ({
   report,
@@ -63,22 +62,6 @@ const ReportOptions = ({
                 >
                   {({ blob, url, loading, error }) =>
                     loading ? "Loading document..." : "Gold Report"
-                  }
-                </PDFDownloadLink>
-
-                <PDFDownloadLink
-                  className="pdf-dl-btn-platinum"
-                  document={
-                    <PdfReportPlatinum
-                      report={report}
-                      reportSubmitted={reportSubmitted}
-                      quota={quota}
-                    />
-                  }
-                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Platinum.pdf`}
-                >
-                  {({ blob, url, loading, error }) =>
-                    loading ? "Loading document..." : "Platinum Report"
                   }
                 </PDFDownloadLink>
               </div>
