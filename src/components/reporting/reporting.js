@@ -10,8 +10,6 @@ import { countyList } from "../../templates/countyList"
 const Reporting = () => {
   const [user] = React.useContext(userStore)
   const [allSchools, setAllSchools] = React.useState(null)
-  const [filteredSchools, setFilteredSchools] = React.useState("")
-  const [firstLoad, setFirstLoad] = React.useState(true)
   const [searchTerm, setsearchTerm] = React.useState("")
   const [selectedCounty, setSelectedCounty] = React.useState("")
   const [orderedBy, setOrderedBy] = React.useState({
@@ -28,6 +26,7 @@ const Reporting = () => {
   }
 
   // Get and store all signed up schools from database when firebase exists
+  // Refresh this call if the orderedBy state changes
   React.useEffect(() => {
     let holdingArray = []
     const getAllSchools = async () => {
@@ -49,20 +48,13 @@ const Reporting = () => {
     getAllSchools()
   }, [firebase, orderedBy, refreshCalls])
 
-  // If searchTerm state item is updated, run filter function
-  React.useEffect(() => {
-    filterSchools()
-    //eslint-disable-next-line
-  }, [searchTerm, selectedCounty])
-
-  // Update the search values store/input text and update first load status
+  // Update search values by searchname input or select by county
   const updateSearchValues = e => {
     if (e.target.name === "searchByName") {
       setsearchTerm(e.target.value)
     } else if (e.target.name === "countySelect") {
       setSelectedCounty(e.target.value)
     }
-    setFirstLoad(false)
   }
 
   // Update the object by which the list is sorted on firebase query or toggle
@@ -79,30 +71,6 @@ const Reporting = () => {
       }
       return args
     })
-  }
-
-  // If not the first load filter the schools based on search term and store.
-  // If truthy the filtered schools will replace the full list on next render.
-  // If a county has been specified this value also affects the filter.
-  const filterSchools = () => {
-    if (!firstLoad) {
-      setFilteredSchools(
-        allSchools.filter(school => {
-          if (selectedCounty) {
-            return (
-              school.schoolName
-                .toLowerCase()
-                .includes(searchTerm.toLowerCase()) &&
-              school.county === selectedCounty
-            )
-          } else {
-            return school.schoolName
-              .toLowerCase()
-              .includes(searchTerm.toLowerCase())
-          }
-        })
-      )
-    }
   }
 
   // check for vital data before attempting to render schools.
@@ -161,21 +129,28 @@ const Reporting = () => {
       <h2 className="descriptive-title">
         Schools Signed Up: {allSchools.length}
       </h2>
-      {filteredSchools
-        ? filteredSchools.map(school => (
-            <SchoolCard
-              key={school.uid}
-              school={school}
-              refreshData={refreshData}
-            />
-          ))
-        : allSchools.map(school => (
-            <SchoolCard
-              key={school.uid}
-              school={school}
-              refreshData={refreshData}
-            />
-          ))}
+      {allSchools
+        .filter(school => {
+          if (selectedCounty) {
+            return (
+              school.schoolName
+                .toLowerCase()
+                .includes(searchTerm.toLowerCase()) &&
+              school.county === selectedCounty
+            )
+          } else {
+            return school.schoolName
+              .toLowerCase()
+              .includes(searchTerm.toLowerCase())
+          }
+        })
+        .map(school => (
+          <SchoolCard
+            key={school.uid}
+            school={school}
+            refreshData={refreshData}
+          />
+        ))}
       <button className="logout-btn" onClick={signOutApp}>
         Log out
       </button>
