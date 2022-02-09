@@ -1,4 +1,9 @@
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+exports.onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
+  if (getConfig().mode === 'production') {
+    actions.setWebpackConfig({
+      devtool: false
+    });
+  }
   if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {
