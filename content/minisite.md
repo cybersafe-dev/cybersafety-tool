@@ -9,7 +9,7 @@ minisitecontent:
     best practice.
 
 
-    Once you click on the ‘Get Started’ button at the top, you will be asked to register by email, and you’re good to go! Relative to your school size your dashboard will give you a specific number of leaders, teachers and pupils who must complete the short online survey, which takes **no more than 15 minutes**. Once the surveys are complete you can submit the results and we do the rest.
+    Once you click on the ‘Get Started’ button at the top, you will be asked to register by email, and you’re good to go! Relative to your school size your dashboard will give you a specific number of leaders, teachers and pupils who must complete the short online survey, which takes approximately **10 minutes**. Once the surveys are complete you can submit the results and we do the rest.
   awards: >-
     * Understand how cybersafe your school community is, including your
     strengths & weaknesses
