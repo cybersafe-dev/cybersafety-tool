@@ -40,9 +40,9 @@ const Signup = () => {
       setRollNumber(Math.floor(Math.random() * 100000) + 1) }
     if (!firstName || !lastName || !schoolName || !pupilCount) {
       setError("Please fill in all the form fields with asterisks")
-      setTimeout(() => {
-        setError(null)
-      }, 3000)
+      // setTimeout(() => {
+      //   setError(null)
+      // }, 3000)
       return false
     }
     return true
@@ -74,9 +74,9 @@ const Signup = () => {
       .then(() => navigate("/app"))
       .catch(error => {
         setError(error.message)
-        setTimeout(() => {
-          setError(null)
-        }, 3000)
+        // setTimeout(() => {
+        //   setError(null)
+        // }, 3000)
       })
   }
 
