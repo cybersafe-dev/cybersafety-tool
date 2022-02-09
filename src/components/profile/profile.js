@@ -15,9 +15,9 @@ const Profile = () => {
 
   const firebase = useFirebase()
 
-  const signOutApp = () => {
+  const signOutApp = async () => {
     if (!firebase) return
-    firebase.auth().signOut()
+    await firebase.auth().signOut()
     navigate("/app/login")
   }
 
@@ -44,17 +44,19 @@ const Profile = () => {
             <Copy uid={uid} />
             <Share uid={uid} />
           </div>
-          <p>
-            Please send the above survey link to the appropriate number of your
-            school's Leaders, Teachers and Pupils as indicated on the left panel
-            of this page.
-          </p>
-          <p>
-            Keep an eye on this page and refresh it occasionally. After the
-            correct number of surveys have been completed a button will appear
-            to submit the responses to CyberSafeKids. You will then receive a
-            report back in due course.
-          </p>
+          <div className="user-instructions">
+            <p>
+              Please send the above survey link to the appropriate number of
+              your school's Leaders, Teachers and Pupils as indicated on the
+              left panel of this page.
+            </p>
+            <p>
+              Keep an eye on this page and refresh it occasionally. After the
+              correct number of surveys have been completed a button will appear
+              to submit the responses to CyberSafeKids. You will then receive a
+              report back in due course.
+            </p>
+          </div>
           <button className="logout-btn" onClick={signOutApp}>
             Log out
           </button>

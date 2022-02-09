@@ -62,6 +62,7 @@ const SchoolCard = ({ school, refreshData }) => {
       ) : null}
       <div style={{ display: details ? "block" : "none" }}>
         <div className="school-info">
+          <p>County {school.county}</p>
           <p>Roll Number: {school.rollNumber ? school.rollNumber : "N/A"}</p>
           <p>
             Contact name: {school.firstName} {school.lastName}

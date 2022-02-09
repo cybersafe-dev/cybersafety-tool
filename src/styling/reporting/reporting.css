@@ -20,9 +20,43 @@
   margin: 2rem 0 1rem 4rem;
 }
 
+.reporting-tools-panel {
+  margin: 10vh 0 0 0;
+  padding: 0 5vw 0 5vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-tools {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tools-label {
+  margin: 0 2rem 1rem 0;
+}
+
+.tools-input {
+  margin: 0 0 0 0.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: none;
+}
+
+.tools-dropdown-select {
+  margin: 0 0 0 0.5rem;
+  border: none;
+}
+
 .logout-btn {
   align-self: center;
-  margin: 2rem 1rem 0 1rem;
+  margin: 0 1rem 0 1rem;
   outline: none;
   background: white;
   border-radius: 30px;
@@ -36,34 +70,16 @@
   cursor: pointer;
 }
 
-.filter-schools {
-  width: 90%;
-  height: 5rem;
-  margin: 7vh 1rem 1rem 1rem;
-  align-self: center;
-  font-size: 2rem;
-  padding: 1rem;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid #53c5cd;
-  background-color: #f2f2f2;
-}
-
-.order-schools-label {
-  margin: 0 0 0 4rem;
-}
-
-.order-schools {
-  margin: 0 0 0 0.5rem;
-  border: none;
-}
-
 .logout-btn:active {
   transform: translate(0, 3px);
   box-shadow: 0px -6px 0px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (max-width: 900px) {
+  .reporting-tools-panel {
+    flex-direction: column-reverse;
+    margin: 0 0 0 0;
+  }
 
   .admin-dash-heading-reporting {
     position: static;
