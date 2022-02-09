@@ -74,6 +74,10 @@
   justify-content: flex-start;
 }
 
+.user-instructions {
+  margin-bottom: 2rem;
+}
+
 @media only screen and (max-width: 900px) {
   .user-info {
     margin-left: 1rem;

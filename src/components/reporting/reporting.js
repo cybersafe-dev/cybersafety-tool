@@ -81,50 +81,55 @@ const Reporting = () => {
     <section className="dashboard-body">
       <SEO title="CSI Admin" />
       <div className="reporting-tools-panel">
-        <label className="tools-label">
-          School name:
-          <input
-            name="searchByName"
-            className="tools-input"
-            type="text"
-            placeholder="search"
-            value={searchTerm}
-            onChange={updateSearchValues}
-          />
-        </label>
+        <div className="search-tools">
+          <label className="tools-label">
+            School name:
+            <input
+              name="searchByName"
+              className="tools-input"
+              type="text"
+              placeholder="search"
+              value={searchTerm}
+              onChange={updateSearchValues}
+            />
+          </label>
 
-        <label className="tools-label">
-          County:
-          <select
-            name="countySelect"
-            className="tools-dropdown-select"
-            value={selectedCounty}
-            onChange={updateSearchValues}
-          >
-            <option value="">Choose a county</option>
-            {countyList.map((countyName, i) => {
-              return (
-                <option key={i} value={countyName}>
-                  {countyName}
-                </option>
-              )
-            })}
-          </select>
-        </label>
+          <label className="tools-label">
+            County:
+            <select
+              name="countySelect"
+              className="tools-dropdown-select"
+              value={selectedCounty}
+              onChange={updateSearchValues}
+            >
+              <option value="">Choose a county</option>
+              {countyList.map((countyName, i) => {
+                return (
+                  <option key={i} value={countyName}>
+                    {countyName}
+                  </option>
+                )
+              })}
+            </select>
+          </label>
 
-        <label className="tools-label">
-          Order by:
-          <select
-            className="tools-dropdown-select"
-            value={orderedBy.by}
-            onChange={updateOrderedBy}
-          >
-            <option value="createdAt">Sign up date</option>
-            <option value="schoolName">Alphabetical</option>
-          </select>
-        </label>
+          <label className="tools-label">
+            Order by:
+            <select
+              className="tools-dropdown-select"
+              value={orderedBy.by}
+              onChange={updateOrderedBy}
+            >
+              <option value="createdAt">Sign up date</option>
+              <option value="schoolName">Alphabetical</option>
+            </select>
+          </label>
+        </div>
+
+        <button className="logout-btn" onClick={signOutApp}>
+          Log out
+        </button>
       </div>
-
       <h1 className="admin-dash-heading-reporting">{user.schoolName}</h1>
       <h2 className="descriptive-title">
         Schools Signed Up: {allSchools.length}
@@ -151,9 +156,6 @@ const Reporting = () => {
             refreshData={refreshData}
           />
         ))}
-      <button className="logout-btn" onClick={signOutApp}>
-        Log out
-      </button>
     </section>
   )
 }

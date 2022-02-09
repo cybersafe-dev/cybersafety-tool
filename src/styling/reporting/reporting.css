@@ -21,32 +21,22 @@
 }
 
 .reporting-tools-panel {
-  margin: 10vh 5vw 0 5vw;
+  margin: 10vh 0 0 0;
+  padding: 0 5vw 0 5vw;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
 }
 
-.logout-btn {
-  align-self: center;
-  margin: 2rem 1rem 0 1rem;
-  outline: none;
-  background: white;
-  border-radius: 30px;
-  border: 2px solid #53c5cd;
-  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
-  color: #53c5cd;
-  padding: 0.5rem;
-  width: 250px;
-  font-weight: 600;
-  text-align: center;
-  cursor: pointer;
+.search-tools {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .tools-label {
-  margin: 0 4rem 1rem 0;
+  margin: 0 2rem 1rem 0;
 }
 
 .tools-input {
@@ -64,6 +54,22 @@
   border: none;
 }
 
+.logout-btn {
+  align-self: center;
+  margin: 0 1rem 0 1rem;
+  outline: none;
+  background: white;
+  border-radius: 30px;
+  border: 2px solid #53c5cd;
+  box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+  color: #53c5cd;
+  padding: 0.5rem;
+  width: 250px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
 .logout-btn:active {
   transform: translate(0, 3px);
   box-shadow: 0px -6px 0px rgba(0, 0, 0, 0.1);
@@ -71,7 +77,8 @@
 
 @media only screen and (max-width: 900px) {
   .reporting-tools-panel {
-    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    margin: 0 0 0 0;
   }
 
   .admin-dash-heading-reporting {
