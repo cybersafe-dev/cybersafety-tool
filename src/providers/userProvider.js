@@ -7,6 +7,7 @@ export const userStore = React.createContext([{ user: null }])
 const UserProvider = props => {
   const [user, setUser] = React.useState([])
   const [schoolName, setSchoolName] = React.useState("")
+  const [county, setCounty] = React.useState("")
   const [pupilCount, setPupilCount] = React.useState("")
   const [quota, setQuota] = React.useState(null)
   const [firstName, setFirstName] = React.useState("")
@@ -50,6 +51,7 @@ const UserProvider = props => {
     return firebase.auth().onAuthStateChanged(async userAuth => {
       const user = await generateUserDocument(userAuth, {
         schoolName,
+        county,
         pupilCount,
         scores,
         quota,
@@ -64,6 +66,7 @@ const UserProvider = props => {
   }, [
     firebase,
     schoolName,
+    county,
     pupilCount,
     quota,
     firstName,
@@ -78,6 +81,8 @@ const UserProvider = props => {
         user,
         schoolName,
         setSchoolName,
+        county,
+        setCounty,
         pupilCount,
         setPupilCount,
         firstName,

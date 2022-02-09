@@ -2,6 +2,7 @@ import React from "react"
 import { Link, navigate } from "gatsby"
 import useFirebase from "../../firebase"
 import { addNewSalesforceLead } from "../../salesforce"
+import { countyList } from "../../templates/countyList"
 
 import { userStore } from "../../providers/userProvider"
 import SEO from "../seo"
@@ -20,6 +21,8 @@ const Signup = () => {
     setSchoolName,
     pupilCount,
     setPupilCount,
+    county,
+    setCounty,
     firstName,
     setFirstName,
     lastName,
@@ -37,8 +40,9 @@ const Signup = () => {
   const validateSignupForm = () => {
     if (honeypot) return false
     if (!rollNumber) {
-      setRollNumber(Math.floor(Math.random() * 100000) + 1) }
-    if (!firstName || !lastName || !schoolName || !pupilCount) {
+      setRollNumber(Math.floor(Math.random() * 100000) + 1)
+    }
+    if (!firstName || !lastName || !schoolName || !pupilCount || !county) {
       setError("Please fill in all the form fields with asterisks")
       // setTimeout(() => {
       //   setError(null)
@@ -88,6 +92,8 @@ const Signup = () => {
       setPassword(value)
     } else if (name === "schoolName") {
       setSchoolName(value)
+    } else if (name === "county") {
+      setCounty(value)
     } else if (name === "pupilCount") {
       setPupilCount(value)
     } else if (name === "firstName") {
@@ -143,17 +149,39 @@ const Signup = () => {
 
         <label htmlFor="schoolName" className="block">
           <p className="form-label">
-            <span className="asterisk">*</span> Your School's name and county:
+            <span className="asterisk">*</span> Your School's name:
           </p>
           <input
             type="text"
             className="login-input"
             name="schoolName"
             value={schoolName}
-            placeholder="e.g. St. Philip's National School, Co. Dublin"
+            placeholder="e.g. St. Philip's National School"
             id="schoolName"
             onChange={event => onChangeHandler(event)}
           />
+        </label>
+
+        <label htmlFor="county" className="block">
+          <p className="form-label">
+            <span className="asterisk">*</span> Your School's county:
+          </p>
+          <select
+            className="login-input"
+            name="county"
+            id="county"
+            value={county}
+            onChange={event => onChangeHandler(event)}
+          >
+            <option value="">Select a County</option>
+            {countyList.map((county, i) => {
+              return (
+                <option key={i} value={county}>
+                  {county}
+                </option>
+              )
+            })}
+          </select>
         </label>
 
         <label htmlFor="rollNumber" className="block">
