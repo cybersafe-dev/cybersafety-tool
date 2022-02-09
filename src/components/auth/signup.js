@@ -19,10 +19,10 @@ const Signup = () => {
     user,
     schoolName,
     setSchoolName,
-    pupilCount,
-    setPupilCount,
     county,
     setCounty,
+    pupilCount,
+    setPupilCount,
     firstName,
     setFirstName,
     lastName,
@@ -174,10 +174,10 @@ const Signup = () => {
             onChange={event => onChangeHandler(event)}
           >
             <option value="">Select a County</option>
-            {countyList.map((county, i) => {
+            {countyList.map((countyName, i) => {
               return (
-                <option key={i} value={county}>
-                  {county}
+                <option key={i} value={countyName}>
+                  {countyName}
                 </option>
               )
             })}
