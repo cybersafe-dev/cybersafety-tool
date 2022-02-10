@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Sienna",
   "dependencies": {
-    "@react-pdf/renderer": "^1.6.12",
+    "@react-pdf/renderer": "^2.1.1",
     "firebase": "^7.24.0",
     "gatsby": "^2.32.1",
     "gatsby-image": "^2.4.21",
