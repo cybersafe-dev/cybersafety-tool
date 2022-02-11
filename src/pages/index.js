@@ -58,7 +58,7 @@ const MiniSite = props => {
             />
             <ReactMarkdown
               className="site-text"
-              source={data.minisitecontent.tool}
+              children={data.minisitecontent.tool}
             />
           </div>
           <img src={Fig1} alt="" className="fig" />
@@ -70,7 +70,7 @@ const MiniSite = props => {
             </h2>
             <ReactMarkdown
               className="site-text"
-              source={data.minisitecontent.awards}
+              children={data.minisitecontent.awards}
             />
           </div>
           <img src={Fig2} alt="" className="fig" />
@@ -82,7 +82,7 @@ const MiniSite = props => {
             </h2>
             <ReactMarkdown
               className="site-text"
-              source={data.minisitecontent.levels}
+              children={data.minisitecontent.levels}
             />
             <img
               src={Marks}
@@ -102,7 +102,7 @@ const MiniSite = props => {
             </h2>
             <ReactMarkdown
               className="site-text"
-              source={data.minisitecontent.pricing}
+              children={data.minisitecontent.pricing}
             />
             <div className="pricing-table-container">
               <section className="pricing-table-column">
@@ -134,7 +134,7 @@ const MiniSite = props => {
             </h2>
             <ReactMarkdown
               className="site-text"
-              source={data.minisitecontent.aboutus}
+              children={data.minisitecontent.aboutus}
             />
           </div>
           <img src={Fig3} alt="" className="fig" />

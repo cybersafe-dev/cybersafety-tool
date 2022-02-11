@@ -37,15 +37,15 @@ const SurveyPage = props => {
         <img src={Half} alt="background design" className="bg3" />
         <div className="introtext-box">
          <img src={Icon1} alt="" className="figure" />
-         <ReactMarkdown className="para-1" source={data.infocontent.firstpara} />
+         <ReactMarkdown className="para-1" children={data.infocontent.firstpara} />
        </div>
        <div className="introtext-box-horiz-flipped">
-         <ReactMarkdown className="para-2" source={data.infocontent.secondpara} />
+         <ReactMarkdown className="para-2" children={data.infocontent.secondpara} />
          <img src={Icon2} alt="" className="figure" />
        </div>
        <div className="introtext-box">
          <img src={Icon3} alt="" className="figure" />
-         <ReactMarkdown className="para-3" source={data.infocontent.thirdpara} />
+         <ReactMarkdown className="para-3" children={data.infocontent.thirdpara} />
        </div>
         <div className="button-and-pills">
           <Link to="/survey/roleselection/" className="start-btn">
