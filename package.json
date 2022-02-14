@@ -26,7 +26,7 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.0",
     "react-share": "^4.4.0",
-    "react-timer-hook": "^2.0.3",
+    "react-timer-hook": "^3.0.5",
     "react-use-clipboard": "^1.0.7",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.1.1",
