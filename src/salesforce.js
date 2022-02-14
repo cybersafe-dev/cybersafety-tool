@@ -34,7 +34,7 @@ export const addNewSalesforceLead = (
   let dateNow = d.toDateString()
   sfLead[rollNumberId] = rollNumber
   sfLead[toolStatusId] = `Conducting surveys from: ${dateNow}`
-  sfLead[toolUidId] = toolUid || ""
+  sfLead[toolUidId] = toolUid
 
   // console.log(sfLead)
 
