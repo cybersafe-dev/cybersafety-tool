@@ -12,10 +12,9 @@ export const addNewSalesforceLead = (
   urlencoded.append("last_name", lastName)
   urlencoded.append("email", email)
   urlencoded.append("company", company)
-  // urlencoded.append("00N4K000003FxTE", rollNumber) test org value
-  urlencoded.append("00N1i000002IJKt", rollNumber)
+  urlencoded.append(process.env.GATSBY_SF_ROLL_NUMBER_ID, rollNumber)
   urlencoded.append("lead_source", "CYBERSAFE TOOL for SCHOOLS")
-  urlencoded.append("00N1i000002NgJA", "Signed up...conducting surveys")
+  urlencoded.append(process.env.GATSBY_SF_TOOL_STATUS_ID, "Conducting surveys from:")
 
   // console.log(...urlencoded);
 
