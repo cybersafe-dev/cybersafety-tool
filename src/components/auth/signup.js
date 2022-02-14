@@ -44,9 +44,6 @@ const Signup = () => {
     }
     if (!firstName || !lastName || !schoolName || !pupilCount || !county) {
       setError("Please fill in all the form fields with asterisks")
-      // setTimeout(() => {
-      //   setError(null)
-      // }, 3000)
       return false
     }
     return true
@@ -62,26 +59,31 @@ const Signup = () => {
     const validated = await validateSignupForm()
     if (!validated) return
     // For testing web to lead without creating a user...
-    await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
-    // await firebase
-    //   .auth()
-    //   .createUserWithEmailAndPassword(email, password)
-    //   .then(async () => {
-    //     await addNewSalesforceLead(
-    //       firstName,
-    //       lastName,
-    //       email,
-    //       schoolName,
-    //       rollNumber
-    //     )
-    //   })
-    //   .then(() => navigate("/app"))
-    //   .catch(error => {
-    //     setError(error.message)
-    //     // setTimeout(() => {
-    //     //   setError(null)
-    //     // }, 3000)
-    //   })
+    // await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
+    await firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
+      .then(async (data) => {
+        const { uid } = data.user
+        await addNewSalesforceLead(
+          firstName,
+          lastName,
+          email,
+          schoolName,
+          rollNumber,
+          uid
+        )
+      })
+      .then(() => {
+        if (user.schoolName) {
+          navigate("/app")
+        } else {
+          setError("Processing...")
+        }
+      })
+      .catch(error => {
+        setError(error.message)
+      })
   }
 
   const onChangeHandler = event => {

@@ -1,57 +1,24 @@
-export const oldAddNewSalesforceLead = (
-  firstName,
-  lastName,
-  email,
-  company,
-  rollNumber
-) => {
-  let d = new Date()
-  let dateNow = d.toDateString()
-
-  var urlencoded = new URLSearchParams()
-  urlencoded.append("oid", process.env.GATSBY_SF_OID)
-  urlencoded.append("retURL", "http://")
-  urlencoded.append("first_name", firstName)
-  urlencoded.append("last_name", lastName)
-  urlencoded.append("email", email)
-  urlencoded.append("company", company)
-  urlencoded.append(process.env.GATSBY_SF_ROLL_NUMBER_ID, rollNumber)
-  urlencoded.append("lead_source", "CYBERSAFE TOOL for SCHOOLS")
-  urlencoded.append(
-    process.env.GATSBY_SF_TOOL_STATUS_ID,
-    `Conducting surveys from: ${dateNow}`
-  )
-
-  console.log(...urlencoded)
-
-  fetch("https://webto.salesforce.com/servlet/servlet.WebToLead?", {
-    body: urlencoded,
-    method: "POST",
-    headers: {
-      "Content-type": "application/x-www-form-urlencoded",
-    },
-  })
-  // .then(res => {
-  //   console.log(res)
-  // })
-  // .catch(error => {
-  //   console.error(error)
-  // })
-}
-
 // Web to Lead function
 export const addNewSalesforceLead = (
   firstName,
   lastName,
   email,
   company,
-  rollNumber
+  rollNumber,
+  toolUid
 ) => {
+  // Return if using a particular email format that suggests we don't want a new lead
+  if (email.split("@")[1] === "test.ie") {
+    return null
+  }
 
+  // Pull custom SF field ids from env
   let oid = process.env.GATSBY_SF_OID
   let rollNumberId = process.env.GATSBY_SF_ROLL_NUMBER_ID
   let toolStatusId = process.env.GATSBY_SF_TOOL_STATUS_ID
+  let toolUidId = process.env.GATSBY_SF_UID_ID
 
+  // Create lead template
   const sfLead = {
     oid: oid,
     retURL: "http://",
@@ -62,13 +29,16 @@ export const addNewSalesforceLead = (
     lead_source: "CYBERSAFE TOOL for SCHOOLS",
   }
 
+  // set custom fields into template object
   let d = new Date()
   let dateNow = d.toDateString()
   sfLead[rollNumberId] = rollNumber
   sfLead[toolStatusId] = `Conducting surveys from: ${dateNow}`
+  sfLead[toolUidId] = toolUid || ""
 
-  console.log(sfLead)
+  // console.log(sfLead)
 
+  // Create a hidden iframe as the form target as we don't want to navigate in this function
   let customHiddenIframeName = "SF_WEB_TO_LEAD"
   if (!document.getElementById(customHiddenIframeName)) {
     let theiFrame = document.createElement("iframe")
@@ -78,9 +48,11 @@ export const addNewSalesforceLead = (
     theiFrame.style.display = "none"
     document.body.appendChild(theiFrame)
   }
+
+  // Create a hidden form from the template and submit to SF web-to-lead
   let form = document.createElement("form")
   form.method = "POST"
-  form.action = "https://webto.salesforce.com/servlet/servlet.WebToLead?"
+  form.action = "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
   form.setAttribute("target", customHiddenIframeName)
   for (let dataPoint in sfLead) {
     let theInput = document.createElement("input")
