@@ -5,7 +5,8 @@ export const addNewSalesforceLead = (
   email,
   company,
   rollNumber,
-  toolUid
+  // Line below commented out until the production toolUidId is available.
+  // toolUid
 ) => {
   // Return if using a particular email format that suggests we don't want a new lead
   if (email.split("@")[1] === "test.ie") {
@@ -16,7 +17,9 @@ export const addNewSalesforceLead = (
   let oid = process.env.GATSBY_SF_OID
   let rollNumberId = process.env.GATSBY_SF_ROLL_NUMBER_ID
   let toolStatusId = process.env.GATSBY_SF_TOOL_STATUS_ID
-  let toolUidId = process.env.GATSBY_SF_UID_ID
+  
+  // Line below commented out until the production toolUidId is available.
+  //let toolUidId = process.env.GATSBY_SF_UID_ID
 
   // Create lead template
   const sfLead = {
@@ -34,7 +37,9 @@ export const addNewSalesforceLead = (
   let dateNow = d.toDateString()
   sfLead[rollNumberId] = rollNumber
   sfLead[toolStatusId] = `Conducting surveys from: ${dateNow}`
-  sfLead[toolUidId] = toolUid
+
+  // Line below commented out until the production toolUidId is available.
+  // sfLead[toolUidId] = toolUid
 
   // console.log(sfLead)
 
