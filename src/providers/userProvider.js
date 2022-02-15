@@ -48,8 +48,8 @@ const UserProvider = props => {
   React.useEffect(() => {
     if (!firebase) return
 
-    return firebase.auth().onAuthStateChanged(async userAuth => {
-      const user = await generateUserDocument(userAuth, {
+    firebase.auth().onAuthStateChanged(async userAuth => {
+      await generateUserDocument(userAuth, {
         schoolName,
         county,
         pupilCount,
@@ -59,8 +59,8 @@ const UserProvider = props => {
         lastName,
         rollNumber,
         reportSent,
-      })
-      setUser(user)
+      }).then(user => setUser(user))
+      .catch(error => console.error(error))
     })
     // eslint-disable-next-line
   }, [

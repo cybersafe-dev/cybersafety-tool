@@ -39,14 +39,8 @@ const Signup = () => {
 
   const validateSignupForm = () => {
     if (honeypot) return false
-    if (!rollNumber) {
-      setRollNumber(Math.floor(Math.random() * 100000) + 1)
-    }
     if (!firstName || !lastName || !schoolName || !pupilCount || !county) {
-      setError("Please fill in all the form fields with asterisks")
-      // setTimeout(() => {
-      //   setError(null)
-      // }, 3000)
+      setError("Please fill in all the form fields with asterisks.")
       return false
     }
     return true
@@ -59,28 +53,29 @@ const Signup = () => {
   ) => {
     event.preventDefault()
     if (!firebase) return
-    const validated = await validateSignupForm()
+    const validated = validateSignupForm()
     if (!validated) return
     // For testing web to lead without creating a user...
-    //await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
+    // await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber, "fakeuid")
     await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(async () => {
+      .then(async data => {
+        const { uid } = data.user
         await addNewSalesforceLead(
           firstName,
           lastName,
           email,
           schoolName,
-          rollNumber
+          rollNumber,
+          uid
         )
       })
-      .then(() => navigate("/app"))
+      // .then(() => {
+      //   navigate("/app")
+      // })
       .catch(error => {
         setError(error.message)
-        // setTimeout(() => {
-        //   setError(null)
-        // }, 3000)
       })
   }
 
