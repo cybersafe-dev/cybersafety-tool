@@ -77,10 +77,9 @@ const SchoolCard = ({ school, refreshData }) => {
         )}
         {school.quota ? (
           <p>
-            Leaders: {school.scores.leaders.length}/{school.quota.leadersQuota}{" "}
-            - Teachers: {school.scores.teachers.length}/
-            {school.quota.teachersQuota} - Pupils: {school.scores.pupils.length}
-            /{school.quota.pupilsQuota}
+            [L: {school.scores.leaders.length}/{school.quota.leadersQuota}][T:{" "}
+            {school.scores.teachers.length}/{school.quota.teachersQuota}][P:{" "}
+            {school.scores.pupils.length}/{school.quota.pupilsQuota}]
           </p>
         ) : null}
       </div>
