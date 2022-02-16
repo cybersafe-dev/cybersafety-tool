@@ -22,6 +22,14 @@
     padding: 1rem;
 }
 
+.school-card-expiring {
+    width: 90vw;
+    margin: 1rem auto 0 auto;
+    background-color: #fc6161;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
 .scorecard-box {
     width: 100%;
     display: flex;

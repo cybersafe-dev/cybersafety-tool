@@ -32,22 +32,30 @@ const SchoolCard = ({ school, refreshData }) => {
     const yearInMillis = 365 * dayInMillis
     const elevenMonthsMillis = 335 * dayInMillis
     const renewalDate = new Date(dateInMillis + yearInMillis).toDateString()
-    const warningDate = new Date(dateInMillis + elevenMonthsMillis).toDateString()
+    const warningDate = new Date(
+      dateInMillis + elevenMonthsMillis
+    ).toDateString()
     return {
       renewalDate: renewalDate,
       warningDate: warningDate,
     }
   }
 
+  const getCardBgColour = firebaseTimestamp => {
+    if (firebaseTimestamp) {
+      if (
+        new Date(createRenewalDates(firebaseTimestamp).warningDate) <=
+        Date.now()
+      )
+        return "school-card-expiring"
+      else if (reportSentBool) return "school-card-complete"
+      else if (school.report) return "school-card-with-report"
+    } else return "school-card"
+  }
+
   return (
     <section
-      className={
-        reportSentBool
-          ? "school-card-complete"
-          : school.report
-          ? "school-card-with-report"
-          : "school-card"
-      }
+      className={getCardBgColour(school.reportSubmitted)}
       key={school.schoolName}
     >
       <div className="bar-line">
@@ -93,12 +101,12 @@ const SchoolCard = ({ school, refreshData }) => {
           toggleReportSentBool={toggleReportSentBool}
           quota={school.quota}
         />
-         {school.report ? (
-            <p>
-              Renewal date:{" "}
-              {createRenewalDates(school.reportSubmitted).renewalDate}
-            </p>
-          ) : null}
+        {school.report ? (
+          <p>
+            Renewal date:{" "}
+            {createRenewalDates(school.reportSubmitted).renewalDate}
+          </p>
+        ) : null}
         <div className="bar-line">
           <p>Individual Survey Scores:</p>
           {scores ? (
