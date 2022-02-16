@@ -17,13 +17,26 @@ const SchoolCard = ({ school, refreshData }) => {
     //eslint-disable-next-line
   }, [reportSentBool])
 
-  const createReadableTimestamp = (firebaseTimestamp) => {
-      const dateInMillis = firebaseTimestamp.seconds * 1000
-      const timestamp =
-        new Date(dateInMillis).toDateString() +
-        " at " +
-        new Date(dateInMillis).toLocaleTimeString()
-      return timestamp
+  const createReadableTimestamp = firebaseTimestamp => {
+    const dateInMillis = firebaseTimestamp.seconds * 1000
+    const timestamp =
+      new Date(dateInMillis).toDateString() +
+      " at " +
+      new Date(dateInMillis).toLocaleTimeString()
+    return timestamp
+  }
+
+  const createRenewalDates = firebaseTimestamp => {
+    const dateInMillis = firebaseTimestamp.seconds * 1000
+    const dayInMillis = 24 * 60 * 60 * 1000
+    const yearInMillis = 365 * dayInMillis
+    const elevenMonthsMillis = 335 * dayInMillis
+    const renewalDate = new Date(dateInMillis + yearInMillis).toDateString()
+    const warningDate = new Date(dateInMillis + elevenMonthsMillis).toDateString()
+    return {
+      renewalDate: renewalDate,
+      warningDate: warningDate,
+    }
   }
 
   return (
@@ -57,7 +70,8 @@ const SchoolCard = ({ school, refreshData }) => {
       </div>
       {school.report ? (
         <p style={{ margin: "1rem 0 0 0" }}>
-          {school.report.prospectiveMark} School since {createReadableTimestamp(school.reportSubmitted)}
+          {school.report.prospectiveMark} School since{" "}
+          {createReadableTimestamp(school.reportSubmitted)}
         </p>
       ) : null}
       <div style={{ display: details ? "block" : "none" }}>
@@ -79,6 +93,12 @@ const SchoolCard = ({ school, refreshData }) => {
           toggleReportSentBool={toggleReportSentBool}
           quota={school.quota}
         />
+         {school.report ? (
+            <p>
+              Renewal date:{" "}
+              {createRenewalDates(school.reportSubmitted).renewalDate}
+            </p>
+          ) : null}
         <div className="bar-line">
           <p>Individual Survey Scores:</p>
           {scores ? (
