@@ -41,13 +41,13 @@ const SchoolCard = ({ school, refreshData }) => {
     }
   }
 
-  const getCardBgColour = firebaseTimestamp => {
+  const getCardBgColour = (firebaseTimestamp) => {
     if (firebaseTimestamp) {
       if (
         new Date(createRenewalDates(firebaseTimestamp).warningDate) <=
         Date.now()
       )
-        return "school-card-expiring"
+      return "school-card-expiring"
       else if (reportSentBool) return "school-card-complete"
       else if (school.report) return "school-card-with-report"
     } else return "school-card"
