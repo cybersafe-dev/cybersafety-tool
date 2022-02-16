@@ -49,7 +49,7 @@
 
 .bar-toggle-btn {
     color: #2a94f4;
-    margin-left: 0.5rem;
+    margin: 0 0.5rem;
     cursor: pointer;
     border: none;
     background-color: transparent;

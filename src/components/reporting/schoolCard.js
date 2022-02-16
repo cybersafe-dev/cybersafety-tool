@@ -41,13 +41,13 @@ const SchoolCard = ({ school, refreshData }) => {
     }
   }
 
-  const getCardBgColour = (firebaseTimestamp) => {
+  const getCardBgColour = firebaseTimestamp => {
     if (firebaseTimestamp) {
       if (
         new Date(createRenewalDates(firebaseTimestamp).warningDate) <=
         Date.now()
       )
-      return "school-card-expiring"
+        return "school-card-expiring"
       else if (reportSentBool) return "school-card-complete"
       else if (school.report) return "school-card-with-report"
     } else return "school-card"
@@ -75,6 +75,14 @@ const SchoolCard = ({ school, refreshData }) => {
             show details
           </button>
         )}
+        {school.quota ? (
+          <p>
+            Leaders: {school.scores.leaders.length}/{school.quota.leadersQuota}{" "}
+            - Teachers: {school.scores.teachers.length}/
+            {school.quota.teachersQuota} - Pupils: {school.scores.pupils.length}
+            /{school.quota.pupilsQuota}
+          </p>
+        ) : null}
       </div>
       {school.report ? (
         <p style={{ margin: "1rem 0 0 0" }}>
