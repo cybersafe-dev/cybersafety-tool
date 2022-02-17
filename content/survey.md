@@ -137,7 +137,7 @@ leaders:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 3. I know how approximately how much time I am online each day.
+    - statement: 3. I know approximately how much time I am online each day.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -394,7 +394,7 @@ teachers:
         - answer: Neutral
         - answer: Disagree
         - answer: Strongly disagree
-    - statement: 5.  I know how approximately how much time I am online each day.
+    - statement: 5.  I know approximately how much time I am online each day.
       responses:
         - answer: Strongly agree
         - answer: Agree
@@ -542,7 +542,7 @@ pupils:
         - answer: Not very often
         - answer: Never
   privacy:
-    - statement: 1. My online accounts are private (no one can see them with
+    - statement: 1. My online accounts are private (no one can see them without
         requesting permission).
       responses:
         - answer: Yes / I don't have accounts
@@ -662,7 +662,7 @@ pupils:
     - statement: 2. I know how roughly how much time I am online each day.
       responses:
         - answer: Yes
-        - answer: Not sure
+        - answer: No
         - answer: I don't know
     - statement: 3. It's important to balance online time each day with other activities.
       responses:
