@@ -77,7 +77,8 @@ const SchoolOptions = ({ school, refreshData }) => {
       const archiveData = {
         reportSubmitted: reportSubmitted,
         report: report,
-        scores: scores
+        scores: scores,
+        archivedAt: Date.now()
       }
 
       await archiveCurrent(school.uid, archiveData)
