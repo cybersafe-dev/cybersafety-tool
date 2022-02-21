@@ -1,6 +1,6 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
+import firebase from "firebase/compat/app"
+import "firebase/compat/auth"
+import "firebase/compat/firestore"
 
 var firebaseConfig = {
   apiKey: process.env.GATSBY_FIREBASE_APIKEY,
@@ -131,14 +131,27 @@ export const updateReportSentValue = (uid, bool) => {
 export const deleteUserAccount = async uid => {
   if (!uid) return "uid error"
   try {
-    await firebase
-      .firestore()
-      .collection("users")
-      .doc(uid)
-      .delete()
+    await firebase.firestore().collection("users").doc(uid).delete()
     return "deleted"
   } catch (error) {
     console.error("Error removing document: ", error)
     return "deletion error"
   }
 }
+
+// Archive a school's current report and score details
+export const archiveCurrent = async (uid, archiveData) => {
+  if (!uid) return "uid error"
+  try {
+    const schoolRef = firebase.firestore().collection("users").doc(uid)
+    schoolRef.update({
+      archive: firebase.firestore.FieldValue.arrayUnion(archiveData),
+    })
+    return "success"
+  } catch (error) {
+    console.error("Error archiving data: ", error)
+    return "archive error"
+  }
+}
+
+// Return a school to a 'refreshed' state
