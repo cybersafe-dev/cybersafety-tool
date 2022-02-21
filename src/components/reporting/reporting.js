@@ -13,7 +13,7 @@ const Reporting = () => {
   const [searchTerm, setsearchTerm] = React.useState("")
   const [selectedCounty, setSelectedCounty] = React.useState("")
   const [orderedBy, setOrderedBy] = React.useState({
-    by: "createdAt",
+    by: "updatedAt",
     ascDesc: "desc",
   })
   const [refreshCalls, refreshData] = React.useReducer(x => x + 1, 0)
@@ -65,8 +65,11 @@ const Reporting = () => {
       if (value === "schoolName") {
         args.by = "schoolName"
         args.ascDesc = "asc"
-      } else {
+      } else if (value === "createdAt") {
         args.by = "createdAt"
+        args.ascDesc = "desc"
+      } else {
+        args.by = "updatedAt"
         args.ascDesc = "desc"
       }
       return args
@@ -120,6 +123,7 @@ const Reporting = () => {
               value={orderedBy.by}
               onChange={updateOrderedBy}
             >
+              <option value="updatedAt">Progress last refreshed</option>
               <option value="createdAt">Sign up date</option>
               <option value="schoolName">Alphabetical</option>
             </select>

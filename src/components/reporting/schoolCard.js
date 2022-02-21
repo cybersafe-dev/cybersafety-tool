@@ -99,6 +99,7 @@ const SchoolCard = ({ school, refreshData }) => {
           <p>Contact email: {school.email}</p>
           <p>Number of Pupils: {school.pupilCount}</p>
           <p>Account created: {createReadableTimestamp(school.createdAt)}</p>
+          <p>Tool progress last refreshed: {createReadableTimestamp(school.updatedAt)}</p>
         </div>
         <ReportOptions
           report={school.report}
