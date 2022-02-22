@@ -5,6 +5,7 @@ import {
   deleteUserAccount,
   getUserDocument,
   archiveCurrent,
+  refreshSchool
 } from "../../firebase"
 import { createReport } from "../../templates/reportTemplate"
 
@@ -65,9 +66,9 @@ const SchoolOptions = ({ school, refreshData }) => {
   }
 
   const archiveAndRefreshSchoolProgress = async () => {
-    let refreshSchool = true
-    refreshSchool = window.confirm(
-      "This will archive this school's current progress and refresh their tool progress. Continue?"
+    let confirmRefreshSchool = true
+    confirmRefreshSchool = window.confirm(
+      "This will archive this school's current report and refresh their tool progress. Continue?"
     )
     if (!refreshSchool) return
     else {
@@ -78,18 +79,16 @@ const SchoolOptions = ({ school, refreshData }) => {
         reportSubmitted: reportSubmitted,
         report: report,
         scores: scores,
-        archivedAt: Date.now()
+        archivedAt: Date.now(),
       }
 
       await archiveCurrent(school.uid, archiveData)
-      .then(response => {
-        console.log(response)
-        refreshData()
-      })
-      .catch(error => {
-        alert("Sorry, there was an error: ", error)
-      })
-      
+        .then(() => refreshSchool(school.uid))
+        .then(() => refreshData())
+        .catch(error => {
+          console.error(error)
+          alert("Sorry, there was an error: ", error)
+        })
     }
   }
 
@@ -103,7 +102,10 @@ const SchoolOptions = ({ school, refreshData }) => {
         <button className="red-warning-btn" onClick={handleDeleteAccount}>
           Delete School
         </button>
-        <button className="red-warning-btn" onClick={archiveAndRefreshSchoolProgress}>
+        <button
+          className="red-warning-btn"
+          onClick={archiveAndRefreshSchoolProgress}
+        >
           Refresh School
         </button>
       </div>

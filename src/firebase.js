@@ -155,3 +155,23 @@ export const archiveCurrent = async (uid, archiveData) => {
 }
 
 // Return a school to a 'refreshed' state
+export const refreshSchool = async (uid) => {
+  if (!uid) return "uid error"
+  try {
+    await firebase.firestore().collection("users").doc(uid).update({
+      report: false,
+      reportSubmitted: "",
+      reportSent: false,
+      scores: {
+        leaders: [],
+        teachers: [],
+        pupils: [],
+      },
+      updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+    })
+    return "refreshed"
+  } catch (error) {
+    console.error("Error refreshing tool progress")
+    return "error"
+  }
+}
