@@ -5,7 +5,7 @@ import {
   deleteUserAccount,
   getUserDocument,
   archiveCurrent,
-  refreshSchool
+  refreshSchool,
 } from "../../firebase"
 import { createReport } from "../../templates/reportTemplate"
 
@@ -84,7 +84,10 @@ const SchoolOptions = ({ school, refreshData }) => {
 
       await archiveCurrent(school.uid, archiveData)
         .then(() => refreshSchool(school.uid))
-        .then(() => refreshData())
+        .then(() => {
+          alert("Tool progress successfully refreshed and old data archived.")
+          refreshData()
+        })
         .catch(error => {
           console.error(error)
           alert("Sorry, there was an error: ", error)
