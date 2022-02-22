@@ -123,7 +123,7 @@ const Reporting = () => {
               value={orderedBy.by}
               onChange={updateOrderedBy}
             >
-              <option value="updatedAt">Progress last refreshed</option>
+              <option value="updatedAt">Current tool run began</option>
               <option value="createdAt">Sign up date</option>
               <option value="schoolName">Alphabetical</option>
             </select>
