@@ -8,7 +8,9 @@ const Timer = () => {
   const [time, start] = React.useContext(TimerStore)
 
   React.useEffect(() => {
-    start()
+    if (time === "00:00") {
+      start()
+    }
     // eslint-disable-next-line
   }, [])
 
@@ -16,7 +18,7 @@ const Timer = () => {
     <>
       <div className="timer-container">
         <div className="timer">
-        <img src={Time} alt="" className="time-icon" />
+          <img src={Time} alt="" className="time-icon" />
           <span>
             {time.split(":")[0] >= 10 ? (
               <span style={{ color: "red" }}>{time}</span>
@@ -24,7 +26,6 @@ const Timer = () => {
               <span style={{ color: "black" }}>{time}</span>
             )}
           </span>
-
         </div>
         <p className="timer-msg">This should take 15 minutes</p>
       </div>
