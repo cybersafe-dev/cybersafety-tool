@@ -3,7 +3,7 @@ import "../../styling/reporting/reportOptions.css"
 import InlineReportTemplate from "./inlineReportTemplate"
 import { PDFDownloadLink } from "@react-pdf/renderer"
 import PdfReportSilver from "../../templates/pdfReportSilver"
-import PdfReportGold from "../../templates/pdfReportGold"
+import PdfReportChampion from "../../templates/pdfReportChampion"
 
 const ReportOptions = ({
   report,
@@ -52,16 +52,16 @@ const ReportOptions = ({
                 <PDFDownloadLink
                   className="pdf-dl-btn-gold"
                   document={
-                    <PdfReportGold
+                    <PdfReportChampion
                       report={report}
                       reportSubmitted={reportSubmitted}
                       quota={quota}
                     />
                   }
-                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Gold.pdf`}
+                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} CyberChampion.pdf`}
                 >
                   {({ blob, url, loading, error }) =>
-                    loading ? "Loading document..." : "Gold Report"
+                    loading ? "Loading document..." : "CyberChampion Report"
                   }
                 </PDFDownloadLink>
               </div>
