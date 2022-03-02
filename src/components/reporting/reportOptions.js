@@ -29,8 +29,26 @@ const ReportOptions = ({
             </p>
             {!documentsGenerated ? (
               <button className="pdf-dl-btn" onClick={generatePdfs}>
-                Generate PDFs
+                Generate Report
               </button>
+            ) : report.prospectiveMark === "CyberChampion" ? (
+              <div className="show-hide-bar">
+                <PDFDownloadLink
+                  className="pdf-dl-btn"
+                  document={
+                    <PdfReportChampion
+                      report={report}
+                      reportSubmitted={reportSubmitted}
+                      quota={quota}
+                    />
+                  }
+                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} CyberChampion.pdf`}
+                >
+                  {({ blob, url, loading, error }) =>
+                    loading ? "Loading document..." : "CyberChampion Report"
+                  }
+                </PDFDownloadLink>
+              </div>
             ) : (
               <div className="show-hide-bar">
                 <PDFDownloadLink
@@ -45,23 +63,9 @@ const ReportOptions = ({
                   fileName={`CyberSafe Tool for Schools Report ${report.reportFor} ${report.prospectiveMark}.pdf`}
                 >
                   {({ blob, url, loading, error }) =>
-                    loading ? "Loading document..." : `${report.prospectiveMark} Report`
-                  }
-                </PDFDownloadLink>
-
-                <PDFDownloadLink
-                  className="pdf-dl-btn"
-                  document={
-                    <PdfReportChampion
-                      report={report}
-                      reportSubmitted={reportSubmitted}
-                      quota={quota}
-                    />
-                  }
-                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} CyberChampion.pdf`}
-                >
-                  {({ blob, url, loading, error }) =>
-                    loading ? "Loading document..." : "CyberChampion Report"
+                    loading
+                      ? "Loading document..."
+                      : `${report.prospectiveMark} Report`
                   }
                 </PDFDownloadLink>
               </div>
