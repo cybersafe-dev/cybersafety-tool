@@ -343,6 +343,7 @@ const styles = StyleSheet.create({
       color: "#181818",
       marginBottom: 2,
       textAlign: "left",
+      hyphens: "none",
     },
     boldText: {
       fontSize: 10,
@@ -1570,7 +1571,360 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
         </View>
       </Page>
 
-      {/* Page six - Useful links table - Critical thinking, responsible use */}
+      {/* Page six - Useful links table - Responsible use */}
+      <Page size="A4" style={styles.page} wrap>
+        <View style={styles.header.twoLogo}>
+          <Image
+            style={styles.logo.tfs}
+            src={toolLogo}
+            alt="CyberSafe Tool for Schools Logo"
+          />
+          <Image
+            style={styles.logo.csi}
+            src={csiLogo}
+            alt="CyberSafeKids Logo"
+          />
+        </View>
+        <View style={styles.body.topAlign}>
+          <View style={styles.div.inline}>
+            <View style={styles.table}>
+              {/* Table Headers */}
+              <View style={styles.table.row}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Category & Award
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Best Practice Descriptors
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Resources for Next Steps
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.rowNoBreak}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Responsible Use
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Leadership: {report.leaders.responsibleuse}
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Teachers: {report.teachers.responsibleuse}
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Pupils: {report.pupils.responsibleuse}
+                  </Text>
+                </View>
+
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    An{" "}
+                    <Text style={styles.boldTextSml}>
+                      Acceptable Use Policy
+                    </Text>{" "}
+                    (AUP) is freely available to all stakeholders in the school
+                    community and is read, agreed and signed by teachers and
+                    pupils at the beginning of each school year, and shared with
+                    parents.
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    This policy should include:
+                  </Text>
+                  <View style={styles.div.list}>
+                    <Text style={styles.bulletListSml}>
+                      a) a preamble: what are the goals?
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      b) a definition section: what are the keywords?
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      c) a policy statement: what is included?
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      d) an acceptable uses section: give examples
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      e) an unacceptable uses section: give examples
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      f) a sanctions section: what happens?
+                    </Text>
+                  </View>
+                  <Text style={styles.table.textSml}>
+                    This should not simply be a ‘box-ticking’ activity but used
+                    as an opportunity for teachers and pupils to look at the
+                    acceptable ‘dos’ and ‘don’ts’ of using devices and
+                    interacting with content and people online.
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    The AUP policy can be signed as a class and displayed in the
+                    classroom as a reminder.
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.webwise.ie/teachers/what-is-an-acceptable-use-policy-2/"
+                      }
+                    >
+                      Webwise AUP resources
+                    </Link>
+                  </Text>
+                  <Text style={styles.table.textSml}></Text>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://ieducate.ie/wp-content/uploads/2020/04/Non-ID-AUP.pdf"
+                      }
+                    >
+                      Sample AU Policy
+                    </Link>{" "}
+                    (adapted from Webwise)
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.pdst.ie/sites/default/files/DES%20Internet%20Safety%20Template.pdf"
+                      }
+                    >
+                      Sample AU Policy
+                    </Link>{" "}
+                    (PDST)
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.rowNoBreak}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.textSml}></Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    The school has a clear{" "}
+                    <Text style={styles.boldTextSml}>Cyberbullying policy</Text>
+                    , which can be either standalone, or part of the school’s
+                    wider anti bullying policy. The policy should be applicable
+                    to all online interactions, including staff to staff.
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    The goals of the policy are to:
+                  </Text>
+                  <View style={styles.div.list}>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; define the behaviour
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; have a clear understanding of policy and procedure
+                      throughout the organisation
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; model desired behaviours throughout the
+                      organisation
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; actively promote a culture of upstanders
+                    </Text>
+                  </View>
+                  <Text style={styles.table.textSml}>This policy should:</Text>
+                  <View style={styles.div.list}>
+                    <Text style={styles.bulletListSml}>
+                      a) Have an accepted and shared definition of cyberbullying
+                      and examples of these behaviours
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      b) Outline clear procedural steps for staff to deal with
+                      cyberbullying incidents, whether they occur within or
+                      without the school day, including recording and reporting
+                      incidents
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      c) Outline sanctions for dealing with cyberbullying
+                    </Text>
+                  </View>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.gov.ie/en/policy-information/bullying-information-for-parents-and-students/"
+                      }
+                    >
+                      Gov.ie Bullying Resources
+                    </Link>
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://tacklebullying.ie/resources/"}
+                    >
+                      TackleBullying.ie
+                    </Link>
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "http://www.guardianangels.ie/wp-content/uploads/2019/12/AntiCyberBullying-1.pdf"
+                      }
+                    >
+                      Sample Policy
+                    </Link>{" "}
+                    (Guardian Angels NS, IRL)
+                  </Text>
+                  <Text style={styles.table.italicTextSml}>
+                    Further Reading:
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    DCU{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://data.oireachtas.ie/ie/oireachtas/committee/dail/33/joint_committee_on_education_further_and_higher_education_research_innovation_and_science/submissions/2020/2020-11-05_opening-statement-and-submission-dr-angela-mazzone-postdoctoral-researcher-national-anti-bullying-research-and-resource-centre-dublin-city-university_en.pdf"
+                      }
+                    >
+                      Anti-Bullying Centre Report
+                    </Link>{" "}
+                    on cyberbullying delivered to Oireachtas committee (November
+                    2020)
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    The role of principals in developing anti-bullying culture
+                    within schools{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.researchgate.net/publication/324030634_Anti-bullying_procedures_for_schools_in_Ireland_principals'_responses_and_perceptions"
+                      }
+                    >
+                      (journal article)
+                    </Link>
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.row}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.textSml}></Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    All self-created teaching or staff training materials have
+                    images and sources visibly referenced or cited throughout.
+                    Licence-free images are also credited.
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    The culture of citing correctly and attributing credit for
+                    the use of images, music or intellectual property is
+                    explicitly promoted throughout the school e.g. pupils’
+                    referencing can be questioned/rejected when handing in
+                    project work.
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    This is modelled by teachers and leadership in their own
+                    visual materials.
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://www.youtube.com/watch?v=xvZHNwBHirQ"}
+                    >
+                      Creative Credit & Copyright video
+                    </Link>{" "}
+                    from Common Sense Education
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.commonsense.org/education/digital-citizenship/creative-credit-and-copyright"
+                      }
+                    >
+                      Rationale and ‘Fair Use’ principles
+                    </Link>
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Adaptable lesson plan for teachers on citing sources from{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.commonsense.org/education/lesson-plans/cite-your-sources-creative-credit-copyright"
+                      }
+                    >
+                      Common Sense Education
+                    </Link>
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Use{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://www.google.co.uk/advanced_image_search"}
+                    >
+                      Google Advanced Image Search
+                    </Link>{" "}
+                    for licence free images
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Use{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://www.google.ie/slides/about/"}
+                    >
+                      Google Slides
+                    </Link>{" "}
+                    for{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://support.google.com/docs/answer/97447"}
+                    >
+                      easy image insertion/referencing
+                    </Link>
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Use{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://wordpress.org/openverse/?referrer=creativecommons.org"
+                      }
+                    >
+                      Creative Commons
+                    </Link>{" "}
+                    search for licence free images
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Use{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://incompetech.filmmusic.io/search/"}
+                    >
+                      licence-free music from Incompetech
+                    </Link>{" "}
+                    for video editing and multimedia projects
+                  </Text>
+                </View>
+              </View>
+
+              {/* page closing tags */}
+            </View>
+          </View>
+        </View>
+      </Page>
+
+      {/* Page seven - Useful links table - Critical thinking */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header.twoLogo}>
           <Image
@@ -1740,7 +2094,7 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
                       Teaching Effective Search{" "}
                     </Link>
                     <Text style={styles.table.textSml}>
-                      Teaching Effective Search
+                      Teaching Effective Search{" "}
                       <Link
                         style={styles.hyperlinkSml}
                         src={
@@ -1775,26 +2129,22 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
         </View>
       </Page>
 
-      {/* Template 
+      {/* Table Template 
               <View style={styles.table.rowNoBreak}>
                 <View style={styles.table.threeCol.leftCell}>
                   <Text style={styles.table.textSml}></Text>
                 </View>
                 <View style={styles.table.threeCol.midCell}>
                   <Text style={styles.table.textSml}>
-                  <Text style={styles.boldTextSml}></Text>
+                    <Text style={styles.boldTextSml}></Text>
                   </Text>
                   <View style={styles.div.list}>
-                    <Text style={styles.bulletListSml}>
-                    &#8226;
-                    </Text>
+                    <Text style={styles.bulletListSml}>&#8226;</Text>
                     </View>
                 </View>
                 <View style={styles.table.threeCol.rightCell}>
                   <Text style={styles.table.textSml}>
-                  <Link style={styles.hyperlinkSml} src={""}>
-                      
-                    </Link>
+                  <Link style={styles.hyperlinkSml} src={""}></Link>
                   </Text>
                 </View>
               </View>
