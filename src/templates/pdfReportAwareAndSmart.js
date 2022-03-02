@@ -1268,6 +1268,513 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
         </View>
       </Page>
 
+      {/* Page five - Useful links table - online life, communication */}
+      <Page size="A4" style={styles.page} wrap>
+        <View style={styles.header.twoLogo}>
+          <Image
+            style={styles.logo.tfs}
+            src={toolLogo}
+            alt="CyberSafe Tool for Schools Logo"
+          />
+          <Image
+            style={styles.logo.csi}
+            src={csiLogo}
+            alt="CyberSafeKids Logo"
+          />
+        </View>
+        <View style={styles.body.topAlign}>
+          <View style={styles.div.inline}>
+            <View style={styles.table}>
+              {/* Table Headers */}
+              <View style={styles.table.row}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Category & Award
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Best Practice Descriptors
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Resources for Next Steps
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.rowNoBreak}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.columnTitleSml}>Online Life</Text>
+                  <Text style={styles.table.textSml}>
+                    Leadership: {report.leaders.onlinelife}
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Teachers: {report.teachers.onlinelife}
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Pupils: {report.pupils.onlinelife}
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    All staff are asked to either:
+                  </Text>
+                  <View style={styles.div.list}>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Make personal online profiles (e.g Facebook,
+                      Instagram) private,{" "}
+                      <Text style={styles.boldTextSml}>or</Text>
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Use unsearchable (nick)names on public accounts to
+                      avoid being searched for, follow-requested or contacted by
+                      pupils online
+                    </Text>
+                  </View>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://hwb.gov.wales/zones/keeping-safe-online/resources/a-teacher-s-guide-to-staying-safe-on-social-media"
+                      }
+                    >
+                      A Teacher’s Guide to Staying Safe on Social Media
+                    </Link>{" "}
+                    (Welsh Government)
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.rowNoBreak}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.textSml}></Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    Pupils are explicitly taught the key messages of staying
+                    safe online at least once a year. These messages are
+                    displayed in classrooms and revisited regularly:
+                  </Text>
+                  <View style={styles.div.list}>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Know what constitutes personal information
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Know how to turn off privacy and location settings
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Know how to block and report users
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Understand the implications of communicating with
+                      strangers through games and apps
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Understand digital footprint, its potential impact
+                      and permanence
+                    </Text>
+                  </View>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    Free{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.cybersafekids.ie/wp-content/uploads/2021/10/Classroom-Posters-English-Irish.pdf"
+                      }
+                    >
+                      CyberSafeKids Classroom Posters
+                    </Link>{" "}
+                    (bilingual)
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.rowNoBreak}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.textSml}></Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    Staff and pupils are encouraged to focus on maintaining a
+                    healthy online/offline balance, including:
+                  </Text>
+                  <View style={styles.div.list}>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Not working on personal devices
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Not responding to emails outside working hours
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Monitoring their screen time
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Setting limits for apps or games
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; Switching off devices at least an hour before bed
+                      (pupils)
+                    </Text>
+                  </View>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    Common Sense Education{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.commonsense.org/education/digital-citizenship/lesson/finding-balance-in-a-digital-world"
+                      }
+                    >
+                      Finding Balance in a Digital World lesson plan
+                    </Link>
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.row}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.textSml}></Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    Pupils are regularly reminded they can share any upsetting
+                    or unpleasant experiences they have had online with a
+                    trusted adult, without fear of judgement or automatic
+                    sanctions.
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    Internet Matters{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.internetmatters.org/resources/guide-to-encourage-kids-to-share-their-digital-lives/"
+                      }
+                    >
+                      Conversation Starters
+                    </Link>
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.rowNoBreak}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.columnTitleSml}>Communication</Text>
+                  <Text style={styles.table.textSml}>
+                    Leadership: {report.leaders.communication}
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Teachers: {report.teachers.communication}
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Pupils: {report.pupils.communication}
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    A culture of positive and respectful communication using
+                    online platforms (emails, chat groups, social media
+                    platforms) is promoted and modelled consistently throughout
+                    the school community for the following interactions:
+                  </Text>
+                  <View style={styles.div.list}>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; leadership &lt;&gt; staff
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; staff &lt;&gt; staff
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; staff &lt;&gt; pupil
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; pupil &lt;&gt; pupil
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; staff &lt;&gt; parents
+                    </Text>
+                  </View>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://youtu.be/WGM7AxQ06Xs"}
+                    >
+                      Social Media Etiquette video
+                    </Link>
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.rowNoBreak}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.textSml}></Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    Pupils are explicitly taught the importance of ‘register’:
+                    the importance of using appropriate language and terms of
+                    address when communicating with different groups of people
+                    online e.g. teachers, adults, friends.
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://youtu.be/qsddqZxAMCo"}
+                    >
+                      Netiquette video
+                    </Link>
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.row}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.textSml}></Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    Pupils are taught how to write a formal email, including
+                    subject line, salutations and signature.
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    Common Sense Education{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.commonsense.org/education/lesson-plans/email-etiquette"
+                      }
+                    >
+                      Email Etiquette lesson plan
+                    </Link>
+                  </Text>
+                </View>
+              </View>
+
+              {/* page closing tags */}
+            </View>
+          </View>
+        </View>
+      </Page>
+
+      {/* Page six - Useful links table - Critical thinking, responsible use */}
+      <Page size="A4" style={styles.page} wrap>
+        <View style={styles.header.twoLogo}>
+          <Image
+            style={styles.logo.tfs}
+            src={toolLogo}
+            alt="CyberSafe Tool for Schools Logo"
+          />
+          <Image
+            style={styles.logo.csi}
+            src={csiLogo}
+            alt="CyberSafeKids Logo"
+          />
+        </View>
+        <View style={styles.body.topAlign}>
+          <View style={styles.div.inline}>
+            <View style={styles.table}>
+              {/* Table Headers */}
+              <View style={styles.table.row}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Category & Award
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Best Practice Descriptors
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Resources for Next Steps
+                  </Text>
+                </View>
+              </View>
+
+              <View style={styles.table.row}>
+                <View style={styles.table.threeCol.leftCell}>
+                  <Text style={styles.table.columnTitleSml}>
+                    Critical Thinking
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Leadership: {report.leaders.criticalthinking}
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Teachers: {report.teachers.criticalthinking}
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Pupils: {report.pupils.criticalthinking}
+                  </Text>
+                </View>
+                <View style={styles.table.threeCol.midCell}>
+                  <Text style={styles.table.textSml}>
+                    Both pupils and staff are taught to develop a questioning
+                    mindset and healthy scepticism towards the online world,
+                    including the skills of:
+                  </Text>
+                  <View style={styles.div.list}>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; using reliable websites
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; filtering search results for reading level and age
+                      appropriacy
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; cross checking sources
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; referencing sources
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; understanding mis- and disinformation
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; knowing the basics of how algorithms work
+                    </Text>
+                    <Text style={styles.bulletListSml}>
+                      &#8226; being able to spot deep fakes, scams and phishing
+                      emails
+                    </Text>
+                  </View>
+                </View>
+                <View style={styles.table.threeCol.rightCell}>
+                  <Text style={styles.table.textSml}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://www.cybersafekids.ie/our-talks/"}
+                    >
+                      CyberSafeKids Digital Media Literacy Talks
+                    </Link>{" "}
+                    (for pupils and staff)
+                  </Text>
+                  <Text style={styles.table.textSml}>
+                    Common Sense Media{" "}
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.commonsensemedia.org/news-and-media-literacy/what-is-digital-literacy"
+                      }
+                    >
+                      Definition of Digital Literacy
+                    </Link>
+                  </Text>
+                  <Text style={styles.table.textSml}></Text>
+                  <Text style={styles.table.textSml}>
+                    Useful Teaching Resources:
+                  </Text>
+                  <View style={styles.div.list}>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://eephonesmart.co.uk/"}
+                    >
+                      EE Phonesmart Licence
+                    </Link>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://www.getbadnews.com"}
+                    >
+                      Online Fake News Game
+                    </Link>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://www.bbc.com/ownit/its-personal/flo-and-joan-fake-news-song?collection=safer-internet-day-2019"
+                      }
+                    >
+                      BBC Ownit Fake News Song
+                    </Link>
+                    <Text style={styles.table.textSml}>
+                      Webwise{" "}
+                      <Link
+                        style={styles.hyperlinkSml}
+                        src={"https://www.webwise.ie/connected/"}
+                      >
+                        Connected
+                      </Link>
+                    </Text>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://safesitter.org/digital-citizenship/"}
+                    >
+                      Digital Citizenship
+                    </Link>
+                    <Text style={styles.table.textSml}>
+                      <Link
+                        style={styles.hyperlinkSml}
+                        src={
+                          "https://www.who.int/news-room/spotlight/let-s-flatten-the-infodemic-curve"
+                        }
+                      >
+                        Tackling Misinformation
+                      </Link>{" "}
+                      (WHO)
+                    </Text>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={"https://www.shoutoutuk.org/media-literacy/"}
+                    >
+                      ShoutOutUK
+                    </Link>
+                    <Link
+                      style={styles.hyperlinkSml}
+                      src={
+                        "https://thedigitalteacher.com/training/tips-effective-searching"
+                      }
+                    >
+                      Teaching Effective Search{" "}
+                    </Link>
+                    <Text style={styles.table.textSml}>
+                      Teaching Effective Search
+                      <Link
+                        style={styles.hyperlinkSml}
+                        src={
+                          "https://thedigitalteacher.com/training/the-good-search-quiz-primary-lesson-plan"
+                        }
+                      >
+                        lesson plan
+                      </Link>
+                    </Text>
+                  </View>
+                  <Text style={styles.table.textSml}>
+                    Child-friendly browsers:
+                  </Text>
+                  <Link
+                    style={styles.hyperlinkSml}
+                    src={"https://www.google.com/safesearch"}
+                  >
+                    Google SafeSearch
+                  </Link>
+                  <Link
+                    style={styles.hyperlinkSml}
+                    src={"https://about.qwant.com/en/junior/"}
+                  >
+                    Qwant Jr
+                  </Link>
+                </View>
+              </View>
+
+              {/* page closing tags */}
+            </View>
+          </View>
+        </View>
+      </Page>
+
       {/* Template 
               <View style={styles.table.rowNoBreak}>
                 <View style={styles.table.threeCol.leftCell}>
