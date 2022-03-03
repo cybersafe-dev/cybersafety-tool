@@ -45,6 +45,7 @@ Font.register({
   fontStyle: "italic",
   fontWeight: 700,
 })
+Font.registerHyphenationCallback(word => [word]);
 
 // Create styles
 const styles = StyleSheet.create({
@@ -187,7 +188,7 @@ const styles = StyleSheet.create({
   bulletList: {
     fontSize: 12,
     fontFamily: "Poppins",
-    textAlign: "justify",
+    textAlign: "left",
     color: "#181818",
     marginBottom: 0,
     marginLeft: 20,
@@ -195,7 +196,7 @@ const styles = StyleSheet.create({
   bulletListSml: {
     fontSize: 7,
     fontFamily: "Poppins",
-    textAlign: "justify",
+    textAlign: "left",
     color: "#181818",
     marginBottom: 0,
     marginLeft: 10,
@@ -341,7 +342,7 @@ const styles = StyleSheet.create({
       fontSize: 7,
       fontFamily: "Poppins",
       color: "#181818",
-      marginBottom: 2,
+      marginBottom: 10,
       textAlign: "left",
       hyphens: "none",
     },
@@ -367,6 +368,7 @@ const styles = StyleSheet.create({
       fontFamily: "Poppins",
       fontStyle: "italic",
       color: "#181818",
+      textAlign: "left",
       hyphens: "none",
     },
   },
