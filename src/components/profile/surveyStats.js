@@ -11,7 +11,6 @@ const SurveyStats = ({
   schoolName,
   reportSubmitted,
   quota,
-  rollNumber,
 }) => {
   const [currentScores, setCurrentScores] = React.useState(null)
   const [error, setError] = React.useState(null)
