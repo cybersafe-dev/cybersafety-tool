@@ -70,7 +70,7 @@ const SchoolOptions = ({ school, refreshData }) => {
     confirmRefreshSchool = window.confirm(
       "This will archive this school's current report and refresh their tool progress. Continue?"
     )
-    if (!refreshSchool) return
+    if (!confirmRefreshSchool) return
     else {
       const { scores, report, reportSubmitted } = await getUserDocument(
         school.uid

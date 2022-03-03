@@ -2,8 +2,8 @@ import React from "react"
 import "../../styling/reporting/reportOptions.css"
 import InlineReportTemplate from "./inlineReportTemplate"
 import { PDFDownloadLink } from "@react-pdf/renderer"
-import PdfReportSilver from "../../templates/pdfReportSilver"
-import PdfReportGold from "../../templates/pdfReportGold"
+import PdfReportAwareSmart from "../../templates/pdfReportAwareAndSmart"
+import PdfReportChampion from "../../templates/pdfReportChampion"
 
 const ReportOptions = ({
   report,
@@ -29,39 +29,43 @@ const ReportOptions = ({
             </p>
             {!documentsGenerated ? (
               <button className="pdf-dl-btn" onClick={generatePdfs}>
-                Generate PDFs
+                Generate Report
               </button>
+            ) : report.prospectiveMark === "CyberChampion" ? (
+              <div className="show-hide-bar">
+                <PDFDownloadLink
+                  className="pdf-dl-btn"
+                  document={
+                    <PdfReportChampion
+                      report={report}
+                      reportSubmitted={reportSubmitted}
+                      quota={quota}
+                    />
+                  }
+                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} CyberChampion.pdf`}
+                >
+                  {({ blob, url, loading, error }) =>
+                    loading ? "Loading document..." : "CyberChampion Report"
+                  }
+                </PDFDownloadLink>
+              </div>
             ) : (
               <div className="show-hide-bar">
                 <PDFDownloadLink
-                  className="pdf-dl-btn-silver"
+                  className="pdf-dl-btn"
                   document={
-                    <PdfReportSilver
+                    <PdfReportAwareSmart
                       report={report}
                       reportSubmitted={reportSubmitted}
                       quota={quota}
                     />
                   }
-                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Silver.pdf`}
+                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} ${report.prospectiveMark}.pdf`}
                 >
                   {({ blob, url, loading, error }) =>
-                    loading ? "Loading document..." : "Silver Report"
-                  }
-                </PDFDownloadLink>
-
-                <PDFDownloadLink
-                  className="pdf-dl-btn-gold"
-                  document={
-                    <PdfReportGold
-                      report={report}
-                      reportSubmitted={reportSubmitted}
-                      quota={quota}
-                    />
-                  }
-                  fileName={`CyberSafe Tool for Schools Report ${report.reportFor} Gold.pdf`}
-                >
-                  {({ blob, url, loading, error }) =>
-                    loading ? "Loading document..." : "Gold Report"
+                    loading
+                      ? "Loading document..."
+                      : `${report.prospectiveMark} Report`
                   }
                 </PDFDownloadLink>
               </div>

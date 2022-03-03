@@ -101,13 +101,16 @@ const styles = StyleSheet.create({
       alignItems: "center",
       marginBottom: 40,
     },
+    list: {
+      marginBottom: 10,
+    },
   },
   h1: {
     fontSize: 25,
     fontFamily: "Poppins",
     fontWeight: 700,
     color: "#181818",
-    marginBottom: 10,
+    marginBottom: 20,
     alignSelf: "center",
   },
   h2: {
@@ -124,6 +127,15 @@ const styles = StyleSheet.create({
       color: "#181818",
       marginBottom: 20,
       marginTop: 20,
+      alignSelf: "center",
+    },
+    centeredSpaced: {
+      fontSize: 15,
+      fontFamily: "Poppins",
+      fontWeight: 700,
+      color: "#181818",
+      marginBottom: 60,
+      marginTop: 60,
       alignSelf: "center",
     },
   },
@@ -165,6 +177,20 @@ const styles = StyleSheet.create({
       color: "#181818",
       marginBottom: 10,
     },
+    breakdown: {
+      fontSize: 8,
+      fontFamily: "Poppins",
+      textAlign: "justify",
+      color: "#181818",
+    },
+  },
+  bulletList: {
+    fontSize: 12,
+    fontFamily: "Poppins",
+    textAlign: "justify",
+    color: "#181818",
+    marginBottom: 0,
+    marginLeft: 20,
   },
   hyperlink: {
     fontSize: 12,
@@ -276,7 +302,7 @@ const styles = StyleSheet.create({
   breakdownGrid: {
     flexDirection: "column",
     justifyContent: "center",
-    marginBottom: 250,
+    marginBottom: 60,
     row: {
       flexDirection: "row",
     },
@@ -292,12 +318,12 @@ const styles = StyleSheet.create({
       color: "#181818",
     },
     text: {
-      fontSize: 9,
+      fontSize: 7,
       fontFamily: "Poppins",
       color: "#181818",
     },
     bold: {
-      fontSize: 9,
+      fontSize: 7,
       fontWeight: 700,
       fontFamily: "Poppins",
       color: "#181818",
@@ -317,7 +343,7 @@ const styles = StyleSheet.create({
 })
 
 // Create Document Component
-const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
+const PdfReportTemplateChampion = ({ report, reportSubmitted, quota }) => {
   const dateInMillis = reportSubmitted.seconds * 1000
   const reportTimestamp = new Date(dateInMillis).toDateString()
   const totalCompletedSurveys =
@@ -391,7 +417,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
         </View>
       </Page>
 
-      {/* Page Two - Your grade and grade explainer table */}
+      {/* Page Two - Your grade and Survey breakdown */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header.twoLogo}>
           <Image
@@ -405,7 +431,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafeKids Logo"
           />
         </View>
-        <View style={styles.body.centerAlign}>
+        <View style={styles.body.topAlign}>
           <Text style={styles.h2.centered}>Congratulations!</Text>
           <View style={styles.div.inline}>
             <Text style={styles.h2.centered}>You are currently a </Text>
@@ -416,43 +442,194 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
             />
             <Text style={styles.h2.centered}>school.</Text>
           </View>
-          <View style={styles.div.centered}>
-            <Text style={styles.h2}>AWARDS</Text>
+
+          <Text style={styles.h2}>SURVEY BREAKDOWN</Text>
+          <View style={styles.breakdownGrid}>
+            <View style={styles.breakdownGrid.row}>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.columnTitle}>
+                  School Leadership
+                </Text>
+              </View>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.columnTitle}>Teachers</Text>
+              </View>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.columnTitle}>Pupils</Text>
+              </View>
+            </View>
+            <View style={styles.breakdownGrid.row}>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.text}>
+                  Digital Knowledge:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.leaders.digitalknowledge}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Privacy:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.leaders.privacy}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Online Life:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.leaders.onlinelife}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Communication:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.leaders.communication}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Critical Thinking:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.leaders.criticalthinking}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Responsible Use:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.leaders.responsibleuse}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.highlight}>
+                  Overall:{" "}
+                  <Text style={styles.breakdownGrid.highlightB}>
+                    {awardByUserType(report.leaders)}
+                  </Text>
+                </Text>
+              </View>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.text}>
+                  Digital Knowledge:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.teachers.digitalknowledge}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Privacy:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.teachers.privacy}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Online Life:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.teachers.onlinelife}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Communication:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.teachers.communication}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Critical Thinking:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.teachers.criticalthinking}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Responsible Use:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.teachers.responsibleuse}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.highlight}>
+                  Overall:{" "}
+                  <Text style={styles.breakdownGrid.highlightB}>
+                    {awardByUserType(report.teachers)}
+                  </Text>
+                </Text>
+              </View>
+              <View style={styles.breakdownGrid.cell}>
+                <Text style={styles.breakdownGrid.text}>
+                  Digital Knowledge:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.pupils.digitalknowledge}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Privacy:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.pupils.privacy}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Online Life:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.pupils.onlinelife}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Communication:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.pupils.communication}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Critical Thinking:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.pupils.criticalthinking}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.text}>
+                  Responsible Use:{" "}
+                  <Text style={styles.breakdownGrid.bold}>
+                    {report.pupils.responsibleuse}
+                  </Text>
+                </Text>
+                <Text style={styles.breakdownGrid.highlight}>
+                  Overall:{" "}
+                  <Text style={styles.breakdownGrid.highlightB}>
+                    {awardByUserType(report.pupils)}
+                  </Text>
+                </Text>
+              </View>
+            </View>
+          </View>
+
+          <View style={styles.div.inline}>
             <View style={styles.table}>
               <View style={styles.table.row}>
                 <View style={styles.table.leftCell}>
-                  <Text style={styles.table.columnTitle}>Award Level</Text>
+                  <Text style={styles.table.columnTitleSml}>Award Level</Text>
                 </View>
                 <View style={styles.table.rightCell}>
-                  <Text style={styles.table.columnTitle}>Description</Text>
+                  <Text style={styles.table.columnTitleSml}>Description</Text>
                 </View>
               </View>
               <View style={styles.table.row}>
                 <View style={styles.table.leftCell}>
-                  <Text style={styles.table.text}>CyberChampion School</Text>
+                  <Text style={styles.table.textSml}>CyberChampion</Text>
                 </View>
                 <View style={styles.table.rightCell}>
-                  <Text style={styles.table.boldText}>
+                  <Text style={styles.table.textSml}>
                     {awardLevelBlurbs.CyberChampion}
                   </Text>
                 </View>
               </View>
               <View style={styles.table.row}>
                 <View style={styles.table.leftCell}>
-                  <Text style={styles.table.text}>CyberSmart School</Text>
+                  <Text style={styles.table.textSml}>CyberSmart</Text>
                 </View>
                 <View style={styles.table.rightCell}>
-                  <Text style={styles.table.boldText}>
+                  <Text style={styles.table.textSml}>
                     {awardLevelBlurbs.CyberSmart}
                   </Text>
                 </View>
               </View>
               <View style={styles.table.row}>
                 <View style={styles.table.leftCell}>
-                  <Text style={styles.table.text}>CyberAware School</Text>
+                  <Text style={styles.table.textSml}>CyberAware</Text>
                 </View>
                 <View style={styles.table.rightCell}>
-                  <Text style={styles.table.boldText}>
+                  <Text style={styles.table.textSml}>
                     {awardLevelBlurbs.CyberAware}
                   </Text>
                 </View>
@@ -462,26 +639,83 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
         </View>
       </Page>
 
-      {/* Page three - Completion Certificate */}
+      {/* Page three - Well done text */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header.twoLogo}>
-        <Image
-          style={styles.logo.tfs}
-          src={toolLogo}
-          alt="CyberSafe Tool for Schools Logo"
-        />
+          <Image
+            style={styles.logo.tfs}
+            src={toolLogo}
+            alt="CyberSafe Tool for Schools Logo"
+          />
           <Image
             style={styles.logo.csi}
             src={csiLogo}
             alt="CyberSafeKids Logo"
           />
         </View>
-        <View style={styles.body.centerAlign}>
+        <View style={styles.body.topAlign}>
           <View style={styles.div.centered}>
+            <Text style={styles.para}>
+              You are leading the way in school cybersafety. You have robust
+              policies around the safe use of the online world and are
+              comprehensively meeting your responsibilities when it comes to
+              online safety and digital literacy education, and its promotion
+              across your school community. Well done!{" "}
+            </Text>
+            <Text style={styles.para}>
+              To maintain this status we recommend you continue to:
+            </Text>
+            <View style={styles.div.list}>
+              <Text style={styles.bulletList}>
+                &#8226; Regularly monitor and review all online safety-related
+                policies in place within school.
+              </Text>
+              <Text style={styles.bulletList}>
+                &#8226; Ensure that online safety and digital literacy plays an
+                integral role in staff meetings and continuing professional
+                development opportunities.
+              </Text>
+              <Text style={styles.bulletList}>
+                &#8226; Encourage all staff and parents to use free resource
+                sites such as Common Sense Media, PEGI & Webwise to keep abreast
+                of new popular games, apps, websites and trends in the online
+                world.
+              </Text>
+            </View>
+            <Text style={styles.para}>You may also want to consider:</Text>
+            <View style={styles.div.list}>
+              <Text style={styles.bulletList}>
+                &#8226; Assigning selected teaching staff as ‘digital champions’
+                to actively promote digital literacy and online safety
+                throughout the school community.
+              </Text>
+            </View>
+          </View>
+        </View>
+      </Page>
+
+      {/* Page four - Completion Certificate */}
+      <Page size="A4" style={styles.page} wrap>
+        <View style={styles.header.twoLogo}>
+          <Image
+            style={styles.logo.tfs}
+            src={toolLogo}
+            alt="CyberSafe Tool for Schools Logo"
+          />
+          <Image
+            style={styles.logo.csi}
+            src={csiLogo}
+            alt="CyberSafeKids Logo"
+          />
+        </View>
+        <View style={styles.body.topAlign}>
+          <View style={styles.div.centered}>
+            <Text style={styles.h2.centeredSpaced}>CERTIFICATE OF AWARD</Text>
             <Text style={styles.para.slimWidth}>
-              You have proved your commitment to online safety by completing the
-              <Text style={styles.para.bold}> CyberSafe Tool for Schools</Text>{" "}
-              online assessment. Measured against standards of best practice, the results of your survey show that your school is:
+              You have proved your commitment to online safety by completing the{" "}
+              <Text style={styles.para.bold}>CyberSafe Tool for Schools</Text>{" "}
+              online assessment. Measured against standards of best practice,
+              the results of your survey show that your school is
             </Text>
             <Image
               style={styles.awardImg.certificate}
@@ -496,199 +730,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
         </View>
       </Page>
 
-      {/* Page Four - Survey Breakdown */}
-      <Page size="A4" style={styles.page} wrap>
-        <View style={styles.header.twoLogo}>
-          <Image
-            style={styles.logo.tfs}
-            src={toolLogo}
-            alt="CyberSafe Tool for Schools Logo"
-          />
-          <Image
-            style={styles.logo.csi}
-            src={csiLogo}
-            alt="CyberSafeKids Logo"
-          />
-        </View>
-        <View style={styles.body.topAlign}>
-          <Text style={styles.h2}>SURVEY BREAKDOWN</Text>
-            <Text style={styles.para}>The overall mark for your school is: <Text style={styles.para.bold}>{report.prospectiveMark}</Text></Text>
-          <View style={styles.breakdownGrid}>
-            <View style={styles.breakdownGrid.row}>
-              <View style={styles.breakdownGrid.cell}>
-                <Text style={styles.breakdownGrid.columnTitle}>School Leadership</Text>
-              </View>
-
-              <View style={styles.breakdownGrid.cell}>
-               <Text style={styles.breakdownGrid.columnTitle}>Teachers</Text>
-              </View>
-
-              <View style={styles.breakdownGrid.cell}>
-                <Text style={styles.breakdownGrid.columnTitle}>Pupils</Text>
-              </View>
-            </View>
-
-         <View style={styles.breakdownGrid.row}>
-
-              <View style={styles.breakdownGrid.cell}>
-                  <Text style={styles.breakdownGrid.text}>
-                    Digital Knowledge: <Text style={styles.breakdownGrid.bold}>{report.leaders.digitalknowledge}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                    Privacy: <Text style={styles.breakdownGrid.bold}>{report.leaders.privacy}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                    Online Life: <Text style={styles.breakdownGrid.bold}>{report.leaders.onlinelife}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                    Communication: <Text style={styles.breakdownGrid.bold}>{report.leaders.communication}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                   Critical Thinking: <Text style={styles.breakdownGrid.bold}>{report.leaders.criticalthinking}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                    Responsible Use: <Text style={styles.breakdownGrid.bold}>{report.leaders.responsibleuse}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.highlight}>
-                    Overall: <Text style={styles.breakdownGrid.highlightB}>{awardByUserType(report.leaders)}</Text>
-                  </Text>
-              </View>
-
-              <View style={styles.breakdownGrid.cell}>
-                  <Text style={styles.breakdownGrid.text}>
-                   Digital Knowledge: <Text style={styles.breakdownGrid.bold}>{report.teachers.digitalknowledge}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                   Privacy: <Text style={styles.breakdownGrid.bold}>{report.teachers.privacy}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                   Online Life: <Text style={styles.breakdownGrid.bold}>{report.teachers.onlinelife}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                    Communication: <Text style={styles.breakdownGrid.bold}>{report.teachers.communication}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                    Critical Thinking: <Text style={styles.breakdownGrid.bold}>{report.teachers.criticalthinking}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.text}>
-                    Responsible Use: <Text style={styles.breakdownGrid.bold}>{report.teachers.responsibleuse}</Text>
-                  </Text>
-                  <Text style={styles.breakdownGrid.highlight}>
-                      Overall: <Text style={styles.breakdownGrid.highlightB}>{awardByUserType(report.teachers)}</Text>
-                  </Text>
-              </View>
-
-              <View style={styles.breakdownGrid.cell}>
-              <Text style={styles.breakdownGrid.text}>
-               Digital Knowledge: <Text style={styles.breakdownGrid.bold}>{report.pupils.digitalknowledge}</Text>
-              </Text>
-              <Text style={styles.breakdownGrid.text}>
-               Privacy: <Text style={styles.breakdownGrid.bold}>{report.pupils.privacy}</Text>
-              </Text>
-              <Text style={styles.breakdownGrid.text}>
-               Online Life: <Text style={styles.breakdownGrid.bold}>{report.pupils.onlinelife}</Text>
-              </Text>
-              <Text style={styles.breakdownGrid.text}>
-                Communication: <Text style={styles.breakdownGrid.bold}>{report.pupils.communication}</Text>
-              </Text>
-              <Text style={styles.breakdownGrid.text}>
-                Critical Thinking: <Text style={styles.breakdownGrid.bold}>{report.pupils.criticalthinking}</Text>
-              </Text>
-              <Text style={styles.breakdownGrid.text}>
-                Responsible Use: <Text style={styles.breakdownGrid.bold}>{report.pupils.responsibleuse}</Text>
-              </Text>
-              <Text style={styles.breakdownGrid.highlight}>
-                Overall: <Text style={styles.breakdownGrid.highlightB}>{awardByUserType(report.pupils)}</Text>
-              </Text>
-              </View>
-            </View>
-        </View>
-
-        <View style={styles.div.inline}>
-            <View style={styles.table}>
-                            <View style={styles.table.row}>
-                              <View style={styles.table.leftCell}>
-                                <Text style={styles.table.columnTitleSml}>Award Level</Text>
-                              </View>
-                              <View style={styles.table.rightCell}>
-                                <Text style={styles.table.columnTitleSml}>Description</Text>
-                              </View>
-                              </View>
-
-                              <View style={styles.table.row}>
-                                <View style={styles.table.leftCell}>
-                                  <Text style={styles.table.textSml}>CyberChampion</Text>
-                                </View>
-                                <View style={styles.table.rightCell}>
-                                  <Text style={styles.table.textSml}>
-                                    {awardLevelBlurbs.CyberChampion}
-                                  </Text>
-                                </View>
-                              </View>
-
-                              <View style={styles.table.row}>
-                                <View style={styles.table.leftCell}>
-                                  <Text style={styles.table.textSml}>CyberSmart</Text>
-                                </View>
-                                <View style={styles.table.rightCell}>
-                                  <Text style={styles.table.textSml}>
-                                    {awardLevelBlurbs.CyberSmart}
-                                  </Text>
-                                </View>
-                              </View>
-
-                              <View style={styles.table.row}>
-                                <View style={styles.table.leftCell}>
-                                  <Text style={styles.table.textSml}>CyberAware</Text>
-                                </View>
-                                <View style={styles.table.rightCell}>
-                                  <Text style={styles.table.textSml}>
-                                    {awardLevelBlurbs.CyberAware}
-                                  </Text>
-                                </View>
-                              </View>
-                </View>
-            </View>
-        </View>
-      </Page>
-
-
-      {/* Page Five - Next Steps */}
-      <Page size="A4" style={styles.page} wrap>
-        <View style={styles.header.twoLogo}>
-          <Image
-            style={styles.logo.tfs}
-            src={toolLogo}
-            alt="CyberSafe Tool for Schools Logo"
-          />
-          <Image
-            style={styles.logo.csi}
-            src={csiLogo}
-            alt="CyberSafeKids Logo"
-          />
-        </View>
-        <View style={styles.body.topAlign}>
-          <View style={styles.div.centered}>
-            <Text style={styles.h2}>NEXT STEPS</Text>
-            <Text style={styles.para}>
-                Now that you've completed the tool and received your report,
-                we will be sending you your
-              <Text style={styles.para.bold}> CyberSafe Tool for Schools</Text>{" "}
-              {report.prospectiveMark} award badge for your school.
-            </Text>
-            <Text style={styles.para}>
-            This mark is valid for 12 months and you can display it on your website,
-            social media and all school communications to demonstrate your school’s commitment to online safety.
-            You will also receive a breakdown of your school’s results by topic area.
-            </Text>
-            <Text style={styles.para}>
-              Thank you for joining the CyberSafe Tool for Schools initiative!
-            </Text>
-          </View>
-        </View>
-      </Page>
-
-      {/* Page Six - Contact page */}
+      {/* Page Five - Contact page */}
       <Page size="A4" style={styles.page} wrap>
         <View style={styles.header.oneLogo}>
           <Image
@@ -704,6 +746,16 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafe Tool for Schools"
           />
           <View style={styles.div.centered}>
+            <Text style={styles.para}>
+              You have now completed CyberSafe Tool for Schools and received
+              your report and digital award badge. This mark is valid for 12
+              months and you can display it on your website, social media and
+              all school communications to demonstrate your school’s commitment
+              to online safety.
+            </Text>
+            <Text style={styles.para}>
+              Thank you for joining the CyberSafe Tool for Schools initiative!
+            </Text>
             <Text style={styles.h2}>CyberSafeKids CLG</Text>
             <Text style={styles.para.address}>Company number: 568651</Text>
             <Text style={styles.para.address}>
@@ -714,7 +766,7 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
             </Text>
             <Text style={styles.para.address}>Dublin, Ireland</Text>
             <Link style={styles.hyperlink} src={"https://www.cybersafekids.ie"}>
-            www.cybersafekids.ie
+              www.cybersafekids.ie
             </Link>
             <Text style={styles.hyperlink}>info@cybersafekids.ie</Text>
           </View>
@@ -729,4 +781,4 @@ const PdfReportTemplateGold = ({ report, reportSubmitted, quota }) => {
   )
 }
 
-export default PdfReportTemplateGold
+export default PdfReportTemplateChampion
