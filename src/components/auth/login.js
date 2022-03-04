@@ -34,9 +34,9 @@ const Login = () => {
       .catch(error => {
         setError(error.message)
         console.error("Error signing in with password and email", error)
-        setTimeout(() => {
-          setError(null)
-        }, 3000)
+        // setTimeout(() => {
+        //   setError(null)
+        // }, 3000);
       })
   }
 

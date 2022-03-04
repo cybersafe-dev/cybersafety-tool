@@ -7,6 +7,7 @@ export const userStore = React.createContext([{ user: null }])
 const UserProvider = props => {
   const [user, setUser] = React.useState([])
   const [schoolName, setSchoolName] = React.useState("")
+  const [county, setCounty] = React.useState("")
   const [pupilCount, setPupilCount] = React.useState("")
   const [quota, setQuota] = React.useState(null)
   const [firstName, setFirstName] = React.useState("")
@@ -25,19 +26,19 @@ const UserProvider = props => {
       setQuota({
         leadersQuota: 1,
         teachersQuota: 1,
-        pupilsQuota: 2,
+        pupilsQuota: 4,
       })
     } else if (parseInt(pupilCount) > 199) {
       setQuota({
         leadersQuota: 1,
         teachersQuota: 3,
-        pupilsQuota: 4,
+        pupilsQuota: 6,
       })
     } else {
       setQuota({
         leadersQuota: 1,
         teachersQuota: 2,
-        pupilsQuota: 3,
+        pupilsQuota: 5,
       })
     }
   }, [pupilCount])
@@ -47,9 +48,10 @@ const UserProvider = props => {
   React.useEffect(() => {
     if (!firebase) return
 
-    return firebase.auth().onAuthStateChanged(async userAuth => {
-      const user = await generateUserDocument(userAuth, {
+    firebase.auth().onAuthStateChanged(async userAuth => {
+      await generateUserDocument(userAuth, {
         schoolName,
+        county,
         pupilCount,
         scores,
         quota,
@@ -57,13 +59,14 @@ const UserProvider = props => {
         lastName,
         rollNumber,
         reportSent,
-      })
-      setUser(user)
+      }).then(user => setUser(user))
+      .catch(error => console.error(error))
     })
     // eslint-disable-next-line
   }, [
     firebase,
     schoolName,
+    county,
     pupilCount,
     quota,
     firstName,
@@ -78,6 +81,8 @@ const UserProvider = props => {
         user,
         schoolName,
         setSchoolName,
+        county,
+        setCounty,
         pupilCount,
         setPupilCount,
         firstName,

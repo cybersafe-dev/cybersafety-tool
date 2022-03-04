@@ -5,27 +5,28 @@ import SEO from "../seo"
 import SchoolCard from "./schoolCard"
 import useFirebase from "../../firebase"
 import "../../styling/reporting/reporting.css"
+import { countyList } from "../../templates/countyList"
 
 const Reporting = () => {
   const [user] = React.useContext(userStore)
   const [allSchools, setAllSchools] = React.useState(null)
   const [searchTerm, setsearchTerm] = React.useState("")
-  const [firstLoad, setFirstLoad] = React.useState(true)
-  const [filteredSchools, setFilteredSchools] = React.useState("")
+  const [selectedCounty, setSelectedCounty] = React.useState("")
   const [orderedBy, setOrderedBy] = React.useState({
-    by: "createdAt",
+    by: "updatedAt",
     ascDesc: "desc",
   })
   const [refreshCalls, refreshData] = React.useReducer(x => x + 1, 0)
   const firebase = useFirebase()
 
-  const signOutApp = () => {
+  const signOutApp = async () => {
     if (!firebase) return
-    firebase.auth().signOut()
+    await firebase.auth().signOut()
     navigate("/app/login")
   }
 
   // Get and store all signed up schools from database when firebase exists
+  // Refresh this call if the orderedBy state changes
   React.useEffect(() => {
     let holdingArray = []
     const getAllSchools = async () => {
@@ -47,16 +48,13 @@ const Reporting = () => {
     getAllSchools()
   }, [firebase, orderedBy, refreshCalls])
 
-  // If searchTerm state item is updated, run filter function
-  React.useEffect(() => {
-    filterSchools()
-    //eslint-disable-next-line
-  }, [searchTerm])
-
-  // Update the search term store/input text and update first load status
-  const updateSearchTerm = e => {
-    setsearchTerm(e.target.value)
-    setFirstLoad(false)
+  // Update search values by searchname input or select by county
+  const updateSearchValues = e => {
+    if (e.target.name === "searchByName") {
+      setsearchTerm(e.target.value)
+    } else if (e.target.name === "countySelect") {
+      setSelectedCounty(e.target.value)
+    }
   }
 
   // Update the object by which the list is sorted on firebase query or toggle
@@ -67,26 +65,15 @@ const Reporting = () => {
       if (value === "schoolName") {
         args.by = "schoolName"
         args.ascDesc = "asc"
-      } else {
+      } else if (value === "createdAt") {
         args.by = "createdAt"
+        args.ascDesc = "desc"
+      } else {
+        args.by = "updatedAt"
         args.ascDesc = "desc"
       }
       return args
     })
-  }
-
-  // If not the first load filter the schools based on search term and store.
-  // If truthy the filtered schools will replace the full list on next render.
-  const filterSchools = () => {
-    if (!firstLoad) {
-      setFilteredSchools(
-        allSchools.filter(school => {
-          return school.schoolName
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase())
-        })
-      )
-    }
   }
 
   // check for vital data before attempting to render schools.
@@ -96,45 +83,83 @@ const Reporting = () => {
   return (
     <section className="dashboard-body">
       <SEO title="CSI Admin" />
-      <input
-        className="filter-schools"
-        type="text"
-        placeholder="Filter by name"
-        value={searchTerm}
-        onChange={updateSearchTerm}
-      />
+      <div className="reporting-tools-panel">
+        <div className="search-tools">
+          <label className="tools-label">
+            School name:
+            <input
+              name="searchByName"
+              className="tools-input"
+              type="text"
+              placeholder="search"
+              value={searchTerm}
+              onChange={updateSearchValues}
+            />
+          </label>
 
-      <label className="order-schools-label">
-        Order by:
-        {/* eslint-disable-next-line */}
-        <select className="order-schools" value={orderedBy.by} onChange={updateOrderedBy}>
-          <option value="createdAt">Sign up date</option>
-          <option value="schoolName">Alphabetical</option>
-        </select>
-      </label>
+          <label className="tools-label">
+            County:
+            <select
+              name="countySelect"
+              className="tools-dropdown-select"
+              value={selectedCounty}
+              onChange={updateSearchValues}
+            >
+              <option value="">Choose a county</option>
+              {countyList.map((countyName, i) => {
+                return (
+                  <option key={i} value={countyName}>
+                    {countyName}
+                  </option>
+                )
+              })}
+            </select>
+          </label>
 
+          <label className="tools-label">
+            Order by:
+            <select
+              className="tools-dropdown-select"
+              value={orderedBy.by}
+              onChange={updateOrderedBy}
+            >
+              <option value="updatedAt">Current tool run began</option>
+              <option value="createdAt">Sign up date</option>
+              <option value="schoolName">Alphabetical</option>
+            </select>
+          </label>
+        </div>
+
+        <button className="logout-btn" onClick={signOutApp}>
+          Log out
+        </button>
+      </div>
       <h1 className="admin-dash-heading-reporting">{user.schoolName}</h1>
       <h2 className="descriptive-title">
         Schools Signed Up: {allSchools.length}
       </h2>
-      {filteredSchools
-        ? filteredSchools.map(school => (
-            <SchoolCard
-              key={school.uid}
-              school={school}
-              refreshData={refreshData}
-            />
-          ))
-        : allSchools.map(school => (
-            <SchoolCard
-              key={school.uid}
-              school={school}
-              refreshData={refreshData}
-            />
-          ))}
-      <button className="logout-btn" onClick={signOutApp}>
-        Log out
-      </button>
+      {allSchools
+        .filter(school => {
+          if (selectedCounty) {
+            return (
+              school.schoolName
+                .toLowerCase()
+                .includes(searchTerm.toLowerCase()) &&
+              school.county === selectedCounty
+            )
+          } else {
+            return school.schoolName
+              .toLowerCase()
+              .includes(searchTerm.toLowerCase())
+          }
+        })
+        .map(school => (
+          <SchoolCard
+            key={school.uid}
+            school={school}
+            refreshData={refreshData}
+          />
+        ))}
     </section>
   )
 }

@@ -33,15 +33,15 @@ const PasswordReset = () => {
       .sendPasswordResetEmail(email)
       .then(() => {
         setEmailHasBeenSent(true)
-        setTimeout(() => {
-          setEmailHasBeenSent(false)
-        }, 3000)
+        // setTimeout(() => {
+        //   setEmailHasBeenSent(false)
+        // }, 3000)
       })
       .catch(error => {
         setError(error.message)
-        setTimeout(() => {
-          setError(null)
-        }, 3000)
+        // setTimeout(() => {
+        //   setError(null)
+        // }, 3000)
       })
   }
   return (

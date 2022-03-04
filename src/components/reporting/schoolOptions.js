@@ -4,6 +4,8 @@ import {
   postReportToDb,
   deleteUserAccount,
   getUserDocument,
+  archiveCurrent,
+  refreshSchool,
 } from "../../firebase"
 import { createReport } from "../../templates/reportTemplate"
 
@@ -63,6 +65,36 @@ const SchoolOptions = ({ school, refreshData }) => {
     }
   }
 
+  const archiveAndRefreshSchoolProgress = async () => {
+    let confirmRefreshSchool = true
+    confirmRefreshSchool = window.confirm(
+      "This will archive this school's current report and refresh their tool progress. Continue?"
+    )
+    if (!confirmRefreshSchool) return
+    else {
+      const { scores, report, reportSubmitted } = await getUserDocument(
+        school.uid
+      )
+      const archiveData = {
+        reportSubmitted: reportSubmitted,
+        report: report,
+        scores: scores,
+        archivedAt: Date.now(),
+      }
+
+      await archiveCurrent(school.uid, archiveData)
+        .then(() => refreshSchool(school.uid))
+        .then(() => {
+          alert("Tool progress successfully refreshed and old data archived.")
+          refreshData()
+        })
+        .catch(error => {
+          console.error(error)
+          alert("Sorry, there was an error: ", error)
+        })
+    }
+  }
+
   return (
     <fieldset className="danger-area">
       <legend>Danger Area</legend>
@@ -72,6 +104,12 @@ const SchoolOptions = ({ school, refreshData }) => {
         </button>
         <button className="red-warning-btn" onClick={handleDeleteAccount}>
           Delete School
+        </button>
+        <button
+          className="red-warning-btn"
+          onClick={archiveAndRefreshSchoolProgress}
+        >
+          Refresh School
         </button>
       </div>
     </fieldset>

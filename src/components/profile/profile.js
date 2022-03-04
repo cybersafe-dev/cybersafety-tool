@@ -18,15 +18,19 @@ const Profile = () => {
 
   const firebase = useFirebase()
 
-  const signOutApp = () => {
+  const signOutApp = async () => {
     if (!firebase) return
-    firebase.auth().signOut()
+    await firebase.auth().signOut()
     navigate("/app/login")
   }
 
   return (
     <section className="dashboard-body">
-      <SEO title={irish ? "Deais riaracháin do scoile" : "Your School Admin Dashboard"} />
+      <SEO
+        title={
+          irish ? "Deais riaracháin do scoile" : "Your School Admin Dashboard"
+        }
+      />
       <div className="user-info">
         <h1 className="admin-dash-heading">{schoolName}</h1>
       </div>
@@ -47,16 +51,18 @@ const Profile = () => {
             <Copy uid={uid} />
             <Share uid={uid} />
           </div>
-          <p>
-            {irish
-              ? "Cuir an nasc suirbhé seo thuas chuig an líon cuí de Cheannairí, de Mhúinteoirí, agus de Dhaltaí i do scoil, mar atá le feiceáil ar phainéal clé an leathanaigh seo."
-              : "Please send the above survey link to the appropriate number of your school's Leaders, Teachers and Pupils as indicated on the left panel of this page."}
-          </p>
-          <p>
-            {irish
-              ? "Coinnigh súil ar an leathanach seo agus déan athnuachan air ó am go cheile. Nuair a bheidh an líon ceart suirbhéanna críochnaithe, beidh cnaipe ann gur féidir a bhrú chun na freagraí a chur isteach chuig CyberSafeKids. Gheobhaidh tú tuairisc ar ais in am agus i dtráth."
-              : "Keep an eye on this page and refresh it occasionally. After the correct number of surveys have been completed a button will appear to submit the responses to CyberSafeKids. You will then receive a report back in due course."}
-          </p>
+          <div className="user-instructions">
+            <p>
+              {irish
+                ? "Cuir an nasc suirbhé seo thuas chuig an líon cuí de Cheannairí, de Mhúinteoirí, agus de Dhaltaí i do scoil, mar atá le feiceáil ar phainéal clé an leathanaigh seo."
+                : "Please send the above survey link to the appropriate number of your school's Leaders, Teachers and Pupils as indicated on the left panel of this page."}
+            </p>
+            <p>
+              {irish
+                ? "Coinnigh súil ar an leathanach seo agus déan athnuachan air ó am go cheile. Nuair a bheidh an líon ceart suirbhéanna críochnaithe, beidh cnaipe ann gur féidir a bhrú chun na freagraí a chur isteach chuig CyberSafeKids. Gheobhaidh tú tuairisc ar ais in am agus i dtráth."
+                : "Keep an eye on this page and refresh it occasionally. After the correct number of surveys have been completed a button will appear to submit the responses to CyberSafeKids. You will then receive a report back in due course."}
+            </p>
+          </div>
           <button className="logout-btn" onClick={signOutApp}>
             {irish ? "Logáil amach" : "Log out"}
           </button>

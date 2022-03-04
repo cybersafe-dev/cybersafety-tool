@@ -3,16 +3,16 @@ title: Edit the Survey
 survey:
   leaders:
     digitalknowledge:
-      - statement: 1. My staff have online safety and responsibility training at least
-          once a year.
+      - statement: 1. All teaching staff (including SNAs etc.) have online safety and
+        responsibility training at least once a year.
         responses:
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 2. Staff talk regularly to pupils throughout the year about online
-          safety and responsibility.
+      - statement: 2. Staff talk regularly (at least once or twice per term) to pupils
+        about online safety and responsibility.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -59,7 +59,9 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 8. The school has a clear policy on smartphone / device usage in school.
+      - statement: "8. The school has a clear policy on smartphone / device usage in
+        school, and use of these devices is monitored consistently in the school
+        setting. "
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -150,8 +152,8 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 5. Pupils feel they can come to staff and talk to them about anything
-          that happens to them online.
+      - statement: 5. I am confident that all pupils know they can come and talk to a
+        teacher if anything upsets/bothers them online.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -166,8 +168,9 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: "2. My school has a culture of positively using online platforms and
-          tools to communicate with each other. "
+      - statement: "2. My school has a culture in which we explicitly promote the
+        positive use of online platforms and tools to communicate with each
+        other. "
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -224,21 +227,29 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 5. The school has a clear cyberbullying policy.
+      - statement: 5. The AUP is widely understood and its implementation is regularly
+        monitored by my staff.
         responses:
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 6. The cyberbullying policy is readily available to all stakeholders.
+      - statement: 6. The school has a clear cyberbullying policy.
+        responses:
+          - answer: Strongly agree
+          - answer: Agree
+          - answer: Neutral
+          - answer: Disagree
+          - answer: Strongly disagree
+      - statement: 7. The cyberbullying policy is readily available to all stakeholders.
         responses:
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
           - answer: Disagree
           - answer: There is no policy
-      - statement: 7. Staff clearly understand the appropriate steps to take when a
+      - statement: 8. Staff clearly understand the appropriate steps to take when a
           cyberbullying/online incident involving my pupils is brought to their
           attention.
         responses:
@@ -265,16 +276,16 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 3. We talk regularly as a staff throughout the year about online
-          safety and responsibility.
+      - statement: 3. We talk regularly (at least once a term) as a staff throughout the
+        year about online safety and responsibility.
         responses:
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 4. I talk regularly to my pupils throughout the year about online
-          safety and responsibility.
+      - statement: 4. I talk regularly to my pupils (at least once a term) throughout
+        the year about online safety and responsibility.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -305,7 +316,8 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 8. The school has a clear policy on smartphone / device usage in school.
+      - statement: 8. The school has a clear policy on smartphone / device usage in
+        school which I am required to monitor within school.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -366,8 +378,8 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 3. My pupils feel they can come and talk to me about anything that
-          happens to them online.
+      - statement: 3. I am confident that all children know that they can come and talk
+        to me if anything upsets/bothers them online.
         responses:
           - answer: Strongly Agree
           - answer: Agree
@@ -413,8 +425,9 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: "3. My school has a culture of positively using online platforms and
-          tools to communicate with each other. "
+      - statement: "3. My school has a culture in which we explicitly promote the
+        positive use of online platforms and tools to communicate with each
+        other. "
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -455,21 +468,30 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 3. My school has an Acceptable Use Policy (AUP) for digital technologies.
+      - statement: 3. My school has an Acceptable Use Policy (AUP) for digital
+        technologies and I know where to access it.
         responses:
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
           - answer: Disagree
           - answer: There is no policy
-      - statement: 4. My school has a clear cyberbullying policy.
+      - statement: 4. I feel confident that I understand the AUP and how to monitor it
+        within school.
+        responses:
+          - answer: Strongly agree
+          - answer: Agree
+          - answer: Neutral
+          - answer: Disagree
+          - answer: Strongly disagree
+      - statement: 5. My school has a clear cyberbullying policy.
         responses:
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
           - answer: Disagree
           - answer: There is no policy
-      - statement: 5. I clearly understand the appropriate steps to take when a
+      - statement: 6. I clearly understand the appropriate steps to take when a
           cyberbullying/online incident involving my pupils is brought to my
           attention.
         responses:
@@ -655,4 +677,26 @@ survey:
           - answer: Kind of
           - answer: Not really
           - answer: I don't talk to them about it
+      - statement: 6. We talk in school about cyberbullying at least twice a year in class.
+        responses:
+          - answer: Strongly agree
+          - answer: Agree
+          - answer: "Neutral "
+          - answer: Disagree
+          - answer: Strongly disagree
+      - statement: 7. We are taught in school to talk to a trusted adult if we see
+        bullying online.
+        responses:
+          - answer: Strongly agree
+          - answer: Agree
+          - answer: Neutral
+          - answer: Disagree
+          - answer: Strongly disagree
+      - statement: 8. We are taught to be 'upstanders' if we see bullying online.
+        responses:
+          - answer: Strongly agree
+          - answer: Agree
+          - answer: Neutral
+          - answer: Disagree
+          - answer: Strongly disagree
 ---

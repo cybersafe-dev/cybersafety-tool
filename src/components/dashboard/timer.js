@@ -10,7 +10,9 @@ const Timer = () => {
   const [irish] = React.useContext(LanguageStore)
 
   React.useEffect(() => {
-    start()
+    if (time === "00:00") {
+      start()
+    }
     // eslint-disable-next-line
   }, [])
 

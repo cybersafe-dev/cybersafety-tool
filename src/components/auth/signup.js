@@ -2,6 +2,7 @@ import React from "react"
 import { Link, navigate } from "gatsby"
 import useFirebase from "../../firebase"
 import { addNewSalesforceLead } from "../../salesforce"
+import { countyList } from "../../templates/countyList"
 
 import { userStore } from "../../providers/userProvider"
 import { LanguageStore } from "../../providers/languageProvider"
@@ -20,6 +21,8 @@ const Signup = () => {
     user,
     schoolName,
     setSchoolName,
+    county,
+    setCounty,
     pupilCount,
     setPupilCount,
     firstName,
@@ -39,18 +42,12 @@ const Signup = () => {
 
   const validateSignupForm = () => {
     if (honeypot) return false
-    if (!rollNumber) {
-      setRollNumber(Math.floor(Math.random() * 100000) + 1)
-    }
-    if (!firstName || !lastName || !schoolName || !pupilCount) {
+    if (!firstName || !lastName || !schoolName || !pupilCount || !county) {
       if (!irish) {
         setError("Please fill in all the form fields with asterisks")
       } else {
         setError("Líon isteach gach réimse a bhfuil réiltín air")
       }
-      setTimeout(() => {
-        setError(null)
-      }, 3000)
       return false
     }
     return true
@@ -63,28 +60,29 @@ const Signup = () => {
   ) => {
     event.preventDefault()
     if (!firebase) return
-    const validated = await validateSignupForm()
+    const validated = validateSignupForm()
     if (!validated) return
     // For testing web to lead without creating a user...
-    //await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber)
+    // await addNewSalesforceLead(firstName, lastName, email, schoolName, rollNumber, "fakeuid")
     await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(async () => {
+      .then(async data => {
+        const { uid } = data.user
         await addNewSalesforceLead(
           firstName,
           lastName,
           email,
           schoolName,
-          rollNumber
+          rollNumber,
+          uid
         )
       })
-      .then(() => navigate("/app"))
+      // .then(() => {
+      //   navigate("/app")
+      // })
       .catch(error => {
         setError(error.message)
-        setTimeout(() => {
-          setError(null)
-        }, 3000)
       })
   }
 
@@ -96,6 +94,8 @@ const Signup = () => {
       setPassword(value)
     } else if (name === "schoolName") {
       setSchoolName(value)
+    } else if (name === "county") {
+      setCounty(value)
     } else if (name === "pupilCount") {
       setPupilCount(value)
     } else if (name === "firstName") {
@@ -156,8 +156,8 @@ const Signup = () => {
           <p className="form-label">
             <span className="asterisk">*</span>{" "}
             {irish
-              ? "Ainm agus contae do scoile:"
-              : "Your School's name and county:"}
+              ? "Ainm do scoile:"
+              : "Your School's name:"}
           </p>
           <input
             type="text"
@@ -166,12 +166,34 @@ const Signup = () => {
             value={schoolName}
             placeholder={
               irish
-                ? "e.g. M.sh. Scoil Naomh Pilib, Co. Átha Cliath."
-                : "e.g. St. Philip's National School, Co. Dublin"
+                ? "e.g. M.sh. Scoil Naomh Pilib"
+                : "e.g. St. Philip's National School"
             }
             id="schoolName"
             onChange={event => onChangeHandler(event)}
           />
+        </label>
+
+        <label htmlFor="county" className="block">
+          <p className="form-label">
+            <span className="asterisk">*</span> Your School's county:
+          </p>
+          <select
+            className="login-input"
+            name="county"
+            id="county"
+            value={county}
+            onChange={event => onChangeHandler(event)}
+          >
+            <option value="">Select a County</option>
+            {countyList.map((countyName, i) => {
+              return (
+                <option key={i} value={countyName}>
+                  {countyName}
+                </option>
+              )
+            })}
+          </select>
         </label>
 
         <label htmlFor="rollNumber" className="block">
