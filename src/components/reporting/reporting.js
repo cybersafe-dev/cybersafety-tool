@@ -1,3 +1,5 @@
+/* eslint 'jsx-a11y/no-onchange': 0 */
+
 import React from "react"
 import { userStore } from "../../providers/userProvider"
 import { navigate } from "gatsby"
