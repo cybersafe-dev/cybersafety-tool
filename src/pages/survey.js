@@ -92,12 +92,12 @@ const SurveyPage = props => {
           {irish ? (
             <ReactMarkdown
               className="para-1"
-              source={irishData.infocontentIrish.firstpara}
+              children={irishData.infocontentIrish.firstpara}
             />
           ) : (
             <ReactMarkdown
               className="para-1"
-              source={data.infocontent.firstpara}
+              children={data.infocontent.firstpara}
             />
           )}
         </div>
@@ -105,12 +105,12 @@ const SurveyPage = props => {
           {irish ? (
             <ReactMarkdown
               className="para-1"
-              source={irishData.infocontentIrish.secondpara}
+              children={irishData.infocontentIrish.secondpara}
             />
           ) : (
             <ReactMarkdown
               className="para-1"
-              source={data.infocontent.secondpara}
+              children={data.infocontent.secondpara}
             />
           )}
           <img src={Icon2} alt="" className="figure" />
@@ -120,12 +120,12 @@ const SurveyPage = props => {
           {irish ? (
             <ReactMarkdown
               className="para-1"
-              source={irishData.infocontentIrish.thirdpara}
+              children={irishData.infocontentIrish.thirdpara}
             />
           ) : (
             <ReactMarkdown
               className="para-1"
-              source={data.infocontent.thirdpara}
+              children={data.infocontent.thirdpara}
             />
           )}
         </div>

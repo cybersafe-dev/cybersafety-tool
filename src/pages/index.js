@@ -107,12 +107,12 @@ const MiniSite = props => {
             {irish ? (
               <ReactMarkdown
                 className="site-text"
-                source={irishData.minisitecontentIrish.tool}
+                children={irishData.minisitecontentIrish.tool}
               />
             ) : (
               <ReactMarkdown
                 className="site-text"
-                source={data.minisitecontent.tool}
+                children={data.minisitecontent.tool}
               />
             )}
           </div>
@@ -135,12 +135,12 @@ const MiniSite = props => {
             {irish ? (
               <ReactMarkdown
                 className="site-text"
-                source={irishData.minisitecontentIrish.awards}
+                children={irishData.minisitecontentIrish.awards}
               />
             ) : (
               <ReactMarkdown
                 className="site-text"
-                source={data.minisitecontent.awards}
+                children={data.minisitecontent.awards}
               />
             )}
           </div>
@@ -160,12 +160,12 @@ const MiniSite = props => {
             {irish ? (
               <ReactMarkdown
                 className="site-text"
-                source={irishData.minisitecontentIrish.levels}
+                children={irishData.minisitecontentIrish.levels}
               />
             ) : (
               <ReactMarkdown
                 className="site-text"
-                source={data.minisitecontent.levels}
+                children={data.minisitecontent.levels}
               />
             )}
             <img
@@ -193,12 +193,12 @@ const MiniSite = props => {
             {irish ? (
               <ReactMarkdown
                 className="site-text"
-                source={irishData.minisitecontentIrish.pricing}
+                children={irishData.minisitecontentIrish.pricing}
               />
             ) : (
               <ReactMarkdown
                 className="site-text"
-                source={data.minisitecontent.pricing}
+                children={data.minisitecontent.pricing}
               />
             )}
             <div className="pricing-table-container">
@@ -238,12 +238,12 @@ const MiniSite = props => {
             {irish ? (
               <ReactMarkdown
                 className="site-text"
-                source={irishData.minisitecontentIrish.aboutus}
+                children={irishData.minisitecontentIrish.aboutus}
               />
             ) : (
               <ReactMarkdown
                 className="site-text"
-                source={data.minisitecontent.aboutus}
+                children={data.minisitecontent.aboutus}
               />
             )}
           </div>
