@@ -3,17 +3,15 @@ title: Edit the Survey
 survey:
   leaders:
     digitalknowledge:
-      - statement: 1. All teaching staff (including SNAs etc.) have online safety and
-        responsibility training at least once a year.
-        responses:
+      - statement: 1. All teaching staff (including SNAs etc.) have online safety and responsibility training at least once a year.
+        responses: 
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 2. Staff talk regularly (at least once or twice per term) to pupils
-        about online safety and responsibility.
-        responses:
+      - statement: 2. Staff talk regularly (at least once or twice per term) to pupils about online safety and responsibility.
+        responses:  
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
@@ -152,8 +150,7 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 5. I am confident that all pupils know they can come and talk to a
-        teacher if anything upsets/bothers them online.
+      - statement: 5. I am confident that all pupils know they can come and talk to a teacher if anything upsets/bothers them online.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -227,8 +224,7 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 5. The AUP is widely understood and its implementation is regularly
-        monitored by my staff.
+      - statement: 5. The AUP is widely understood and its implementation is regularly monitored by my staff.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -249,9 +245,7 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: There is no policy
-      - statement: 8. Staff clearly understand the appropriate steps to take when a
-          cyberbullying/online incident involving my pupils is brought to their
-          attention.
+      - statement: 8. Staff clearly understand the appropriate steps to take when a cyberbullying/online incident involving my pupils is brought to their attention.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -276,16 +270,14 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 3. We talk regularly (at least once a term) as a staff throughout the
-        year about online safety and responsibility.
+      - statement: 3. We talk regularly (at least once a term) as a staff throughout the year about online safety and responsibility.
         responses:
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 4. I talk regularly to my pupils (at least once a term) throughout
-        the year about online safety and responsibility.
+      - statement: 4. I talk regularly to my pupils (at least once a term) throughout the year about online safety and responsibility.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -316,8 +308,7 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 8. The school has a clear policy on smartphone / device usage in
-        school which I am required to monitor within school.
+      - statement: 8. The school has a clear policy on smartphone / device usage in school which I am required to monitor within school.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -378,8 +369,7 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 3. I am confident that all children know that they can come and talk
-        to me if anything upsets/bothers them online.
+      - statement: 3. I am confident that all children know that they can come and talk to me if anything upsets/bothers them online.
         responses:
           - answer: Strongly Agree
           - answer: Agree
@@ -425,9 +415,7 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: "3. My school has a culture in which we explicitly promote the
-        positive use of online platforms and tools to communicate with each
-        other. "
+      - statement: "3. My school has a culture in which we explicitly promote the positive use of online platforms and tools to communicate with each other. "
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -468,16 +456,14 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 3. My school has an Acceptable Use Policy (AUP) for digital
-        technologies and I know where to access it.
+      - statement: 3. My school has an Acceptable Use Policy (AUP) for digital technologies and I know where to access it.
         responses:
           - answer: Strongly agree
           - answer: Agree
           - answer: Neutral
           - answer: Disagree
           - answer: There is no policy
-      - statement: 4. I feel confident that I understand the AUP and how to monitor it
-        within school.
+      - statement: 4. I feel confident that I understand the AUP and how to monitor it within school.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -491,9 +477,7 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: There is no policy
-      - statement: 6. I clearly understand the appropriate steps to take when a
-          cyberbullying/online incident involving my pupils is brought to my
-          attention.
+      - statement: 6. I clearly understand the appropriate steps to take when a cyberbullying/online incident involving my pupils is brought to my attention.
         responses:
           - answer: Strongly agree
           - answer: Agree
@@ -684,8 +668,7 @@ survey:
           - answer: "Neutral "
           - answer: Disagree
           - answer: Strongly disagree
-      - statement: 7. We are taught in school to talk to a trusted adult if we see
-        bullying online.
+      - statement: 7. We are taught in school to talk to a trusted adult if we see bullying online.
         responses:
           - answer: Strongly agree
           - answer: Agree
