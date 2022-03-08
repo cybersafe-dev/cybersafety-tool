@@ -90,15 +90,22 @@ const SurveyStats = ({
       teachersFilledSurveys >= teachersQuota &&
       pupilsFilledSurveys >= pupilsQuota ? (
         submitting ? (
-          <button className="final-submit-btn-processing">
-            Processing...
-          </button>
+          <button className="final-submit-btn-processing">Processing...</button>
         ) : (
           <button className="final-submit-btn" onClick={handleFinalSubmit}>
             Submit
           </button>
         )
-      ) : null}
+      ) : (
+        <button
+          className="disabled-submit-btn"
+          onClick={() =>
+            setError("Sorry you don't have enough completed surveys yet.")
+          }
+        >
+          Submit
+        </button>
+      )}
       <p className="error-message">{error}</p>
     </section>
   )
