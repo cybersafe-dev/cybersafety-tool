@@ -422,6 +422,13 @@ survey:
           - answer: Neutral
           - answer: Disagree
           - answer: Strongly disagree
+      - statement: 4. I teach about respectful online communication in the classroom with my pupils (and use examples) at least once a term.
+        responses:
+          - answer: Strongly agree
+          - answer: Agree
+          - answer: Neutral
+          - answer: Disagree
+          - answer: Strongly disagree
     criticalthinking:
       - statement: 1. I always check information I find online by searching for similar
           sources.
