@@ -635,7 +635,7 @@ survey:
           - answer: Yes
           - answer: Not sure
           - answer: No
-      - statement: 2. I know how roughly how much time I am online each day.
+      - statement: 2. I know roughly how much time I am online each day.
         responses:
           - answer: Yes
           - answer: Not sure

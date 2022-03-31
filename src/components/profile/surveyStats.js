@@ -13,7 +13,6 @@ const SurveyStats = ({
   schoolName,
   reportSubmitted,
   quota,
-  rollNumber,
 }) => {
   const [currentScores, setCurrentScores] = React.useState(null)
   const [error, setError] = React.useState(null)
@@ -47,14 +46,14 @@ const SurveyStats = ({
     const dbPostStatus = await postReportToDb(uid, report)
 
     // post something to the relevant SF lead
-    await fetch(`/.netlify/functions/postReport`, {
+    await fetch(`/.netlify/functions/salesforceLeadUpdate`, {
       method: "POST",
-      body: JSON.stringify({ rollNumber: rollNumber }),
+      body: JSON.stringify({ uid: uid }),
       headers: { "Content-Type": "application/json" },
     })
       // .then(res => res.json())
       // .then(data => console.log(data))
-      .catch(console.error)
+      // .catch(console.error)
 
     if (dbPostStatus === "updated") {
       navigate("/app/confirmation")
@@ -109,7 +108,16 @@ const SurveyStats = ({
             {irish ? "Cuir Isteach" : "Submit"}
           </button>
         )
-      ) : null}
+      ) : (
+        <button
+          className="disabled-submit-btn"
+          onClick={() =>
+            setError("Sorry you don't have enough completed surveys yet.")
+          }
+        >
+          Submit
+        </button>
+      )}
       <p className="error-message">{error}</p>
     </section>
   )
