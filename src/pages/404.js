@@ -17,8 +17,7 @@ const NotFoundPage = () => (
         <Link to="/">try here</Link>.
       </p>
       <p className="message">
-        If you were sent a survey link to fill in{" "}
-        <Link to="/survey">try here instead</Link>.
+        If you were sent a survey link to fill in please try again with the full link provided.
       </p>
     </section>
   </Layout>
