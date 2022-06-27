@@ -1,8 +1,18 @@
 exports.onCreateWebpackConfig = ({ stage, loaders, actions, getConfig }) => {
-  if (getConfig().mode === 'production') {
+  actions.setWebpackConfig({
+    resolve: {
+      fallback: {
+        "zlib": require.resolve("browserify-zlib"),
+        "stream": require.resolve("stream-browserify"),
+        "util": require.resolve("util/"),
+        "assert": require.resolve("assert/"),
+      },
+    },
+  })
+  if (getConfig().mode === "production") {
     actions.setWebpackConfig({
-      devtool: false
-    });
+      devtool: false,
+    })
   }
   if (stage === "build-html") {
     actions.setWebpackConfig({
