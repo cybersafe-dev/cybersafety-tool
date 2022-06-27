@@ -4,7 +4,7 @@ import { ResponseStore } from "../../providers/responseProvider"
 
 import Layout from "../../components/layout/layout"
 import SurveyDashMessages from "../../components/dashboard/surveyDashMessages"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import DataError from "../../components/dataerror/dataerror"
 
 import SurveyProgress from "../../components/dashboard/surveyProgress"
@@ -59,7 +59,7 @@ const Dashboard = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Choose a Category" />
+      <Seo title="Choose a Category" />
       <section className="dashboard-container">
         <div className="headline">
           <SurveyDashMessages

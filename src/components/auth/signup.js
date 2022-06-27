@@ -5,7 +5,7 @@ import { addNewSalesforceLead } from "../../salesforce"
 import { countyList } from "../../templates/countyList"
 
 import { userStore } from "../../providers/userProvider"
-import SEO from "../seo"
+import Seo from "../seo"
 
 import "../../styling/app/formPages.css"
 import BgImg from "../../images/bg-gradient.svg"
@@ -104,7 +104,7 @@ const Signup = () => {
 
   return (
     <section className="page-container-long-form">
-      <SEO title="Sign Up" />
+      <Seo title="Sign Up" />
       <h1 className="">Sign Up</h1>
       <p className="instruction">
         Please fill in the form below to create a school admin account for our
