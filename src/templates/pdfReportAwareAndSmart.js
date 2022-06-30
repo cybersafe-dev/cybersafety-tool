@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
     oneLogo: {
       width: "90%",
       height: "8%",
-      // height: "10vh",
       display: "flex",
       flexDirection: "row",
       alignItems: "center",
@@ -68,7 +67,6 @@ const styles = StyleSheet.create({
     twoLogo: {
       width: "90%",
       height: "8%",
-      // height: "10vh",
       display: "flex",
       flexDirection: "row",
       alignItems: "center",
@@ -245,12 +243,10 @@ const styles = StyleSheet.create({
     tfs: {
       width: 120,
       height: "auto",
-      // height: "5vh",
     },
     csi: {
       width: 100,
       height: "auto",
-      // height: "3.5vh",
     },
   },
   awardImg: {
@@ -479,7 +475,6 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
           />
         </View>
         <View style={styles.body.deadCenterAlign}>
-          {/* <View style={styles.div.centered}> */}
             <Image
               src={toolLogo}
               style={styles.awardImg}
@@ -517,7 +512,6 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
               </View>
             </View>
           </View>
-        {/* </View> */}
       </Page>
 
       {/* Page Two - Your grade and Survey breakdown */}
