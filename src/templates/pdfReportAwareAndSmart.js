@@ -50,13 +50,16 @@ Font.registerHyphenationCallback(word => [word]);
 // Create styles
 const styles = StyleSheet.create({
   page: {
+    display: "flex",
     flexDirection: "column",
     backgroundColor: "#ffffff",
   },
   header: {
     oneLogo: {
       width: "90%",
-      height: "10vh",
+      height: 60,
+      // height: "10vh",
+      display: "flex",
       flexDirection: "row",
       alignItems: "center",
       marginHorizontal: "5%",
@@ -64,7 +67,9 @@ const styles = StyleSheet.create({
     },
     twoLogo: {
       width: "90%",
-      height: "10vh",
+      height: 60,
+      // height: "10vh",
+      display: "flex",
       flexDirection: "row",
       alignItems: "center",
       marginHorizontal: "5%",
@@ -76,6 +81,7 @@ const styles = StyleSheet.create({
       width: "90%",
       height: "90vh",
       marginHorizontal: "5%",
+      display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",
       justifyContent: "flex-start",
@@ -85,6 +91,7 @@ const styles = StyleSheet.create({
       width: "90%",
       height: "90vh",
       marginHorizontal: "5%",
+      display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",
       justifyContent: "center",
@@ -97,6 +104,7 @@ const styles = StyleSheet.create({
     },
     inline: {
       alignSelf: "center",
+      display: "flex",
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
@@ -217,10 +225,14 @@ const styles = StyleSheet.create({
   },
   logo: {
     tfs: {
-      height: "5vh",
+      width: 120,
+      height: "auto",
+      // height: "5vh",
     },
     csi: {
-      height: "3.5vh",
+      width: 100,
+      height: "auto",
+      // height: "3.5vh",
     },
   },
   awardImg: {
