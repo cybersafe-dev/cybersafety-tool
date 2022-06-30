@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   header: {
     oneLogo: {
       width: "90%",
-      height: 60,
+      height: "8%",
       // height: "10vh",
       display: "flex",
       flexDirection: "row",
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     },
     twoLogo: {
       width: "90%",
-      height: 60,
+      height: "8%",
       // height: "10vh",
       display: "flex",
       flexDirection: "row",
@@ -85,7 +85,8 @@ const styles = StyleSheet.create({
       flexDirection: "column",
       alignItems: "flex-start",
       justifyContent: "flex-start",
-      padding: 20,
+      paddingLeft: 20,
+      paddingRight: 20,
     },
     centerAlign: {
       width: "90%",
@@ -94,6 +95,16 @@ const styles = StyleSheet.create({
       display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",
+      justifyContent: "center",
+      padding: 20,
+    },
+    deadCenterAlign: {
+      width: "90%",
+      height: "90%",
+      marginHorizontal: "5%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
       justifyContent: "center",
       padding: 20,
     },
@@ -109,6 +120,13 @@ const styles = StyleSheet.create({
       justifyContent: "center",
       alignItems: "center",
       marginBottom: 40,
+    },
+    inlineNoMargin: {
+      alignSelf: "center",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
     },
     list: {
       marginBottom: 10,
@@ -460,8 +478,8 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafeKids Logo"
           />
         </View>
-        <View style={styles.body.centerAlign}>
-          <View style={styles.div.centered}>
+        <View style={styles.body.deadCenterAlign}>
+          {/* <View style={styles.div.centered}> */}
             <Image
               src={toolLogo}
               style={styles.awardImg}
@@ -499,7 +517,7 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
               </View>
             </View>
           </View>
-        </View>
+        {/* </View> */}
       </Page>
 
       {/* Page Two - Your grade and Survey breakdown */}
@@ -1600,7 +1618,7 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
           />
         </View>
         <View style={styles.body.topAlign}>
-          <View style={styles.div.inline}>
+          <View style={styles.div.inlineNoMargin}>
             <View style={styles.table}>
               {/* Table Headers */}
               <View style={styles.table.row}>
