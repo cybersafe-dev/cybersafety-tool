@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import { graphql } from "gatsby"
 import ReactMarkdown from "react-markdown"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import "../styling/app/index.css"
 
 import { LanguageStore } from "../providers/languageProvider"
@@ -46,7 +46,7 @@ const MiniSite = props => {
         />
       )}
       <MiniNavbar />
-      <SEO title="Home" />
+      <Seo title="Home" />
       <section className="section-container">
         <div id="tool">
           <div className="section">

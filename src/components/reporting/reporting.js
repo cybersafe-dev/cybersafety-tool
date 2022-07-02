@@ -1,7 +1,7 @@
 import React from "react"
 import { userStore } from "../../providers/userProvider"
 import { navigate } from "gatsby"
-import SEO from "../seo"
+import Seo from "../seo"
 import SchoolCard from "./schoolCard"
 import useFirebase from "../../firebase"
 import "../../styling/reporting/reporting.css"
@@ -82,7 +82,7 @@ const Reporting = () => {
 
   return (
     <section className="dashboard-body">
-      <SEO title="CSI Admin" />
+      <Seo title="CSI Admin" />
       <div className="reporting-tools-panel">
         <div className="search-tools">
           <label className="tools-label">

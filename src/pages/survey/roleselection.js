@@ -4,7 +4,7 @@ import { ResponseStore } from "../../providers/responseProvider"
 
 import Layout from "../../components/layout/layout"
 import Header from "../../components/header/header"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import BgImg from "../../images/bg-gradient.svg"
 
 import "../../styling/survey/roleselection.css"
@@ -25,7 +25,7 @@ const RoleSelection = () => {
     <Layout>
       <Header />
       <section className="selection-container">
-        <SEO title="Enter Your Role at School" />
+        <Seo title="Enter Your Role at School" />
         <h1>I am a...</h1>
         <img src={BgImg} alt="background design" className="bg-img2" />
         <div className="roles">

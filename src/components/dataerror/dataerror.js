@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../../components/layout/layout"
 import Header from "../../components/header/header"
-import SEO from "../../components/seo"
+import Seo from "../../components/seo"
 import "../../styling/errorPage.css"
 import unknown from "../../images/unknown.svg"
 
 const DataErrorPage = () => (
   <Layout>
-    <SEO title="Data Error" />
+    <Seo title="Data Error" />
     <Header />
     <section className="page-container">
       <h1 className="error-heading">Data Error</h1>

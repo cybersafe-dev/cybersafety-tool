@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import "../styling/errorPage.css"
 import unknown from "../images/unknown.svg"
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <Seo title="404: Not found" />
     <section className="page-container">
       <h1 className="error-heading">Not Found</h1>
       <img src={unknown} alt="Question Mark" className="unknown" />
@@ -17,8 +17,7 @@ const NotFoundPage = () => (
         <Link to="/">try here</Link>.
       </p>
       <p className="message">
-        If you were sent a survey link to fill in{" "}
-        <Link to="/survey">try here instead</Link>.
+        If you were sent a survey link to fill in please try again with the full link provided.
       </p>
     </section>
   </Layout>

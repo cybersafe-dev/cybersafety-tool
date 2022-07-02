@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { ResponseStore } from "../providers/responseProvider"
 import Layout from "../components/layout/layout"
 import Header from "../components/header/header"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import ReactMarkdown from "react-markdown"
 
 import Icon1 from "../images/intro-icon1.svg"
@@ -29,7 +29,7 @@ const SurveyPage = props => {
   return (
     <Layout>
       <Header />
-      <SEO title="Survey Introduction" />
+      <Seo title="Survey Introduction" />
       <section className="intropage-container">
         <h1 className="welcome"> Welcome! Fáilte! </h1>
         <img src={BgImg} alt="background design" className="bg1" />

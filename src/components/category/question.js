@@ -3,7 +3,7 @@ import { navigate } from "gatsby"
 import DataErrorPage from "../../components/dataerror/dataerror"
 import { ResponseStore } from "../../providers/responseProvider"
 
-import SEO from "../seo"
+import Seo from "../seo"
 
 import "../../styling/survey/question.css"
 
@@ -59,7 +59,7 @@ const Question = ({
 
   return (
     <>
-      <SEO title={category} />
+      <Seo title={category} />
       <p className="statement">{survey[currentQ].statement}</p>
       <section className="responses">
         {survey[currentQ].responses.map((response, i) => (

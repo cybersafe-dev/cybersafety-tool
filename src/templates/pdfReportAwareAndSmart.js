@@ -50,13 +50,15 @@ Font.registerHyphenationCallback(word => [word]);
 // Create styles
 const styles = StyleSheet.create({
   page: {
+    display: "flex",
     flexDirection: "column",
     backgroundColor: "#ffffff",
   },
   header: {
     oneLogo: {
       width: "90%",
-      height: "10vh",
+      height: "8%",
+      display: "flex",
       flexDirection: "row",
       alignItems: "center",
       marginHorizontal: "5%",
@@ -64,7 +66,8 @@ const styles = StyleSheet.create({
     },
     twoLogo: {
       width: "90%",
-      height: "10vh",
+      height: "8%",
+      display: "flex",
       flexDirection: "row",
       alignItems: "center",
       marginHorizontal: "5%",
@@ -76,17 +79,30 @@ const styles = StyleSheet.create({
       width: "90%",
       height: "90vh",
       marginHorizontal: "5%",
+      display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",
       justifyContent: "flex-start",
-      padding: 20,
+      paddingLeft: 20,
+      paddingRight: 20,
     },
     centerAlign: {
       width: "90%",
       height: "90vh",
       marginHorizontal: "5%",
+      display: "flex",
       flexDirection: "column",
       alignItems: "flex-start",
+      justifyContent: "center",
+      padding: 20,
+    },
+    deadCenterAlign: {
+      width: "90%",
+      height: "90%",
+      marginHorizontal: "5%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
       justifyContent: "center",
       padding: 20,
     },
@@ -97,10 +113,18 @@ const styles = StyleSheet.create({
     },
     inline: {
       alignSelf: "center",
+      display: "flex",
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
       marginBottom: 40,
+    },
+    inlineNoMargin: {
+      alignSelf: "center",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
     },
     list: {
       marginBottom: 10,
@@ -217,10 +241,12 @@ const styles = StyleSheet.create({
   },
   logo: {
     tfs: {
-      height: "5vh",
+      width: 120,
+      height: "auto",
     },
     csi: {
-      height: "3.5vh",
+      width: 100,
+      height: "auto",
     },
   },
   awardImg: {
@@ -448,8 +474,7 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
             alt="CyberSafeKids Logo"
           />
         </View>
-        <View style={styles.body.centerAlign}>
-          <View style={styles.div.centered}>
+        <View style={styles.body.deadCenterAlign}>
             <Image
               src={toolLogo}
               style={styles.awardImg}
@@ -487,7 +512,6 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
               </View>
             </View>
           </View>
-        </View>
       </Page>
 
       {/* Page Two - Your grade and Survey breakdown */}
@@ -1588,7 +1612,7 @@ const PdfReportTemplateAwareSmart = ({ report, reportSubmitted, quota }) => {
           />
         </View>
         <View style={styles.body.topAlign}>
-          <View style={styles.div.inline}>
+          <View style={styles.div.inlineNoMargin}>
             <View style={styles.table}>
               {/* Table Headers */}
               <View style={styles.table.row}>
